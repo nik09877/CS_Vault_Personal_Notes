@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -79,6 +80,14 @@
         "id": "8c9385e645abe0ee",
         "type": "tabs",
         "children": [
+          {
+            "id": "eee9d6f920e04d8d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
           {
             "id": "9b43a6199650de9b",
             "type": "leaf",
@@ -148,7 +157,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7af6bd8b70526002",
+  "active": "34240493be3bcf4d",
   "lastOpenFiles": [
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
