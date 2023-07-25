@@ -1,9 +1,10 @@
 {
   "accentColor": "#4c8ce6",
-  "cssTheme": "Cybertron",
+  "cssTheme": "",
   "theme": "obsidian",
   "translucency": false,
   "showViewHeader": true,
   "nativeMenus": false,
-  "baseFontSize": 30
+  "baseFontSize": 16,
+  "textFontFamily": ""
 }

@@ -72,7 +72,137 @@
     "type": "excalidrawlib",
     "version": 2,
     "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/1.9.10",
-    "libraryItems": []
+    "libraryItems": [
+      {
+        "status": "unpublished",
+        "elements": [
+          {
+            "type": "rectangle",
+            "version": 181,
+            "versionNonce": 248327476,
+            "isDeleted": false,
+            "id": "-il0zNSL_fgkvoaTPgcVN",
+            "fillStyle": "solid",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -1113.7262115478516,
+            "y": -197.8362472996568,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 630,
+            "height": 260,
+            "seed": 1529949580,
+            "groupIds": [
+              "KwlrGOAxQD_DGwqLt7Li3"
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+              {
+                "id": "p5mljIan-4kLfMcEsDwfD",
+                "type": "arrow"
+              },
+              {
+                "id": "plslsm_g3eYX8s94pXrhg",
+                "type": "arrow"
+              },
+              {
+                "type": "text",
+                "id": "I2rUphtm"
+              }
+            ],
+            "updated": 1690309200865,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "text",
+            "version": 23,
+            "versionNonce": 1909354508,
+            "isDeleted": false,
+            "id": "I2rUphtm",
+            "fillStyle": "solid",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -946.3824615478516,
+            "y": -89.4362472996568,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 295.3125,
+            "height": 43.199999999999996,
+            "seed": 865270924,
+            "groupIds": [
+              "KwlrGOAxQD_DGwqLt7Li3"
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [],
+            "updated": 1690309200865,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 3,
+            "text": "void method();",
+            "rawText": "void method();",
+            "textAlign": "center",
+            "verticalAlign": "middle",
+            "containerId": "-il0zNSL_fgkvoaTPgcVN",
+            "originalText": "void method();",
+            "lineHeight": 1.2,
+            "baseline": 34
+          },
+          {
+            "type": "text",
+            "version": 163,
+            "versionNonce": 748250804,
+            "isDeleted": false,
+            "id": "uQ0BioHK",
+            "fillStyle": "hachure",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -1011.0843034224076,
+            "y": -281.6999710312812,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 401.59429931640625,
+            "height": 72.38090004184595,
+            "seed": 233521460,
+            "groupIds": [
+              "KwlrGOAxQD_DGwqLt7Li3"
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [],
+            "updated": 1690309200865,
+            "link": null,
+            "locked": false,
+            "fontSize": 57.90472003347676,
+            "fontFamily": 1,
+            "text": "<<Interface>>",
+            "rawText": "<<Interface>>",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "<<Interface>>",
+            "lineHeight": 1.25,
+            "baseline": 51
+          }
+        ],
+        "id": "jCuPD_Z5i0mz5HzYZ2e-j",
+        "created": 1690309213193
+      }
+    ]
   },
   "imageElementNotice": true,
   "mdSVGwidth": 500,
