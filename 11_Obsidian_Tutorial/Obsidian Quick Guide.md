@@ -1,1 +1,5 @@
-Back Links work like this -> [[Name of the File]]
+| Command      | Explanation          |
+| ------------ | -------------------- |
+| [[FileName]] | Link to another File |
+| ctrl+E       | Toggle Edit Mode     |
+| ctrl+p       | cmd palette                     |

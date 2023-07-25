@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -137,8 +136,17 @@
                 "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md"
               }
             }
+          },
+          {
+            "id": "25b3f44683321b86",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -157,7 +165,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "34240493be3bcf4d",
+  "active": "35e1b8f45c27ca4a",
   "lastOpenFiles": [
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
