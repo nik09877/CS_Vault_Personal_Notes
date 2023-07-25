@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d77a36dd7c307563",
+        "id": "32b0ad6798032293",
         "type": "tabs",
         "children": [
           {
-            "id": "7af6bd8b70526002",
+            "id": "c8dce732031cd49d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -93,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md"
-              }
+              "state": {}
             }
           },
           {
@@ -165,19 +158,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "35e1b8f45c27ca4a",
+  "active": "c8dce732031cd49d",
   "lastOpenFiles": [
-    "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
+    "444_System Design/LLD/Decorator_Design_Pattern.pdf",
+    "11_Obsidian_Tutorial/Markdown_Guide.md",
+    "444_System Design/LLD/Strategy_Design_Pattern.pdf",
+    "444_System Design/LLD/Proxy_Design_Pattern.pdf",
+    "444_System Design/LLD/Observer_Design_Pattern.pdf",
+    "444_System Design/LLD/Factory_Design_Pattern.pdf",
     "Untitled.canvas",
     "11_Obsidian_Tutorial/Markdown Syntax.md",
     "11_Obsidian_Tutorial",
     "111_Language/Java",
     "444_System Design/LLD",
     "444_System Design/HLD",
-    "333_Core Theory Subjects",
-    "444_System Design",
-    "222_DSA",
-    "111_Language"
+    "333_Core Theory Subjects"
   ]
 }

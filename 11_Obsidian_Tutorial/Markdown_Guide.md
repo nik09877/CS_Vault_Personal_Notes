@@ -1,3 +1,5 @@
+
+
 # Markdown Cheat Sheet
 
 Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
@@ -8,10 +10,40 @@ This Markdown cheat sheet provides a quick overview of all the Markdown syntax e
 
 These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
 
-### Heading
 # H1
+
 ## H2
+
 ### H3
+
+### Basic
+- [ ] to-do
+- [/] incomplete
+- [x] done
+- [-] canceled
+- [>] forwarded
+- [<] scheduling
+
+### Extras
+- [?] question
+- [!] important
+- [*] star
+- ["] quote
+- [l] location
+- [b] bookmark
+- [i] information
+- [S] savings
+- [I] idea
+- [p] pros
+- [c] cons
+- [f] fire
+- [k] key
+- [w] win
+- [u] up
+- [d] down
+- [D] draft pull request
+- [P] open pull request
+- [M] merged pull request
 
 ### Bold
 
@@ -110,8 +142,11 @@ I need to highlight these ==very important words==.
 
 ### Subscript
 
-H~2~O
+$$H~2~O$$
 
 ### Superscript
 
-X^2^
+$$ X^2^ $$
+
+### Heading
+
