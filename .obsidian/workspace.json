@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "817a9253547323c7",
+        "id": "4cdfa2faaa6fa128",
         "type": "tabs",
         "children": [
           {
-            "id": "7b46602e9ed4822c",
+            "id": "11df7f9186b75104",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -32,16 +28,6 @@
         "id": "c1c7603b226cf580",
         "type": "tabs",
         "children": [
-          {
-            "id": "34240493be3bcf4d",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
           {
             "id": "c064fabaee84ee6e",
             "type": "leaf",
@@ -64,8 +50,19 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "9a3c6f09f5090e2e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -93,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md"
-              }
+              "state": {}
             }
           },
           {
@@ -145,8 +138,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -165,16 +157,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7b46602e9ed4822c",
+  "active": "11df7f9186b75104",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
+    "Draw.io/Abstract-factory.svg",
+    "Draw.io",
+    "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
+    "444_System Design/LLD/Strategy_Design_Pattern.pdf",
+    "444_System Design/LLD/Untitled Diagram 1.svg",
+    "Untitled Diagram.svg",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "Excalidraw/Drawing 2023-07-25 21.25.07.excalidraw.md",
     "Excalidraw",
     "444_System Design/LLD/Decorator_Design_Pattern.pdf",
-    "444_System Design/LLD/Strategy_Design_Pattern.pdf",
     "444_System Design/LLD/Proxy_Design_Pattern.pdf",
     "444_System Design/LLD/Observer_Design_Pattern.pdf",
     "444_System Design/LLD/Factory_Design_Pattern.pdf",
@@ -182,7 +178,6 @@
     "11_Obsidian_Tutorial/Markdown Syntax.md",
     "11_Obsidian_Tutorial",
     "111_Language/Java",
-    "444_System Design/LLD",
-    "444_System Design/HLD"
+    "444_System Design/LLD"
   ]
 }
