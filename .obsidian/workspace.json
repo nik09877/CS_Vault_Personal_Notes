@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "32b0ad6798032293",
+        "id": "817a9253547323c7",
         "type": "tabs",
         "children": [
           {
-            "id": "c8dce732031cd49d",
+            "id": "7b46602e9ed4822c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ]
@@ -65,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -90,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "444_System Design/LLD/Abstract_Factory_Design_Pattern.md"
+              }
             }
           },
           {
@@ -139,7 +146,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -158,11 +165,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c8dce732031cd49d",
+  "active": "7b46602e9ed4822c",
   "lastOpenFiles": [
-    "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
-    "444_System Design/LLD/Decorator_Design_Pattern.pdf",
+    "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
+    "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
+    "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
+    "Excalidraw/Drawing 2023-07-25 21.25.07.excalidraw.md",
+    "Excalidraw",
+    "444_System Design/LLD/Decorator_Design_Pattern.pdf",
     "444_System Design/LLD/Strategy_Design_Pattern.pdf",
     "444_System Design/LLD/Proxy_Design_Pattern.pdf",
     "444_System Design/LLD/Observer_Design_Pattern.pdf",
@@ -172,7 +183,6 @@
     "11_Obsidian_Tutorial",
     "111_Language/Java",
     "444_System Design/LLD",
-    "444_System Design/HLD",
-    "333_Core Theory Subjects"
+    "444_System Design/HLD"
   ]
 }

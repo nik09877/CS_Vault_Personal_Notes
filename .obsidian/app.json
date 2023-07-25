@@ -3,5 +3,7 @@
   "spellcheckLanguages": [
     "en-US",
     "en-GB"
-  ]
+  ],
+  "showInlineTitle": false,
+  "defaultViewMode": "preview"
 }

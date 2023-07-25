@@ -1,7 +1,9 @@
 {
-  "accentColor": "",
-  "cssTheme": "Things",
+  "accentColor": "#4c8ce6",
+  "cssTheme": "Cybertron",
   "theme": "obsidian",
   "translucency": false,
-  "showViewHeader": true
+  "showViewHeader": true,
+  "nativeMenus": false,
+  "baseFontSize": 30
 }
