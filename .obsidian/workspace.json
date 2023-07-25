@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "1cd1f8d32550ad62",
+    "type": "split",
+    "children": [
+      {
+        "id": "d77a36dd7c307563",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7af6bd8b70526002",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11_Obsidian_Tutorial/Markdown_Guide.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f3a1eb7fe43794a3",
+    "type": "split",
+    "children": [
+      {
+        "id": "c1c7603b226cf580",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34240493be3bcf4d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c064fabaee84ee6e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6c2bb65c8d9f16bf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "e5ae15e22d48dd5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c9385e645abe0ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b43a6199650de9b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "11_Obsidian_Tutorial/Markdown_Guide.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3797c12484843d25",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "11_Obsidian_Tutorial/Markdown_Guide.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0f3fa6a72472f028",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "35e1b8f45c27ca4a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "11_Obsidian_Tutorial/Markdown_Guide.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "34240493be3bcf4d",
+  "lastOpenFiles": [
+    "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
+    "Untitled.canvas",
+    "11_Obsidian_Tutorial/Markdown_Guide.md",
+    "11_Obsidian_Tutorial/Markdown Syntax.md",
+    "11_Obsidian_Tutorial",
+    "111_Language/Java",
+    "444_System Design/LLD",
+    "444_System Design/HLD",
+    "333_Core Theory Subjects",
+    "444_System Design",
+    "222_DSA",
+    "111_Language"
+  ]
+}
