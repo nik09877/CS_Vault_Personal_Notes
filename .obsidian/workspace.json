@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_Obsidian_Tutorial/Markdown_Guide.md",
+                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11_Obsidian_Tutorial/Markdown_Guide.md",
+                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11_Obsidian_Tutorial/Markdown_Guide.md",
+                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_Obsidian_Tutorial/Markdown_Guide.md"
+                "file": "11_Obsidian_Tutorial/Obsidian Quick Guide.md"
               }
             }
           }
@@ -148,11 +148,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "34240493be3bcf4d",
+  "active": "7af6bd8b70526002",
   "lastOpenFiles": [
+    "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "Untitled.canvas",
-    "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Markdown Syntax.md",
     "11_Obsidian_Tutorial",
     "111_Language/Java",
