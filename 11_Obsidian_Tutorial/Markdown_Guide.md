@@ -25,7 +25,7 @@ These are the elements outlined in John Gruber’s original design document. All
 - [<] scheduling
 
 ### Extras
-- [?] question
+- [x] question
 - [!] important
 - [*] star
 - ["] quote
