@@ -158,13 +158,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,7 +176,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "16bbcc296423f96d",
+  "active": "eee9d6f920e04d8d",
   "lastOpenFiles": [
     "444_System Design/LLD/Factory_Design_Pattern.pdf",
     "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
