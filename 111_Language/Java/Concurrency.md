@@ -94,6 +94,7 @@ class MyThread extends Thread {
 
 - To find out the current state of a thread call `getState()` method.
 
+![[Pasted image 20230728143422.png]]
 
 
 ### New Threads
@@ -125,6 +126,7 @@ A thread is terminated for one of two reasons:
 3. you can kill a thread by invoking its `stop` method. 
 	- That method throws a **ThreadDeath error object** that kills the thread. However, the stop method is deprecated, and you should never call it in your own code.
 ## Thread State Methods
+
 ### java.lang.Thread
 - `void join()` : waits for the specified thread to terminate.
 - `void join(long millis)` : waits for the specified thread to die or for specified number of milliseconds to pass.
@@ -132,5 +134,17 @@ A thread is terminated for one of two reasons:
 - `void stop()` : stops the thread. This method is deprecated.
 - `void suspend()` : suspends this thread's execution. This method is deprecated.
 - `void resume()` : resumes this thread. This is only valid after `suspend()` has been invoked. This method is deprecated.
+- `void interrupt()` : This method can be used to request termination of a thread.
+	- sends an interrupt request to a thread. The interrupted status of the thread is set to true. If the thread is currently blocked by a call to sleep, then an InterruptedException is thrown.
+``` Java
+while(!Thread.currentThread().isInterrupted() && more work to do){
+	do more work
+}
+```
+- `static boolean interrupted()` : Tests whether the current thread has been interrupted. Note that this is a static method. The call has a side effect—it resets the interrupted status of the current thread to false.
+- `boolean isInterrupted()` : Tests whether a thread has been interrupted. Unlike the static interrupted method, this call does not change the interrupted status of the thread.
+- `static Thread currentThread()` : Returns the Thread object representing the currently executing thread.
+
+
 
 
