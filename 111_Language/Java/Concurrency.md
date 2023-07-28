@@ -148,3 +148,36 @@ while(!Thread.currentThread().isInterrupted() && more work to do){
 
 
 
+
+# Thread Properties
+
+## Daemon Threads
+- A Daemon thread is simply a thread whose only purpose in life is to serve others.
+	- Examples are timer threads that send regular "timer ticks" to other threads
+	- Threads that clean up state cache entries.
+- When only Daemon threads remain, the virtual machine exits.
+- Turn a thread into Daemon thread by calling `t.setDaemon(true);`
+
+## Thread Names
+- Set any name with `setName` method:
+```Java
+var t = new Thread(runnable);
+t.setName("web crawler");
+```
+
+## What is a Thread Group ?
+- A thread group is a collection of threads that can be managed together.
+- By default all threads that you create belong to the same `Thread group`.
+
+## Thread Priorities
+- In Java, every thread has a *priority*.
+- A thread inherits the priority of the thread that created it.
+- You can increase or decrease the priority using `setPriority()` method.
+- The Priority value should be in the range `MIN_PRIORITY(defined as 1)` and `MAX_PRIORITY(defined as 10)`.
+- `NORM_PRIORITY` is defined as 5.
+- Thread priorities are highly system dependent.
+	- Windows has 7 priority levels. Some  of the Java priorities will map to the same OS level.
+	- In Oracle JVM for Linux, all threads have the same priority.
+
+# Synchronization
+
