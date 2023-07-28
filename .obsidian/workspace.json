@@ -20,24 +20,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "40d19080052ce3af",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "1dcfec8bc01f5e22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/Concurrency.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -83,8 +65,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,10 +165,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1dcfec8bc01f5e22",
+  "active": "41664eec4825dcf8",
   "lastOpenFiles": [
-    "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
+    "11_Obsidian_Tutorial/Markdown_Guide.md",
     "111_Language/Java/Concurrency.md",
+    "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
     "111_Language/Java/Untitled",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns/_about.md",
@@ -202,7 +184,6 @@
     "555_Projects",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns/Proxy_Design_Pattern.pdf",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
-    "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "Untitled.md",
     "Draw.io/Abstract-factory.svg",
