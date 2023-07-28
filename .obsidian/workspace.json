@@ -11,8 +11,30 @@
             "id": "41664eec4825dcf8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/Concurrency.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "40d19080052ce3af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1dcfec8bc01f5e22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/Concurrency.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ]
@@ -91,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
+                "file": "111_Language/Java/Concurrency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
+                "file": "111_Language/Java/Concurrency.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md"
+                "file": "111_Language/Java/Concurrency.md"
               }
             }
           },
@@ -162,29 +184,33 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9a3c6f09f5090e2e",
+  "active": "1dcfec8bc01f5e22",
   "lastOpenFiles": [
+    "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
+    "111_Language/Java/Concurrency.md",
+    "111_Language/Java/Untitled",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
+    "444_System Design/LLD/Design_Patterns/Structural_Patterns/_about.md",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns",
+    "444_System Design/LLD/Design_Patterns/Structural_Patterns",
+    "444_System Design/LLD/Design_Patterns/Creational_Patterns",
+    "444_System Design/LLD/Problems",
+    "444_System Design/LLD/Design_Patterns",
     "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
-    "444_System Design/LLD/Abstract_Factory_Design_Pattern.md",
-    "444_System Design/LLD/Strategy_Design_Pattern.pdf",
+    "444_System Design/LLD/Design_Patterns/Creational_Patterns/Abstract_Factory_Design_Pattern.md",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Strategy_Design_Pattern.pdf",
     "555_Projects",
-    "444_System Design/LLD/Proxy_Design_Pattern.pdf",
-    "444_System Design/LLD/Observer_Design_Pattern.pdf",
-    "444_System Design/LLD/Factory_Design_Pattern.pdf",
-    "444_System Design/LLD/Decorator_Design_Pattern.pdf",
+    "444_System Design/LLD/Design_Patterns/Structural_Patterns/Proxy_Design_Pattern.pdf",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "Untitled.md",
     "Draw.io/Abstract-factory.svg",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
-    "Draw.io",
     "444_System Design/LLD/Untitled Diagram 1.svg",
     "Untitled Diagram.svg",
     "Excalidraw/Drawing 2023-07-25 21.25.07.excalidraw.md",
-    "Excalidraw",
     "Untitled.canvas",
-    "11_Obsidian_Tutorial/Markdown Syntax.md",
-    "11_Obsidian_Tutorial",
-    "111_Language/Java"
+    "11_Obsidian_Tutorial/Markdown Syntax.md"
   ]
 }
