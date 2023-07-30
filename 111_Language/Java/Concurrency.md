@@ -527,10 +527,32 @@ One way to execute a `Callable` is to use a `FutureTask`, which implements both 
 The Executors class has a number of static factory methods for **constructing thread pools.**
 
 ###### java.util.concurrent.Executors:
-| Method                                                          | Description                                                                                                            |     |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --- |
-| `ExecutorService newCachedThreadPool()`                         | returns a cached thread pool that creates threads as needed and terminates threads that have been idle for 60 seconds. |     |
-| `ExecutorService newFixedThreadPool(int threads)`               | returns a thread pool that uses the given number of threads to execute tasks.                                          |     |
-| `ExecutorService newSingleThreadExecutor()  `                   | returns an executor that executes tasks sequentially in a single thread.                                               |     |
-| `ScheduledExecutorService newScheduledThreadPool(int threads) ` | returns a thread pool that uses the given number of threads to schedule tasks.                                         |     |
-| `ScheduledExecutorService newSingleThreadScheduledExecutor()`   | returns an executor that schedules tasks in a single thread.                                                           |     | 
+| Method                                                          | Description                                                                                                            |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ExecutorService newCachedThreadPool()`                         | returns a cached thread pool that creates threads as needed and terminates threads that have been idle for 60 seconds. |
+| `ExecutorService newFixedThreadPool(int threads)`               | returns a thread pool that uses the given number of threads to execute tasks.                                          |
+| `ExecutorService newSingleThreadExecutor()  `                   | returns an executor that executes tasks sequentially in a single thread.                                               |
+| `ScheduledExecutorService newScheduledThreadPool(int threads) ` | returns a thread pool that uses the given number of threads to schedule tasks.                                         |
+| `ScheduledExecutorService newSingleThreadScheduledExecutor()`   | returns an executor that schedules tasks in a single thread.                                                           |
+###### java.util.concurrent.ExecutorService
+
+| Method                                   | Description                                                                                       |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `Future submit(Callable task)`           | submits the given task for execution.                                                             |
+| `Future submit(Runnable task, T result)` | submits the given task for execution.                                                             |
+| `Future submit(Runnable task)`           | submits the given task for execution.                                                             |
+| `void shutdown()`                        | shuts down the service, completing the already submitted tasks but not accepting new submissions. |
+
+###### java.util.concurrent.ThreadPoolExecutor
+| Method                   | Description |
+| ------------------------ | ----------- |
+| `int getLargestPoolSize()` |   returns the largest size of the thread pool during the life of this executor.          |
+
+###### java.util.concurrent.ScheduledExecutorService
+| Method                                                                                                | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `ScheduledFuture schedule(Callable task, long time, TimeUnit unit)`                                   | schedules the given task after the given time has elapsed.                                            |
+| `ScheduledFuture schedule(Runnable task, long time, TimeUnit unit)`                                   | schedules the given task after the given time has elapsed.                                            |
+| `ScheduledFuture scheduleAtFixedRate(Runnable task, long initialDelay, long period, TimeUnit unit)`   | schedules the given task to run periodically, every period units, after the initial delay has elapsed |
+| `ScheduledFuture scheduleWithFixedDelay(Runnable task, long initialDelay, long delay, TimeUnit unit)` |     schedules the given task to run periodically, with delay units between completion of one invocation and the start of the next, after the initial delay has elapsed.                                                                                                  |
+
