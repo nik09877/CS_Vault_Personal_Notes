@@ -510,6 +510,7 @@ Syntax :
 	- `void cancel(boolean mayInterrupt)` : This is used to cancel the computation. If the computation is currently in progress, it is interrupted if the `mayInterrupt` parameter is true.
 	- `boolean isCancelled()` : 
 	- `boolean isDone()` : This method returns false if the computation is still in progress, true if it is finished
+
 ### How to Execute a Callable ?
 One way to execute a `Callable` is to use a `FutureTask`, which implements both the `Future` and `Runnable` interfaces, so that you can construct a thread for running it.
 
@@ -525,7 +526,7 @@ One way to execute a `Callable` is to use a `FutureTask`, which implements both 
 ## Executors
 
 The Executors class has a number of static factory methods for **constructing thread pools.**
-
+#### Executor Methods
 ###### java.util.concurrent.Executors:
 | Method                                                          | Description                                                                                                            |
 | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -556,3 +557,18 @@ The Executors class has a number of static factory methods for **constructing th
 | `ScheduledFuture scheduleAtFixedRate(Runnable task, long initialDelay, long period, TimeUnit unit)`   | schedules the given task to run periodically, every period units, after the initial delay has elapsed |
 | `ScheduledFuture scheduleWithFixedDelay(Runnable task, long initialDelay, long delay, TimeUnit unit)` |     schedules the given task to run periodically, with delay units between completion of one invocation and the start of the next, after the initial delay has elapsed.                                                                                                  |
 
+##### Detailed Explanation of the methods
+- The `newCachedThreadPool` method constructs a thread pool that executes each task immediately, using an existing idle thread when available and creating a new thread otherwise.
+- The `newFixedThreadPool` method constructs a thread pool with a fixed size. If more tasks are submitted than there are idle threads, the un-served tasks are placed on a queue. They are run when other tasks have completed.
+- The `newSingleThreadExecutor` is a degenerate pool of ***size 1*** where a single thread executes the submitted tasks, one after another. 
+ These three methods return an object of the `ThreadPoolExecutor` class that implements the `ExecutorService` interface.
+ ##### When to use what ?
+ - Use a cached thread pool when you have threads that are short-lived or spend a lot of time blocking.
+ - However, if you have threads that are working hard without blocking, you don’t want to run a large number of them together
+ - For optimum speed, the number of concurrent threads is the number of processor cores. In such a situation, you should use a fixed thread pool that bounds the total number of concurrent threads.
+ - The single-thread executor is useful for performance analysis. If you temporarily replace a cached or fixed thread pool with a single-thread pool, you can measure how much slower your application runs without the benefit of concurrency.
+#### How to use a Thread pool ?
+1. Call the static `newCachedThreadPool` or `newFixedThreadPool` method of the Executors class. 
+2. Call `submit` to submit `Callable` or `Runnable` objects.
+3. Hang on to the returned `Future` objects so that you can get the results or cancel the tasks.
+4. Call `shutdown` when you no longer want to submit any tasks.
