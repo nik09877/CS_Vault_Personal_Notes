@@ -181,3 +181,138 @@ t.setName("web crawler");
 
 # Synchronization
 
+## What is Race Condition ?
+- When the output depends on the order in which the data are accessed and manipulated, it is called **race condition**.
+- So the objective is to *synchronize the access*.
+
+## Lock Objects
+
+There are **two methods** for protecting a code block from concurrent access.
+1. `synchronized` keyword
+2. `ReentrantLock` class
+
+### Using ReentrantLock class
+`java.util.concurrent` framework provides separate classes for these mechanisms.
+
+Syntax:
+
+```Java
+myLock.lock(); //a ReentrantLock object
+try{
+	//critical section
+}
+finally{
+	myLock.unlock(); 
+	//make sure the lock is unlocked even if an exception has occurred
+}
+```
+
+Explanation:
+-  This guarantees that **only one thread at a time** can enter the critical section.
+-  When other threads call `lock`, they are deactivated until the first thread unlocks the lock object.
+- If the code in the critical section throws an exception, the lock must be unlocked. Otherwise, the other threads will be blocked forever.
+
+#### In depth Example
+Let us use a lock to protect the transfer method of the Bank class.
+
+```Java
+public class Bank { 
+	private var bankLock = new ReentrantLock();
+	. . .
+	public void transfer(int from, int to, int amount){
+		bankLock.lock();
+		 try { 
+			 System.out.print(Thread.currentThread());
+			 accounts[from] -= amount;
+			 System.out.printf(" %10.2f from %d to %d", amount, from, to); 
+			 accounts[to] += amount; 
+			 System.out.printf(" Total Balance: %10.2f%n", getTotalBalance());
+		  }
+		finally { 
+			bankLock.unlock();
+		}
+	 } 
+}
+```
+
+**Explanation** : Suppose one thread calls transfer and gets preempted before it is done. Suppose a second thread also calls transfer. The second thread cannot acquire the lock and is blocked in the call to the lock method. It is deactivated and must wait for the first thread to finish executing the transfer method. When the first thread unlocks the lock, then the second thread can proceed
+
+**Note** : Note that each Bank object has its own ReentrantLock object. If two threads try to access the same Bank object, then the lock serves to serialize the access. However, if two threads access different Bank objects, each thread acquires a different lock and neither thread is blocked. This is as it should be, because the threads cannot interfere with one another when they manipulate different Bank instances.
+
+
+#### Note
+- The lock is called **Reentrant** because a thread can repeatedly acquire a lock that it already owns (through recursion or calling other methods that have the same lock).
+- The lock has a **hold count** that keeps track of the nested calls to the `lock` method. The thread has to call `unlock` for every call to `lock` in order to release the lock.
+- So Code protected by a lock can call another method that uses the same locks.
+- `ReentrantLock(boolean fair)` : constructs a lock with the given fairness policy. A fair lock favors the thread that has been waiting for the longest time. However, this fairness guarantee can be a significant drag on performance. Therefore, by default, locks are not required to be fair.
+	- It sounds nice to be fair, but fair locks are a lot slower than regular locks. You should only enable fair locking if you truly know what you are doing and have a specific reason to consider fairness essential for your program. Even if you use a fair lock, you have no guarantee that the thread scheduler is fair. If the thread scheduler chooses to neglect a thread that has been waiting a long time for the lock, it doesn’t get the chance to be treated fairly by the lock.
+
+#### Condition objects
+- Sometimes a thread enters a critical section, only to find out that it can't proceed until certain condition is fulfilled.
+- In this case a condition **object/condition variable** is used to manage threads that have acquired a lock but can't do useful work.
+##### In depth Example
+- Let us refine our simulation of the bank. We do not want to transfer money out of an account that does not have the funds to cover the transfer.
+- Now, what do we do when there is not enough money in the account? We wait until some other thread has added funds. But this thread has just gained exclusive access to the `bankLock`, so no other thread has a chance to make a deposit. This is where condition objects come in.
+- A lock object can have one or more associated condition objects.
+- You obtain a condition object with the `newCondition` method.
+
+###### Code:
+
+```Java
+package synch;
+import java.util.*;
+import java.util.concurrent.locks.*;
+
+public class Bank
+{
+	private final double[] accounts;
+	private Lock bankLock;
+	private Condition sufficientFunds;
+	
+	public Bank(int n, double initialBalance)
+	{
+		accounts = new double[n];
+		Arrays.fill(accounts, initialBalance);
+		bankLock = new ReentrantLock();
+		sufficientFunds = bankLock.newCondition();
+	}
+
+	public void transfer(int from, int to, double amount) throws Integer
+	{
+		bankLock.lock();
+		try
+		{
+			while (accounts[from] < amount)
+				sufficientFunds.await();
+			System.out.print(Thread.currentThread());
+			accounts[from] -= amount;
+			System.out.printf(" %10.2f from %d to %d", amount, from, to); 
+			 accounts[to] += amount; 
+			 System.out.printf(" Total Balance: %10.2f%n", getTotalBalance());
+			 sufficientFunds.signalAll();
+		}
+		finally { 
+			bankLock.unlock();
+		}
+	}
+}
+```
+###### Explanation:
+- If the transfer method finds that sufficient funds are not available, it calls `sufficientFunds.await();`
+- The current thread is now deactivated and gives up the lock. 
+- This lets in another thread that can, we hope, increase the account balance.
+- Once a thread calls the await method, it enters a wait set for that condition.
+- The thread is not made runnable when the lock is available. Instead, it stays deactivated until another thread has called the `signalAll` method on the same condition.
+- When another thread has transferred money, it should call `sufficientFunds.signalAll();`
+	- This call reactivates all threads waiting for the condition. When the threads are removed from the wait set, they are again runnable and the scheduler will eventually activate them again. At that time, they will attempt to reenter the object. As soon as the lock is available, one of them will acquire the lock and continue where it left off, returning from the call to await.
+- Another method, `signal` : 
+	- unblocks only a single thread from the wait set, chosen at random. That is more efficient than unblocking all threads, but there is a danger. If the randomly chosen thread finds that it still cannot proceed, it becomes blocked again. If no other thread calls signal again, the system deadlocks
+- When to call `signalAll` ?
+	- The rule of thumb is to call signalAll whenever the state of an object changes in a way that might be advantageous to waiting threads
+
+> Caution:
+> A thread can only call await, signalAll, or signal on a condition if it owns the lock of the condition.
+
+### Using synchronized keyword
+- Every object in Java has an intrinsic lock.
+- If a method is declared with the `synchronized` keyword, the object's lock protects the entire
