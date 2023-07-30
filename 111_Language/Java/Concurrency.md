@@ -35,22 +35,22 @@ Here is a simple procedure for running a task in a separate thread:
 
 1. Place the code for the task into the `run method` of a class that implements the `Runnable interface`. That interface contains only a single method *(Runnable is a Functional Interface)*
 ``` Java
-public interface Runnable { void run(); }
+	public interface Runnable { void run(); }
 ``` 
 
 2. Since Runnable is a functional interface, you can make an instance with a lambda expression:
 ```Java
-Runnable r = () -> { task code };
+	Runnable r = () -> { task code };
 ```
 
 3. Construct a Thread object from the `Runnable`:
 ```Java
-var t = new Thread(r);
+	var t = new Thread(r);
 ```
 
 4. Start the thread:
 ```Java
-t.start();
+	t.start();
 ```
 
 ### Approach 2:
@@ -58,11 +58,11 @@ t.start();
 - You can also define a thread by forming a subclass of the `Thread class`, like this:
 
 ```Java
-class MyThread extends Thread { 
-	public void run() {
-		 task code 
+	class MyThread extends Thread { 
+		public void run() {
+			 task code 
+		}
 	}
-}
 ```
 - Then you construct an object of the subclass and call its `start` method.
 - However, this approach is no longer recommended. You should decouple the task that is to be run in parallel from the mechanism of running it. If you have many tasks, it is too expensive to create a separate thread for each of them. Instead, you can use a `thread pool`.
@@ -137,9 +137,9 @@ A thread is terminated for one of two reasons:
 - `void interrupt()` : This method can be used to request termination of a thread.
 	- sends an interrupt request to a thread. The interrupted status of the thread is set to true. If the thread is currently blocked by a call to sleep, then an InterruptedException is thrown.
 ``` Java
-while(!Thread.currentThread().isInterrupted() && more work to do){
-	do more work
-}
+	while(!Thread.currentThread().isInterrupted() && more work to do){
+		do more work
+	}
 ```
 - `static boolean interrupted()` : Tests whether the current thread has been interrupted. Note that this is a static method. The call has a side effect—it resets the interrupted status of the current thread to false.
 - `boolean isInterrupted()` : Tests whether a thread has been interrupted. Unlike the static interrupted method, this call does not change the interrupted status of the thread.
@@ -161,8 +161,8 @@ while(!Thread.currentThread().isInterrupted() && more work to do){
 ## Thread Names
 - Set any name with `setName` method:
 ```Java
-var t = new Thread(runnable);
-t.setName("web crawler");
+	var t = new Thread(runnable);
+	t.setName("web crawler");
 ```
 
 ## What is a Thread Group ?
@@ -325,18 +325,18 @@ public class Bank
 
 ###### Code
 ```Java
-class Bank
-{
-	private double[] accounts;
-	public synchronized void transfer(int from,int to,int amount) throws InterruptedException
+	class Bank
 	{
-		while(accounts[from] < amount)
-			wait();
-		accounts[from] -= amount;
-		accounts[to] += amount;
-		notifyAll();
-	} 
-}
+		private double[] accounts;
+		public synchronized void transfer(int from,int to,int amount) throws InterruptedException
+		{
+			while(accounts[from] < amount)
+				wait();
+			accounts[from] -= amount;
+			accounts[to] += amount;
+			notifyAll();
+		} 
+	}
 ```
 
 ###### Explanation
@@ -357,26 +357,26 @@ class Bank
 - There is a second mechanism for acquiring the lock: **by entering a synchronized block**
 ###### Syntax
 ```Java
-synchronized(obj)
-{
-	//critical section code
-}
+	synchronized(obj)
+	{
+		//critical section code
+	}
 ```
 - Sometimes you will find the use of an **ad-hoc lock**.
 ###### Example
 ```Java
-class Bank
-{
-	private var lock = new Object();
-	...
-	public void transfer()
+	class Bank
 	{
-		synchronized(lock) //ad-hoc lock
+		private var lock = new Object();
+		...
+		public void transfer()
 		{
-			...		
+			synchronized(lock) //ad-hoc lock
+			{
+				...		
+			}
 		}
 	}
-}
 ```
 - Here, the lock object is created only to use the lock that every Java object possesses.
 
@@ -388,3 +388,96 @@ Locks and conditions are powerful tools for thread synchronization, but they are
 	- In other words, if a client calls `obj.method()`, then the lock for obj is automatically acquired at the beginning of the method call and relinquished when the method returns. 
 	- Since all fields are private, this arrangement ensures that no thread can access the fields while another thread manipulates them.
 - The lock can have **any number of associated conditions**.
+- If a method is declared with the `synchronized` keyword, it acts like a monitor method.
+- However, a Java object differs from a monitor in **three important ways :**
+	1. Fields are not required to be private.
+	2. Methods are not required to be synchronized.
+	3. The intrinsic lock is available to clients.
+
+#### Volatile Fields
+- The `volatile` keyword offers a lock-free mechanism for ***synchronizing access to an instance field***.
+- Volatile variable works only with **assignment operation**.
+- If you declare a field as volatile, then the compiler and the virtual machine take into account that the field may be concurrently updated by another thread.
+```Java
+	private volatile boolean done; 
+	public boolean isDone() { return done; } 
+	public void setDone() { done = true; }
+```
+###### Caution
+- Volatile variables **do not provide any atomicity**.
+- For example, the method `public void flipDone() { done = !done; }` is not atomic 
+	- It is not guaranteed to flip the value of the field. There is no guarantee that the reading, flipping, and writing is uninterrupted.
+
+#### Final Variables
+- There is one other situation in which it is safe to access a shared field—when it is declared final.
+#### Atomics
+- There are a number of classes in the `java.util.concurrent.atomic` package that use efficient machine-level instructions to guarantee atomicity of other operations without using locks.
+- For example, the `AtomicInteger` class has methods `incrementAndGet` and `decrementAndGet` that atomically increment or decrement an integer.
+```Java
+	public static AtomicLong nextNumber = new AtomicLong();
+	// in some thread...
+	long id = nextNumber.incrementAndGet();
+```
+###### Explanation
+- The `incrementAndGet` method atomically increments the `AtomicLong` and returns the post-increment value.
+	- That is, the operations of getting the value, adding 1, setting it, and producing the new value cannot be interrupted.
+	- It is guaranteed that the correct value is computed and returned, even if multiple threads access the same instance concurrently
+
+if you want to make a more complex update, you have to use the `compareAndSet` method.
+###### Example
+Suppose you want to keep track of the largest value that is observed by different threads.
+
+```Java
+	public static AtomicLong largest = new AtomicLong();
+	largest.updateAndGet(x -> Math.max(x,observed)); //this
+	largest.accumulateAndGet(observed,Math::max); // or this
+```
+There are also methods `getAndUpdate` and `getAndAccumulate` that return **the old value**.
+
+##### When to use LongAdder and LongAccumulator ?
+###### LongAdder
+- When you have a very large number of threads accessing the same atomic values, performance suffers because the optimistic updates require too many retries.
+- A `LongAdder` is composed of multiple variables whose collective sum is the current value.
+- Multiple threads can update different summands, and new summands are automatically provided when the number of threads increases.
+- This is efficient in the common situation where the value of the sum is not needed until after all work has been done.
+- Call `increment` to increment a counter or `add` to add a quantity, and `sum` to retrieve the total.
+```Java
+	var adder = new LongAdder();
+	for(. . .)
+		pool.submit(() -> {
+			while(. . .){
+				. . .
+				if(. . .) adder.increment();	
+			}
+		});
+		long total = adder.sum();
+```
+
+###### LongAccumulator
+- The `LongAccumulator` generalizes this idea to an arbitrary accumulation operation.
+- In the constructor, ***you provide the operation, as well as its neutral element.***
+- To incorporate new values, call `accumulate`. Call `get` to obtain the current value.
+```Java
+	var adder = new LongAccumulator(Long::sum, 0); 
+	// in some thread. . . 
+	adder.accumulate(value);
+```
+
+#### DeadLock
+- When a thread is currently holding some resources and needs extra resources that are being held by other threads which in turn are waiting for resources, it forms a DeadLock. 
+
+#### Thread Local Variables
+we discussed the risks of sharing variables between threads. Sometimes, you can avoid sharing by giving each thread its own instance, using the `ThreadLocal` helper class (`java.lang.ThreadLocal`).
+- `T get()` : gets the current value of this thread. If get is called for the first time, the value is obtained by calling initialize.
+- `void set(T t)` : sets a new value for this thread.
+- `void remove()` : removes the value for this thread.
+- `static <S> ThreadLocal<S> withInitial(Supplier<? extends S> supplier)` : creates a thread local variable whose initial value is produced by invoking the given supplier.
+###### Example
+```Java
+	//To construct one instance per thread
+	public static final ThreadLocal dateFormat = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MMdd"));
+	//To access the actual formatter,call
+	string dateStamp = dateFormat.get().format(new Date());
+```
+
+# Thread-Safe Collection
