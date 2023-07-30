@@ -314,5 +314,77 @@ public class Bank
 > A thread can only call await, signalAll, or signal on a condition if it owns the lock of the condition.
 
 ### Using synchronized keyword
-- Every object in Java has an intrinsic lock.
-- If a method is declared with the `synchronized` keyword, the object's lock protects the entire
+- Every object in Java has an `intrinsic lock`.
+- If a method is declared with the `synchronized` keyword, the object's lock protects the entire method.
+	- That is, to call the method, a thread must acquire the intrinsic lock.
+- The intrinsic object lock has **a single associated condition.**
+- The `wait` method **adds a thread to the wait set**, and the `notifyAll`/`notify` methods **unblock waiting threads**.
+- It is also legal to declare **static methods as synchronized**.
+	- If such a method is called, it acquires the intrinsic lock of the associated **class object**. 
+	- For example, if the Bank class has a static synchronized method, then the lock of the `Bank.class` object is locked when it is called. As a result, no other thread can call this or any other synchronized static method of the same class.
+
+###### Code
+```Java
+class Bank
+{
+	private double[] accounts;
+	public synchronized void transfer(int from,int to,int amount) throws InterruptedException
+	{
+		while(accounts[from] < amount)
+			wait();
+		accounts[from] -= amount;
+		accounts[to] += amount;
+		notifyAll();
+	} 
+}
+```
+
+###### Explanation
+- Each object has an intrinsic lock, and that the lock has an intrinsic condition. 
+- The lock manages the threads that try to enter a synchronized method. The condition manages the threads that have called wait.
+
+###### Limitations
+- You cannot interrupt a thread that is trying to acquire a lock.
+- You cannot specify a timeout when trying to acquire a lock.
+- Having a single condition per lock can be inefficient.
+
+###### What should you use in your code—Lock and Condition objects or synchronized methods?
+- It is best to use neither Lock/Condition nor the synchronized keyword. 
+- In many situations, you can use one of the mechanisms of the `java.util.concurrent package` that do all the locking for you. 
+	- For example, **Blocking Queues**.
+	- you will see how to use a blocking queue to synchronize threads that work on a common task later.
+#### Synchronized Blocks
+- There is a second mechanism for acquiring the lock: **by entering a synchronized block**
+###### Syntax
+```Java
+synchronized(obj)
+{
+	//critical section code
+}
+```
+- Sometimes you will find the use of an **ad-hoc lock**.
+###### Example
+```Java
+class Bank
+{
+	private var lock = new Object();
+	...
+	public void transfer()
+	{
+		synchronized(lock) //ad-hoc lock
+		{
+			...		
+		}
+	}
+}
+```
+- Here, the lock object is created only to use the lock that every Java object possesses.
+
+#### The Monitor Concept
+Locks and conditions are powerful tools for thread synchronization, but they are not very object-oriented. For many years, researchers have looked for ways to make multithreading safe without forcing programmers to think about explicit locks. One of the most successful solutions is the monitor concept.
+- A monitor is a class with **only private fields**.
+- Each object of that class has an associated lock.
+- All methods are locked by that lock.
+	- In other words, if a client calls `obj.method()`, then the lock for obj is automatically acquired at the beginning of the method call and relinquished when the method returns. 
+	- Since all fields are private, this arrangement ensures that no thread can access the fields while another thread manipulates them.
+- The lock can have **any number of associated conditions**.
