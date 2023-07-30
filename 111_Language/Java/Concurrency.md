@@ -481,3 +481,56 @@ we discussed the risks of sharing variables between threads. Sometimes, you can 
 ```
 
 # Thread-Safe Collection
+- If multiple threads concurrently modify a data structure, such as a hash table, it is easy to damage that data structure.
+- You can protect a shared data structure by supplying a lock, but it is usually easier to choose a thread-safe implementation instead. 
+# Tasks and Thread Pools
+- Constructing a new thread is expensive because it involves interaction with the operating system.
+- A thread pool contains a number of threads that are ready to run.
+- You give a `Runnable` to the pool, and one of the threads calls the `run` method. When the `run` method exits, the thread doesn’t die but ***stays around to serve the next request***.
+## Callables and Futures
+
+- A `Runnable` encapsulates a task that runs asynchronously; you can think of it as *an asynchronous method* with *no parameters and no return value*.
+- A `Callable` is similar to a `Runnable`, but it returns a value.
+- The `Callable` interface is a parameterized type, with a single method `call`.
+
+Syntax :
+```Java
+	public interface Callable<V>
+	{
+		V call() throws Exception;
+	}
+```
+
+### What is a Future ?
+- A `Future` holds the result of an async computation.
+- It contains the following methods:
+	- `V get()` : A call to this method blocks until the computation is finished.
+	- `V get(long timeout, TimeUnit unit)` : This method also blocks, but it throws a `TimeoutException`, if the call timed out before the computation finished.
+		- If the thread running the computation is interrupted, both `get()` methods throw an `InterruptedException`.
+	- `void cancel(boolean mayInterrupt)` : This is used to cancel the computation. If the computation is currently in progress, it is interrupted if the `mayInterrupt` parameter is true.
+	- `boolean isCancelled()` : 
+	- `boolean isDone()` : This method returns false if the computation is still in progress, true if it is finished
+### How to Execute a Callable ?
+One way to execute a `Callable` is to use a `FutureTask`, which implements both the `Future` and `Runnable` interfaces, so that you can construct a thread for running it.
+
+```Java
+	Callable<Integer> task = . . .;
+	var futureTask = new FutureTask<Integer>(task);
+	var t = new Thread(futureTask); //it's a runnable
+	t.start();
+	. . .
+	Integer result = task.get(); //it's a Future
+```
+
+## Executors
+
+The Executors class has a number of static factory methods for **constructing thread pools.**
+
+###### java.util.concurrent.Executors:
+| Method                                                          | Description                                                                                                            |     |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --- |
+| `ExecutorService newCachedThreadPool()`                         | returns a cached thread pool that creates threads as needed and terminates threads that have been idle for 60 seconds. |     |
+| `ExecutorService newFixedThreadPool(int threads)`               | returns a thread pool that uses the given number of threads to execute tasks.                                          |     |
+| `ExecutorService newSingleThreadExecutor()  `                   | returns an executor that executes tasks sequentially in a single thread.                                               |     |
+| `ScheduledExecutorService newScheduledThreadPool(int threads) ` | returns a thread pool that uses the given number of threads to schedule tasks.                                         |     |
+| `ScheduledExecutorService newSingleThreadScheduledExecutor()`   | returns an executor that schedules tasks in a single thread.                                                           |     | 
