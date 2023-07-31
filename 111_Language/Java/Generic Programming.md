@@ -295,3 +295,45 @@ Intuitively speaking, wildcards with supertype bounds let you write to a generic
 - The return value of `getFirst` can only be assigned to an ***Object***.
 - The `setFirst` method can never be called, not even with an ***Object***.
 -  That’s the essential difference between `Pair<?>` and `Pair`: you can call the `setFirst` method of the raw `Pair` class with any ***Object***.
+
+### Wildcard captures
+Let us write a swap method to understand what it is:
+```Java
+public static <T> void swapHelper(Pair<T>p)
+{
+	T t = p.getFirst();
+	p.setFirst(p.getSecond());
+	p.setSecond(t);
+}
+public static void swap(Pair<?> p)
+{
+	/*
+	Won't work, because a wildcard is not a type variable
+	? t = p.getFirst();
+	p.setFirst(p.getSecond());
+	p.setSecond(t);
+	*/
+	swapHelper(p);
+}
+```
+Here the parameter **T** of the `swapHelper` method *captures* the *wildcard*.
+
+# Reflection and Generics
+- Reflection lets you analyze arbitrary objects at runtime.
+- If the objects are instances of generic classes, you don't get much info about the generic type parameters because they have been erased.
+### The Generic `Class` Class
+- The `Class` class is now generic.
+- For example, **String.class** is actually an object (in fact, the sole object) of the class `Class<String>`
+### Using `class<T>` Parameters for Type matching
+
+It is sometimes useful to match the type variable of a `Class<T>` parameter in a generic method. For Example:
+```Java
+public static <T> Pair<T> makePair(Class<T> c) throws InstantiationException,IllegalAccessException
+{
+	return new Pair<>(c.newInstance(),c.newInstance());
+}
+
+//if you call
+makePair(Employee.class)
+```
+then `Employee.class` is an obk=ject of type `Class<Employee>`.The type parameter **T** matches the class `Employee`. So this works and the `newInstance()` method creates instance of the Employee and the compiler can infer that the method returns a `Pair<Employee>`.
