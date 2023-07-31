@@ -206,4 +206,35 @@ public class Singleton<T>
 	}
 }
 ```
-#### 
+#### You can;t Throw or Catch Instances of a Generic class
+- You can neither throw nor catch objects of a generic class.
+- In fact, it is not even legal for a generic class to extend `Throwable`.
+```Java
+public class Problem extends Exception { /* . . . */ } 
+// ERROR--can't extend Throwable
+```
+- You cannot use a type variable in a `catch` clause.
+```Java
+catch (T e) // ERROR--can't catch type variable 
+{ 
+	Logger.global.info(. . .); 
+}
+```
+- However, it is OK to use type variables in exception specifications.
+```Java
+public static <T extends Throwable> void d()
+{
+	. . .
+}
+```
+#### Beware of Clashes after Erasure
+- It is illegal to create conditions that cause clashes when generic types are erased.
+- For example, the following is illegal:
+```Java
+class Employee implements Comparable { . . . }
+class Manager extends Employee implements Comparable { . . . } // ERROR
+```
+- Manager would then implement both `Comparable<Employee>` and `Comparable<Manager>`, which are different parameterizations of the same interface.
+
+
+# Inheritance rules for Generic Types
