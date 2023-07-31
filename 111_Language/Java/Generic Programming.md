@@ -127,7 +127,83 @@ Pair<String> p - (Pair<String>) a; //warning--can only test that a is a pair
 - In the same spirit, the `getClass` method always returns the raw type.
 ```Java
 Pair<String>stringPair = . . .;
-Pair<Employee> employeePair = . . .
+Pair<Employee> employeePair = . . .;
+if (stringPair.getClass() == employeePair.getClass()) // returns true because both return Pair.class
 ```
+#### 3. You can't create arrays of parameterized types
+
+```Java
+Pair<String>[] table = new Pair<String>[10]; //ERROR
+```
+- Note that only the creation of these arrays is outlawed. You can declare a variable of type `Pair<String>[]`. But you can’t initialize it with a` new Pair<String>[10]`.
 
 
+##### Note
+- You can declare arrays of wildcard types and then cast them
+```Java
+var table = (Pair<String>[]) new Pair<?>[10];
+```
+- The result is not safe. If you store a `Pair<Employee>` in table[0] and then call a `String` method on `table[0].getFirst()`, you get a `ClassCastException`.
+
+#### 4. Varargs warning
+- Passing instances of a generic type to a method with a variable number of arguments will give us a warning not an error.
+```Java
+
+public static void addAll(Collection coll, T... ts)
+{
+	for (T t : ts) coll.add(t);
+}
+Collection> table = . . .;
+Pair pair1 = . . .; 
+Pair pair2 = . . .; 
+addAll(table, pair1, pair2);
+```
+- You can suppress the warning in one of **two** ways.
+	- You can add the annotation `@SuppressWarnings("unchecked")` to the method containing the call to `addAll`.
+	- you can annotate the `addAll` method itself with `@SafeVarargs`:
+```Java
+@SafeVarargs 
+public static void addAll(Collection coll, T... ts)
+```
+- The `@SafeVarargs` can only be used with `constructors` and `methods` that are `static`, `final`, or (as of Java 9) `private`. Any other method could be overridden, making the annotation meaningless.
+##### How to create array of generic type using @safeVarargs ?
+
+```Java
+@SafeVarargs static E[] array(E... array) { return array; }
+// Now you can call
+Pair[] table = array(pair1, pair2);
+```
+- This seems convenient, but there is a hidden danger. The code
+```Java
+Object[] objarray = table; 
+objarray[0] = new Pair();
+```
+- will run without an `ArrayStoreException` (because the array store only checks the erased type), and you’ll get an exception elsewhere when you work with table[0].
+
+#### 5. You can't instantiate type variable
+- You cannot use type variables in an expression such as `new T(. . .)`
+#### 6. You can't create a Generic array
+Just as you cannot instantiate a single generic instance, you cannot instantiate an array. The reasons are different—an array is, after all, filled with `null` values, which would seem safe to construct. But an array also carries a type, which is used to monitor array stores in the virtual machine. That type is erased. For example, consider
+```Java
+public static <T extends Comparable> T[] minmax(T... a)
+{
+	T[] mm = new T[2]; //ERROR
+	. . . 
+}
+```
+Type erasure would cause this method to always construct an array `Comparable[2]`.
+
+#### 7. Type Variables can't be static
+For example, the following clever idea won’t work:
+
+```
+public class Singleton<T>
+{
+	private static T singleInstance; //ERROR
+	public static T getSingleInstance() //ERROR
+	{
+		. . .
+	}
+}
+```
+#### 
