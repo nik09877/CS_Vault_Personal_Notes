@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/Generic Programming.md",
                 "mode": "preview",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/Generic Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/Generic Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Concurrency.md"
+                "file": "111_Language/Java/Generic Programming.md"
               }
             }
           },
@@ -169,10 +169,11 @@
   },
   "active": "41664eec4825dcf8",
   "lastOpenFiles": [
+    "111_Language/Java/Concurrency.md",
+    "111_Language/Java/Generic Programming.md",
     "_assets",
     "_assets/Pasted image 20230728143422.png",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
-    "111_Language/Java/Concurrency.md",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
     "111_Language/Java/Untitled",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
@@ -187,7 +188,6 @@
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Strategy_Design_Pattern.pdf",
     "555_Projects",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns/Proxy_Design_Pattern.pdf",
-    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "Untitled.md",
     "Draw.io/Abstract-factory.svg",

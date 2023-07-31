@@ -4,7 +4,7 @@
 
 - It is the Operating System's ability to have more than one program running at what seems like the same time.
 - The OS assigns CPU time slices to each process, giving the impression of parallel activity.
-- 
+
 ## What are multithreaded programs?
 
 - These programs do multiple tasks at the same time. 
@@ -35,22 +35,22 @@ Here is a simple procedure for running a task in a separate thread:
 
 1. Place the code for the task into the `run method` of a class that implements the `Runnable interface`. That interface contains only a single method *(Runnable is a Functional Interface)*
 ``` Java
-	public interface Runnable { void run(); }
+public interface Runnable { void run(); }
 ``` 
 
 2. Since Runnable is a functional interface, you can make an instance with a lambda expression:
 ```Java
-	Runnable r = () -> { task code };
+Runnable r = () -> { task code };
 ```
 
 3. Construct a Thread object from the `Runnable`:
 ```Java
-	var t = new Thread(r);
+var t = new Thread(r);
 ```
 
 4. Start the thread:
 ```Java
-	t.start();
+t.start();
 ```
 
 ### Approach 2:
@@ -58,11 +58,11 @@ Here is a simple procedure for running a task in a separate thread:
 - You can also define a thread by forming a subclass of the `Thread class`, like this:
 
 ```Java
-	class MyThread extends Thread { 
-		public void run() {
-			 task code 
-		}
+class MyThread extends Thread { 
+	public void run() {
+		 task code 
 	}
+}
 ```
 - Then you construct an object of the subclass and call its `start` method.
 - However, this approach is no longer recommended. You should decouple the task that is to be run in parallel from the mechanism of running it. If you have many tasks, it is too expensive to create a separate thread for each of them. Instead, you can use a `thread pool`.
@@ -137,9 +137,9 @@ A thread is terminated for one of two reasons:
 - `void interrupt()` : This method can be used to request termination of a thread.
 	- sends an interrupt request to a thread. The interrupted status of the thread is set to true. If the thread is currently blocked by a call to sleep, then an InterruptedException is thrown.
 ``` Java
-	while(!Thread.currentThread().isInterrupted() && more work to do){
-		do more work
-	}
+while(!Thread.currentThread().isInterrupted() && more work to do){
+	do more work
+}
 ```
 - `static boolean interrupted()` : Tests whether the current thread has been interrupted. Note that this is a static method. The call has a side effect—it resets the interrupted status of the current thread to false.
 - `boolean isInterrupted()` : Tests whether a thread has been interrupted. Unlike the static interrupted method, this call does not change the interrupted status of the thread.
@@ -161,8 +161,8 @@ A thread is terminated for one of two reasons:
 ## Thread Names
 - Set any name with `setName` method:
 ```Java
-	var t = new Thread(runnable);
-	t.setName("web crawler");
+var t = new Thread(runnable);
+t.setName("web crawler");
 ```
 
 ## What is a Thread Group ?
@@ -483,6 +483,30 @@ we discussed the risks of sharing variables between threads. Sometimes, you can 
 # Thread-Safe Collection
 - If multiple threads concurrently modify a data structure, such as a hash table, it is easy to damage that data structure.
 - You can protect a shared data structure by supplying a lock, but it is usually easier to choose a thread-safe implementation instead. 
+
+## Blocking Queues
+- Many threading problems can be formulated elegantly and safely by using one or more queues.
+- Producer threads insert items into the queue, and consumer threads retrieve them.
+- The queue lets you safely hand over data from one thread to another.
+- A blocking queue causes a thread to block when you try to add an element when the queue is currently full or to remove an element when the queue is empty.
+
+#### Blocking Queue Methods
+| Method    | Normal Action                        | Action in special circumstances                         |
+| --------- | ------------------------------------ | ------------------------------------------------------- |
+| `offer`   | Adds an element and returns *true*   | Returns *false* if the queue is full                    |
+| `peek`    | Returns the head element             | Returns `null` if the queue is empty                    |
+| `poll`    | Removes and returns the head element | Returns `null` if the queue is empty                    |
+| `put`     | Adds an element                      | Blocks if the queue is full                             |
+| `take`    | Removes and returns the head element | Blocks if the queue is empty                            |
+| `add`     | Adds an element                      | Throws an `IllegalStateException` if the queue is full  |
+| `remove`  | Removes and returns the head element | Throws a `NoSuchElementException` if the queue is empty |
+| `element` | Returns the head element             | Throws a `NoSuchElementException` if the queue is empty |
+
+## Efficient Maps, Sets, and Queues
+- The` java.util.concurrent package` supplies efficient implementations for maps, sorted sets, and queues: `ConcurrentHashMap`, `ConcurrentSkipListMap`, `ConcurrentSkipListSet`, and `ConcurrentLinkedQueue`.
+- These collections use sophisticated algorithms that minimize contention by allowing concurrent access to different parts of the data structure.
+- Unlike most collections, the size method of these classes does not necessarily operate in constant time. Determining the current size of one of these collections usually requires traversal.
+- Read more in the Core Java Volume-I Book.
 # Tasks and Thread Pools
 - Constructing a new thread is expensive because it involves interaction with the operating system.
 - A thread pool contains a number of threads that are ready to run.
@@ -523,7 +547,7 @@ One way to execute a `Callable` is to use a `FutureTask`, which implements both 
 	Integer result = task.get(); //it's a Future
 ```
 
-## Executors
+## Executors (Unfinished)
 
 The Executors class has a number of static factory methods for **constructing thread pools.**
 #### Executor Methods
@@ -540,9 +564,9 @@ The Executors class has a number of static factory methods for **constructing th
 | Method                                   | Description                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `Future submit(Callable task)`           | submits the given task for execution.                                                             |
-| `Future submit(Runnable task, T result)` | submits the given task for execution.                                                             |
-| `Future submit(Runnable task)`           | submits the given task for execution.                                                             |
-| `void shutdown()`                        | shuts down the service, completing the already submitted tasks but not accepting new submissions. |
+| `Future submit(Runnable task, T result)` | returns an odd-looking `Future`. You can use such an object to call `isDone`, `cancel`, or `isCancelled`, but the `get` method simply returns null upon completion. for execution.                                                             |
+| `Future submit(Runnable task)`           | yields a `Future` whose `get` method returns the given result object upon completion.                                                          |
+| `void shutdown()`                        | When you are done with a thread pool, call `shutdown`. This method initiates the shutdown sequence for the pool. An executor that is shut down accepts no new tasks. When all tasks are finished, the threads in the pool die. Alternatively, you can call `shutdownNow()`. The pool then cancels all tasks that have not yet begun. |
 
 ###### java.util.concurrent.ThreadPoolExecutor
 | Method                   | Description |
@@ -572,3 +596,24 @@ The Executors class has a number of static factory methods for **constructing th
 2. Call `submit` to submit `Callable` or `Runnable` objects.
 3. Hang on to the returned `Future` objects so that you can get the results or cancel the tasks.
 4. Call `shutdown` when you no longer want to submit any tasks.
+
+#### Controlling Groups of Tasks (Unfinished)
+
+Sometimes, an executor is used for a more tactical reason—simply to control a group of related tasks.
+
+#### The Fork-Join Framework (Unfinished)
+
+- Some applications use a large number of threads that are mostly idle. An example would be a web server that uses one thread per connection. 
+- Other applications use one thread per processor core, in order to carry out computationally intensive tasks, such as image or video processing.
+- The fork join framework, which appeared in Java 7, is designed to support the latter
+```Java
+	if (problemSize < threshold)
+		//solve problem directly
+	else
+	{
+		//break problem into subproblems
+		//recursively solve each subproblem
+		//combine the results
+	}
+```
+# Asynchronous Computation (Pending)
