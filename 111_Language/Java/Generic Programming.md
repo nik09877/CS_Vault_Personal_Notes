@@ -106,3 +106,28 @@ public class <T extends Comparable> T min(T[] a)
 ```
 
 - There can be at most **1 class** as the bounding type and it must be declared first in the bounds list.
+
+# Generic Code and Virtual Machine
+- There are no generics in the virtual machine, only ordinary classes and methods.
+- All type parameters are replaced by their bounds or `Object`.
+- Bridge methods are synthesized to preserve polymorphism.
+- Casts are inserted as necessary to preserve type safety.
+# Restrictions and Limitations
+
+#### 1. You can't use primitives as type parameter:
+- Thus, there is no Pair `<double`, only Pair `<Double>`.
+- The reason is, of course ***type erasure***, due to which all type parameters are replaced by their bounds.
+#### 2. Runtime type inquiry only works with Raw types
+- Objects in the virtual machine always have a specific non generic type. Therefore, all type inquiries yield only the raw type.
+```Java
+if(a instanceof Pair<String>) //ERROR
+if(a instanceof Pair<T>) //ERROR
+Pair<String> p - (Pair<String>) a; //warning--can only test that a is a pair
+```
+- In the same spirit, the `getClass` method always returns the raw type.
+```Java
+Pair<String>stringPair = . . .;
+Pair<Employee> employeePair = . . .
+```
+
+
