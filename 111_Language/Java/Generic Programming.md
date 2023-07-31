@@ -238,3 +238,60 @@ class Manager extends Employee implements Comparable { . . . } // ERROR
 
 
 # Inheritance rules for Generic Types
+- Consider a class and a subclass, such as `Employee` and `Manager`. Is `Pair<Manager>` a subclass of `Pair<Employee>` ? Perhaps surprisingly, the answer is **NO**.
+- In general, there is no relationship between `Pair<S>` and `Pair<T>`, no matter how S and T are related.
+
+![[Pasted image 20230731200716.png]]
+
+- Finally, generic classes **can extend or implement** other generic classes. In this regard, they are no different from ordinary classes.
+
+![[Pasted image 20230731200851.png]]
+
+# Wildcard Types
+
+### The Wildcard Concept
+- In a wildcard type, a type parameter is allowed to vary.
+
+For example, the wildcard type (subtype bound)
+```Java
+Pair<? extends Employee>
+```
+denotes any generic `Pair` type whose type parameter is a subclass of `Employee`, such as
+`Pair<Manager>`, but not `Pair<String>`.
+
+#### Example
+
+Let’s say you want to write a method that prints out pairs of employees, like this:
+
+```Java
+public static void printBuddies(Pair<Employee> p)
+{
+	. . .
+}
+```
+Here you can't pass a `Pair<Manager>` . so do this instead:
+```Java
+public static void printBuddies(Pair<? extends Employee> p)
+```
+
+![[Pasted image 20230731201449.png]]
+
+### Supertype bounds for wildcards
+Wildcard bounds are similar to type variable bounds, but they have an added capability—you can specify a supertype bound, like this:
+
+```Java
+? super Manager
+```
+
+This wildcard is **restricted to all supertypes of Manager**.
+
+![[Pasted image 20230731202825.png]]
+**Figure:** A wildcard with a supertype bound
+
+Intuitively speaking, wildcards with supertype bounds let you write to a generic object, while wildcards with subtype bounds let you read from a generic object.
+
+###  Pair`<?>` vs raw Pair
+- The type `Pair<?>` is called ***unbounded wildcard*** which has methods such as `? getFirst()` and `void setFirst(?)`.
+- The return value of `getFirst` can only be assigned to an ***Object***.
+- The `setFirst` method can never be called, not even with an ***Object***.
+-  That’s the essential difference between `Pair<?>` and `Pair`: you can call the `setFirst` method of the raw `Pair` class with any ***Object***.
