@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "338b1a7b01de64ad",
+        "id": "cb59286ad485626e",
         "type": "tabs",
         "children": [
           {
-            "id": "41664eec4825dcf8",
+            "id": "5e514b2468e28d9d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md",
+                "file": "111_Language/Java/Introduction.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md",
+                "file": "111_Language/Java/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md",
+                "file": "111_Language/Java/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md"
+                "file": "111_Language/Java/Introduction.md"
               }
             }
           },
@@ -167,14 +167,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "41664eec4825dcf8",
+  "active": "5e514b2468e28d9d",
   "lastOpenFiles": [
+    "111_Language/Java/Introduction.md",
+    "111_Language/Java/Generic Programming.md",
     "_assets/Pasted image 20230731202825.png",
     "_assets/Pasted image 20230731201449.png",
     "_assets/Pasted image 20230731200851.png",
     "_assets/Pasted image 20230731200716.png",
     "111_Language/Java/Concurrency.md",
-    "111_Language/Java/Generic Programming.md",
     "_assets",
     "_assets/Pasted image 20230728143422.png",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
