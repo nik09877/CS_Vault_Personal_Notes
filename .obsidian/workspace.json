@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/Introduction.md",
+                "file": "111_Language/Java/2.Fundamental Programming Structures in Java.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Introduction.md",
+                "file": "111_Language/Java/2.Fundamental Programming Structures in Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Introduction.md",
+                "file": "111_Language/Java/2.Fundamental Programming Structures in Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Introduction.md"
+                "file": "111_Language/Java/2.Fundamental Programming Structures in Java.md"
               }
             }
           },
@@ -169,7 +169,10 @@
   },
   "active": "5e514b2468e28d9d",
   "lastOpenFiles": [
-    "111_Language/Java/Introduction.md",
+    "111_Language/Java/1.Introduction.md",
+    "111_Language/Java/2.Fundamental Programming Structures in Java.md",
+    "_assets/Pasted image 20230802212317.png",
+    "Pasted image 20230802212240.png",
     "111_Language/Java/Generic Programming.md",
     "_assets/Pasted image 20230731202825.png",
     "_assets/Pasted image 20230731201449.png",
