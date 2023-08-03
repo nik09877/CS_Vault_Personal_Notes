@@ -18,8 +18,19 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "3bdcdb0c705780c9",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -167,7 +178,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5bdf0185bea56d37",
+  "active": "3bdcdb0c705780c9",
   "lastOpenFiles": [
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/1.Introduction.md",

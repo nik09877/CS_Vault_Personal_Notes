@@ -1,9 +1,6 @@
 {
   "livePreview": false,
-  "spellcheckLanguages": [
-    "en-US",
-    "en-GB"
-  ],
+  "spellcheckLanguages": null,
   "showInlineTitle": false,
   "defaultViewMode": "source",
   "alwaysUpdateLinks": true,
