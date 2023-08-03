@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -178,8 +177,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3bdcdb0c705780c9",
+  "active": "9a3c6f09f5090e2e",
   "lastOpenFiles": [
+    "_assets/Pasted image 20230803183812.png",
+    "_assets/Pasted image 20230803183359.png",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/1.Introduction.md",
     "_assets/Pasted image 20230802212317.png",
@@ -212,7 +213,6 @@
     "Draw.io/Abstract-factory.svg",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "444_System Design/LLD/Untitled Diagram 1.svg",
-    "Untitled Diagram.svg",
     "Excalidraw/Drawing 2023-07-25 21.25.07.excalidraw.md",
     "Untitled.canvas",
     "11_Obsidian_Tutorial/Markdown Syntax.md"
