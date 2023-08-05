@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0bf954cba9f126eb",
+        "id": "2457fc2bfc8f99eb",
         "type": "tabs",
         "children": [
           {
-            "id": "7ec990b73b08f154",
+            "id": "aecd992e50ce0c59",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md",
+                "file": "111_Language/Java/4.Inheritance.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md",
+                "file": "111_Language/Java/4.Inheritance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md",
+                "file": "111_Language/Java/4.Inheritance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md"
+                "file": "111_Language/Java/4.Inheritance.md"
               }
             }
           },
@@ -167,8 +167,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7ec990b73b08f154",
+  "active": "aecd992e50ce0c59",
   "lastOpenFiles": [
+    "111_Language/Java/4.Inheritance.md",
+    "111_Language/Java/3.Objects and Classes.md",
+    "111_Language/Java/Concurrency.md",
+    "111_Language/Java/Generic Programming.md",
+    "_assets/Pasted image 20230805001634.png",
     "_assets/Pasted image 20230805001232.png",
     "_assets/Pasted image 20230805001144.png",
     "_assets/Pasted image 20230805000930.png",
@@ -177,14 +182,9 @@
     "_assets/Pasted image 20230804235051.png",
     "_assets/Pasted image 20230804234859.png",
     "Pasted image 20230804234722.png",
-    "111_Language/Java/3.Objects and Classes.md",
     "_assets/Pasted image 20230804234619.png",
-    "_assets/Pasted image 20230804234455.png",
-    "_assets/Pasted image 20230804225451.png",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/1.Introduction.md",
-    "111_Language/Java/Generic Programming.md",
-    "111_Language/Java/Concurrency.md",
     "_assets",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
