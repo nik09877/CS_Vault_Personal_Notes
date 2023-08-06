@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "966808aec645acd4",
+        "id": "458c2c14268085a4",
         "type": "tabs",
         "children": [
           {
-            "id": "162c8f2126a3c7a5",
+            "id": "d52155b0717e4b4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Concurrency.md"
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md"
               }
             }
           },
@@ -166,22 +166,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "162c8f2126a3c7a5",
+  "active": "d52155b0717e4b4e",
   "lastOpenFiles": [
-    "Pasted image 20230806213407.png",
-    "Pasted image 20230806213336.png",
-    "Pasted image 20230806213308.png",
-    "Pasted image 20230806213056.png",
-    "Pasted image 20230806213023.png",
-    "Pasted image 20230806212905.png",
-    "Pasted image 20230806212036.png",
-    "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/Concurrency.md",
+    "_assets/Pasted image 20230806213853.png",
+    "_assets/Pasted image 20230806213826.png",
+    "_assets/Pasted image 20230806213745.png",
+    "_assets/Pasted image 20230806213726.png",
+    "_assets/Pasted image 20230806213407.png",
+    "_assets/Pasted image 20230806213336.png",
+    "_assets/Pasted image 20230806213308.png",
+    "_assets/Pasted image 20230806213056.png",
+    "_assets/Pasted image 20230806213023.png",
+    "_assets/Pasted image 20230806212905.png",
+    "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/4.Inheritance.md",
-    "Pasted image 20230806210833.png",
-    "Pasted image 20230806210333.png",
-    "Pasted image 20230806205858.png",
-    "Pasted image 20230806205832.png",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/3.Objects and Classes.md",
     "111_Language/Java/1.Introduction.md",

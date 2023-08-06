@@ -612,12 +612,15 @@ The Executors class has a number of static factory methods for **constructing th
 3. Hang on to the returned `Future` objects so that you can get the results or cancel the tasks.
 4. Call `shutdown` when you no longer want to submit any tasks.
 
-#### Controlling Groups of Tasks (Unfinished)
+#### Controlling Groups of Tasks 
 
-Sometimes, an executor is used for a more tactical reason—simply to control a group of related tasks.
-
-#### The Fork-Join Framework (Unfinished)
-
+- Sometimes, an executor is used for a more tactical reason—simply to control a group of related tasks.
+- Methods :
+- ![[Pasted image 20230806213745.png]]
+- Example:
+- ![[Pasted image 20230806213726.png]]
+- 
+#### The Fork-Join Framework 
 - Some applications use a large number of threads that are mostly idle. An example would be a web server that uses one thread per connection. 
 - Other applications use one thread per processor core, in order to carry out computationally intensive tasks, such as image or video processing.
 - The fork join framework, which appeared in Java 7, is designed to support the latter
@@ -631,4 +634,7 @@ Sometimes, an executor is used for a more tactical reason—simply to control a 
 		//combine the results
 	}
 ```
+- Example :  
+- ![[Pasted image 20230806213826.png]]
+- ![[Pasted image 20230806213853.png]]
 # Asynchronous Computation (Pending)
