@@ -83,6 +83,8 @@ class MyThread extends Thread {
 ### java.lang.Runnable
 - `void run()` : must be overridden and supplied with instructions for the task that you want to have executed.
 
+### Example Code
+![[Pasted image 20230806212036.png]]
 # Thread States
 ## There are 6 thread states
 1. New
@@ -331,11 +333,12 @@ public class Bank
 		public synchronized void transfer(int from,int to,int amount) throws InterruptedException
 		{
 			while(accounts[from] < amount)
-				wait();
+				wait(); // wait on intrinsic object lock's single condition
 			accounts[from] -= amount;
 			accounts[to] += amount;
-			notifyAll();
-		} 
+			notifyAll(); notify all threads waiting on the condition
+		}
+		public synchronized double getTotalBalance() { . . . } 
 	}
 ```
 
@@ -367,14 +370,18 @@ public class Bank
 ```Java
 	class Bank
 	{
+		private double[] accounts;
 		private var lock = new Object();
 		...
-		public void transfer()
+		public void transfer(int from, int to, int amount)
 		{
 			synchronized(lock) //ad-hoc lock
 			{
+				accounts[from] -= amount; 
+				accounts[to] += amount;
 				...		
 			}
+			System.out.println(. . .);
 		}
 	}
 ```
@@ -410,6 +417,7 @@ Locks and conditions are powerful tools for thread synchronization, but they are
 
 #### Final Variables
 - There is one other situation in which it is safe to access a shared field—when it is declared final.
+- ![[Pasted image 20230806212905.png]]
 #### Atomics
 - There are a number of classes in the `java.util.concurrent.atomic` package that use efficient machine-level instructions to guarantee atomicity of other operations without using locks.
 - For example, the `AtomicInteger` class has methods `incrementAndGet` and `decrementAndGet` that atomically increment or decrement an integer.
@@ -463,9 +471,12 @@ There are also methods `getAndUpdate` and `getAndAccumulate` that return **the o
 	adder.accumulate(value);
 ```
 
-#### DeadLock
+#### DeadLocks
 - When a thread is currently holding some resources and needs extra resources that are being held by other threads which in turn are waiting for resources, it forms a DeadLock. 
-
+- ![[Pasted image 20230806213023.png]]
+- ![[Pasted image 20230806213056.png]]
+- Another way to create a deadlock is to make the ith thread responsible for putting money into the ith account, rather than for taking it out of the ith account. In this case, there is a chance that all threads will gang up on one account, each trying to remove more money from it than it contains.
+- 
 #### Thread Local Variables
 we discussed the risks of sharing variables between threads. Sometimes, you can avoid sharing by giving each thread its own instance, using the `ThreadLocal` helper class (`java.lang.ThreadLocal`).
 - `T get()` : gets the current value of this thread. If get is called for the first time, the value is obtained by calling initialize.
@@ -502,10 +513,14 @@ we discussed the risks of sharing variables between threads. Sometimes, you can 
 | `remove`  | Removes and returns the head element | Throws a `NoSuchElementException` if the queue is empty |
 | `element` | Returns the head element             | Throws a `NoSuchElementException` if the queue is empty |
 
+![[Pasted image 20230806213308.png]]
+![[Pasted image 20230806213336.png]]
+
 ## Efficient Maps, Sets, and Queues
 - The` java.util.concurrent package` supplies efficient implementations for maps, sorted sets, and queues: `ConcurrentHashMap`, `ConcurrentSkipListMap`, `ConcurrentSkipListSet`, and `ConcurrentLinkedQueue`.
 - These collections use sophisticated algorithms that minimize contention by allowing concurrent access to different parts of the data structure.
 - Unlike most collections, the size method of these classes does not necessarily operate in constant time. Determining the current size of one of these collections usually requires traversal.
+- ![[Pasted image 20230806213407.png]]
 - Read more in the Core Java Volume-I Book.
 # Tasks and Thread Pools
 - Constructing a new thread is expensive because it involves interaction with the operating system.
