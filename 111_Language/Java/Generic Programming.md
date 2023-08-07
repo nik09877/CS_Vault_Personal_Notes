@@ -106,12 +106,30 @@ public class <T extends Comparable> T min(T[] a)
 ```
 
 - There can be at most **1 class** as the bounding type and it must be declared first in the bounds list.
+### Example :
+- ![[Pasted image 20230807125247.png]]
 
 # Generic Code and Virtual Machine
 - There are no generics in the virtual machine, only ordinary classes and methods.
 - All type parameters are replaced by their bounds or `Object`.
 - Bridge methods are synthesized to preserve polymorphism.
 - Casts are inserted as necessary to preserve type safety.
+### Type Erasure
+- Whenever you define a generic type, a corresponding raw type is automatically provided.
+- The name of the raw type is simply the name of the generic type, with the type parameters removed. 
+- The type variables are erased and replaced by their bounding types (or `Object` for variables without bounds).
+- ![[Pasted image 20230807125522.png]]
+- The raw type replaces type variables with the first bound, or Object if no bounds are given.
+- ![[Pasted image 20230807125645.png]]
+
+### Translating Generic Expressions
+- When you program a call to a generic method, the compiler inserts casts when the return type has been erased.
+- ![[Pasted image 20230807125921.png]]
+### Translating Generic Methods
+- ![[Pasted image 20230807130340.png]]
+- ![[Pasted image 20230807130835.png]]
+- ![[Pasted image 20230807130850.png]]
+
 # Restrictions and Limitations
 
 #### 1. You can't use primitives as type parameter:
@@ -122,7 +140,7 @@ public class <T extends Comparable> T min(T[] a)
 ```Java
 if(a instanceof Pair<String>) //ERROR
 if(a instanceof Pair<T>) //ERROR
-Pair<String> p - (Pair<String>) a; //warning--can only test that a is a pair
+Pair<String> p = (Pair<String>) a; //warning--can only test that a is a pair
 ```
 - In the same spirit, the `getClass` method always returns the raw type.
 ```Java
@@ -133,8 +151,9 @@ if (stringPair.getClass() == employeePair.getClass()) // returns true because bo
 #### 3. You can't create arrays of parameterized types
 
 ```Java
-Pair<String>[] table = new Pair<String>[10]; //ERROR
+var table = new Pair<String>[10]; //ERROR
 ```
+- ![[Pasted image 20230807131210.png]]
 - Note that only the creation of these arrays is outlawed. You can declare a variable of type `Pair<String>[]`. But you can’t initialize it with a` new Pair<String>[10]`.
 
 
@@ -149,11 +168,11 @@ var table = (Pair<String>[]) new Pair<?>[10];
 - Passing instances of a generic type to a method with a variable number of arguments will give us a warning not an error.
 ```Java
 
-public static void addAll(Collection coll, T... ts)
+public static void addAll(Collection<T> coll, T... ts)
 {
 	for (T t : ts) coll.add(t);
 }
-Collection> table = . . .;
+Collection<Pair<String>> table = . . .;
 Pair pair1 = . . .; 
 Pair pair2 = . . .; 
 addAll(table, pair1, pair2);
@@ -182,6 +201,7 @@ objarray[0] = new Pair();
 
 #### 5. You can't instantiate type variable
 - You cannot use type variables in an expression such as `new T(. . .)`
+- ![[Pasted image 20230807132740.png]]
 #### 6. You can't create a Generic array
 Just as you cannot instantiate a single generic instance, you cannot instantiate an array. The reasons are different—an array is, after all, filled with `null` values, which would seem safe to construct. But an array also carries a type, which is used to monitor array stores in the virtual machine. That type is erased. For example, consider
 ```Java
@@ -192,7 +212,7 @@ public static <T extends Comparable> T[] minmax(T... a)
 }
 ```
 Type erasure would cause this method to always construct an array `Comparable[2]`.
-
+![[Pasted image 20230807132318.png]]
 #### 7. Type Variables can't be static
 For example, the following clever idea won’t work:
 
@@ -206,7 +226,11 @@ public class Singleton<T>
 	}
 }
 ```
-#### You can;t Throw or Catch Instances of a Generic class
+
+#### Type Variables Are Not Valid in Static Contexts of Generic Classes
+- ![[Pasted image 20230807133142.png]]
+- 
+#### You can't Throw or Catch Instances of a Generic class
 - You can neither throw nor catch objects of a generic class.
 - In fact, it is not even legal for a generic class to extend `Throwable`.
 ```Java
@@ -275,7 +299,7 @@ public static void printBuddies(Pair<? extends Employee> p)
 ```
 
 ![[Pasted image 20230731201449.png]]
-
+![[Pasted image 20230807134228.png]]
 ### Supertype bounds for wildcards
 Wildcard bounds are similar to type variable bounds, but they have an added capability—you can specify a supertype bound, like this:
 
@@ -287,6 +311,8 @@ This wildcard is **restricted to all supertypes of Manager**.
 
 ![[Pasted image 20230731202825.png]]
 **Figure:** A wildcard with a supertype bound
+
+
 
 Intuitively speaking, wildcards with supertype bounds let you write to a generic object, while wildcards with subtype bounds let you read from a generic object.
 
@@ -317,8 +343,10 @@ public static void swap(Pair<?> p)
 }
 ```
 Here the parameter **T** of the `swapHelper` method *captures* the *wildcard*.
+### Example
+![[Pasted image 20230807133355.png]]
 
-# Reflection and Generics
+# Reflection and Generics (Unfinished)
 - Reflection lets you analyze arbitrary objects at runtime.
 - If the objects are instances of generic classes, you don't get much info about the generic type parameters because they have been erased.
 ### The Generic `Class` Class
@@ -336,4 +364,4 @@ public static <T> Pair<T> makePair(Class<T> c) throws InstantiationException,Ill
 //if you call
 makePair(Employee.class)
 ```
-then `Employee.class` is an obk=ject of type `Class<Employee>`.The type parameter **T** matches the class `Employee`. So this works and the `newInstance()` method creates instance of the Employee and the compiler can infer that the method returns a `Pair<Employee>`.
+then `Employee.class` is an object of type `Class<Employee>`.The type parameter **T** matches the class `Employee`. So this works and the `newInstance()` method creates instance of the Employee and the compiler can infer that the method returns a `Pair<Employee>`.

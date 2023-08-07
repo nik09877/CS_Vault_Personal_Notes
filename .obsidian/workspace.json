@@ -11,8 +11,12 @@
             "id": "6234b7ac1fb029f1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/Generic Programming.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -91,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/Generic Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Concurrency.md",
+                "file": "111_Language/Java/Generic Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Concurrency.md"
+                "file": "111_Language/Java/Generic Programming.md"
               }
             }
           },
@@ -162,21 +166,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9a3c6f09f5090e2e",
+  "active": "6234b7ac1fb029f1",
   "lastOpenFiles": [
-    "_assets/Pasted image 20230806232337.png",
+    "Pasted image 20230807134228.png",
+    "Pasted image 20230807133355.png",
+    "Pasted image 20230807133142.png",
+    "Pasted image 20230807133038.png",
+    "_assets/Pasted image 20230807132740.png",
+    "_assets/Pasted image 20230807132318.png",
+    "_assets/Pasted image 20230807131210.png",
+    "_assets/Pasted image 20230807130850.png",
+    "_assets/Pasted image 20230807130835.png",
+    "_assets/Pasted image 20230807130340.png",
+    "_assets/Pasted image 20230807125921.png",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/Concurrency.md",
-    "_assets/Pasted image 20230806213853.png",
-    "_assets/Pasted image 20230806213826.png",
-    "_assets/Pasted image 20230806213745.png",
-    "_assets/Pasted image 20230806213726.png",
-    "_assets/Pasted image 20230806213407.png",
-    "_assets/Pasted image 20230806213336.png",
-    "_assets/Pasted image 20230806213308.png",
-    "_assets/Pasted image 20230806213056.png",
-    "_assets/Pasted image 20230806213023.png",
-    "_assets/Pasted image 20230806212905.png",
     "111_Language/Java/4.Inheritance.md",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/3.Objects and Classes.md",
