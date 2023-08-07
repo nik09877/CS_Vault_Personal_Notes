@@ -40,3 +40,14 @@
 # Concrete Collections
 - ![[Pasted image 20230807195812.png]]
 - ![[Pasted image 20230807200317.png]]
+### Linked Lists
+- Used for Fast insertion and deletion.
+- There is no `add` method in the `Iterator` inter-face. Instead, the `Collections` library supplies a sub interface `ListIterator` that contains an `add` method.
+- This `add` method adds the new element before the iterator position , it does not return a `boolean` value like the `add` method of the `Collection` interface.
+- For example, the following code skips past the first element in the linked list and adds "Juliet" before the second element :
+- ![[Pasted image 20230807221723.png]]
+- Finally, a `set` method replaces the last element, returned by a call to `next` or `previous`, with a new element.
+- ![[Pasted image 20230807221958.png]]
+- If an iterator finds that its collection has been modified by another iterator or by a method of the collection itself, it throws a `ConcurrentModificationException`.
+- ![[Pasted image 20230807222134.png]]
+- You should never use this illusory random access method to step through a linked list.
