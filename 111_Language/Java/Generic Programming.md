@@ -308,11 +308,10 @@ Wildcard bounds are similar to type variable bounds, but they have an added capa
 ```
 
 This wildcard is **restricted to all supertypes of Manager**.
-
+![[Pasted image 20230807135002.png]]
+![[Pasted image 20230807135025.png]]
 ![[Pasted image 20230731202825.png]]
 **Figure:** A wildcard with a supertype bound
-
-
 
 Intuitively speaking, wildcards with supertype bounds let you write to a generic object, while wildcards with subtype bounds let you read from a generic object.
 

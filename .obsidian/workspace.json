@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8211c966773dd7ec",
+        "id": "c579659a9e521d0a",
         "type": "tabs",
         "children": [
           {
-            "id": "6234b7ac1fb029f1",
+            "id": "1eb1e570c9617708",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md",
+                "file": "111_Language/Java/Collections.md",
                 "mode": "source",
                 "source": true
               }
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md",
+                "file": "111_Language/Java/Collections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md",
+                "file": "111_Language/Java/Collections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Generic Programming.md"
+                "file": "111_Language/Java/Collections.md"
               }
             }
           },
@@ -166,26 +165,26 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6234b7ac1fb029f1",
+  "active": "1eb1e570c9617708",
   "lastOpenFiles": [
-    "Pasted image 20230807134228.png",
-    "Pasted image 20230807133355.png",
-    "Pasted image 20230807133142.png",
+    "111_Language/Java/Collections.md",
+    "111_Language/Java/Generic Programming.md",
+    "_assets/Pasted image 20230807135025.png",
+    "_assets/Pasted image 20230807135002.png",
+    "_assets/Pasted image 20230807134228.png",
+    "_assets/Pasted image 20230807133355.png",
+    "_assets/Pasted image 20230807133142.png",
     "Pasted image 20230807133038.png",
     "_assets/Pasted image 20230807132740.png",
     "_assets/Pasted image 20230807132318.png",
     "_assets/Pasted image 20230807131210.png",
     "_assets/Pasted image 20230807130850.png",
-    "_assets/Pasted image 20230807130835.png",
-    "_assets/Pasted image 20230807130340.png",
-    "_assets/Pasted image 20230807125921.png",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/Concurrency.md",
     "111_Language/Java/4.Inheritance.md",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/3.Objects and Classes.md",
     "111_Language/Java/1.Introduction.md",
-    "111_Language/Java/Generic Programming.md",
     "_assets",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
