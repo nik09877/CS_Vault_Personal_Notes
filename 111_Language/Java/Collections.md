@@ -50,4 +50,55 @@
 - ![[Pasted image 20230807221958.png]]
 - If an iterator finds that its collection has been modified by another iterator or by a method of the collection itself, it throws a `ConcurrentModificationException`.
 - ![[Pasted image 20230807222134.png]]
-- You should never use this illusory random access method to step through a linked list.
+- You should never use the random access method `get()` to step through a linked list.
+- ![[Pasted image 20230807222300.png]]
+- The `get` method has one slight optimization: If the index is at least `size() / 2`, the search for the element ***starts at the end of the list***.
+- List Interface Methods :
+- ![[Pasted image 20230807222624.png]]
+- `ListIterator` Methods :
+- ![[Pasted image 20230807222700.png]]
+- `LinkedList` Class Methods :
+- ![[Pasted image 20230807222737.png]]
+
+### Generic Array Lists
+- `ArrayList` is a generic class with a type parameter.
+
+#### Declaring Array Lists
+```Java
+ArrayList<Employee> staff = new ArrayList<Employee>();
+//or
+var staff = new ArrayList<Employee>();
+//or
+ArrayList<Employee> staff = new ArrayList<>();
+
+var elements = new ArrayList<>(); // returns ArrayList<Object>
+```
+- If you call add and the internal array is full, the array list automatically creates a bigger array and copies all the objects from the smaller to the bigger array.
+- ![[Pasted image 20230806180249.png]]
+- Methods:
+- ![[Pasted image 20230806180503.png]]
+- ![[Pasted image 20230806180545.png]]
+- ![[Pasted image 20230806180611.png]]
+
+### Array Lists vs Vectors
+- All methods of the `Vector` class are ***synchronized***.
+- It is safe to access a `Vector` object from two threads. But if you access a `vector` from only a single thread, your code wastes quite a bit of time with *synchronization*.
+- In contrast, the `ArrayList` methods are not synchronized. 
+- It is recommended to use an `ArrayList` instead of a `Vector` whenever you don’t need synchronization.
+
+### Hash Sets
+- In Java, hash tables are implemented as arrays of linked lists.
+- Each list is called a *bucket*.
+- To find the place of an object in the table, compute its `hash code` and reduce it modulo **the total number of buckets**. The resulting number is the index of the bucket that holds the element.
+- Of course, sometimes you will hit a bucket that is already filled. This is called a **hash collision**.
+- Then, compare the new object with all objects in that bucket to see if it is already present.
+- ![[Pasted image 20230807231744.png]]
+- As of Java 8, the buckets change **from linked lists into balanced binary trees when they get full.** This improves performance if a hash function was poorly chosen and yields many collisions, or if malicious code tries to flood a hash table with many values that have identical hash codes.
+- If you want more control over the performance of the hash table, you can specify the initial bucket count.
+	- You should set it to somewhere between 75% and 150% of the expected element count.
+	- The standard library uses bucket counts that are powers of 2, with a default of **16**. 
+	- Any value you supply for the table size is automatically rounded to the next power of 2.
+- If the hash table gets too full, it needs to be ***rehashed***.
+	- To rehash the table, a table with more buckets is created, all elements are inserted into the new table, and the original table is discarded.
+	- The load factor determines when a hash table is rehashed.
+	- For example, if the load factor is 0.75 (which is the default) and the table is more than 75% full, it is automatically rehashed with twice as many buckets. For most applications, it is reasonable to leave the load factor at 0.75.
