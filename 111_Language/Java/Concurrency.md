@@ -327,6 +327,7 @@ public class Bank
 
 ###### Code
 ```Java
+	// SYNC BANK 
 	class Bank
 	{
 		private double[] accounts;
@@ -476,7 +477,7 @@ There are also methods `getAndUpdate` and `getAndAccumulate` that return **the o
 - ![[Pasted image 20230806213023.png]]
 - ![[Pasted image 20230806213056.png]]
 - Another way to create a deadlock is to make the ith thread responsible for putting money into the ith account, rather than for taking it out of the ith account. In this case, there is a chance that all threads will gang up on one account, each trying to remove more money from it than it contains.
-- 
+- ![[Pasted image 20230806232337.png]]
 #### Thread Local Variables
 we discussed the risks of sharing variables between threads. Sometimes, you can avoid sharing by giving each thread its own instance, using the `ThreadLocal` helper class (`java.lang.ThreadLocal`).
 - `T get()` : gets the current value of this thread. If get is called for the first time, the value is obtained by calling initialize.
