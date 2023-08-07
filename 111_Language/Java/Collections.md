@@ -87,6 +87,8 @@ var elements = new ArrayList<>(); // returns ArrayList<Object>
 - It is recommended to use an `ArrayList` instead of a `Vector` whenever you don’t need synchronization.
 
 ### Hash Sets
+- You should only use a `HashSet` if you don’t care about the ordering of the elements in the collection.
+- It stores only unique items.
 - In Java, hash tables are implemented as arrays of linked lists.
 - Each list is called a *bucket*.
 - To find the place of an object in the table, compute its `hash code` and reduce it modulo **the total number of buckets**. The resulting number is the index of the bucket that holds the element.
@@ -101,4 +103,34 @@ var elements = new ArrayList<>(); // returns ArrayList<Object>
 - If the hash table gets too full, it needs to be ***rehashed***.
 	- To rehash the table, a table with more buckets is created, all elements are inserted into the new table, and the original table is discarded.
 	- The load factor determines when a hash table is rehashed.
-	- For example, if the load factor is 0.75 (which is the default) and the table is more than 75% full, it is automatically rehashed with twice as many buckets. For most applications, it is reasonable to leave the load factor at 0.75.
+	- For example, if the load factor is 0.75 (which is the default) and the table is more than 75% full, it is automatically rehashed with twice as many buckets. 
+- ![[Pasted image 20230807232710.png]]
+- Example :
+- ![[Pasted image 20230807232609.png]]
+
+### Tree Sets
+- A `Tree set` similar to `Hash Set`, but it is a sorted collection.
+- The sorting is accomplished by a tree data structure. (The current implementation uses a red-black tree.
+- In order to use a `Tree set`, you must be able to compare the elements.
+- The elements must implement the `Comparable` interface, or you must supply a `Comparator` when constructing the set.
+- ![[Pasted image 20230807233507.png]]
+- Example :
+- ![[Pasted image 20230807233540.png]]
+
+### Queues and Deques
+ - Deque interface is implemented by the `ArrayDeque` and `LinkedList` classes.
+ - ![[Pasted image 20230808001216.png]]
+### Priority Queues
+- By default it is a **min-heap**.
+- Just like a `TreeSet`, a `priority queue`can either hold elements of a class that implements the `Comparable` interface or a `Comparator` object you supply in the constructor.
+- ![[Pasted image 20230808001507.png]]
+- ![[Pasted image 20230808001531.png]]
+
+# Maps
+- It stores `[key,value]` pairs.
+- All keys must be unique or else it replaces the old value with new value if same key is used again.
+### Basic Map Operations
+- Methods :
+- ![[Pasted image 20230808002053.png]]
+- Example :
+- ![[Pasted image 20230808002120.png]]
