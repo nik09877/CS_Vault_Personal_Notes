@@ -13,7 +13,8 @@
 - The add method adds an element to the collection and returns true if the collection is changed otherwise returns false.
 - The `iterator` method ***returns an object that implements*** the `Iterator` interface.
 - You can use the `iterator` object to visit the elements in the collection one by one.
-
+- Note :
+	- The Collections class contains a number of utility methods with parameters or return values that are collections. Do not confuse it with the Collection interface.
 ### Iterators
 - The Iterator interface has four methods :
 - ![[Pasted image 20230807193608.png]]
@@ -129,6 +130,7 @@ var elements = new ArrayList<>(); // returns ArrayList<Object>
 # Maps
 - It stores `[key,value]` pairs.
 - All keys must be unique or else it replaces the old value with new value if same key is used again.
+- It is part of the `Collection Framework` but not part of the `Collection` interface, because `Map` works with `key/value pairs`, while the `other collections` work with `just values`.
 ### Basic Map Operations
 - Methods :
 - ![[Pasted image 20230808002053.png]]
@@ -196,7 +198,105 @@ var elements = new ArrayList<>(); // returns ArrayList<Object>
 - Also, for comparison of objects, the `IdentityHashMap` uses `==` not `equals`. 
 	- In other words, different key objects are considered distinct even if they have equal contents. 
 - This class is useful for implementing object traversal algorithms, such as object serialization, in which you want to keep track of which objects have already been traversed.
-API :
+### API
 ![[Pasted image 20230808010440.png]]
 
 # Views and Wrappers
+- The `keySet` method returns an object of a class that implements the `Set` interface and whose methods manipulate the original map. Such a collection is called a `view`.
+### Small Collections
+- Java 9 introduces static methods yielding a set or list with given elements and a map with given key/value pairs.
+- ![[Pasted image 20230808134937.png]]
+- There is a static method `ofEntries` that accepts an arbitrary number of `Map.Entry<K,V>` objects, which you can create with the static `entry` method.
+- ![[Pasted image 20230808135144.png]]
+- These collection objects are **unmodifiable**. Any attempt to change their contents results in an `UnsupportedOperationException`.
+- If you want a mutable collection, you can pass the unmodifiable collection to the constructor:
+- ![[Pasted image 20230808135225.png]]
+- ![[Pasted image 20230808135312.png]]
+- ![[Pasted image 20230808135335.png]]
+- Java doesn’t have a `Pair` class, and some programmers use a `Map.Entry` as a poor man’s pair. You can call `Map.entry(first , second)`
+### Subranges
+- You can form subrange views for a number of collections.
+```Java
+List group2 = staff.subList(10, 20); // [L,R) -> [Inclusive,Exclusive)
+```
+- You can apply any operations to the subrange, and they automatically reflect the entire list.
+```Java
+group2.clear(); // staff reduction
+```
+- The elements get automatically cleared from the staff list, and group2 becomes empty.
+- For sorted sets and maps, you use the sort order, not the element position, to form subranges.
+- The `SortedSet` interface declares three methods :
+```Java
+SortedSet subSet(E from, E to) 
+SortedSet headSet(E to) 
+SortedSet tailSet(E from)
+```
+- These return the **subsets of all elements that are larger than or equal to from and strictly smaller than to**.
+- For sorted maps, the similar methods:
+```Java
+SortedMap subMap(K from, K to) 
+SortedMap headMap(K to) 
+SortedMap tailMap(K from)
+```
+- These return views into the maps consisting of all entries in which the ***keys*** fall into the specified ranges.
+- The `NavigableSet` interface introduced in Java 6 gives more control over these subrange operations. You can specify whether the bounds are included:
+```Java
+NavigableSet subSet(E from, boolean fromInclusive, E to, boolean toInclusive) NavigableSet headSet(E to, boolean toInclusive) 
+NavigableSet tailSet(E from, boolean fromInclusive)
+```
+
+### Unmodifiable Views
+- You obtain unmodifiable views by eight methods:
+```Java
+Collections.unmodifiableCollection() 
+Collections.unmodifiableList() 
+Collections.unmodifiableSet() 
+Collections.unmodifiableSortedSet() 
+Collections.unmodifiableNavigableSet() 
+Collections.unmodifiableMap() 
+Collections.unmodifiableSortedMap() 
+Collections.unmodifiableNavigableMap()
+```
+- Each method is defined to work on an interface. 
+- For example, `Collections.unmodifiableList` works with an `ArrayList`, a `LinkedList`, or any other class that implements the `List` interface.
+- For example, suppose you want to let some part of your code look at, but not touch, the contents of a collection. Here is what you could do :
+```Java
+var staff = new LinkedList();
+. . . 
+lookAt(Collections.unmodifiableList(staff));
+```
+### Synchronized Views
+- Instead of implementing thread-safe collection classes, the library designers used the view mechanism to make regular collections thread safe.
+- For example, the static `synchronizedMap` method in the `Collections` class can turn any map into a `Map` with synchronized access methods:
+```Java
+var map = Collections.synchronizedMap(new HashMap ());
+```
+- You can now access the map object from multiple threads. 
+- The methods such as `get` and `put` are synchronized—each method call must be finished completely before another thread can call another method.
+
+### Checked Views
+- Checked views are intended as debugging support for a problem that can occur with generic types.
+- It is actually possible to smuggle elements of the wrong type into a generic collection.
+```Java
+var strings = new ArrayList();
+ArrayList rawList = strings; // warning only, not an error, for compatibility with legacy code
+rawList.add(new Date()); // now strings contains a Date object!
+
+//The erroneous add command is not detected at runtime. Instead, a class cast exception will happen later when another part of the code calls get and casts the result to a String.
+```
+- A checked view can detect this problem. Define a safe list as follows:
+```Java
+List safeStrings = Collections.checkedList(strings, String.class);
+```
+- The view’s `add` method checks that the inserted object belongs to the given class and immediately throws a `ClassCastException` if it does not.
+### API
+![[Pasted image 20230808142721.png]]
+
+# Algorithms
+### Generic method to find Max
+```Java
+static T max(T[] a) 
+static T max(ArrayList v) 
+static T max(LinkedList l)
+```
+#### Implementation

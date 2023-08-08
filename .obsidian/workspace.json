@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4a916d393bbeb5b4",
+        "id": "699d5f9338b69124",
         "type": "tabs",
         "children": [
           {
-            "id": "f1dea739209c37b0",
+            "id": "fc39ebf794e9e0d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "111_Language/Java/Collections.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -162,24 +162,23 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f1dea739209c37b0",
+  "active": "9a3c6f09f5090e2e",
   "lastOpenFiles": [
+    "_assets/Pasted image 20230808142721.png",
+    "111_Language/Java/Collections.md",
+    "_assets/Pasted image 20230808135335.png",
+    "_assets/Pasted image 20230808135312.png",
+    "_assets/Pasted image 20230808135225.png",
+    "_assets/Pasted image 20230808135144.png",
+    "_assets/Pasted image 20230808134937.png",
     "_assets/Pasted image 20230808010440.png",
     "_assets/Pasted image 20230808010206.png",
     "_assets/Pasted image 20230808010122.png",
     "444_System Design/Pasted image 20230808005659.png",
     "_assets/Pasted image 20230808005237.png",
-    "_assets/Pasted image 20230808004017.png",
-    "_assets/Pasted image 20230808003829.png",
-    "Pasted image 20230808003540.png",
-    "111_Language/Java/Collections.md",
-    "_assets/Pasted image 20230808003501.png",
-    "_assets/Pasted image 20230808002641.png",
-    "_assets/Pasted image 20230808002625.png",
     "111_Language/Java/4.Inheritance.md",
     "111_Language/Java/Generic Programming.md",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
