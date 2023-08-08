@@ -134,3 +134,69 @@ var elements = new ArrayList<>(); // returns ArrayList<Object>
 - ![[Pasted image 20230808002053.png]]
 - Example :
 - ![[Pasted image 20230808002120.png]]
+### Updating Map Entries
+- Consider using a map for counting how often a word occurs in a file. When we see a word, we’d like to increment a counter by 1.
+- ![[Pasted image 20230808002625.png]]
+- ![[Pasted image 20230808002641.png]]
+### Map Views
+- Map is not a `Collection`, however you can obtain *views* of the map i.e objects that implement the `Collection` interface or one of its sub interfaces.
+- There are three views:
+	1. set of keys : `Set<K> keySet()`
+	2. collection of values : `Collection<V> values()`
+	3. set of [key, value] pairs of the map : `Set<Map.Entry<k,V>> entrySet()`
+		- The elements of the `entrySet` are objects of a class implementing the `Map.Entry` interface.
+- For example, you can enumerate all keys of a map :
+- ![[Pasted image 20230808003501.png]]
+- If you invoke the `remove` method of the iterator on the `keySet` view, you actually remove the key and its associated value from the map. However, you cannot add an element to the `keySet` view.
+- If you want to look at both keys and values :
+- ![[Pasted image 20230808003829.png]]
+- ![[Pasted image 20230808004017.png]]
+
+### Weak Hash Maps
+- The `WeakHashMap` class was designed to solve an interesting problem.
+- What happens with a value whose key is no longer used anywhere in your program?
+	- Suppose the last reference to a key has gone away. Then, there is no longer any way to refer to the value object. But, as no part of the program has the key any more, the key/value pair cannot be removed from the map.
+- Why can’t the garbage collector remove it? Isn’t it the job of the garbage collector to remove unused objects?
+	- The garbage collector traces live objects. As long as the map object is live, all buckets in it are live and won’t be reclaimed.
+- You can use a `WeakHashMap` for this.
+- This data structure cooperates with the garbage collector to remove key/value pairs when the only reference to the key is the one present in the hash table entry.
+#### Inner Working Mechanism
+- The `WeakHashMap` uses` weak references` to hold keys.
+- A `WeakReference` object holds a reference to another object—in our case, a hash table key.
+- Normally, if the garbage collector finds that a particular object has no references to it, it simply reclaims the object. 
+- However, if the object is reachable only by a `WeakReference`, the garbage collector still reclaims the object, but places the `weak reference` that led to it into a `queue`. 
+- The operations of the `WeakHashMap` periodically check that `queue` for newly arrived `weak references`. 
+- The arrival of a `weak reference` in the `queue` signifies that the key was no longer used by anyone and has been collected. 
+- The `WeakHashMap` then removes the associated entry.
+
+### Linked Hash Sets and Maps
+- The `LinkedHashSet` and `LinkedHashMap` classes remember in which order you inserted items.
+- As entries are inserted into the table, they are joined in a doubly linked list.
+- ![[Pasted image 20230808005237.png]]
+#### Implement LRU Cache
+- A linked hash map can alternatively use **access order**, not insertion order, to iterate through the map entries.
+- Every time you call get or put, the affected entry is removed from its current position and placed at the end of the linked list of entries.
+- Only the position in the linked list of entries is affected, not the hash table bucket.
+- To construct such a hash map, call :
+- ![[Pasted image 20230808005659.png]]
+
+### Enumeration Sets and Maps
+- The `EnumSet` is an efficient set implementation with elements that belong to an enumerated type.
+- The `EnumSet` is internally implemented simply as a sequence of bits. A bit is turned on if the corresponding value is present in the set.
+- The `EnumSet` class has no public constructors. Use a static factory method to construct the set :
+- ![[Pasted image 20230808010122.png]]
+- An `EnumMap` is a map with keys that belong to an enumerated type.
+- It is simply and efficiently implemented as an array of values.
+- You need to specify the key type in the constructor :
+- ![[Pasted image 20230808010206.png]]
+### Identity Hash Maps
+- The `IdentityHashMap` has a quite specialized purpose. 
+- Here, the hash values for the keys should not be computed by the `hashCode` method but by the `System.identityHashCode` method. 
+- That’s the method that `Object.hashCode` uses to compute a hash code from the object’s memory address. 
+- Also, for comparison of objects, the `IdentityHashMap` uses `==` not `equals`. 
+	- In other words, different key objects are considered distinct even if they have equal contents. 
+- This class is useful for implementing object traversal algorithms, such as object serialization, in which you want to keep track of which objects have already been traversed.
+API :
+![[Pasted image 20230808010440.png]]
+
+# Views and Wrappers
