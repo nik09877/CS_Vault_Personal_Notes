@@ -317,6 +317,99 @@ public static <T extends Comparable> T max(Collection c)
 ```
 ### Sorting and Shuffling
 - `Collections.sort()` implements a stable sort algorithm which guarantees `O(n logn)` time complexity.
+	- This method assumes that the list elements implement the `Comparable` interface.
 	- Stable sort algorithms do not switch equal elements.
 	- For example if you want to sort by Name first and then their Salary , stable sort is useful.
-- 
+```Java
+var staff = new ArrayList<String>();
+Collections.sort(staff);
+```
+- Here is how you can sort a list of employees by salary:
+```Java
+staff.sort(Comparator.comparingDouble(Employee::getSalary));
+```
+- If you want to sort a list in descending order:
+```Java
+staff.sort(Comparator.reverseOrder())
+```
+- Sort by descending salary:
+```Java
+staff.sort(Comparator.comparingDouble(Employee::getSalary).reversed());
+```
+
+- The Collections class has an algorithm `shuffle` that randomly permutes the order of the elements in a list
+```Java
+var cards = . . .;
+Collections.shuffle(cards);
+```
+
+### API
+![[Pasted image 20230808160751.png]]
+
+### Binary Search
+- Only works on sorted collections which implement the `List` interface.
+- If the collection is not sorted by the `compareTo` element of the `Comparable` interface, supply a `comparator` object as well.
+- To be worthwhile, binary search requires random access.
+- Therefore, the `binarySearch` algorithm reverts to a **linear search** if you give it a **linked list**.
+- A **non-negative return value** from the `binarySearch` method denotes **the index of the matching object**.
+- If the value is negative, then there is no matching element.
+- However, you can use the return value to compute the location where you should insert element into the collection to keep it sorted.
+- The insertion location is `-i - 1`.
+```Java
+if(i < 0)
+	c.add(-i - 1, element);
+```
+
+### API 
+![[Pasted image 20230808161457.png]]
+
+### Simple Algorithms
+```Java
+Collections.replaceAll(words, "C++", "Java");
+words.removeIf(word -> word.length() <= 3);
+words.replaceAll(String::toLOwerCase);
+```
+
+### API
+![[Pasted image 20230808162014.png]]
+
+### Bulk Operations
+```Java
+c1.removeAll(c2); // removes all elements from c1 that are in c2
+c1.retailAll(c2); // removes all elements from c1 that are not in c2 and you can use this to find intersection between two sets
+c1.addAll(staff.subList(0,10))
+```
+
+### Converting between Collections and Arrays
+- `List.of` : array is converted to a collection.
+```Java
+String[] values = . . .;
+var staff = new HashSet<String>(List.of(values));
+```
+- `toArray()` : collection is converted to an array, but the result is an array of objects and you can't use a cast.
+```Java
+String[] values = (String[]) staff.toArray(); // ERROR
+```
+- Instead, use a variant of the `toArray` method and give it an array of length 0 of the type that you’d like, then the returned array is then created as the same array type
+```Java
+String[] values = staff.toArray(new String[0]);
+```
+- If you like, you can construct the array to have the correct size:
+```Java
+staff.toArray(new String[staff.size()]);
+```
+- In this case, no new array is created.
+
+### Writing Your Own Algorithms
+- If you write an algorithm or any method that has a collection as a parameter, you should work with **interfaces**, not concrete implementations.
+```Java
+public void processItems(Collection<Item> items)
+{
+	for(Item item : items)
+		do something
+}
+```
+- Now anyone can call this method with an `ArrayList` or a `LinkedList` or even an array wrapped with the `List.of` wrapper.  
+
+# Legacy Collections
+![[Pasted image 20230808163617.png]]
