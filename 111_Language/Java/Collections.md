@@ -300,3 +300,23 @@ static T max(ArrayList v)
 static T max(LinkedList l)
 ```
 #### Implementation
+```Java
+public static <T extends Comparable> T max(Collection c)
+{
+	if(c.isEmpty()) throw new NoSuchElementException();
+	Iterator<T> iter = c.iterator();
+	T largest = iter.next();
+	while(iter.hasNext())
+	{
+		T next = iter.next();
+		if(largest.compareTo(next) < 0)
+			largest = next;
+	}
+	return largest;
+}
+```
+### Sorting and Shuffling
+- `Collections.sort()` implements a stable sort algorithm which guarantees `O(n logn)` time complexity.
+	- Stable sort algorithms do not switch equal elements.
+	- For example if you want to sort by Name first and then their Salary , stable sort is useful.
+- 
