@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/Collections.md",
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Collections.md",
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Collections.md",
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Collections.md"
+                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md"
               }
             }
           },
@@ -165,27 +165,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b6e502958ca9b6ad",
+  "active": "9a3c6f09f5090e2e",
   "lastOpenFiles": [
+    "z_assets/Pasted image 20230808173916.png",
+    "111_Language/Java/9.Collections.md",
+    "z_assets/Pasted image 20230808171419.png",
+    "z_assets/Pasted image 20230808171402.png",
+    "z_assets/Pasted image 20230808171111.png",
+    "z_assets/Pasted image 20230808164546.png",
+    "z_assets/Pasted image 20230808164532.png",
+    "z_assets/Pasted image 20230808164511.png",
+    "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/3.Objects and Classes.md",
     "111_Language/Java/4.Inheritance.md",
-    "111_Language/Java/Collections.md",
-    "Pasted image 20230808163617.png",
-    "Pasted image 20230808162014.png",
-    "Pasted image 20230808161457.png",
-    "Pasted image 20230808160751.png",
-    "_assets/Pasted image 20230808142721.png",
-    "_assets/Pasted image 20230808135335.png",
-    "_assets/Pasted image 20230808135312.png",
-    "_assets/Pasted image 20230808135225.png",
-    "_assets/Pasted image 20230808135144.png",
-    "_assets/Pasted image 20230808134937.png",
-    "111_Language/Java/Generic Programming.md",
+    "z_assets/Pasted image 20230808163617.png",
+    "z_assets/Pasted image 20230808162014.png",
+    "z_assets/Pasted image 20230808161457.png",
+    "z_assets/Pasted image 20230808160751.png",
+    "111_Language/Java/8.Generic Programming.md",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
-    "111_Language/Java/Concurrency.md",
-    "111_Language/Java/2.Fundamental Programming Structures in Java.md",
+    "111_Language/Java/10.Concurrency.md",
     "111_Language/Java/1.Introduction.md",
-    "_assets",
+    "z_assets",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
     "111_Language/Java/Untitled",
