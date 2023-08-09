@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "3494e18130827a1f",
+        "id": "7cb23f5a8e865e5c",
         "type": "tabs",
         "children": [
           {
-            "id": "7b813000be26d53c",
+            "id": "c5970298000724ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -95,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +107,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,9 +128,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "111_Language/Java/3.Objects and Classes.md"
-              }
+              "state": {}
             }
           },
           {
@@ -151,8 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,8 +156,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7b813000be26d53c",
+  "active": "c5970298000724ee",
   "lastOpenFiles": [
+    "111_Language/Java/3.Objects and Classes.md",
+    "111_Language/Java/2.Fundamental Programming Structures in Java.md",
+    "111_Language/Java/1.Introduction.md",
     "111_Language/Java/4.Inheritance.md",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/9.Collections.md",
@@ -185,9 +179,6 @@
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "FileName.md",
-    "111_Language/Java/3.Objects and Classes.md",
-    "111_Language/Java/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/1.Introduction.md",
     "z_assets",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
     "111_Language/Java/Untitled",
