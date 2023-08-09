@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "424a4b5dae0430e1",
+        "id": "2de54bfcf46f0740",
         "type": "tabs",
         "children": [
           {
-            "id": "b6e502958ca9b6ad",
+            "id": "28d49bb3a8282e5c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -95,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +107,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,9 +128,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md"
-              }
+              "state": {}
             }
           },
           {
@@ -147,13 +139,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,17 +156,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b6e502958ca9b6ad",
+  "active": "28d49bb3a8282e5c",
   "lastOpenFiles": [
-    "111_Language/Java/10.Concurrency.md",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "111_Language/Java/9.Collections.md",
+    "111_Language/Java/10.Concurrency.md",
+    "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
+    "FileName.md",
     "z_assets/Pasted image 20230809134902.png",
     "z_assets/Pasted image 20230809132907.png",
     "111_Language/Java/4.Inheritance.md",
     "111_Language/Java/3.Objects and Classes.md",
     "z_assets/Pasted image 20230809111448.png",
     "z_assets/Pasted image 20230808173916.png",
-    "111_Language/Java/9.Collections.md",
     "z_assets/Pasted image 20230808171419.png",
     "z_assets/Pasted image 20230808171402.png",
     "z_assets/Pasted image 20230808171111.png",
@@ -202,7 +194,6 @@
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Strategy_Design_Pattern.pdf",
     "555_Projects",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns/Proxy_Design_Pattern.pdf",
-    "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "Untitled.md",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "Excalidraw/Drawing 2023-07-25 21.25.07.excalidraw.md",
