@@ -152,7 +152,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,10 +168,13 @@
   },
   "active": "b6e502958ca9b6ad",
   "lastOpenFiles": [
-    "111_Language/Java/4.Inheritance.md",
+    "111_Language/Java/10.Concurrency.md",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "z_assets/Pasted image 20230809134902.png",
+    "z_assets/Pasted image 20230809132907.png",
+    "111_Language/Java/4.Inheritance.md",
     "111_Language/Java/3.Objects and Classes.md",
-    "Pasted image 20230809111448.png",
+    "z_assets/Pasted image 20230809111448.png",
     "z_assets/Pasted image 20230808173916.png",
     "111_Language/Java/9.Collections.md",
     "z_assets/Pasted image 20230808171419.png",
@@ -180,10 +184,7 @@
     "z_assets/Pasted image 20230808164532.png",
     "z_assets/Pasted image 20230808164511.png",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
-    "z_assets/Pasted image 20230808163617.png",
-    "z_assets/Pasted image 20230808162014.png",
     "111_Language/Java/8.Generic Programming.md",
-    "111_Language/Java/10.Concurrency.md",
     "111_Language/Java/1.Introduction.md",
     "z_assets",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
