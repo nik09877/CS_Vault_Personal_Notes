@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "77c4208597719ca8",
+        "id": "c4950a3938d02718",
         "type": "tabs",
         "children": [
           {
-            "id": "2a21de82a0eb3c39",
+            "id": "a7b0806731cfc358",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md"
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md"
               }
             }
           },
@@ -165,10 +165,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2a21de82a0eb3c39",
+  "active": "a7b0806731cfc358",
   "lastOpenFiles": [
-    "z_assets/Pasted_image_20230810174606.png",
+    "111_Language/Java/11.Input and Output.md",
+    "111_Language/Java/9.Stream Library.md",
+    "111_Language/Java/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "z_assets/Pasted_image_20230810183236.png",
+    "z_assets/Pasted_image_20230810174606.png",
     "z_assets/Pasted_image_20230810174143.png",
     "z_assets/Pasted_image_20230810141411.png",
     "z_assets/Pasted_image_20230810140546.png",
@@ -177,14 +181,13 @@
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/1.Introduction.md",
     "111_Language/Java/4.Inheritance.md",
-    "111_Language/Java/9.Collections.md",
-    "111_Language/Java/8.Generic Programming.md",
+    "111_Language/Java/8.Collections.md",
+    "111_Language/Java/7.Generic Programming.md",
     "111_Language/Java/10.Concurrency.md",
     "z_assets/Pasted_image_20230803200037.png",
     "z_assets/Pasted_image_20230803200425.png",
     "z_assets/Pasted_image_20230803201554.png",
     "z_assets/Pasted_image_20230803202053.png",
-    "z_assets/Pasted_image_20230803221341.png",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "FileName.md",
