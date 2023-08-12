@@ -11,8 +11,12 @@
             "id": "56145b376aaa7201",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -66,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -90,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md"
+              }
             }
           },
           {
@@ -158,11 +167,12 @@
   },
   "active": "56145b376aaa7201",
   "lastOpenFiles": [
+    "z_assets/Pasted_image_20230812121456.png",
+    "111_Language/Java/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/9.Stream API.md",
     "111_Language/Java/3.Objects and Classes.md",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/11.Input and Output.md",
     "z_assets/Pasted_image_20230810183236.png",
     "z_assets/Pasted_image_20230810174606.png",
@@ -178,7 +188,6 @@
     "z_assets/Pasted_image_20230803200037.png",
     "z_assets/Pasted_image_20230803200425.png",
     "z_assets/Pasted_image_20230803201554.png",
-    "z_assets/Pasted_image_20230803202053.png",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "FileName.md",
