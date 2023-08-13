@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "891293ada39760e2",
+        "id": "801c26926f479148",
         "type": "tabs",
         "children": [
           {
-            "id": "56145b376aaa7201",
+            "id": "3ab8001ef2e683a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
+                "file": "111_Language/Java/11.Input and Output.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
+                "file": "111_Language/Java/11.Input and Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md",
+                "file": "111_Language/Java/11.Input and Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/6.Exceptions, Assertions, Logging.md"
+                "file": "111_Language/Java/11.Input and Output.md"
               }
             }
           },
@@ -165,10 +165,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "56145b376aaa7201",
+  "active": "3ab8001ef2e683a7",
   "lastOpenFiles": [
-    "z_assets/Pasted_image_20230812140227.png",
+    "z_assets/Pasted_image_20230813142535.png",
+    "111_Language/Java/11.Input and Output.md",
+    "z_assets/Pasted_image_20230813142430.png",
+    "z_assets/Pasted_image_20230813141710.png",
+    "z_assets/Pasted_image_20230813141653.png",
+    "z_assets/Pasted_image_20230813141455.png",
     "111_Language/Java/6.Exceptions, Assertions, Logging.md",
+    "z_assets/Pasted_image_20230812140227.png",
     "z_assets/Pasted_image_20230812140058.png",
     "Pasted.md",
     "z_assets/Pasted_image_20230812121456.png",
@@ -176,19 +182,13 @@
     "111_Language/Java/9.Stream API.md",
     "111_Language/Java/3.Objects and Classes.md",
     "111_Language/Java/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/11.Input and Output.md",
     "z_assets/Pasted_image_20230810183236.png",
     "z_assets/Pasted_image_20230810174606.png",
-    "z_assets/Pasted_image_20230810174143.png",
-    "z_assets/Pasted_image_20230810141411.png",
-    "z_assets/Pasted_image_20230810140546.png",
-    "z_assets/Pasted_image_20230810133636.png",
     "111_Language/Java/1.Introduction.md",
     "111_Language/Java/4.Inheritance.md",
     "111_Language/Java/8.Collections.md",
     "111_Language/Java/7.Generic Programming.md",
     "111_Language/Java/10.Concurrency.md",
-    "z_assets/Pasted_image_20230803200037.png",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "FileName.md",
