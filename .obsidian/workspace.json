@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b94598dd17251fbb",
+        "id": "3ccb2dd6cbe56cf0",
         "type": "tabs",
         "children": [
           {
-            "id": "82319835857288fc",
+            "id": "698170cd2639a150",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -95,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +107,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,9 +128,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md"
-              }
+              "state": {}
             }
           },
           {
@@ -165,10 +157,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "82319835857288fc",
+  "active": "698170cd2639a150",
   "lastOpenFiles": [
-    "z_assets/Pasted_image_20230814163120.png",
     "111_Language/Java/In Depth/11.Input and Output.md",
+    "z_assets/Pasted_image_20230814171506.png",
+    "z_assets/Pasted_image_20230814164142.png",
+    "z_assets/Pasted_image_20230814163120.png",
     "z_assets/Pasted_image_20230814161932.png",
     "z_assets/Pasted_image_20230814161312.png",
     "z_assets/Pasted_image_20230814160751.png",
@@ -192,8 +186,6 @@
     "111_Language/Java/In Depth/1.Introduction.md",
     "z_assets/Pasted_image_20230814001117.png",
     "z_assets/Pasted_image_20230813234117.png",
-    "z_assets/Pasted_image_20230813220846.png",
-    "z_assets/Pasted_image_20230813201209.png",
     "Pasted.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
