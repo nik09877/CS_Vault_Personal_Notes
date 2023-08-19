@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3ccb2dd6cbe56cf0",
+        "id": "36afd697a7574636",
         "type": "tabs",
         "children": [
           {
-            "id": "698170cd2639a150",
+            "id": "7906645f3b7c1e92",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -66,8 +66,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -143,8 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,8 +155,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "698170cd2639a150",
+  "active": "eee9d6f920e04d8d",
   "lastOpenFiles": [
+    "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
+    "666_WebDev/BackEnd/SpringBoot",
+    "666_WebDev/BackEnd",
+    "666_WebDev",
+    "Draw.io/Abstract-factory.svg",
+    "z_assets/Pasted_image_20230808005659.png",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Strategy_Design_Pattern.pdf",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
+    "111_Language/Java/In Depth/4.Inheritance.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
+    "111_Language/Java/In Depth/7.Generic Programming.md",
+    "111_Language/Java/In Depth/8.Collections.md",
+    "111_Language/Java/In Depth/9.Stream API.md",
+    "111_Language/Java/In Depth/3.Objects and Classes.md",
+    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+    "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "z_assets/Pasted_image_20230814171506.png",
     "z_assets/Pasted_image_20230814164142.png",
@@ -172,37 +188,20 @@
     "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
-    "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
-    "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
-    "111_Language/Java/In Depth/9.Stream API.md",
     "111_Language/Java/Quick Reference",
     "111_Language/Java/In Depth",
-    "111_Language/Java/In Depth/7.Generic Programming.md",
-    "111_Language/Java/In Depth/4.Inheritance.md",
-    "111_Language/Java/In Depth/3.Objects and Classes.md",
-    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/In Depth/1.Introduction.md",
-    "z_assets/Pasted_image_20230814001117.png",
-    "z_assets/Pasted_image_20230813234117.png",
     "Pasted.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "FileName.md",
     "z_assets",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
-    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns/_about.md",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns",
-    "444_System Design/LLD/Design_Patterns/Creational_Patterns",
-    "444_System Design/LLD/Problems",
-    "444_System Design/LLD/Design_Patterns",
     "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/Abstract_Factory_Design_Pattern.md",
-    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Strategy_Design_Pattern.pdf",
-    "555_Projects",
     "Untitled.md",
     "Untitled.canvas"
   ]
