@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "36afd697a7574636",
+        "id": "440559f8ee85c38b",
         "type": "tabs",
         "children": [
           {
-            "id": "7906645f3b7c1e92",
+            "id": "da56caf1d5d9151d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -66,8 +66,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -143,7 +142,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 320.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -156,8 +156,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7906645f3b7c1e92",
+  "active": "da56caf1d5d9151d",
   "lastOpenFiles": [
+    "555_Projects/CrwnClothing/crwn-clothing.md",
+    "555_Projects/SocialBee/social-bee.md",
+    "555_Projects/CrwnClothing/crwn-use-case-diagram.drawio.png",
+    "555_Projects/CrwnClothing/crwn-clothing-class-diagram.drawio.png",
+    "555_Projects/CrwnClothing",
+    "555_Projects/SocialBee",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
     "666_WebDev/BackEnd/SpringBoot",
     "666_WebDev/BackEnd",
@@ -183,8 +189,6 @@
     "z_assets/Pasted_image_20230814161932.png",
     "z_assets/Pasted_image_20230814161312.png",
     "z_assets/Pasted_image_20230814160751.png",
-    "z_assets/Pasted_image_20230814144800.png",
-    "z_assets/Pasted_image_20230814144159.png",
     "111_Language/Java/Quick Reference/8.Collections.md",
     "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
@@ -199,11 +203,7 @@
     "z_assets",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns/_about.md",
-    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns",
-    "444_System Design/LLD/Design_Patterns/Structural_Patterns",
     "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
-    "444_System Design/LLD/Design_Patterns/Creational_Patterns/Abstract_Factory_Design_Pattern.md",
-    "Untitled.md",
     "Untitled.canvas"
   ]
 }
