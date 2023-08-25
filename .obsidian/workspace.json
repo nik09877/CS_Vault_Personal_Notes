@@ -11,8 +11,12 @@
             "id": "da56caf1d5d9151d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md"
+              }
             }
           },
           {
@@ -158,8 +166,10 @@
   },
   "active": "da56caf1d5d9151d",
   "lastOpenFiles": [
-    "555_Projects/CrwnClothing/crwn-clothing.md",
     "555_Projects/SocialBee/social-bee.md",
+    "555_Projects/Reader's Realm/reader's-realm.md",
+    "555_Projects/Reader's Realm",
+    "555_Projects/CrwnClothing/crwn-clothing.md",
     "555_Projects/CrwnClothing/crwn-use-case-diagram.drawio.png",
     "555_Projects/CrwnClothing/crwn-clothing-class-diagram.drawio.png",
     "555_Projects/CrwnClothing",
@@ -200,10 +210,8 @@
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "FileName.md",
-    "z_assets",
     "444_System Design/LLD/Design_Patterns/Creational_Patterns/_about.md",
     "444_System Design/LLD/Design_Patterns/Structural_Patterns/_about.md",
-    "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
     "Untitled.canvas"
   ]
 }
