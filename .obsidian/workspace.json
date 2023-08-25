@@ -66,7 +66,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -155,7 +156,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "eee9d6f920e04d8d",
+  "active": "7906645f3b7c1e92",
   "lastOpenFiles": [
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
     "666_WebDev/BackEnd/SpringBoot",
