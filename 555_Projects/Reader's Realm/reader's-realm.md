@@ -7,6 +7,10 @@
 <img src={require('./Images/BooksImage.png')}/>
 ```
 
+- If  in `pom.xml` it is showing 'dependency not found' :  
+	- right click on project folder
+	- go to Maven
+	- rebuild project
 
 
 # Building Homepage
