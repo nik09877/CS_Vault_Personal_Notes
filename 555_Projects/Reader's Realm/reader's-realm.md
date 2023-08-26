@@ -11,6 +11,7 @@
 	- right click on project folder
 	- go to Maven
 	- rebuild project
-
+- Base path api for endpoints is `/api`
+- In `config` package I have added `allowedOrigins`, change it while deploying
 
 # Building Homepage
