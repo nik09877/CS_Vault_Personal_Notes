@@ -11,8 +11,12 @@
             "id": "b5fef45d46d264d2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -91,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,6 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "555_Projects/Reader's Realm/reader's-realm.md"
+              }
             }
           },
           {

@@ -14,6 +14,6 @@
 - Base path api for endpoints is `/api`
 - In `config` package I have added `allowedOrigins`, change it while deploying
 - In typescript `BookModel` `author?: string;` means this property is optional and can be `null`
-- 
+- I had difficulty implementing pagination,search books page in client side because I wanted pagination feature to be a reusable component in my application. 
 
 # Building Homepage
