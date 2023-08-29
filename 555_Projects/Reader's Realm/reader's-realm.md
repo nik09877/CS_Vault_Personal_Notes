@@ -16,6 +16,6 @@
 - In typescript `BookModel` `author?: string;` means this property is optional and can be `null`
 - I had difficulty implementing pagination,search books page in client side because I wanted pagination feature to be a reusable component in my application. 
 - In SearchBooksPage while searching with category or Title for the first time always set currentPage to 1 even if currentPage is not 1.
-- How to implement the halfRating star review?
+- How to implement the halfRating star review? Look at BookCheckoutPage.tsx
 - 
 # Building Homepage
