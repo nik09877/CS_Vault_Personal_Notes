@@ -1,0 +1,2 @@
+- uses Redux toolkit, express, react, socket.io
+- 
