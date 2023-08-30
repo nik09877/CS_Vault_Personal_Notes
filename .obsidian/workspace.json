@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "40db2df46fac0257",
+        "id": "2423fff617433614",
         "type": "tabs",
         "children": [
           {
-            "id": "ab37f21ada0709c3",
+            "id": "955339a6db702c75",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -165,7 +165,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ab37f21ada0709c3",
+  "active": "955339a6db702c75",
   "lastOpenFiles": [
     "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/CollabDraw/collab-draw.md",
