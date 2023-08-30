@@ -40,3 +40,16 @@
 
 ![](Pasted_image_20230830155327.png)
 
+- jumping effect problem
+```Javascript
+//If we are currently writing and we click somewhere else we should return from handleMouseDown function
+if (selectedElement && action === actions.WRITING) {
+      return;
+    }
+in handleOnBlur do
+{
+	setAction(null);
+    setSelectedElement(null);
+}
+```
+
