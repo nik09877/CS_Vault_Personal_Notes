@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6655f5f7b2a3aa51",
+        "id": "40db2df46fac0257",
         "type": "tabs",
         "children": [
           {
-            "id": "8c9db30f4a4b5ba3",
+            "id": "ab37f21ada0709c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "555_Projects/CollabDraw/collab-draw.md",
+                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/CollabDraw/collab-draw.md",
+                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/CollabDraw/collab-draw.md",
+                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "555_Projects/CollabDraw/collab-draw.md"
+                "file": "222_DSA/Striver_A_to_Z_Sheet.md"
               }
             }
           },
@@ -165,10 +165,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8c9db30f4a4b5ba3",
+  "active": "ab37f21ada0709c3",
   "lastOpenFiles": [
-    "z_assets/Pasted_image_20230830155327.png",
+    "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/CollabDraw/collab-draw.md",
+    "z_assets/Pasted_image_20230830155327.png",
     "z_assets/Pasted_image_20230830153018.png",
     "z_assets/Pasted_image_20230830141852.png",
     "z_assets/Pasted_image_20230830135823.png",
