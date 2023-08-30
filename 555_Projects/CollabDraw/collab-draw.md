@@ -7,6 +7,7 @@
 - In Global state we are storing elements and type
 - Each element consists of { x1,y1,x2,y2,id,type}
 - in case of pencil it is {id,type,points[] array}
+- in case of text it is {id,type,x1,y1,textContent}
 
 ![](Pasted_image_20230829174419.png)
 
@@ -33,3 +34,9 @@
 ![](Pasted_image_20230830141852.png)
 - used perfect free hand npm
 - It takes points[] array and does the drawing 
+
+# TEXT WORKFLOW
+![](Pasted_image_20230830153018.png)
+
+![](Pasted_image_20230830155327.png)
+
