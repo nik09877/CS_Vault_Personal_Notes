@@ -4,6 +4,10 @@
 - importing rough from 'roughjs' was not working so I imported from 'roughjs/bundled/rough.esm'
 - drawing from top to bottom and bottom to top are different , so always make x1 and y1 as smaller numbers i.e swap coordinates.
 - I had a problem in syncing the other user who joined late, so instead of updating a single element we update the whole elements array to new array and send it to all users except the current one
+- In Global state we are storing elements and type
+- Each element consists of { x1,y1,x2,y2,id,type}
+- in case of pencil it is {id,type,points[] array}
+
 ![](Pasted_image_20230829174419.png)
 
 ![](Pasted_image_20230829174739.png)
@@ -26,4 +30,6 @@
 
 # PENCIL WORKFLOW
 ![](Pasted_image_20230830135823.png)
-- used perfect free hand
+![](Pasted_image_20230830141852.png)
+- used perfect free hand npm
+- It takes points[] array and does the drawing 
