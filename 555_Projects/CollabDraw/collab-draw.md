@@ -62,3 +62,8 @@ in handleOnBlur do
 
 # Moving Lines
 ![](Pasted_image_20230831184454.png)
+
+# Moving PENCIL DRAWN ELEMENTS
+- Treat it as a collection of several points i.e apply same logic as moving Lines
+
+# SHARING CURSOR POSITION
