@@ -8,6 +8,8 @@
 - Each element consists of { x1,y1,x2,y2,id,type}
 - in case of pencil it is {id,type,points[] array}
 - in case of text it is {id,type,x1,y1,textContent}
+- When you are moving the mouse we need to check which element it points to currently.
+- in MOVING ELEMENTS WorkFlow we have to find whether the user mouse position lies with in an element i.e `getElementAtPosition()` function
 
 ![](Pasted_image_20230829174419.png)
 
@@ -53,3 +55,5 @@ in handleOnBlur do
 }
 ```
 
+# RESIZING AND MOVING ELEMENTS WORKFLOW
+![](Pasted_image_20230831130556.png)

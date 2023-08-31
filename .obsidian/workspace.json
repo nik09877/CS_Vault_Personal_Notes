@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2423fff617433614",
+        "id": "0fec6ab943e2eb74",
         "type": "tabs",
         "children": [
           {
-            "id": "955339a6db702c75",
+            "id": "41896666b123b229",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
+                "file": "555_Projects/CollabDraw/collab-draw.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
+                "file": "555_Projects/CollabDraw/collab-draw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
+                "file": "555_Projects/CollabDraw/collab-draw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md"
+                "file": "555_Projects/CollabDraw/collab-draw.md"
               }
             }
           },
@@ -165,10 +165,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "955339a6db702c75",
+  "active": "41896666b123b229",
   "lastOpenFiles": [
-    "222_DSA/Striver_A_to_Z_Sheet.md",
+    "z_assets/Pasted_image_20230831130556.png",
     "555_Projects/CollabDraw/collab-draw.md",
+    "222_DSA/Striver_A_to_Z_Sheet.md",
     "z_assets/Pasted_image_20230830155327.png",
     "z_assets/Pasted_image_20230830153018.png",
     "z_assets/Pasted_image_20230830141852.png",
@@ -178,7 +179,6 @@
     "z_assets/Pasted_image_20230830120834.png",
     "z_assets/Pasted_image_20230829195447.png",
     "z_assets/Pasted_image_20230829174739.png",
-    "z_assets/Pasted_image_20230829174419.png",
     "555_Projects/SocialBee/social-bee.md",
     "555_Projects/CollabDraw",
     "555_Projects/CrwnClothing/crwn-clothing.md",
@@ -212,7 +212,6 @@
     "111_Language/Java/In Depth/10.Concurrency.md",
     "Pasted.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
-    "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "Untitled.canvas"
   ]
 }
