@@ -10,7 +10,7 @@
 - in case of text it is {id,type,x1,y1,textContent}
 - When you are moving the mouse we need to check which element it points to currently.
 - in MOVING ELEMENTS WorkFlow we have to find whether the user mouse position lies with in an element i.e `getElementAtPosition()` function
-
+- When resizing elements the edge case is when you resize element diagonally and drag it down , it's size will decrease and become 0 and after that it will increase and become another element, but here the element coordinates are scrambled, so we need to readjust the element coordinates when `mouseUp` event is fired.
 ![](Pasted_image_20230829174419.png)
 
 ![](Pasted_image_20230829174739.png)
