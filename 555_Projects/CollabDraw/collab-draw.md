@@ -57,3 +57,5 @@ in handleOnBlur do
 
 # RESIZING AND MOVING ELEMENTS WORKFLOW
 ![](Pasted_image_20230831130556.png)
+![](Pasted_image_20230831143251.png)
+![](Pasted_image_20230831144901.png)
