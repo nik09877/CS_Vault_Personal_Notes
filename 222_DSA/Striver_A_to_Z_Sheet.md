@@ -105,9 +105,17 @@ return cur;
 ## MEDIUM
 ## HARD
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
-
-### [Rotate List - LeetCode](https://leetcode.com/problems/rotate-list/description/)#tricky
-
+1. Calculate length of Linked List
+2. If `Hea`
+3. Implement the function `Node* go(Node* head,int rem_len,int& k)`
+	1. 
+### [Rotate List By K from End- LeetCode](https://leetcode.com/problems/rotate-list/description/)#tricky
+1. First get the length and do `k %= len`
+2. If `k == 0` return `head`
+3. 'If not, maintain 2 pointers `L1` and `L2` having a distance k between them and move them until `L2` reaches the end
+4. Then the new Head will be `L1->next`, so just connect and disconnect links and return new Head.
+5. TC O(N)
+6. SC O(1)
 ### [Flatten A Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/flatten-a-linked-list_1112655?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
 
 ### [Copy List with Random Pointer - LeetCode](https://leetcode.com/problems/copy-list-with-random-pointer/)#tricky
@@ -115,7 +123,8 @@ return cur;
 	1. Original_node1 -> duplicate_node_1 -> original_node_2 -> duplicate_node_2
 2. Iterate the new list and assign the random pointer for each duplicated node.
 3. Restore the original list and extract the duplicated nodes.
-4. TC O(N) , SC O(N)
+4. TC O(N)
+5. SC O(N)
 ```cpp
 Node* copyRandomList(Node* head) {
          Node *newHead, *l1, *l2;
