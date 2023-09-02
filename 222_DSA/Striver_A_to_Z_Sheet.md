@@ -103,6 +103,20 @@ while(cur){
 return cur;
 ```
 ## MEDIUM
+### [Delete all occurrences of a given key in a doubly linked list - Coding Ninjas](https://www.codingninjas.com/studio/problems/delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list_8160461?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=0)
+1. If `cur_node == key`
+	1. `cur_node -> prev -> next = cur_node -> next`
+	2. `cur_node -> next -> prev = cur_node -> prev`
+2. Else if `newHead == NULL` do :
+	1. `newHead = cur_node`
+3. TC O(N)
+4. SC O(1)
+
+### [Remove duplicates from a sorted Doubly Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/remove-duplicates-from-a-sorted-doubly-linked-list_2420283?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)
+1. Check if `cur_node == prev_node`
+	1. If `true` then do `cur_node -> prev -> next = cur_node -> next` and `cur_node -> next -> prev = cur_node -> prev`
+2. TC O(N)
+3. SC O(1)
 ## HARD
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
 1. Calculate length of Linked List
