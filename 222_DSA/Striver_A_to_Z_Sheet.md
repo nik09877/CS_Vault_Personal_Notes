@@ -106,9 +106,11 @@ return cur;
 ## HARD
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
 1. Calculate length of Linked List
-2. If `Hea`
+2. If `Head == NULL or k == 1` return `Head`
 3. Implement the function `Node* go(Node* head,int rem_len,int& k)`
-	1. 
+	1. If `rem_len < k` return `head`
+	2. Else reverse k nodes , then do `head->next = go(cur, rem_len - k, k)` and return `prev_node`
+
 ### [Rotate List By K from End- LeetCode](https://leetcode.com/problems/rotate-list/description/)#tricky
 1. First get the length and do `k %= len`
 2. If `k == 0` return `head`
@@ -117,7 +119,67 @@ return cur;
 5. TC O(N)
 6. SC O(1)
 ### [Flatten A Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/flatten-a-linked-list_1112655?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
+1. put the head nodes of sub Linked Lists into a list 
+2. Use merge sort to sort them 
+3. return head node
+4. TC O( NK log(NK) ) where N is list size and K is size of each subList
+5. SC O(NK)
+```cpp
+//MERGE WITHOUT EXTRA SPACE
+Node* merge(Node* l1,Node* l2){
+    Node* head,*temp;
+    if(l1->data<=l2->data)
+        head = temp = l1,l1=l1->child;
+    else
+        head = temp= l2,l2=l2->child;
 
+    while(l1 and l2)
+    {
+        if(l1->data <= l2->data){
+            temp->child = l1;
+            l1 = l1->child;
+            temp = temp->child;
+        }
+        else{
+            temp->child = l2;
+            l2 = l2->child;
+            temp = temp->child;
+        }
+    }
+
+    if(l1)
+        temp->child = l1;
+    else
+        temp->child = l2;
+    return head;
+}
+
+Node* merge_sort(int l,int r,vector<Node*>& list){
+    if(l==r){
+        list[l]->next = NULL;
+        return list[l];
+    }
+
+    else{
+        int m = (l+r)>>1;
+        Node* l1 = merge_sort(l,m,list);
+        Node* l2 = merge_sort(m+1,r,list);
+        return merge(l1,l2);
+    }
+}
+
+Node* flattenLinkedList(Node* head) 
+{
+    if(!head or !head->next)
+        return head;
+    vector<Node*>list;
+    Node* temp = head;
+    while(temp)
+        list.push_back(temp),temp= temp->next;
+    int n = list.size();
+    return merge_sort(0,n-1,list);
+}
+```
 ### [Copy List with Random Pointer - LeetCode](https://leetcode.com/problems/copy-list-with-random-pointer/)#tricky
 1. Iterate the original list and duplicate each node. The duplicate of each node follows its original immediately.
 	1. Original_node1 -> duplicate_node_1 -> original_node_2 -> duplicate_node_2
