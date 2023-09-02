@@ -67,3 +67,30 @@ in handleOnBlur do
 - Treat it as a collection of several points i.e apply same logic as moving Lines
 
 # SHARING CURSOR POSITION
+- on Mouse Move we get a `clientX,clientY` from the `event` variable
+- Here we need to emit cursor position i.e `{clientX,clientY,userId/socketId}` to all other clients
+- This event gets fired thousands of time so we need to restrict it to send up to 20 times
+```Javascript
+const handleMouseMove = (event) => {
+	const { clientX, clientY } = event;
+	    //EMIT CURSOR POSITION TO OTHER CLIENTS
+	
+	    lastCursorPosition = { x: clientX, y: clientY };
+	
+	    if (emitCursor) {
+	
+	      emitCursorPosition({ x: clientX, y: clientY });
+	
+	      emitCursor = false;
+	
+	      setTimeout(() => {
+	
+	        emitCursor = true;
+	
+	        emitCursorPosition(lastCursorPosition);
+	
+	      }, 50);
+	
+	}
+}
+```
