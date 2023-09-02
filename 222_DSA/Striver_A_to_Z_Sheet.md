@@ -115,6 +115,7 @@ return cur;
 	1. Original_node1 -> duplicate_node_1 -> original_node_2 -> duplicate_node_2
 2. Iterate the new list and assign the random pointer for each duplicated node.
 3. Restore the original list and extract the duplicated nodes.
+4. TC O(N) , SC O(N)
 ```cpp
 Node* copyRandomList(Node* head) {
          Node *newHead, *l1, *l2;
