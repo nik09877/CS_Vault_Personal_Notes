@@ -258,6 +258,11 @@ public:
 
 ### [148. Sort List](https://leetcode.com/problems/sort-list/)#tricky
 
+1. Using `fast-slow pointer` find the middle node of the list.
+2. Now call `mergeSort` for 2 halves.
+3. `Merge the Sorted List` (divide and conqueror Approach)
+4. TC O(N logN)
+5. SC O(1)
 
 ### [Sort linked list of 0s 1s 2s - Coding Ninjas](https://www.codingninjas.com/studio/problems/sort-linked-list-of-0s-1s-2s_1071937?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
 
