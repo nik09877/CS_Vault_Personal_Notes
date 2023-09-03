@@ -181,6 +181,52 @@ void go(ListNode* node,ListNode*& newHead){
 5. TC O(N) 
 6. SC O(1)
 
+### [328. Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)
+1. Tricky Implementation
+2. Maintain `even_head`, `even_tail`, `odd_head` and at the end do `even_tail->next = odd_head`
+3. For each node `L1` let `L2 = L1->next`, then `L1->next = L2->next` and `L1 = L2`
+```cpp
+ListNode* oddEvenList(ListNode* head) {
+        if(!head or head->next==NULL)
+            return head;
+
+        ListNode* even_head,*odd_head,*even_tail,*l2;
+        even_head = odd_head = NULL;
+
+        int i=0;
+        for(ListNode* l1 = head;l1!=NULL;){
+            l2 = l1->next;
+            if(l2)
+                l1->next = l2->next;
+            if(i==0){
+                if(even_head==NULL){
+                    even_head = l1;
+                }
+                if(l1->next==NULL){
+                    even_tail = l1;
+                }
+                i=1;
+            }
+            else{
+                if(odd_head==NULL){
+                    odd_head = l1;
+                }
+                i=0;
+            }
+            l1 = l2;
+        }
+
+        even_tail->next = odd_head;
+        return even_head;
+    }
+```
+
+### [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+1. Maintain 2 pointers `L1` and `L2` having a distance n between them and move them until `L2` reaches the end.
+2. Check if `head` is NULL or `head->next` is NULL, if true return NULL
+3. Check if it is the First Node that needs to be deleted, then simply return `head->next`
+4. TC O(N)
+5. SC O(1)
 ## HARD
 
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
