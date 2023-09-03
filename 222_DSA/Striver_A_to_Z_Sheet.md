@@ -102,6 +102,7 @@ while(cur){
 }
 return cur;
 ```
+
 ## MEDIUM
 ### [Delete all occurrences of a given key in a doubly linked list - Coding Ninjas](https://www.codingninjas.com/studio/problems/delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list_8160461?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=0)
 1. If `cur_node == key`
@@ -112,11 +113,13 @@ return cur;
 3. TC O(N)
 4. SC O(1)
 
+
 ### [Remove duplicates from a sorted Doubly Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/remove-duplicates-from-a-sorted-doubly-linked-list_2420283?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)
 1. Check if `cur_node == prev_node`
 	1. If `true` then do `cur_node -> prev -> next = cur_node -> next` and `cur_node -> next -> prev = cur_node -> prev`
 2. TC O(N)
 3. SC O(1)
+
 
 ### [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
 1. Use `slow and fast` pointer technique.
@@ -141,6 +144,7 @@ void go(ListNode* node,ListNode*& newHead){
 ```
 3. TC O(N)
 4. SC O(1) in iterative version and O(N) in recursive version
+
 
 ### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)#tricky
 #### Proof of Time Complexity O(N)
@@ -167,14 +171,25 @@ void go(ListNode* node,ListNode*& newHead){
 
 ### [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)#tricky
 #### Proof
+- Gaurav sen video
+### [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)#tricky
+
+1. Reverse up to the middle using `fast slow pointer` technique.
+2. Then start checking for palindrome from middle.
+3. Take care of odd / even length case
+4. `while(fast and fast->next)` should be used instead of `while(fast->next and fast->next->next)` 
+5. TC O(N) 
+6. SC O(1)
 
 ## HARD
+
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
 1. Calculate length of Linked List
 2. If `Head == NULL or k == 1` return `Head`
 3. Implement the function `Node* go(Node* head,int rem_len,int& k)`
 	1. If `rem_len < k` return `head`
 	2. Else reverse k nodes , then do `head->next = go(cur, rem_len - k, k)` and return `prev_node`
+
 
 ### [Rotate List By K from End- LeetCode](https://leetcode.com/problems/rotate-list/description/)#tricky
 1. First get the length and do `k %= len`
@@ -183,6 +198,8 @@ void go(ListNode* node,ListNode*& newHead){
 4. Then the new Head will be `L1->next`, so just connect and disconnect links and return new Head.
 5. TC O(N)
 6. SC O(1)
+
+
 ### [Flatten A Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/flatten-a-linked-list_1112655?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
 1. put the head nodes of sub Linked Lists into a list 
 2. Use merge sort to sort them 
@@ -245,6 +262,8 @@ Node* flattenLinkedList(Node* head) 
     return merge_sort(0,n-1,list);
 }
 ```
+
+
 ### [Copy List with Random Pointer - LeetCode](https://leetcode.com/problems/copy-list-with-random-pointer/)#tricky
 1. Iterate the original list and duplicate each node. The duplicate of each node follows its original immediately.
 	1. Original_node1 -> duplicate_node_1 -> original_node_2 -> duplicate_node_2
