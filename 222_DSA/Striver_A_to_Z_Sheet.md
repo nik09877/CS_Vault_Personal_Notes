@@ -181,7 +181,7 @@ void go(ListNode* node,ListNode*& newHead){
 5. TC O(N) 
 6. SC O(1)
 
-### [328. Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)
+### [328. Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)#tricky
 1. Tricky Implementation
 2. Maintain `even_head`, `even_tail`, `odd_head` and at the end do `even_tail->next = odd_head`
 3. For each node `L1` let `L2 = L1->next`, then `L1->next = L2->next` and `L1 = L2`
@@ -235,6 +235,36 @@ ListNode* oddEvenList(ListNode* head) {
 4. TC O(N)
 5. SC O(1)
 
+### [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)#tricky
+1. TC O(N+M)
+2. SC O(1)
+```cpp
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode* a = headA , *b = headB;
+        if(not a or not b)
+            return nullptr;
+        while(a!=b){
+            a = (a == nullptr)?(headB):(a->next);
+            b = (b == nullptr)?(headA):(b->next);
+        }
+        return a;
+    }
+};
+```
+### [445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)#tricky
+
+
+### [148. Sort List](https://leetcode.com/problems/sort-list/)#tricky
+
+
+### [Sort linked list of 0s 1s 2s - Coding Ninjas](https://www.codingninjas.com/studio/problems/sort-linked-list-of-0s-1s-2s_1071937?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
+
+
+### [Add one to a number represented as Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/add-one-to-a-number-represented-as-linked-list_920557?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
+
+###
 ## HARD
 
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
