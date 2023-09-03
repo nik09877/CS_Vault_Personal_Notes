@@ -227,6 +227,14 @@ ListNode* oddEvenList(ListNode* head) {
 3. Check if it is the First Node that needs to be deleted, then simply return `head->next`
 4. TC O(N)
 5. SC O(1)
+
+### [2095. Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)
+1. use `fast slow pointer` technique
+2. Check if there's no node or only one node present
+3. Take care of even and odd length linked list
+4. TC O(N)
+5. SC O(1)
+
 ## HARD
 
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
