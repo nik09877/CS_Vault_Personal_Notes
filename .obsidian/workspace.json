@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f7b1dffb79c20e7d",
+        "id": "cb6dc6e0a707fe9a",
         "type": "tabs",
         "children": [
           {
-            "id": "392e39d7fa2838f1",
+            "id": "9c5ab8e5e96382e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -38,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#tricky",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -147,7 +146,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -165,14 +165,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "392e39d7fa2838f1",
+  "active": "9c5ab8e5e96382e9",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "222_DSA/Striver_A_to_Z_Sheet.md",
+    "111_Language/Java/In Depth/3.Objects and Classes.md",
     "555_Projects/CollabDraw/collab-draw.md",
     "z_assets/Pasted_image_20230831184454.png",
     "z_assets/Pasted_image_20230831144901.png",
     "z_assets/Pasted_image_20230831143251.png",
     "z_assets/Pasted_image_20230831130556.png",
-    "222_DSA/Striver_A_to_Z_Sheet.md",
     "z_assets/Pasted_image_20230830155327.png",
     "z_assets/Pasted_image_20230830153018.png",
     "z_assets/Pasted_image_20230830141852.png",
@@ -201,7 +203,6 @@
     "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/In Depth/9.Stream API.md",
-    "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/11.Input and Output.md",
@@ -211,7 +212,6 @@
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "Pasted.md",
-    "11_Obsidian_Tutorial/Markdown_Guide.md",
-    "Untitled.canvas"
+    "11_Obsidian_Tutorial/Markdown_Guide.md"
   ]
 }
