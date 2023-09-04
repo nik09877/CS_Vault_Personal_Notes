@@ -254,7 +254,17 @@ public:
 };
 ```
 ### [445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)#tricky
+1. Since input lists may have different size it make sense to determine the sizes. At this step we also could normalize lists by prepending zero-nodes to the smaller list. But this approach will require additional memory, so we are going to ignore the normalization.
+    
+2. Iterate over the lists, compute the sum of items and put it into the resulting list. But here are the couple tricks: we are going to build the resulting list in the reversed order and we don't keep the carry value. For example:  
+    ![image](https://assets.leetcode.com/users/peppered/image_1592152162.png)
+    
+3. Next we are going to normalize the resulting list. Starting form it's head (which contains the lowest order number) we will iterate over all nodes normalizing the value (`val % 10`), remembering the carry value and reversing the resulting list.
+    
+4. At the last step the carry value may be greater than 0. In that case we have to create a new node and make it a header of the result.
+    
 
+	![image](https://assets.leetcode.com/users/peppered/image_1592209145.png)
 
 ### [148. Sort List](https://leetcode.com/problems/sort-list/)#tricky
 
@@ -266,8 +276,12 @@ public:
 
 ### [Sort linked list of 0s 1s 2s - Coding Ninjas](https://www.codingninjas.com/studio/problems/sort-linked-list-of-0s-1s-2s_1071937?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
 
-
-### [Add one to a number represented as Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/add-one-to-a-number-represented-as-linked-list_920557?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
+1. The 1st approach would be counting the number of occurrences of 0, 1, and 2. Then updating the data of the linked list in sorted order.
+2. The 2nd approach would be separating the given linked list into 3 linked lists having 0s, 1s and 2s. Then reconnecting them in sorted fashion.
+### [Add one to a number represented as Linked List - Coding Ninjas](https://www.codingninjas.com/studio/problems/add-one-to-a-number-represented-as-linked-list_920557?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)
+1. Reverse the List
+2. Add one and remember to update the carry
+3. Reverse the List again
 
 ###
 ## HARD
