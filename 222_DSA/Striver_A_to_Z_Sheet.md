@@ -110,7 +110,36 @@ int findMin(vector<int>& a) {
 ```
 
 ### [540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)#tricky
-
+1. If there is only one element return it
+	1. If `mid` is odd :
+		1. It should match `prev element`
+		2. If `mid element == prev element`
+#### Code
+```cpp
+int singleNonDuplicate(vector<int>& a) {
+        int n = a.size(),l = 0, r= n-1;
+        if(n==1)
+            return a[0];
+        
+        while(l<r){
+            int m = (l+r)>>1;
+            //if m is odd should match with prev element
+            if(m & 1){
+                if(a[m]==a[m-1])
+                    l=m+1;
+                else
+                    r = m;
+            }
+            else{
+                if(a[m]==a[m+1])
+                    l=m+2;
+                else
+                    r = m;
+            }
+        }
+        return a[l];
+    }
+```
 
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
