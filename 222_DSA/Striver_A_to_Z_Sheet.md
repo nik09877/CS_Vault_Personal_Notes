@@ -122,7 +122,6 @@ int findMin(vector<int>& a) {
 		2. If `mid element == next element` then right side contains `target` element, so do `left = mid + 2`
 		3. Else `mid element` is a potential answer, so make `right = mid`
 
-
 #### Code
 ```cpp
 int singleNonDuplicate(vector<int>& a) {
@@ -148,6 +147,26 @@ int singleNonDuplicate(vector<int>& a) {
         }
         return a[l];
     }
+```
+
+### [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)#tricky
+1. If `(mid == 0 or a[mid]>a[mid-1]) and (mid==n-1 or a[mid]>a[mid+1])` return `a[mid]`
+2. Else if `mid == 0 or a[mid] >= a[mid-1]` go right
+3. Else go left
+```cpp
+    int findPeakElement(vector<int>& a) {
+        int n = a.size(), l = 0 , r = n-1;
+        while(l<=r){
+            int m = (l+r)>>1;
+            if((m==0 or a[m]>a[m-1]) and (m==n-1 or a[m]>a[m+1]))
+                return m;
+            if(m==0 or a[m]>=a[m-1])
+                l = m+1;
+            else
+                r = m-1;
+        }
+        return -1;
+    }
 ```
 
 # Linked List ( ADVICE : Always Check For NULL )
