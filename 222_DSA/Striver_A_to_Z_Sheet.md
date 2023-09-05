@@ -111,9 +111,16 @@ int findMin(vector<int>& a) {
 
 ### [540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)#tricky
 1. If there is only one element return it
-	1. If `mid` is odd :
+	1. If `mid index` is odd :
 		1. It should match `prev element`
-		2. If `mid element == prev element`
+		2. If `mid element == prev element` then right side contains `target` element, so do `left = mid + 1`
+		3. Else `mid element` is a potential answer, so make `right = mid`
+	2. If `mid index` is even :
+		1. It should match the `next element`
+		2. If `mid element == next element` then right side contains `target` element, so do `left = mid + 2`
+		3. Else `mid element` is a potential answer, so make `right = mid`
+2. Observe that before `target` element is seen `arr[odd_index] = arr[odd_index-1] and arr[even_index] == arr[even_index+1]`, but after the `target` element is seen, the condition is flipped.
+
 #### Code
 ```cpp
 int singleNonDuplicate(vector<int>& a) {
