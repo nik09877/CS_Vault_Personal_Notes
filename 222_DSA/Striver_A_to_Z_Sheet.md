@@ -1,3 +1,60 @@
+# Binary Search
+### [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)#tricky
+1. Check if middle element is `target` and if true return that index
+2. Check which part of the array is sorted
+3. If left part is sorted
+	1. If `target` >= `left element` and `target` <= `middle element`, go left
+	2. Else go right
+4. Else right part is sorted definitely
+	1. If `target` >= `middle element` and `target` <= `right element`, go right
+	2. Else go left
+5. **If array contains duplicate there can be cases like** : 
+	1. `[1, 1, 2, 1, 1, 1], target = 2`
+	2. Although using above algo we will find here that left part is sorted, it is actually not
+	3. So we need to decrease the search space.
+6. TC O(log N) 
+7. SC O(1)
+#### Code
+```cpp
+class Solution {
+public:
+    int search(vector<int>& a, int target) {
+        int n = a.size();
+        int l = 0, r = n-1;
+        while(l<=r){
+            int m = (l+r)>>1;
+            if(a[m]==target)
+                return m;
+            // IN CASE ARRAY CONTAINS DUPLICATES
+			if(a[m]==a[l] and a[m]==a[r])
+            {
+                l++,r--;
+                continue;
+            }
+            //check which part is sorted (left or right part)
+            if(a[l]<=a[m]){
+                //target in left part
+                if(a[l]<=target and target<=a[m])
+                    r = m-1;
+                //target in right part
+                else
+                    l = m+1;
+            }
+            else{
+                //target in right part
+                if(target>=a[m] and target<=a[r])
+                    l = m+1;
+                //target in left part
+                else
+                    r = m-1;
+            }
+        }
+        return -1;
+    }
+};
+```
+
+
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
 ### [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
