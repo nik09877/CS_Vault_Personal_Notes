@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cb6dc6e0a707fe9a",
+        "id": "e25b53f86cc06c2d",
         "type": "tabs",
         "children": [
           {
-            "id": "9c5ab8e5e96382e9",
+            "id": "c4fb6b5d1b25b90a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "222_DSA/Striver_A_to_Z_Sheet.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -65,7 +65,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -165,10 +166,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9c5ab8e5e96382e9",
+  "active": "c4fb6b5d1b25b90a",
   "lastOpenFiles": [
-    "Untitled.canvas",
+    "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
+    "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "222_DSA/Striver_A_to_Z_Sheet.md",
+    "Untitled.canvas",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "555_Projects/CollabDraw/collab-draw.md",
     "z_assets/Pasted_image_20230831184454.png",
@@ -211,7 +214,6 @@
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
-    "Pasted.md",
-    "11_Obsidian_Tutorial/Markdown_Guide.md"
+    "Pasted.md"
   ]
 }

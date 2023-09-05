@@ -54,6 +54,63 @@ public:
 };
 ```
 
+### [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)#tricky
+#### My own Algo
+1. Visualize array elements as points in a 2D space
+2. If `(mid==0 or mid <= left) and (mid==n-1 or mid <= right)` then it is pivot element, so `ans = mid` and break from the loop.
+3. If `mid < left` go left
+4. Else :
+	1. If `mid < right` go left
+	2. Else go right
+##### Code
+```cpp
+int findMin(vector<int>& a) {
+        int ans=INT_MAX, n=a.size(), l=0, r=n-1;
+        while(l<=r){
+            int m =(l+r)>>1;
+            if((m==0 or a[m-1]>=a[m]) and (m==n-1 or a[m+1]>=a[m]))
+            {
+                ans = a[m];
+                break;
+            }
+            if(a[m]<a[l])
+                r=m-1;
+            else{
+                if(a[r]<a[m])
+                    l=m+1;
+                else
+                    r=m-1;
+            }
+        }
+        return ans;
+    }
+```
+#### Preferred Algo (Works For duplicates also)
+1. If there is only one element return it.
+2. If `mid == right element` do `right--`
+3. Else if `mid > right element` do `left = mid + 1`
+4. Else do ` right = mid`
+5. return `left element` (we are doing `while(left < right)` so that's why)
+##### Code
+```cpp
+int findMin(vector<int>& a) {
+        int l=0,r=a.size()-1;
+        while(l<r){
+            int m=(l+r)>>1;
+            //CHECK FOR DUPLICATE
+            if(a[m]==a[r])
+                r--;
+            else if(a[m]>a[r])
+                l=m+1;
+            else
+                r=m;
+        }
+        return a[l];
+    }
+```
+
+### [540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)#tricky
+
 
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
