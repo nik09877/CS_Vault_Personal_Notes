@@ -170,7 +170,14 @@ int singleNonDuplicate(vector<int>& a) {
 ```
 
 ### [1539. Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)#tricky
-1. 
+
+### [K-th Element of Two Sorted Arrays - Coding Ninjas](https://www.codingninjas.com/studio/problems/k-th-element-of-2-sorted-array_1164159?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
+
+### [Median of Two Sorted Arrays - LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/)#tricky
+
+### [Minimize Max Distance to Gas Station - Coding Ninjas](https://www.codingninjas.com/studio/problems/minimise-max-distance_7541449?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
+
+
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
 ### [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
