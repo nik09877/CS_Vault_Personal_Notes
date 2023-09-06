@@ -169,7 +169,8 @@ int singleNonDuplicate(vector<int>& a) {
     }
 ```
 
-### 
+### [1539. Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)#tricky
+1. 
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
 ### [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
