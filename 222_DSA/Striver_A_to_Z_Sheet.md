@@ -172,14 +172,14 @@ int singleNonDuplicate(vector<int>& a) {
 ### [1539. Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)#tricky
 
 ### [K-th Element of Two Sorted Arrays - Coding Ninjas](https://www.codingninjas.com/studio/problems/k-th-element-of-2-sorted-array_1164159?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
-
-### [Median of Two Sorted Arrays - LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/)#tricky
-
-### [Minimize Max Distance to Gas Station - Coding Ninjas](https://www.codingninjas.com/studio/problems/minimise-max-distance_7541449?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
 1. partition 2 arrays such that max of 2 left parts is <= min of 2 right parts.
 2. Binary search on the length of smaller array
 3. Move right if `r1 < l2`
 4. Else move left.
+### [Median of Two Sorted Arrays - LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/)#tricky
+
+### [Minimize Max Distance to Gas Station - Coding Ninjas](https://www.codingninjas.com/studio/problems/minimise-max-distance_7541449?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
+1. In case of real Number binary search use `while(r-l > eps)` and instead of doing `l=mid+1` and `r=mid-1` do `l=mid` and `r=mid`.
 
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
