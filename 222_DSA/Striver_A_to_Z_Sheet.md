@@ -178,6 +178,8 @@ int singleNonDuplicate(vector<int>& a) {
 ### [Minimize Max Distance to Gas Station - Coding Ninjas](https://www.codingninjas.com/studio/problems/minimise-max-distance_7541449?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
 1. partition 2 arrays such that max of 2 left parts is <= min of 2 right parts.
 2. Binary search on the length of smaller array
+3. Move right if `r1 < l2`
+4. Else move left.
 
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
