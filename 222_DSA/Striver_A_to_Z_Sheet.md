@@ -176,7 +176,8 @@ int singleNonDuplicate(vector<int>& a) {
 ### [Median of Two Sorted Arrays - LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/)#tricky
 
 ### [Minimize Max Distance to Gas Station - Coding Ninjas](https://www.codingninjas.com/studio/problems/minimise-max-distance_7541449?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf)#tricky
-
+1. partition 2 arrays such that max of 2 left parts is <= min of 2 right parts.
+2. Binary search on the length of smaller array
 
 # Linked List ( ADVICE : Always Check For NULL )
 ## EASY
