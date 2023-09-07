@@ -14,4 +14,4 @@
   };
 ```
 2. Read about yjs ydoc and y-webrtc and signalling servers
-3. 
+3. In node server was trying to access a env variable without requiring dotenv.config()
