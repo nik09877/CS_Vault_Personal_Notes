@@ -11,8 +11,12 @@
             "id": "9c5dd0ade47ca4d2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md"
+              }
             }
           },
           {
@@ -157,7 +165,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9a3c6f09f5090e2e",
+  "active": "9c5dd0ade47ca4d2",
   "lastOpenFiles": [
     "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/CodeCollabPro/code-collab-pro.md",

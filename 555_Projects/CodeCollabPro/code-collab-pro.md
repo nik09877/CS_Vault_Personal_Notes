@@ -13,3 +13,5 @@
     element.click();
   };
 ```
+2. Read about yjs ydoc and y-webrtc and signalling servers
+3. 
