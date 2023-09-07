@@ -1,4 +1,4 @@
-1. In `FileUploading.jsx` while downloading code we need to do this for it to work in FireFox
+1. In `FileUploading.jsx` while downloading code we need to do this for it to work in `FireFox`
 ```javascript
 //DOWNLOAD CODE
 
