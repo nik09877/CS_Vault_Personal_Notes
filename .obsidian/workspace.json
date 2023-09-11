@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
+                "file": "111_Language/Java/In Depth/11.Input and Output.md",
                 "mode": "preview",
                 "source": true
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
+                "file": "111_Language/Java/In Depth/11.Input and Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
+                "file": "111_Language/Java/In Depth/11.Input and Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md"
+                "file": "111_Language/Java/In Depth/11.Input and Output.md"
               }
             }
           },
@@ -167,10 +167,10 @@
   },
   "active": "9c5dd0ade47ca4d2",
   "lastOpenFiles": [
+    "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
-    "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/In Depth/9.Stream API.md",
