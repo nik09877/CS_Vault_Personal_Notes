@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ede39f18422f05c0",
+        "id": "ee85dfe1bcb62755",
         "type": "tabs",
         "children": [
           {
-            "id": "9c5dd0ade47ca4d2",
+            "id": "413cece7aecae0f6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -94,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md",
+                "file": "111_Language/Java/In Depth/10.Concurrency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md",
+                "file": "111_Language/Java/In Depth/10.Concurrency.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/11.Input and Output.md"
+                "file": "111_Language/Java/In Depth/10.Concurrency.md"
               }
             }
           },
@@ -165,8 +161,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9c5dd0ade47ca4d2",
+  "active": "9a3c6f09f5090e2e",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
@@ -175,7 +172,6 @@
     "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/In Depth/9.Stream API.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
-    "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
