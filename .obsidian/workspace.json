@@ -11,8 +11,12 @@
             "id": "413cece7aecae0f6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ]
@@ -90,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/10.Concurrency.md",
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/10.Concurrency.md",
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/10.Concurrency.md"
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md"
               }
             }
           },
@@ -161,7 +165,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9a3c6f09f5090e2e",
+  "active": "413cece7aecae0f6",
   "lastOpenFiles": [
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/Quick Reference/5.Lambda Expressions.md",

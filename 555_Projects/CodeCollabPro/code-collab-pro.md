@@ -38,3 +38,5 @@
 
  * AND RETURN THE RESULTS
 ```
+- When a user leaves from collab-draw I wasn't removing all the cursors from it's state , so whenever he joins a new room those old cursors were displaying , so when leaving clear the cursors in its store.
+
