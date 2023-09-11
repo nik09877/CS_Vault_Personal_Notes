@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
+                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
                 "mode": "preview",
                 "source": true
               }
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 540.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
+                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
+                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md"
+                "file": "111_Language/Java/Quick Reference/5.Lambda Expressions.md"
               }
             }
           },
@@ -167,13 +167,27 @@
   },
   "active": "9c5dd0ade47ca4d2",
   "lastOpenFiles": [
-    "222_DSA/Striver_A_to_Z_Sheet.md",
+    "111_Language/Java/Quick Reference/8.Collections.md",
+    "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
+    "111_Language/Java/Quick Reference/10.Concurrency.md",
+    "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "111_Language/Java/In Depth/8.Collections.md",
+    "111_Language/Java/In Depth/9.Stream API.md",
+    "111_Language/Java/In Depth/10.Concurrency.md",
+    "111_Language/Java/In Depth/11.Input and Output.md",
+    "111_Language/Java/In Depth/7.Generic Programming.md",
+    "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
+    "111_Language/Java/In Depth/4.Inheritance.md",
+    "111_Language/Java/In Depth/3.Objects and Classes.md",
+    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+    "111_Language/Java/In Depth/1.Introduction.md",
     "555_Projects/CodeCollabPro/code-collab-pro.md",
+    "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/CodeCollabPro",
     "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "Untitled.canvas",
-    "111_Language/Java/In Depth/3.Objects and Classes.md",
     "555_Projects/CollabDraw/collab-draw.md",
     "z_assets/Pasted_image_20230831184454.png",
     "z_assets/Pasted_image_20230831144901.png",
@@ -199,20 +213,6 @@
     "666_WebDev/BackEnd/SpringBoot",
     "666_WebDev/BackEnd",
     "666_WebDev",
-    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
-    "111_Language/Java/In Depth/4.Inheritance.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
-    "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
-    "111_Language/Java/In Depth/7.Generic Programming.md",
-    "111_Language/Java/In Depth/8.Collections.md",
-    "111_Language/Java/In Depth/9.Stream API.md",
-    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/In Depth/1.Introduction.md",
-    "111_Language/Java/In Depth/11.Input and Output.md",
-    "111_Language/Java/Quick Reference/8.Collections.md",
-    "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
-    "111_Language/Java/Quick Reference/10.Concurrency.md",
-    "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
-    "111_Language/Java/In Depth/10.Concurrency.md"
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md"
   ]
 }
