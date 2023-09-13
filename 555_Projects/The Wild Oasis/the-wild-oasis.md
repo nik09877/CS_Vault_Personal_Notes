@@ -1,0 +1,2 @@
+- Next js Tailwind Typescript prisma and MongoDB
+- I could have used MySQL also but I wanted to focus more on availability

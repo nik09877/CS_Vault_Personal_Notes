@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
-                "mode": "preview",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "mode": "source",
                 "source": true
               }
             }
+          },
+          {
+            "id": "72af986c995528a4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.11"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "555_Projects/CodeCollabPro/code-collab-pro.md"
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md"
               }
             }
           },
@@ -144,6 +155,16 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
+            }
+          },
+          {
+            "id": "addde1c92c4a304d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
             }
           }
         ],
@@ -165,8 +186,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "413cece7aecae0f6",
+  "active": "72af986c995528a4",
   "lastOpenFiles": [
+    "555_Projects/CodeCollabPro/code-collab-pro.md",
+    "555_Projects/The Wild Oasis/the-wild-oasis.md",
+    "555_Projects/The Wild Oasis",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
@@ -182,7 +206,6 @@
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
-    "555_Projects/CodeCollabPro/code-collab-pro.md",
     "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/CodeCollabPro",
     "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
@@ -211,8 +234,6 @@
     "555_Projects/CrwnClothing",
     "555_Projects/SocialBee",
     "666_WebDev/BackEnd/SpringBoot",
-    "666_WebDev/BackEnd",
-    "666_WebDev",
-    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md"
+    "666_WebDev/BackEnd"
   ]
 }
