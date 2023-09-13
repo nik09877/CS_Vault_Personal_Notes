@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "72af986c995528a4",
+            "id": "c32ef5568f36a195",
             "type": "leaf",
             "state": {
               "type": "release-notes",
               "state": {
-                "currentVersion": "1.4.11"
+                "currentVersion": "1.4.12"
               }
             }
           }
@@ -186,7 +186,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "72af986c995528a4",
+  "active": "c32ef5568f36a195",
   "lastOpenFiles": [
     "555_Projects/CodeCollabPro/code-collab-pro.md",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
