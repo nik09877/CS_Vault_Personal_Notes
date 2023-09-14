@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
-                "mode": "source",
+                "file": "333_Core Theory Subjects/DBMS.md",
+                "mode": "preview",
                 "source": true
               }
             }
-          },
-          {
-            "id": "c32ef5568f36a195",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.12"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -81,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 540.5
+    "width": 540.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -105,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "file": "333_Core Theory Subjects/DBMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "file": "333_Core Theory Subjects/DBMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md"
+                "file": "333_Core Theory Subjects/DBMS.md"
               }
             }
           },
@@ -186,10 +176,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c32ef5568f36a195",
+  "active": "9a3c6f09f5090e2e",
   "lastOpenFiles": [
-    "555_Projects/CodeCollabPro/code-collab-pro.md",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
+    "333_Core Theory Subjects/DBMS.md",
+    "555_Projects/CodeCollabPro/code-collab-pro.md",
     "555_Projects/The Wild Oasis",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
@@ -227,7 +218,6 @@
     "555_Projects/CrwnClothing/crwn-clothing.md",
     "555_Projects/Reader's Realm/reader's-realm.md",
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
-    "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
     "666_WebDev/FrontEnd/React",
     "666_WebDev/FrontEnd",
     "555_Projects/Reader's Realm",
