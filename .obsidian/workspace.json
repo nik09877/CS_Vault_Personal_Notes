@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md",
-                "mode": "preview",
+                "file": "333_Core Theory Subjects/OS.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md",
+                "file": "333_Core Theory Subjects/OS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md",
+                "file": "333_Core Theory Subjects/OS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md"
+                "file": "333_Core Theory Subjects/OS.md"
               }
             }
           },
@@ -176,10 +176,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9a3c6f09f5090e2e",
+  "active": "413cece7aecae0f6",
   "lastOpenFiles": [
-    "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "333_Core Theory Subjects/DBMS.md",
+    "333_Core Theory Subjects/OS.md",
+    "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "555_Projects/CodeCollabPro/code-collab-pro.md",
     "555_Projects/The Wild Oasis",
     "111_Language/Java/In Depth/11.Input and Output.md",
@@ -217,7 +218,6 @@
     "555_Projects/CollabDraw",
     "555_Projects/CrwnClothing/crwn-clothing.md",
     "555_Projects/Reader's Realm/reader's-realm.md",
-    "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
     "666_WebDev/FrontEnd/React",
     "666_WebDev/FrontEnd",
     "555_Projects/Reader's Realm",
