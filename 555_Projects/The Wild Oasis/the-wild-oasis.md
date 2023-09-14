@@ -1,6 +1,9 @@
 - Next js Tailwind Typescript prisma and MongoDB and Zustand
 - I could have used MySQL also but I wanted to focus more on availability
+- Read about JWT
+
 # Model
+
 ```javascript
 model User {
   id              String @id @default(auto()) @map("_id") @db.ObjectId
