@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "333_Core Theory Subjects/OS.md",
-                "mode": "source",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "333_Core Theory Subjects/OS.md",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "333_Core Theory Subjects/OS.md",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "333_Core Theory Subjects/OS.md"
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md"
               }
             }
           },
@@ -178,8 +178,8 @@
   },
   "active": "413cece7aecae0f6",
   "lastOpenFiles": [
-    "333_Core Theory Subjects/DBMS.md",
     "333_Core Theory Subjects/OS.md",
+    "333_Core Theory Subjects/DBMS.md",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "555_Projects/CodeCollabPro/code-collab-pro.md",
     "555_Projects/The Wild Oasis",
