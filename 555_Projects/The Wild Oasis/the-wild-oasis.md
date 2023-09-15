@@ -2,7 +2,8 @@
 - I could have used MySQL also but I wanted to focus more on availability
 - Read about JWT
 - There was some hydration error when passing the `created-at / email-verified-at` `Date()` object to client components so I had to serialize / sanitize them and converted them to strings.
-- Showed the Map using react-leaflet library
+- Showed the Map using react-leaflet library using `next/dynamic` inside the `<RentModal/>`Component because leaflet is not supported by react , so had to use this hack.
+- 
 # Model
 
 ```javascript
