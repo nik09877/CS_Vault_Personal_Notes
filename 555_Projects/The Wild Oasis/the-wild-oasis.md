@@ -2,7 +2,7 @@
 - I could have used MySQL also but I wanted to focus more on availability
 - Read about JWT
 - There was some hydration error when passing the `created-at / email-verified-at` `Date()` object to client components so I had to serialize / sanitize them and converted them to strings.
-
+- Showed the Map using react-leaflet library
 # Model
 
 ```javascript
