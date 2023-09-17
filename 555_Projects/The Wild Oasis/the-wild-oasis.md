@@ -75,4 +75,8 @@ model Reservation {
 1. `actions` - contains the fetch functions that retrieve data from the server (`getCurrentUser`, `getAllListings` etc)
 2. `api` - contains the `POST`, `DELETE`etc api routes
 3. `components` - contains components
-4. `hooks` - Intermediary 
+4. `hooks` - Acts as Intermediary between the client `pages`/`components` and `actions`/`api`/`state_changes`
+5. `libs` - contain the `prismaDB` set up and other library functions/utils
+6. `providers` - Third party scripts or services need to be wrapped in a client component, providers are used for this purpose e.g. `<ToasterProvider/>`
+7. `types` - Typescript types
+8. `prisma` - contains DB Schema
