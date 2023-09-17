@@ -69,3 +69,10 @@ model Reservation {
   listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
 }
 ```
+
+# Folder Structure
+![](Pasted_image_20230917214433.png)
+1. `actions` - contains the fetch functions that retrieve data from the server (`getCurrentUser`, `getAllListings` etc)
+2. `api` - contains the `POST`, `DELETE`etc api routes
+3. `components` - contains components
+4. `hooks` - Intermediary 
