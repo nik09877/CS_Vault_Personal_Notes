@@ -469,6 +469,28 @@ public:
 ###
 ## HARD
 
+### [Find the Duplicate Number - LeetCode](https://leetcode.com/problems/find-the-duplicate-number/submissions/531622837/)#tricky
+- Floyd's algo can be sed to check for duplicate number
+```cpp
+int findDuplicate(vector<int>& a) {
+        //floyd's algo (detect cycle in a linked list) 
+        int slow = a[0],fast = a[0];
+        do{
+            fast = a[a[fast]];
+            slow = a[slow];
+        }
+        while(fast!=slow);
+        slow = a[0];
+        while(slow!=fast){
+            slow=a[slow];
+            fast=a[fast];
+        }
+        return fast;
+        //or return slow
+    }
+```
+
+
 ### [Reverse Nodes in k-Group - LeetCode](https://leetcode.com/problems/reverse-nodes-in-k-group/)#tricky
 1. Calculate length of Linked List
 2. If `Head == NULL or k == 1` return `Head`
