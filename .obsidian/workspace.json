@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
-                "mode": "source",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md",
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "222_DSA/Striver_A_to_Z_Sheet.md"
+                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md"
               }
             }
           },
@@ -178,6 +178,7 @@
   },
   "active": "413cece7aecae0f6",
   "lastOpenFiles": [
+    "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "z_assets/Pasted_image_20230917214433.png",
     "333_Core Theory Subjects/OS.md",
@@ -199,7 +200,6 @@
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
-    "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/CodeCollabPro",
     "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
