@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ee85dfe1bcb62755",
+        "id": "134405e15a65278d",
         "type": "tabs",
         "children": [
           {
-            "id": "413cece7aecae0f6",
+            "id": "319822f9deab3ecd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
                 "mode": "source",
                 "source": true
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md",
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "555_Projects/The Wild Oasis/the-wild-oasis.md"
+                "file": "555_Projects/CodeCollabPro/code-collab-pro.md"
               }
             }
           },
@@ -176,10 +176,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "413cece7aecae0f6",
+  "active": "319822f9deab3ecd",
   "lastOpenFiles": [
-    "222_DSA/Striver_A_to_Z_Sheet.md",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
+    "222_DSA/Striver_A_to_Z_Sheet.md",
     "z_assets/Pasted_image_20230917214433.png",
     "333_Core Theory Subjects/OS.md",
     "333_Core Theory Subjects/DBMS.md",

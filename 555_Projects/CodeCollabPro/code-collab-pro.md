@@ -39,4 +39,6 @@
  * AND RETURN THE RESULTS
 ```
 - When a user leaves from collab-draw I wasn't removing all the cursors from it's state , so whenever he joins a new room those old cursors were displaying , so when leaving clear the cursors in its store.
+- Fetch problem happening because while hosting on render I made the server wss, so that's why, it should have been https, but if I make it https , web socket will not work
+
 
