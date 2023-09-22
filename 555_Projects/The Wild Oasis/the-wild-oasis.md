@@ -3,7 +3,8 @@
 - Read about JWT
 - There was some hydration error when passing the `created-at / email-verified-at` `Date()` object to client components so I had to serialize / sanitize them and converted them to strings.
 - Showed the Map using react-leaflet library using `next/dynamic` inside the `<RentModal/>`Component because leaflet is not supported by react , so had to use this hack.
-- After doing reservation I am redirecting the user to /trips page, but the data is SSG so it is not getting revalidated, so I assigned <TripsClient/> key={1} so it get rerendered
+- After doing reservation I am redirecting the user to /trips page, but the data is SSG so it is not getting revalidated
+- I had to convert some parts of HomePage to Client Component because of search filters, it should be SSR not SSG in vercel
 - Search for rooms in a date range
 ```javascript
 if (startDate && endDate) {
