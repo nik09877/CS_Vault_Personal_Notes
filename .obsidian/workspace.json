@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "af56a0bdc5e800b7",
+        "id": "435b74c26269bbcf",
         "type": "tabs",
         "children": [
           {
-            "id": "aee1c4ea5c074811",
+            "id": "0694f50b08f9f2eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md",
-                "mode": "preview",
+                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md",
+                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md",
+                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "333_Core Theory Subjects/DBMS.md"
+                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md"
               }
             }
           },
@@ -176,15 +176,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "aee1c4ea5c074811",
+  "active": "0694f50b08f9f2eb",
   "lastOpenFiles": [
+    "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
+    "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
+    "333_Core Theory Subjects/DBMS.md",
     "555_Projects/Collab-Code-Pro/code-collab-pro.md",
     "555_Projects/SocialBee/social-bee.md",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "222_DSA/Striver_A_to_Z_Sheet.md",
     "z_assets/Pasted_image_20230917214433.png",
     "333_Core Theory Subjects/OS.md",
-    "333_Core Theory Subjects/DBMS.md",
     "555_Projects/The Wild Oasis",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/Quick Reference/5.Lambda Expressions.md",
@@ -216,7 +218,6 @@
     "z_assets/Pasted_image_20230830135823.png",
     "z_assets/Pasted_image_20230830130013.png",
     "555_Projects/Collab-Draw",
-    "555_Projects/Crwn-Clothing/crwn-clothing.md",
     "666_WebDev/FrontEnd/React",
     "666_WebDev/FrontEnd",
     "555_Projects/Reader's Realm",
