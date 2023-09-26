@@ -17,7 +17,7 @@
 3. In node server was trying to access a env variable without requiring dotenv.config()
 4. react-graph-vis Graph is not working
 5. Couldn't parse Leetcode problems
-6. collab editor was in infinite loop , because on editor value change I was emitting the CODE_CHANGE event to other users, and setting my global state again and again, at server I checked if incoming code == server code don't broadcast
+6. collab editor was in infinite loop(because of socket.on('code-change') I was updating state and emitting the same code to other users) , because on editor value change I was emitting the CODE_CHANGE event to other users, and setting my global state again and again, at server I checked if incoming code == server code don't broadcast, also in client side you can create a state called 'received' and set it to true when you receive code via socket.on('code-change') event and if received is set to true don't emit the code.
 
 #### CONTEST WORLFLOW
 ```cpp
