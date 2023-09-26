@@ -20,6 +20,7 @@
 6. collab editor was in infinite loop(because of socket.on('code-change') I was updating state and emitting the same code to other users) , because on editor value change I was emitting the CODE_CHANGE event to other users, and setting my global state again and again, at server I checked if incoming code == server code don't broadcast, also in client side you can create a state called 'received' and set it to true when you receive code via socket.on('code-change') event and if received is set to true don't emit the code.
 ```javascript
 //In Editor.jsx
+//CodeMirrorEditor is a controlled element, I made it controlled that's why it works 
 <CodeMirrorEditor
         value={tools.code}
         onBeforeChange={(editor, data, value) => {

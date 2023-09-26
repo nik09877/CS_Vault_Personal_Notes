@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "435b74c26269bbcf",
+        "id": "b181cd07ef5be091",
         "type": "tabs",
         "children": [
           {
-            "id": "0694f50b08f9f2eb",
+            "id": "55cb26d6be741b2c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -70,8 +66,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -95,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md"
-              }
+              "state": {}
             }
           },
           {
@@ -176,12 +167,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0694f50b08f9f2eb",
+  "active": "55cb26d6be741b2c",
   "lastOpenFiles": [
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
+    "555_Projects/Collab-Code-Pro/code-collab-pro.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
     "333_Core Theory Subjects/DBMS.md",
-    "555_Projects/Collab-Code-Pro/code-collab-pro.md",
     "555_Projects/SocialBee/social-bee.md",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "222_DSA/Striver_A_to_Z_Sheet.md",
@@ -207,7 +200,6 @@
     "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "Untitled.canvas",
-    "555_Projects/Collab-Draw/collab-draw.md",
     "z_assets/Pasted_image_20230831184454.png",
     "z_assets/Pasted_image_20230831144901.png",
     "z_assets/Pasted_image_20230831143251.png",
@@ -223,7 +215,6 @@
     "555_Projects/Reader's Realm",
     "555_Projects/Crwn-Clothing",
     "555_Projects/SocialBee",
-    "666_WebDev/BackEnd/SpringBoot",
-    "666_WebDev/BackEnd"
+    "666_WebDev/BackEnd/SpringBoot"
   ]
 }
