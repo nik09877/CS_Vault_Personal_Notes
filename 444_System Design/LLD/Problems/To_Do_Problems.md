@@ -337,9 +337,71 @@
   - Implement Observer to deliver real-time stock price updates.
   - Apply Singleton to maintain a single source for stock price data.
 
-### Learning Management System
+### Learning Management System 
 - **Design Patterns**:
-  - **Observer**: Use it for notifying users of course
+  - **Observer**: Use it for notifying users of course updates and announcements.
+  - **Strategy**: Apply it to define different learning strategies and materials.
+- **Approach**:
+  - Implement Observer to notify users of course updates and announcements.
+  - Apply Strategy to offer various learning materials and approaches.
+
+### Online Voting System
+- **Design Patterns**:
+  - **Observer**: Use it for tracking voter activities and notifying authorities.
+  - **State**: Apply it to manage the voting process (e.g., registration, casting votes).
+- **Approach**:
+  - Implement Observer to monitor voter activities and ensure a fair election.
+  - Use State to model the various stages of the voting process.
+
+### Payment System 
+- **Design Patterns**:
+  - **Strategy**: Use it for handling various payment methods (e.g., credit cards, digital wallets).
+  - **Observer**: Implement it to track payment transactions and notify users.
+- **Approach**:
+  - Apply Strategy to support multiple payment methods with a common interface.
+  - Use Observer to monitor payment transactions and inform users of transaction status.
+
+### Chat-based System
+- **Design Patterns**:
+  - **Observer**: Use it for real-time message delivery and user notifications.
+  - **Command**: Apply it to manage user commands and actions.
+- **Approach**:
+  - Implement Observer to enable real-time chat communication.
+  - Use Command to handle user commands and actions within the chat system.
+
+### Meeting Scheduler
+- **Design Patterns**:
+  - **Observer**: Use it for scheduling notifications and updates.
+  - **Factory Method**: Apply it for creating different types of meetings (e.g., one-time, recurring).
+- **Approach**:
+  - Implement Observer to notify participants about scheduled meetings.
+  - Use Factory Method to create various types of meetings with appropriate scheduling options.
+
+### Calendar Application
+- **Design Patterns**:
+  - **Observer**: Use it for event notifications and reminders.
+  - **Decorator**: Apply it for customizing event details and formatting.
+- **Approach**:
+  - Implement Observer to provide event notifications and reminders.
+  - Use Decorator to allow users to customize event details and appearance.
+
+### Rate Limiter
+- **Design Patterns**:
+  - **Decorator**: Use it for adding rate-limiting functionality to different operations.
+  - **Singleton**: Apply it to ensure a single rate limiter instance.
+- **Approach**:
+  - Implement Decorator to add rate-limiting logic to various operations or APIs.
+  - Apply Singleton to maintain a single rate limiter instance for consistent rate control.
+
+### Online Coding Platform and Judge
+- **Design Patterns**:
+  - **Strategy**: Use it to define various programming language support and evaluation strategies.
+  - **Observer**: Implement it for notifying users of code execution results and feedback.
+- **Approach**:
+  - Apply Strategy to support multiple programming languages and evaluation methods.
+  - Use Observer to provide real-time feedback to users regarding their code submissions.
+
+
 
 
 
