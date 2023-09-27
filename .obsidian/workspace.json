@@ -31,25 +31,8 @@
               }
             }
           }
-        ]
-      },
-      {
-        "id": "40d4ebee58ca8e07",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d97a813169114c43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -125,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/LLD/Problems/Design_Pattern_Problems.md"
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
               }
             }
           },
@@ -206,10 +189,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "594555080cd55f3c",
+  "active": "6118058d274783b6",
   "lastOpenFiles": [
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
