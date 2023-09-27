@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "b181cd07ef5be091",
+        "id": "da7c554dc64d63e3",
         "type": "tabs",
         "children": [
           {
-            "id": "55cb26d6be741b2c",
+            "id": "1aac0796bb35daba",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/In Depth/1.Introduction.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "111_Language/Java/In Depth/1.Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "111_Language/Java/In Depth/1.Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "111_Language/Java/In Depth/1.Introduction.md"
+              }
             }
           },
           {
@@ -167,16 +175,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "55cb26d6be741b2c",
+  "active": "1aac0796bb35daba",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
+    "Draw.io/Abstract-factory.svg",
+    "555_Projects/The Wild Oasis/the-wild-oasis.md",
+    "555_Projects/SocialBee/social-bee.md",
+    "555_Projects/Reader's Realm/reader's-realm.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
     "555_Projects/Collab-Code-Pro/code-collab-pro.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
     "333_Core Theory Subjects/DBMS.md",
-    "555_Projects/SocialBee/social-bee.md",
-    "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "222_DSA/Striver_A_to_Z_Sheet.md",
     "z_assets/Pasted_image_20230917214433.png",
     "333_Core Theory Subjects/OS.md",
@@ -197,8 +208,6 @@
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
     "555_Projects/Collab-Code-Pro",
-    "Excalidraw/Drawing 2023-07-25 23.15.27.excalidraw.md",
-    "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "Untitled.canvas",
     "z_assets/Pasted_image_20230831184454.png",
     "z_assets/Pasted_image_20230831144901.png",
@@ -208,7 +217,6 @@
     "z_assets/Pasted_image_20230830153018.png",
     "z_assets/Pasted_image_20230830141852.png",
     "z_assets/Pasted_image_20230830135823.png",
-    "z_assets/Pasted_image_20230830130013.png",
     "555_Projects/Collab-Draw",
     "666_WebDev/FrontEnd/React",
     "666_WebDev/FrontEnd",
