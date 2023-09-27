@@ -2,72 +2,63 @@
 1. For each design pattern Provide me 5 different questions that can be solved using the design pattern
 2. For each design pattern Provide me 5 different problem statements that can be solved using that design pattern
 # AI Generated LLD Problems
-## Booking systems
-
+## Booking Apps
 - [ ] Car Rental System
 - [ ] Online Hotel Booking System
 - [ ] Car Booking Service like Ola, Uber
 - [ ] Food delivery app like Swiggy and Zomato
+- [ ] BookMyShow & Concurrency handling
+- [ ] IRCTC (Indian Railway Catering and Tourism Corporation)
 
-## Management systems
-
+## Management Apps
 - [ ] Pizza Billing System
 - [ ] Inventory Management System
 - [ ] Library Management System
-- [ ] Online Voting System
-- [ ] Learning Management System
 - [ ] Restaurant Management System
 
-## Social media sites
-
-- [ ] BookMyShow & Concurrency handling
+## Social Media Apps
 - [ ] Community Discussion Platform
+- [ ] LinkedIn
+- [ ] Google Docs
 
-## E-commerce sites
-
+## E-commerce Apps
 - [ ] Amazon
 
 ## Games
-
 - [ ] Snake n Ladder game
 - [ ] Tic-Tac-Toe game
 - [ ] Chess game
 - [ ] Bowling Alley Machine
 
 ## Infrastructure
-
 - [ ] Parking Lot
 - [ ] Elevator System
 - [ ] File System
 - [ ] Cache Mechanism
+- [ ] Traffic Light System
 
 ## Utilities
-
 - [ ] Notify-Me Button Functionality
 - [ ] Logging System
 - [ ] Vending Machine
 - [ ] ATM
-- [ ] Traffic Light System
-- [ ] Meeting Scheduler
-- [ ] Calendar Application
-- [ ] Payment System
-- [ ] Chat based system
-- [ ] Rate Limiter
 
-## Data processing
-
+## Data Processing
 - [ ] Splitwise
 - [ ] Splitwise Simplify Algorithm / Optimal Accounting Balancing
 - [ ] CricBuzz / CricketInfo
 - [ ] True Caller
-- [ ] LinkedIn
 - [ ] Airline Management System
 - [ ] Stock Exchange System
 - [ ] Learning Management System
+- [ ] Online Voting System
+- [ ] Payment System
+- [ ] Chat-based system
+- [ ] Meeting Scheduler
+- [ ] Calendar Application
+- [ ] Rate Limiter
+- [ ] Online Coding Platform and Judge
 
-## Other
-
-- [ ] None of the above
 
 # Concept and Coding
 - [ ] Design Notify-Me Button Functionality
