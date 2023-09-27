@@ -58,8 +58,8 @@
 
 
 # Problem Solving with Design Patterns
-
-## Car Rental System
+## Booking Apps
+### Car Rental System
 - **Design Patterns**:
   - **Factory Method**: Use it to create different types of vehicles (e.g., cars, SUVs) based on user preferences.
   - **Decorator**: Apply it to add optional features or accessories to rental vehicles dynamically.
@@ -67,7 +67,7 @@
   - Use Factory Method to create instances of vehicles based on user requests.
   - Apply Decorator to add features like GPS, child seats, or insurance to the selected vehicle.
 
-## Online Hotel Booking System
+### Online Hotel Booking System
 - **Design Patterns**:
   - **Observer**: Implement it to notify users of room availability and price changes.
   - **State**: Use it to manage the booking process (e.g., booking, payment, confirmation).
@@ -75,7 +75,7 @@
   - Apply Observer to notify users of available rooms and special offers.
   - Utilize State to model the different states of a booking, from reservation to confirmation.
 
-## Car Booking Service like Ola, Uber
+### Car Booking Service like Ola, Uber
 - **Design Patterns**:
   - **Strategy**: Use it to define various transportation strategies (e.g., car, bike, shared) and switch between them.
   - **Observer**: Implement it for tracking the location of drivers and notifying users.
@@ -83,7 +83,7 @@
   - Apply Strategy to handle different types of transportation services.
   - Use Observer to track driver locations and provide real-time updates to users.
 
-## Food Delivery App like Swiggy and Zomato
+### Food Delivery App like Swiggy and Zomato
 - **Design Patterns**:
   - **Observer**: Use it to track the order status and notify users.
   - **Decorator**: Apply it to customize food orders with optional items (e.g., extra cheese, toppings).
@@ -91,7 +91,7 @@
   - Implement Observer to keep users informed about the status of their food orders.
   - Use Decorator to allow users to customize their food orders with extra options.
 
-## BookMyShow & Concurrency Handling
+### BookMyShow & Concurrency Handling
 - **Design Patterns**:
   - **Singleton**: Use it to ensure a single instance of a booking system to prevent overbooking.
   - **Observer**: Implement it to notify users of ticket availability and show updates.
@@ -99,7 +99,7 @@
   - Apply Singleton to create a single booking system instance.
   - Use Observer to notify users of available seats and showtime changes.
 
-## IRCTC (Indian Railway Catering and Tourism Corporation)
+### IRCTC (Indian Railway Catering and Tourism Corporation)
 - **Design Patterns**:
   - **State**: Use it to manage the booking process (e.g., checking availability, reservation, payment).
   - **Observer**: Implement it to notify users of train availability and booking updates.
