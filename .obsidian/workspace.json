@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e4a0886d72f6d042",
+        "id": "36f49b6216eb628a",
         "type": "tabs",
         "children": [
           {
-            "id": "b6c9668752cabc61",
+            "id": "594555080cd55f3c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -175,7 +171,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b6c9668752cabc61",
+  "active": "9a3c6f09f5090e2e",
   "lastOpenFiles": [
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",

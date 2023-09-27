@@ -1,3 +1,72 @@
+# AI Generated
+## Booking systems
+
+- [ ] Car Rental System
+- [ ] Online Hotel Booking System
+- [ ] Car Booking Service like Ola, Uber
+- [ ] Food delivery app like Swiggy and Zomato
+
+## Management systems
+
+- [ ] Pizza Billing System
+- [ ] Inventory Management System
+- [ ] Library Management System
+- [ ] Online Voting System
+- [ ] Learning Management System
+- [ ] Restaurant Management System
+
+## Social media sites
+
+- [ ] BookMyShow & Concurrency handling
+- [ ] Community Discussion Platform
+
+## E-commerce sites
+
+- [ ] Amazon
+
+## Games
+
+- [ ] Snake n Ladder game
+- [ ] Tic-Tac-Toe game
+- [ ] Chess game
+- [ ] Bowling Alley Machine
+
+## Infrastructure
+
+- [ ] Parking Lot
+- [ ] Elevator System
+- [ ] File System
+- [ ] Cache Mechanism
+
+## Utilities
+
+- [ ] Notify-Me Button Functionality
+- [ ] Logging System
+- [ ] Vending Machine
+- [ ] ATM
+- [ ] Traffic Light System
+- [ ] Meeting Scheduler
+- [ ] Calendar Application
+- [ ] Payment System
+- [ ] Chat based system
+- [ ] Rate Limiter
+
+## Data processing
+
+- [ ] Splitwise
+- [ ] Splitwise Simplify Algorithm / Optimal Accounting Balancing
+- [ ] CricBuzz / CricketInfo
+- [ ] True Caller
+- [ ] LinkedIn
+- [ ] Airline Management System
+- [ ] Stock Exchange System
+- [ ] Learning Management System
+
+## Other
+
+- [ ] None of the above
+
+# Concept and Coding
 - [ ] Design Notify-Me Button Functionality
 - [ ] Design Pizza Billing System
 - [ ] Design Parking Lot
