@@ -1,4 +1,109 @@
-# To Do
+# System Design Topics
+
+## URL Shortener
+- [ ] Design URL Shortener like TinyURL 
+
+## Text Storage Service
+- [ ] Design Text Storage Service like Pastebin
+
+## Streaming and Media Sharing
+- [ ] NETFLIX System design
+- [ ] Design Youtube
+- [ ] Design Instagram
+
+## Social Networking and Microblogging
+- [ ] Twitter system design | twitter Software architecture
+- [ ] Facebook System Design | Instagram System Design
+
+## E-Commerce Platforms
+- [ ] Amazon System Design | Flipkart System Design
+
+## Messaging and Communication
+- [ ] WHATSAPP System Design: Chat Messaging Systems
+
+## File Sharing
+- [ ] Design File Sharing System like Dropbox - YouTube
+
+## Search and Information Retrieval
+- [ ] Design Autocomplete or Typeahead Suggestions for Google search
+- [ ] How Google searches one document among Billions of documents quickly?
+
+## Travel and Accommodation Booking
+- [ ] Airbnb System Design | Booking.com System Design
+
+## Microservices
+- [ ] System Design: TINDER as a microservice architecture - YouTube
+
+## Financial Systems
+- [ ] STOCK EXCHANGE SYSTEM DESIGN
+
+## Maps and Navigation
+- [ ] Google Maps System Design
+
+## Web Crawling
+- [ ] System Design distributed web crawler to crawl Billions of web pages | web crawler system design
+
+## Location-Based Services
+- [ ] Design A Location Based Service (Yelp, Google Places)
+- [ ] UBER System design | OLA system design | uber architecture
+
+## Ticket Booking Systems
+- [ ] BOOKMYSHOW System Design, FANDANGO System Design | Software architecture for online ticket booking
+
+## Music Streaming
+- [ ] Design Spotify
+
+## Food Delivery Services
+- [ ] System Design of Doordash: Geo-Hashing and WebSockets for Location Based Services
+
+## Video Conferencing
+- [ ] Zoom System Design | WhatsApp / FB Video Calling System Design
+
+## E-Commerce Website Platform
+- [ ] System Design Shopify eCommerce platform
+
+## Collaborative Document Editing
+- [ ] Google Docs System design | Part 1| Operational transformation | differential synchronisation
+
+## Social Media and Content Sharing
+- [ ] Design TikTok
+- [ ] Design Reddit
+
+## Software Development and Deployment
+- [ ] Design Code Deployment System
+
+## Messaging and Communication (Infrastructure)
+- [ ] Distributed Message Queue
+
+## Cloud Storage
+- [ ] S3 system design | cloud storage system design | Distributed cloud storage system design
+
+## Job Scheduling and Rate Limiting
+- [ ] Job Scheduling System
+- [ ] Rate Limiting system design | TOKEN BUCKET, Leaky Bucket, Sliding Logs
+
+## Distributed Systems
+- [ ] Distributed Locks
+- [ ] Distributed Database System Key Value Store
+- [ ] Distributed Cache
+
+## Notifications and Analytics
+- [ ] Notification Service System Design Interview Question to handle Billions of users & Notifications
+- [ ] Design an Analytics Platform (Metrics & Logging)
+
+## Content Delivery Networks
+- [ ] Content Delivery Networks
+
+## Miscellaneous
+- [ ] Design Parking Garage
+- [ ] Airline Reservation System - Distributed Transactions, Serialisation, Linearisation, Consistency
+- [ ] Design of an Online Code Editor
+- [ ] Design Vending Machine
+- [ ] Design Authentication System
+- [ ] Design a Payment System
+- [ ] Design UPI
+
+# Video Links
 - [ ] [Design URL Shortener like TinyURL](https://www.youtube.com/watch?v=fMZMm_0ZhK4)
 - [ ] [Design Text Storage Service like Pastebin](https://www.youtube.com/watch?v=josjRSBqEBI)
 - [ ] [NETFLIX System design](https://www.youtube.com/watch?v=psQzyFfsUGU)
