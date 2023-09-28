@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
+                "file": "444_System Design/HLD/To_Do_Problems.md"
               }
             }
           },
@@ -118,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "444_System Design/HLD/To_Do_Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "444_System Design/HLD/To_Do_Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +173,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 320.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,10 +187,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13a924b11b69d0c7",
+  "active": "74a07cc652493f8f",
   "lastOpenFiles": [
-    "444_System Design/HLD/To_Do_Problems.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "444_System Design/HLD/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",

@@ -1,0 +1,11 @@
+# To Do
+- [ ] [Design URL Shortener like TinyURL - YouTube](https://www.youtube.com/watch?v=fMZMm_0ZhK4)
+- [ ] [Design Text Storage Service like Pastebin - YouTube](https://www.youtube.com/watch?v=josjRSBqEBI)
+- [ ] [NETFLIX System design | software architecture for netflix - YouTube](https://www.youtube.com/watch?v=psQzyFfsUGU)
+- [ ] [Design Youtube - System Design Interview - YouTube](https://www.youtube.com/watch?v=jPKTo1iGQiE)
+- [ ] [System Design Mock Interview: Design Instagram - YouTube](https://www.youtube.com/watch?v=VJpfO6KdyWE)
+- [ ] [Twitter system design | twitter Software architecture | twitter interview questions - YouTube](https://www.youtube.com/watch?v=wYk0xPP_P_8)
+- [ ] [Amazon System Design | Flipkart System Design | System Design Interview Question - YouTube](https://www.youtube.com/watch?v=EpASu_1dUdE)
+- [ ] [WHATSAPP System Design: Chat Messaging Systems for Interviews - YouTube](https://www.youtube.com/watch?v=vvhC64hQZMk)
+- [ ] [Facebook System Design | Instagram System Design | System Design Interview Question - YouTube](https://www.youtube.com/watch?v=9-hjBGxuiEs)
+- [ ] 
