@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b2fc771f0201fb62",
+        "id": "27b2ff20c276e23a",
         "type": "tabs",
         "children": [
           {
-            "id": "a03dc002b3fb367c",
+            "id": "dde92cb4646c8b17",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
-              }
+              "state": {}
             }
           },
           {
@@ -104,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,13 +166,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a03dc002b3fb367c",
+  "active": "dde92cb4646c8b17",
   "lastOpenFiles": [
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "444_System Design/HLD/To_Do_Problems.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
-    "444_System Design/HLD/To_Do_Problems.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
