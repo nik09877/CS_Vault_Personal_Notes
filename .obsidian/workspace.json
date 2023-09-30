@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "461f349888c4f5dc",
+        "id": "45bdd6bd97ee7987",
         "type": "tabs",
         "children": [
           {
-            "id": "74a07cc652493f8f",
+            "id": "19bf4f45075d98ad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/HLD/To_Do_Problems.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "13a924b11b69d0c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -98,9 +82,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "444_System Design/HLD/To_Do_Problems.md"
-              }
+              "state": {}
             }
           },
           {
@@ -117,7 +99,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/HLD/To_Do_Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +115,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/HLD/To_Do_Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,8 +153,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5,
-    "collapsed": true
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,10 +166,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "74a07cc652493f8f",
+  "active": "19bf4f45075d98ad",
   "lastOpenFiles": [
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/HLD/To_Do_Problems.md",
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
