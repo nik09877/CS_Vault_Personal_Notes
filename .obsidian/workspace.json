@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "27b2ff20c276e23a",
+        "id": "88899a3069fc9909",
         "type": "tabs",
         "children": [
           {
-            "id": "dde92cb4646c8b17",
+            "id": "d6eadb1e9a50a0df",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -166,7 +166,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dde92cb4646c8b17",
+  "active": "9a3c6f09f5090e2e",
   "lastOpenFiles": [
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/HLD/To_Do_Problems.md",
