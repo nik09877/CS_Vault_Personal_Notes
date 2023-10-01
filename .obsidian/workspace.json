@@ -11,8 +11,12 @@
             "id": "d6eadb1e9a50a0df",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ]
@@ -81,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md"
+              }
             }
           },
           {
@@ -98,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,8 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5,
-    "collapsed": true
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,15 +173,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9a3c6f09f5090e2e",
+  "active": "d6eadb1e9a50a0df",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/4.Inheritance.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "111_Language/Java/In Depth/8.Collections.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/HLD/To_Do_Problems.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
-    "111_Language/Java/In Depth/4.Inheritance.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
@@ -197,7 +205,6 @@
     "111_Language/Java/Quick Reference/8.Collections.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
-    "111_Language/Java/In Depth/8.Collections.md",
     "555_Projects/Collab-Code-Pro",
     "Untitled.canvas",
     "z_assets/Pasted_image_20230831184454.png",
