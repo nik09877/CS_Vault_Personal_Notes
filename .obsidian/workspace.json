@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "e575758ea4076896",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/Quick Reference/8.Collections.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -87,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md"
+                "file": "111_Language/Java/Quick Reference/8.Collections.md"
               }
             }
           },
@@ -105,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
+                "file": "111_Language/Java/Quick Reference/8.Collections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
+                "file": "111_Language/Java/Quick Reference/8.Collections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,8 +186,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6e07bad975b3504a",
+  "active": "e575758ea4076896",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/8.Collections.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
@@ -184,8 +198,6 @@
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
-    "111_Language/Java/In Depth/8.Collections.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/HLD/To_Do_Problems.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
