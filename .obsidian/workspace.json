@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/1.Introduction.md",
+                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
                 "mode": "preview",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/1.Introduction.md"
+                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md"
               }
             }
           },
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/1.Introduction.md",
+                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/1.Introduction.md",
+                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,6 +176,7 @@
   },
   "active": "d6eadb1e9a50a0df",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
@@ -186,7 +187,6 @@
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
-    "111_Language/Java/In Depth/1.Introduction.md",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "Draw.io/Abstract-factory.svg",
     "555_Projects/The Wild Oasis/the-wild-oasis.md",
