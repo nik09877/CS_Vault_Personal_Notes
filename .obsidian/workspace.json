@@ -18,21 +18,8 @@
                 "source": true
               }
             }
-          },
-          {
-            "id": "e575758ea4076896",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -45,6 +32,16 @@
         "id": "c1c7603b226cf580",
         "type": "tabs",
         "children": [
+          {
+            "id": "9a3c6f09f5090e2e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
           {
             "id": "c064fabaee84ee6e",
             "type": "leaf",
@@ -67,23 +64,13 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "9a3c6f09f5090e2e",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -99,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md"
+                "file": "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md"
               }
             }
           },
@@ -117,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md",
+                "file": "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md",
+                "file": "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,17 +173,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e575758ea4076896",
+  "active": "6e07bad975b3504a",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/10.Concurrency.md",
+    "111_Language/Java/In Depth/8.Collections.md",
+    "111_Language/Java/In Depth/9.Stream API.md",
+    "111_Language/Java/In Depth/7.Generic Programming.md",
+    "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
-    "111_Language/Java/In Depth/8.Collections.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
-    "111_Language/Java/In Depth/10.Concurrency.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "111_Language/Java/In Depth/11.Input and Output.md",
-    "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/1.Introduction.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
@@ -214,9 +203,7 @@
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
     "333_Core Theory Subjects/DBMS.md",
-    "222_DSA/Striver_A_to_Z_Sheet.md",
     "z_assets/Pasted_image_20230917214433.png",
-    "333_Core Theory Subjects/OS.md",
     "555_Projects/The Wild Oasis",
     "555_Projects/Collab-Code-Pro",
     "Untitled.canvas",
