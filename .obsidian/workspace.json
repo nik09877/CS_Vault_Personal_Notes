@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
                 "mode": "preview",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md"
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md"
               }
             }
           },
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,8 +176,8 @@
   },
   "active": "d6eadb1e9a50a0df",
   "lastOpenFiles": [
-    "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+    "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
