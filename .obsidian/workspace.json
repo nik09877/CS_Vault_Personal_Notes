@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "88899a3069fc9909",
+        "id": "7f9fd376057328d2",
         "type": "tabs",
         "children": [
           {
-            "id": "d6eadb1e9a50a0df",
+            "id": "7ece5a31113e8b59",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
+                "file": "111_Language/Java/In Depth/4.Inheritance.md",
                 "mode": "preview",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/3.Objects and Classes.md"
+                "file": "111_Language/Java/In Depth/4.Inheritance.md"
               }
             }
           },
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
+                "file": "111_Language/Java/In Depth/4.Inheritance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/3.Objects and Classes.md",
+                "file": "111_Language/Java/In Depth/4.Inheritance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,11 +174,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d6eadb1e9a50a0df",
+  "active": "7ece5a31113e8b59",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
-    "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/8.Collections.md",
