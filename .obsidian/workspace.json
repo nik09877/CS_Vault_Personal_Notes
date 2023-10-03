@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b401740667072933",
+        "id": "c1835637531f9c4e",
         "type": "tabs",
         "children": [
           {
-            "id": "85f6c83106d8c4c0",
+            "id": "93a0211ed50753b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/7.Generic Programming.md",
+                "file": "111_Language/Java/In Depth/8.Collections.md",
                 "mode": "preview",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/7.Generic Programming.md"
+                "file": "111_Language/Java/In Depth/8.Collections.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/7.Generic Programming.md",
+                "file": "111_Language/Java/In Depth/8.Collections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/7.Generic Programming.md",
+                "file": "111_Language/Java/In Depth/8.Collections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,11 +173,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "85f6c83106d8c4c0",
+  "active": "93a0211ed50753b7",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
-    "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/13.Networking.md",
     "111_Language/Java/In Depth/12.XML.md",
