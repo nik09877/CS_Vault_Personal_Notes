@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "430cfadaf39367ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
             "id": "85f6c83106d8c4c0",
             "type": "leaf",
             "state": {
@@ -98,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md"
+                "file": "111_Language/Java/In Depth/7.Generic Programming.md"
               }
             }
           },
@@ -116,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
+                "file": "111_Language/Java/In Depth/7.Generic Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
+                "file": "111_Language/Java/In Depth/7.Generic Programming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,10 +173,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "430cfadaf39367ae",
+  "active": "85f6c83106d8c4c0",
   "lastOpenFiles": [
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/13.Networking.md",
