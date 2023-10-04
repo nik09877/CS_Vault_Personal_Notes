@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c1835637531f9c4e",
+        "id": "80b1f9b7a874eaaa",
         "type": "tabs",
         "children": [
           {
-            "id": "ee4544b7759ad7fe",
+            "id": "9dfa3cd9aeb4b79b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/9.Stream API.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "77d6bf86ec8ae29c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md",
+                "file": "111_Language/Java/In Depth/10.Concurrency.md",
                 "mode": "preview",
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md"
+                "file": "111_Language/Java/In Depth/10.Concurrency.md"
               }
             }
           },
@@ -117,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md",
+                "file": "111_Language/Java/In Depth/10.Concurrency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md",
+                "file": "111_Language/Java/In Depth/10.Concurrency.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,17 +173,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "77d6bf86ec8ae29c",
+  "active": "9dfa3cd9aeb4b79b",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/11.Input and Output.md",
+    "111_Language/Java/In Depth/10.Concurrency.md",
     "111_Language/Java/In Depth/9.Stream API.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
-    "111_Language/Java/In Depth/8.Collections.md",
     "z_assets/Pasted.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "z_assets/Pasted_image_20230807221723.png",
-    "111_Language/Java/In Depth/10.Concurrency.md",
-    "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/In Depth/13.Networking.md",
