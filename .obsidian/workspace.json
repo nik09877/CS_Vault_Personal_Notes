@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "77d6bf86ec8ae29c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "111_Language/Java/In Depth/8.Collections.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/9.Stream API.md"
+                "file": "111_Language/Java/In Depth/8.Collections.md"
               }
             }
           },
@@ -104,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/9.Stream API.md",
+                "file": "111_Language/Java/In Depth/8.Collections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/9.Stream API.md",
+                "file": "111_Language/Java/In Depth/8.Collections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,10 +186,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ee4544b7759ad7fe",
+  "active": "77d6bf86ec8ae29c",
   "lastOpenFiles": [
-    "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/In Depth/9.Stream API.md",
+    "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "z_assets/Pasted.md",
