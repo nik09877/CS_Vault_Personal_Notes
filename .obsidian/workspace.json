@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/10.Concurrency.md",
-                "mode": "preview",
+                "file": "Work/TCS.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -86,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/10.Concurrency.md"
+                "file": "Work/TCS.md"
               }
             }
           },
@@ -104,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/10.Concurrency.md",
+                "file": "Work/TCS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/10.Concurrency.md",
+                "file": "Work/TCS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,8 +174,10 @@
   },
   "active": "9dfa3cd9aeb4b79b",
   "lastOpenFiles": [
-    "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
+    "Work/TCS.md",
+    "Work",
+    "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/9.Stream API.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/8.Collections.md",
@@ -202,7 +203,6 @@
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "Excalidraw/Drawing 2023-07-25 21.24.07.excalidraw.md",
     "Draw.io/Abstract-factory.svg",
-    "555_Projects/The Wild Oasis/the-wild-oasis.md",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
     "z_assets/Pasted_image_20230917214433.png",
     "555_Projects/The Wild Oasis",
@@ -220,7 +220,6 @@
     "666_WebDev/FrontEnd",
     "555_Projects/Reader's Realm",
     "555_Projects/Crwn-Clothing",
-    "555_Projects/SocialBee",
-    "666_WebDev/BackEnd/SpringBoot"
+    "555_Projects/SocialBee"
   ]
 }
