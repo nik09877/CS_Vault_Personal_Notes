@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "80b1f9b7a874eaaa",
+        "id": "b2b324d045cc031b",
         "type": "tabs",
         "children": [
           {
-            "id": "9dfa3cd9aeb4b79b",
+            "id": "3585e9e2129e3142",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -84,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Work/TCS.md"
-              }
+              "state": {}
             }
           },
           {
@@ -103,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +165,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9dfa3cd9aeb4b79b",
+  "active": "3585e9e2129e3142",
   "lastOpenFiles": [
     "111_Language/Java/In Depth/10.Concurrency.md",
     "Work/TCS.md",
