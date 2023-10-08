@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#unfinished",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -174,18 +175,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3585e9e2129e3142",
+  "active": "35e1b8f45c27ca4a",
   "lastOpenFiles": [
-    "z_assets/Pasted image 20231008142926.png",
-    "z_assets/Pasted_image_20231008141133.png",
+    "z_assets/Pasted_image_20231008171251.png",
     "111_Language/Java/In Depth/14.Database Programming.md",
-    "z_assets/Pasted_image_20231008141148.png",
-    "z_assets/Pasted_image_20231008141213.png",
-    "z_assets/Pasted_image_20231008141227.png",
-    "z_assets/Pasted_image_20231008141240.png",
-    "z_assets/Pasted_image_20231008124747.png",
-    "z_assets/Pasted_image_20231008123418.png",
-    "z_assets/Pasted_image_20231008123037.png",
+    "z_assets/Pasted_image_20231008171220.png",
+    "z_assets/Pasted image 20231008171125.png",
+    "z_assets/Pasted image 20231008170152.png",
+    "z_assets/Pasted image 20231008170127.png",
+    "z_assets/Pasted image 20231008170115.png",
+    "z_assets/Pasted image 20231008170100.png",
+    "z_assets/Pasted image 20231008170047.png",
+    "z_assets/Pasted image 20231008170032.png",
+    "z_assets/Pasted image 20231008170013.png",
     "Pasted.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "Work/TCS.md",
@@ -197,7 +199,6 @@
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
     "z_assets/Pasted.md",
-    "z_assets/Pasted_image_20230807221723.png",
     "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/In Depth/13.Networking.md",
@@ -212,7 +213,6 @@
     "444_System Design/HLD/To_Do_Problems.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
-    "Draw.io/Abstract-factory.svg",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
     "555_Projects/The Wild Oasis",
     "555_Projects/Collab-Code-Pro",
