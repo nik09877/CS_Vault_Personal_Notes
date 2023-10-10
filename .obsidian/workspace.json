@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -177,6 +176,11 @@
   },
   "active": "3585e9e2129e3142",
   "lastOpenFiles": [
+    "z_assets/Pasted image 20231009154316.png",
+    "z_assets/Pasted image 20231009154259.png",
+    "z_assets/Pasted image 20231009154239.png",
+    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+    "111_Language/Java/In Depth/14.Database Programming.md",
     "z_assets/Pasted image 20231008220826.png",
     "z_assets/Pasted image 20231008220812.png",
     "z_assets/Pasted image 20231008220747.png",
@@ -185,10 +189,6 @@
     "z_assets/Pasted image 20231008220713.png",
     "z_assets/Pasted image 20231008215359.png",
     "z_assets/Pasted image 20231008203156.png",
-    "z_assets/Pasted image 20231008202856.png",
-    "z_assets/Pasted_image_20231008171251.png",
-    "111_Language/Java/In Depth/14.Database Programming.md",
-    "z_assets/Pasted_image_20231008171220.png",
     "Pasted.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "Work/TCS.md",
@@ -206,7 +206,6 @@
     "111_Language/Java/In Depth/12.XML.md",
     "111_Language/Java/In Depth/15.Date and Time API.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
-    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/1.Introduction.md",
