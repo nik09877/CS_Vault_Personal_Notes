@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/14.Database Programming.md",
+                "file": "Work/TCS/Biz Skill.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/In Depth/14.Database Programming.md"
+                "file": "Work/TCS/Biz Skill.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "111_Language/Java/In Depth/14.Database Programming.md",
+                "file": "Work/TCS/Biz Skill.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "111_Language/Java/In Depth/14.Database Programming.md",
+                "file": "Work/TCS/Biz Skill.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,11 +176,14 @@
   },
   "active": "3585e9e2129e3142",
   "lastOpenFiles": [
+    "Work/TCS/TCS.md",
+    "Work/TCS/Biz Skill.md",
+    "Work/TCS",
+    "111_Language/Java/In Depth/14.Database Programming.md",
     "z_assets/Pasted image 20231009154316.png",
     "z_assets/Pasted image 20231009154259.png",
     "z_assets/Pasted image 20231009154239.png",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/In Depth/14.Database Programming.md",
     "z_assets/Pasted image 20231008220826.png",
     "z_assets/Pasted image 20231008220812.png",
     "z_assets/Pasted image 20231008220747.png",
@@ -188,10 +191,8 @@
     "z_assets/Pasted image 20231008220725.png",
     "z_assets/Pasted image 20231008220713.png",
     "z_assets/Pasted image 20231008215359.png",
-    "z_assets/Pasted image 20231008203156.png",
     "Pasted.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
-    "Work/TCS.md",
     "Work",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/9.Stream API.md",
@@ -221,7 +222,6 @@
     "666_WebDev/FrontEnd/React",
     "666_WebDev/FrontEnd",
     "555_Projects/Reader's Realm",
-    "555_Projects/Crwn-Clothing",
-    "555_Projects/SocialBee"
+    "555_Projects/Crwn-Clothing"
   ]
 }
