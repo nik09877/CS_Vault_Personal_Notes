@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "444_System Design/HLD/To_Do_Problems.md",
                 "mode": "preview",
                 "source": true
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -86,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
+                "file": "444_System Design/HLD/To_Do_Problems.md"
               }
             }
           },
@@ -104,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "444_System Design/HLD/To_Do_Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "444_System Design/HLD/To_Do_Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,8 +174,8 @@
   },
   "active": "126d94addaf1f96d",
   "lastOpenFiles": [
-    "111_Language/Java/In Depth/8.Collections.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "111_Language/Java/In Depth/8.Collections.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "Work/TCS/Biz Skill.md",
     "Work/TCS/TCS.md",
