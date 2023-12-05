@@ -28,6 +28,37 @@
 	- more machines (Horizontal scaling)
 	- bigger machines (Vertical scaling) is called scalability
 
-| Horizontal | Vertical |
-| ---------- | -------- |
-|            |          |
+| Horizontal                                            | Vertical                             |
+| ----------------------------------------------------- | ------------------------------------ |
+| More machines                                         | Huge machine                         |
+| Load Balancing required                               | Not required                         |
+| Resilient (recover from failure quickly)                                            | Single point of failure              |
+| Remote Procedure calls (Network calls) (slower)       | Inter Process communication (faster) |
+| Data consistency is real issue (eventual consistency) | Consistent                           |
+| Scales well as users increase                         | Hardware limit                       |
+ 
+
+## Load Balancing
+- Server has load and requests are what they need to process
+- The concept of taking N servers and balancing the load evenly is called Load Balancing.
+- Every request has Request Id -> 0 to M-1 (Uniformly random)
+- Load Balancer Hashes it => `h(r1) -> m1 % n` where n is no. of servers and sends it to respective server
+- If each servers have `X` requests they will have `X / n` Load and Load Factor is `1 / n`
+- What if we need to add more servers?
+	- r1 that was previously going to server 2 might go to some other server
+	- Cost of adding a new server is 100% reassignment of requests
+	- That's why we need Consistence Hashing
+## Distributed Systems
+### Make a Pizza Shop
+- Initially has 1 chef
+- How to handle more orders?
+	- Optimise processes and increase throughput with the same resources which is called vertical scaling
+	- Preparing before hand at non peak hours
+- Now let's make it resilient (recover from failure quickly).
+- What if the chef is sick?
+	- Keep backup
+	- avoid single point of failure
+	- Hire more chefs / resources (horizontal scaling)
+- Time for expansion
+- Let's say we have 3 chefs (2 are good in making pizza and 1 in garlic bread). On receiving an order which chef should we assign it to?
+	- 
