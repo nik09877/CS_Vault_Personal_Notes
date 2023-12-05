@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f0a640ca13484a38",
+        "id": "2a385ad793ef5b95",
         "type": "tabs",
         "children": [
           {
-            "id": "c491f6d4ab17ff45",
+            "id": "95c3d9eb002e1beb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "444_System Design/HLD/Prerequisites.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -81,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "444_System Design/HLD/Prerequisites.md"
+              }
             }
           },
           {
@@ -98,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "444_System Design/HLD/Prerequisites.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "444_System Design/HLD/Prerequisites.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +156,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -165,8 +174,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c491f6d4ab17ff45",
+  "active": "95c3d9eb002e1beb",
   "lastOpenFiles": [
+    "444_System Design/HLD/Prerequisites.md",
+    "11_Obsidian_Tutorial/Markdown_Guide.md",
+    "444_System Design/HLD/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
@@ -183,7 +195,6 @@
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
-    "444_System Design/HLD/To_Do_Problems.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "Work/TCS/Biz Skill.md",
@@ -203,8 +214,6 @@
     "Work",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/Quick Reference/8.Collections.md",
-    "z_assets/Pasted.md",
-    "11_Obsidian_Tutorial/Markdown_Guide.md",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
     "555_Projects/The Wild Oasis",
     "555_Projects/Collab-Code-Pro",
