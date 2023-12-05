@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2a385ad793ef5b95",
+        "id": "ef935ecc7ea36d66",
         "type": "tabs",
         "children": [
           {
-            "id": "95c3d9eb002e1beb",
+            "id": "3a6e51c45fd20395",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/HLD/Prerequisites.md",
+                "file": "444_System Design/HLD/Notes/Prerequisites.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/HLD/Prerequisites.md"
+                "file": "444_System Design/HLD/Notes/Prerequisites.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/HLD/Prerequisites.md",
+                "file": "444_System Design/HLD/Notes/Prerequisites.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/HLD/Prerequisites.md",
+                "file": "444_System Design/HLD/Notes/Prerequisites.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,9 +175,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "95c3d9eb002e1beb",
+  "active": "3a6e51c45fd20395",
   "lastOpenFiles": [
-    "444_System Design/HLD/Prerequisites.md",
+    "z_assets/Pasted_image_20231205120213.png",
+    "444_System Design/HLD/Notes/Prerequisites.md",
+    "444_System Design/HLD/Resources/load-balancer.pdf",
+    "444_System Design/HLD/Resources/Unconfirmed 141819.crdownload",
+    "444_System Design/HLD/Resources",
+    "444_System Design/HLD/Notes",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "444_System Design/HLD/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
@@ -210,19 +215,13 @@
     "z_assets/Pasted image 20231008220741.png",
     "z_assets/Pasted image 20231008220725.png",
     "z_assets/Pasted image 20231008220713.png",
-    "z_assets/Pasted image 20231008215359.png",
     "Pasted.md",
     "Work",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
-    "111_Language/Java/Quick Reference/8.Collections.md",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
     "555_Projects/The Wild Oasis",
     "555_Projects/Collab-Code-Pro",
     "Untitled.canvas",
-    "555_Projects/Collab-Draw",
-    "666_WebDev/FrontEnd/React",
-    "666_WebDev/FrontEnd",
-    "555_Projects/Reader's Realm",
-    "555_Projects/Crwn-Clothing"
+    "555_Projects/Collab-Draw"
   ]
 }
