@@ -101,3 +101,8 @@
 	1. Use Master Slave Architecture
 	2. Write operation always goes to Master and slaves continuously poll the Master to stay updated
 	3. If Master fails, slaves choose one Master among themselves
+
+## Service discovery and Heartbeats
+- Two way asking `are you alive?`
+
+## Capacity Planning and Estimation: How much data does YouTube store daily?
