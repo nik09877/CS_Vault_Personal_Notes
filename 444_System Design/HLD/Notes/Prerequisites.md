@@ -112,3 +112,19 @@
 - Content Delivery Networks are a bunch of servers spread across the globe to serve information. These networks are available on rent to deliver static content quickly to nearby users.
 
 - Some examples of CDNs are Amazon CloudFront and the Akamai CDN. They are (relatively) cheap to rent and have high availability. They also provide pluggable algorithms to invalidate and fetch data.
+
+# API Design
+## API Design Goals
+- API is a software contract / documented way to define the expectations and interactions of a piece of code exposed to external users.
+- It shows how to interact with your code.
+- This includes the parameters, response, errors and API name.
+### To Do
+1. Naming 
+2. Parameter defining of API endpoint functions
+3. Giving only the data the user needs, don't stuff all the data in a response
+## In Practice
+- URL => `www.gkck.com/chat_messaging/admins/1`
+	- chat_messaging => the model which contains the api functions
+	- getAdmins is the function / action
+	- 1 refers to the version
+- 
