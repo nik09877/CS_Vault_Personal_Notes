@@ -106,3 +106,9 @@
 - Two way asking `are you alive?`
 
 ## Capacity Planning and Estimation: How much data does YouTube store daily?
+-
+
+## CDN
+- Content Delivery Networks are a bunch of servers spread across the globe to serve information. These networks are available on rent to deliver static content quickly to nearby users.
+
+- Some examples of CDNs are Amazon CloudFront and the Akamai CDN. They are (relatively) cheap to rent and have high availability. They also provide pluggable algorithms to invalidate and fetch data.
