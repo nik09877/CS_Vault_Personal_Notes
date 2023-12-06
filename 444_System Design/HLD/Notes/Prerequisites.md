@@ -168,3 +168,17 @@
 - One major disadvantage of this system is that it is difficult to reason about the flow of a request. Services can independently register for an event and consume it without the publisher being aware of it.
 
 - We talk about different applications using an event-driven architecture such as Git and Gaming Systems. We then discuss the advantages and disadvantages of such an architecture (Event Sourcing).
+
+### ADV
+1. Availability
+2. Easy Roll-back
+3. Easy Replacements
+4. Transaction guarantee
+5. Store intent
+### Disadvantages
+1. Consistency
+2. N/A to Gateways
+3. Lesser control
+4. compaction
+5. Hidden Flow
+6. Not easy to move out of this architecture
