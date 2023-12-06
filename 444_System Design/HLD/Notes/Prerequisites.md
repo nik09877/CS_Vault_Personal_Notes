@@ -123,8 +123,19 @@
 2. Parameter defining of API endpoint functions
 3. Giving only the data the user needs, don't stuff all the data in a response
 ## In Practice
-- URL => `www.gkck.com/chat_messaging/admins/1`
+- URL => `www.gkck.com/chat_messaging/Admins/1`
 	- chat_messaging => the model which contains the api functions
-	- getAdmins is the function / action
+	- Admins is the function / action
 	- 1 refers to the version
-- 
+- API Should have no side effects => Should do only one thing
+- It should be Atomic
+- Use Pagination
+- Use Fragmentation of response 
+- Use Caching (If you don't care about perfect consistency)
+
+# Messaging and Event Handling
+## The Message Queue: Problem Statement
+- Messaging Queues are widely used in asynchronous systems. Message processing in an asynchronous fashion allows the client to relieve itself from waiting for a task to complete and, hence, can do other jobs during that time. It also allows a server to process it's jobs in the order it wants to.
+- Messaging Queues provide useful features such as persistence, routing and task management.
+- A system having a message queue can move to higher level requirements while abstracting implementation details of message delivery and event handling to the messaging queue.
+- The 'queue' is just a name for this data structure. In practice, it could be storing messages using any policy. Some examples of message queues are Kafka and RabbitMQ. They are widely used for various purposes such as command query request segregation (CQRS) and event sourcing.
