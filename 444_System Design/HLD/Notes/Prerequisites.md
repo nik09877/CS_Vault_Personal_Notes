@@ -135,7 +135,36 @@
 
 # Messaging and Event Handling
 ## The Message Queue: Problem Statement
-- Messaging Queues are widely used in asynchronous systems. Message processing in an asynchronous fashion allows the client to relieve itself from waiting for a task to complete and, hence, can do other jobs during that time. It also allows a server to process it's jobs in the order it wants to.
+- Messaging Queues are widely used in asynchronous systems. Message processing in an asynchronous fashion allows the client to relieve itself from waiting for a task to complete and hence, can do other jobs during that time. It also allows a server to process it's jobs in the order it wants to.
 - Messaging Queues provide useful features such as persistence, routing and task management.
 - A system having a message queue can move to higher level requirements while abstracting implementation details of message delivery and event handling to the messaging queue.
 - The 'queue' is just a name for this data structure. In practice, it could be storing messages using any policy. Some examples of message queues are Kafka and RabbitMQ. They are widely used for various purposes such as command query request segregation (CQRS) and event sourcing.
+
+## Publisher Subscriber Models
+- Microservices benefit from loose data coupling, which is provided by a publish-subscribe model. In this model, events are produced by a publishing service and consumed by downstream services.
+- Designing the microservice interactions involves event handling and consistency checks. We look into a pub-sub architecture to evaluate its advantages and disadvantages compared to a request-response architecture.
+- This type of architecture relies on message queues to ensure event passing. An example would be rabbitMQ or Kafka.
+- The architecture is common in real-life scenarios and interviews. If there is no strong consistency guarantee to be made for transactions, an event model is good to use in microservices.
+
+### Here are the main advantages:
+1. Decouples a system's services.
+2. Easily add subscribers and publishers without informing the other.
+3. Converts multiple points of failure to a single point of failure.
+4. Interaction logic can be moved to services/ message broker.
+### Disadvantages:
+1. An extra layer of interaction slows services
+2. Cannot be used in systems requiring strong consistency of data
+3. Additional cost to the team for redesigning, learning, and maintaining the message queues.
+- This model provides the basis for event-driven systems.
+## Event Driven Architectures
+- Event-Driven Systems pass and persist events. They have evolved from the publisher-subscriber model, and the design has some advantages. Events are immutable and can be replayed to allow the systems to take snapshots of their behavior. This allows services to 'self-heal' as explained in the video.
+
+- A lot of transaction issues are alleviated once idempotency and retrial logic is added to a system. The system can retry messages an infinite number of times to the recipient till there is a message acceptance and acknowledgment from the receiver.
+
+- Event-driven systems are closely related to event sources and CQRS. Greg Young and Martin Fowler have been talking about these systems for a while. Events are persisted in something like a message queue, and hence the responsibility to retrial and persistence is moved to it.
+
+- These abstractions enable the programmer to focus on the business logic of a system and add subscribers to events with minimum coupling with other services. Decoupling the system is one of the advantages of event-driven systems.
+
+- One major disadvantage of this system is that it is difficult to reason about the flow of a request. Services can independently register for an event and consume it without the publisher being aware of it.
+
+- We talk about different applications using an event-driven architecture such as Git and Gaming Systems. We then discuss the advantages and disadvantages of such an architecture (Event Sourcing).
