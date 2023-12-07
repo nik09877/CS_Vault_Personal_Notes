@@ -188,4 +188,18 @@
 ![](Pasted_image_20231207103401.png)
 - use Leader-follower architecture which prevents the Two Generals Problem
 - If your system is consistent, it suffers from availability and vice versa according to CAP theorum
+- 2 phase commit protocol in Leader-Follower architecture
+	- prepare (execute all statements of a transaction)
+	- commit the transaction
+
+# NoSQL Databases
+## Difference between SQL and NoSQL
+![](Pasted_image_20231207115732.png)
+- NoSQL is a popular database storage method. 
+- It keeps data as key value pairs. 
+- The advantages and disadvantages of NoSQL compared with RDBMS (which uses SQL) are discussed here, using the Cassandra architecture as an example.
+- We talk about sharding, redundancy, load balancing, compaction and some other features in NoSQL databases. This allows them to scale efficiently.
+### ADV and Dis adv
+- All relevant data are stored together in a document / blob, so insertion and retrieval of data is easier. While on the other hand in SQL, the pointer reaches the required row and starts reading the column data sequentially which takes more time.
+- Schema is easily changable. The NoSql doesn't care about Schema, it is flexible. If the address field is null we don't need to include it in the document.
 - 
