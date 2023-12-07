@@ -182,3 +182,10 @@
 4. compaction
 5. Hidden Flow
 6. Not easy to move out of this architecture
+
+# Consistency vs Availability
+## Distributed Data Consistency
+![](Pasted_image_20231207103401.png)
+- use Leader-follower architecture which prevents the Two Generals Problem
+- If your system is consistent, it suffers from availability and vice versa according to CAP theorum
+- 
