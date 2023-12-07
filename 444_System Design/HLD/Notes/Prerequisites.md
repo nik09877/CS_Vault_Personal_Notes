@@ -202,4 +202,17 @@
 ### ADV and Dis adv
 - All relevant data are stored together in a document / blob, so insertion and retrieval of data is easier. While on the other hand in SQL, the pointer reaches the required row and starts reading the column data sequentially which takes more time.
 - Schema is easily changable. The NoSql doesn't care about Schema, it is flexible. If the address field is null we don't need to include it in the document.
-- 
+- Built for scale, have in built Horizontal partitioning.
+- Built for finding metrics and aggregation.
+### Dis adv
+- Not built for updates (Consistency is a problem, ACID is not a guaranteed)
+- Relations are not implicit
+- Joins are hard (manual)
+- Read times are slower
+
+## Cassandra Internals
+
+## Write Heavy DB Design
+1. Condense data query into single query (Less I/O calls, but requires additional memory)
+2. For quick write operations use LinkedList (Log uses this data structure, but read op. are really slow)
+3. use LinkedList + Sorted Array (O(1) write, O(logN) read)
