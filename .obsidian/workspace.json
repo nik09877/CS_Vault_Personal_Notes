@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "444_System Design/HLD/Notes/Prerequisites.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -177,6 +177,8 @@
   },
   "active": "3a6e51c45fd20395",
   "lastOpenFiles": [
+    "444_System Design/HLD/Resources/nosql.pdf",
+    "444_System Design/HLD/Resources/Unconfirmed 668667.crdownload",
     "z_assets/Pasted_image_20231207115732.png",
     "444_System Design/HLD/Notes/Prerequisites.md",
     "z_assets/Pasted_image_20231207103401.png",
@@ -221,7 +223,6 @@
     "Work",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/Observer_Design_Pattern.pdf",
-    "555_Projects/The Wild Oasis",
     "Untitled.canvas"
   ]
 }

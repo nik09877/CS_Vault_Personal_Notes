@@ -216,3 +216,11 @@
 1. Condense data query into single query (Less I/O calls, but requires additional memory)
 2. For quick write operations use LinkedList (Log uses this data structure, but read op. are really slow)
 3. use LinkedList + Sorted Array (O(1) write, O(logN) read)
+4. Use Bloom Filter for query optimization and merge the sorted arrays(sorted string tables) when necessary using compaction. (see video)
+5. Bloom filter is like a hashmap which tells if some key exists or not.
+
+# Location Based Databases
+## Location Representation
+- Location based databases are extensively used by apps like Google Maps, Uber and Swiggy. We explore the data structures and algorithms which allow spatial or location based queries, like the quad tree and the Hilbert Curve.
+
+- For now, we haven't dived deep into polygon intersections or R-trees.
