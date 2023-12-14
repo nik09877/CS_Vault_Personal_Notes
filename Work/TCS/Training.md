@@ -148,3 +148,5 @@ npx react-native run-ios
 After running the appropriate run command (`run-android` or `run-ios`), you should see the React Native app running on an emulator or connected device.
 
 Keep in mind that these are general steps, and there might be additional considerations based on your specific development environment. Always refer to the official React Native documentation for the most up-to-date and platform-specific instructions: [React Native - Getting Started](https://reactnative.dev/docs/environment-setup).
+# TO DO
+functional components class components state lifecycle methods hooks basic components - text,text input,image,view,scroll view,list views, flat list etc.. styling - inline styles, stylesheets take a poc login page - username password Login- button apply styles to them add validations to username and password - username - email and password - 8 digits
