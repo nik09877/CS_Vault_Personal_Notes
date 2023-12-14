@@ -78,6 +78,7 @@ Several alternatives to React Native exist, each with its own strengths, weaknes
    - **Key Features:** While primarily used for desktop applications, Electron can be considered for cross-platform development by packaging web applications into native desktop apps.
 
 The choice between these alternatives depends on factors such as development team expertise, project requirements, performance considerations, and the need for platform-specific features. Each framework has its own set of advantages and trade-offs, so it's important to evaluate them based on the specific needs of your project.
+
 ### Environment Set up
 Setting up the development environment for React Native involves several steps. Below are the general steps for setting up a React Native development environment on your machine. Keep in mind that the specific steps might vary depending on your operating system (Windows, macOS, or Linux).
 
@@ -96,7 +97,6 @@ Setting up the development environment for React Native involves several steps. 
    - Install Xcode from the Mac App Store if you're using macOS. It includes the necessary tools for iOS development.
 
 #### React Native CLI Installation:
-
 Open your terminal (or command prompt) and run the following commands:
 
 ```bash
@@ -144,9 +144,175 @@ npx react-native run-ios
    - Set up an editor or integrated development environment (IDE) with React Native support. Popular choices include Visual Studio Code, Atom, and WebStorm.
 
 #### Testing the Setup:
-
 After running the appropriate run command (`run-android` or `run-ios`), you should see the React Native app running on an emulator or connected device.
 
 Keep in mind that these are general steps, and there might be additional considerations based on your specific development environment. Always refer to the official React Native documentation for the most up-to-date and platform-specific instructions: [React Native - Getting Started](https://reactnative.dev/docs/environment-setup).
-# TO DO
+
+# Day 2
+
 functional components class components state lifecycle methods hooks basic components - text,text input,image,view,scroll view,list views, flat list etc.. styling - inline styles, stylesheets take a poc login page - username password Login- button apply styles to them add validations to username and password - username - email and password - 8 digits
+
+## Functional Components
+
+In React Native, functional components are a type of component that is defined as a JavaScript function. They are also known as stateless or presentational components. Functional components have been enhanced with the introduction of React Hooks, allowing them to manage state and side effects. Below is an example of a basic functional component in React Native:
+
+```javascript
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const MyFunctionalComponent = () => {
+  return (
+    <View>
+      <Text>Hello, I am a functional component!</Text>
+    </View>
+  );
+};
+
+export default MyFunctionalComponent;
+```
+
+With the introduction of React Hooks, functional components can also manage state and lifecycle methods. Here's an example using the `useState` hook:
+
+```javascript
+import React, { useState } from 'react';
+import { View, Text, Button } from 'react-native';
+
+const CounterComponent = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <View>
+      <Text>Count: {count}</Text>
+      <Button title="Increment" onPress={increment} />
+    </View>
+  );
+};
+
+export default CounterComponent;
+```
+
+In the example above, the `useState` hook is used to declare a state variable (`count`) and a function (`setCount`) to update that state. The component renders the current count and a button that, when pressed, increments the count.
+
+Functional components are a more concise and modern way to define components in React and React Native. They are widely used, especially for components that don't need to manage complex state or lifecycle methods.
+
+## Class Components
+
+In React Native, class components are a traditional way to define components using ES6 class syntax. They are also known as stateful components and are used to manage component state and lifecycle methods. Here's an example of a class component in React Native:
+
+```javascript
+import React, { Component } from 'react';
+import { View, Text, Button } from 'react-native';
+
+class CounterComponent extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 0,
+    };
+  }
+
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <View>
+        <Text>Count: {this.state.count}</Text>
+        <Button title="Increment" onPress={this.increment} />
+      </View>
+    );
+  }
+}
+
+export default CounterComponent;
+```
+
+In this example, `CounterComponent` is a class component that manages a state variable `count` and has a method `increment` to update that state. The `render` method is where the component's UI is defined.
+
+Class components are still valid and widely used, especially when you need to manage complex state or work with lifecycle methods. However, with the introduction of React Hooks in functional components, many developers prefer functional components and hooks due to their conciseness and ease of use.
+
+It's worth noting that with the release of React 16.8 and the introduction of Hooks, functional components have become more powerful and can handle state and lifecycle methods similarly to class components. This allows developers to choose between class components and functional components based on their preferences and project requirements.
+
+## State
+
+It refers to an object that represents the dynamic data that a component can maintain and manage. The state of a component can change over time in response to user interactions, network requests, or other factors. When the state of a component changes, React automatically re-renders the component to reflect the updated state.
+
+In class components, state is typically initialized and managed using the `setState` method, while functional components use the `useState` hook for state management.
+
+## Life Cycle Methods
+
+In React, class components have lifecycle methods that allow developers to execute code at specific points in the component's lifecycle. React Native, being built on React, also supports these lifecycle methods. However, it's important to note that with the introduction of React Hooks in functional components, the need for class components and lifecycle methods has decreased. Hooks, such as `useEffect`, have become the preferred way to handle side effects and lifecycle events in functional components.
+
+Here are some commonly used lifecycle methods in class components:
+
+1. **Mounting Phase:**
+   - `constructor()`: This is the constructor method called when an instance of the component is being created. It is used for initializing state and binding event handlers.
+   - `componentWillMount()`: This method is called just before the component is about to mount/render.
+
+2. **Updating Phase:**
+   - `componentWillReceiveProps(nextProps)`: Invoked when the component is about to receive new props. It's deprecated, and `getDerivedStateFromProps` is recommended for derived state updates based on props.
+   - `shouldComponentUpdate(nextProps, nextState)`: Returns a Boolean to determine if the component should re-render or not. It's used for performance optimization.
+   - `componentWillUpdate(nextProps, nextState)`: Invoked just before rendering when new props or state are being received.
+   - `render()`: The main rendering method.
+   - `componentDidUpdate(prevProps, prevState)`: Called after the component updates (re-render).
+
+3. **Unmounting Phase:**
+   - `componentWillUnmount()`: Invoked immediately before a component is unmounted and destroyed. It is used for cleanup and releasing resources.
+
+4. **Error Handling:**
+   - `componentDidCatch(error, info)`: Introduced in React 16, it is used to catch JavaScript errors anywhere in the component tree and log those errors.
+
+Here's an example demonstrating some of these lifecycle methods:
+
+```jsx
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+
+class LifecycleExample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: 'Hello, React Native!',
+    };
+    console.log('Constructor called');
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('getDerivedStateFromProps called');
+    // Return an object to update state based on props
+    return null;
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount called');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate called');
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount called');
+  }
+
+  render() {
+    console.log('render called');
+    return (
+      <View>
+        <Text>{this.state.message}</Text>
+      </View>
+    );
+  }
+}
+
+export default LifecycleExample;
+```
+
+Keep in mind that if you are using functional components, you'll typically use the `useEffect` hook for handling side effects and lifecycle events.
+
