@@ -150,8 +150,6 @@ Keep in mind that these are general steps, and there might be additional conside
 
 # Day 2
 
-functional components class components state lifecycle methods hooks basic components - text,text input,image,view,scroll view,list views, flat list etc.. styling - inline styles, stylesheets take a poc login page - username password Login- button apply styles to them add validations to username and password - username - email and password - 8 digits
-
 ## Functional Components
 
 In React Native, functional components are a type of component that is defined as a JavaScript function. They are also known as stateless or presentational components. Functional components have been enhanced with the introduction of React Hooks, allowing them to manage state and side effects. Below is an example of a basic functional component in React Native:
@@ -315,4 +313,261 @@ export default LifecycleExample;
 ```
 
 Keep in mind that if you are using functional components, you'll typically use the `useEffect` hook for handling side effects and lifecycle events.
+
+## Hooks
+
+Hooks are a feature introduced in React 16.8 to allow functional components to have state and lifecycle features that were previously only available in class components. They provide a more direct way to use React features in functional components, making the code more concise and easier to understand.
+
+Here are some commonly used React Hooks:
+
+1. **useState:**
+   - `useState` is used to add state to functional components.
+   ```jsx
+   import React, { useState } from 'react';
+
+   function Example() {
+     const [count, setCount] = useState(0);
+
+     return (
+       <div>
+         <p>You clicked {count} times</p>
+         <button onClick={() => setCount(count + 1)}>
+           Click me
+         </button>
+       </div>
+     );
+   }
+   ```
+
+2. **useEffect:**
+   - `useEffect` is used for side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.
+   ```jsx
+   import React, { useState, useEffect } from 'react';
+
+   function Example() {
+     const [count, setCount] = useState(0);
+
+     useEffect(() => {
+       document.title = `You clicked ${count} times`;
+     }, [count]);
+
+     return (
+       <div>
+         <p>You clicked {count} times</p>
+         <button onClick={() => setCount(count + 1)}>
+           Click me
+         </button>
+       </div>
+     );
+   }
+   ```
+
+3. **useContext:**
+   - `useContext` is used to subscribe to React context without introducing nesting.
+   ```jsx
+   import React, { useContext } from 'react';
+
+   const MyContext = React.createContext();
+
+   function MyComponent() {
+     const contextValue = useContext(MyContext);
+     // ...
+   }
+   ```
+
+4. **useReducer:**
+   - `useReducer` is a hook for handling complex state logic. It's often preferable to `useState` when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one.
+   ```jsx
+   import React, { useReducer } from 'react';
+
+   function reducer(state, action) {
+     switch (action.type) {
+       case 'increment':
+         return { count: state.count + 1 };
+       case 'decrement':
+         return { count: state.count - 1 };
+       default:
+         throw new Error();
+     }
+   }
+
+   function Counter() {
+     const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+     return (
+       <>
+         Count: {state.count}
+         <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+         <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+       </>
+     );
+   }
+   ```
+
+These are just a few examples of the many hooks available. Hooks allow you to reuse stateful logic without changing your component hierarchy, making it easier to extract and share behaviors among components.
+
+## Basic Components
+
+In React Native, components are the building blocks of the user interface. Here are some basic components commonly used in React Native applications:
+
+1. **View:**
+   - The `View` component is like a `<div>` in web development. It's used to group other components together or to apply styles.
+   ```jsx
+   import { View, Text } from 'react-native';
+
+   const MyComponent = () => (
+     <View>
+       <Text>Hello, React Native!</Text>
+     </View>
+   );
+   ```
+
+2. **Text:**
+   - The `Text` component is used to display text.
+   ```jsx
+   import { Text } from 'react-native';
+
+   const MyTextComponent = () => (
+     <Text>Hello, React Native Text!</Text>
+   );
+   ```
+
+3. **Image:**
+   - The `Image` component is used to display images.
+   ```jsx
+   import { Image } from 'react-native';
+
+   const MyImageComponent = () => (
+     <Image
+       source={{ uri: 'https://example.com/image.jpg' }}
+       style={{ width: 200, height: 200 }}
+     />
+   );
+   ```
+
+4. **TextInput:**
+   - The `TextInput` component is used to capture user input.
+   ```jsx
+   import { TextInput } from 'react-native';
+
+   const MyInputComponent = () => (
+     <TextInput
+       placeholder="Type here..."
+       onChangeText={(text) => console.log(text)}
+     />
+   );
+   ```
+
+5. **ScrollView:**
+   - The `ScrollView` component is used for scrolling views.
+   ```jsx
+   import { ScrollView, Text } from 'react-native';
+
+   const MyScrollView = () => (
+     <ScrollView>
+       <Text>Scroll me!</Text>
+     </ScrollView>
+   );
+   ```
+
+6. **FlatList:**
+   - The `FlatList` component is used for rendering flat lists of data.
+   ```jsx
+   import { FlatList, Text } from 'react-native';
+
+   const MyFlatList = () => (
+     <FlatList
+       data={[{ key: 'item1' }, { key: 'item2' }]}
+       renderItem={({ item }) => <Text>{item.key}</Text>}
+     />
+   );
+   ```
+
+7. **TouchableOpacity:**
+   - The `TouchableOpacity` component is used to create touchable elements.
+   ```jsx
+   import { TouchableOpacity, Text } from 'react-native';
+
+   const MyTouchableComponent = () => (
+     <TouchableOpacity onPress={() => console.log('Touchable pressed')}>
+       <Text>Press me!</Text>
+     </TouchableOpacity>
+   );
+   ```
+
+## Using CSS in React-Native
+
+In React Native, styling is done using a JavaScript-based styling system that is similar to CSS but has some differences. Here's how you can style components in React Native:
+
+### Inline Styles:
+
+You can use the `style` prop to apply styles directly to a component. The style is an object where keys are style property names, and values are the corresponding values.
+
+```jsx
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const MyComponent = () => {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text style={{ fontSize: 20, color: 'blue' }}>Hello, React Native!</Text>
+    </View>
+  );
+};
+
+export default MyComponent;
+```
+
+### External Styles:
+
+To keep your styles organized, you can define them in a separate JavaScript file and then import and apply them to your components.
+
+**styles.js:**
+```jsx
+import { StyleSheet } from 'react-native';
+
+export const commonStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 20,
+    color: 'blue',
+  },
+});
+```
+
+**MyComponent.js:**
+```jsx
+import React from 'react';
+import { View, Text } from 'react-native';
+import { commonStyles } from './styles';
+
+const MyComponent = () => {
+  return (
+    <View style={commonStyles.container}>
+      <Text style={commonStyles.text}>Hello, React Native!</Text>
+    </View>
+  );
+};
+
+export default MyComponent;
+```
+
+### Using Platform-Specific Styles:
+
+You can apply styles conditionally based on the platform using the `Platform` module.
+
+```jsx
+import { Platform, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 20,
+    color: Platform.OS === 'ios' ? 'blue' : 'green',
+  },
+});
+```
 
