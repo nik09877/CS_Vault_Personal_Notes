@@ -571,3 +571,9 @@ const styles = StyleSheet.create({
 });
 ```
 
+# Day 3
+## Responsive Design
+- up to 300 small mobiles 
+- 300 - 600 mobiles
+- 600 - 800 tabs
+- 800 + desktop
