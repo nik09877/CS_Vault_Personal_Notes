@@ -572,8 +572,243 @@ const styles = StyleSheet.create({
 ```
 
 # Day 3
-## Responsive Design
-- up to 300 small mobiles 
-- 300 - 600 mobiles
-- 600 - 800 tabs
-- 800 + desktop
+## How to do Navigation in React Native?
+Navigation in React Native can be achieved using various navigation libraries. One of the most popular libraries is React Navigation. Here's a step-by-step guide on how to set up navigation in a React Native project using React Navigation.
+
+### Step 1: Install React Navigation
+
+Open your terminal and navigate to your React Native project. Run the following command to install the React Navigation library:
+
+```bash
+npm install @react-navigation/native
+```
+
+If you are using Expo, you also need to install the following dependencies:
+
+```bash
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+
+### Step 2: Choose a Navigator
+
+React Navigation provides several navigators, each designed for different use cases:
+
+- **Stack Navigator:** For a stack of screens where you can push and pop screens.
+- **Drawer Navigator:** For a side menu navigation.
+- **Tab Navigator:** For a bottom tab or top tab navigation.
+
+Choose the navigator that fits your application's navigation structure. For this example, let's use a Stack Navigator.
+
+### Step 3: Install Navigator Packages
+
+Install the specific navigator package based on your choice. For the Stack Navigator:
+
+```bash
+npm install @react-navigation/stack
+```
+
+### Step 4: Set Up Navigation Container
+
+In your main entry file (e.g., `App.js`), wrap your entire application with the `NavigationContainer`. This component is responsible for managing navigation state.
+
+```jsx
+// App.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import HomeScreen from './screens/HomeScreen';
+import DetailsScreen from './screens/DetailsScreen';
+
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
+```
+
+### Step 5: Create Screens
+
+Create your individual screens. In this example, we have `HomeScreen` and `DetailsScreen`.
+
+```jsx
+// HomeScreen.js
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+
+const HomeScreen = ({ navigation }) => {
+  return (
+    <View>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+    </View>
+  );
+};
+
+export default HomeScreen;
+```
+
+```jsx
+// DetailsScreen.js
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const DetailsScreen = () => {
+  return (
+    <View>
+      <Text>Details Screen</Text>
+    </View>
+  );
+};
+
+export default DetailsScreen;
+```
+
+### Step 6: Navigate Between Screens
+
+Now, you can use the `navigation` prop in your components to navigate between screens. In the `HomeScreen` component, pressing the "Go to Details" button will navigate to the `DetailsScreen`.
+
+### Step 7: Customize Navigation
+
+You can customize your navigation options, headers, and more using the options provided by the navigation library.
+
+## Nested Navigation in React Native
+Nested navigation in React Native refers to the concept of having multiple levels of navigation within your app. This often involves using different navigators for different parts of your application. The most common approach is to nest navigators inside each other.
+
+Let's consider a scenario where you have a Stack Navigator for the main flow of your app, and within one of the screens, you want to have a Tab Navigator for additional navigation options.
+
+Here's a step-by-step guide on how to achieve nested navigation using React Navigation:
+
+### Step 1: Install React Navigation
+
+Make sure you have React Navigation and the necessary dependencies installed in your project. You can follow the installation steps mentioned in the previous responses.
+
+### Step 2: Set Up Main Stack Navigator
+
+Create a Stack Navigator for the main flow of your app. This is typically done in your main entry file (`App.js` or `index.js`).
+
+```jsx
+// App.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import HomeScreen from './screens/HomeScreen';
+import MainTabNavigator from './navigation/MainTabNavigator';
+
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="MainTabs" component={MainTabNavigator} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
+```
+
+### Step 3: Create Main Tab Navigator
+
+Create a Tab Navigator for the main content of your app. This could include tabs for different sections or features.
+
+```jsx
+// MainTabNavigator.js
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import TabScreen1 from '../screens/TabScreen1';
+import TabScreen2 from '../screens/TabScreen2';
+
+const Tab = createBottomTabNavigator();
+
+const MainTabNavigator = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="Tab1" component={TabScreen1} />
+      <Tab.Screen name="Tab2" component={TabScreen2} />
+    </Tab.Navigator>
+  );
+};
+
+export default MainTabNavigator;
+```
+
+### Step 4: Create Tab Screens
+
+Create the individual screens for each tab in the Tab Navigator.
+
+```jsx
+// TabScreen1.js
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const TabScreen1 = () => {
+  return (
+    <View>
+      <Text>Tab Screen 1</Text>
+    </View>
+  );
+};
+
+export default TabScreen1;
+```
+
+```jsx
+// TabScreen2.js
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const TabScreen2 = () => {
+  return (
+    <View>
+      <Text>Tab Screen 2</Text>
+    </View>
+  );
+};
+
+export default TabScreen2;
+```
+
+### Step 5: Navigate to Nested Navigator
+
+Now, in your `HomeScreen` or any other screen within the main stack, you can navigate to the nested Tab Navigator.
+
+```jsx
+// HomeScreen.js
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+
+const HomeScreen = ({ navigation }) => {
+  return (
+    <View>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Main Tabs"
+        onPress={() => navigation.navigate('MainTabs')}
+      />
+    </View>
+  );
+};
+
+export default HomeScreen;
+```
+
+With this setup, you have a nested navigation structure where you navigate from the main stack to a Tab Navigator. You can further customize and expand this structure based on the needs of your application.
+
