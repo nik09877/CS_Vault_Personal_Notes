@@ -812,3 +812,586 @@ export default HomeScreen;
 
 With this setup, you have a nested navigation structure where you navigate from the main stack to a Tab Navigator. You can further customize and expand this structure based on the needs of your application.
 
+# Day 7
+
+## State Management
+
+### UseState Hook
+
+In React Native, the `useState` hook is used in the same way as in React for managing state in functional components. The `useState` hook allows you to add state to your functional components without converting them to class components. Here's a simple example of how to use `useState` in a React Native functional component:
+
+```jsx
+import React, { useState } from 'react';
+import { View, Text, Button } from 'react-native';
+
+const ExampleComponent = () => {
+  // The useState hook returns an array with two elements:
+  // 1. The current state value.
+  // 2. A function that allows you to update the state.
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
+  const decrementCount = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <View>
+      <Text>Count: {count}</Text>
+      <Button title="Increment" onPress={incrementCount} />
+      <Button title="Decrement" onPress={decrementCount} />
+    </View>
+  );
+};
+
+export default ExampleComponent;
+```
+
+In this example:
+
+- We import `useState` from React.
+- Inside the component, we use `useState(0)` to initialize the state variable `count` with an initial value of 0.
+- The `setCount` function returned by `useState` is used to update the state.
+- We have two buttons that, when pressed, call functions to increment or decrement the count.
+
+Remember that the argument passed to `useState` is the initial state value. The return value from `useState` is an array with two elements: the current state value and a function to update the state.
+
+You can use multiple `useState` hooks in a single component to manage different pieces of state independently. The state is retained between renders, and when the state is updated, the component re-renders with the new state values.
+
+### Context API
+
+React Native, just like React for web, supports the Context API for managing state at a global level and passing it down to components without using prop drilling. Here's a simple example of how to use the Context API in a React Native application:
+
+1. **Create a Context:**
+   Define a context using `React.createContext()` and provide a default value.
+
+   ```jsx
+   // MyContext.js
+   import React, { createContext, useState } from 'react';
+
+   const MyContext = createContext();
+
+   const MyProvider = ({ children }) => {
+     const [value, setValue] = useState('');
+
+     return (
+       <MyContext.Provider value={{ value, setValue }}>
+         {children}
+       </MyContext.Provider>
+     );
+   };
+
+   export { MyContext, MyProvider };
+   ```
+
+2. **Wrap Your App with the Provider:**
+   Wrap your entire app with the `MyProvider` to make the context available to all components.
+
+   ```jsx
+   // App.js
+   import React from 'react';
+   import { MyProvider } from './MyContext';
+   import MyApp from './MyApp'; // Your main app component
+
+   const App = () => {
+     return (
+       <MyProvider>
+         <MyApp />
+       </MyProvider>
+     );
+   };
+
+   export default App;
+   ```
+
+3. **Use the Context in Components:**
+   Consume the context in your components using the `useContext` hook.
+
+   ```jsx
+   // SomeComponent.js
+   import React, { useContext } from 'react';
+   import { MyContext } from './MyContext';
+
+   const SomeComponent = () => {
+     const { value, setValue } = useContext(MyContext);
+
+     return (
+       <div>
+         <p>{value}</p>
+         <button onClick={() => setValue('New Value')}>Change Value</button>
+       </div>
+     );
+   };
+
+   export default SomeComponent;
+   ```
+
+Now, any component within the `MyProvider` will have access to the state provided by the context. When the state is updated using `setValue` in one component, all other components consuming the context will re-render with the updated state.
+
+Remember that this is a simplified example, and you may need to adapt it based on your specific use case. The Context API is useful for managing global state, avoiding prop drilling, and making state accessible across different parts of your React Native application.
+
+### Redux 
+
+Using Redux in React Native involves integrating the Redux library into your project, creating actions, reducers, and connecting components to the Redux store. Here's a step-by-step guide on how to set up Redux in a React Native application:
+
+### Step 1: Install Redux and React-Redux
+
+```bash
+npm install redux react-redux
+```
+
+### Step 2: Create Actions
+
+Create action types and action creators. Actions describe the type of change to be made and are typically defined as constants.
+
+```jsx
+// actions.js
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+
+export const increment = () => ({
+  type: INCREMENT,
+});
+
+export const decrement = () => ({
+  type: DECREMENT,
+});
+```
+
+### Step 3: Create Reducers
+
+Create reducers to handle the state changes based on the actions dispatched. Reducers are functions that take the current state and an action as arguments and return the new state.
+
+```jsx
+// reducers.js
+import { INCREMENT, DECREMENT } from './actions';
+
+const initialState = {
+  count: 0,
+};
+
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return { count: state.count + 1 };
+    case DECREMENT:
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+};
+
+export default counterReducer;
+```
+
+### Step 4: Create the Redux Store
+
+Combine reducers and create the Redux store.
+
+```jsx
+// store.js
+import { createStore } from 'redux';
+import counterReducer from './reducers';
+
+const store = createStore(counterReducer);
+
+export default store;
+```
+
+### Step 5: Wrap Your App with the Provider
+
+Wrap your entire app with the `Provider` component from `react-redux` to make the Redux store available to all components.
+
+```jsx
+// App.js
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import MyApp from './MyApp'; // Your main app component
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <MyApp />
+    </Provider>
+  );
+};
+
+export default App;
+```
+
+### Step 6: Connect Components
+
+Connect the components that need access to the Redux store using the `connect` function from `react-redux`.
+
+```jsx
+// CounterComponent.js
+import React from 'react';
+import { connect } from 'react-redux';
+import { increment, decrement } from './actions';
+
+const CounterComponent = ({ count, increment, decrement }) => {
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  count: state.count,
+});
+
+const mapDispatchToProps = {
+  increment,
+  decrement,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CounterComponent);
+```
+
+Now, your `CounterComponent` can access the `count` state and dispatch `increment` and `decrement` actions.
+
+This is a basic setup for using Redux in a React Native application. Depending on your application's complexity, you might also want to explore middleware, selectors, and other advanced Redux concepts. Additionally, consider using React hooks (like `useSelector` and `useDispatch` from `react-redux`) for functional components.
+
+### Redux Toolkit
+
+Redux Toolkit is a set of utility functions and abstractions to simplify the Redux development process. It includes the `createSlice` function, which makes it easy to define reducers and actions in a concise way. Here's how you can use Redux Toolkit in a React Native application:
+
+### Step 1: Install Redux Toolkit
+
+```bash
+npm install @reduxjs/toolkit react-redux
+```
+
+### Step 2: Create a Slice
+
+Create a slice using the `createSlice` function from Redux Toolkit. A slice contains both the reducer and the actions.
+
+```jsx
+// counterSlice.js
+import { createSlice } from '@reduxjs/toolkit';
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: {
+    count: 0,
+  },
+  reducers: {
+    increment: (state) => {
+      state.count += 1;
+    },
+    decrement: (state) => {
+      state.count -= 1;
+    },
+  },
+});
+
+export const { increment, decrement } = counterSlice.actions;
+export default counterSlice.reducer;
+```
+
+### Step 3: Create the Redux Store
+
+Create the Redux store using the `configureStore` function from Redux Toolkit. Import and include the reducer created by the slice.
+
+```jsx
+// store.js
+import { configureStore } from '@reduxjs/toolkit';
+import counterReducer from './counterSlice';
+
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
+
+export default store;
+```
+
+### Step 4: Wrap Your App with the Provider
+
+Wrap your entire app with the `Provider` component from `react-redux` to make the Redux store available to all components.
+
+```jsx
+// App.js
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import MyApp from './MyApp'; // Your main app component
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <MyApp />
+    </Provider>
+  );
+};
+
+export default App;
+```
+
+### Step 5: Connect Components
+
+Connect the components that need access to the Redux store using the `useDispatch` and `useSelector` hooks provided by `react-redux`.
+
+```jsx
+// CounterComponent.js
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment, decrement } from './counterSlice';
+
+const CounterComponent = () => {
+  const count = useSelector((state) => state.counter.count);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    </div>
+  );
+};
+
+export default CounterComponent;
+```
+
+Now, your `CounterComponent` can access the `count` state and dispatch `increment` and `decrement` actions using the Redux Toolkit. This setup simplifies the process of creating actions and reducers, making your Redux code more concise and maintainable.
+
+### React Query For Server State Management
+
+React Query is a library for managing, caching, and updating server state in React applications. While it's designed to work with React, it can also be used in React Native projects. Here's a basic guide on using React Query in a React Native application:
+
+### Step 1: Install React Query
+
+```bash
+npm install react-query react-query/devtools react-query/react-native
+```
+
+### Step 2: Set Up a Query
+
+Create a query function using the `useQuery` hook from React Query.
+
+```jsx
+// api.js
+export const fetchData = async () => {
+  // Your API call logic here
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  return data;
+};
+```
+
+### Step 3: Use the Query in a Component
+
+Use the `useQuery` hook in your React Native component to fetch and display data.
+
+```jsx
+// MyComponent.js
+import React from 'react';
+import { View, Text, ActivityIndicator } from 'react-native';
+import { useQuery } from 'react-query';
+import { fetchData } from './api';
+
+const MyComponent = () => {
+  const { data, isLoading, isError } = useQuery('myQueryKey', fetchData);
+
+  if (isLoading) {
+    return <ActivityIndicator size="large" />;
+  }
+
+  if (isError) {
+    return <Text>Error fetching data</Text>;
+  }
+
+  return (
+    <View>
+      <Text>Data: {data}</Text>
+    </View>
+  );
+};
+
+export default MyComponent;
+```
+
+In the above example:
+
+- `useQuery` is used to fetch and manage data.
+- The query key (`'myQueryKey'`) is a unique identifier for this specific query.
+- The `fetchData` function is the asynchronous function that performs the data fetching.
+
+### Step 4: Wrap Your App with QueryClientProvider
+
+Wrap your entire app with the `QueryClientProvider` to make the `QueryClient` available to all components.
+
+```jsx
+// App.js
+import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import MyComponent from './MyComponent';
+
+const queryClient = new QueryClient();
+
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <MyComponent />
+    </QueryClientProvider>
+  );
+};
+
+export default App;
+```
+
+### Step 5: Optional - React Query Devtools
+
+Optionally, you can include React Query Devtools for easier debugging.
+
+```jsx
+// App.js
+import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import MyComponent from './MyComponent';
+
+const queryClient = new QueryClient();
+
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <MyComponent />
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  );
+};
+
+export default App;
+```
+
+Now you have a basic setup for using React Query in a React Native application. Adjust the `fetchData` function according to your API, and you can use other features provided by React Query, such as mutations, invalidations, and more.
+
+Certainly! Let's explore some additional features provided by React Query, including mutations, invalidations, and more.
+
+### Mutations
+
+Mutations in React Query are used for updating data on the server. Here's an example of how to use mutations:
+
+1. **Define a Mutation Function:**
+
+```jsx
+// api.js
+export const updateData = async (updatedData) => {
+  // Your API update logic here
+  const response = await fetch('https://api.example.com/update', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updatedData),
+  });
+
+  const data = await response.json();
+  return data;
+};
+```
+
+2. **Use Mutation in a Component:**
+
+```jsx
+// MyComponent.js
+import React from 'react';
+import { View, Text, ActivityIndicator, Button } from 'react-native';
+import { useQuery, useMutation } from 'react-query';
+import { fetchData, updateData } from './api';
+
+const MyComponent = () => {
+  const { data, isLoading, isError, refetch } = useQuery('myQueryKey', fetchData);
+
+  const mutation = useMutation(updateData, {
+    onSuccess: () => {
+      // Invalidate and refetch data after mutation is successful
+      queryClient.invalidateQueries('myQueryKey');
+      refetch();
+    },
+  });
+
+  const handleUpdate = () => {
+    // Call the mutation function with the updated data
+    mutation.mutate({ updatedData: 'newData' });
+  };
+
+  if (isLoading) {
+    return <ActivityIndicator size="large" />;
+  }
+
+  if (isError) {
+    return <Text>Error fetching data</Text>;
+  }
+
+  return (
+    <View>
+      <Text>Data: {data}</Text>
+      <Button title="Update Data" onPress={handleUpdate} />
+    </View>
+  );
+};
+
+export default MyComponent;
+```
+
+In this example, the `useMutation` hook is used to create a mutation. When the mutation is successful, it invalidates the query and triggers a refetch.
+
+### Invalidations
+
+React Query allows you to manually invalidate queries to force a refetch. This is useful in scenarios where you want to refresh data from the server.
+
+```jsx
+// MyComponent.js
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+import { useQuery, queryClient } from 'react-query';
+import { fetchData } from './api';
+
+const MyComponent = () => {
+  const { data, isLoading, isError, refetch } = useQuery('myQueryKey', fetchData);
+
+  const handleInvalidate = () => {
+    // Manually invalidate the query
+    queryClient.invalidateQueries('myQueryKey');
+  };
+
+  if (isLoading) {
+    return <ActivityIndicator size="large" />;
+  }
+
+  if (isError) {
+    return <Text>Error fetching data</Text>;
+  }
+
+  return (
+    <View>
+      <Text>Data: {data}</Text>
+      <Button title="Invalidate and Refetch" onPress={handleInvalidate} />
+    </View>
+  );
+};
+
+export default MyComponent;
+```
+
+### Additional Features
+
+React Query provides many more features, including:
+
+- **Optimistic Updates:** You can update the UI optimistically before the server response comes back.
+- **Query Invalidation and Refetching:** Manually trigger a refetch of a specific query or all queries.
+- **Query Stale Time:** Set a time after which the data is considered stale, and a background fetch is triggered.
+- **Query Polling:** Periodically refetch data from the server.
+
+Explore the [official React Query documentation](https://react-query.tanstack.com/) for more details and advanced use cases.
