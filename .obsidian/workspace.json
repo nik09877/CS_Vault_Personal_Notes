@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/Training.md",
+                "file": "Work/TCS/Dart.md",
                 "mode": "source",
                 "source": true
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -86,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/Training.md"
+                "file": "Work/TCS/Dart.md"
               }
             }
           },
@@ -104,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/Training.md",
+                "file": "Work/TCS/Dart.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/Training.md",
+                "file": "Work/TCS/Dart.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +151,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -178,6 +179,7 @@
   "active": "98ce057d8bf8fff0",
   "lastOpenFiles": [
     "Work/TCS/Training.md",
+    "Work/TCS/Dart.md",
     "444_System Design/HLD/Notes/Prerequisites.md",
     "444_System Design/HLD/Resources/nosql.pdf",
     "444_System Design/HLD/Resources/Unconfirmed 668667.crdownload",
@@ -222,7 +224,6 @@
     "z_assets/Pasted image 20231008220741.png",
     "Pasted.md",
     "Work",
-    "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "Untitled.canvas"
   ]
 }
