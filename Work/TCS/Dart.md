@@ -140,3 +140,98 @@ void main() {
 - `void introduceYourself()`: A method within the `Person` class.
 
 These are some foundational concepts in Dart. More advanced topics like asynchronous programming, exception handling, and more. Dart's official documentation is an excellent resource for in-depth learning: [Dart Documentation](https://dart.dev/guides).
+
+# Stateful and Stateless Widgets
+
+In Flutter, widgets are the basic building blocks of the user interface. Widgets can be categorized into two main types: stateful widgets and stateless widgets.
+
+### 1. **Stateless Widgets:**
+
+A stateless widget is a widget that doesn't store any mutable state. Once created, its properties cannot change. Stateless widgets are used for parts of the user interface that don't change dynamically. They are essentially static and don't have internal state that changes over time.
+
+Example of a stateless widget:
+
+```dart
+import 'package:flutter/material.dart';
+
+class MyStatelessWidget extends StatelessWidget {
+  final String title;
+
+  MyStatelessWidget({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Text('This is a Stateless Widget'),
+      ),
+    );
+  }
+}
+```
+
+In this example, `MyStatelessWidget` is a stateless widget. It takes a `title` as a parameter, and once the widget is built, the title cannot be changed.
+
+### 2. **Stateful Widgets:**
+
+A stateful widget is a widget that can change its state during its lifetime. Stateful widgets are used for dynamic parts of the user interface that can be updated based on user interactions, data changes, etc. They have an associated mutable state object that can be modified.
+
+Example of a stateful widget:
+
+```dart
+import 'package:flutter/material.dart';
+
+class MyStatefulWidget extends StatefulWidget {
+  final String title;
+
+  MyStatefulWidget({required this.title});
+
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  int counter = 0;
+
+  void incrementCounter() {
+    setState(() {
+      counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Counter: $counter'),
+            ElevatedButton(
+              onPressed: incrementCounter,
+              child: Text('Increment'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+In this example, `MyStatefulWidget` is a stateful widget. It has an associated `_MyStatefulWidgetState` class that holds the mutable state (`counter` in this case). The `incrementCounter` method is used to update the state, and `setState` is called to trigger a rebuild of the widget.
+
+### Key Points:
+
+- Stateless widgets are immutable and don't have mutable state.
+- Stateful widgets have mutable state and can be updated over time.
+- Stateful widgets have a corresponding state class that extends `State`.
+- `setState` is used to notify Flutter to rebuild the widget when the state changes.
+
+Understanding the distinction between stateful and stateless widgets is fundamental when working with Flutter, as it influences how you design and structure your UI components.
