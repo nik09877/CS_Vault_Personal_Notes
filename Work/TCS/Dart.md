@@ -235,3 +235,408 @@ In this example, `MyStatefulWidget` is a stateful widget. It has an associated `
 - `setState` is used to notify Flutter to rebuild the widget when the state changes.
 
 Understanding the distinction between stateful and stateless widgets is fundamental when working with Flutter, as it influences how you design and structure your UI components.
+
+# Widgets
+
+### 1. `Container`:
+
+A `Container` is a box model that can contain other widgets.
+
+```dart
+Container(
+  color: Colors.blue,
+  width: 200,
+  height: 100,
+  child: Text('Hello, Container!'),
+)
+```
+
+### 2. `Row`:
+
+A `Row` widget arranges its children in a horizontal line.
+
+```dart
+Row(
+  children: [
+    Text('Hello,'),
+    Text(' Flutter!'),
+  ],
+)
+```
+
+### 3. `Column`:
+
+A `Column` widget arranges its children in a vertical line.
+
+```dart
+Column(
+  children: [
+    Text('Hello,'),
+    Text(' Flutter!'),
+  ],
+)
+```
+
+### 4. `ListView`:
+
+A `ListView` is a scrollable list of widgets.
+
+```dart
+ListView(
+  children: [
+    ListTile(title: Text('Item 1')),
+    ListTile(title: Text('Item 2')),
+    ListTile(title: Text('Item 3')),
+  ],
+)
+```
+
+### 5. `GridView`:
+
+A `GridView` is a scrollable grid of widgets.
+
+```dart
+GridView.builder(
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 2,
+  ),
+  itemBuilder: (context, index) => ListTile(title: Text('Item $index')),
+)
+```
+
+### 6. `Stack` and `Positioned`:
+
+A `Stack` allows widgets to be overlaid on top of each other. `Positioned` widgets control the positioning of children within the `Stack`.
+
+```dart
+Stack(
+  children: [
+    Positioned(
+      left: 10,
+      top: 10,
+      child: Text('Positioned 1'),
+    ),
+    Positioned(
+      right: 10,
+      bottom: 10,
+      child: Text('Positioned 2'),
+    ),
+  ],
+)
+```
+
+### 7. `AppBar`:
+
+An `AppBar` is a material design app bar that typically contains the title and optional actions.
+
+```dart
+AppBar(
+  title: Text('My App'),
+  actions: [
+    IconButton(
+      icon: Icon(Icons.settings),
+      onPressed: () {
+        // Handle settings button press
+      },
+    ),
+  ],
+)
+```
+
+### 8. `Scaffold`:
+
+A `Scaffold` is a top-level container that holds the structure of the visual interface.
+
+```dart
+Scaffold(
+  appBar: AppBar(
+    title: Text('My App'),
+  ),
+  body: Center(
+    child: Text('Hello, Flutter!'),
+  ),
+)
+```
+
+### 9. `Text`:
+
+A `Text` widget displays a paragraph of text.
+
+```dart
+Text('Hello, Flutter!')
+```
+
+### 10. `Image`:
+
+An `Image` widget displays an image from a specified asset, network, or file.
+
+```dart
+Image.network('https://example.com/image.jpg')
+```
+
+### 11. `Icon`:
+
+An `Icon` widget displays a graphic symbol representing a command.
+
+```dart
+Icon(Icons.star)
+```
+
+### 12. Different Types of Buttons:
+
+Flutter provides various button widgets, including `ElevatedButton`, `TextButton`, and `OutlinedButton`.
+
+```dart
+ElevatedButton(onPressed: () {}, child: Text('Elevated Button'))
+TextButton(onPressed: () {}, child: Text('Text Button'))
+OutlinedButton(onPressed: () {}, child: Text('Outlined Button'))
+```
+
+### 13. `TextField`:
+
+A `TextField` widget allows the user to enter text.
+
+```dart
+TextField(
+  decoration: InputDecoration(labelText: 'Username'),
+)
+```
+
+### 14. `Form`:
+
+A `Form` widget is used to create a form with form fields.
+
+```dart
+Form(
+  child: Column(
+    children: [
+      TextFormField(
+        decoration: InputDecoration(labelText: 'Username'),
+      ),
+      TextFormField(
+        decoration: InputDecoration(labelText: 'Password'),
+        obscureText: true,
+      ),
+      ElevatedButton(
+        onPressed: () {
+          // Handle form submission
+        },
+        child: Text('Submit'),
+      ),
+    ],
+  ),
+)
+```
+
+### 15. `Card`:
+
+A `Card` widget is a material design card.
+
+```dart
+Card(
+  child: ListTile(
+    title: Text('Card Title'),
+    subtitle: Text('Card Subtitle'),
+    leading: Icon(Icons.star),
+    trailing: IconButton(
+      icon: Icon(Icons.favorite),
+      onPressed: () {
+        // Handle favorite button press
+      },
+    ),
+  ),
+)
+```
+
+### 16. `AlertDialog`:
+
+An `AlertDialog` displays an alert dialog to the user.
+
+```dart
+ElevatedButton(
+  onPressed: () {
+    showDialog(
+      context: context,
+      builder
+
+: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Alert Dialog'),
+          content: Text('This is an alert message.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  },
+  child: Text('Show Alert'),
+)
+```
+
+### 17. `BottomSheet`:
+
+A `BottomSheet` displays a sheet from the bottom of the screen.
+
+```dart
+ElevatedButton(
+  onPressed: () {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: 200,
+          child: Center(
+            child: Text('Bottom Sheet Content'),
+          ),
+        );
+      },
+    );
+  },
+  child: Text('Show Bottom Sheet'),
+)
+```
+
+### 18. `Drawer`:
+
+A `Drawer` widget creates a material design drawer.
+
+```dart
+Scaffold(
+  appBar: AppBar(
+    title: Text('My App'),
+  ),
+  drawer: Drawer(
+    child: ListView(
+      padding: EdgeInsets.zero,
+      children: [
+        DrawerHeader(
+          child: Text('Drawer Header'),
+          decoration: BoxDecoration(
+            color: Colors.blue,
+          ),
+        ),
+        ListTile(
+          title: Text('Item 1'),
+          onTap: () {
+            // Handle item 1 tap
+          },
+        ),
+        ListTile(
+          title: Text('Item 2'),
+          onTap: () {
+            // Handle item 2 tap
+          },
+        ),
+      ],
+    ),
+  ),
+  body: Center(
+    child: Text('Hello, Flutter!'),
+  ),
+)
+```
+
+### 19. `TabBar` and `TabView`:
+
+A `TabBar` displays a horizontal row of tabs, and `TabView` displays the corresponding tab views.
+
+```dart
+DefaultTabController(
+  length: 2,
+  child: Scaffold(
+    appBar: AppBar(
+      title: Text('Tabs Example'),
+      bottom: TabBar(
+        tabs: [
+          Tab(icon: Icon(Icons.tab)),
+          Tab(icon: Icon(Icons.tab)),
+        ],
+      ),
+    ),
+    body: TabBarView(
+      children: [
+        Center(child: Text('Tab 1')),
+        Center(child: Text('Tab 2')),
+      ],
+    ),
+  ),
+)
+```
+
+### 20. `Expanded` and `Flexible`:
+
+`Expanded` and `Flexible` are used to control how a widget flexes within a `Column` or `Row`.
+
+```dart
+Column(
+  children: [
+    Expanded(
+      child: Container(color: Colors.red),
+    ),
+    Expanded(
+      child: Container(color: Colors.blue),
+    ),
+  ],
+)
+```
+
+### 21. `GestureDetector`:
+
+A `GestureDetector` allows you to capture gestures such as taps and swipes.
+
+```dart
+GestureDetector(
+  onTap: () {
+    // Handle tap
+  },
+  child: Container(
+    color: Colors.green,
+    child: Center(child: Text('Tap me!')),
+  ),
+)
+```
+
+### 22. `FutureBuilder`:
+
+A `FutureBuilder` is used to build a widget tree based on the latest snapshot of an asynchronous computation.
+
+```dart
+FutureBuilder<String>(
+  future: fetchData(),
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.waiting) {
+      return CircularProgressIndicator();
+    } else if (snapshot.hasError) {
+      return Text('Error: ${snapshot.error}');
+    } else {
+      return Text('Data: ${snapshot.data}');
+    }
+  },
+)
+```
+
+### 23. `StreamBuilder`:
+
+A `StreamBuilder` is similar to `FutureBuilder` but for asynchronous streams.
+
+```dart
+StreamBuilder<int>(
+  stream: countStream(),
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.waiting) {
+      return CircularProgressIndicator();
+    } else if (snapshot.hasError) {
+      return Text('Error: ${snapshot.error}');
+    } else {
+      return Text('Count: ${snapshot.data}');
+    }
+  },
+)
+```
+
