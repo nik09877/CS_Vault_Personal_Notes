@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e5b4da1f119daa45",
+        "id": "541d279546bddade",
         "type": "tabs",
         "children": [
           {
-            "id": "996ae3253a7cd4a1",
+            "id": "dfc7b12bd287852f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/Dart.md",
+                "file": "Work/TCS/Flutter.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/Dart.md"
+                "file": "Work/TCS/Flutter.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/Dart.md",
+                "file": "Work/TCS/Flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/Dart.md",
+                "file": "Work/TCS/Flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,9 +177,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "996ae3253a7cd4a1",
+  "active": "dfc7b12bd287852f",
   "lastOpenFiles": [
     "Work/TCS/Dart.md",
+    "Work/TCS/Flutter.md",
     "Work/TCS/Training.md",
     "444_System Design/HLD/Notes/Prerequisites.md",
     "444_System Design/HLD/Resources/nosql.pdf",
@@ -223,7 +224,6 @@
     "z_assets/Pasted image 20231008220812.png",
     "z_assets/Pasted image 20231008220747.png",
     "z_assets/Pasted image 20231008220741.png",
-    "Pasted.md",
     "Work",
     "Untitled.canvas"
   ]
