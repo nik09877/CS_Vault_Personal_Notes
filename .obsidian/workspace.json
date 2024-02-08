@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "541d279546bddade",
+        "id": "c180402e0c22c7c3",
         "type": "tabs",
         "children": [
           {
-            "id": "dfc7b12bd287852f",
+            "id": "32c9c5decc90162b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS/Flutter.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Work/TCS/Flutter.md"
-              }
+              "state": {}
             }
           },
           {
@@ -104,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/Flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/Flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,10 +169,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dfc7b12bd287852f",
+  "active": "32c9c5decc90162b",
   "lastOpenFiles": [
-    "Work/TCS/Dart.md",
     "Work/TCS/Flutter.md",
+    "Work/TCS/Dart.md",
     "Work/TCS/Training.md",
     "444_System Design/HLD/Notes/Prerequisites.md",
     "444_System Design/HLD/Resources/nosql.pdf",
