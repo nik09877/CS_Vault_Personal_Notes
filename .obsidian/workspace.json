@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "efa62dec934dded6",
+        "id": "61492368c029377e",
         "type": "tabs",
         "children": [
           {
-            "id": "712a4f6d70b82181",
+            "id": "d1d32ca50e8e46a1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md"
+              }
             }
           },
           {
@@ -97,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,13 +158,11 @@
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 320.5,
-    "collapsed": true
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,11 +175,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "712a4f6d70b82181",
+  "active": "d1d32ca50e8e46a1",
   "lastOpenFiles": [
-    "Work/TCS/Flutter.md",
-    "Work/TCS/Dart.md",
-    "Work/TCS/Training.md",
+    "111_Language/Java/In Depth/8.Collections.md",
+    "111_Language/Java/In Depth/7.Generic Programming.md",
+    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+    "Work/TCS/InstaBiz UK/Learning/Flutter.md",
+    "z_assets/Pasted_image_20240211133118.png",
+    "Work/TCS/InstaBiz UK/Project_Work",
+    "Work/TCS/InstaBiz UK/Learning",
+    "222_DSA/Striver_A_to_Z_Sheet.md",
+    "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
+    "Draw.io/Abstract-factory.svg",
+    "Work/TCS/Misc/Biz Skill.md",
+    "Work/TCS/InstaBiz UK/Learning/React-Native.md",
+    "Work/TCS/Misc/TCS_Onbaording.md",
+    "Work/TCS/Misc",
+    "Work/TCS/InstaBiz UK/Learning/Dart.md",
+    "Work/TCS/InstaBiz UK",
+    "Work/Untitled",
     "444_System Design/HLD/Notes/Prerequisites.md",
     "444_System Design/HLD/Resources/nosql.pdf",
     "444_System Design/HLD/Resources/Unconfirmed 668667.crdownload",
@@ -182,16 +203,10 @@
     "444_System Design/HLD/Resources/Unconfirmed 990561.crdownload",
     "z_assets/Pasted_image_20231205120213.png",
     "444_System Design/HLD/Resources/load-balancer.pdf",
-    "444_System Design/HLD/Resources/Unconfirmed 141819.crdownload",
-    "444_System Design/HLD/Resources",
-    "444_System Design/HLD/Notes",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "444_System Design/HLD/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
-    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/In Depth/8.Collections.md",
-    "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/14.Database Programming.md",
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
@@ -202,20 +217,11 @@
     "111_Language/Java/In Depth/9.Stream API.md",
     "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "111_Language/Java/In Depth/4.Inheritance.md",
-    "111_Language/Java/In Depth/3.Objects and Classes.md",
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
-    "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
-    "Work/TCS/Biz Skill.md",
-    "Work/TCS/TCS.md",
-    "Work/TCS",
     "z_assets/Pasted image 20231009154316.png",
     "z_assets/Pasted image 20231009154259.png",
     "z_assets/Pasted image 20231009154239.png",
     "z_assets/Pasted image 20231008220826.png",
     "z_assets/Pasted image 20231008220812.png",
-    "z_assets/Pasted image 20231008220747.png",
-    "z_assets/Pasted image 20231008220741.png",
-    "Work",
     "Untitled.canvas"
   ]
 }
