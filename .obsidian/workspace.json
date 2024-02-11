@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c180402e0c22c7c3",
+        "id": "efa62dec934dded6",
         "type": "tabs",
         "children": [
           {
-            "id": "32c9c5decc90162b",
+            "id": "712a4f6d70b82181",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -169,7 +168,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "32c9c5decc90162b",
+  "active": "712a4f6d70b82181",
   "lastOpenFiles": [
     "Work/TCS/Flutter.md",
     "Work/TCS/Dart.md",
