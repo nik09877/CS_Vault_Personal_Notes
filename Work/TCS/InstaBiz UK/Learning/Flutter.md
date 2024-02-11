@@ -1093,6 +1093,7 @@ GetX is suitable for a wide range of Flutter applications, from small projects t
 # Clean Architecture
 ![Clean Arch](Pasted_image_20240211133118.png)
 - `blurRadius` should be 2 or 1.5 times the `offset`.
+- Keep `Padding` and `Margin` and `SIzedBox(height:)` as 16 mostly.
 ```dart
 BoxShadow(
   offset: Offset(0, 2),
@@ -1108,4 +1109,12 @@ Text("News title",
 	  overflow: TextOverflow.ellipsis,
   ))
 ```
-- If you want a `ListView` inside a `Column`, wrap it in an `Expanded` Widget
+- If you want a `ListView` inside a `Column`, wrap it in an `Expanded` Widget or else wrap the `Column` widget with a `SingleChildScrollView`
+- How to add an image in your app?
+	- wrap the `Image` with a `Container`  and use `Boxfit.cover`
+```dart
+Container(
+	height: 300,
+	color: Palette.lightGrey,
+	child: Image.network('', fit: BoxFit.cover))
+```
