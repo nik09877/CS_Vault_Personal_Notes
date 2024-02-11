@@ -1118,3 +1118,111 @@ Container(
 	color: Palette.lightGrey,
 	child: Image.network('', fit: BoxFit.cover))
 ```
+
+###  Get_It (Service Locator / Dependency Injection)
+- Get_It is a popular service locator for Flutter that simplifies dependency injection, promoting loose coupling and cleaner code. 
+ - Which design pattern is commonly used in clean architecture to separate the layers?
+	- Dependency Injection
+
+**Benefits of Get_It:**
+
+- **Centralized Management:** Register dependencies in one place for easy configuration.
+- **Loose Coupling:** Components don't need to know how dependencies are created, promoting testability.
+- **Testing Flexibility:** Easily mock or substitute dependencies during tests.
+- **Multiple Options:** Supports singleton, lazy singleton, and factory registration patterns.
+- Here's a demo explaining its usage:
+
+**Service Implementation:**
+```dart
+// services/user_service.dart
+class UserService {
+  Future<List<User>> getUsers() async {
+    // Implement logic to fetch users (e.g., API call or local storage)
+    return [
+      User(name: "John Doe", email: "john.doe@example.com"),
+      User(name: "Jane Doe", email: "jane.doe@example.com"),
+    ];
+  }
+}
+
+class User {
+  final String name;
+  final String email;
+
+  const User({required this.name, required this.email});
+}
+
+```
+**Registering Services:**
+```dart
+// main.dart
+import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+
+import 'services/user_service.dart';
+
+final locator = GetIt.instance;
+
+void main() async {
+
+  //initializes the things that are required for 
+  //the native platforms before running our app
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Register services before running the app
+  locator.registerSingleton<UserService>(UserService());
+  
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+```
+**Using Services:**
+```dart
+// pages/my_home_page.dart
+import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+
+import 'services/user_service.dart';
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final userService = locator<UserService>();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Get_It Demo'),
+      ),
+      body: FutureBuilder<List<User>>(
+        future: userService.getUsers(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return ListView.builder(
+              itemCount: snapshot.data!.length,
+              itemBuilder: (context, index) {
+                final user = snapshot.data![index];
+                return Text('User: ${user.name} - ${user.email}');
+              },
+            );
+          } else if (snapshot.hasError) {
+            return Text('Error: ${snapshot.error}');
+          }
+          return CircularProgressIndicator();
+        },
+      ),
+    );
+  }
+}
+
+```

@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -162,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 320.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
