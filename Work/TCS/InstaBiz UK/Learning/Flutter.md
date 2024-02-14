@@ -421,6 +421,9 @@ Scaffold(
   body: Center(
     child: Text('Hello, Flutter!'),
   ),
+  drawer: Container(),
+  bottomNavigationBar: Container(),
+  floatingActionButton: Container(),
 )
 ```
 
@@ -850,6 +853,7 @@ SingleChildScrollView(
 );
 
 ```
+### `ListTile`:
 # Responsive Layouts in Flutter: Essential Widgets and Code Examples
 
 ### **MediaQuery:**
@@ -1096,6 +1100,8 @@ GetX is suitable for a wide range of Flutter applications, from small projects t
 	- To provide a layer of abstraction between the UI and the domain logic
  - Which design pattern is commonly used in clean architecture to separate the layers?
 	- Dependency Injection
+- What is the purpose of models in clean architecture?
+	- To encapsulate the business logic and data.
 - `blurRadius` should be 2 or 1.5 times the `offset`.
 - Keep `Padding` and `Margin` and `SIzedBox(height:)` as 16 mostly.
 ```dart
