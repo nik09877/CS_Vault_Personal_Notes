@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "3a403a657f4168fa",
+        "id": "8673788b6ad39826",
         "type": "tabs",
         "children": [
           {
-            "id": "165c671ce57cd523",
+            "id": "5e97ef9a382b0291",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md"
-              }
+              "state": {}
             }
           },
           {
@@ -104,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,8 +167,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "165c671ce57cd523",
+  "active": "5e97ef9a382b0291",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/In Depth/7.Generic Programming.md",
