@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d02101c66e2b57f5",
+        "id": "78daace26161d53a",
         "type": "tabs",
         "children": [
           {
-            "id": "18601844d2e78199",
+            "id": "66243628c62c3980",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.8"
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -67,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -83,7 +84,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md"
+              }
             }
           },
           {
@@ -100,6 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,8 +174,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "18601844d2e78199",
+  "active": "66243628c62c3980",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter.md",
@@ -187,7 +193,6 @@
     "Work/TCS/InstaBiz UK/Learning/React-Native.md",
     "Work/TCS/Misc/TCS_Onbaording.md",
     "Work/TCS/Misc",
-    "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "Work/TCS/InstaBiz UK",
     "Work/Untitled",
     "444_System Design/HLD/Notes/Prerequisites.md",
