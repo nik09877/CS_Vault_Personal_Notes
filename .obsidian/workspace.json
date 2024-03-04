@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "78daace26161d53a",
+        "id": "4705ba4e0652f108",
         "type": "tabs",
         "children": [
           {
-            "id": "66243628c62c3980",
+            "id": "d5843667fea65c70",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md"
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,12 +174,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "66243628c62c3980",
+  "active": "d5843667fea65c70",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+    "Work/TCS/InstaBiz UK/Learning/React-Native.md",
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
+    "Work/TCS/Ultimatix/Project Work.md",
+    "Work/TCS/InstaBiz UK/Learning/Flutter.md",
+    "Work/TCS/Ultimatix/Untitled",
+    "Work/TCS/Ultimatix",
     "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
-    "Work/TCS/InstaBiz UK/Learning/Flutter.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/In Depth/7.Generic Programming.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
@@ -190,7 +196,6 @@
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
     "Draw.io/Abstract-factory.svg",
     "Work/TCS/Misc/Biz Skill.md",
-    "Work/TCS/InstaBiz UK/Learning/React-Native.md",
     "Work/TCS/Misc/TCS_Onbaording.md",
     "Work/TCS/Misc",
     "Work/TCS/InstaBiz UK",
@@ -200,10 +205,7 @@
     "444_System Design/HLD/Resources/Unconfirmed 668667.crdownload",
     "z_assets/Pasted_image_20231207115732.png",
     "z_assets/Pasted_image_20231207103401.png",
-    "444_System Design/HLD/Resources/database_sharding.pdf",
-    "444_System Design/HLD/Resources/Unconfirmed 990561.crdownload",
     "z_assets/Pasted_image_20231205120213.png",
-    "444_System Design/HLD/Resources/load-balancer.pdf",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "444_System Design/HLD/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
@@ -215,8 +217,6 @@
     "111_Language/Java/In Depth/15.Date and Time API.md",
     "111_Language/Java/In Depth/13.Networking.md",
     "111_Language/Java/In Depth/12.XML.md",
-    "111_Language/Java/In Depth/9.Stream API.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
     "z_assets/Pasted image 20231009154316.png",
     "z_assets/Pasted image 20231009154259.png",
     "z_assets/Pasted image 20231009154239.png",
