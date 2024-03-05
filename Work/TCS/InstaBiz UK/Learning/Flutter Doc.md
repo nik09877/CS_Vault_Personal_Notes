@@ -827,6 +827,7 @@ void main() {
 **Note**: Using static type helps you to prevent writing silly mistakes in code. It’s a good habit to use static type in dart.
 
 ## Comments in Dart 
+
 **Comments** are the set of statements that are ignored by the dart compiler during program execution. They are used to explain the code so that you or other people can understand it easily.
 
 *   You can describe your code.
@@ -7711,4 +7712,1764 @@ void main() {
 
 
 [Run Online](https://dartpad.dev/?id=0a0d58c39324391b6d60dfbebf7c3e92)
+
+## Abstract Class in Dart 
+### **Introduction**
+
+Previously you learned how to define a class. These classes are **concrete classes**. You can create an object of concrete classes, but you cannot create an object of abstract classes.
+
+### **Abstract Class**
+
+Abstract classes are classes that cannot be initialized. It is used to define the behavior of a class that can be inherited by other classes. An abstract class is declared using the keyword **abstract**.
+
+### **Syntax**
+
+```
+abstract class ClassName {
+  //Body of abstract class
+
+  method1();
+  method2();
+}
+
+```
+
+
+### **Abstract Method**
+
+An abstract method is a method that is declared without an implementation. It is declared with a semicolon (;) instead of a method body.
+
+### Syntax
+
+```
+abstract class ClassName {
+  //Body of abstract class
+  method1();
+  method2();
+}
+
+```
+
+
+### **Why We Need Abstract Class**
+
+Subclasses of an abstract class must implement all the abstract methods of the abstract class. It is used to achieve abstraction in the Dart programming language.
+
+### **Example 1: Abstract Class In Dart**
+
+In this example below, there is an abstract class **Vehicle** with two abstract methods **start()** and **stop()**. The subclasses **Car** and **Bike** implement the abstract methods and override them to print the message.
+
+```
+abstract class Vehicle {
+  // Abstract method
+  void start();
+  // Abstract method
+  void stop();
+}
+
+class Car extends Vehicle {
+  // Implementation of start()
+  @override
+  void start() {
+    print('Car started');
+  }
+
+  // Implementation of stop()
+  @override
+  void stop() {
+    print('Car stopped');
+  }
+}
+
+class Bike extends Vehicle {
+  // Implementation of start()
+  @override
+  void start() {
+    print('Bike started');
+  }
+
+  // Implementation of stop()
+  @override
+  void stop() {
+    print('Bike stopped');
+  }
+}
+
+void main() {
+  Car car = Car();
+  car.start();
+  car.stop();
+
+  Bike bike = Bike();
+  bike.start();
+  bike.stop();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=625b7c5437804f2b5f9a063c2c14cc15)
+
+**Note**: The abstract class is used to define the behavior of a class that can be inherited by other classes. You can define an abstract method inside an abstract class.
+
+### **Example 2: Abstract Class In Dart**
+
+In this example below, there is an abstract class **Shape** with one abstract method **area()** and two subclasses **Rectangle** and **Triangle**. The subclasses implement the **area()** method and override it to calculate the area of the rectangle and triangle, respectively.
+
+```
+abstract class Shape {
+  int dim1, dim2;
+  // Constructor
+  Shape(this.dim1, this.dim2);
+  // Abstract method
+  void area();
+}
+
+class Rectangle extends Shape {
+  // Constructor
+  Rectangle(int dim1, int dim2) : super(dim1, dim2);
+
+  // Implementation of area()
+  @override
+  void area() {
+    print('The area of the rectangle is ${dim1 * dim2}');
+  }
+}
+
+class Triangle extends Shape {
+  // Constructor
+  Triangle(int dim1, int dim2) : super(dim1, dim2);
+
+  // Implementation of area()
+  @override
+  void area() {
+    print('The area of the triangle is ${0.5 * dim1 * dim2}');
+  }
+}
+
+void main() {
+  Rectangle rectangle = Rectangle(10, 20);
+  rectangle.area();
+
+  Triangle triangle = Triangle(10, 20);
+  triangle.area();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0d8bd998f91eba0c492d6f1d824220f9)
+
+### **Constructor In Abstract Class**
+
+You can’t create an object of an abstract class. However, you can define a constructor in an abstract class. The constructor of an abstract class is called when an object of a subclass is created.
+
+### **Example 3: Constructor In Abstract Class**
+
+In this example below, there is an abstract class **Bank** with a constructor which takes two parameters **name** and **rate**. There is an abstract method **interest()**. The subclasses **SBI** and **ICICI** implement the abstract method and override it to print the interest rate.
+
+```
+abstract class Bank {
+  String name;
+  double rate;
+
+  // Constructor
+  Bank(this.name, this.rate);
+
+  // Abstract method
+  void interest();
+
+  //Non-Abstract method: It have an implementation
+  void display() {
+    print('Bank Name: $name');
+  }
+}
+
+class SBI extends Bank {
+  // Constructor
+  SBI(String name, double rate) : super(name, rate);
+
+  // Implementation of interest()
+  @override
+  void interest() {
+    print('The rate of interest of SBI is $rate');
+  }
+}
+
+class ICICI extends Bank {
+  // Constructor
+  ICICI(String name, double rate) : super(name, rate);
+
+  // Implementation of interest()
+  @override
+  void interest() {
+    print('The rate of interest of ICICI is $rate');
+  }
+}
+
+void main() {
+  SBI sbi = SBI('SBI', 8.4);
+  ICICI icici = ICICI('ICICI', 7.3);
+
+  sbi.interest();
+  icici.interest();
+  icici.display();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=8f87bdababbea5cf84516a0a0e259a52)
+
+### **Key Points To Remember**
+
+*   You can’t create an object of an abstract class.
+*   It can have both abstract and non-abstract methods.
+*   It is used to define the behavior of a class that other classes can inherit.
+*   Abstract method only has a signature and no implementation.
+
+# Interface in Dart 
+### Introduction
+
+ In Dart, every class is **implicit interface**. 
+
+### **Interface In Dart**
+
+**An interface defines a syntax that a class must follow**. It is a contract that defines the capabilities of a class. It is used to achieve abstraction in the Dart programming language. When you implement an interface, you must implement all the properties and methods defined in the interface. Keyword **implements** is used to implement an interface.
+
+### Syntax Of Interface In Dart
+
+```
+class InterfaceName {
+  // code
+}
+
+class ClassName implements InterfaceName {
+  // code
+}
+
+```
+
+
+### **Declaring Interface In Dart**
+
+In dart there is no keyword **interface** but you can use **class** or **abstract class** to declare an interface. All classes implicitly define an interface. Mostly **abstract class** is used to declare an interface.
+
+```
+// creating an interface using abstract class
+abstract class Person {
+  canWalk();
+  canRun();
+}
+
+```
+
+
+### **Implementing Interface In Dart**
+
+You must use the **implements** keyword to implement an interface. The class that implements an interface must implement all the methods and properties of the interface.
+
+```
+class Student implements Person {
+ // implementation of canWalk()
+  @override
+  canWalk() {
+    print('Student can walk');
+  }
+
+// implementation of canRun()
+  @override
+  canRun() {
+    print('Student can run');
+  }
+}
+
+```
+
+
+### **Example 1: Interface In Dart**
+
+In this example below, there is an interface **Laptop** with two methods **turnOn()** and **turnOff()**. The class **MacBook** implements the interface and overrides the methods to print the message.
+
+```
+// creating an interface using concrete class
+class Laptop {
+    // method
+  turnOn() {
+    print('Laptop turned on');
+  }
+    // method
+  turnOff() {
+    print('Laptop turned off');
+  }
+}
+
+class MacBook implements Laptop {
+  // implementation of turnOn()
+  @override
+  turnOn() {
+    print('MacBook turned on');
+  }
+
+  // implementation of turnOff()
+  @override
+  turnOff() {
+    print('MacBook turned off');
+  }
+}
+
+void main() {
+  var macBook = MacBook();
+  macBook.turnOn();
+  macBook.turnOff();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=4a00cb7c6147171e03bd97fa539a1f7e)
+
+**Note:** Most of the time, **abstract class** is used instead of **concrete class** to declare an interface.
+
+### **Example 2: Interface In Dart**
+
+In this example below, there is an abstract class named **Vehicle**. The **Vehicle** class has two abstract methods **start()** and **stop()**. The **Car** class implements the **Vehicle** interface. The **Car** class has to implement the **start()** and **stop()** methods.
+
+```
+// abstract class as interface
+abstract class Vehicle {
+  void start();
+  void stop();
+}
+// implements interface
+class Car implements Vehicle {
+  @override
+  void start() {
+    print('Car started');
+  }
+
+  @override
+  void stop() {
+    print('Car stopped');
+  }
+}
+
+void main() {
+  var car = Car();
+  car.start();
+  car.stop();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=2760c84c6f6abc39f40f0b2e421f420f)
+
+### **Multiple Inheritance In Dart**
+
+**Multiple inheritance** means a class can inherit from more than one class. In dart, you can’t inherit from more than one class. But you can implement multiple interfaces in a class.
+
+### Syntax For Implementing Multiple Interfaces In Dart
+
+```
+class ClassName implements Interface1, Interface2, Interface3 {
+  // code
+}
+
+```
+
+
+### **Example 3: Interface In Dart With Multiple Interfaces**
+
+In this example below, two abstract classes are named **Area** and **Perimeter**. The **Area** class has an abstract method **area()** and the **Perimeter** class has an abstract method **perimeter()**. The **Shape** class implements both the **Area** and **Perimeter** classes. The **Shape** class has to implement the **area()** and **perimeter()** methods.
+
+```
+// abstract class as interface
+abstract class Area {
+  void area();
+}
+// abstract class as interface
+abstract class Perimeter {
+  void perimeter();
+}
+// implements multiple interfaces
+class Rectangle implements Area, Perimeter {
+    // properties
+  int length, breadth;
+
+ // constructor
+  Rectangle(this.length, this.breadth);
+
+// implementation of area()
+  @override
+  void area() {
+    print('The area of the rectangle is ${length * breadth}');
+  }
+// implementation of perimeter()
+  @override
+  void perimeter() {
+    print('The perimeter of the rectangle is ${2 * (length + breadth)}');
+  }
+}
+
+void main() {
+  Rectangle rectangle = Rectangle(10, 20);
+  rectangle.area();
+  rectangle.perimeter();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=5db8c2a04bc2f3325d6745dc26512d7d)
+
+### **Example 4: Interface In Dart**
+
+In this example below, there is an abstract class named **Person**. The **Person** class has one property **name** and two abstract methods **run** and **walk**. The **Student** class implements the **Person** interface. The **Student** class has to implement the **run** and **walk** methods.
+
+```
+// abstract class as interface
+abstract class Person {
+    // properties
+  String? name;
+  // abstract method
+  void run();
+  void walk();
+}
+
+class Student implements Person {
+    // properties
+  String? name;
+ 
+ // implementation of run()
+ @override
+  void run() {
+    print('Student is running');
+  }
+  // implementation of walk()
+  @override
+  void walk() {
+    print('Student is walking');
+  }
+}
+
+void main() {
+  var student = Student();
+  student.name = 'John';
+  print(student.name);
+  student.run();
+  student.walk();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d6a74af393338dc0823a37c2d18ddd58)
+
+### **Example 5: Interface In Dart**
+
+In this example below, there is abstract class named **CalculateTotal** and **CalculateAverage**. The **CalculateTotal** class has an abstract method **total()** and the **CalculateAverage** class has an abstract method **average()**. The **Student** class implements both the **CalculateTotal** and **CalculateAverage** classes. The **Student** class has to implement the **total()** and **average()** methods.
+
+```
+// abstract class as interface
+abstract class CalculateTotal {
+  int total();
+}
+// abstract class as interface
+abstract class CalculateAverage {
+  double average();
+}
+// implements multiple interfaces
+class Student implements CalculateTotal, CalculateAverage {
+// properties
+  int marks1, marks2, marks3;
+// constructor
+  Student(this.marks1, this.marks2, this.marks3);
+// implementation of average()
+  @override
+  double average() {
+    return total() / 3;
+  }
+// implementation of total()
+  @override
+  int total() {
+    return marks1 + marks2 + marks3;
+  }
+}
+
+void main() {
+  Student student = Student(90, 80, 70);
+  print('Total marks: ${student.total()}');
+  print('Average marks: ${student.average()}');
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0bc646d1fa0fb8d7c21d7976cf7bbc82)
+
+### **Difference Between Extends & Implements**
+
+* extends: Used to inherit a class in another class.
+  * implements: Used to inherit a class as an interface in another class.
+* extends: Gives complete method definition to sub-class.
+  * implements: Gives abstract method definition to sub-class.
+* extends: Only one class can be extended.
+  * implements: Multiple classes can be implemented.
+* extends: It is optional to override the methods.
+  * implements: Concrete class must override the methods of an interface.
+* extends: Constructors of the superclass is called before the sub-class constructor.
+  * implements: Constructors of the superclass is not called before the sub-class constructor.
+* extends: The super keyword is used to access the members of the superclass.
+  * implements: Interface members can’t be accessed using the super keyword.
+* extends: Sub-class need not to override the fields of the superclass.
+  * implements: Subclass must override the fields of the interface.
+
+
+### **Key Points To Remember**
+
+*   An interface is a contract that defines the capabilities of a class.
+*   Dart has no keyword interface, but you can use class or abstract class to declare an interface.
+*   Use abstract class to declare an interface.
+*   A class can extend only one class but can implement multiple interfaces.
+*   Using the interface, you can achieve multiple inheritance in Dart.
+*   It is used to achieve abstraction.
+
+# Mixin in Dart 
+### **Introduction**
+
+In this section, you will learn about **dart mixins** to reuse the code in multiple classes.
+
+### **Mixin In Dart**
+
+Mixins are a way of reusing the code in multiple classes. Mixins are declared using the keyword **mixin** followed by the mixin name. Three keywords are used while working with mixins: **mixin**, **with**, and **on**. It is possible to use multiple mixins in a class.
+
+Info
+
+**Note:** The **with** keyword is used to apply the mixin to the class. It promotes DRY(Don’t Repeat Yourself) principle.
+
+### **Rules For Mixin**
+
+*   **Mixin** can’t be instantiated. You can’t create object of mixin.
+*   Use the **mixin** to share the code between multiple classes.
+*   **Mixin** has no constructor and cannot be extended.
+*   It is possible to use multiple **mixins** in a class.
+
+### **Syntax**
+
+```
+mixin Mixin1{
+  // code
+}
+
+mixin Mixin2{
+  // code
+}
+
+class ClassName with Mixin1, Mixin2{
+  // code
+}
+
+```
+
+
+### **Example 1: Mixin In Dart**
+
+In this example below, there are two mixins named **ElectricVariant** and **PetrolVariant**. The **ElectricVariant** mixin has a method **electricVariant()** and the **PetrolVariant** mixin has a method **petrolVariant()**. The **Car** class uses both the **ElectricVariant** and **PetrolVariant** mixins.
+
+```
+mixin ElectricVariant {
+  void electricVariant() {
+    print('This is an electric variant');
+  }
+}
+
+mixin PetrolVariant {
+  void petrolVariant() {
+    print('This is a petrol variant');
+  }
+}
+// with is used to apply the mixin to the class
+class Car with ElectricVariant, PetrolVariant {
+  // here we have access of electricVariant() and petrolVariant() methods
+}
+
+void main() {
+  var car = Car();
+  car.electricVariant();
+  car.petrolVariant();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0eb836a9478580ce08e65b291260dcf8)
+
+### **Example 2: Mixin In Dart**
+
+In this example below, there are two mixins named **CanFly** and **CanWalk**. The **CanFly** mixin has a method **fly()** and the **CanWalk** mixin has a method **walk()**. The **Bird** class uses both the **CanFly** and **CanWalk** mixins. The **Human** class uses the **CanWalk** mixin.
+
+```
+mixin CanFly {
+  void fly() {
+    print('I can fly');
+  }
+}
+
+mixin CanWalk {
+  void walk() {
+    print('I can walk');
+  }
+}
+
+class Bird with CanFly, CanWalk {
+ 
+}
+
+class Human with CanWalk {
+ 
+}
+
+void main() {
+  var bird = Bird();
+  bird.fly();
+  bird.walk();
+
+  var human = Human();
+  human.walk();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c71ee27c88f652f26eade3dd155c41d1)
+
+### **On Keyword**
+
+Sometimes, you want to use a mixin only with a specific class. In this case, you can use the **on** keyword.
+
+### **Syntax Of On Keyword**
+
+```
+mixin Mixin1 on Class1{
+  // code
+}
+
+```
+
+
+### **Example 3: On Keyword In Mixin In Dart**
+
+In this example below, there is abstract class named **Animal** with properties **name** and **speed**. The **Animal** class has an abstract method **run()**. The **CanRun** mixin is only used by class that extends **Animal**. The **Dog** class extends the **Animal** class and uses the **CanRun** mixin. The **Bird** class cannot use the **CanRun** mixin because it does not extend the **Animal** class.
+
+```
+abstract class Animal {
+  // properties
+  String name;
+  double speed;
+
+  // constructor
+  Animal(this.name, this.speed);
+
+  // abstract method
+  void run();
+}
+
+// mixin CanRun is only used by class that extends Animal
+mixin CanRun on Animal {
+  // implementation of abstract method
+  @override
+  void run() => print('$name is Running at speed $speed');
+}
+
+class Dog extends Animal with CanRun {
+  // constructor
+  Dog(String name, double speed) : super(name, speed);
+}
+
+void main() {
+  var dog = Dog('My Dog', 25);
+  dog.run();
+}
+
+// Not Possible
+// class Bird with Animal { } 
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=7a5a09ffd6ffb11beb50d3c443672142)
+
+### **What Is Allowed For Mixin**
+
+*   You can add properties and static variables.
+*   You can add regular, abstract, and static methods.
+*   You can use one or more mixins in a class.
+
+### **What Is Not Allowed For Mixin**
+
+*   You can’t define a constructor.
+*   You can’t extend a mixin.
+*   You can’t create an object of mixin.
+
+# Factory Constructor in Dart
+### **Introduction**
+
+In this section, you will learn about factory constructors with examples. 
+
+### **Factory Constructor In Dart**
+
+ All of the constructors that you have learned until now are **generative constructors**. Dart also provides a special type of constructor called a **factory constructor**.
+
+A **factory constructor** gives more flexibility to create an object. Generative constructors only create an instance of the class. But, the factory constructor can return an instance of the **class or even subclass**. It is also used to return the **cached instance** of the class.
+
+### Syntax
+
+```
+class ClassName {
+  factory ClassName() {
+    // TODO: return ClassName instance
+  }
+
+  factory ClassName.namedConstructor() {
+    // TODO: return ClassName instance
+  }
+}
+
+```
+
+
+### **Rules For Factory Constructors**
+
+*   Factory constructor must return an instance of the **class** or **sub-class**.
+*   You can’t use **this** keyword inside factory constructor.
+*   It can be **named** or **unnamed** and called like normal constructor.
+*   It can’t access **instance members** of the class.
+
+### **Example 1: Without Factory Constructor**
+
+In this example below, there is a class named **Area** with final properties **length** and **breadth**, and **area**. When you pass the **length** and **breadth** to the constructor, it calculates the **area** and stores it in the **area** property.
+
+Info
+
+**Note**: An initializer list allows you to assign properties to a new instance variable before the constructor body runs, but after creation.
+
+```
+class Area {
+  final int length;
+  final int breadth;
+  final int area;
+
+  // Initializer list 
+ const Area(this.length, this.breadth) : area = length * breadth;
+}
+
+void main() {
+  Area area = Area(10, 20);
+  print("Area is: ${area.area}");
+
+  // notice that here is a negative value
+  Area area2 = Area(-10, 20);
+  print("Area is: ${area2.area}");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=8a40348e1eff165cdec252e659ead4a0)
+
+Here **area2** object has a negative value. This is because we are not validating the input. Let’s create a factory constructor to validate the input.
+
+### **Example 2: With Factory Constructor**
+
+In this example below, **factory constructor** is used to validate the input. If the input is valid, it will return a new class instance. If the input is invalid, then it will throw an exception.
+
+```
+class Area {
+  final int length;
+  final int breadth;
+  final int area;
+
+  // private constructor
+  const Area._internal(this.length, this.breadth) : area = length * breadth;
+
+  // Factory constructor
+  factory Area(int length, int breadth) {
+    if (length < 0 || breadth < 0) {
+      throw Exception("Length and breadth must be positive");
+    }
+    // redirect to private constructor
+    return Area._internal(length, breadth);
+  }
+}
+
+void main() {
+  // This works
+  Area area = Area(10, 20);
+  print("Area is: ${area.area}");
+
+  // notice that here is negative value
+  Area area2 = Area(-10, 20);
+  print("Area is: ${area2.area}");
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=8ce217ca71fab3d93f48334f47f971e2)
+
+**Note**: With a factory constructor, you can initialize a final variable using logic that can’t be handled in the initializer list.
+
+### **Example 3: Factory Constructor In Dart**
+
+In this example below, there is a class named **Person** with two properties, **firstName** and **lastName**, and two constructors, a **normal constructor** and a **factory constructor**. The factory constructor creates a Person object from a [**Map**](https://dart-tutorial.com/collections/map-in-dart/).
+
+```
+class Person {
+  String firstName;
+  String lastName;
+
+  // constructor
+  Person(this.firstName, this.lastName);
+
+  // factory constructor Person.fromMap
+  factory Person.fromMap(Map<String, Object> map) {
+    final firstName = map['firstName'] as String;
+    final lastName = map['lastName'] as String;
+    return Person(firstName, lastName);
+  }
+}
+
+void main() {
+  // create a person object
+  final person = Person('John', 'Doe');
+
+  // create a person object from map
+  final person2 = Person.fromMap({'firstName': 'Harry', 'lastName': 'Potter'});
+
+  // print first and last name
+  print("From normal constructor: ${person.firstName} ${person.lastName}");
+  print("From factory constructor: ${person2.firstName} ${person2.lastName}");
+}
+
+```
+
+
+In the main method, two objects are created, one using the **generative/normal constructor** and the other using the **factory constructor**.
+
+[Run Online](https://dartpad.dev/?id=7578ec0bc4d7b3506d6970d8dd5b55c6)
+
+### **Example 4: Factory Constructor In Dart**
+
+In this example below, there is [**enum**](https://dart-tutorial.com/object-oriented-programming/enum-in-dart/) **ShapeType** with two values: **circle** and **rectangle**. There is an [**interface**](https://dart-tutorial.com/object-oriented-programming/interface-in-dart/) **Shape** with a factory constructor that creates objects of type Shape, either Circle or Rectangle. The **main** method instantiates two objects, one of each type, and calls the **draw()** method on each.
+
+```
+// enum ShapeType
+enum ShapeType { circle, rectangle }
+
+// abstract class Shape
+abstract class Shape {
+  // factory constructor
+  factory Shape(ShapeType type) {
+    switch (type) {
+      case ShapeType.circle:
+        return Circle();
+      case ShapeType.rectangle:
+        return Rectangle();
+      default:
+        throw 'Invalid shape type';
+    }
+  }
+  // method
+  void draw();
+}
+
+class Circle implements Shape {
+  // implement draw method
+  @override
+  void draw() {
+    print('Drawing circle');
+  }
+}
+
+class Rectangle implements Shape {
+  // implement draw method
+  @override
+  void draw() {
+    print('Drawing rectangle');
+  }
+}
+
+void main() {
+  // create Shape object
+  Shape shape = Shape(ShapeType.circle);
+  Shape shape2 = Shape(ShapeType.rectangle);
+  shape.draw();
+  shape2.draw();
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=0af4314bea6399fffaae2e8e41fe32d8)
+
+**Note**: Here it is possible to make **List** which contains both **Circle** and **Rectangle** objects in it.
+
+### **Example 5: Factory Constructor In Dart**
+
+In this example below, there is class **Person** with a final field **name**. It also has a private constructor and a static **\_cache** field. The class also has a **factory constructor** that checks if the **\_cache** field contains a key that matches the name parameter. If it does, it returns the Person object associated with that key. Otherwise, it creates a new **Person** object, adds it to the **\_cache**, and returns it.
+
+```
+class Person {
+  // final fields
+  final String name;
+
+  // private constructor
+  Person._internal(this.name);
+
+  // static _cache field
+  static final Map<String, Person> _cache = <String, Person>{};
+
+  // factory constructor
+  factory Person(String name) {
+    if (_cache.containsKey(name)) {
+      return _cache[name]!;
+    } else {
+      final person = Person._internal(name);
+      _cache[name] = person;
+      return person;
+    }
+  }
+}
+
+void main() {
+  final person1 = Person('John');
+  final person2 = Person('Harry');
+  final person3 = Person('John');
+
+  // hashcode of person1 and person3 are same
+  print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
+  print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
+  print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
+}
+
+```
+[Run Online](https://dartpad.dev/?id=8afe9651a6aa776a2f8b6ae7d0739be4)
+
+### **Singleton In Dart**
+
+Singletons are a common design pattern in object-oriented programming. A singleton class can have only one instance and provides a global point of access to it. You can create a singleton in Dart by defining a **factory constructor** that always returns the same instance. It is mostly useful when you want to create a single instance of a class and use it throughout the application like **database connection app**.
+
+### **Example 6: Singleton Using Factory Constructor**
+
+This code creates a **Singleton** class that can only be instantiated once, and provides a factory constructor to get the instance of the class. The main method creates two objects of the Singleton class, and prints the hashcode of the objects to verify that **they are same**.
+
+```
+// Singleton using dart factory
+class Singleton {
+ // static variable
+ static final Singleton _instance = Singleton._internal();
+ 
+// factory constructor
+ factory Singleton() {
+   return _instance;
+ }
+ // private constructor 
+ Singleton._internal();
+}
+ 
+void main() {
+ Singleton obj1 = Singleton();
+ Singleton obj2 = Singleton();
+ print(obj1.hashCode);
+ print(obj2.hashCode);
+}
+ 
+
+```
+[Run Online](https://dartpad.dev/?id=19b5aac734f3894f46955404fa99356c)
+
+You can see that both objects have the same hashcode. This is because both objects are pointing to the same instance.
+
+Info
+
+**Note**: Here Singleton.\_internal() is a private constructor so that it can not be called from outside the library. The factory constructor is used to return the same instance of the class.
+
+### **Key Points**
+
+Here **It** means **factory constructor**
+
+*   It uses the **factory** keyword to define a factory constructor.
+*   It returns an instance of the same class or sub-class.
+*   It is used to implement factory design patterns. \[Return sub-class instance based on input parameter as shown in example 4\]
+*   It is used to implement singleton design patterns. \[Return the same instance every time\]
+*   It is used to initialize a final variable using logic that can’t be handled in the initializer list.
+
+
+# Null Safety in Dart
+### **Null Safety**
+
+**Null safety** is a feature in the Dart programming language that helps developers to avoid null errors. This feature is called **Sound Null Safety** in dart. This allows developers to catch null errors at edit time.
+
+### **Advantage Of Null Safety**
+
+*   Write safe code.
+*   Reduce the chances of application crashes.
+*   Easy to find and fix bugs in code.
+
+**Note**: Null safety avoids null errors, runtime bugs, vulnerabilities, and system crashes which are difficult to find and fix.
+
+### **Example 1: Using Null In Variables**
+
+In the example below, the variable **age** is a **int** type. If you pass a null value to this variable, it will give an error instantly.
+
+```
+void main() { 
+   int age = null; // give error
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=01113313e1f416914a18fd6c84bb60bd)
+
+### **Problem With Null**
+
+Programmers do have a lot of difficulties while handling null values. They forget that there are **null** values, so the program breaks. In real world **null** mostly acts as **time bomb** for programmers, which is ready to break the program.
+
+**Note**: Common cause of errors in programming generally comes from not correctly handling null values.
+
+### **Non-Nullable By Default**
+
+In Dart, variables and fields are non-nullable by default, which means that they cannot have a value **null** unless you explicitly allow it.
+
+```
+int productid = 20; // non-nullable
+int productid = null; // give error
+
+```
+
+
+### **How To Declare Null Value**
+
+With dart **sound null Safety**, you cannot provide a null value by **default**. If you are 100% sure to use it, then you can use **?** operator after the type declaration.
+
+```
+// Declaring a nullable variable by using ?
+String? name;
+
+```
+
+
+This declares a variable **name**, which can be null or a string.
+
+### **How To Assign Values To Nullable Variables**
+
+You can assign a value to nullable variables just like any other variable. However, you can also assign null to them.
+
+```
+void main(){
+// Declaring a nullable variable by using ?
+String? name;
+// Assigning John to name
+name = "John";
+// Assigning null to name
+name = null;
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=613c72fcac9f86143ed001aa59d8b94d)
+
+### **How To Use Nullable Variables**
+
+You can use nullable variables in many ways. Some of them are shown below:
+
+*   You can use **if** statement to check whether the variable is null or not.
+*   You can use **!** operator, which returns null if the variable is null.
+*   You can use **??** operator to assign a default value if the variable is null.
+
+```
+void main(){
+// Declaring a nullable variable by using ?
+String? name;
+// Assigning John to name
+name = "John";
+// Assigning null to name
+name = null;
+// Checking if name is null using if statement
+if(name == null){
+print("Name is null");
+}
+// Using ?? operator to assign a default value
+String name1 = name ?? "Stranger";
+print(name1);
+// Using ! operator to return null if name is null
+String name2 = name!;
+print(name2);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=9b62520244c3c83e82adf8c709482a4b)
+
+### **Example 2: Define List Of Nullable Items**
+
+You can also store null in list values. In this example, the **items** is a list of nullable integers. It can contain null values as well as integers.
+
+```
+void main() {
+  // list of nullable ints
+  List<int?> items = [1, 2, null, 4];
+  print(items);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=524986d35682cc80987e6bfc5c6e17cd)
+
+### **Example 3: Null Safety In Dart Functions**
+
+In this example, the function **printAddress** has a parameter **address** which is a **String** type. If you pass a **null** value to this function, it will give a edit-time error.
+
+```
+void printAddress(String address) {
+  print(address);
+}
+
+void main() {
+  printAddress(null); // give error
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=4747b48f331357beb5d5669e002aedb8)
+
+### **Example 4: Define Function With Nullable Parameter**
+
+If you are 100% sure, then you can use **?** for the type declaration. In this example, the function **printAddress** has a parameter **address**, which is a **String?** type. You can pass both null and string values to this function.
+
+```
+// address is a nullable string
+void printAddress(String? address) {
+  print(address);
+}
+void main() {
+  // Passing null to printAddress
+  printAddress(null); // Works
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=816ecbb250bfabc9b8da65323bc2f8a5)
+
+### **Example 5: Null Safety In Dart Class**
+
+In the example, the class **Person** has a parameter **name**, which is a **String** type. If you pass a null value to this class, it will give a compile-time error.
+
+```
+class Person {
+  String name;
+  Person(this.name);
+}
+
+void main() {
+  Person person = Person(null); // give error
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=2f2e47ffcb6c083b9b46b6838b149d8b)
+
+### **Example 6: Define Null To Class Property**
+
+In this example, the class **Person** has a parameter **name**, which is a **String?** type. You can pass both null and string values to this class. To define a nullable property in a class, you can use the **?** operator after the type.
+
+```
+class Person {
+  String? name;
+  Person(this.name);
+}
+
+void main() {
+  Person person = Person(null); // Works
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=7c4a7e828bfb274e20b12d93e81f0bb5)
+
+### **Example 7: Working With Nullable Class Properties**
+
+In the example below, the **Profile** class has two nullable properties: **name** and **bio**. The **printProfile** method prints the name and bio of the profile. If the name or bio is **null**, it prints a default value instead.
+
+```
+class Profile {
+  String? name;
+  String? bio;
+
+  Profile(this.name, this.bio);
+
+  void printProfile() {
+    print("Name: ${name ?? "Unknown"}");
+    print("Bio: ${bio ?? "None provided"}");
+  }
+}
+
+void main() {
+  // Create a profile with a name and bio
+  Profile profile1 = Profile("John", "Software engineer and avid reader");
+  profile1.printProfile();
+
+  // Create a profile with only a name
+  Profile profile2 = Profile("Jane", null);
+  profile2.printProfile();
+
+  // Create a profile with only a bio
+  Profile profile3 = Profile(null, "Loves to travel and try new foods");
+  profile3.printProfile();
+
+  // Create a profile with no name or bio
+  Profile profile4 = Profile(null, null);
+  profile4.printProfile();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=6ce7d4d09cc92a9276e7b5b34f777e5c)
+
+### **Important Point In Dart Null Safety**
+
+*   Null means no value.
+*   Common error in programming is caused due to null.
+*   Dart 2.12 introduced **sound null Safety** to solve null problems.
+*   Non-nullable type is confirmed never to be **null**.
+
+**Note**: Sometimes you heard word like **NNBD**. It is **Non-Nullable By Default**, which means you can’t assign null to a variable by default.
+
+# Type Promotion in Dart 
+
+**Type promotion in dart** means that dart automatically converts a value of one type to another type. Dart does this when it knows that the value is of a specific type.
+
+### **How Type Promotion Works In Dart?**
+
+Types Promotion in Dart works in the following ways:
+
+*   Promoting from **general types** to **specific subtypes**.
+*   Promoting from **nullable types** to **non-nullable types**.
+
+### **Example 1: Promoting From General Types To Specific Subtypes**
+
+In this example, the variable **name** is declared as an **Object**. The **Object** class doesn’t have a **.length** property. Variable **name** gets promoted from **Object** to **String** so that you can access the **.length** property of the String class.
+
+```
+void main(){
+Object name = "Pratik";
+// print(name.length) will not work because Dart doesn't know that name is a String
+
+if(name is String) {
+// name promoted from Object to String
+  print("The length of name is ${name.length}");
+}
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=fe8a778897707521b4c305e1da4526eb)
+
+### **Example 2: Type Promotion In Dart**
+
+In this example, the variable **result** is declared as a **String**. In both **if** and **else** blocks, the variable **result** is assigned a value of type **String**. Therefore, the variable **result** is automatically promoted to a non-nullable type **String**.
+
+```
+void main(){
+// result is a String
+String result;
+// result is promoted to a non-nullable type String
+if(DateTime.now().hour < 12) {
+  result = "Good Morning";
+} else {
+  result = "Good Afternoon";
+}
+// display the result
+print("Result is $result");
+print("Length of result is ${result.length}");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=4b71f2b7e238bae98743f54014f7878f)
+
+### **Example 3: Type Promotion With Nullable To Non-Nullable Type**
+
+In Dart, you can also throw an exception if the variable is null. In this example, method **printLength**, takes a **String** type parameter. If the parameter is null, then it will throw an exception.
+
+```
+// method to print the length of the text
+void printLength(String? text){
+    if(text == null) {
+        throw Exception("The text is null");
+    }
+    print("Length of text is ${text.length}");
+}
+// main method
+void main() {
+    printLength("Hello");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=1f8ddc8b76885a6476ae309be9de0518)
+
+### **Example 4: Type Promotion With Nullable Type To Non-Nullable Type**
+
+In this example, the variable **value** contains a value of type **String** or **null**. The variable **value** is promoted to a non-nullable type **String** in the **if** block. If the variable **value** is null, then the **else** block is executed.
+
+```
+// importing dart:math library
+import 'dart:math';
+// creating a class DataProvider
+class DataProvider{
+    // creating a method stringorNull
+    String? get stringorNull => Random().nextBool() ? "Hello" : null;
+
+    // creating a method myMethod
+    void myMethod(){
+        String? value = stringorNull;
+        // checking if value String or not
+        if(value is String){
+            print("The length of value is ${value.length}");
+        }else{
+            print("The value is not string.");
+        }
+
+    }
+}
+// main method
+void main() {
+    DataProvider().myMethod();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=98dc5342dc26eb91e783065c27f15c86)
+
+**Note:** The output of the above example is random. It can be either **The length of value is 5** or **The value is not string.**
+
+# Late Keyword in Dart :: Dart Tutorial - Learn Dart Programming
+### **Late Keyword In Dart**
+
+[![targets](https://dart-tutorial.com/images/pieces/note-banner.png)](https://pieces.app/?utm_source=dart-tutorial&utm_medium=banner&utm_campaign=dart-tutorial-website&utm_content=note) In dart, **late** keyword is used to declare a variable or field that will be initialized at a later time. It is used to declare a **non-nullable** variable that is not initialized at the time of declaration.
+
+### **Example 1: Late Keyword In Dart**
+
+In this example, **name** variable is declared as a **late** variable. The **name** variable is initialized in the **main** method.
+
+```
+// late variable
+late String name;
+
+void main() {
+  // assigning value to late variable
+  name = "John";
+  print(name);
+}
+
+```
+
+
+[![targets](https://dart-tutorial.com/images/pieces/save-this-snippet-button.svg)](https://snippets.pieces.cloud/?p=7c524a84ec)
+
+[Run Online](https://dartpad.dev/?id=0b62efdc3696031bd48ef6c28bec9e11)
+
+When you put **late** infront of a variable declearation, you tell Dart the following:
+
+*   Don’t assign that variable a value yet.
+*   You will assign value later.
+*   You will make sure the variable has a value before you use it.
+
+Info
+
+**Note**: The **late** keyword is contract between you and Dart. You are telling Dart that you will assign a value to the variable before you use it. If you don’t assign a value to the variable before you use it, Dart will throw an error.
+
+### **Example 2: Late Keyword In Dart**
+
+In this example, there is **Person** class with a **name** field. The **name** field is declared as a late variable.
+
+```
+class Person {
+  // late variable
+  late String name;
+
+  void greet() {
+    print("Hello $name");
+  }
+}
+
+void main() {
+  Person person = Person();
+  // late variable is initialized here
+  person.name = "John";
+  person.greet();
+}
+
+```
+
+
+[![targets](https://dart-tutorial.com/images/pieces/save-this-snippet-button.svg)](https://snippets.pieces.cloud/?p=b0b94db901)
+
+[Run Online](https://dartpad.dev/?id=1b3d71610d20b76db295aec626788316)
+
+### **Usecase of Late Keyword In Dart**
+
+Dart late keyword has two use cases:
+
+*   **Declaring a non-nullable variable or field** that is not initialized at the point of declaration.
+*   **Lazy initialization** of a variable or field.
+
+### What Is Lazy Initialization
+
+**Lazy initialization** is a design pattern that delays the creation of an object, the calculation of a value, or some other expensive process until the **first time you need it**.
+
+Note: Using **late** means dart doesn’t initialize value right away, it only initializes when you access it for the first time. This is also called **lazy loading**.
+
+### **Example 3: Late Keyword In Dart**
+
+In this example, the **provideCountry** function is not called when the **value** variable is declared. The **provideCountry** function is called only when the **value** variable is used. **Lazy initialization** is used to avoid unnecessary computation.
+
+```
+// function
+String provideCountry() {
+  print("Function is called");
+  return "USA";
+}
+
+void main() {
+  print("Starting");
+  // late variable
+  late String value = provideCountry();
+  print("End");
+  print(value);
+}
+
+```
+
+
+If you remove the **late** keyword from the **value** variable, the **provideCountry** function will be called when the **value** variable is declared.
+
+[Run Online](https://dartpad.dev/?id=0bff775f0130bfa491c1e68eb0399152)
+
+### **Example 4: Late Keyword In Class**
+
+In this example, the **heavyComputation** function is called when the **description** variable is used. If you remove the **late** keyword from the **description** variable, the **heavyComputation** function will be called when the **Person** class is instantiated.
+
+```
+// Person class
+class Person {
+  final int age;
+  final String name;
+  late String description = heavyComputation();
+
+// constructor
+  Person(this.age, this.name) {
+    print("Constructor is called");
+  }
+// method
+  String heavyComputation() {
+    print("heavyComputation is called");
+    return "Heavy Computation";
+  }
+}
+
+void main() {
+  // object of Person class
+  Person person = Person(10, "John");
+  print(person.name);
+  print(person.description); 
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=675a3320b36f06e57c50b74fc239c86a)
+
+### **Example 5: Late Keyword In Class**
+
+In this example, the **\_getFullName** function is called when the **fullName** variable is used. The **firstName** and **lastName** variables are initialized when the **fullName** variable is used.
+
+```
+class Person {
+  // declaring late variables
+  late String fullName = _getFullName();
+  late String firstName = fullName.split(" ").first;
+  late String lastName = fullName.split(" ").last;
+
+// method
+  String _getFullName() {
+    print("_getFullName is called");
+    return "John Doe";
+  }
+}
+// main method
+void main() {
+  print("Start");
+  Person person = Person();
+  print("First Name: ${person.firstName}");
+  print("Last Name: ${person.lastName}");
+  print("Full Name: ${person.fullName}");
+  print("End");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ed92ec433b14216848b5cb9c3bb8249f)
+
+
+**Note**: If you remove the **late** keyword from the **fullName** variable, the **\_getFullName** function will be called when the **Person** class is instantiated.
+
+### **Late Final Keyword In Dart**
+
+If you want to assign a value to a variable only once, you can use the **late final** keyword. This is useful when you want to initialize a variable only once.
+
+### **Example 6: Late Final Keyword In Dart**
+
+In this example, there is class **Student** with a **name** field. The **name** field is declared as a **late final** variable. The **name** field is initialized in the **Student** constructor. The **name** field is assigned a value only once. If you try to assign a value to the **name** field again, you will get an error.
+
+```
+// Student class
+class Student {
+  // late final variable
+  late final String name;
+
+  // constructor
+  Student(this.name);
+}
+
+void main() {
+  // object of Student class
+  Student student = Student("John");
+  print(student.name);
+  student.name = "Doe"; // Error
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=13ce7925a45402dcfa1c65789ecaeb84)
+
+# Null Safety Exercise 
+
+Practice these exercises to master **dart null safety**. To practice these exercises, click on **Run Online** button and solve the problem.
+
+### **Exercise 1: Null Safety In Dart**
+
+In variable name **age**, assign a **null** value to it using **?**.
+
+```
+// Try to assign a null value to age variable using ?
+void main() {
+  int age;
+  age = null;
+  print("Age is $age");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0c90ae582f56343e7ba38e247680e786)
+
+### **Exercise 2: Nullable Type Parameter For Generics**
+
+Try using **?** to make the type parameter of **List** nullable.
+
+```
+// Try to make the type parameter of List nullable
+void main() {
+  List<int> items = [1, 2, null, 4];
+  print(items);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=f4eb46a46a06bec61c776def77b42158)
+
+### **Exercise 3: Null Assertion Operator (!)**
+
+Try using null assertion operator **!** to print null if the variable is null.
+
+```
+// Try to use null assertion operator(!) to print null if the variable is null
+void main() {
+  String? name;
+  name = null;
+  String name1 = name;
+  print(name1);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ed43a091ebd5b1b081960e889085d94f)
+
+### **Exercise 4: Null Assertion Operator (!) For Generics**
+
+Try using null assertion operator **!** to print null if the variable is null.
+
+```
+// Try to use null assertion operator(!) to print null if the variable is null
+void main() {
+  List<int?> items = [1, 2, null, 4];
+ 
+  int firstItem = items.first;
+  
+  print(firstItem);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=797bfbffe79c101e870dd1011a57ff3f)
+
+### **Exercise 5: Null Assertion Operator (!) For Generics**
+
+Try using null assertion operator **!** to print null if the variable is null.
+
+```
+// Try to use null assertion operator(!) to print null if the variable is null
+int? returnNullButSometimesNot() {
+  return -5;
+}
+
+void main() {
+ int result = returnNullButSometimesNot().abs();
+ print(result);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=960859806c11a03375d303b2bc5f6d06)
+
+### \*\*Exercise 6: Null Assertion Operator (!) \*\*
+
+Try using null assertion operator **!** to print the length of the String or return null if the variable is null.
+
+```
+// Try to use null assertion operator(!) to print the length of the String or return null if the variable is null
+int findLength(String? name) {
+    // add null assertion operator here
+  return name.length;
+}
+
+void main() {
+  int? length = findLength("Hello");
+  print("The length of the string is $length");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0cee7a67081a4742670f77c110d9b46a)
+
+### **Exercise 7: Null Coalescing Operator (??)**
+
+If you want to assign a default value to a variable if it is null, you can use null coalescing operator **??**.
+
+Try using null coalescing operator **??** to assign a default value to **Stranger** if it is null.
+
+```
+// Try to use null coalescing operator(??) to assign a default value to Stranger if it is null
+void main() {
+  String? name;
+  name = null;
+  String name1 = name;
+  print(name1);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=5919b02a8d1c776a8db70d0030dae861)
+
+### **Exercise 8: Type Promotion**
+
+Solve the error using type promotion:
+
+```
+// Try to solve the error using type promotion
+Object name = "Mark";
+print("The length of name is ${name.length}");
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=1408a935c649634b7638350dc78d58f6)
+
+### **Exercise 9: Type Promotion**
+
+Solve the error using type promotion:
+
+```
+// Try to solve the error using type promotion
+import 'dart:math';
+class DataProvider{
+    String? get stringorNull => Random().nextBool() ? "Hello" : null;
+
+    void myMethod(){
+        if(stringorNull is String){
+            print("The length of value is ${stringorNull.length}");
+        }else{
+            print("The value is not string.");
+        }
+
+    }
+}
+
+void main() {
+    DataProvider().myMethod();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=9a6874ffda0009702d0614c38944a7f6)
+
+### **Exercise 10: Late Keyword**
+
+Try using **late** keyword to solve the error:
+
+```
+// Try to solve the error using late keyword
+class Person{
+    String _name;
+
+    void setName(String name){
+        _name = name;
+    }
+
+    String get name => _name;
+}
+
+void main() {
+    Person person = Person();
+    person.setName("Mark");
+    print(person.name);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=661faf25a1796ad7d40aa9ffdc5b519e)
 
