@@ -2254,8 +2254,7 @@ void main(){
 
 [Run Online](https://dartpad.dev/?id=88474097465d8039d38c35f68f886a70)
 
-## Do While Loop in Dart :: Dart Tutorial - Learn Dart Programming
-### **Do While Loop**
+## Do While Loop in Dart 
 
 Do while loop is used to run a block of code multiple times. The loop’s body will be executed first, and then the condition is tested. The syntax of do while loop is:
 
@@ -2359,8 +2358,1774 @@ void main(){
 
 [Run Online](https://dartpad.dev/?id=7c3c2a8a4e750a3f2a8169f86d5d04e4)
 
-### **Video**
+## Break and Continue in Dart 
 
-Watch our video on while loop in Dart.
+In this tutorial, you will learn about the **break and continue** in dart. While working on loops, we need to skip some elements or terminate the loop immediately without checking the condition. In such a situation, you can use the break and continue statement.
 
-# Flutter Tutorial
+### **Break Statement**
+
+Sometimes you will need to break out of the loop immediately without checking the condition. You can do this using break statement.
+
+The break statement is used to exit a loop. It stops the loop immediately, and the program’s control moves outside the loop. Here is syntax of break:
+
+### **Example 1: Break In Dart For Loop**
+
+Here, the loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
+
+```
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      break;
+    }
+    print(i);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=50ac9046a365fef6dde49b5db51619df)
+
+### **Example 2: Break In Dart Negative For Loop**
+
+Here, the loop condition is true until the value of i is more than or equal to 1. However, the break says to go outside the loop when the value of i becomes 7.
+
+```
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    if (i == 7) {
+      break;
+    }
+    print(i);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=3018972104eb8b763dfc0963ab20f378)
+
+### **Example 3: Break In Dart While Loop**
+
+Here, this while loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
+
+```
+void main() {
+ int i =1;
+ while(i<=10){
+  print(i);
+   if (i == 5) {
+      break;
+    }
+    i++;
+ }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=fc56b90939f7b2f0071143cc57108b94)
+
+### **Example 4: Break In Switch Case**
+
+As we already learn in dart switch case, it is important to add **break** keyword in switch statement. This example prints the month name based on the number of the month using a switch case.
+
+```
+void main() {
+  var noOfMoneth = 5;
+  switch (noOfMoneth) {
+    case 1:
+      print("Selected month is January.");
+      break;
+    case 2:
+      print("Selected month is February.");
+      break;
+    case 3:
+      print("Selected month is march.");
+      break;
+    case 4:
+      print("Selected month is April.");
+      break;
+    case 5:
+      print("Selected month is May.");
+      break;
+    case 6:
+      print("Selected month is June.");
+      break;
+    case 7:
+      print("Selected month is July.");
+      break;
+    case 8:
+      print("Selected month is August.");
+      break;
+    case 9:
+      print("Selected month is September.");
+      break;
+    case 10:
+      print("Selected month is October.");
+      break;
+    case 11:
+      print("Selected month is November.");
+      break;
+    case 12:
+      print("Selected month is December.");
+      break;
+    default:
+      print("Invalid month.");
+      break;
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=089433333e62977d5957c4b3d2882930)
+
+### **Continue Statement**
+
+Sometimes you will need to skip an iteration for a specific condition. You can do this utilizing continue statement.
+
+The continue statement skips the current iteration of a loop. It will bypass the statement of the loop. It does not terminate the loop but rather continues with the next iteration. Here is the syntax of continue statement:
+
+### **Example 1: Continue In Dart**
+
+Here, the loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
+
+```
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+      continue;
+    }
+    print(i);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c5f2878678e363a80626ba578c53bdb9)
+
+### **Example 2: Continue In For Loop Dart**
+
+Here, the loop condition is true until the value of i is more than or equal to 1. However, the continue says to go to the next iteration of the loop when the value of i becomes 4.
+
+```
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    if (i == 4) {
+      continue;
+    }
+    print(i);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=822da2a7cb4e2b6fd4bae2c249c7aa52)
+
+### **Example 3: Continue In Dart While Loop**
+
+Here, this while loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
+
+```
+void main() {
+  int i = 1;
+  while (i <= 10) {
+    if (i == 5) {
+      i++;
+      continue;
+    }
+    print(i);
+    i++;
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=74b1837417fe0f7f53207072e58f45d1)
+
+## Exception Handling in Dart 
+### **Exception In Dart**
+
+An exception is an error that occurs at runtime during program execution. When the exception occurs, the flow of the program is interrupted, and the program terminates abnormally. There is a high chance of crashing or terminating the program when an exception occurs. Therefore, to save your program from crashing, you need to catch the exception.
+
+Info
+
+**Note**: If you are attempting a task that might result in an error, it’s a good habit to use the try-catch statement.
+
+### **Syntax**
+
+```
+try {
+// Your Code Here
+  }
+catch(ex){
+// Exception here
+}
+
+```
+
+
+### **Try & Catch In Dart**
+
+**Try** You can write the logical code that creates exceptions in the try block.
+
+**Catch** When you are uncertain about what kind of exception a program produces, then a catch block is used. It is written with a try block to catch the general exception.
+
+### **Example 1: Try Catch In Dart**
+
+In this example, you will see how to handle the exception using the try-catch block.
+
+```
+void main() {   
+   int a = 18;   
+   int b = 0;   
+   int res;    
+     
+   try {    
+      res = a ~/ b;
+      print("Result is $res");   
+   }    
+    // It returns the built-in exception related to the occurring exception  
+   catch(ex) {   
+      print(ex);   
+    }   
+}  
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=fbe990056aa6798dd04a0c4d1cd38dc3)
+
+### **Finally In Dart Try Catch**
+
+The **finally** block is always executed whether the exceptions occur or not. It is optional to include the final block, but if it is included, it should be after the try and catch block is over.
+
+**On** block is used when you know what types of exceptions are produced by the program.
+
+### **Syntax**
+
+```
+try {
+.....
+}
+on Exception1 {
+....
+}
+catch Exception2 {
+....
+}
+finally {
+// code that should always execute whether an exception or not.
+}
+
+```
+
+
+### **Example 2: Finally In Dart Try Catch**
+
+In this example, you will see how to handle the exception using the try-catch block with the finally block.
+
+```
+void main() {
+  int a = 12;
+  int b = 0;
+  int res;
+  try {
+    res = a ~/ b;
+  } on UnsupportedError {
+    print('Cannot divide by zero');
+  } catch (ex) {
+    print(ex);
+  } finally {
+    print('Finally block always executed');
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=76649da1be9329e5adb737ab6537b02e)
+
+### **Throwing An Exception**
+
+The throw keyword is used to raise an exception explicitly. A raised exception should be handled to prevent the program from exiting unexpectedly.
+
+### **Syntax**
+
+```
+throw new Exception_name() 
+
+```
+
+
+### **Example 3: Throwing An Exception**
+
+In this example, you will see how to throw an exception using the throw keyword.
+
+```
+void main() {
+  try {
+    check_account(-10);
+  } catch (e) {
+    print('The account cannot be negative');
+  }
+}
+
+void check_account(int amount) {
+  if (amount < 0) {
+    throw new FormatException(); // Raising explanation externally
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=bf9e42c2a20df5759490c0e7ee5b1d27)
+
+### **Why Is Exception Handling Needed?**
+
+Exceptions provide the means to separate the details of what to do when something out of the ordinary happens from the main logic of a program. Therefore, exceptions must be handled to prevent the application from unexpected termination. Here are some reasons why exception handling is necessary:
+
+*   To avoid abnormal termination of the program.
+*   To avoid an exception caused by logical error.
+*   To avoid the program from falling apart when an exception occurs.
+*   To reduce the vulnerability of the program.
+*   To maintain a good user experience.
+*   To try providing aid and some debugging in case of an exception.
+
+### **How To Create Custom Exception In Dart**
+
+As you go advance, you need to create your exception; Dart enables you to create your exception.
+
+### **Syntax**
+
+```
+class YourExceptionClass implements Exception{
+  // constructors, variables & methods
+}
+
+```
+
+
+### **Example 4: How to Create & Handle Exception**
+
+This program throws an exception when a student’s mark is negative. You will understand **implements** in the object-oriented programming section.
+
+```
+class MarkException implements Exception {
+  String errorMessage() {
+    return 'Marks cannot be negative value.';
+  }
+}
+
+void main() {
+  try {
+    checkMarks(-20);
+  } catch (ex) {
+    print(ex.toString());
+  }
+}
+
+void checkMarks(int marks) {
+  if (marks < 0) throw MarkException().errorMessage();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=38e624859b1671f840556ce827140079)
+
+### **Example 5: How to Create & Handle Exception**
+
+This program throws an exception when you find the square root of a negative number.
+
+```
+import 'dart:math';
+
+// custom exception class
+class NegativeSquareRootException implements Exception {
+  @override
+  String toString() {
+    return 'Sqauare root of negative number is not allowed here.';
+  }
+}
+
+// get square root of a positive number
+num squareRoot(int i) {
+  if (i < 0) {
+    // throw `NegativeSquareRootException` exception
+    throw NegativeSquareRootException();
+  } else {
+    return sqrt(i);
+  }
+}
+
+void main() {
+  try {
+    var result = squareRoot(-4);
+
+    print("result: $result");
+  } on NegativeSquareRootException catch (e) {
+    print("Oops, Negative Number: $e");
+  } catch (e) {
+    print(e);
+  } finally {
+    print('Job Completed!');
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=10e7acfcc31f524a1e7d45d2b768df36)
+
+## Functions in Dart 
+
+**Functions** are the block of code that performs a specific task. They are created when some statements are repeatedly occurring in the program. The function helps reusability of the code in the program.
+
+**Note**: The main objective of the function is **DRY(Don’t Repeat Yourself)**.
+
+### **Function Advantages**
+
+*   Avoid Code Repetition
+*   Easy to divide the complex program into smaller parts
+*   Helps to write a clean code
+
+### **Syntax**
+
+```
+returntype functionName(parameter1,parameter2, ...){
+  // function body
+}
+
+```
+
+
+**Return type**: It tells you the function output type. It can be void, String, int, double, etc. If the function doesn’t return anything, you can use void as the return type.
+
+**Function Name**: You can name functions by almost any name. Always follow a lowerCamelCase naming convention like void printName().
+
+**Parameters**: Parameters are the input to the function, which you can write inside the bracket (). Always follow a lowerCamelCase naming convention for your function parameter.
+
+### **Example 1: Function That Prints Name**
+
+This is a simple program that prints name using function. The name of function is **printName()**.
+
+```
+// writing function outside main function.
+void printName(){
+  print("My name is Raj Sharma. I am from function.");
+}
+// this is our main function.
+void main(){
+  printName();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=1a1843e8361cdf3ff84007aa35a716dc)
+
+### **Example 2: Function To Find Sum of Two Numbers**
+
+This function finds the sum of two numbers. Here, the function accepts two parameters. i.e., **num1 and num2**, and the return type is void.
+
+```
+void add(int num1, int num2){
+  int sum = num1 + num2;
+   print("The sum is $sum");
+}
+
+void main(){
+  add(10, 20);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=751cd393eb50f6be93ad6c5469275e49)
+
+### **Example 3: Function That Find Simple Interest**
+
+This function finds simple interest from principal, time and rate and display result.
+
+```
+// function that calculate interest
+void calculateInterest(double principal, double rate, double time) {
+  double interest = principal * rate * time / 100;
+  print("Simple interest is $interest");
+}
+
+void main() {
+  double principal = 5000;
+  double time = 3;
+  double rate = 3;
+  calculateInterest(principal, rate, time);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=7650d5a07147369ce515a5ca809560b7)
+
+### **Key Points**
+
+*   In dart function are also objects.
+*   You should follow the **lowerCamelCase** naming convention while naming function.
+*   You should follow the **lowerCamelCase** naming convention while naming function parameters.
+
+### **About lowerCamelCase**
+
+Name should start with lower-case, and every second word’s first letter will be upper-case like num1, fullName, isMarried, etc. Technically, this naming convention is called lowerCamelCase.
+
+### **Function Parameters Vs Arguments**
+
+Many programmers are often confused about parameters and arguments. Let’s have a look at this example.
+
+```
+// Here num1 and num2 are parameters
+void add(int num1, int num2){
+  int sum;
+  sum = num1 + num2;
+   
+  print("The sum is $sum");
+}
+
+void main(){
+// Here 10 and 20 are arguments
+  add(10, 20);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=b869453c5a183426f4e3414ce3f15ede)
+
+*   Here in **add(int num1, int num2)**, num1 and num2 are parameters and in **add(10, 20)**, 10 and 20 are arguments.
+*   Parameter is the name and data type you define as an input for your function.
+*   Argument is the actual value that you passed in.
+
+Info
+
+**Note**: In dart, if you don’t write the return type of function. It will automatically understand.
+
+
+## Types of Functions in Dart :: Dart Tutorial - Learn Dart Programming
+### **Types Of Function**
+
+**Functions** are the block of code that performs a specific task. Here are different types of functions:
+
+*   No Parameter And No Return Type
+*   Parameter And No Return Type
+*   No Parameter And Return Type
+*   Parameter And Return Type
+
+### **Function With No Parameter And No Return Type**
+
+In this function, you do not pass any parameter and expect no return type. Here is an example of it:
+
+### **Example 1: No Parameter & No Return Type**
+
+Here **printName()** is a function which prints name on screen.
+
+```
+void main() {
+  printName();
+}
+
+void printName() {
+  print("My name is John Doe.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d7894e31281ec69f141433769c81e7d7)
+
+In this program, **printName()** is the function which has keyword **void**. It means it has **no return type**, and the empty pair of parentheses implies that there is **no parameter** that is passed to the function.
+
+### **Example 2: No Parameter & No Return Type**
+
+Here **printPrimeMinisterName()** is a function which prints prime minister name on screen.
+
+```
+void main() {
+  print("Function With No Parameter and No Return Type");
+  printPrimeMinisterName();
+}
+
+void printPrimeMinisterName() {
+  print("John Doe.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=220db13fab191bff038d75c3effafc63)
+
+### **Function With Parameter And No Return Type**
+
+In this function, you do pass the parameter and expect no return type. Here is an example of it:
+
+### **Example 1: Parameter & No Return Type**
+
+Here **printName(String name)** is a function which welcome person.
+
+```
+void main() {
+  printName("John");
+}
+
+void printName(String name) {
+  print("Welcome, ${name}.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ad0b462f855964a5832b9cca0a006456)
+
+In this program, **printName(String name)** is the function which has keyword **void**. It means it has **no return type**, and the pair of parentheses is not empty but this time that suggests it to accept an **parameter**.
+
+### **Example 2: Parameter & No Return Type**
+
+Here **add(int a, int b)** is a function that finds and prints the sum of two numbers.
+
+```
+// This function add two numbers
+void add(int a, int b) {
+  int sum = a + b;
+  print("The sum is $sum");
+}
+
+void main() {
+  int num1 = 10;
+  int num2 = 20;
+
+  add(num1, num2);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=9b3295128019ab7b80fc78b0f0c03fbf)
+
+### **Function With No Parameter And Return Type**
+
+In this function, you do not pass any parameter but expect return type. Here is an example of it:
+
+### **Example 1: No Parameter & Return Type**
+
+Here **primeMinisterName()** is a function which returns prime minister name. In the entire program, anyone can use this function to find the name of the prime minister.
+
+```
+void main() {
+// Function With No Parameter & Return Type
+  String name = primeMinisterName();
+  print("The Name from function is $name.");
+}
+String primeMinisterName() {
+  return "John Doe";
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c96e8149702197004a330b4b558a048e)
+
+In this program, **primeMinisterName()** is the function which has **String** keyword before function name, means it **return** String value, and the empty pair of parentheses suggests that there is **no parameter** that is passed to the function.
+
+### **Example 2: No Parameter & Return Type**
+
+Here **voterAge()** is a function which returns minimum voter age.
+
+```
+// Function With No Parameter & Return Type
+void main() {
+  int personAge = 17;
+
+  if (personAge >= voterAge()) {
+    print("You can vote.");
+  } else {
+    print("Sorry, you can't vote.");
+  }
+}
+
+int voterAge() {
+  return 18;
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0114d061a25e1e26b8d3bf105b24cb29)
+
+### **Function With Parameter And Return Type**
+
+In this function, you do pass the parameter and also expect return type. Here is an example of it:
+
+### **Example 1: Parameter & Return Type**
+
+Here **add(int a, int b)** is a function that returns its sum in integer. We can display results in our main function.
+
+```
+// this function add two numbers
+int add(int a, int b) {
+  int sum = a + b;
+  return sum;
+}
+
+void main() {
+  int num1 = 10;
+  int num2 = 20;
+
+  int total = add(num1, num2);
+  print("The sum is $total.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=f9631f623653b1990513c8e7698509e2)
+
+In this program, **int add(int a, int b)** is the function with **int** as the return type, and the pair of parenthesis has two **parameters**, i.e., a and b.
+
+### **Example 2: Parameter & Return Type**
+
+Here **calculateInterest(double principal, double rate, double time)** is a function that returns its simple interest in double. We can display results in our main function.
+
+```
+// function that calculate interest
+double calculateInterest(double principal, double rate, double time) {
+  double interest = principal * rate * time / 100;
+  return interest;
+}
+
+void main() {
+  double principal = 5000;
+  double time = 3;
+  double rate = 3;
+  double result = calculateInterest(principal, rate, time);
+  print("The simple interest is $result.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=da88ac059ff1947abe46bced02f0af0b)
+
+**Note**: void is used for no return type as it is a non value-returning function.
+
+### \*\*Complete Example \*\*
+
+Here is the program, which includes all types of functions we studied earlier.
+
+```
+// parameter and return type
+int add(int a, int b) {
+  var total;
+  total = a + b;
+  return total;
+}
+
+// parameter and no return type
+void mul(int a, int b) {
+  var total;
+  total = a * b;
+  print("Multiplication is : $total");
+}
+
+// no parameter and return type
+String greet() {
+  String greet = "Welcome";
+  return greet;
+}
+
+// no parameter and no return type
+void greetings() {
+  print("Hello World!!!");
+}
+
+void main() {
+  var total = add(2, 3);
+  print("Total sum: $total");
+  mul(2, 3);
+  var greeting = greet();
+  print("Greeting: $greeting");
+  greetings();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=acf8ce1d1d325f6783bbce80f7c6b14b)
+
+## Function Parameter in Dart 
+### **Parameter In Dart**
+
+The parameter is the process of passing values to the function. The values passed to the function must match the number of parameters defined. A function can have any number of parameters.
+
+```
+// here a and b are parameters
+void add(int a, int b) { 
+} 
+
+```
+
+
+### **Positional Parameter In Dart**
+
+In positional parameters, you must supply the arguments in the same order as you defined on parameters when you wrote the function. If you call the function with the parameter in the wrong order, you will get the wrong result.
+
+### **Example 1: Use Of Positional Parameter**
+
+In the example below, the function **printInfo** takes two parameters. You must pass the person’s name and gender in the same order. If you pass values in the wrong order, you will get the **wrong result**.
+
+```
+void printInfo(String name, String gender) {
+  print("Hello $name your gender is $gender.");
+}
+
+void main() {
+  // passing values in wrong order
+  printInfo("Male", "John");
+
+  // passing values in correct order
+  printInfo("John", "Male");
+
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=8d5bdeb2d1eae817658f9fd141b00655)
+
+### **Example 2: Providing Default Value On Positional Parameter**
+
+In the example below, function **printInfo** takes two positional parameters and one optional parameter. The title parameter is optional here. If the user doesn’t pass the title, it will automatically set the title value to **sir/ma’am**.
+
+```
+void printInfo(String name, String gender, [String title = "sir/ma'am"]) {
+  print("Hello $title $name your gender is $gender.");
+}
+
+void main() {
+  printInfo("John", "Male");
+  printInfo("John", "Male", "Mr.");
+  printInfo("Kavya", "Female", "Ms.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=965979f3c88c980a0b7454b458f50eb5)
+
+### **Example 3: Providing Default Value On Positional Parameter**
+
+In the example below, function **add** takes two positional parameters and one optional parameter. The **num3** parameter is **optional** here with default value **0**.
+
+```
+void add(int num1, int num2, [int num3=0]){
+   int sum;
+  sum = num1 + num2 + num3;
+   
+   print("The sum is $sum");
+}
+
+void main(){
+  add(10, 20);
+  add(10, 20, 30);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=b59f4dbc5355d207ce289fd2593359a4)
+
+### **Named Parameter In Dart**
+
+Dart allows you to use named parameters to clarify the parameter’s meaning in function calls. **Curly braces {}** are used to specify named parameters.
+
+### **Example 1: Use Of Named Parameter**
+
+In the example below, function **printInfo** takes two named parameters. You can pass value in any order. You will learn about **?** in **null safety** section.
+
+```
+void printInfo({String? name, String? gender}) {
+  print("Hello $name your gender is $gender.");
+}
+
+void main() {
+  // you can pass values in any order in named parameters.
+  printInfo(gender: "Male", name: "John");
+  printInfo(name: "Sita", gender: "Female");
+  printInfo(name: "Reecha", gender: "Female");
+  printInfo(name: "Reecha", gender: "Female");
+  printInfo(name: "Harry", gender: "Male");
+  printInfo(gender: "Male", name: "Santa");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=6a8792f6f343fd5062b28bc83f3eddfd)
+
+### **Example 2: Use Of Required In Named Parameter**
+
+In the example below, function **printInfo** takes two named parameters. You can see a **required** keyword, which means you must pass the person’s name and gender. If you don’t pass it, it won’t work.
+
+```
+void printInfo({required String name, required String gender}) {
+  print("Hello $name your gender is $gender.");
+}
+
+void main() {
+  // you can pass values in any order in named parameters.
+  printInfo(gender: "Male", name: "John");
+  printInfo(gender: "Female", name: "Suju");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=b2ce48d6cd282a9d1113b59b0d71c976)
+
+Info
+
+**Note**: You can pass the value in any order in the named parameter. **?** is used to remove null safety, which we will discuss in the coming chapter.
+
+### **Optional Parameter In Dart**
+
+Dart allows you to use optional parameters to make the parameter optional in function calls. **Square braces \[\]** are used to specify optional parameters.
+
+### **Example: Use Of Optional Parameter**
+
+In the example below, function **printInfo** takes two **positional parameters** and one **optional parameter**. First, you must pass the person’s name and gender. The title parameter is optional here. Writing **\[String? title\]** makes **title** optional.
+
+```
+void printInfo(String name, String gender, [String? title]) {
+  print("Hello $title $name your gender is $gender.");
+}
+
+void main() {
+  printInfo("John", "Male");
+  printInfo("John", "Male", "Mr.");
+  printInfo("Kavya", "Female", "Ms.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ec0d52e0f1d15f7e9aeebe1a8f9bcb01)
+
+## Anonymous Function in Dart 
+
+This tutorial will teach you the anonymous function and how to use it. You already saw function like **main()**, **add()**, etc. These are the **named** functions, which means they have a certain name.
+
+But not every function needs a name. If you remove the return type and the function name, the function is called **anonymous function**.
+
+### **Syntax**
+
+Here is the syntax of the anonymous function.
+
+```
+(parameterList){
+// statements
+}
+
+```
+
+
+### **Example 1: Anonymous Function In Dart**
+
+In this example, you will learn to use an anonymous function to print all list items. This function invokes each fruit without having a function name.
+
+```
+void main() {
+  const fruits = ["Apple", "Mango", "Banana", "Orange"];
+
+  fruits.forEach((fruit) {
+    print(fruit);
+  });
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=eed29975b352c0f1f61760dc0c0d6bfe)
+
+### **Example 2: Anonymous Function In Dart**
+
+In this example, you will learn to find the cube of a number using an anonymous function.
+
+```
+void main() {
+// Anonymous function
+  var cube = (int number) {
+    return number * number * number;
+  };
+
+  print("The cube of 2 is ${cube(2)}");
+  print("The cube of 3 is ${cube(3)}");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=b57bd7884e109904eaf227e53148c464)
+
+## Arrow Function in Dart
+
+Dart has a special syntax for the function body, which is only one line. The arrow function is represented by **\=>** symbol. It is a shorthand syntax for any function that has only one expression.
+
+### **Syntax**
+
+The syntax for the dart arrow function.
+
+```
+returnType functionName(parameters...) => expression;
+
+```
+
+
+**Note**: The arrow function is used to make your code short.**\=> expr** syntax is a shorthand for **{ return expr; }**.
+
+### **Example 1: Simple Interest Without Arrow Function**
+
+This program finds simple interest without using the arrow function.
+
+```
+// function that calculate interest
+double calculateInterest(double principal, double rate, double time) {
+  double interest = principal * rate * time / 100;
+  return interest;
+}
+
+void main() {
+  double principal = 5000;
+  double time = 3;
+  double rate = 3;
+
+  double result = calculateInterest(principal, rate, time);
+  print("The simple interest is $result.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=7766c775f91c378bb5d0efec23ecb183)
+
+### **Example 2: Simple Interest With Arrow Function**
+
+This program finds simple interest using the arrow function.
+
+```
+// arrow function that calculate interest
+double calculateInterest(double principal, double rate, double time) =>
+    principal * rate * time / 100;
+
+void main() {
+  double principal = 5000;
+  double time = 3;
+  double rate = 3;
+
+  double result = calculateInterest(principal, rate, time);
+  print("The simple interest is $result.");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=657009baa484bbaac0bc4f92adb2f7f2)
+
+### **Example 3: Simple Calculation Using Arrow Function**
+
+This program finds the sum, difference, multiplication, and division of two numbers using the arrow function.
+
+```
+int add(int n1, int n2) => n1 + n2;
+int sub(int n1, int n2) => n1 - n2;
+int mul(int n1, int n2) => n1 * n2;
+double div(int n1, int n2) => n1 / n2;
+
+void main() {
+  int num1 = 100;
+  int num2 = 30;
+
+  print("The sum is ${add(num1, num2)}");
+  print("The diff is ${sub(num1, num2)}");
+  print("The mul is ${mul(num1, num2)}");
+  print("The div is ${div(num1, num2)}");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=516bd6e463ff93ead5edf7b69d7b3e2e)
+
+## Scope in Dart 
+
+The scope is a concept that refers to where values can be accessed or referenced. Dart uses curly braces **{}** to determine the scope of variables. If you define a variable inside curly braces, you can’t use it outside the curly braces.
+
+### **Method Scope**
+
+If you created variables inside the method, you can use them inside the method block but not outside the method block.
+
+### **Example 1: Method Scope**
+
+```
+void main() {
+  String text = "I am text inside main. Anyone can't access me.";
+  print(text);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=1d97729350575e25c79cbdf8b5ef59b1)
+
+In this program, **text** is a String type where you can access and print method only inside the main function but not outside the main function.
+
+### **Global Scope**
+
+You can define a variable in the global scope to use the variable anywhere in your program.
+
+### **Example 1: Global Scope**
+
+```
+String global = "I am Global. Anyone can access me.";
+void main() {
+  print(global);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=5cb7155e0cfe835bce865764a1da3674)
+
+In this program, the variable named **global** is a top-level variable; you can access it anywhere in the program.
+
+Info
+
+**Note**: Define your variable as much as close **Local** as you can. It makes your code clean and prevents you from using or changing them where you shouldn’t.
+
+### **Lexical Scope**
+
+Dart is lexically scoped language, which means you can find the scope of variables with the help of **braces {}**.
+
+## Math in Dart 
+
+Math helps you to perform mathematical calculations efficiently. With dart math, you can **generate random number**, **find square root**, **find power of number**, or **round specific numbers**. To use math in dart, you must `import 'dart:math';`.
+
+### **How To Generate Random Numbers In Dart**
+
+This example shows how to generate random numbers from **0 - 9** and also **1 to 10**. After watching this example, you can generate a random number between your choices.
+
+```
+import 'dart:math';
+void main()
+{
+Random random = new Random();
+int randomNumber = random.nextInt(10); // from 0 to 9 included
+print("Generated Random Number Between 0 to 9: $randomNumber");
+  
+int randomNumber2 = random.nextInt(10)+1; // from 1 to 10 included  
+print("Generated Random Number Between 1 to 10: $randomNumber2"); 
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=bc906521f231d51ec3c5a4ee81f9d4c4)
+
+*   In this program, **random.nextInt(10)** function is used to generate a random number between **0 and 9** in which the value is stored in a variable **randomNumber**.
+    
+*   The **random.nextInt(10)+1** function is used to generate random number between **1 to 10** in which the value is stored in a variable **randomNumber2**.
+    
+
+### **Generate Random Number Between Any Number**
+
+Use this formula to generate a random number between any numbers in the dart.
+
+```
+ min + Random().nextInt((max + 1) - min);
+
+```
+
+
+### **Example: Random Number In Dart Between 10 - 20**
+
+This program generates random numbers between 10 to 20.
+
+```
+import 'dart:math';
+void main()
+{
+
+int min = 10;
+int max = 20; 
+
+int randomnum = min + Random().nextInt((max + 1) - min);
+  
+print("Generated Random number between $min and $max is: $randomnum");  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=fcc351a04341474cbc963937ed860275)
+
+### **Random Boolean And Double Value**
+
+Here you will learn how to generate random boolean and double values in dart.
+
+```
+  Random().nextBool(); // return true or false
+  Random().nextDouble(); // return 0.0 to 1.0
+
+```
+
+
+### **Example 1: Generate Random Boolean And Double Values**
+
+This example below generate random and boolean value.
+
+```
+import 'dart:math';
+void main()
+{
+double randomDouble = Random().nextDouble();
+bool randomBool = Random().nextBool();
+  
+print("Generated Random double value is: $randomDouble");  
+print("Generated Random bool value is: $randomBool");  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d51f0a1dc4cf3a6afabd87510e089ae5)
+
+### **Example 2: Generate a List Of Random Numbers In Dart**
+
+This example will generate a list of 10 random numbers between 1 to 100.
+
+```
+import 'dart:math';
+void main()
+{
+List<int> randomList = List.generate(10, (_) => Random().nextInt(100)+1); 
+print(randomList);  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=773b8fe29b427e94cffebe3882f32634)
+
+### **Useful Math Function In Dart**
+
+You can use some useful math functions to perform your daily task with dart programming.
+
+
+|Function Name|Output|Description               |
+|-------------|------|--------------------------|
+|pow(10,2)    |100   |10 to the power 2 is 10*10|
+|max(10,2)    |10    |Maximum number is 10      |
+|min(10,2)    |2     |Minimum number is 2       |
+|sqrt(25)     |5     |Square root of 25 is 5    |
+
+
+### **Example: Math In Dart**
+
+This example below finds the power of a number, a minimum and maximum value between two numbers, and the square root of a number.
+
+```
+import 'dart:math';
+void main()
+{
+  int num1 = 10;
+  int num2 = 2;
+
+  num powernum = pow(num1,num2);
+  num maxnum = max(num1,num2);
+  num minnum = min(num1,num2);
+  num squareroot = sqrt(25); // Square root of 25
+  
+  print("Power is $powernum"); 
+  print("Maximum is $maxnum"); 
+  print("Minimum is $minnum"); 
+  print("Square root is $squareroot"); 
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=5f165f8153240f2ea69654d8ea283d7f)
+
+*   In this program, **pow(num1, num2)** is a function where num1 is a digit and num2 is a power.
+*   **max(num1,num2)** is a function which give the maximum number between num1 and num2.
+*   **min(num1,num2)** is a function which give the mininum number between num1 and num2.
+*   **sqrt(25)** is a function that gives the square root of 25.
+
+
+## List in Dart 
+
+If you want to store multiple values in the same variable, you can use **List**. List in dart is similar to **Arrays** in other programming languages. E.g. to store the names of multiple students, you can use a List. The List is represented by **Square Braces\[\].**
+
+### **How To Create List**
+
+You can create a List by specifying the initial elements in a square bracket. Square bracket **\[\]** is used to represent a List.
+
+```
+// Integer List
+List<int> ages = [10, 30, 23];
+
+// String List
+List<String> names = ["Raj", "John", "Rocky"];
+
+// Mixed List
+var mixed = [10, "John", 18.8];
+
+```
+
+### **Types Of Lists**
+
+*   Fixed Length List
+*   Growable List \[**Mostly Used**\]
+
+### **Fixed Length List**
+
+The fixed-length Lists are defined with the specified length. You cannot change the size at runtime. This will create List of 5 integers with the value 0.
+
+```
+void main() {  
+   var list = List<int>.filled(5,0);  
+   print(list);  
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=435b64ef1dc3a1956bec1f90f3524bfd)
+
+Info
+
+Note: You cannot add a new item to **Fixed Length List**, but you can change the values of List.
+
+### **Growable List**
+
+A List defined without a specified length is called Growable List. The length of the growable List can be changed in runtime.
+
+```
+void main() {  
+   var list1 = [210,21,22,33,44,55];  
+   print(list1);  
+}  
+
+```
+
+[Run Online](https://dartpad.dev/?id=fcbb0ff5a18b58da07c651cb18a9f678)
+
+### **Access Item Of List**
+
+You can access the List item by **index**. Remember that the List index always starts with **0**.
+
+```
+void main() {
+  var list = [210, 21, 22, 33, 44, 55];
+
+  print(list[0]);
+  print(list[1]);
+  print(list[2]);
+  print(list[3]);
+  print(list[4]);
+  print(list[5]);
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=4df857aa907cc94bd39aa358efcccef9)
+
+### **Get Index By Value**
+
+You can also get the index by value.
+
+```
+void main() {
+  var list = [210, 21, 22, 33, 44, 55];
+
+  print(list.indexOf(22));
+  print(list.indexOf(33));
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=6ae37c408e11aab38a25f6c32678fa4e)
+
+### **Find The Length Of The List**
+
+You can find the length of List by using **.length** property.
+
+```
+void main(){  
+   List<String> names = ["Raj", "John", "Rocky"];
+   print(names.length);
+ }
+
+```
+
+[Run Online](https://dartpad.dev/?id=e9ab9ed13874c12aee3f755626d6235e)
+
+Info
+
+Note: Remember that List **index** starts with **0** and length always starts with **1**.
+
+### **Changing Values Of List**
+
+You can also change the value of List. You can do it by **listName\[index\]=value;**. For more, see the example below.
+
+```
+void main(){  
+   List<String> names = ["Raj", "John", "Rocky"];
+   names[1] = "Bill";
+   names[2] = "Elon";
+   print(names);
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=12055628434885a94d851cc4ef7e2dcd)
+
+### **Mutable And Immutable List**
+
+A mutable List means they can change after the declaration, and an immutable List means they can’t change after the declaration.
+
+```
+List<String> names = ["Raj", "John", "Rocky"]; // Mutable List
+names[1] = "Bill"; // possible
+names[2] = "Elon"; // possible
+    
+const List<String> names = ["Raj", "John", "Rocky"]; // Immutable List
+names[1] = "Bill"; // not possible
+names[2] = "Elon"; // not possible
+
+```
+
+### **List Properties In Dart**
+
+*   **first**: It returns the first element in the List.
+*   **last**: It returns the last element in the List.
+*   **isEmpty**: It returns **true** if the List is empty and **false** if the List is not empty.
+*   **isNotEmpty**: It returns **true** if the List is not empty and **false** if the List is empty.
+*   **length**: It returns the length of the List.
+*   **reversed**: It returns a List in reverse order.
+*   **single**: It is used to check if the List has only one element and returns it.
+
+### **Access First And Last Elements Of List**
+
+You can access the first and last elements in the List by:
+
+```
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   print("First element of the List is: ${drinks.first}");
+   print("Last element of the List is: ${drinks.last}");
+}  
+
+```
+
+[Run Online](https://dartpad.dev/?id=a9e9571dc9be52e88985fd80b96d1143)
+
+### **Check The List Is Empty Or Not**
+
+You can also check List contain any elements inside it or not. It will give result either in **true** or in **false**.
+
+```
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   List<int>  ages = [];
+   print("Is drinks Empty: "+drinks.isEmpty.toString());
+   print("Is drinks not Empty: "+drinks.isNotEmpty.toString());
+   print("Is ages Empty: "+ages.isEmpty.toString());
+   print("Is ages not Empty: "+ages.isNotEmpty.toString());
+   
+}  
+
+```
+
+[Run Online](https://dartpad.dev/?id=48641b91ad78114471165aa2a7af7dc1)
+
+### **Reverse List In Dart**
+
+You can easily reverse List by using **.reversed** properties. Here is an example below:
+
+```
+void main() {
+   List<String> drinks = ["water", "juice", "milk", "coke"];
+   print("List in reverse: ${drinks.reversed}");
+}  
+
+```
+[Run Online](https://dartpad.dev/?id=5501d43466e1b7c7c049b4dc323f7d9c)
+
+### **Adding Item To List**
+
+Dart provides four methods to insert the elements into the Lists. These methods are given below.
+
+
+
+* Method: add()
+  * Description: Add one element at a time and returns the modified List object.
+* Method: addAll()
+  * Description: Insert the multiple values to the given List, and each value is separated by the commas and enclosed with a square bracket ([]).
+* Method: insert()
+  * Description: Provides the facility to insert an element at a specified index position.
+* Method: insertAll()
+  * Description: Insert the multiple value at the specified index position.
+
+
+### **Example 1: Add Item To List**
+
+In this example below, we are adding an item to evenList using **add()** method.
+
+```
+void main() {  
+    var evenList = [2,4,6,8,10];  
+    print(evenList);  
+    evenList.add(12);  
+    print(evenList);  
+}  
+
+```
+
+[Run Online](https://dartpad.dev/?id=6e9d51b33ef774c98bea789e5d6d5024)
+
+### **Example 2: Add Items To List**
+
+In this example below, we are adding items to evenList using **addAll()** method.
+
+```
+void main() {
+  var evenList = [2, 4, 6, 8, 10];
+  print(evenList);
+  evenList.addAll([12, 14, 16, 18]);
+  print(evenList);
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=4574deeb6dbfa2a667d3ff67e34ad50f)
+
+### **Example 3: Insert Item To List**
+
+In this example below, we are adding an item to myList using **insert()** method.
+
+```
+void main() {
+  List myList = [3, 4, 2, 5];
+  print(myList);
+  myList.insert(2, 15);
+  print(myList);
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=6ad3b5f29e6dcacfde34ddc923a0c2a8)
+
+### \*\*Example 4: Insert Items To List \*\*
+
+In this example below, we are adding items to myList using **insertAll()** method.
+
+```
+void main() {
+  var myList = [3, 4, 2, 5];
+  print(myList);
+  myList.insertAll(1, [6, 7, 10, 9]);
+  print(myList);
+}
+  
+
+```
+
+[Run Online](https://dartpad.dev/?id=30e5e6960d2e05d99c17b517e088532d)
+
+### **Replace Range Of List**
+
+You can also replace the range of the List. For more, see the example below.
+
+```
+void main() {
+  var list = [10, 15, 20, 25, 30];
+  print("List before updation: ${list}");
+  list.replaceRange(0, 4, [5, 6, 7, 8]);
+  print("List after updation using replaceAll() function : ${list}");
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=422e4c7cb0305806ccd251e1b80acbd4)
+
+### **Removing List Elements**
+
+
+|Method       |Description                                                         |
+|-------------|--------------------------------------------------------------------|
+|remove()     |Removes one element at a time from the given List.                  |
+|removeAt()   |Removes an element from the specified index position and returns it.|
+|removeLast() |Remove the last element from the given List.                        |
+|removeRange()|Removes the item within the specified range.                        |
+
+
+### **Example 1: Removing List Item From List**
+
+In this example below, we are removing item of List using **remove()** method.
+
+```
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element : ${list}");
+  list.remove(30);
+  print("List after removing element : ${list}");
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=a9b5f5de3ed6f4715742a0bb82ed75ef)
+
+### **Example 2: Removing List Item From List**
+
+In this example below, we are removing item of List using **removeAt()** method.
+
+```
+void main() {
+  var list = [10, 11, 12, 13, 14];
+  print("List before removing element : ${list}");
+  list.removeAt(3);
+  print("List after removing element : ${list}");
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=4eb32e9382bd8f43e4967d74dea459c5)
+
+### **Example 3: Removing Last Item From List**
+
+In this example below, we are removing last item of List using **removeLast()** method.
+
+```
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element:${list}");
+  list.removeLast();
+  print("List after removing last element:${list}");
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=57bb1b31fd02a0c0fe220402d39dc9a2)
+
+### **Example 4: Removing List Range From List**
+
+In this example below, we are removing the range of items of List using **removeRange()** method.
+
+```
+void main() {
+  var list = [10, 20, 30, 40, 50];
+  print("List before removing element:${list}");
+  list.removeRange(0, 3);
+  print("List after removing range element:${list}");
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=57e901f607226aac87e6ed3e5efe6425)
+
+### **Loops In List**
+
+You can use for loop, for each loop, or any other type of loop.
+
+```
+void main() {
+  List<int> list = [10, 20, 30, 40, 50];
+  list.forEach((n) => print(n));
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=0d29000e7ff3fa97970ae3277b1ace8a)
+
+### **Multiply All Value By 2 Of All List**
+
+This example below multiply value of List item by 2.
+
+```
+void main() {
+  List<int> list = [10, 20, 30, 40, 50];
+  var douledList = list.map((n) => n * 2);
+
+  print((douledList));
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=206c821dfd78247b87f354a05ef128fa)
+
+### **Combine Two Or More List In Dart**
+
+You can combine two or more Lists in dart by using **spread** syntax.
+
+```
+void main() {
+  List<String> names = ["Raj", "John", "Rocky"];
+  List<String> names2 = ["Mike", "Subash", "Mark"];
+
+  List<String> allNames = [...names, ...names2];
+  print(allNames);
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=b1c3e94a9ddbd9b981b8eb31384e3dc4)
+
+### **Conditions In List**
+
+You can also use conditions in List. Here **sad = false** so cart doesn’t contain **Beer** in it.
+
+```
+void main() {
+  bool sad = false;
+  var cart = ['milk', 'ghee', if (sad) 'Beer'];
+  print(cart);
+}
+ 
+
+```
+
+[Run Online](https://dartpad.dev/?id=7f5860b2b6ddb098be0b5de777ca1d5a)
+
+### **Where In List Dart**
+
+You can use where with List to filter specific items. Here in this example, even numbers are only filtered.
+
+```
+void main(){
+List<int> numbers = [2,4,6,8,10,11,12,13,14];
+
+List<int> even = numbers.where((number)=> number.isEven).toList(); 
+print(even);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0acad1be5fbeac37ba35b7d6089e99b8)
+
+**Note**: Choose Lists if order matters. You can easily add items to the end. Searching can be slow when the List size is big.
+
