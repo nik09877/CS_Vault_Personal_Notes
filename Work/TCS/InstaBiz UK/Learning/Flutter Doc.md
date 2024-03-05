@@ -1,6 +1,16 @@
+
+# Table of Contents
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|inlineFirstLevel)
+minLevel: 1 # Include headings from the specified level
+maxLevel: 2 # Include headings up to the specified level
+includeLinks: true # Make headings clickable
+debugInConsole: false # Print debug info in Obsidian console
+```
 # Dart Tutorial
 
-## Introduction to Dart 
+## Introduction to Dart
 ### Dart
 
 - Dart is a client-optimized, object-oriented, modern programming language to build apps fast for many platforms like android, iOS, web, desktop, etc. 
@@ -1430,3 +1440,927 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=f0f335372ad3bad70a651a5e8967500b)
 
+
+## Conditions in Dart 
+
+With conditions, you can control the flow of the dart program. 
+
+### Types Of Condition
+
+You can use following conditions to control the flow of your program.
+
+*   **If Condition**
+*   **If-Else Condition**
+*   **If-Else-If Condition**
+*   **Switch case**
+
+### **If Condition**
+
+The easy and most common way of controlling the flow of a program is through the use of an _if statement_. If statement allow us to execute a code block when the given condition is true. Conditions evaluate boolean values.
+
+### **Syntax**
+
+```
+if(condition) {
+    Statement 1;
+    Statement 2;
+       .
+       .
+    Statement n;
+}
+
+```
+
+
+### **Example Of If Condition**
+
+It prints whether the person is a voter. If the person’s age is greater and equal to 18, it will print, You are a voter.
+
+```
+void main()
+{
+    var age = 20;
+    
+    if(age >= 18){
+      print("You are voter.");
+    }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=6d8cac25d23cfd6e3d344ea3d7d551f6)
+
+### **If-Else Condition**
+
+If the result of the condition is true, then the body of the if-condition is executed. Otherwise, the body of the else-condition is executed.
+
+### **Syntax**
+
+```
+if(condition){
+statements;
+}else{
+statements;
+}
+
+```
+
+
+### **Example Of If-Else Condition**
+
+Dart program prints whether the person is a voter or not based on age.
+
+```
+void main(){
+        int age = 12;
+        if(age >= 18){
+            print("You are voter.");
+        }else{
+            print("You are not voter.");
+        }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=976ee1d061eb24ba3ce26688bec33f37)
+
+### **Condition Based On Boolean Value**
+
+If the married status is false, it prints you are single; otherwise, it will print you are married.
+
+```
+void main(){
+        bool isMarried = false;
+        if(isMarried){
+            print("You are married.");
+        }else{
+            print("You are single.");
+        }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=419e922bfb5d57445ee39b0fd5abfb2c)
+
+### **If-Else-If Condition**
+
+When you have multiple if conditions, then you can use if-else-if. You can learn more in the example below. When you have more than two conditions, you can use if, else if, else in dart.
+
+### **Syntax**
+
+```
+if(condition1){
+statements1;
+}else if(condition2){
+statements2;
+}else if(condition3){
+statements3;
+}
+.
+.
+.
+else(conditionN){
+statementsN;
+}
+
+```
+
+
+### **Example Of If-Else-If Condition**
+
+This program prints the month name based on the numeric value of that month. You will get a different result if you change the number of month.
+
+```
+void main() {
+  int noOfMonth = 5;
+
+  // Check the no of month
+  if (noOfMonth == 1) {
+    print("The month is jan");
+  } else if (noOfMonth == 2) {
+    print("The month is feb");
+  } else if (noOfMonth == 3) {
+    print("The month is march");
+  } else if (noOfMonth == 4) {
+    print("The month is april");
+  } else if (noOfMonth == 5) {
+    print("The month is may");
+  } else if (noOfMonth == 6) {
+    print("The month is june");
+  } else if (noOfMonth == 7) {
+    print("The month is july");
+  } else if (noOfMonth == 8) {
+    print("The month is aug");
+  } else if (noOfMonth == 9) {
+    print("The month is sep");
+  } else if (noOfMonth == 10) {
+    print("The month is oct");
+  } else if (noOfMonth == 11) {
+    print("The month is nov");
+  } else if (noOfMonth == 12) {
+    print("The month is dec");
+  } else {
+    print("Invalid option given.");
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=6b8d479d070a1cdff239851785bf6935)
+
+### **Find Greatest Number Among 3 Numbers**
+
+Dart program, which finds the greatest number among three numbers.
+
+```
+void main(){
+        int num1 = 1200;
+        int num2 = 1000;
+        int num3 = 150;
+
+        if(num1 > num2  && num1 > num3){
+            print("Num 1 is greater: i.e $num1");
+        }
+        if(num2 > num1 && num2 > num3){
+           print("Num2 is greater: i.e $num2");
+        }
+        if(num3 > num1 && num3 > num2){
+            print("Num3 is greater: i.e $num3");
+        }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=9a8d5e29dc41c4b1713b920efae95cfa)
+
+## Switch Case in Dart 
+
+A Switch case is used to execute the code block based on the condition.
+
+```
+switch(expression) {
+    case value1:
+        // statements
+        break;
+    case value2:
+        // statements
+        break;
+    case value3:
+        // statements
+        break;
+    default:
+       // default statements
+}
+
+```
+
+**How does switch-case statement work in dart**
+
+*   The **expression** is evaluated once and compared with each case value.
+*   If **expression** matches with case value1, the statements of case value1 are executed. Similarly, case value 2 will be executed if the expression matches case value2. If the expression matches the case value3, the statements of case value3 are executed.
+*   The **break** keywords tell dart to exit the switch statement because the statements in the case block are finished.
+*   If there is no match, **default statements** are executed.
+
+**Note**: You can use a Switch case as an alternative to the **if-else-if** condition.
+
+### **Replace If Else If With Switch In Dart**
+
+Here you can see the same program using **if else if** and **switch** in dart.
+
+### **Example: Using If Else If**
+
+This example prints the day name based on the numeric day of the week using a if else if.
+
+```
+void main(){
+   var dayOfWeek = 5;
+if (dayOfWeek == 1) {
+        print("Day is Sunday.");
+  }
+else if (dayOfWeek == 2) {
+       print("Day is Monday.");
+     }
+else if (dayOfWeek == 3) {
+      print("Day is Tuesday.");
+     }
+else if (dayOfWeek == 4) {
+        print("Day is Wednesday.");
+     }
+else if (dayOfWeek == 5) {
+        print("Day is Thursday.");
+   }
+else if (dayOfWeek == 6) {
+        print("Day is Friday.");
+    }
+else if (dayOfWeek == 7) {
+        print("Day is Saturday.");
+}else{
+        print("Invalid Weekday.");
+     }
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=ee6d90177af379b0a6fc7917130249fc)
+
+### **Example Of Switch Statement**
+
+This example prints the day name based on the numeric day of the week using a switch case.
+
+```
+void main() {
+  var dayOfWeek = 5;
+  switch (dayOfWeek) {
+    case 1:
+        print("Day is Sunday.");
+        break;
+    case 2:
+        print("Day is Monday.");
+      break;
+    case 3:
+      print("Day is Tuesday.");
+      break;
+    case 4:
+        print("Day is Wednesday.");
+      break;
+    case 5:
+        print("Day is Thursday.");
+      break;
+    case 6:
+        print("Day is Friday.");
+      break;
+    case 7:
+        print("Day is Saturday.");
+      break;
+    default:
+        print("Invalid Weekday.");
+      break;
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=01f56818a1754280968c0b6546321478)
+
+Info
+
+**Note**: The syntax of switch statements is cleaner and much easier to read and write.
+
+### **Switch Case On Strings**
+
+You can also use a switch case with strings. This program prints information based on weather value.
+
+```
+void main() {
+ const weather = "cloudy";
+
+  switch (weather) {
+    case "sunny":
+        print("Its a sunny day. Put sunscreen.");
+        break;
+    case "snowy":
+        print("Get your skis.");
+      break;
+    case "cloudy":
+    case "rainy": 
+      print("Please bring umbrella.");
+      break;
+    default:
+        print("Sorry I am not familiar with such weather.");
+      break;
+  }
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=ace41d17f7bc6b5f68a767cccc218000)
+
+### **Switch Case On Enum**
+
+An **[enum](https://dart-tutorial.com/object-oriented-programming/enum-in-dart/)** or enumeration is used for defining value according to you. You can define your own type with a finite number of options. Here is the syntax for defining enum.
+
+### Syntax
+
+```
+enum enum_name { 
+  constant_value1, 
+  constant_value2, 
+  constant_value3 
+  }
+
+```
+
+### **Example of Switch Using Enum In Dart**
+
+Enum plays well with switch statements. Let’s see an example using enum.
+
+```
+// define enum outside main function
+enum Weather{ sunny, snowy, cloudy, rainy}
+// main method
+void main() {
+ const weather = Weather.cloudy;
+  
+  switch (weather) {
+    case Weather.sunny:
+        print("Its a sunny day. Put sunscreen.");
+        break;
+    case Weather.snowy:
+        print("Get your skis.");
+      break;
+    case Weather.rainy:
+    case Weather.cloudy:
+      print("Please bring umbrella.");
+      break;
+    default:
+        print("Sorry I am not familiar with such weather.");
+      break;
+  }
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=e954c4fc1f335d0c06cb66d6c4493392)
+
+## Ternary Operator in Dart 
+
+The ternary operator is like if-else statement. This is a one-liner replacement for the if-else statement. It is used to write a conditional expression, where based on the result of a boolean condition, one of the two values is selected.
+
+### **Syntax**
+
+```
+condition ? exprIfTrue : exprIfFalse
+
+```
+
+
+**Note**: The ternary operator takes a condition and returns one of two values, depending upon the condition’s boolean value, i.e., true or false.
+
+### **Ternary Operator Vs If Else**
+
+We already learned if-else in dart. Let us see the same example using the if-else and ternary operator.
+
+### Example Using If Else
+
+This program finds greatest number between two numbers using if else.
+
+```
+void main() {
+  int num1 = 10;
+  int num2 = 15;
+  int max = 0;
+  if(num1> num2){
+    max = num1;
+  }else {
+    max = num2;
+  }
+  print("The greatest number is $max");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=2a5b5e4364c0b8a960a7048dcf848d5c)
+
+### **Example 1: Using Ternary Operator**
+
+This program finds greatest number between two numbers using ternary operator.
+
+```
+void main() {
+  int num1 = 10;
+  int num2 = 15;
+  int max = (num1 > num2) ? num1 : num2;
+  print("The greatest number is $max");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d8828e24baa9ad7c4e80cdda2fc9811a)
+
+**Note**: Ternary operator makes if-else code much shorter and readable. If you have problems with ternary, you can always use if-else.
+
+### **Example 2: Ternary Operator Dart**
+
+If the selection value is 2 then it will set output as Apple otherwise, Banana.
+
+```
+void main() {
+  var selection = 2;
+  var output = (selection == 2) ? 'Apple' : 'Banana';
+  print(output);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=4c3782133a8a3e3279dc14a1de2357f5)
+
+### **Example 3 Ternary Operator Dart**
+
+This is a dart program to print whether the person is a voter or not using a ternary operator.
+
+```
+void main() {
+  var age = 18;
+  var check = (age >= 18) ? 'You ara a voter.' : 'You are not a voter.';
+  print(check);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=51c2bc6014a529fb0e8415e59c629fe5)
+
+## For Loop in Dart 
+
+This is the most common type of loop. You can use **for loop** to run a code block multiple times according to the condition. The syntax of for loop is:
+
+```
+for(initialization; condition; increment/decrement){
+            statements;
+}
+
+```
+
+
+*   Initialization is executed (one time) before the execution of the code block.
+*   Condition defines the condition for executing the code block.
+*   Increment/Decrement is executed (every time) after the code block has been executed.
+
+### **Example 1: To Print 1 To 10 Using For Loop**
+
+This example prints 1 to 10 using for loop. Here **int i = 1;** is initialization, **i<=10** is condition and **i++** is increment/decrement.
+
+```
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=264feb7ba11737142520e4b5f23351c0)
+
+### **Example 2: To Print 10 To 1 Using For Loop**
+
+This example prints 10 to 1 using for loop. Here **int i = 10;** is initialization, **i>=1** is condition and **`i--`** is increment/decrement.
+
+```
+void main() {
+  for (int i = 10; i >= 1; i--) {
+    print(i);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=f82a4a43964c0086b4aab3e5894e4194)
+
+### **Example 3: Print Name 10 Times Using For Loop**
+
+This example prints the name 10 times using for loop. Based on the condition, the body of the loop executes 10 times.
+
+```
+void main() {
+  for (int i = 0; i < 10; i++) {
+    print("John Doe");
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ee30fb7c24a66cfd219624363ceaba44)
+
+### **Example 4: Display Sum of n Natural Numbers Using For Loop**
+
+Here, the value of the **total** is **0** initially. Then, the for loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the **total**, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
+
+```
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  
+  for(int i=1; i<=n; i++){
+    total = total + i;
+  }
+  
+  print("Total is $total");
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c2a8725e7265d0913de7df0457481fbe)
+
+### **Example 5: Display Even Numbers Between 50 to 100 Using For Loop**
+
+This program will print even numbers between 50 to 100 using for loop.
+
+```
+void main(){
+  for(int i=50; i<=100; i++){
+    if(i%2 == 0){
+      print(i);
+    }
+  } 
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=045b8c1efb218cc4b6a3faf5cda9ac7c)
+
+### **Infinite Loop In Dart**
+
+If the condition never becomes false in looping, it is called an infinite loop. It uses more resources on your computer. The task is done repeatedly until the memory runs out.
+
+This program prints 1 to infinite because the condition is **i>=1**, which is always true with i++.
+
+```
+void main() {
+  for (int i = 1; i >= 1; i++) {
+    print(i);
+  }
+}
+
+```
+
+
+Info
+
+**Note**: Infinite loops take your computer resources continuously, use more power, and slow your computer. So always check your loop before use.
+
+## For Each Loop in Dart
+
+The **for each** loop iterates over all list elements or variables. It is useful when you want to loop through **list/collection**. The syntax of for-each loop is:
+
+```
+collection.forEach(void f(value));
+
+```
+
+
+### **Example 1: Print Each Item Of List Using Foreach**
+
+This will print each name of football players.
+
+```
+void main(){
+  List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+  footballplayers.forEach( (names)=>print(names));
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=3546b6f86e5fa6d692259a57bb2b31c3)
+
+### **Example 2: Print Each Total and Average Of Lists**
+
+This program will print the total sum of all numbers and also the average value from the total.
+
+```
+void main(){
+  List<int> numbers = [1,2,3,4,5];
+  
+  int total = 0;
+  
+   numbers.forEach( (num)=>total= total+ num);
+  
+  print("Total is $total.");
+  
+  double avg = total / (numbers.length);
+  
+  print("Average is $avg.");
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=398279cbea47b32e742d90523ede34a8)
+
+### **For In Loop In Dart**
+
+There is also another for loop, i.e., **for in loop**. It also makes looping over the list very easily.
+
+```
+void main(){
+    List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+  for(String player in footballplayers){
+    print(player);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=5e76bb057666cf7c4e5c1cc3c45fa918)
+
+### **How to Find Index Value Of List**
+
+In dart, asMap method converts the list to a map where the keys are the index and values are the element at the index.
+
+```
+void main(){
+
+List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+
+footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
+
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=cc3495b4811d8ee0c52618ec6551614e)
+
+### **Example 3: Print Unicode Value of Each Character of String**
+
+This will split the name into Unicode values and then find characters from the Unicode value.
+
+```
+void main(){
+  
+String name = "John";
+     
+for(var codePoint in name.runes){
+  print("Unicode of ${String.fromCharCode(codePoint)} is $codePoint.");
+}
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=72c0263e605c022d0134c4e58480f205)
+
+## While Loop in Dart 
+
+In **while loop**, the loop’s body will run until and unless the condition is true. You must write conditions first before statements. This loop checks conditions on every iteration. If the condition is true, the code inside {} is executed, if the condition is false, then the loop stops.
+
+### Syntax
+
+```
+while(condition){  
+       //statement(s);  
+      // Increment (++) or Decrement (--) Operation;  
+}  
+
+```
+
+
+*   A while loop evaluates the condition inside the parenthesis ().
+*   If the condition is true, the code inside {} is executed.
+*   The condition is re-checked until the condition is false.
+*   When the condition is false, the loop stops.
+
+### **Example 1: To Print 1 To 10 Using While Loop**
+
+This program prints 1 to 10 using while loop.
+
+```
+void main() {
+  int i = 1;
+  while (i <= 10) {
+    print(i);
+    i++;
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=4bd92d159957b654e5f8e0703eb6a620)
+
+Info
+
+**Note**: Do not forget to increase the variable used in the condition. Otherwise, the loop will never end and becomes an infinite loop.
+
+### **Example 2: To Print 10 To 1 Using While Loop**
+
+This program prints 10 to 1 using while loop.
+
+```
+void main() {
+  int i = 10;
+  while (i >= 1) {
+    print(i);
+    i--;
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d625da929c5550ba0f65397010922653)
+
+### **Example 3: Display Sum of n Natural Numbers Using While Loop**
+
+Here, the value of the total is 0 initially. Then, the while loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the total, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
+
+```
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  int i =1;
+
+  while(i<=n){
+    total = total + i;
+    i++;
+  }
+  
+  print("Total is $total");
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d7212f76e2c02a141c001b86136f92fd)
+
+### **Example 4: Display Even Numbers Between 50 to 100 Using While Loop**
+
+This program will print even numbers between 50 to 100 using while loop.
+
+```
+void main(){
+  int i = 50;
+  while(i<=100){
+  if(i%2 == 0){
+      print(i);
+    }
+    i++;
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=88474097465d8039d38c35f68f886a70)
+
+## Do While Loop in Dart :: Dart Tutorial - Learn Dart Programming
+### **Do While Loop**
+
+Do while loop is used to run a block of code multiple times. The loop’s body will be executed first, and then the condition is tested. The syntax of do while loop is:
+
+```
+do{
+    statement1;
+    statement2;
+    .
+    .
+    .
+    statementN;
+}while(condition);
+
+```
+
+
+*   First, it runs statements, and finally, the condition is checked.
+*   If the condition is true, the code inside {} is executed.
+*   The condition is re-checked until the condition is false.
+*   When the condition is false, the loop stops.
+
+Info
+
+**Note**: In a do-while loop, the statements will be executed at least once time, even if the condition is false. It is because the statement is executed before checking the condition.
+
+### **Example 1: To Print 1 To 10 Using Do While Loop**
+
+```
+void main() {
+  int i = 1;
+  do {
+    print(i);
+    i++;
+  } while (i <= 10);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=3ed5f1b22915886443ecc157480e6bbc)
+
+### **Example 2: To Print 10 To 1 Using Do While Loop**
+
+```
+void main() {
+  int i = 10;
+  do {
+    print(i);
+    i--;
+  } while (i >= 1);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=5f8af035a8fa74c794c82bbaa589d03a)
+
+### **Example 3: Display Sum of n Natural Numbers Using Do While Loop**
+
+Here, the value of the **total** is 0 initially. Then, the do-while loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the total, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
+
+```
+void main(){
+
+  int total = 0;
+  int n = 100; // change as per required
+  int i =1;
+  
+  do{
+  total = total + i;
+    i++;
+  }while(i<=n);
+  
+  print("Total is $total");
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=491f3761c6e018e314945490efc86bfb)
+
+### **When The Condition Is False**
+
+Let’s make one condition false and see the demo below. **Hello** got printed if the condition is false.
+
+```
+void main(){
+
+  int number = 0;
+  
+  do{
+  print("Hello");
+  number--;
+  }while(number >1);
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=7c3c2a8a4e750a3f2a8169f86d5d04e4)
+
+### **Video**
+
+Watch our video on while loop in Dart.
+
+# Flutter Tutorial
