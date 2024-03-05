@@ -6836,3 +6836,879 @@ If you copy the code from one class to another class, then you will have to main
 ### **Is Inheritance Finished If I Learned Extending Class?**
 
 No, there is a lot more to learn about inheritance. You need to learn about **Constructor Inheritance**, **Method Overriding**, **Abstract Class**, **Interface** and **Mixin** etc. You will learn about these concepts in the next chapters.
+
+## Inheritance Of Constructor in Dart 
+### **Introduction**
+
+In this section, you will learn about inheritance of constructor in Dart programming language with the help of examples. Before learning about inheritance of constructor in Dart, you should have a basic understanding of the [constructor](https://dart-tutorial.com/object-oriented-programming/constructor-in-dart/) and [inheritance](https://dart-tutorial.com/object-oriented-programming/inheritance-in-dart/) in Dart.
+
+### **What Is Inheritance Of Constructor In Dart?**
+
+Inheritance of constructor in Dart is a process of inheriting the constructor of the parent class to the child class. It is a way of reusing the code of the parent class.
+
+### **Example 1: Inheritance Of Constructor In Dart**
+
+In this example below, there is class named **Laptop** with a constructor. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor.
+
+```
+class Laptop {
+  // Constructor
+  Laptop() {
+    print("Laptop constructor");
+  }
+}
+
+class MacBook extends Laptop {
+  // Constructor
+  MacBook() {
+    print("MacBook constructor");
+  }
+}
+
+void main() {
+  var macbook = MacBook();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=14f1157aa08e7ac7e44a155062c67206)
+
+Info
+
+**Note**: The constructor of the parent class is called first and then the constructor of the child class is called.
+
+### **Example 2: Inheritance Of Constructor With Parameters In Dart**
+
+In this example below, there is class named **Laptop** with a constructor with parameters. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor with parameters.
+
+```
+class Laptop {
+  // Constructor
+  Laptop(String name, String color) {
+    print("Laptop constructor");
+    print("Name: $name");
+    print("Color: $color");
+  }
+}
+
+class MacBook extends Laptop {
+  // Constructor
+  MacBook(String name, String color) : super(name, color) {
+    print("MacBook constructor");
+  }
+}
+
+void main() {
+  var macbook = MacBook("MacBook Pro", "Silver");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=e98f4ba85e104e763da376222f9e60b8)
+
+### **Example 3: Inheritance Of Constructor**
+
+In this example below, there is class named **Person** with properties **name** and **age**. There is another class named **Student** which extends the **Person** class. The **Student** class has additional property **rollNumber**. Lets see how to create a constructor for the **Student** class.
+
+```
+class Person {
+  String name;
+  int age;
+
+  // Constructor
+  Person(this.name, this.age);
+}
+
+class Student extends Person {
+  int rollNumber;
+
+  // Constructor
+  Student(String name, int age, this.rollNumber) : super(name, age);
+}
+
+void main() {
+  var student = Student("John", 20, 1);
+  print("Student name: ${student.name}");
+  print("Student age: ${student.age}");
+  print("Student roll number: ${student.rollNumber}");
+
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=78ec6a73cfc2802f98b447d630f3e4f9)
+
+### **Example 4: Inheritance Of Constructor With Named Parameters In Dart**
+
+In this example below, there is class named **Laptop** with a constructor with named parameters. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor with named parameters.
+
+```
+class Laptop {
+  // Constructor
+  Laptop({String name, String color}) {
+    print("Laptop constructor");
+    print("Name: $name");
+    print("Color: $color");
+  }
+}
+
+class MacBook extends Laptop {
+  // Constructor
+  MacBook({String name, String color}) : super(name: name, color: color) {
+    print("MacBook constructor");
+  }
+}
+
+void main() {
+  var macbook = MacBook(name: "MacBook Pro", color: "Silver");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=248394f6a14c17f77c24f2d948fd89bf)
+
+### **Example 5: Calling Named Constructor Of Parent Class In Dart**
+
+In this example below, there is class named **Laptop** with one default constructor and one named constructor. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor with named parameters. You can call the named constructor of the parent class using the **super** keyword.
+
+```
+class Laptop {
+  // Default Constructor
+  Laptop() {
+    print("Laptop constructor");
+  }
+
+  // Named Constructor
+  Laptop.named() {
+    print("Laptop named constructor");
+  }
+}
+
+class MacBook extends Laptop {
+  // Constructor
+  MacBook() : super.named() {
+    print("MacBook constructor");
+  }
+}
+
+void main() {
+  var macbook = MacBook();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=9c9d85ce409c3b128ba1c9c34ace7672)
+
+## Super in Dart 
+### **Introduction**
+
+In this section, you will learn about Super in Dart programming language with the help of examples. Before learning about Super in Dart, you should have a basic understanding of the [constructor](https://dart-tutorial.com/object-oriented-programming/constructor-in-dart/) and [inheritance](https://dart-tutorial.com/object-oriented-programming/inheritance-in-dart/) in Dart.
+
+### **What Is Super In Dart?**
+
+Super is used to refer to the parent class. It is used to call the parent class’s properties and methods.
+
+### **Example 1: Super In Dart**
+
+In this example below, the **show()** method of the **MacBook** class calls the **show()** method of the parent class using the **super** keyword.
+
+```
+class Laptop {
+  // Method
+    void show() {
+        print("Laptop show method");
+    }
+}
+
+class MacBook extends Laptop {
+    void show() {
+        super.show(); // Calling the show method of the parent class
+        print("MacBook show method");
+    }
+}
+
+void main() {
+  // Creating an object of the MacBook class
+  MacBook macbook = MacBook();
+  macbook.show();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=742d67a7b0be20144dabd8d93c4d2e63)
+
+### **Example 2: Accessing Super Properties In Dart**
+
+In this example below, the **display()** method of the **Tesla** class calls the **noOfSeats** property of the parent class using the **super** keyword.
+
+```
+class Car {
+  int noOfSeats = 4;
+}
+
+class Tesla extends Car {
+  int noOfSeats = 6;
+
+  void display() {
+    print("No of seats in Tesla: $noOfSeats");
+    print("No of seats in Car: ${super.noOfSeats}");
+  }
+}
+
+void main() {
+  var tesla = Tesla();
+  tesla.display();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0d3d5f67c3e4153204ce327ac5168d25)
+
+### **Example 3: Super With Constructor In Dart**
+
+In this example below, the **Manager** class constructor calls the **Employee** class constructor using the **super** keyword.
+
+```
+class Employee {
+  // Constructor
+  Employee(String name, double salary) {
+    print("Employee constructor");
+    print("Name: $name");
+    print("Salary: $salary");
+  }
+}
+
+class Manager extends Employee {
+  // Constructor
+  Manager(String name, double salary) : super(name, salary) {
+    print("Manager constructor");
+  }
+}
+
+void main() {
+  Manager manager = Manager("John", 25000.0);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=745bcf7b26059bdac42918f6d15ac063)
+
+### **Example 4: Super With Named Constructor In Dart**
+
+In this example below, the **Manager** class named constructor calls the **Employee** class named constructor using the **super** keyword.
+
+```
+class Employee {
+  // Named constructor
+  Employee.manager() {
+    print("Employee named constructor");
+  }
+}
+
+class Manager extends Employee {
+  // Named constructor
+  Manager.manager() : super.manager() {
+    print("Manager named constructor");
+  }
+}
+
+void main() {
+  Manager manager = Manager.manager();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=1c29f2aeccfe3ee27665b48db34965e9)
+
+### **Example 5: Super With Multilevel Inheritance In Dart**
+
+In this example below, the **MacBookPro** class method **display** calls the **display** method of the parent class **MacBook** using the **super** keyword. The **MacBook** class method **display** calls the **display** method of the parent class **Laptop** using the **super** keyword.
+
+```
+class Laptop {
+  // Method
+  void display() {
+    print("Laptop display");
+  }
+}
+
+class MacBook extends Laptop {
+  // Method
+  void display() {
+    print("MacBook display");
+    super.display();
+  }
+}
+
+class MacBookPro extends MacBook {
+  // Method
+  void display() {
+    print("MacBookPro display");
+    super.display();
+  }
+}
+
+void main() {
+  var macbookpro = MacBookPro();
+  macbookpro.display();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=fb99e56566b600eaaea0cf9419b3dd3a)
+
+### **Key Points To Remember**
+
+*   The **super** keyword is used to access the parent class members.
+*   The **super** keyword is used to call the method of the parent class.
+
+## Polymorphism in Dart
+### **Introduction**
+
+In this section, you will learn about polymorphism in Dart programming language with the help of examples. Before learning about polymorphism in Dart, you should have a basic understanding of the [inheritance](https://dart-tutorial.com/object-oriented-programming/inheritance-in-dart/) in Dart.
+
+### **Polymorphism In Dart**
+
+Poly means **many** and morph means **forms**. Polymorphism is the ability of an object to take on many forms. As humans, we have the ability to take on many forms. We can be a student, a teacher, a parent, a friend, and so on. Similarly, in object-oriented programming, polymorphism is the ability of an object to take on many forms.
+
+Info
+
+**Note**: In the real world, polymorphism is updating or modifying the feature, function, or implementation that already exists in the parent class.
+
+### **Polymorphism By Method Overriding**
+
+Method overriding is a technique in which you can create a method in the child class that has the same name as the method in the parent class. The method in the child class overrides the method in the parent class.
+
+### **Syntax**
+
+```
+class ParentClass{
+void functionName(){
+  }
+}
+class ChildClass extends ParentClass{
+@override 
+void functionName(){
+  }
+}
+
+```
+
+
+### **Example 1: Polymorphism By Method Overriding In Dart**
+
+In this example below, there is a class named **Animal** with a method named **eat()**. The **eat()** method is overridden in the child class named **Dog**.
+
+```
+class Animal {
+  void eat() {
+    print("Animal is eating");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void eat() {
+    print("Dog is eating");
+  }
+}
+
+void main() {
+  Animal animal = Animal();
+  animal.eat();
+
+  Dog dog = Dog();
+  dog.eat();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=917d2851674d9e0009d70194e3612c74)
+
+### **Example 2: Polymorphism By Method Overriding In Dart**
+
+In this example below, there is a class named **Vehicle** with a method named **run()**. The **run()** method is overridden in the child class named **Bus**.
+
+```
+class Vehicle {
+  void run() {
+    print("Vehicle is running");
+  }
+}
+
+class Bus extends Vehicle {
+  @override
+  void run() {
+    print("Bus is running");
+  }
+}
+
+void main() {
+  Vehicle vehicle = Vehicle();
+  vehicle.run();
+
+  Bus bus = Bus();
+  bus.run();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=23815134f26eb17adfcb192e36f4688e)
+
+Info
+
+**Note**: If you don’t write **@override**, the program still runs. But, it is a good practice to write **@override**.
+
+### **Example 3: Polymorphism By Method Overriding In Dart**
+
+In this example below, there is a class named **Car** with a method named **power()**. The **power()** method is overridden in two child classes named **Honda** and **Tesla**.
+
+```
+class Car{
+  void power(){
+    print("It runs on petrol.");
+  }
+}
+
+class Honda extends Car{
+  
+}
+class Tesla extends Car{
+  @override
+  void power(){
+    print("It runs on electricity.");
+  }
+}
+
+void main(){
+  Honda honda=Honda();
+  Tesla tesla=Tesla();
+  
+  honda.power();
+  tesla.power();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=4483f45207fdc7625789afb3a15568eb)
+
+### **Example 4: Polymorphism By Method Overriding In Dart**
+
+In this example below, there is a class named **Employee** with a method named **salary()**. The **salary()** method is overridden in two child classes named **Manager** and **Developer**.
+
+```
+class Employee{
+  void salary(){
+    print("Employee salary is \$1000.");
+  }
+}
+
+class Manager extends Employee{
+  @override
+  void salary(){
+    print("Manager salary is \$2000.");
+  }
+}
+
+class Developer extends Employee{
+  @override
+  void salary(){
+    print("Developer salary is \$3000.");
+  }
+}
+
+void main(){
+  Manager manager=Manager();
+  Developer developer=Developer();
+  
+  manager.salary();
+  developer.salary();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=b14fa1232ccb4cbc2b2e5a766e263860)
+
+### **Advantage Of Polymorphism In Dart**
+
+*   Subclasses can override the behavior of the parent class.
+*   It allows us to write code that is more flexible and reusable.
+
+## Static in Dart 
+### **Introduction**
+
+In this section, you will learn about **dart static** to share the same variable or method across all instances of a class.
+
+### **Static In Dart**
+
+If you want to define a variable or method that is shared by all instances of a class, you can use the **static** keyword. Static members are accessed using the class name. It is used for **memory management**.
+
+### **Dart Static Variable**
+
+A static variable is a variable that is shared by all instances of a class. It is declared using the static keyword. It is initialized only once when the class is loaded. It is used to store the **class-level data**.
+
+### **How To Declare A Static Variable In Dart**
+
+To declare a static variable in Dart, you must use the static keyword before the variable name.
+
+```
+class ClassName {
+  static dataType variableName;
+}
+
+```
+
+
+### **How To Initialize A Static Variable In Dart**
+
+To initialize a static variable simply assign a value to it.
+
+```
+class ClassName {
+  static dataType variableName = value;
+  // for e.g 
+  // static int num = 10;
+  // static String name = "Dart";
+}
+
+```
+
+
+### **How To Access A Static Variable In Dart**
+
+You need to use the **ClassName.variableName** to access a static variable in Dart.
+
+```
+class ClassName {
+  static dataType variableName = value;
+  // Accessing the static variable inside same class
+  void display() {
+    print(variableName);
+  }
+}
+
+void main() {
+  // Accessing static variable outside the class
+  dataType value =ClassName.variableName;
+}
+
+```
+
+
+### **Example 1: Static Variable In Dart**
+
+In this example below, there is a class named **Employee**. The class has a static variable **count** to count the number of employees.
+
+```
+class Employee {
+  // Static variable
+  static int count = 0;
+  // Constructor
+  Employee() {
+    count++;
+  }
+  // Method to display the value of count
+  void totalEmployee() {
+    print("Total Employee: $count");
+  }
+}
+
+void main() {
+  // Creating objects of Employee class
+  Employee e1 = new Employee();
+  e1.totalEmployee();
+  Employee e2 = new Employee();
+  e2.totalEmployee();
+  Employee e3 = new Employee();
+  e3.totalEmployee();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=3e805fdf420430f0508d90dace1b322d)
+
+Info
+
+**Note:** While creating the objects of the class, the static variable **count** is incremented by 1. The **totalEmployee()** method displays the value of the static variable **count**.
+
+### **Example 2: Static Variable In Dart**
+
+In this example below, there is a class named **Student**. The class has a static variable **schoolName** to store the name of the school. If every student belongs to the same school, then it is better to use a static variable.
+
+```
+class Student {
+  int id;
+  String name;
+  static String schoolName = "ABC School";
+  Student(this.id, this.name);
+  void display() {
+    print("Id: ${this.id}");
+    print("Name: ${this.name}");
+    print("School Name: ${Student.schoolName}");
+  }
+}
+
+void main() {
+  Student s1 = new Student(1, "John");
+  s1.display();
+  Student s2 = new Student(2, "Smith");
+  s2.display();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=9f0bc3c76d819faacad8c65cbeb19c51)
+
+### **Dart Static Method**
+
+A static method is shared by all instances of a class. It is declared using the static keyword. You can access a static method without creating an object of the class.
+
+### **Syntax**
+
+```
+class ClassName{
+static returnType methodName(){
+  //statements
+}
+}
+
+```
+
+
+### **Example 3: Static Method In Dart**
+
+In this example, we will create a static method **calculateInterest()** which calculates the simple interest. You can call **SimpleInterest.calculateInterest()** anytime without creating an instance of the class.
+
+```
+class SimpleInterest {
+  static double calculateInterest(double principal, double rate, double time) {
+    return (principal * rate * time) / 100;
+  }
+}
+
+void main() {
+  print(
+      "The simple interest is ${SimpleInterest.calculateInterest(1000, 2, 2)}");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=9a6efb56670612a9afd516f5bdce6303)
+
+### **Example 4: Static Method In Dart**
+
+In this example below, there is static method **generateRandomPassword()** which generates a random password. You can call **PasswordGenerator.generateRandomPassword()** anytime without creating an instance of the class.
+
+```dart
+import 'dart:math';
+
+class PasswordGenerator {
+  static String generateRandomPassword() {
+    List<String> allalphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    List<int> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    List<String> specialCharacters = ["@", "#", "%", "&", "*"];
+    List<String> password = [];
+    for (int i = 0; i < 5; i++) {
+      password.add(allalphabets[Random().nextInt(allalphabets.length)]);
+      password.add(numbers[Random().nextInt(numbers.length)].toString());
+      password
+          .add(specialCharacters[Random().nextInt(specialCharacters.length)]);
+    }
+    return password.join();
+  }
+}
+
+void main() {
+  print(PasswordGenerator.generateRandomPassword());
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c399202516155336cacbd27f6bd55470)
+
+Info
+
+**Note**: You don’t need to create an instance of a class to call a static method.
+
+### **Key Points To Remember**
+
+*   Static members are accessed using the class name.
+*   All instances of a class share static members.
+
+## Enum in Dart 
+
+An enum is a special type that represents a fixed number of constant values. An enum is declared using the keyword **enum** followed by the enum’s name.
+
+### **Syntax**
+
+```
+enum enumName {
+  constantName1,
+  constantName2,
+  constantName3,
+  ...
+  constantNameN
+}
+
+```
+
+
+### **Example 1: Enum In Dart**
+
+In this example below, there is enum type named **days**. It contains seven constants days. The **days** enum type is used in the **main()** function.
+
+```
+enum days {
+  Sunday,
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thrusday,
+  Friday,
+  Saturday
+}
+
+void main() {
+  var today = days.Friday;
+  switch (today) {
+    case days.Sunday:
+      print("Today is Sunday.");
+      break;
+    case days.Monday:
+      print("Today is Monday.");
+      break;
+    case days.Tuesday:
+      print("Today is Tuesday.");
+      break;
+    case days.Wednesday:
+      print("Today is Wednesday.");
+      break;
+    case days.Thursday:
+      print("Today is Thursday.");
+      break;
+    case days.Friday:
+      print("Today is Friday.");
+      break;
+    case days.Saturday:
+      print("Today is Saturday.");
+      break;
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=b4108e8df504dfe276e17529cd3ab5b4)
+
+### **Example 2: Enum In Dart**
+
+In this example, there is an enum type named **Gender**. It contains three constants **Male**, **Female**, and **Other**. The **Gender** enum type is used in the **Person** class.
+
+```
+enum Gender { Male, Female, Other }
+
+class Person {
+  // Properties
+  String? firstName;
+  String? lastName;
+  Gender? gender;
+
+  // Constructor
+  Person(this.firstName, this.lastName, this.gender);
+
+  // display() method
+  void display() {
+    print("First Name: $firstName");
+    print("Last Name: $lastName");
+    print("Gender: $gender");
+  }
+}
+
+void main() {
+  Person p1 = Person("John", "Doe", Gender.Male);
+  p1.display();
+
+  Person p2 = Person("Menuka", "Sharma", Gender.Female);
+  p2.display();
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c08137bd12f9af46e1cafd5c37a055c1)
+
+### **How to Print All Enum Values**
+
+In this example, there is enum type named **Days**. It contain 7 days. The for loop iterates through all the enum values.
+
+```
+enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday }
+
+void main() {
+ // Days.values: It returns all the values of the enum.
+  for (Days day in Days.values) {
+    print(day);
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=a5cf142ccbfb103dd38f5fb9b315be8c)
+
+### **Advantages Of Enum In Dart**
+
+*   It is used to define a set of named constants.
+*   Makes your code more readable and maintainable.
+*   It makes the code more reusable and makes it easier for developers.
+
+### **Characteristics Of Enum**
+
+*   It must contain at least one constant value.
+*   Enums are declared outside the class.
+*   Used to store a large number of constant values.
+
+### **Enhanced Enum In Dart**
+
+In dart, you can declare enums with members. For example, for your accounting software you can store company types like **Sole Proprietorship**, **Partnership**, **Corporation**, and **Limited Liability Company**. You can declare an enum with members as shown below.
+
+```
+enum CompanyType {
+  soleProprietorship("Sole Proprietorship"),
+  partnership("Partnership"),
+  corporation("Corporation"),
+  limitedLiabilityCompany("Limited Liability Company");
+
+  // Members
+  final String text;
+  const CompanyType(this.text);
+}
+
+void main() {
+  CompanyType soleProprietorship = CompanyType.soleProprietorship;
+  print(soleProprietorship.text);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0a0d58c39324391b6d60dfbebf7c3e92)
+
