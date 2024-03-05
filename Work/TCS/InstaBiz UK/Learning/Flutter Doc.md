@@ -4129,3 +4129,1375 @@ print(even);
 
 **Note**: Choose Lists if order matters. You can easily add items to the end. Searching can be slow when the List size is big.
 
+## Set in Dart
+
+Set is a unique collection of items. You cannot store duplicate values in the Set. It is unordered, so it can be faster than lists while working with a large amount of data. Set is useful when you need to store unique values without considering the order of the input. E.g., fruits name, months name, days name, etc. It is represented by **Curley Braces{}.**
+
+**Note**: The list allows you to add **duplicate items**, but the Set doesn’t allow it.
+
+### **Syntax**
+```dart
+Set <variable_type> variable_name = {};
+```
+
+### **How To Create A Set In Dart**
+
+You can create a Set in Dart using the **Set** type annotation. 
+
+```
+void main(){
+  Set<String> fruits = {"Apple", "Orange", "Mango"};
+  print(fruits);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=a81291eb0617b7bd9db9d5f82d94838e)
+
+### **Set Properties In Dart**
+
+
+|Properties|Work                             |
+|----------|---------------------------------|
+|first     |To get first value of Set.       |
+|last      |To get last value of Set.        |
+|isEmpty   |Return true or false.            |
+|isNotEmpty|Return true or false.            |
+|length    |It returns the length of the Set.|
+
+
+### **Example of Set Properties Dart**
+
+This example finds the first and last element of the Set, checks whether it is empty or not, and finds its length.
+
+```
+void main() {
+  // declaring fruits as Set
+  Set<String> fruits = {"Apple", "Orange", "Mango", "Banana"};
+
+  // using different properties of Set
+  print("First Value is ${fruits.first}");
+  print("Last Value is ${fruits.last}");
+  print("Is fruits empty? ${fruits.isEmpty}");
+  print("Is fruits not empty? ${fruits.isNotEmpty}");
+  print("The length of fruits is ${fruits.length}");
+}
+
+```
+
+### **Check The Available Value**
+
+If you want to see whether the Set contains specific items or not, you can use the **contains** method, which returns true or false.
+
+```
+void main(){
+  Set<String> fruits = {"Apple", "Orange", "Mango"};
+  print(fruits.contains("Mango"));
+  print(fruits.contains("Lemon"));
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=e158381f766d9be511b06aa5780a0f3c)
+
+### **Add & Remove Items In Set**
+
+Like lists, you can add or remove items in a Set. To add items use **add()** method and to remove use **remove()** method.
+
+
+|Method  |Description                  |
+|--------|-----------------------------|
+|add()   |Add one element to Set.      |
+|remove()|Removes one element from Set.|
+
+
+```
+void main(){
+ Set<String> fruits = {"Apple", "Orange", "Mango"};
+  
+  fruits.add("Lemon");
+  fruits.add("Grape");
+  
+  print("After Adding Lemon and Grape: $fruits");
+  
+  fruits.remove("Apple");
+  print("After Removing Apple: $fruits");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=5adb9c8bb832520d8cbeebb09b859f83)
+
+### **Adding Multiple Elements**
+
+You can use **addAll()** method to add multiple elements from the list to Set.
+
+
+|Method  |Description                                 |
+|--------|--------------------------------------------|
+|addAll()|Insert the multiple values to the given Set.|
+
+
+```
+void main(){
+ Set<int> numbers = {10, 20, 30};
+  numbers.addAll([40,50]);
+ print("After adding 40 and 50: $numbers");
+}    
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=a4c3327c1f7aba19407f61637e7dc71f)
+
+### **Printing All Values In Set**
+
+You can print all Set items by using loops. [Click here](https://dart-tutorial.com/conditions-and-loops/loops-in-dart/) if you want to learn loop in dart.
+
+```
+void main(){
+ Set<String> fruits = {"Apple", "Orange", "Mango"};
+  
+ for(String fruit in fruits){
+   print(fruit);
+ }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=be626d8991c500692b39daac328d9a18)
+
+### **Set Methods In Dart**
+
+Some other helpful Set methods in dart.
+
+
+|Method        |Description                                                       |
+|--------------|------------------------------------------------------------------|
+|clear()       |Removes all elements from the Set.                                |
+|difference()  |Creates a new Set with the elements of this that are not in other.|
+|elementAt()   |Returns the index value of element.                               |
+|intersection()|Find common elements in two sets.                                 |
+
+
+### **Clear Set In Dart**
+
+In this example, you can see how to remove all items from the Set in dart.
+
+```
+void main() {
+  Set<String> fruits = {"Apple", "Orange", "Mango"};
+  // to clear all items
+  fruits.clear();
+
+  print(fruits);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ff1f296632223f0bb4cec6a6903b071f)
+
+### **Difference In Set**
+
+In Dart, the difference method creates a new Set with the elements that are not in the other.
+
+```
+void main() {
+  Set<String> fruits1 = {"Apple", "Orange", "Mango"};
+  Set<String> fruits2 = {"Apple", "Grapes", "Banana"};
+
+  final differenceSet = fruits1.difference(fruits2);
+
+  print(differenceSet);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=92152b6f5447d0c18f8bf29e5c83c070)
+
+### **Element At Method In Dart**
+
+In Dart you can find the Set value by its index number. The index number starts with 0.
+
+```
+void main() {
+  Set<String> days = {"Sunday", "Monday", "Tuesday"};
+  // index starts from 0 so 2 means Tuesday
+  print(days.elementAt(2));
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c590abf0c2bbbb7df6e0c3ac13cc9cda)
+
+### **Intersection Method In Dart**
+
+In Dart, the intersection method creates a new Set with the common elements in 2 Sets. Here Apple is available in both Sets.
+
+```
+void main() {
+  Set<String> fruits1 = {"Apple", "Orange", "Mango"};
+  Set<String> fruits2 = {"Apple", "Grapes", "Banana"};
+
+  final intersectionSet = fruits1.intersection(fruits2);
+
+  print(intersectionSet);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=dd1d9fea77619307a9de26282c02e369)
+
+## Map in Dart 
+In a Map, data is stored as keys and values. In Map, each key must be unique. They are similar to `HashMaps` and Dictionaries in other languages.
+
+### **How To Create Map In Dart**
+
+Here we are creating a Map for **String** and **String**. It means keys and values must be the type of String. You can create a Map of any kind as you like.
+
+```
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  print(countryCapital);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c8ff56092d2128b0a80ae75cb14bc979)
+
+Info
+
+**Note**: Here **Usa**, **India**, and **China** are keys, and it must be **unique**.
+
+### **Access Value From Key**
+
+You can find the value of Map from its key. Here we are printing **Washington, D.C.** by its key, i.e., **USA**.
+
+```
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  print(countryCapital["USA"]);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=48d1e56c5b29d4a2cfe84f77f54e9c01)
+
+### **Map Properties In Dart**
+
+
+|Properties|Work                             |
+|----------|---------------------------------|
+|keys      |To get all keys.                 |
+|values    |To get all values.               |
+|isEmpty   |Return true or false.            |
+|isNotEmpty|Return true or false.            |
+|length    |It returns the length of the Map.|
+
+
+### **Example Of Map Properties In Dart**
+
+This example finds all keys/values of Map, the first and last element, checks whether it is empty or not, and finds its length.
+
+```
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+  print("Is Map empty: ${expenses.isEmpty}");
+  print("Is Map not empty: ${expenses.isNotEmpty}");
+  print("Length of map is: ${expenses.length}");
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=018e421ba69575f674d94eb5af45bc05)
+
+### **Adding Element To Map**
+
+If you want to add an element to the existing Map. Here is the way for you:
+
+```
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Washington, D.C.',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  // Adding New Item
+  countryCapital['Japan'] = 'Tokio';
+  print(countryCapital);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=b31bbfd3e49ccdf41cf07728939b18cc)
+
+### **Updating An Element Of Map**
+
+If you want to update an element of the existing Map. Here is the way for you:
+
+```
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Nothing',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  // Updating Item
+  countryCapital['USA'] = 'Washington, D.C.';
+  print(countryCapital);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d8190e762e8d657a43490064763a4e0a)
+
+### **Map Methods In Dart**
+
+Some useful Map methods in dart.
+
+
+|Properties            |Work                                                    |
+|----------------------|--------------------------------------------------------|
+|keys.toList()         |Convert all Maps keys to List.                          |
+|values.toList()       |Convert all Maps values to List.                        |
+|containsKey(‘key’)    |Return true or false.                                   |
+|containsValue(‘value’)|Return true or false.                                   |
+|clear()               |Removes all elements from the Map.                      |
+|removeWhere()         |Removes all elements from the Map if condition is valid.|
+
+
+### **Convert Maps Keys & Values To List**
+
+Let’s convert keys and values of Map to List.
+
+```
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  // Without List
+  print("All keys of Map: ${expenses.keys}");
+  print("All values of Map: ${expenses.values}");
+ 
+  // With List
+  print("All keys of Map with List: ${expenses.keys.toList()}");
+  print("All values of Map with List: ${expenses.values.toList()}");
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=0c0c31b4de26e1fd50f12a254bbc5da8)
+
+### **Check Map Contains Specific Key/Value Or Not?**
+
+Let’s check whether the Map contains a specific key/value in it or not.
+
+```
+void main() {
+ 
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+  
+  // For Keys
+  print("Does Map contain key sun: ${expenses.containsKey("sun")}");
+  print("Does Map contain key abc: ${expenses.containsKey("abc")}");
+ 
+  // For Values
+  print("Does Map contain value 3000.0: ${expenses.containsValue(3000.0)}");
+  print("Does Map contain value 100.0: ${expenses.containsValue(100.0)}");
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ce64c93cc951a8d969954a98e02052d1)
+
+### **Removing Items From Map**
+
+Suppose you want to remove an element of the existing Map. Here is the way for you:
+
+```
+void main(){
+Map<String, String> countryCapital = {
+  'USA': 'Nothing',
+  'India': 'New Delhi',
+  'China': 'Beijing'
+};
+  
+  countryCapital.remove("USA");
+  print(countryCapital);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=bcddb1eaa4fb7ec897fb3d4318c27e31)
+
+### **Looping Over Element Of Map**
+
+You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
+
+```
+void main(){
+
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+  
+ // Loop Through Map
+  for(MapEntry book in book.entries){
+    print('Key is ${book.key}, value ${book.value}');
+  }
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=d51dfb383cc42c9099afdc500de70078)
+
+### **Looping In Map Using For Each**
+
+In this example, you will see how to use a loop to print all the keys and values in Map.
+
+```
+void main(){
+
+  Map<String, dynamic> book = {
+    'title': 'Misson Mangal',
+    'author': 'Kuber Singh',
+    'page': 233
+  };
+  
+  
+ // Loop Through For Each
+  book.forEach((key,value)=> print('Key is $key and value is $value'));
+  
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=29f7e04ab59ce860fb034b69e0d7d075)
+
+### **Remove Where In Dart Map**
+
+In this example, you will see how to get students whose marks are greater or equal to 32 using where method.
+
+```
+void main() {
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+  mathMarks.removeWhere((key, value) => value < 32);
+  print(mathMarks);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ed459a19dbd14d4dc99aee6771fe172e)
+
+## Where in Dart :: Dart Tutorial - Learn Dart Programming
+### **Where Dart**
+
+You can use where in list, set, map to **filter specific items**. It returns a new list containing all the elements that satisfy the condition. This is also called **Where Filter** in dart. Let’s see the syntax below:
+
+### Syntax
+
+```
+Iterable<E> where(
+bool test(
+E element
+)
+)
+
+```
+
+
+### **Example 1: Filter Only Odd Number From List**
+
+In this example, you will get only odd numbers from a list.
+
+```
+void main() {
+  List<int> numbers = [2, 4, 6, 8, 10, 11, 12, 13, 14];
+
+  List<int> oddNumbers = numbers.where((number) => number.isOdd).toList();
+  print(oddNumbers);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=c3c3e9ed5adad4ec4ae46886c26433b2)
+
+### **Example 2: Filter Days Start With S**
+
+In this example, you will get only days that start with alphabet s.
+
+```
+void main() {
+  List<String> days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+
+  List<String> startWithS =
+      days.where((element) => element.startsWith("S")).toList();
+
+  print(startWithS);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=a3b6fe72bb23b3a7ee06166e301ca371)
+
+### **Example 3: Where Filter In Map**
+
+In this example, you will get students whose marks are greater or equal to 32.
+
+```
+void main() {
+  Map<String, double> mathMarks = {
+    "ram": 30,
+    "mark": 32,
+    "harry": 88,
+    "raj": 69,
+    "john": 15,
+  };
+
+  mathMarks.removeWhere((key, value) => value < 32);
+
+  print(mathMarks);
+}
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=3468132eab9dba6639a823cab27da514)
+
+## Read File in Dart 
+### Introduction To File Handling
+
+File handling is an important part of any programming language. In this section, you will learn how to read the file in a dart programming language.
+
+### Read File In Dart
+
+Assume that you have a file named `test.txt` in the same directory of your dart program.
+
+```
+Welcome to test.txt file.
+This is a test file.
+
+```
+
+
+Now, you can read this file using **File** class and **readAsStringSync()** method.
+
+```
+// dart program to read from file
+import 'dart:io';
+
+void main() {
+  // creating file object
+  File file = File('test.txt');
+  // read file
+  String contents = file.readAsStringSync();
+  // print file
+  print(contents);
+}
+
+```
+
+
+### Get File Information
+
+In this example below, you will learn how to get file information like file location, file size, and last modified time.
+
+```
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // get file location
+  print('File path: ${file.path}');
+  // get absolute path
+  print('File absolute path: ${file.absolute.path}');
+  // get file size
+  print('File size: ${file.lengthSync()} bytes');
+  // get last modified time
+  print('Last modified: ${file.lastModifiedSync()}');
+}
+
+```
+
+
+Info
+
+**Note**: If you try to get information of a file that does not exist, then it will throw an exception.
+
+### CSV File
+
+A CSV (**Comma Separated Values**) file is a plain text file that contains data organized in a table format, where columns are separated by commas and rows are separated by line breaks. CSV files are used for:
+
+*   Data exchange between different applications.
+*   Data backup and restore.
+*   Importing and exporting data from databases.
+*   Automation of data processing tasks.
+
+### Read CSV File In Dart
+
+Assume that you have a CSV file named `test.csv` in the same directory of your dart program.
+
+Now, you can read this file using **File** class and **readAsStringSync()** method. We will use **split()** method to split the string into a list of strings.
+
+```
+// dart program to read from csv file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.csv');
+  // read file
+  String contents = file.readAsStringSync();
+  // split file using new line
+  List<String> lines = contents.split('\n');
+  // print file
+  print('---------------------');
+  for (var line in lines) {
+    print(line);
+  }
+}
+
+```
+
+
+### Read Only Part Of File
+
+You can read only part of file using **substring()** method. Here is an example to read only first 10 characters of file. Make sure that you have a file named **test.txt** in the same directory of your dart program.
+
+```
+Welcome to test.txt file
+This is a test file.
+
+```
+
+
+```
+// dart program to read from file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = new File('test.txt');
+  // read only first 10 characters
+  String contents = file.readAsStringSync().substring(0, 10);
+  // print file
+  print(contents);
+}
+
+```
+
+
+### Read File From Specific Directory
+
+To read a file from a specific directory, you need to provide the full path of the file. Here is an example to read file from a specific directory.
+
+```
+// dart program to read from file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('C:\\Users\\test.txt');
+  // read file
+  String contents = file.readAsStringSync();
+  // print file
+  print(contents);
+}
+
+```
+
+## Write File in Dart 
+### Introduction
+
+In this section, you will learn how to write file in dart programming language by using **File** class and **writeAsStringSync()** method.
+
+### Write File In Dart
+
+Let’s create a file named **test.txt** in the same directory of your dart program and write some text in it.
+
+```
+// dart program to write to file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // write to file
+  file.writeAsStringSync('Welcome to test.txt file.');
+  print('File written.');
+}
+
+```
+
+
+Info
+
+**Note**: If you have already some content in **test.txt** file, then it will be removed and replaced with new content.
+
+### Add New Content To Previous Content
+
+You can use **FileMode.append** to add new content to previous content. Assume that **test.txt** file already contains some text.
+
+```
+Welcome to test.txt file.
+
+```
+
+
+Now, let’s add new content to it.
+
+```
+// dart program to write to existing file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file =  File('test.txt');
+  // write to file
+  file.writeAsStringSync('\nThis is a new content.', mode: FileMode.append);
+  print('Congratulations!! New content is added on top of previous content.');
+}
+
+```
+
+
+### Write CSV File In Dart
+
+In the example below, we will ask user to enter **name** and **phone** of 3 students and write it to a csv file named **students.csv**.
+
+```
+// dart program to write to csv file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File("students.csv");
+  // write to file
+  file.writeAsStringSync('Name,Phone\n');
+  for (int i = 0; i < 3; i++) {
+    // user input name
+    stdout.write("Enter name of student ${i + 1}: ");
+    String? name = stdin.readLineSync();
+    stdout.write("Enter phone of student ${i + 1}: ");
+    // user input phone
+    String? phone = stdin.readLineSync();
+    file.writeAsStringSync('$name,$phone\n', mode: FileMode.append);
+  }
+  print("Congratulations!! CSV file written successfully.");
+}
+
+```
+
+
+**students.csv** file will look like this:
+
+```
+Name,Phone
+John,1234567890
+Mark,0123456789
+Elon,0122112322
+
+```
+
+
+Info
+
+**Note**: You can create any type of file using **writeAsStringSync()** method. For example, **.html**, **.json**, **.xml**, etc.
+
+## Delete File in Dart 
+### Introduction
+
+In this section, you will learn how to delete file in dart programming language using **File** class and **deleteSync()** method.
+
+### Delete File In Dart
+
+Assume that you have a file named **test.txt** in the same directory of your dart program. Now, let’s delete it.
+
+```
+// dart program to delete file
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // delete file
+  file.deleteSync();
+  print('File deleted.');
+}
+
+```
+
+
+Info
+
+**Note**: If you try to delete a file that does not exist, then it will throw an exception.
+
+### Delete File If Exists
+
+You can use **File.existsSync()** method to check if a file exists or not. If it exists, then you can delete it.
+
+```
+// dart program to delete file if exists
+import 'dart:io';
+
+void main() {
+  // open file
+  File file = File('test.txt');
+  // check if file exists
+  if (file.existsSync()) {
+    // delete file
+    file.deleteSync();
+    print('File deleted.');
+  } else {
+    print('File does not exist.');
+  }
+}
+
+```
+
+## OOP in Dart 
+
+**Object-oriented programming (OOP)** is a programming method that uses objects and their interactions to design and program applications. It is one of the most popular programming paradigms and is used in many programming languages, such as Dart, Java, C++, Python, etc.
+
+In **OOP**, an object can be anything, such as a person, a bank account, a car, or a house. Each object has its attributes (or properties) and behavior (or methods). For example, a person object may have the attributes **name**, **age** and **height**, and the behavior **walk** and **talk**.
+
+### **Advantages**
+
+*   It is easy to understand and use.
+*   It increases reusability and decreases complexity.
+*   The productivity of programmers increases.
+*   It makes the code easier to maintain, modify and debug.
+*   It promotes teamwork and collaboration.
+*   It reduces the repetition of code.
+
+### **Features Of OOP**
+
+1.  Class
+2.  Object
+3.  Encapsulation
+4.  Inheritance
+5.  Polymorphism
+6.  Abstraction
+
+Info
+
+Note: The main purpose of OOP is to break complex problems into smaller objects. You will learn all these OOPs features later in this dart tutorial.
+
+### **Key Points**
+
+*   Object Oriented Programming (OOP) is a programming paradigm that uses objects and their interactions to design and program applications.
+*   OOP is based on objects, which are data structures containing data and methods.
+*   OOP is a way of thinking about programming that differs from traditional procedural programming.
+*   OOP can make code more modular, flexible, and extensible.
+*   OOP can help you to understand better and solve problems.
+
+## Class in Dart 
+
+In object-oriented programming, a class is a blueprint for creating objects. A class defines the properties and methods that an object will have. For example, a class called **Dog** might have properties like **breed**, **color** and methods like **bark**, **run**.
+
+### **Declaring Class In Dart**
+
+You can declare a class in dart using the **class** keyword followed by class name and braces {}. It’s a good habit to write class name in **PascalCase**. For example, **Employee**, **Student**, **QuizBrain**, etc.
+
+### **Syntax**
+
+```
+class ClassName {
+// properties or fields
+// methods or functions
+}
+
+```
+
+
+In the above syntax:
+
+*   The **class** keyword is used for defining the class.
+*   **ClassName** is the name of the class and must start with capital letter.
+*   Body of the class consists of **properties** and **functions**.
+*   **Properties** are used to store the data. It is also known as **fields** or **attributes**.
+*   **Functions** are used to perform the operations. It is also known as **methods**.
+
+### **Example : Declaring A Class In Dart**
+
+In this example below, there is class **Animal** with three properties: **name**, **numberOfLegs**, and **lifeSpan**. The class also has a method called **display**, which prints out the values of the three properties.
+
+```
+class Animal {
+  String? name;
+  int? numberOfLegs;
+  int? lifeSpan;
+
+  void display() {
+    print("Animal name: $name.");
+    print("Number of Legs: $numberOfLegs.");
+    print("Life Span: $lifeSpan.");
+  }
+}
+
+```
+
+**Note: This program will not print anything** because we have not created any object of the class. You will learn about the **object** later. The **?** is used for null safety. You will also learn about **null safety** later.
+
+### **Key Points**
+
+*   The class is declared using the **class** keyword.
+*   The class is a blueprint for creating objects.
+*   The class body consists of properties and methods.
+*   The properties are also known as fields, attributes, or data members.
+*   The methods are also known as behaviors, or member functions.
+
+
+## Object in Dart 
+
+**In object-oriented programming**, an object is a self-contained unit of code and data. Objects are created from templates called classes. An object is made up of properties(variables) and methods(functions). An object is an instance of a class.
+
+**For example**, a bicycle object might have attributes like color, size, and current speed. It might have methods like changeGear, pedalFaster, and brake.
+
+Info
+
+**Note**: To create an object, you must create a class first. It’s a good practice to declare the object name in lower case.
+
+### **Instantiation**
+
+In object-oriented programming, instantiation is the process of creating an instance of a class. In other words, you can say that instantiation is the process of creating an object of a class. For example, if you have a class called **Bicycle**, then you can create an object of the class called **bicycle**.
+
+### **Declaring Object In Dart**
+
+Once you have created a class, it’s time to declare the object. You can declare an object by the following syntax:
+
+### **Syntax**
+
+```
+ClassName objectName = ClassName();
+
+```
+
+
+### **Example : Declaring An Object In Dart**
+
+In this example below, there is class **Bycycle** with three properties: **color**, **size**, and **currentSpeed**. The class has two methods. One is **changeGear**, which changes the gear of the bicycle, and **display** method prints out the values of the three properties. We also have an object of the class **Bycycle** called **bicycle**.
+
+```
+    class Bicycle {
+      String? color;
+      int? size;
+      int? currentSpeed;
+    
+      void changeGear(int newValue) {
+        currentSpeed = newValue;
+      }
+    
+      void display() {
+        print("Color: $color");
+        print("Size: $size");
+        print("Current Speed: $currentSpeed");
+      }
+    }
+
+    void main(){
+        // Here bicycle is object of class Bicycle. 
+        Bicycle bicycle = Bicycle();
+        bicycle.color = "Red";
+        bicycle.size = 26;
+        bicycle.currentSpeed = 0;
+        bicycle.changeGear(5);
+        bicycle.display();
+    }
+
+```
+
+
+[Run Online](https://dartpad.dev/?id=ac6ab46115153304cc99e2054c93cc17)
+
+Info
+
+**Note**: Once you create an object, you can access the properties and methods of the object using the dot(.) operator.
+
+### **Key Points**
+
+*   The main method is the program’s entry point, so it is always needed to see the result.
+*   The **new** keyword can be used to create a new object, but it is unnecessary.
+
+## Constructor in Dart 
+### **Introduction**
+
+In this section, you will learn about constructor in Dart programming language and how to use constructors with the help of examples. Before learning about the constructor, you should have a basic understanding of the class and object in dart.
+
+### **Constructor In Dart**
+
+**A constructor** is a special method used to initialize an object. It is called automatically when an object is created, and it can be used to set the initial values for the object’s properties. For example, the following code creates a **Person** class object and sets the initial values for the **name** and **age** properties.
+
+```
+Person person = Person("John", 30);
+
+```
+### **Without Constructor**
+
+If you don’t define a constructor for class, then you need to set the values of the properties manually. For example, the following code creates a **Person** class object and sets the values for the **name** and **age** properties.
+
+```
+Person person = Person();
+person.name = "John";
+person.age = 30;
+
+```
+
+### **Things To Remember**
+
+*   The constructor’s name should be the same as the class name.
+*   Constructor doesn’t have any return type.
+
+### Syntax
+
+```
+class ClassName {
+  // Constructor declaration: Same as class name
+  ClassName() {
+    // body of the constructor
+  }
+}
+
+```
+**Note**: When you create a object of a class, the constructor is called automatically. It is used to initialize the values when an object is created.
+
+### **Example 1: How To Declare Constructor In Dart**
+
+In this example below, there is a class **Student** with three properties: **name**, **age**, and **rollNumber**. The class has one constructor. The constructor is used to initialize the values of the three properties. We also created an object of the class **Student** called **student**.
+
+```
+class Student {
+  String? name;
+  int? age;
+  int? rollNumber;
+
+  // Constructor
+  Student(String name, int age, int rollNumber) {
+    print(
+        "Constructor called"); // this is for checking the constructor is called or not.
+    this.name = name;
+    this.age = age;
+    this.rollNumber = rollNumber;
+  }
+}
+
+void main() {
+  // Here student is object of class Student.
+  Student student = Student("John", 20, 1);
+  print("Name: ${student.name}");
+  print("Age: ${student.age}");
+  print("Roll Number: ${student.rollNumber}");
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=272408e52010155b508050093eda4c91)
+
+Info
+
+**Note**: The **this** keyword is used to refer to the current instance of the class. It is used to access the current class properties. In the example above, parameter names and class properties of constructor **Student** are the same. Hence to avoid confusion, we use the **this** keyword.
+
+### **Example 2: Constructor In Dart**
+
+In this example below, there is a class **Teacher** with four properties: **name**, **age**, **subject**, and **salary**. Class has one constructor for initializing the values of the properties. Class also contain method **display()** which is used to display the values of the properties. We also created 2 objects of the class **Teacher** called **teacher1** and **teacher2**.
+
+```
+class Teacher {
+  String? name;
+  int? age;
+  String? subject;
+  double? salary;
+
+  // Constructor
+  Teacher(String name, int age, String subject, double salary) {
+    this.name = name;
+    this.age = age;
+    this.subject = subject;
+    this.salary = salary;
+  }
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Age: ${this.age}");
+    print("Subject: ${this.subject}");
+    print("Salary: ${this.salary}\n"); // \n is used for new line
+  }
+}
+
+void main() {
+  // Creating teacher1 object of class Teacher
+  Teacher teacher1 = Teacher("John", 30, "Maths", 50000.0);
+  teacher1.display();
+
+  // Creating teacher2 object of class Teacher
+  Teacher teacher2 = Teacher("Smith", 35, "Science", 60000.0);
+  teacher2.display();
+}
+
+```
+[Run Online](https://dartpad.dev/?id=feca294afc69f2a6e40c72e94bacff4f)
+
+Info
+
+**Note**: You can create many objects of a class. Each object will have its own copy of the properties.
+
+### **Example 3: Constructor In Dart**
+
+In this example below, there is a class **Car** with two properties: **name** and **price**. The class has one constructor for initializing the values of the properties. The class also contains method **display()**, which is used to display the values of the properties. We also created an object of the class **Car** called **car**.
+
+```
+ class Car {
+  String? name;
+  double? price;
+
+  // Constructor
+  Car(String name, double price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Price: ${this.price}");
+  }
+}
+
+void main() {
+  // Here car is object of class Car.
+  Car car = Car("BMW", 500000.0);
+  car.display();
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=df9f4ebe50ab75c11e9f70c1dd9781bb)
+
+### **Example 4: Constructor In Dart**
+
+In this example below, there is a class **Staff** with four properties: **name**, **phone1**, **phone2**, and **subject** and one method **display()**. Class has one constructor for initializing the values of only **name**, **phone1** and **subject**. We also created an object of the class **Staff** called **staff**.
+
+```
+ class Staff {
+  String? name;
+  int? phone1;
+  int? phone2;
+  String? subject;
+
+  // Constructor
+  Staff(String name, int phone1, String subject) {
+    this.name = name;
+    this.phone1 = phone1;
+    this.subject = subject;
+  }
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Phone1: ${this.phone1}");
+    print("Phone2: ${this.phone2}");
+    print("Subject: ${this.subject}");
+  }
+}
+
+void main() {
+  // Here staff is object of class Staff.
+  Staff staff = Staff("John", 1234567890, "Maths");
+  staff.display();
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=b1c03fbb1b0169c623df475cd31ce4c8)
+
+### **Example 5: Write Constructor Single Line**
+
+In the avobe section, you have written the constructor in long form. You can also write the constructor in short form. You can directly assign the values to the properties. For example, the following code is the short form of the constructor in one line.
+
+```
+class Person{
+  String? name;
+  int? age;
+  String? subject;
+  double? salary;
+
+  // Constructor in short form
+  Person(this.name, this.age, this.subject, this.salary);
+
+  // display method
+  void display(){
+    print("Name: ${this.name}");
+    print("Age: ${this.age}");
+    print("Subject: ${this.subject}");
+    print("Salary: ${this.salary}");
+  }
+}
+
+void main(){
+  Person person = Person("John", 30, "Maths", 50000.0);
+  person.display();
+}
+
+```
+[Run Online](https://dartpad.dev/?id=28abe898777d13770dd239aa836c83e3)
+
+### **Example 6: Constructor With Optional Parameters**
+
+In the example below, we have created a class **Employee** with four properties: **name**, **age**, **subject**, and **salary**. Class has one constructor for initializing the all properties values. For **subject** and **salary**, we have used optional parameters. It means we can pass or not pass the values of **subject** and **salary**. The Class also contain method **display()** which is used to display the values of the properties. We also created an object of the class **Employee** called **employee**.
+
+```
+class Employee {
+  String? name;
+  int? age;
+  String? subject;
+  double? salary;
+
+  // Constructor
+  Employee(this.name, this.age, [this.subject = "N/A", this.salary=0]);
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Age: ${this.age}");
+    print("Subject: ${this.subject}");
+    print("Salary: ${this.salary}");
+  }
+}
+
+void main(){
+  Employee employee = Employee("John", 30);
+  employee.display();
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=841e4c019446527d2fddcb7a92c3fa3e)
+
+### **Example 7: Constructor With Named Parameters**
+
+In the example below, we have created a class **Chair** with two properties: **name** and **color**. Class has one constructor for initializing the all properties values with named parameters. The Class also contain method **display()** which is used to display the values of the properties. We also created an object of the class **Chair** called **chair**.
+
+```
+class Chair {
+String? name;
+String? color;
+
+// Constructor
+Chair({this.name, this.color});
+
+// Method
+void display() {
+  print("Name: ${this.name}");
+  print("Color: ${this.color}");
+}
+}
+
+void main(){
+Chair chair = Chair(name: "Chair1", color: "Red");
+chair.display();
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=9aa428d7c5e498d5233345470cf299c4)
+
+### **Example 8: Constructor With Default Values**
+
+In the example below, we have created a class **Table** with two properties: **name** and **color**. Class has one constructor for initializing the all properties values with default values. The Class also contain method **display()** which is used to display the values of the properties. We also created an object of the class **Table** called **table**.
+
+```
+class Table {
+  String? name;
+  String? color;
+
+  // Constructor
+  Table({this.name = "Table1", this.color = "White"});
+
+  // Method
+  void display() {
+    print("Name: ${this.name}");
+    print("Color: ${this.color}");
+  }
+}
+
+void main(){
+  Table table = Table();
+  table.display();
+}
+
+```
+
+[Run Online](https://dartpad.dev/?id=a6e04e8b75208952220b899e13e60feb)
+
+### **Key Points**
+
+*   The constructor’s name should be the same as the class name.
+*   Constructor doesn’t have any return type.
+*   Constructor is only called once at the time of the object creation.
+*   Constructor is called automatically when an object is created.
+*   Constructor is used to initialize the values of the properties of the class.
+
