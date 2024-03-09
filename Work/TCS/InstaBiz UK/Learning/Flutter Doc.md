@@ -10363,3 +10363,267 @@ void main() {
 
 
 # Flutter Tutorial
+
+## Setting up the Environment 
+
+Set up your development environment to work with Flutter and Dart. This will allow you to create and run Dart and Flutter projects on your computer.
+By the end of this day, you should be able to create and run a new dart console project.
+
+### Tips
+----
+
+*   Install the latest stable version of Dart and Flutter SDK.
+    *   For macOS or Linux, you can download the Flutter SDK from the official website ([https://flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)). Extract the compressed files and add the flutter tool to your path.
+    *   For Windows, you can download the Flutter SDK from the official website and run the installer. Add the flutter tool to your path.
+*   Configure your IDE or code editor to work with Flutter and Dart.
+    *   If you’re using Android Studio or IntelliJ IDEA, install the Flutter and Dart plugins from the marketplace.
+    *   If you’re using Visual Studio Code, install the Flutter and Dart extensions from the marketplace.
+    *   If you’re using another IDE or code editor, check the official Flutter documentation for instructions on how to set it up. Once you have installed and configured everything, create a new Flutter project using the following command:
+
+`flutter doctor`
+
+This will should display the status of your Flutter installation and list any remaining dependencies that are required to complete the setup. If you’re missing any dependencies, follow the instructions provided by the command to install them.
+
+#### 📚 Resources
+
+*   [Official Flutter Installation Guide](https://flutter.dev/docs/get-started/install)
+*   [Dart Tutorial Install Dart on Windows](https://dart-tutorial.com/introduction-and-basics/dart-install/)
+*   [Flutter Doctor](https://flutter.dev/docs/reference/flutter-cli#flutter-doctor)
+*   [Visual Studio Code Installation](https://code.visualstudio.com/docs/setup/setup-overview)
+*   [Flutter and Dart plugins for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
+*   [Installing Android Studio](https://developer.android.com/studio/install)
+*   [Installing Xcode](https://developer.apple.com/xcode/resources/)
+
+
+## Creating a Sample App
+
+### Step 1: Create a New Flutter Project
+
+1. Open VSCode and press `ctrl + shift + p` and select the option to create a new Flutter project.
+2. Choose a location for your project and provide a name.
+3. Wait for the Flutter extension to initialize the project.
+
+### Step 2: Running the Flutter App
+
+1. Connect a device or use an emulator.
+2. Open the terminal in VSCode.
+3. Navigate to the project directory.
+4. Run the command: `flutter run`
+
+This will build and launch your Flutter app on the connected device or emulator.
+
+### Folder Structure
+
+A Flutter project has the following structure:
+
+```
+my_flutter_app/
+|-- android/
+|-- ios/
+|-- lib/
+|   |-- main.dart
+|-- test/
+|-- pubspec.yaml
+```
+
+- **android/ and ios/:** These folders contain platform-specific configuration files for Android and iOS.
+    
+- **lib/:** This is where you write most of your Dart code. The `main.dart` file is the entry point of your app.
+    
+- **test/:** Unit tests for your Flutter app go here.
+    
+- **pubspec.yaml:** This file defines the dependencies for your Flutter project and other configurations.
+    
+### Widgets in Flutter
+
+In Flutter, everything is a widget. Widgets are the building blocks of a Flutter app, from simple elements like text and buttons to complex layouts. Widgets can be either stateful or stateless.
+
+- **StatelessWidget:** Represents part of the user interface that doesn't change over time.
+    
+- **StatefulWidget:** Represents part of the user interface that can change dynamically.
+    
+
+Widgets can be combined to create more complex UIs, and Flutter provides a rich set of pre-built widgets for various purposes.
+
+### Understanding the Sample Code
+
+Open `lib/main.dart` to see the sample code. A basic Flutter app consists of a `main()` function that calls `runApp()` with the root widget of the application.
+
+**Code:**
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My Flutter App'),
+        ),
+        body: Center(
+          child: Text('Hello, Flutter!'),
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+- **MaterialApp:** A MaterialApp widget is a container for the entire application. It provides basic material design visual elements.
+    
+- **Scaffold:** A Scaffold widget is a basic skeletal structure for a page.
+    
+- **AppBar:** An AppBar widget is a material design app bar that typically contains a title and other widgets.
+    
+- **Center:** A Center widget centers its child widget within its bounds.
+    
+- **Text:** A Text widget displays a string of text.
+- The **BuildContext** indicates where the build is taking place.
+- **Keys** are most useful in widgets that build many instances of the same type of widget.
+
+## Dependency Management 
+
+Dependency management is an essential aspect of any software development project. It involves managing the external libraries or packages that your project relies on to function correctly. In Dart, you can use a tool called `pub` and a configuration file called `pubspec.yaml` to manage dependencies for your project.
+
+
+By the end of this day, you should have a good understanding of how to use pub and pubspec to manage dart project dependencies. And learn the basics of how to import and use packages in Dart
+
+### Tips
+----
+
+*   `pub` is a package manager that comes bundled with the Dart SDK, and it allows you to search for and download external packages from the Dart package repository. You can also use it to install, upgrade, and remove packages as needed for your project.
+    
+*   The `pubspec.yaml` file is where you define your project’s dependencies and other metadata about your project, such as its name, version, and description. This file is used by `pub` to manage your project’s dependencies and ensure that your project has the correct versions of packages installed.
+*  Use the [pub.dev](https://pub.dev/) website to search for Flutter packages.
+* Use the `flutter pub add <package-name>` command to install packages or you can manually add the package name to the `pubspec.yaml` file and run `flutter pub get` to install it.
+    
+*   To import and use packages in your Dart project, you can use the `import` statement to bring in the package’s functionality into your project. For example, to use the `http` package, you would add the following line to your Dart file:
+    
+
+```
+import 'package:http/http.dart';
+```
+
+
+This would allow you to use the `http` package’s functions and classes in your code.
+
+###  Resources
+---------
+
+*   [Pub tool](https://dart.dev/tools/pub)
+*   [Pubspec format](https://dart.dev/tools/pub/pubspec)
+*   [Dart package repository](https://pub.dev/) - a repository of Dart packages
+*   [Official Dart documentation on Packages](https://dart.dev/guides/packages)
+
+
+## Networking in Dart 
+
+Networking in Dart involves making HTTP requests to web APIs to retrieve or send data. The [http](https://pub.com/packages/http) package is a official and popular package in Dart that makes it easy to perform HTTP requests.
+
+
+
+### Tips
+----
+
+*   Study HTTP requests and how to make them using the http package.
+
+```
+import 'package:http/http.dart' as http;
+
+void main() async {
+  var response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
+  print(response.body);
+}
+```
+
+
+In this example, we import the http package and use the `get` method to make a GET request to the specified URL. The `await` keyword is used to wait for the response, which is then printed to the console.
+
+*   Learn how to parse JSON data in Dart.
+    
+    Many web APIs return data in JSON format. Dart provides built-in support for parsing JSON data using the `dart:convert` library.
+    
+
+```
+import 'dart:convert';
+
+void main() {
+  String jsonData = '{"name": "John", "age": 30}';
+  Map<String, dynamic> data = jsonDecode(jsonData);
+  print(data['name']); 
+}
+```
+
+
+In this example, we have a JSON string representing an object with two properties, `name` and `age`. We use the `jsonDecode` function to parse the JSON data into a Map object. We can then access the properties of the object using the keys.
+
+*   Use the http package to make GET and POST requests to a web API.
+    
+    To make a POST request using the http package, we can use the `post` method.
+    
+
+```
+import 'package:http/http.dart' as http;
+
+void main() async {
+  var url = Uri.parse('https://jsonplaceholder.typicode.com/posts');
+  var response = await http.post(url, body: {'title': 'foo', 'body': 'bar', 'userId': '1'});
+  print(response.statusCode);
+}
+```
+
+
+In this example, we make a POST request to the specified URL and pass in a Map object as the `body` parameter.
+
+*   Parse the JSON data returned by the API into Dart objects.
+    
+    When we receive JSON data from a web API, we often want to convert it into Dart objects for easier manipulation. We can create Dart classes that mirror the structure of the JSON data and then use the `jsonDecode` function to convert the JSON data into Dart objects.
+    
+
+```
+import 'dart:convert';
+
+class Post {
+  int id;
+  String title;
+  String body;
+
+  Post({this.id, this.title, this.body});
+
+  factory Post.fromJson(Map<String, dynamic> json) {
+    return Post(
+      id: json['id'],
+      title: json['title'],
+      body: json['body'],
+    );
+  }
+}
+
+void main() {
+  String jsonData = '{"id": 1, "title": "foo", "body": "bar"}';
+  Map<String, dynamic> data = jsonDecode(jsonData);
+  Post post = Post.fromJson(data);
+  print(post.title); 
+}
+```
+
+
+In this example, we have a Dart class `Post` that represents a post object with three properties: `id`, `title`, and `body`. We also have a factory constructor `fromJson` that takes a JSON object and returns a Post object.
+
+**Resources:**
+
+*   [Beginners Guide to http package](https://www.appwriters.dev/blog/a-beginners-guide-to-the-http-package-in-flutter)
+*   [Integrating with REST API in Flutter](https://www.appwriters.dev/blog/integrating-with-rest-api-in-flutter)
+*   [Dart HTTP Client package](https://pub.dev/packages/http)
+*   [Parsing json in Dart](https://codewithandrea.com/articles/parse-json-dart/)
+*   [JSON to Dart converter](https://javiercbk.github.io/json_to_dart/)
+*   [Detailed explanation of REST API](https://nerdleveltech.com/a-full-guide-understand-everything-about-apis-with-examples/) - **recommended** if you are new to REST API
+*   [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) - Free placeholder API that you can use to practice
+
+
