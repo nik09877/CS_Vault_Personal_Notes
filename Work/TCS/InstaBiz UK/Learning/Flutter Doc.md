@@ -10532,7 +10532,105 @@ In this example, `MyStatelessWidget` is a stateless widget. It takes a `title` a
 
 A stateful widget is a widget that can change its state during its lifetime. Stateful widgets are used for dynamic parts of the user interface that can be updated based on user interactions, data changes, etc. They have an associated mutable state object that can be modified.
 
-Example of a stateful widget:
+#### Lifecycle Methods
+
+In Flutter, a `StatefulWidget` has a lifecycle that consists of various methods that are called at different stages of its existence. Here are the primary lifecycle methods of a `StatefulWidget`:
+
+1. **`createState` (Factory constructor):**
+    - This method is called when the `StatefulWidget` is instantiated and needs to create its corresponding mutable state. It returns an instance of the associated `State` class.
+
+ Example:
+ ```dart
+ class MyStatefulWidget extends StatefulWidget {
+  @override
+  _MyStatefulWidgetState createState() =>   _MyStatefulWidgetState();
+}
+
+```       
+
+2. **`initState`:**
+    
+    - This method is called when the associated `State` object is created. It's typically used for one-time initialization tasks that need to be performed when the widget is inserted into the widget tree. It is called before the `build` method.
+        
+Example:
+```dart
+  class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  void initState() {
+    super.initState();
+    // Initialization tasks
+  }
+}
+
+```      
+        
+3. **`didChangeDependencies`:**
+    - This method is called whenever the widget's dependencies change. It's often used for tasks that rely on the widget's context or theme.
+        
+Example:
+```dart
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Handle dependency changes
+  }
+}
+
+```  
+
+4. **`build`:**
+    
+    - This is the required method that builds the widget tree for the `StatefulWidget`. It's called whenever the widget needs to be rebuilt, such as when it's inserted into the tree, its state changes, or when a parent widget rebuilds.
+        
+Example:
+```dart
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  Widget build(BuildContext context) {
+    // Build the widget tree
+    return Container();
+  }
+}
+
+```
+        
+5. **`didUpdateWidget`:**
+
+    - This method is called whenever the widget is updated, i.e., when its parent rebuilds and provides a new configuration.
+        
+Example:
+```dart
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  void didUpdateWidget(MyStatefulWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Handle widget updates
+  }
+}
+
+```
+        
+6. **`dispose`:**
+    
+    - This method is called when the widget is removed from the tree. It's used for cleanup tasks, such as closing streams or releasing resources.
+        
+Example:
+```dart
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  void dispose() {
+    // Cleanup tasks
+    super.dispose();
+  }
+}
+
+```
+        
+
+These methods collectively form the lifecycle of a `StatefulWidget`.
+
+#### Example of a stateful widget:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -11441,19 +11539,30 @@ A `Card` widget is a material design card.
 
 ```dart
 Card(
-  child: ListTile(
-    title: Text('Card Title'),
-    subtitle: Text('Card Subtitle'),
-    leading: Icon(Icons.star),
-    trailing: IconButton(
-      icon: Icon(Icons.favorite),
-      onPressed: () {
-        // Handle favorite button press
-      },
+  elevation: 4.0,
+  margin: EdgeInsets.all(16.0),
+  color: Colors.white,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(10.0),
+    side: BorderSide(
+      color: Colors.blue,
+      width: 2.0,
     ),
   ),
+  child: Container()
 )
+
 ```
+##### Properties Explained:
+
+1. **`elevation`:**
+    - The `elevation` property defines the shadow of the `Card` to give it a lifted appearance. Higher values create a more pronounced shadow.
+2. **`margin`:**
+    - The `margin` property sets the margin around the `Card`, controlling the spacing between the `Card` and surrounding widgets.
+3. **`color`:**
+    - The `color` property sets the background color of the `Card`.
+4. **`shape`:**
+    - The `shape` property allows you to define the shape of the `Card`. In this example, it is set to a rounded rectangle with a circular border and a blue side border.
 
 #### `AlertDialog`:
 
@@ -11717,35 +11826,6 @@ LayoutBuilder(
 );
 ```
 
-#### **Row:** 
-Arranges children horizontally.
-
-```dart
-Row(
-  children: [
-    Expanded(child: Text("Left content")),
-    Expanded(child: Text("Right content")),
-  ],
-);
-```
-
-Use code with caution. [Learn more](https://gemini.google.com/faq#coding)
-
-content_copy
-
-#### **Column:** 
-Arranges children vertically.
-
-```dart
-Column(
-  children: [
-    Text("Top content"),
-    Text("Middle content"),
-    Text("Bottom content"),
-  ],
-);
-```
-
 #### **Wrap:** 
 Arranges children in a wrap-around fashion.
 
@@ -11804,7 +11884,6 @@ Row(
     - Respects its child's preferred size if possible.
     - Takes up remaining space in its parent **proportionally** to its flex factor compared to other `Flexible` widgets within the same row/column.
     - Does not force its child to fit its own size.
-    
 
 **Expanded:**
 
@@ -11813,6 +11892,7 @@ Row(
     - Ignores the preferred size of its child.
     - Expands its child to fill the remaining space, potentially causing resizing or overflow if the child has fixed dimensions.
     - If multiple `Expanded` widgets are used in the same row/column, they share the remaining space **equally**.
+
 #### **FractionallySizedBox:** 
 Allocates a specific fraction of its parent's size to its child.
 ```dart
@@ -11828,9 +11908,710 @@ FractionallySizedBox(
 - **Breakpoints:** Set specific points where layout changes significantly for different device groups.
 - **State Management:** Use solutions like Provider or BLoC to share layout information and adapt UI dynamically.
 
-**Remember:** Test your app on various devices and orientations for a seamless user experience.
+## Flutter Navigation
 
-**Note:** This is a basic overview. Explore documentation and resources for more advanced techniques and widget options.
+Flutter provides a robust navigation system that allows developers to navigate between different screens and manage the app's overall flow. This documentation covers the basics of navigation in Flutter.
+
+### Navigation Basics
+
+#### 1. Navigating to a New Screen
+
+In Flutter, you can use the `Navigator` class to navigate to a new screen. The most common way to do this is by using the `Navigator.push` method.
+
+```dart
+onPressed: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SecondScreen()),
+  );
+},
+
+```
+In this example, when the button is pressed, it navigates to a new screen (`SecondScreen`). The `MaterialPageRoute` is used to define the route.
+
+#### 2. Passing Data to a New Screen
+
+You can pass data to a new screen using the `Navigator.push` method and the constructor of the destination screen.
+
+```dart
+onPressed: () {
+  String message = "Hello from the first screen!";
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SecondScreen(message: message)),
+  );
+},
+
+```
+
+In the `SecondScreen`, you can access the passed data:
+
+```dart
+class SecondScreen extends StatelessWidget {
+  final String message;
+
+  SecondScreen({required this.message});
+
+  // Rest of the widget implementation
+}
+
+```
+
+### Navigation with Named Routes
+
+Named routes provide a way to define and navigate between screens using a route name.
+
+#### 1. Define Named Routes
+
+In the main application file, define named routes using a `Map`:
+
+```dart
+void main() {
+  runApp(
+    MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/second': (context) => SecondScreen(),
+      },
+    ),
+  );
+}
+
+```
+
+#### 2. Navigate to Named Routes
+
+Navigate to a named route using the `Navigator.pushNamed` method:
+
+```dart
+onPressed: () {
+  Navigator.pushNamed(context, '/second');
+},
+
+```
+
+#### Pop and Navigate Back
+
+To navigate back to the previous screen, use the `Navigator.pop` method:
+
+```dart
+onPressed: () {
+  Navigator.pop(context);
+},
+
+```
+
+This returns to the previous screen on the navigation stack.
+
+## Data persistence in Flutter
+
+### Using Shared Preferences
+
+Persistence refers to the ability to store data locally on a device so that it can be accessed later, even when the app is closed or the device is restarted. Shared preferences is one of the simplest approach to persist data locally in a Flutter app. It provides a simple way to store key-value pairs of data locally in a Flutter app. It is simple to use and suitable in various cases where you need to store small amounts of data locally on a device.
+
+
+#### Tips
+----
+
+*   Shared preference is a simple way to store key-value pairs of data locally in a Flutter app.
+*   Shared preferences is suitable for storing small amounts of data locally on a device.
+*   Adding shared preferences to a Flutter app is easy
+
+```
+dependencies:
+  shared_preferences: <latest version>
+```
+
+
+*   Import the package in your Dart code
+
+```
+import 'package:shared_preferences/shared_preferences.dart';
+```
+
+
+*   Create an instance of SharedPreferences
+
+```
+SharedPreferences prefs = await SharedPreferences.getInstance();
+```
+
+
+*   Using shared preferences to store and read data
+
+```
+
+int counter = prefs.getInt('counter') ?? 0; 
+prefs.setInt('counter', counter + 1); 
+
+
+String username = prefs.getString('username') ?? ''; 
+prefs.setString('username', 'John'); 
+
+
+bool isDarkModeEnabled = prefs.getBool('isDarkModeEnabled') ?? false; 
+prefs.setBool('isDarkModeEnabled', true); 
+```
+
+#### Complete Example
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Shared preferences demo',
+      home: MyHomePage(title: 'Shared preferences demo'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadCounter();
+  }
+
+  /// Load the initial counter value from persistent storage on start,
+  /// or fallback to 0 if it doesn't exist.
+  Future<void> _loadCounter() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _counter = prefs.getInt('counter') ?? 0;
+    });
+  }
+
+  /// After a click, increment the counter state and
+  /// asynchronously save it to persistent storage.
+  Future<void> _incrementCounter() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _counter = (prefs.getInt('counter') ?? 0) + 1;
+      prefs.setInt('counter', _counter);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'You have pushed the button this many times: ',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+#### Resources
+
+*   [Flutter official documentation on shared\_preferences](https://flutter.dev/docs/cookbook/persistence/key-value)
+*   [Shared preferences package](https://pub.dev/packages/shared_preferences)
+
+### Using SQLite
+
+If you are writing an app that needs to persist and query large amounts of data on the local device, consider using a database instead of a local file or key-value store. In general, databases provide faster inserts, updates, and queries compared to other local persistence solutions.
+
+Flutter apps can make use of the SQLite databases via the [`sqflite`](https://pub.dev/packages/sqflite) plugin available on `pub.dev`. This guide demonstrates the basics of using `sqflite` to insert, read, update, and remove data about various Dogs.
+
+If you are new to SQLite and SQL statements, review the [SQLite Tutorial](http://www.sqlitetutorial.net/) to learn the basics before completing this tutorial.
+
+This tutorial uses the following steps:
+
+1.  Add the dependencies.
+2.  Define the `Dog` data model.
+3.  Open the database.
+4.  Create the `dogs` table.
+5.  Insert a `Dog` into the database.
+6.  Retrieve the list of dogs.
+7.  Update a `Dog` in the database.
+8.  Delete a `Dog` from the database.
+
+#### 1\. Add the dependencies
+------------------------
+
+To work with SQLite databases, import the `sqflite` and `path` packages.
+
+*   The `sqflite` package provides classes and functions to interact with a SQLite database.
+*   The `path` package provides functions to define the location for storing the database on disk.
+
+To add the packages as a dependency, run `flutter pub add`:
+
+```
+$ flutter pub add sqflite path
+
+```
+
+
+Make sure to import the packages in the file you’ll be working in.
+
+```
+import 'dart:async';
+
+import 'package:flutter/widgets.dart';
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
+```
+
+
+#### 2\. Define the Dog data model
+-----------------------------
+
+Before creating the table to store information on Dogs, take a few moments to define the data that needs to be stored. For this example, define a Dog class that contains three pieces of data: A unique `id`, the `name`, and the `age` of each dog.
+
+```
+class Dog {
+  final int id;
+  final String name;
+  final int age;
+
+  const Dog({
+    required this.id,
+    required this.name,
+    required this.age,
+  });
+}
+```
+
+
+#### 3\. Open the database
+---------------------
+
+Before reading and writing data to the database, open a connection to the database. This involves two steps:
+
+1.  Define the path to the database file using `getDatabasesPath()` from the `sqflite` package, combined with the `join` function from the `path` package.
+2.  Open the database with the `openDatabase()` function from `sqflite`.
+
+```dart
+// Avoid errors caused by flutter upgrade.
+// Importing 'package:flutter/widgets.dart' is required.
+WidgetsFlutterBinding.ensureInitialized();
+// Open the database and store the reference.
+final database = openDatabase(
+  // Set the path to the database. Note: Using the `join` function from the
+  // `path` package is best practice to ensure the path is correctly
+  // constructed for each platform.
+  join(await getDatabasesPath(), 'doggie_database.db'),
+);
+```
+
+
+#### 4\. Create the `dogs` table
+---------------------------
+
+Next, create a table to store information about various Dogs. For this example, create a table called `dogs` that defines the data that can be stored. Each `Dog` contains an `id`, `name`, and `age`. Therefore, these are represented as three columns in the `dogs` table.
+
+1.  The `id` is a Dart `int`, and is stored as an `INTEGER` SQLite Datatype. It is also good practice to use an `id` as the primary key for the table to improve query and update times.
+2.  The `name` is a Dart `String`, and is stored as a `TEXT` SQLite Datatype.
+3.  The `age` is also a Dart `int`, and is stored as an `INTEGER` Datatype.
+
+For more information about the available Datatypes that can be stored in a SQLite database, see the [official SQLite Datatypes documentation](https://www.sqlite.org/datatype3.html).
+
+```dart
+final database = openDatabase(
+  // Set the path to the database. Note: Using the `join` function from the
+  // `path` package is best practice to ensure the path is correctly
+  // constructed for each platform.
+  join(await getDatabasesPath(), 'doggie_database.db'),
+  // When the database is first created, create a table to store dogs.
+  onCreate: (db, version) {
+    // Run the CREATE TABLE statement on the database.
+    return db.execute(
+      'CREATE TABLE dogs(id INTEGER PRIMARY KEY, name TEXT, age INTEGER)',
+    );
+  },
+  // Set the version. This executes the onCreate function and provides a
+  // path to perform database upgrades and downgrades.
+  version: 1,
+);
+```
+
+
+#### 5\. Insert a Dog into the database
+----------------------------------
+
+Now that you have a database with a table suitable for storing information about various dogs, it’s time to read and write data.
+
+First, insert a `Dog` into the `dogs` table. This involves two steps:
+
+1.  Convert the `Dog` into a `Map`
+2.  Use the [`insert()`](https://pub.dev/documentation/sqflite_common/latest/sqlite_api/DatabaseExecutor/insert.html) method to store the `Map` in the `dogs` table.
+
+```dart
+class Dog {
+  final int id;
+  final String name;
+  final int age;
+
+  Dog({
+    required this.id,
+    required this.name,
+    required this.age,
+  });
+
+  // Convert a Dog into a Map. The keys must correspond to the names of the
+  // columns in the database.
+  Map<String, Object?> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'age': age,
+    };
+  }
+
+  // Convert a Map into a Dog. The keys must correspond to the names of the
+  // columns in the database.
+  factory Dog.fromMap(Map<String, dynamic> map) {
+    return Dog(
+      id: map['id'] as int,
+      name: map['name'] as String,
+      age: map['age'] as int,
+    );
+  }
+
+  // Implement toString to make it easier to see information about
+  // each dog when using the print statement.
+  @override
+  String toString() {
+    return 'Dog{id: $id, name: $name, age: $age}';
+  }
+}
+
+```
+
+
+```dart
+// Define a function that inserts dogs into the database
+Future<void> insertDog(Dog dog) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Insert the Dog into the correct table. You might also specify the
+  // `conflictAlgorithm` to use in case the same dog is inserted twice.
+  //
+  // In this case, replace any previous data.
+  await db.insert(
+    'dogs',
+    dog.toMap(),
+    conflictAlgorithm: ConflictAlgorithm.replace,
+  );
+}
+```
+
+
+```dart
+// Create a Dog and add it to the dogs table
+var fido = Dog(
+  id: 0,
+  name: 'Fido',
+  age: 35,
+);
+
+await insertDog(fido);
+```
+
+
+#### 6\. Retrieve the list of Dogs
+-----------------------------
+
+Now that a `Dog` is stored in the database, query the database for a specific dog or a list of all dogs. This involves two steps:
+
+1.  Run a `query` against the `dogs` table. This returns a `List<Map>`.
+2.  Convert the `List<Map>` into a `List<Dog>`.
+
+```dart
+// A method that retrieves all the dogs from the dogs table.
+Future<List<Dog>> dogs() async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Query the table for all the dogs.
+  final List<Map<String, Object?>> dogMaps = await db.query('dogs');
+
+  // Convert the list of each dog's fields into a list of `Dog` objects.
+  return [
+    for (final {
+          'id': id as int,
+          'name': name as String,
+          'age': age as int,
+        } in dogMaps)
+      Dog(id: id, name: name, age: age),
+  ];
+}
+```
+
+
+```dart
+// Now, use the method above to retrieve all the dogs.
+print(await dogs()); // Prints a list that include Fido.
+```
+
+
+#### 7\. Update a `Dog` in the database
+----------------------------------
+
+After inserting information into the database, you might want to update that information at a later time. You can do this by using the [`update()`](https://pub.dev/documentation/sqflite_common/latest/sqlite_api/DatabaseExecutor/update.html) method from the `sqflite` library.
+
+This involves two steps:
+
+1.  Convert the Dog into a Map.
+2.  Use a `where` clause to ensure you update the correct Dog.
+
+```dart
+Future<void> updateDog(Dog dog) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Update the given Dog.
+  await db.update(
+    'dogs',
+    dog.toMap(),
+    // Ensure that the Dog has a matching id.
+    where: 'id = ?',
+    // Pass the Dog's id as a whereArg to prevent SQL injection.
+    whereArgs: [dog.id],
+  );
+}
+```
+
+
+```dart
+// Update Fido's age and save it to the database.
+fido = Dog(
+  id: fido.id,
+  name: fido.name,
+  age: fido.age + 7,
+);
+await updateDog(fido);
+
+// Print the updated results.
+print(await dogs()); // Prints Fido with age 42.
+```
+
+
+#### 8\. Delete a `Dog` from the database
+------------------------------------
+
+In addition to inserting and updating information about Dogs, you can also remove dogs from the database. To delete data, use the [`delete()`](https://pub.dev/documentation/sqflite_common/latest/sqlite_api/DatabaseExecutor/delete.html) method from the `sqflite` library.
+
+In this section, create a function that takes an id and deletes the dog with a matching id from the database. To make this work, you must provide a `where` clause to limit the records being deleted.
+
+```dart
+Future<void> deleteDog(int id) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Remove the Dog from the database.
+  await db.delete(
+    'dogs',
+    // Use a `where` clause to delete a specific dog.
+    where: 'id = ?',
+    // Pass the Dog's id as a whereArg to prevent SQL injection.
+    whereArgs: [id],
+  );
+}
+```
+
+
+#### Example
+-------
+
+To run the example:
+
+1.  Create a new Flutter project.
+2.  Add the `sqflite` and `path` packages to your `pubspec.yaml`.
+3.  Paste the following code into a new file called `lib/db_test.dart`.
+4.  Run the code with `flutter run lib/db_test.dart`.
+
+```dart
+import 'dart:async';
+
+import 'package:flutter/widgets.dart';
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
+
+void main() async {
+  // Avoid errors caused by flutter upgrade.
+  // Importing 'package:flutter/widgets.dart' is required.
+  WidgetsFlutterBinding.ensureInitialized();
+  // Open the database and store the reference.
+  final database = openDatabase(
+    // Set the path to the database. Note: Using the `join` function from the
+    // `path` package is best practice to ensure the path is correctly
+    // constructed for each platform.
+    join(await getDatabasesPath(), 'doggie_database.db'),
+    // When the database is first created, create a table to store dogs.
+    onCreate: (db, version) {
+      // Run the CREATE TABLE statement on the database.
+      return db.execute(
+        'CREATE TABLE dogs(id INTEGER PRIMARY KEY, name TEXT, age INTEGER)',
+      );
+    },
+    // Set the version. This executes the onCreate function and provides a
+    // path to perform database upgrades and downgrades.
+    version: 1,
+  );
+
+  // Define a function that inserts dogs into the database
+  Future<void> insertDog(Dog dog) async {
+    // Get a reference to the database.
+    final db = await database;
+
+    // Insert the Dog into the correct table. You might also specify the
+    // `conflictAlgorithm` to use in case the same dog is inserted twice.
+    //
+    // In this case, replace any previous data.
+    await db.insert(
+      'dogs',
+      dog.toMap(),
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  // A method that retrieves all the dogs from the dogs table.
+  Future<List<Dog>> dogs() async {
+    // Get a reference to the database.
+    final db = await database;
+
+    // Query the table for all the dogs.
+    final List<Map<String, Object?>> dogMaps = await db.query('dogs');
+
+    // Convert the list of each dog's fields into a list of `Dog` objects.
+    return [
+      for (final {
+            'id': id as int,
+            'name': name as String,
+            'age': age as int,
+          } in dogMaps)
+        Dog(id: id, name: name, age: age),
+    ];
+  }
+
+  Future<void> updateDog(Dog dog) async {
+    // Get a reference to the database.
+    final db = await database;
+
+    // Update the given Dog.
+    await db.update(
+      'dogs',
+      dog.toMap(),
+      // Ensure that the Dog has a matching id.
+      where: 'id = ?',
+      // Pass the Dog's id as a whereArg to prevent SQL injection.
+      whereArgs: [dog.id],
+    );
+  }
+
+  Future<void> deleteDog(int id) async {
+    // Get a reference to the database.
+    final db = await database;
+
+    // Remove the Dog from the database.
+    await db.delete(
+      'dogs',
+      // Use a `where` clause to delete a specific dog.
+      where: 'id = ?',
+      // Pass the Dog's id as a whereArg to prevent SQL injection.
+      whereArgs: [id],
+    );
+  }
+
+  // Create a Dog and add it to the dogs table
+  var fido = Dog(
+    id: 0,
+    name: 'Fido',
+    age: 35,
+  );
+
+  await insertDog(fido);
+
+  // Now, use the method above to retrieve all the dogs.
+  print(await dogs()); // Prints a list that include Fido.
+
+  // Update Fido's age and save it to the database.
+  fido = Dog(
+    id: fido.id,
+    name: fido.name,
+    age: fido.age + 7,
+  );
+  await updateDog(fido);
+
+  // Print the updated results.
+  print(await dogs()); // Prints Fido with age 42.
+
+  // Delete Fido from the database.
+  await deleteDog(fido.id);
+
+  // Print the list of dogs (empty).
+  print(await dogs());
+}
+
+class Dog {
+  final int id;
+  final String name;
+  final int age;
+
+  Dog({
+    required this.id,
+    required this.name,
+    required this.age,
+  });
+
+  // Convert a Dog into a Map. The keys must correspond to the names of the
+  // columns in the database.
+  Map<String, Object?> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'age': age,
+    };
+  }
+
+  // Implement toString to make it easier to see information about
+  // each dog when using the print statement.
+  @override
+  String toString() {
+    return 'Dog{id: $id, name: $name, age: $age}';
+  }
+}
+```
 
 ## Dependency Management 
 
@@ -11971,4 +12752,5 @@ In this example, we have a Dart class `Post` that represents a post object with 
 *   [Detailed explanation of REST API](https://nerdleveltech.com/a-full-guide-understand-everything-about-apis-with-examples/) - **recommended** if you are new to REST API
 *   [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) - Free placeholder API that you can use to practice
 
+## Using JSON Server
 
