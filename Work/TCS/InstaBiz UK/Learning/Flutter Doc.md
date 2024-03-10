@@ -12263,7 +12263,382 @@ FractionallySizedBox(
 - **Breakpoints:** Set specific points where layout changes significantly for different device groups.
 - **State Management:** Use solutions like Provider or BLoC to share layout information and adapt UI dynamically.
 
+### Creating Custom Widgets
 
+#### Step 1: Create a New Dart File
+
+Create a new Dart file in your Flutter project to define your custom widget. Let's name it `custom_widget.dart`.
+
+#### Step 2: Import Flutter Material Library
+
+In your `custom_widget.dart` file, import the Flutter Material library. This library provides essential widgets for building material design applications.
+
+```dart
+import 'package:flutter/material.dart';
+```
+
+#### Step 3: Define Your Custom Widget Class
+
+Create a class that extends `StatelessWidget` or `StatefulWidget` based on whether your widget needs to hold mutable state. For this example, we'll create a simple stateless widget named `CustomWidget`.
+
+```dart
+class CustomWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // Widget's UI goes here
+    return Container(
+      // Your widget's content
+      child: Text('Hello, Custom Widget!'),
+    );
+  }
+}
+```
+
+#### Step 4: Using the Custom Widget
+
+Now that you've defined your custom widget, you can use it in any part of your app. Import your `custom_widget.dart` file and add `CustomWidget()` wherever you need it.
+
+```dart
+import 'package:flutter/material.dart';
+import 'custom_widget.dart'; // Import your custom widget
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Custom Widget Example'),
+        ),
+        body: Center(
+          child: CustomWidget(), // Use your custom widget here
+        ),
+      ),
+    );
+  }
+}
+```
+
+#### Step 5: Customize Your Widget
+
+You can add parameters to your custom widget for customization. For example, let's allow users to customize the displayed text:
+
+```dart
+class CustomWidget extends StatelessWidget {
+  final String customText;
+
+  CustomWidget({required this.customText});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text(customText),
+    );
+  }
+}
+```
+
+Now, when using your `CustomWidget`, you can provide different text values:
+
+```dart
+CustomWidget(customText: 'Welcome to My App'),
+```
+Congratulations! You've successfully created a custom widget in Flutter.
+
+## Custom Themes and Animations
+
+### Using Custom Theme
+
+#### Step 1: Create a Custom Theme
+
+Define a `ThemeData` instance in a separate file or in your `main.dart` file. Customize it according to your app's design requirements.
+
+```dart
+// themes.dart
+
+import 'package:flutter/material.dart';
+
+final ThemeData myCustomTheme = ThemeData(
+  primarySwatch: Colors.blue,
+  accentColor: Colors.green,
+  fontFamily: 'Roboto',
+  textTheme: TextTheme(
+    headline1: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold),
+    bodyText1: TextStyle(fontSize: 16.0, color: Colors.black87),
+    // Add more custom text styles as needed
+  ),
+  // Add other theme properties
+);
+
+```
+
+#### Step 2: Import the Custom Theme
+
+Import your custom theme in your `main.dart` file.
+
+```dart
+// main.dart
+
+import 'package:flutter/material.dart';
+import 'themes.dart'; // Import your custom theme
+
+void main() {
+  runApp(
+    MaterialApp(
+      title: 'My Flutter App',
+      theme: myCustomTheme, // Apply the custom theme
+      home: MyHomePage(),
+    ),
+  );
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My App Home'),
+      ),
+      body: Center(
+        child: Text(
+          'Hello, Flutter!',
+          style: Theme.of(context).textTheme.headline1, // Use the custom text style
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+#### Step 3: Customize Theme Throughout Your App
+
+Now, use the custom theme properties wherever needed in your app.
+
+```dart
+// AnyWidget.dart
+
+import 'package:flutter/material.dart';
+import 'themes.dart'; // Import your custom theme
+
+class AnyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Theme.of(context).primaryColor,
+      child: Text(
+        'Custom Theme Widget',
+        style: Theme.of(context).textTheme.bodyText1,
+      ),
+    );
+  }
+}
+```
+
+### Using Animation
+
+#### Step 1: Import Flutter Packages
+
+Start by importing the necessary Flutter packages.
+```dart
+import 'package:flutter/material.dart';
+```
+
+#### Step 2: Create a StatefulWidget
+
+Create a StatefulWidget that will contain the animated elements.
+
+```dart
+class FadeTransitionExample extends StatefulWidget {
+  @override
+  _FadeTransitionExampleState createState() => _FadeTransitionExampleState();
+}
+```
+
+#### Step 3: Create State Class
+
+Within the StatefulWidget, create a State class that extends `SingleTickerProviderStateMixin`.
+
+```dart
+class _FadeTransitionExampleState extends State<FadeTransitionExample> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+  bool _isFirstWidget = true;
+}
+```
+
+#### Step 4: Initialize Animation Controllers
+
+Initialize Animation Controllers within the State class.
+
+```dart
+@override
+void initState() {
+  super.initState();
+  _controller = AnimationController(
+    duration: Duration(seconds: 2),
+    vsync: this,
+  );
+
+  // Define the animation
+  _animation = Tween<double>(
+    begin: 0.0,
+    end: 1.0,
+  ).animate(
+    CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut,
+    ),
+  );
+
+  // Add a listener to switch between widgets when the animation completes
+  _animation.addStatusListener((status) {
+    if (status == AnimationStatus.completed) {
+      setState(() {
+        _isFirstWidget = !_isFirstWidget;
+        _controller.reverse();
+      });
+    }
+  });
+
+  // Start the animation
+  _controller.forward();
+}
+```
+
+- In Flutter, the `vsync` (Vertical Sync) parameter is used in conjunction with animation controllers to synchronize animations with the vertical refresh rate of the device's display. The `vsync` parameter is typically set to `this` when the widget's state class extends `TickerProviderStateMixin`.
+
+	- Here's what `vsync: this` means and why it's used:
+
+1. **AnimationController and TickerProviderStateMixin:**
+    
+    - `AnimationController` is a class that manages animations over time.
+    - `TickerProviderStateMixin` is a mixin that provides a `vsync` property required by the `AnimationController`. This mixin is commonly used with `StatefulWidget` to manage animations in the widget's lifecycle.
+2. **TickerProvider:**
+    
+    - In the context of animations, a "ticker" is a callback that fires each frame of the animation.
+    - `TickerProvider` is an interface that provides a `Ticker` for animations. It's implemented by `TickerProviderStateMixin`.
+3. **vsync: this:**
+    
+    - `vsync` specifies the object that will be used as the `TickerProvider` for the animation.
+    - When `vsync` is set to `this`, it means the current state object (which extends `TickerProviderStateMixin`) is used as the `TickerProvider`.
+    - This allows the animation controller to be synchronized with the state's lifecycle and, consequently, the frame rate of the device.
+
+	- In summary, setting `vsync: this` means that the animation controller will use the current state object as the `TickerProvider`, ensuring that the animations are synchronized with the device's display refresh rate. This synchronization helps in optimizing performance and avoiding unnecessary computations when the widget is not visible or active.
+
+- In Flutter animations, a `Tween` is a class that defines a range of values over which an animation should interpolate.
+	- **`Tween` Class:**
+	- The `Tween` class is part of the Flutter animation framework (`dart:ui` package).
+	- It defines a range between a `begin` value and an `end` value.
+	- **Use with Animation Controllers:**
+
+		- You typically use a `Tween` in conjunction with an `AnimationController`. The `Tween` defines the range of values, and the `AnimationController` manages how those values are animated over time.
+#### Step 5: Build Widget Using AnimatedBuilder
+
+Use the `AnimatedBuilder` widget to build the widget tree with the fading transition.
+
+```dart
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('Flutter Fading Transition Example'),
+    ),
+    body: Center(
+      child: AnimatedBuilder(
+        animation: _animation,
+        builder: (context, child) {
+          return Stack(
+            alignment: Alignment.center,
+            children: [
+              Opacity(
+                opacity: _isFirstWidget ? 1.0 - _animation.value : _animation.value,
+                child: WidgetA(),
+              ),
+              Opacity(
+                opacity: _isFirstWidget ? _animation.value : 1.0 - _animation.value,
+                child: WidgetB(),
+              ),
+            ],
+          );
+        },
+      ),
+    ),
+  );
+}
+```
+
+#### Step 6: Create Widgets for Transition
+
+Create two widgets (WidgetA and WidgetB) to transition between.
+
+```dart
+class WidgetA extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: Colors.blue,
+      child: Center(
+        child: Text(
+          'Widget A',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}
+
+class WidgetB extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: Colors.green,
+      child: Center(
+        child: Text(
+          'Widget B',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+#### Step 7: Dispose Animation Controllers
+
+Dispose of the Animation Controllers to free up resources when the widget is disposed.
+
+```dart
+@override
+void dispose() {
+  _controller.dispose();
+  super.dispose();
+}
+```
+
+#### Step 8: Run the App
+
+Finally, run your app. The two widgets will smoothly transition between each other with a fading effect.
+
+```dart
+void main() {
+  runApp(
+    MaterialApp(
+      home: FadeTransitionExample(),
+    ),
+  );
+}
+
+```
 ## Flutter Navigation
 
 Flutter provides a robust navigation system that allows developers to navigate between different screens and manage the app's overall flow. This documentation covers the basics of navigation in Flutter.
@@ -12359,6 +12734,46 @@ onPressed: () {
 ```
 
 This returns to the previous screen on the navigation stack.
+
+### Resources
+
+- [Flutter Navigation](https://blog.logrocket.com/understanding-flutter-navigation-routing/)
+
+## Dependency Management 
+
+Dependency management is an essential aspect of any software development project. It involves managing the external libraries or packages that your project relies on to function correctly. In Dart, you can use a tool called `pub` and a configuration file called `pubspec.yaml` to manage dependencies for your project.
+
+
+By the end of this day, you should have a good understanding of how to use pub and pubspec to manage dart project dependencies. And learn the basics of how to import and use packages in Dart
+
+### Tips
+----
+
+*   `pub` is a package manager that comes bundled with the Dart SDK, and it allows you to search for and download external packages from the Dart package repository. You can also use it to install, upgrade, and remove packages as needed for your project.
+    
+*   The `pubspec.yaml` file is where you define your project’s dependencies and other metadata about your project, such as its name, version, and description. This file is used by `pub` to manage your project’s dependencies and ensure that your project has the correct versions of packages installed.
+*  Use the [pub.dev](https://pub.dev/) website to search for Flutter packages.
+* Use the `flutter pub add <package-name>` command to install packages or you can manually add the package name to the `pubspec.yaml` file and run `flutter pub get` to install it.
+    
+*   To import and use packages in your Dart project, you can use the `import` statement to bring in the package’s functionality into your project. For example, to use the `http` package, you would add the following line to your Dart file:
+    
+
+```
+import 'package:http/http.dart';
+```
+
+
+This would allow you to use the `http` package’s functions and classes in your code.
+
+###  Resources
+---------
+
+*   [Pub tool](https://dart.dev/tools/pub)
+*   [Pubspec format](https://dart.dev/tools/pub/pubspec)
+*   [Dart package repository](https://pub.dev/) - a repository of Dart packages
+*   [Official Dart documentation on Packages](https://dart.dev/guides/packages)
+
+
 
 ## Data persistence in Flutter
 
@@ -12969,40 +13384,6 @@ class Dog {
 }
 ```
 
-## Dependency Management 
-
-Dependency management is an essential aspect of any software development project. It involves managing the external libraries or packages that your project relies on to function correctly. In Dart, you can use a tool called `pub` and a configuration file called `pubspec.yaml` to manage dependencies for your project.
-
-
-By the end of this day, you should have a good understanding of how to use pub and pubspec to manage dart project dependencies. And learn the basics of how to import and use packages in Dart
-
-### Tips
-----
-
-*   `pub` is a package manager that comes bundled with the Dart SDK, and it allows you to search for and download external packages from the Dart package repository. You can also use it to install, upgrade, and remove packages as needed for your project.
-    
-*   The `pubspec.yaml` file is where you define your project’s dependencies and other metadata about your project, such as its name, version, and description. This file is used by `pub` to manage your project’s dependencies and ensure that your project has the correct versions of packages installed.
-*  Use the [pub.dev](https://pub.dev/) website to search for Flutter packages.
-* Use the `flutter pub add <package-name>` command to install packages or you can manually add the package name to the `pubspec.yaml` file and run `flutter pub get` to install it.
-    
-*   To import and use packages in your Dart project, you can use the `import` statement to bring in the package’s functionality into your project. For example, to use the `http` package, you would add the following line to your Dart file:
-    
-
-```
-import 'package:http/http.dart';
-```
-
-
-This would allow you to use the `http` package’s functions and classes in your code.
-
-###  Resources
----------
-
-*   [Pub tool](https://dart.dev/tools/pub)
-*   [Pubspec format](https://dart.dev/tools/pub/pubspec)
-*   [Dart package repository](https://pub.dev/) - a repository of Dart packages
-*   [Official Dart documentation on Packages](https://dart.dev/guides/packages)
-
 
 ## Networking in Flutter 
 
@@ -13015,7 +13396,7 @@ Networking in Flutter involves making HTTP requests to web APIs to retrieve or s
 
 *   Study HTTP requests and how to make them using the http package.
 
-```
+```dart
 import 'package:http/http.dart' as http;
 
 void main() async {
@@ -13032,7 +13413,7 @@ In this example, we import the http package and use the `get` method to make a G
     Many web APIs return data in JSON format. Dart provides built-in support for parsing JSON data using the `dart:convert` library.
     
 
-```
+```dart
 import 'dart:convert';
 
 void main() {
@@ -13050,7 +13431,7 @@ In this example, we have a JSON string representing an object with two propertie
     To make a POST request using the http package, we can use the `post` method.
     
 
-```
+```dart
 import 'package:http/http.dart' as http;
 
 void main() async {
@@ -13068,7 +13449,7 @@ In this example, we make a POST request to the specified URL and pass in a Map o
     When we receive JSON data from a web API, we often want to convert it into Dart objects for easier manipulation. We can create Dart classes that mirror the structure of the JSON data and then use the `jsonDecode` function to convert the JSON data into Dart objects.
     
 
-```
+```dart
 import 'dart:convert';
 
 class Post {
@@ -14000,6 +14381,647 @@ GetX counter link: [https://github.com/timelessfusionapps/getx\_counter](https:/
 GetX store link: [https://getx-store.web.app/#/](https://getx-store.web.app/#/)
 
 GetX counter app: [https://getx-counter.web.app/#/](https://getx-counter.web.app/#/)
+
+## Using Flutter Plugins
+
+### Take a picture using the camera
+
+Many apps require working with the device’s cameras to take photos and videos. Flutter provides the [`camera`](https://pub.dev/packages/camera) plugin for this purpose. The `camera` plugin provides tools to get a list of the available cameras, display a preview coming from a specific camera, and take photos or videos.
+
+This recipe demonstrates how to use the `camera` plugin to display a preview, take a photo, and display it using the following steps:
+
+1.  Add the required dependencies.
+2.  Get a list of the available cameras.
+3.  Create and initialize the `CameraController`.
+4.  Use a `CameraPreview` to display the camera’s feed.
+5.  Take a picture with the `CameraController`.
+6.  Display the picture with an `Image` widget.
+
+#### 1\. Add the required dependencies
+---------------------------------
+
+To complete this recipe, you need to add three dependencies to your app:
+
+[`camera`](https://pub.dev/packages/camera)
+
+Provides tools to work with the cameras on the device.
+
+[`path_provider`](https://pub.dev/packages/path_provider)
+
+Finds the correct paths to store images.
+
+[`path`](https://pub.dev/packages/path)
+
+Creates paths that work on any platform.
+
+To add the packages as dependencies, run `flutter pub add`:
+
+```
+$ flutter pub add camera path_provider path
+
+```
+
+
+#### 2\. Get a list of the available cameras
+---------------------------------------
+
+Next, get a list of available cameras using the `camera` plugin.
+
+```
+// Ensure that plugin services are initialized so that `availableCameras()`
+// can be called before `runApp()`
+WidgetsFlutterBinding.ensureInitialized();
+
+// Obtain a list of the available cameras on the device.
+final cameras = await availableCameras();
+
+// Get a specific camera from the list of available cameras.
+final firstCamera = cameras.first;
+```
+
+
+#### 3\. Create and initialize the `CameraController`
+------------------------------------------------
+
+Once you have a camera, use the following steps to create and initialize a `CameraController`. This process establishes a connection to the device’s camera that allows you to control the camera and display a preview of the camera’s feed.
+
+1.  Create a `StatefulWidget` with a companion `State` class.
+2.  Add a variable to the `State` class to store the `CameraController`.
+3.  Add a variable to the `State` class to store the `Future` returned from `CameraController.initialize()`.
+4.  Create and initialize the controller in the `initState()` method.
+5.  Dispose of the controller in the `dispose()` method.
+
+```
+// A screen that allows users to take a picture using a given camera.
+class TakePictureScreen extends StatefulWidget {
+  const TakePictureScreen({
+    super.key,
+    required this.camera,
+  });
+
+  final CameraDescription camera;
+
+  @override
+  TakePictureScreenState createState() => TakePictureScreenState();
+}
+
+class TakePictureScreenState extends State<TakePictureScreen> {
+  late CameraController _controller;
+  late Future<void> _initializeControllerFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    // To display the current output from the Camera,
+    // create a CameraController.
+    _controller = CameraController(
+      // Get a specific camera from the list of available cameras.
+      widget.camera,
+      // Define the resolution to use.
+      ResolutionPreset.medium,
+    );
+
+    // Next, initialize the controller. This returns a Future.
+    _initializeControllerFuture = _controller.initialize();
+  }
+
+  @override
+  void dispose() {
+    // Dispose of the controller when the widget is disposed.
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // Fill this out in the next steps.
+    return Container();
+  }
+}
+```
+
+
+#### 4\. Use a `CameraPreview` to display the camera’s feed
+------------------------------------------------------
+
+Next, use the `CameraPreview` widget from the `camera` package to display a preview of the camera’s feed.
+
+Use a [`FutureBuilder`](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html) for exactly this purpose.
+
+```
+// You must wait until the controller is initialized before displaying the
+// camera preview. Use a FutureBuilder to display a loading spinner until the
+// controller has finished initializing.
+FutureBuilder<void>(
+  future: _initializeControllerFuture,
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.done) {
+      // If the Future is complete, display the preview.
+      return CameraPreview(_controller);
+    } else {
+      // Otherwise, display a loading indicator.
+      return const Center(child: CircularProgressIndicator());
+    }
+  },
+)
+```
+
+
+#### 5\. Take a picture with the `CameraController`
+----------------------------------------------
+
+You can use the `CameraController` to take pictures using the [`takePicture()`](https://pub.dev/documentation/camera/latest/camera/CameraController/takePicture.html) method, which returns an [`XFile`](https://pub.dev/documentation/cross_file/latest/cross_file/XFile-class.html), a cross-platform, simplified `File` abstraction. On both Android and IOS, the new image is stored in their respective cache directories, and the `path` to that location is returned in the `XFile`.
+
+In this example, create a `FloatingActionButton` that takes a picture using the `CameraController` when a user taps on the button.
+
+Taking a picture requires 2 steps:
+
+1.  Ensure that the camera is initialized.
+2.  Use the controller to take a picture and ensure that it returns a `Future<XFile>`.
+
+It is good practice to wrap these operations in a `try / catch` block in order to handle any errors that might occur.
+
+```
+FloatingActionButton(
+  // Provide an onPressed callback.
+  onPressed: () async {
+    // Take the Picture in a try / catch block. If anything goes wrong,
+    // catch the error.
+    try {
+      // Ensure that the camera is initialized.
+      await _initializeControllerFuture;
+
+      // Attempt to take a picture and then get the location
+      // where the image file is saved.
+      final image = await _controller.takePicture();
+    } catch (e) {
+      // If an error occurs, log the error to the console.
+      print(e);
+    }
+  },
+  child: const Icon(Icons.camera_alt),
+)
+```
+
+
+If you take the picture successfully, you can then display the saved picture using an `Image` widget. In this case, the picture is stored as a file on the device.
+
+Therefore, you must provide a `File` to the `Image.file` constructor. You can create an instance of the `File` class by passing the path created in the previous step.
+
+```
+Image.file(File('path/to/my/picture.png'));
+```
+
+
+#### Complete example
+----------------
+
+```
+import 'dart:async';
+import 'dart:io';
+
+import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
+
+Future<void> main() async {
+  // Ensure that plugin services are initialized so that `availableCameras()`
+  // can be called before `runApp()`
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Obtain a list of the available cameras on the device.
+  final cameras = await availableCameras();
+
+  // Get a specific camera from the list of available cameras.
+  final firstCamera = cameras.first;
+
+  runApp(
+    MaterialApp(
+      theme: ThemeData.dark(),
+      home: TakePictureScreen(
+        // Pass the appropriate camera to the TakePictureScreen widget.
+        camera: firstCamera,
+      ),
+    ),
+  );
+}
+
+// A screen that allows users to take a picture using a given camera.
+class TakePictureScreen extends StatefulWidget {
+  const TakePictureScreen({
+    super.key,
+    required this.camera,
+  });
+
+  final CameraDescription camera;
+
+  @override
+  TakePictureScreenState createState() => TakePictureScreenState();
+}
+
+class TakePictureScreenState extends State<TakePictureScreen> {
+  late CameraController _controller;
+  late Future<void> _initializeControllerFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    // To display the current output from the Camera,
+    // create a CameraController.
+    _controller = CameraController(
+      // Get a specific camera from the list of available cameras.
+      widget.camera,
+      // Define the resolution to use.
+      ResolutionPreset.medium,
+    );
+
+    // Next, initialize the controller. This returns a Future.
+    _initializeControllerFuture = _controller.initialize();
+  }
+
+  @override
+  void dispose() {
+    // Dispose of the controller when the widget is disposed.
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Take a picture')),
+      // You must wait until the controller is initialized before displaying the
+      // camera preview. Use a FutureBuilder to display a loading spinner until the
+      // controller has finished initializing.
+      body: FutureBuilder<void>(
+        future: _initializeControllerFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            // If the Future is complete, display the preview.
+            return CameraPreview(_controller);
+          } else {
+            // Otherwise, display a loading indicator.
+            return const Center(child: CircularProgressIndicator());
+          }
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        // Provide an onPressed callback.
+        onPressed: () async {
+          // Take the Picture in a try / catch block. If anything goes wrong,
+          // catch the error.
+          try {
+            // Ensure that the camera is initialized.
+            await _initializeControllerFuture;
+
+            // Attempt to take a picture and get the file `image`
+            // where it was saved.
+            final image = await _controller.takePicture();
+
+            if (!context.mounted) return;
+
+            // If the picture was taken, display it on a new screen.
+            await Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => DisplayPictureScreen(
+                  // Pass the automatically generated path to
+                  // the DisplayPictureScreen widget.
+                  imagePath: image.path,
+                ),
+              ),
+            );
+          } catch (e) {
+            // If an error occurs, log the error to the console.
+            print(e);
+          }
+        },
+        child: const Icon(Icons.camera_alt),
+      ),
+    );
+  }
+}
+
+// A widget that displays the picture taken by the user.
+class DisplayPictureScreen extends StatelessWidget {
+  final String imagePath;
+
+  const DisplayPictureScreen({super.key, required this.imagePath});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Display the Picture')),
+      // The image is stored as a file on the device. Use the `Image.file`
+      // constructor with the given path to display the image.
+      body: Image.file(File(imagePath)),
+    );
+  }
+}
+```
+
+
+
+### Play and pause a video
+
+Playing videos is a common task in app development, and Flutter apps are no exception. To play videos, the Flutter team provides the [`video_player`](https://pub.dev/packages/video_player) plugin. You can use the `video_player` plugin to play videos stored on the file system, as an asset, or from the internet.
+
+On iOS, the `video_player` plugin makes use of [`AVPlayer`](https://developer.apple.com/documentation/avfoundation/avplayer) to handle playback. On Android, it uses [`ExoPlayer`](https://google.github.io/ExoPlayer/).
+
+This guide demonstrates how to use the `video_player` package to stream a video from the internet with basic play and pause controls using the following steps:
+
+1.  Add the `video_player` dependency.
+2.  Add permissions to your app.
+3.  Create and initialize a `VideoPlayerController`.
+4.  Display the video player.
+5.  Play and pause the video.
+
+#### 1\. Add the `video_player` dependency
+-------------------------------------
+
+This recipe depends on one Flutter plugin: `video_player`. First, add this dependency to your project.
+
+To add the `video_player` package as a dependency, run `flutter pub add`:
+
+```
+$ flutter pub add video_player
+
+```
+
+
+#### 2\. Add permissions to your app
+-------------------------------
+
+Next, update your `android` and `ios` configurations to ensure that your app has the correct permissions to stream videos from the internet.
+
+##### Android
+
+Add the following permission to the `AndroidManifest.xml` file just after the `<application>` definition. The `AndroidManifest.xml` file is found at `<project root>/android/app/src/main/AndroidManifest.xml`.
+
+```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application ...>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+
+```
+
+
+##### iOS
+
+For iOS, add the following to the `Info.plist` file found at `<project root>/ios/Runner/Info.plist`.
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+</dict>
+
+```
+
+
+#### 3\. Create and initialize a `VideoPlayerController`
+---------------------------------------------------
+
+Now that you have the `video_player` plugin installed with the correct permissions, create a `VideoPlayerController`. The `VideoPlayerController` class allows you to connect to different types of videos and control playback.
+
+Before you can play videos, you must also `initialize` the controller. This establishes the connection to the video and prepare the controller for playback.
+
+To create and initialize the `VideoPlayerController` do the following:
+
+1.  Create a `StatefulWidget` with a companion `State` class
+2.  Add a variable to the `State` class to store the `VideoPlayerController`
+3.  Add a variable to the `State` class to store the `Future` returned from `VideoPlayerController.initialize`
+4.  Create and initialize the controller in the `initState` method
+5.  Dispose of the controller in the `dispose` method
+
+```
+class VideoPlayerScreen extends StatefulWidget {
+  const VideoPlayerScreen({super.key});
+
+  @override
+  State<VideoPlayerScreen> createState() => _VideoPlayerScreenState();
+}
+
+class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Create and store the VideoPlayerController. The VideoPlayerController
+    // offers several different constructors to play videos from assets, files,
+    // or the internet.
+    _controller = VideoPlayerController.networkUrl(
+      Uri.parse(
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+      ),
+    );
+
+    _initializeVideoPlayerFuture = _controller.initialize();
+  }
+
+  @override
+  void dispose() {
+    // Ensure disposing of the VideoPlayerController to free up resources.
+    _controller.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // Complete the code in the next step.
+    return Container();
+  }
+}
+```
+
+
+#### 4\. Display the video player
+----------------------------
+
+Now, display the video. The `video_player` plugin provides the [`VideoPlayer`](https://pub.dev/documentation/video_player/latest/video_player/VideoPlayer-class.html) widget to display the video initialized by the `VideoPlayerController`. By default, the `VideoPlayer` widget takes up as much space as possible. This often isn’t ideal for videos because they are meant to be displayed in a specific aspect ratio, such as 16x9 or 4x3.
+
+Therefore, wrap the `VideoPlayer` widget in an [`AspectRatio`](https://api.flutter.dev/flutter/widgets/AspectRatio-class.html) widget to ensure that the video has the correct proportions.
+
+Furthermore, you must display the `VideoPlayer` widget after the `_initializeVideoPlayerFuture()` completes. Use `FutureBuilder` to display a loading spinner until the controller finishes initializing. Note: initializing the controller does not begin playback.
+
+```
+// Use a FutureBuilder to display a loading spinner while waiting for the
+// VideoPlayerController to finish initializing.
+FutureBuilder(
+  future: _initializeVideoPlayerFuture,
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.done) {
+      // If the VideoPlayerController has finished initialization, use
+      // the data it provides to limit the aspect ratio of the video.
+      return AspectRatio(
+        aspectRatio: _controller.value.aspectRatio,
+        // Use the VideoPlayer widget to display the video.
+        child: VideoPlayer(_controller),
+      );
+    } else {
+      // If the VideoPlayerController is still initializing, show a
+      // loading spinner.
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+    }
+  },
+)
+```
+
+
+#### 5\. Play and pause the video
+----------------------------
+
+By default, the video starts in a paused state. To begin playback, call the [`play()`](https://pub.dev/documentation/video_player/latest/video_player/VideoPlayerController/play.html) method provided by the `VideoPlayerController`. To pause playback, call the [`pause()`](https://pub.dev/documentation/video_player/latest/video_player/VideoPlayerController/pause.html) method.
+
+For this example, add a `FloatingActionButton` to your app that displays a play or pause icon depending on the situation. When the user taps the button, play the video if it’s currently paused, or pause the video if it’s playing.
+
+```
+FloatingActionButton(
+  onPressed: () {
+    // Wrap the play or pause in a call to `setState`. This ensures the
+    // correct icon is shown.
+    setState(() {
+      // If the video is playing, pause it.
+      if (_controller.value.isPlaying) {
+        _controller.pause();
+      } else {
+        // If the video is paused, play it.
+        _controller.play();
+      }
+    });
+  },
+  // Display the correct icon depending on the state of the player.
+  child: Icon(
+    _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+  ),
+)
+```
+
+
+#### Complete example
+----------------
+
+```
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
+
+void main() => runApp(const VideoPlayerApp());
+
+class VideoPlayerApp extends StatelessWidget {
+  const VideoPlayerApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Video Player Demo',
+      home: VideoPlayerScreen(),
+    );
+  }
+}
+
+class VideoPlayerScreen extends StatefulWidget {
+  const VideoPlayerScreen({super.key});
+
+  @override
+  State<VideoPlayerScreen> createState() => _VideoPlayerScreenState();
+}
+
+class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Create and store the VideoPlayerController. The VideoPlayerController
+    // offers several different constructors to play videos from assets, files,
+    // or the internet.
+    _controller = VideoPlayerController.networkUrl(
+      Uri.parse(
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+      ),
+    );
+
+    // Initialize the controller and store the Future for later use.
+    _initializeVideoPlayerFuture = _controller.initialize();
+
+    // Use the controller to loop the video.
+    _controller.setLooping(true);
+  }
+
+  @override
+  void dispose() {
+    // Ensure disposing of the VideoPlayerController to free up resources.
+    _controller.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Butterfly Video'),
+      ),
+      // Use a FutureBuilder to display a loading spinner while waiting for the
+      // VideoPlayerController to finish initializing.
+      body: FutureBuilder(
+        future: _initializeVideoPlayerFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            // If the VideoPlayerController has finished initialization, use
+            // the data it provides to limit the aspect ratio of the video.
+            return AspectRatio(
+              aspectRatio: _controller.value.aspectRatio,
+              // Use the VideoPlayer widget to display the video.
+              child: VideoPlayer(_controller),
+            );
+          } else {
+            // If the VideoPlayerController is still initializing, show a
+            // loading spinner.
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Wrap the play or pause in a call to `setState`. This ensures the
+          // correct icon is shown.
+          setState(() {
+            // If the video is playing, pause it.
+            if (_controller.value.isPlaying) {
+              _controller.pause();
+            } else {
+              // If the video is paused, play it.
+              _controller.play();
+            }
+          });
+        },
+        // Display the correct icon depending on the state of the player.
+        child: Icon(
+          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+        ),
+      ),
+    );
+  }
+}
+```
+
+
 
 ## Building Flutter APK
 
