@@ -10680,7 +10680,7 @@ In this example, `MyStatefulWidget` is a stateful widget. It has an associated `
 
 You might wonder why `StatefulWidget` and `State` are separate objects. In Flutter, these two types of objects have different life cycles. `Widgets` are temporary objects, used to construct a presentation of the application in its current state. `State` objects, on the other hand, are persistent between calls to `build()`, allowing them to remember information.
 
-### Key Points:
+#### Key Points:
 
 - Stateless widgets are immutable and don't have mutable state.
 - Stateful widgets have mutable state and can be updated over time.
@@ -10721,6 +10721,73 @@ offset: Offset(3, 3), // Shadow offset
 3. **`borderRadius`**: Specifies the radius of the container's corners for rounded edges.
     
 4. **`boxShadow`**: Adds a shadow to the container, including color, blur radius, and offset.
+
+#### Alignment
+
+In Flutter, `Alignment` is used to position widgets within a container. It represents a point within a rectangle, and you can use it to specify where a widget should be placed.
+
+Example:
+
+```dart
+Container(
+  width: 200,
+  height: 200,
+  color: Colors.blue,
+  child: Align(
+    alignment: Alignment(0.5, 0.5),
+    child: Text('Aligned Text'),
+  ),
+)
+```
+
+In Flutter, the `Alignment` class is often used to represent a point within a rectangle. The `Alignment` class takes two parameters, `x` and `y`, both ranging from -1.0 to 1.0, where (0,0) represents the center of the rectangle.
+
+Here's a breakdown of how the `Alignment` class works:
+
+- `x`: Positive values move the point right, and negative values move it left.
+- `y`: Positive values move the point down, and negative values move it up.
+
+For example:
+
+- `Alignment(0.0, 0.0)`: Center of the rectangle.
+- `Alignment(1.0, 1.0)`: Bottom-right corner.
+- `Alignment(-1.0, -1.0)`: Top-left corner.
+
+In this example, `Alignment(0.5, 0.5)` centers the child widget within the parent container.
+
+#### Padding
+
+The `Padding` widget adds space around a child widget. It's useful for creating margins and providing visual separation between elements.
+
+Example:
+```dart
+Container(
+  color: Colors.green,
+  child: Padding(
+    padding: EdgeInsets.all(16.0),
+    child: Text('Padded Text'),
+  ),
+)
+```
+Here, `EdgeInsets.all(16.0)` adds 16 pixels of padding on all sides of the child widget.
+
+#### Opacity
+
+The `Opacity` widget is used to control the transparency of a child widget. It makes the child widget partially or fully transparent.
+
+Example:
+```dart
+Container(
+  color: Colors.red,
+  child: Opacity(
+    opacity: 0.5,
+    child: Text('Transparent Text'),
+  ),
+)
+
+```
+In this case, `opacity: 0.5` makes the child widget 50% transparent.
+
 
 #### `Row`:
 
@@ -11450,6 +11517,292 @@ class _MyTextFieldExampleState extends State<MyTextFieldExample> {
 12. **textCapitalization:**
     - Specifies how the text should be capitalized (e.g., `TextCapitalization.sentences`, `TextCapitalization.words`, etc.).
 
+#### TextFormField
+
+The `TextFormField` widget is a specialized version of `TextField` that integrates with the Form widget.
+
+##### Properties:
+
+- **controller:** A controller for an editable text field.
+- **decoration:** An InputDecoration object that configures the appearance of the text field.
+- **keyboardType:** The type of keyboard to use for editing the text.
+- **validator:** A callback that validates the input.
+
+Example:
+
+```dart
+TextFormField(
+  controller: TextEditingController(),
+  decoration: InputDecoration(labelText: 'Enter your email'),
+  keyboardType: TextInputType.emailAddress,
+  validator: (value) {
+    if (value.isEmpty) {
+      return 'Please enter your email';
+    }
+    return null;
+  },
+)
+```
+
+#### Checkbox
+
+The `Checkbox` widget allows users to toggle between two states.
+
+##### Properties:
+
+- **value:** The current state of the checkbox.
+- **onChanged:** Called when the user toggles the checkbox.
+
+Example:
+
+```dart
+bool isChecked = false;
+
+Checkbox(
+  value: isChecked,
+  onChanged: (value) {
+    // Handle checkbox state change
+    setState(() {
+      isChecked = value;
+    });
+  },
+)
+```
+
+#### Radio
+
+The `Radio` widget allows users to select a single option from a group.
+
+##### Properties:
+
+- **value:** The current value of the radio button.
+- **groupValue:** The selected value of the entire radio group.
+- **onChanged:** Called when the user selects the radio button.
+
+Example:
+```dart
+enum Gender { male, female }
+
+Gender selectedGender = Gender.male;
+
+Radio(
+  value: Gender.male,
+  groupValue: selectedGender,
+  onChanged: (value) {
+    // Handle radio button selection
+    setState(() {
+      selectedGender = value;
+    });
+  },
+)
+```
+
+#### DropdownButton
+
+The `DropdownButton` widget displays a dropdown menu with a list of items.
+
+##### Properties:
+
+- **items:** The list of dropdown menu items.
+- **value:** The current selected value.
+- **onChanged:** Called when the user selects an item.
+
+Example:
+```dart
+DropdownButton<String>(
+  items: ['Option 1', 'Option 2', 'Option 3']
+      .map((String value) => DropdownMenuItem<String>(
+            value: value,
+            child: Text(value),
+          ))
+      .toList(),
+  value: selectedValue,
+  onChanged: (value) {
+    // Handle dropdown selection
+    setState(() {
+      selectedValue = value;
+    });
+  },
+)
+```
+
+
+#### Switch 
+The `Switch` widget allows users to toggle between two states, similar to a checkbox. 
+##### Properties: 
+- **value:** The current state of the switch. 
+- **onChanged:** Called when the user toggles the switch. 
+ 
+Example: 
+```dart
+bool isSwitched = false; Switch( value: isSwitched, onChanged: (value) { 
+// Handle switch state change 
+setState(() { isSwitched = value; }); }, )
+```
+
+#### Slider
+
+The `Slider` widget allows users to select a value from a range by sliding a thumb along a track.
+
+##### Properties:
+
+- **value:** The current value selected on the slider.
+- **onChanged:** Called when the user drags the slider thumb.
+- **min:** The minimum value of the slider.
+- **max:** The maximum value of the slider.
+
+Example:
+```dart
+double sliderValue = 50.0;
+
+Slider(
+  value: sliderValue,
+  onChanged: (value) {
+    // Handle slider value change
+    setState(() {
+      sliderValue = value;
+    });
+  },
+  min: 0,
+  max: 100,
+)
+```
+
+#### Date Picker
+
+The `showDatePicker` function displays a date picker dialog.
+
+##### Properties:
+
+- **context:** The build context.
+- **initialDate:** The initial selected date.
+- **firstDate:** The earliest selectable date.
+- **lastDate:** The latest selectable date.
+
+Example:
+```dart
+DateTime selectedDate = DateTime.now();
+
+ElevatedButton(
+  onPressed: () async {
+    final DateTime pickedDate = await showDatePicker(
+      context: context,
+      initialDate: selectedDate,
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2101),
+    );
+
+    if (pickedDate != null && pickedDate != selectedDate) {
+      setState(() {
+        selectedDate = pickedDate;
+      });
+    }
+  },
+  child: Text('Select Date'),
+)
+
+```
+
+#### Time Picker
+
+The `showTimePicker` function displays a time picker dialog.
+
+##### Properties:
+
+- **context:** The build context.
+- **initialTime:** The initial selected time.
+
+Example:
+```dart
+TimeOfDay selectedTime = TimeOfDay.now();
+
+ElevatedButton(
+  onPressed: () async {
+    final TimeOfDay pickedTime = await showTimePicker(
+      context: context,
+      initialTime: selectedTime,
+    );
+
+    if (pickedTime != null && pickedTime != selectedTime) {
+      setState(() {
+        selectedTime = pickedTime;
+      });
+    }
+  },
+  child: Text('Select Time'),
+)
+
+```
+
+#### Autocomplete
+
+The `Autocomplete` widget provides suggestions as users type.
+
+##### Properties:
+
+- **optionsBuilder:** A callback that returns a list of suggestions.
+- **onSelected:** Called when a suggestion is selected.
+
+Example:
+```dart
+Autocomplete<String>(
+  optionsBuilder: (TextEditingValue textEditingValue) {
+    return ['Apple', 'Banana', 'Cherry', 'Date', 'Fig']
+        .where((String option) =>
+            option.contains(textEditingValue.text.toLowerCase()))
+        .toList();
+  },
+  onSelected: (String selected) {
+    // Handle the selected option
+  },
+)
+
+```
+#### Stepper
+
+The `Stepper` widget displays a sequence of steps for the user to progress through.
+
+##### Properties:
+
+- **steps:** A list of Step objects.
+- **currentStep:** The index of the current step.
+
+Example:
+```dart
+int currentStep = 0;
+
+Stepper(
+  steps: [
+    Step(
+      title: Text('Step 1'),
+      content: Text('Description for Step 1'),
+    ),
+    Step(
+      title: Text('Step 2'),
+      content: Text('Description for Step 2'),
+    ),
+    Step(
+      title: Text('Step 3'),
+      content: Text('Description for Step 3'),
+    ),
+  ],
+  currentStep: currentStep,
+  onStepContinue: () {
+    // Handle continue button pressed
+    setState(() {
+      currentStep < 2 ? currentStep += 1 : null;
+    });
+  },
+  onStepCancel: () {
+    // Handle cancel button pressed
+    setState(() {
+      currentStep > 0 ? currentStep -= 1 : null;
+    });
+  },
+)
+```
+
+
 #### `Form`:
 
 Forms are essential elements for collecting user input in Flutter applications. Here's an overview of building forms in Flutter:
@@ -11532,6 +11885,8 @@ ElevatedButton(
 - Explore packages like `form_validator` or `bloc_form` for advanced validation and form management.
 
 Remember, this is a basic overview. Flutter's built-in widgets and packages offer extensive options to customize and enhance your forms.
+
+
 
 #### `Card`:
 
@@ -11907,6 +12262,7 @@ FractionallySizedBox(
 - **Media Queries:** Define different styles or layouts for specific screen sizes/orientations.
 - **Breakpoints:** Set specific points where layout changes significantly for different device groups.
 - **State Management:** Use solutions like Provider or BLoC to share layout information and adapt UI dynamically.
+
 
 ## Flutter Navigation
 
@@ -12648,9 +13004,9 @@ This would allow you to use the `http` package’s functions and classes in your
 *   [Official Dart documentation on Packages](https://dart.dev/guides/packages)
 
 
-## Networking in Dart 
+## Networking in Flutter 
 
-Networking in Dart involves making HTTP requests to web APIs to retrieve or send data. The [http](https://pub.com/packages/http) package is a official and popular package in Dart that makes it easy to perform HTTP requests.
+Networking in Flutter involves making HTTP requests to web APIs to retrieve or send data. The [http](https://pub.com/packages/http) package is a official and popular package in Dart that makes it easy to perform HTTP requests.
 
 
 
@@ -12918,6 +13274,732 @@ class _HomePageState extends State<HomePage> {
 }
 
 ```
+
+## GetX state management in Flutter
+
+State management is a complex topic of discussion in Flutter. However, many state management libraries, such as [Provider](https://blog.logrocket.com/quick-guide-provider-flutter-state-management/), are available, which most developers recommend.
+
+But…
+
+Today, we will discuss a simplified state management solution for Flutter application development that does not require context for most of its features, known as GetX.
+
+### What is GetX?
+-------------
+
+GetX is not only a state management library, but instead, it is a microframework combined with route management and dependency injection. GetX has three basic principles on which it is built:
+
+1.  Performance: focused on minimum consumption of memory and resources
+2.  Productivity: intuitive and efficient tool combined with simplicity and straightforward syntax that ultimately saves development time
+3.  Organization: decoupling business logic from view and presentation logic cannot get better than this. You do not need context to navigate between routes, nor do you need stateful widgets
+
+### The three pillars of GetX
+-------------------------
+
+1.  State management: GetX has two state managers. One is a simple state manager used with the `GetBuilder` function, and the other is a reactive state manager used with `Getx` or `Obx`. We will be talking about it in detail below
+2.  Route management: whether navigating between screens, showing `SnackBars`, popping dialog boxes, or adding bottom sheets without the use of `context`, GetX has you covered. I will not write details on route management because it is beyond the scope of this article, but indeed a few examples to get an idea of how GetX syntax simplicity works
+3.  Dependency management: GetX has a simple yet powerful solution for dependency management using controllers. With just a single line of code, it can be accessed from the view without using an inherited widget or context. Typically, you would instantiate a class within a class, but with GetX, you are instantiating with the `Get` instance, which will be available throughout your application
+
+### Value-added features of GetX
+----------------------------
+
+GetX has some great features out of the box, making it even easier to develop mobile applications in Flutter without any boilerplate code:
+
+1.  Internationalization: translations with key-value maps, various language support, using translations with singulars, plurals, and parameters. Changing the application’s locale using only the `Get` word throughout the app
+2.  Validation: email and password validations are also covered by GetX. Now you do not need to install a separate validation package
+3.  Storage: GetX also provides fast and extra light synchronous key-value memory backup of data entirely written in Dart that easily integrates with the GetX core package
+4.  Themes: switching between light and dark themes is made simple with GetX
+5.  Responsive view: if you are building an application for different screen sizes, you just need to extend with `GetView`, and you can quickly develop your UI, which will be responsive for desktop, tablet, phone, and watch
+
+### Let’s get going with GetX state management
+------------------------------------------
+#### Step 1: Create a new application
+
+Create a brand new application in your preferred IDE. First, remove all the starter comments by selecting the find and replace option in the **Edit** menu and type this: `\/\/.*`. This will select Flutter’s comments in the starter code, and you can just hit the delete button.
+
+#### Step 2: Add required dependencies
+
+Add these dependencies in your `pubspec.yaml` file:
+
+```
+get: ^4.6.1           //YAML
+get_storage: ^2.0.3  //YAML
+```
+
+
+Run this command:
+
+```
+flutter pub get  //YAML
+```
+
+
+Before going on to Step 3, let me explain what we are building here. The application is about a store where the user can:
+
+1.  change the name of the store
+2.  add follower names
+3.  add follower count
+4.  change the status of the store from open to closed and vice versa
+5.  add reviews to the store
+6.  change the theme of the store from light to dark
+
+All of the above will explain state management, dependency management, route management, storage, and themes.
+
+You can read along and [test the application through this link](https://getx-store.web.app/#/).
+
+#### Step 3: Update the `MaterialApp` Widget
+
+After adding the dependencies, the first thing you need to do is change the `MaterialApp` widget to `GetMaterialApp` in your `main.dart` file. This gives access to all GetX properties across the application.
+
+#### Step 4: Add GetX Controller
+
+We have already established that GetX separates the UI from the business logic. This is where GetX Controller comes into play.
+
+You can always create more than one controller in your application. The GetX Controller class controls the state of the UI when you wrap an individual widget with its `Observer` so that it only rebuilds when there is a change in the state of that particular widget.
+
+We are adding a new Dart file to create our controller class, `StoreController`, which extends `GetxController`:
+
+```
+class StoreController extends GetxController {}
+```
+
+
+Next, we add a few variables and initialize them with default values.
+
+Normally we would add these variables like this as given below:
+
+```
+final storeName = 'Thick Shake';
+```
+
+
+But, when using GetX, we have to make the variables observable by adding **`obs`** at the end of value. Then when the variable changes, other parts of the application that depend on it will be notified about it. So now, our initialized value will look like this:
+
+```
+final storeName = 'Thick Shake'.obs;
+```
+
+
+The rest of the variables are given below:
+
+```
+// String for changing the Store Name
+final storeName = 'Thick Shake'.obs;
+// int for increasing the Follower count
+final followerCount = 0.obs;
+// bool for showing the status of the Store open or close
+final storeStatus = true.obs;
+// List for names of Store Followers
+final followerList = [].obs;
+// Map for Names and their Reviews for the Store
+final reviews = <StoreReviews>[].obs;
+// text editing controllers
+final storeNameEditingController  = TextEditingController();
+final reviewEditingController = TextEditingController();
+final followerController = TextEditingController();
+final reviewNameController = TextEditingController();
+```
+
+
+Next, we create three methods for changing the name, increasing the follower count, and changing the store status:
+
+```
+updateStoreName(String name) {
+ storeName(name);
+}
+
+updateFollowerCount() {
+ followerCount(followerCount.value + 1);
+}
+
+void storeStatusOpen(bool isOpen) {
+ storeStatus(isOpen);
+}
+```
+
+
+#### Step 5: Dependency injection
+
+In layman’s terms, we add the `controller` class we just created into our `view` class. There are three ways to instantiate.
+
+1.  Extending the whole `view` class with `GetView` and injecting our `StoreController` with it:
+    
+```dart
+class Home extends GetView<StoreController>{}
+```
+
+    
+2.  Instantiating the `storeController` like this:
+
+```dart
+final storeController = Get.put(StoreContoller())
+```
+
+    
+3.  For option three, start by creating a new `StoreBinding` class and implementing `Bindings`. Inside its default dependencies, you need to `lazyPut` the `StoreController` by using `Get.lazyPut()`. Secondly, you need to add the binding class inside the `initialBinding` property in `GetMaterialWidget`.
+
+Lastly, instead of `Get.Put` as mentioned above, now you can use `Get.find` and GetX will find your controller for you when you instantiate in any of your classes:
+
+```dart
+class StoreBinding implements Bindings {
+// default dependency
+ @override
+ void dependencies() {
+   Get.lazyPut(() => StoreController();
+ }
+}
+```
+
+
+```dart
+@override
+Widget build(BuildContext context) {
+ return GetMaterialApp(
+   debugShowCheckedModeBanner: false,
+   title: 'GetX Store',
+   initialBinding: StoreBinding(),
+}
+```
+
+
+```dart
+class UpdateStoreName extends StatelessWidget {
+ UpdateStoreName({Key? key}) : super(key: key);
+//Getx will find your controller.
+ final storeController = Get.find<StoreController>();
+```
+
+
+There are a lot of code and Dart files in the project. I am only writing about the three methods that I have mentioned above. The rest of the code will be available on Git. The link will be provided at the end of this article. 
+
+#### Step 6: Instantiate Controller
+
+Since we have extended our `Home` view with `GetView` and created a binding class to `lazyPut` our controller inside it, we will now use `Get.find` to instantiate our controller inside our classes.
+
+First, we add a new stateless widget, `UpdateStoreName`. Instantiate our `controller` class like this:
+
+```dart
+final storeController = Get.find<StoreController>();
+```
+
+
+```dart
+RoundedInput(
+ hintText: "Store Name",
+ controller: storeController.storeNameEditingController,
+),
+const SizedBox(height: 20),
+ElevatedButton(
+ onPressed: () {
+   storeController.updateStoreName(
+       storeController.storeNameEditingController.text);
+   Get.snackbar(
+       'Updated',
+       'Store name has been updated ton '
+           '${storeController.storeNameEditingController.text}',
+       snackPosition: SnackPosition.BOTTOM);
+ },
+ child: const Padding(
+   padding: EdgeInsets.all(10.0),
+   child: Text(
+     'Update',
+     style: TextStyle(fontSize: 20.0),
+   ),
+ ),
+),
+```
+
+
+Let me explain the above code: `RoundedInput` is just a custom `TextField`, and we are adding a `TextEditingController` for the `TextField` using our `storeController`. We are also calling the `updateStoreName()` method in the same way inside the `onPressed` of `ElevatedButton`. And then we are showing a `SnackBar` as a confirmation that the store name has been updated.
+
+Below is the code for `AddFollowerCount` and `StoreStatus`. Again both are stateless widgets, and the method of implementing the `storeController` and calling our controller is similar:
+
+```dart
+class AddFollowerCount extends StatelessWidget {
+ AddFollowerCount({Key? key}) : super(key: key);
+ final storeController = Get.find<StoreController>();
+
+ @override
+ Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(title: const Text("Add Follower Count")),
+     floatingActionButton: FloatingActionButton(
+       onPressed: () {storeController.updateFollowerCount();
+       },
+       child: const Icon(Icons.add),
+     ),
+     body: Container(
+       padding: const EdgeInsets.all(24),
+       child: Center(
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             const Text(
+               'You have add these many followers to your store',
+               textAlign: TextAlign.center,
+               style: TextStyle(fontSize: 28),
+             ),
+             const SizedBox(
+               height: 40.0,
+             ),
+             Obx(
+               () => Text(
+                 storeController.followerCount.value.toString(),
+                 style: const TextStyle(fontSize: 48),
+               ),
+             )
+           ],
+         ),
+       ),
+     ),
+   );
+ }
+}
+```
+
+
+```dart
+class StoreStatus extends StatelessWidget {
+ StoreStatus({Key? key}) : super(key: key);
+ //final storeController = Get.put(StoreController());
+ final storeController = Get.find<StoreController>();
+
+ @override
+ Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(title: const Text("Test Status Toggle")),
+     body: Container(
+       padding: const EdgeInsets.all(24),
+       child: Center(
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             const Text(
+               "Is the Store open?",
+               style: TextStyle(fontSize: 22),
+             ),
+             const SizedBox(height: 16),
+             Obx(
+               () => Switch(
+                 onChanged: (value) => storeController.storeStatus(value),
+                 activeColor: Colors.green,
+                 value: storeController.storeStatus.value,
+               ),
+             )
+           ],
+         ),
+       ),
+     ),
+   );
+ }
+}
+```
+
+
+#### Step 7: `Obx` Widget (Observer)
+
+Now, let us get to the part where the entered value of our store name, increased count of followers, and store status will be shown using our `storeController`.
+
+Our `Home` view is extended with `GetView<StoreController>`, so we do not need to instantiate our `storeController` here. Instead, we can just use GetX’s default controller. Please look at the code given below to get a clear picture and understand the difference between Step 6 and Step 7.
+
+You must have noticed that the `Text` widget inside the `Flexible` widget is wrapped with an `Obx` widget where we have also called our `controller`. Remember how we added `(.obs)` to our variables? Now, when we want to see the change in that observable variable, we have to wrap the widget with `Obx`, also known as `Observer`, similar to what you must have noticed in the above code.
+
+Wrapping the widget with `Obx` will only rebuild that particular widget and not the whole class when the state changes. This is how simple it is:
+
+```dart
+class Home extends GetView<StoreController> {
+ Home({Key? key}) : super(key: key);
+ 
+ @override
+ Widget build(BuildContext context) {
+   return Scaffold(
+     backgroundColor: AppColors.spaceCadet,
+     appBar: AppBar(
+       title: const Text("GetX Store"),),
+     drawer: const SideDrawer(),
+     body: Container(
+       padding: const EdgeInsets.all(10),
+       child: SingleChildScrollView(
+         child: Column(
+           children: [
+             MainCard(
+               title: "Store Info",
+               body: Column(
+                 crossAxisAlignment: CrossAxisAlignment.stretch,
+                 children: [
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     children: [
+                       const Flexible(
+                         child: Text('Store Name:',
+                           style: TextStyle(fontSize: 20),),
+                         fit: FlexFit.tight,),
+                       const SizedBox(width: 20.0),
+                   // Wrapped with Obx to observe changes to the storeName
+                   // variable when called using the StoreController.
+                       Obx(
+                         () => Flexible(
+                           child: Text(
+                             controller.storeName.value.toString(),
+                             style: const TextStyle(
+                             fontSize: 22, fontWeight: FontWeight.bold) ),
+                           fit: FlexFit.tight,
+                         ),),
+                     ],),
+                   const SizedBox(height: 20.0),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     children: [
+                       const Flexible(
+                         child: Text('Store Followers:',
+                           style: TextStyle(fontSize: 20),),
+                         fit: FlexFit.tight, ),
+                       const SizedBox(width: 20.0),
+               // Wrapped with Obx to observe changes to the followerCount
+               // variable when called using the StoreController.
+                       Obx(
+                         () => Flexible(
+                           child: Text(
+                             controller.followerCount.value.toString(),
+                             textAlign: TextAlign.start,
+                             style: const TextStyle(
+                             fontSize: 22, fontWeight: FontWeight.bold),
+                           ),
+                           fit: FlexFit.tight,),), ],
+                   ),
+                   const SizedBox(height: 20.0),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     children: [
+                       const Flexible(
+                         child: Text('Status:',
+                           style: TextStyle(fontSize: 20),),
+                         fit: FlexFit.tight,),
+                       const SizedBox(width: 20.0),
+                 // Wrapped with Obx to observe changes to the storeStatus
+                 // variable when called using the StoreController.
+                       Obx(
+                         () => Flexible(
+                           child: Text(
+                        controller.storeStatus.value ? 'Open' : 'Closed',
+                             textAlign: TextAlign.start,
+                             style: TextStyle(
+                                 color: controller.storeStatus.value
+                                     ? Colors.green.shade700
+                                     : Colors.red,
+                                 fontSize: 22,
+                                 fontWeight: FontWeight.bold),),
+                           fit: FlexFit.tight,
+                         ),  ),  ], ), ], ), ),
+```
+
+
+I have purposely highlighted the `controllers` and `Obx` to understand the difference between a default stateful widget provided by Flutter and using GetX for managing the state of a view or an entire application.
+
+If we were using a stateful widget, we would have to use the `setState()` method every time we wanted to see changes. We would also have to dispose of `controllers` manually. So instead, we avoid all the boilerplate code and just wrap our widget with `Obx`, and the rest is taken care of.
+
+If we had to summarize all the above, it could be done in only two steps:
+
+1.  Add `obs` to your variable
+2.  Wrap your widget with `Obx`
+
+#### An alternative method
+
+Well, that is not the only way to do it. For example, if you make your variables observable, you can also wrap the widget with `GetX<StoreController>` directly instead of `Obx`. However, the functionality remains the same. This way, you do not need to instantiate the `storeController` before it can be called. Please look at the code below:
+
+```dart
+// Wrapped with GetX<StoreController> to observe changes to the
+//storeStatus variable when called using the StoreController.
+GetX<StoreController>(
+ builder: (sController) => Flexible(
+   child: Text(
+     sController.storeStatus.value ? 'Open' : 'Closed',
+     textAlign: TextAlign.start,
+     style: TextStyle(
+         color: sController.storeStatus.value
+             ? Colors.green.shade700
+             : Colors.red,
+         fontSize: 22,
+         fontWeight: FontWeight.bold), ),
+   fit: FlexFit.tight, ),),
+```
+
+
+_N.B., I have changed the `storeStatus` from `Obx` to `GetX<StoreController>` and it is using `sController` from the `building` function._
+
+Wrapping the widgets with `Obx` or `GetX` is known as reactive state management.
+
+#### Simple state management
+
+Let us see an example for simple state management. First, the advantage of using simple state management is that you do not need to change your `MaterialWidget` to `GetMaterialWidget`. Secondly, you can combine other state management libraries with simple state management.
+
+_N.B., if you do not change your `MaterialWidget`_ _to `GetMaterialWidget`, you will not be able to use other GetX features such as route management._
+
+For simple state management:
+
+1.  you need to use the `GetBuilder` function
+2.  you do not need `observable` variables
+3.  you have to call the `update()` function in your method
+
+I have created a new variable in our `StoreController`. But this time, I have not added `(obs)` at the end of the variable. It means now it is not observable.
+
+But I still need my view to get updated when the store count increases, so I have to call the `update()` function inside my newly created method. Check the code below:
+
+```dart
+// variable is not observable
+int storeFollowerCount = 0;
+
+void incrementStoreFollowers() {
+ storeFollowerCount++;
+//update function needs to be called
+ update();
+}
+```
+
+
+Now, in our **Home** view I have changed `Obx` to `GetBuilder` to the `Text` widget, which displays the follower count:
+
+```dart
+GetBuilder<StoreController>(
+ builder: (newController) => Flexible(
+   child: Text(
+     newController.storeFollowerCount.toString(),
+     textAlign: TextAlign.start,
+     style: const TextStyle(
+         fontSize: 22, fontWeight: FontWeight.bold),
+   ),
+   fit: FlexFit.tight, ),),
+```
+
+
+Since we are wrapping our follower count with `GetBuilder` in our **Home** view, we also have to make changes to the `AddFollowerCount` Dart file.
+
+1.  Add this inside the `onPressed` function in the `Fab` button:
+    
+    ```dart
+storeController.incrementStoreFollowers();
+```
+
+    
+    1.  Wrap the `Text` widget with `GetBuilder` as well so that it displays the follower count:
+        
+        ```dart
+GetBuilder<StoreController>(
+ builder: (newController) => Text(
+   'With GetBuilder: ${newController.storeFollowerCount.toString()}',
+   textAlign: TextAlign.start,
+   style: const TextStyle(
+       fontSize: 22, fontWeight: FontWeight.bold), ),),
+```
+
+
+There is one more difference between using `Obx` or `GetX` and using `GetBuilder`. When using `Obx` or `GetX`, you need to add value after calling your method using the `StoreController`. But when using `GetBuilder`, you do not need to add a value parameter to it. Please look at the difference below:
+
+```dart
+// value parameter to be added with Obx or GetX
+controller.storeName.value.toString(),
+
+// value parameter is not needed with GetBuilder
+newController.storeFollowerCount.toString(),
+```
+
+
+That is all for different state managements provided by GetX. Furthermore, as promised, I am writing a little about route management and other features of the GetX package. Hence, a whole new article is needed to write in detail about it all.
+
+### Other GetX features
+-------------------
+
+#### Route management
+
+Traditionally, when a user wants to go from one screen to another with a click of a button, code would look like this:
+
+```dart
+Navigator.push(context, 
+    MaterialPageRoute(builder: (context)=> Home()));
+```
+
+
+But, with GetX, there are literally just two words:
+
+```dart
+Get.to(Home());
+```
+
+
+When you want to navigate back to your previous screen:
+
+```dart
+Navigator.pop(context);
+```
+
+
+There is absolutely no need for context when you are using GetX:
+
+```dart
+Get.back();
+```
+
+
+If you have a dialog or a drawer opened and you want to navigate to another screen while closing the drawer or dialog, there are two ways to do this with default Flutter navigation:
+
+1.  Close the drawer or dialog and then navigate like this:
+    
+    ```dart
+Navigator.pop(context);
+Navigator.push(context, 
+    MaterialPageRoute(builder: (context)=> SecondScreen()));
+```
+
+    
+2.  If you have named routes generated:
+    
+    ```dart
+Navigator.popAndPushNamed(context, '/second');
+```
+
+    
+
+With GetX, it gets a lot simpler to generate named routes and navigate between screens while closing any dialogs or drawers that are open:
+
+```dart
+// for named routes
+Get.toNamed('/second'),
+// to close, then navigate to named route
+Get.offAndToNamed('/second'),
+```
+
+
+#### Value-added features
+
+1.  Snackbars
+    ```dart
+Get.snackbar(
+   'title',
+   'message',
+   snackPosition: SnackPosition.BOTTOM,
+colorText: Colors.white,
+backgroundColor: Colors.black,
+borderColor: Colors.white);
+```
+
+    
+2.  Dialogs
+    ```dart
+Get.defaultDialog(
+   radius: 10.0,
+   contentPadding: const EdgeInsets.all(20.0),
+   title: 'title',
+   middleText: 'content',
+   textConfirm: 'Okay',
+   confirm: OutlinedButton.icon(
+     onPressed: () => Get.back(),
+     icon: const Icon(
+       Icons.check,
+       color: Colors.blue,     ),
+     label: const Text('Okay',
+       style: TextStyle(color: Colors.blue),
+     ),   ),
+ cancel: OutlinedButton.icon(
+     onPressed: (){},
+     icon: Icon(),
+     label: Text(),),);
+```
+
+
+3.  Bottom sheets
+    ```dart
+Get.bottomSheet(
+   Container(
+ height: 150,
+ color: AppColors.spaceBlue,
+ child: Center(
+     child: Text(
+   'Count has reached ${obxCount.value.toString()}',
+   style: const TextStyle(fontSize: 28.0, color: Colors.white),
+ )),
+));
+```
+
+
+Looking at the above code, you can easily understand how simple it is to show and customize snackbars, dialogs, and bottom sheets.
+
+#### Switching from light to dark themes and vice versa
+
+First, I created a `ThemeController` similar to our `StoreController`. Inside my controller, I am using the `GetStorage` function to save the switched theme:
+
+```dart
+class ThemeController extends GetxController {
+  final _box = GetStorage();
+  final _key = 'isDarkMode';
+
+  ThemeMode get theme => _loadTheme() ? ThemeMode.dark : ThemeMode.light;
+  bool _loadTheme() => _box.read(_key) ?? false;
+
+  void saveTheme(bool isDarkMode) => _box.write(_key, isDarkMode);
+  void changeTheme(ThemeData theme) => Get.changeTheme(theme);
+  void changeThemeMode(ThemeMode themeMode) => Get.changeThemeMode(themeMode);
+}
+```
+
+
+Inside the `GetMaterialApp` widget, I have added properties for `theme` and `darkTheme` as well as initialized `themeController` and added the same to the `themeMode` property:
+
+```dart
+class MyApp extends StatelessWidget {
+  MyApp({Key? key}) : super(key: key);
+  final themeController = Get.put(ThemeController());
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'GetX Store',
+      initialBinding: StoreBinding(),
+      theme: Themes.lightTheme,
+      darkTheme: Themes.darkTheme,
+      themeMode: themeController.theme,
+}
+}
+```
+
+
+Next, in our **Home** screen in the `appBar`, I have added an icon that switches the theme between light and dark. Just have a look at the code below:
+
+```dart
+class Home extends GetView<StoreController> {
+ Home({Key? key}) : super(key: key);
+ final themeController = Get.find<ThemeController>();
+
+ @override
+ Widget build(BuildContext context) {
+   return Scaffold(backgroundColor: AppColors.spaceCadet,
+     appBar: AppBar(title: const Text("GetX Store"),
+       actions: [IconButton(
+           onPressed: () {
+             if (Get.isDarkMode) {
+               themeController.changeTheme(Themes.lightTheme);
+               themeController.saveTheme(false);
+             } else {
+               themeController.changeTheme(Themes.darkTheme);
+               themeController.saveTheme(true); }},
+           icon: Get.isDarkMode
+               ? const Icon(Icons.light_mode_outlined)
+               : const Icon(Icons.dark_mode_outlined),),], ),
+```
+
+
+And that’s it. Now you can easily switch between light and dark themes.
+
+### Links to the source code on GitHub
+
+GetX store link: [https://github.com/timelessfusionapps/getx\_store](https://github.com/timelessfusionapps/getx_store)
+
+GetX counter link: [https://github.com/timelessfusionapps/getx\_counter](https://github.com/timelessfusionapps/getx_counter)
+
+### Links to the web app
+
+GetX store link: [https://getx-store.web.app/#/](https://getx-store.web.app/#/)
+
+GetX counter app: [https://getx-counter.web.app/#/](https://getx-counter.web.app/#/)
 
 ## Building Flutter APK
 
