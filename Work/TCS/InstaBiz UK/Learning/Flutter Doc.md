@@ -1,13 +1,3 @@
-
-# Table of Contents
-```table-of-contents
-title: 
-style: nestedList # TOC style (nestedList|inlineFirstLevel)
-minLevel: 1 # Include headings from the specified level
-maxLevel: 2 # Include headings up to the specified level
-includeLinks: true # Make headings clickable
-debugInConsole: false # Print debug info in Obsidian console
-```
 # Dart Tutorial
 
 ## Introduction and Basics
@@ -14193,7 +14183,7 @@ That is all for different state managements provided by GetX. Furthermore, as pr
 
 Traditionally, when a user wants to go from one screen to another with a click of a button, code would look like this:
 
-```dart
+```
 Navigator.push(context, 
     MaterialPageRoute(builder: (context)=> Home()));
 ```
@@ -14223,8 +14213,8 @@ Get.back();
 If you have a dialog or a drawer opened and you want to navigate to another screen while closing the drawer or dialog, there are two ways to do this with default Flutter navigation:
 
 1.  Close the drawer or dialog and then navigate like this:
-    
-    ```dart
+ 
+```dart
 Navigator.pop(context);
 Navigator.push(context, 
     MaterialPageRoute(builder: (context)=> SecondScreen()));
@@ -14232,12 +14222,9 @@ Navigator.push(context,
 
     
 2.  If you have named routes generated:
-    
-    ```dart
+```dart
 Navigator.popAndPushNamed(context, '/second');
 ```
-
-    
 
 With GetX, it gets a lot simpler to generate named routes and navigate between screens while closing any dialogs or drawers that are open:
 
@@ -14252,7 +14239,7 @@ Get.offAndToNamed('/second'),
 #### Value-added features
 
 1.  Snackbars
-    ```dart
+```dart
 Get.snackbar(
    'title',
    'message',
@@ -14264,7 +14251,7 @@ borderColor: Colors.white);
 
     
 2.  Dialogs
-    ```dart
+```dart
 Get.defaultDialog(
    radius: 10.0,
    contentPadding: const EdgeInsets.all(20.0),
@@ -14287,7 +14274,7 @@ Get.defaultDialog(
 
 
 3.  Bottom sheets
-    ```dart
+```dart
 Get.bottomSheet(
    Container(
  height: 150,
@@ -14326,19 +14313,19 @@ Inside the `GetMaterialApp` widget, I have added properties for `theme` and `dar
 
 ```dart
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
-  final themeController = Get.put(ThemeController());
-
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'GetX Store',
-      initialBinding: StoreBinding(),
-      theme: Themes.lightTheme,
-      darkTheme: Themes.darkTheme,
-      themeMode: themeController.theme,
-}
+	  MyApp({Key? key}) : super(key: key);
+	  final themeController = Get.put(ThemeController());
+	
+	  @override
+	  Widget build(BuildContext context) {
+	    return GetMaterialApp(
+	      debugShowCheckedModeBanner: false,
+	      title: 'GetX Store',
+	      initialBinding: StoreBinding(),
+	      theme: Themes.lightTheme,
+	      darkTheme: Themes.darkTheme,
+	      themeMode: themeController.theme,
+	}
 }
 ```
 
