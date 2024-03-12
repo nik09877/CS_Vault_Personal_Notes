@@ -81,6 +81,7 @@ Note: Low-level languages are faster than high-level but hard to understand and 
 
 
 ### Install Dart 
+
 #### **Dart Installation**
 
 There are multiple ways to install a dart on your system. You can install Dart on **Windows, Mac, and Linux** or run it from the browser.
@@ -119,41 +120,10 @@ Copy and paste this command on your terminal to install Homebrew.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-
 To set the homebrew path, copy and paste this command on your terminal.
 
 ```bash
 export PATH=/opt/homebrew/bin:$PATH
-
-```
-
-
-#### **Dart Linux Installation**
-
-To install a dart on Linux, open your terminal and **copy/paste** the below commands.
-
-```bash
-sudo apt-get update
-sudo apt-get install apt-transport-https
-wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
-echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
-
-```
-
-
-Then, install the dart using the below command.
-
-```bash
-sudo apt-get update
-sudo apt-get install dart
-
-```
-
-
-To set the dart path, copy and paste this command on your terminal.
-
-```bash
-export PATH="$PATH:/usr/lib/dart/bin"
 
 ```
 
@@ -164,7 +134,6 @@ Open your command prompt and type **`dart --version`**. The dart is successfully
 
 #### **Some Useful Commands**
 
-
 |Command                       |Description                                                    |
 |------------------------------|---------------------------------------------------------------|
 |dart --help                   |Show all available commands.                                   |
@@ -173,7 +142,6 @@ Open your command prompt and type **`dart --version`**. The dart is successfully
 |dart fix                      |Update dart project to new syntax.                             |
 |dart compile exe bin/dart.dart|Compile dart code.                                             |
 |dart compile js bin/dart.dart |Compile dart to javascript. You can run this file with Node.js.|
-
 
 #### **Run Dart On Web**
 
@@ -247,20 +215,20 @@ Performing addition, subtraction, multiplication, and division in dart.
 
 ```dart
 void main() {
-int num1 = 10; //declaring number1
-int num2 = 3; //declaring number2
-  
-// Calculation
-int sum = num1 + num2;
-int diff = num1 - num2;
-int mul = num1 * num2;
-double div = num1 / num2; // It is double because it outputs number with decimal.
-  
-// displaying the output
-print("The sum is $sum");
-print("The diff is $diff");
-print("The mul is $mul");
-print("The div is $div");
+	int num1 = 10; //declaring number1
+	int num2 = 3; //declaring number2
+	  
+	// Calculation
+	int sum = num1 + num2;
+	int diff = num1 - num2;
+	int mul = num1 * num2;
+	double div = num1 / num2; // It is double because it outputs number with decimal.
+	  
+	// displaying the output
+	print("The sum is $sum");
+	print("The diff is $diff");
+	print("The mul is $mul");
+	print("The div is $div");
 }
 
 ```
@@ -342,19 +310,19 @@ In this example, you will learn how to declare variables and print their values.
 
 ```dart
 void main() {
-// declaring variables
-String name = "John";
-String address = "USA";  
-num age = 20; // used to store any types of numbers 
-num height = 5.9;
-bool isMarried = false;
-   
-// printing variables value   
-print("Name is $name");
-print("Address is $address");
-print("Age is $age");
-print("Height is $height");
-print("Married Status is $isMarried");
+	// declaring variables
+	String name = "John";
+	String address = "USA";  
+	num age = 20; // used to store any types of numbers 
+	num height = 5.9;
+	bool isMarried = false;
+	   
+	// printing variables value   
+	print("Name is $name");
+	print("Address is $address");
+	print("Age is $age");
+	print("Height is $height");
+	print("Married Status is $isMarried");
 }
 
 ```
@@ -379,9 +347,9 @@ Constant is the type of variable whose value never changes. In programming, chan
 
 ```dart
 void main(){
-const pi = 3.14;
-pi = 4.23; // not possible  
-print("Value of PI is $pi");
+	const pi = 3.14;
+	pi = 4.23; // not possible  
+	print("Value of PI is $pi");
 }
 
 ```
@@ -829,8 +797,8 @@ Single line comments start with `//` in dart. You can write `//` and your text.
 
 ```dart
 void main() {
-// This is single-line comment.
-print("Welcome to Technology Channel.");
+	// This is single-line comment.
+	print("Welcome to Technology Channel.");
 }
 
 ```
@@ -907,27 +875,27 @@ Let’s look at how to perform arithmetic calculations in dart.
 
 ```dart
 void main() {
- // declaring two numbers 
- int num1=10;
- int num2=3;
- 
- // performing arithmetic calculation
- int sum=num1+num2;       // addition
- int diff=num1-num2;      // subtraction
- int unaryMinus = -num1;    // unary minus  
- int mul=num1*num2;       // multiplication
- double div=num1/num2;    // division
- int div2 =num1~/num2;     // integer division
- int mod=num1%num2;       // show remainder
- 
-//Printing info 
- print("The addition is $sum.");
- print("The subtraction is $diff.");
- print("The unary minus is $unaryMinus.");
- print("The multiplication is $mul.");
- print("The division is $div.");
- print("The integer division is $div2.");
- print("The modulus is $mod."); 
+	 // declaring two numbers 
+	 int num1=10;
+	 int num2=3;
+	 
+	 // performing arithmetic calculation
+	 int sum=num1+num2;       // addition
+	 int diff=num1-num2;      // subtraction
+	 int unaryMinus = -num1;    // unary minus  
+	 int mul=num1*num2;       // multiplication
+	 double div=num1/num2;    // division
+	 int div2 =num1~/num2;     // integer division
+	 int mod=num1%num2;       // show remainder
+	 
+	//Printing info 
+	 print("The addition is $sum.");
+	 print("The subtraction is $diff.");
+	 print("The unary minus is $unaryMinus.");
+	 print("The multiplication is $mul.");
+	 print("The division is $div.");
+	 print("The integer division is $div2.");
+	 print("The modulus is $mod."); 
 }
 
 ```
@@ -954,24 +922,24 @@ Info
 
 ```dart
 void main() {
-// declaring two numbers 
- int num1=0;
- int num2=0;
- 
-// performing increment / decrement operator  
-
-// pre increment   
-num2 = ++num1;
-print("The value of num2 is $num2");
-
-// reset value to 0 
-num1 = 0;
-num2 = 0;
-
-// post increment  
-num2 =  num1++;
-print("The value of num2 is $num2");  
-  
+	// declaring two numbers 
+	 int num1=0;
+	 int num2=0;
+	 
+	// performing increment / decrement operator  
+	
+	// pre increment   
+	num2 = ++num1;
+	print("The value of num2 is $num2");
+	
+	// reset value to 0 
+	num1 = 0;
+	num2 = 0;
+	
+	// post increment  
+	num2 =  num1++;
+	print("The value of num2 is $num2");  
+	  
 }
 
 ```
@@ -1015,8 +983,6 @@ void main() {
 
 Relational operators are also called comparison operators. They are used to make a comparison.
 
-
-
 * Operator Symbol: >
   * Operator Name: Greater than
   * Description: Used to check which operand is bigger and gives result as boolean
@@ -1040,14 +1006,14 @@ Relational operators are also called comparison operators. They are used to make
 ```dart
 void main() {
   
- int num1=10;
- int num2=5;
- //printing info
- print(num1==num2); 
- print(num1<num2);
- print(num1>num2);
- print(num1<=num2);
- print(num1>=num2);
+	 int num1=10;
+	 int num2=5;
+	 //printing info
+	 print(num1==num2); 
+	 print(num1<num2);
+	 print(num1>num2);
+	 print(num1<=num2);
+	 print(num1>=num2);
 }
 
 ```
@@ -1069,7 +1035,7 @@ It is used to compare values.
 
 ```dart
 void main(){
-  int userid = 123;
+	int userid = 123;
     int userpin = 456;
 
     // Printing Info
@@ -1197,10 +1163,10 @@ You can combine one String with another string. This is called concatenation. In
 
 ```dart
 void main() {   
-String firstName = "John";
-String lastName = "Doe";
-print("Using +, Full Name is "+firstName + " " + lastName+".");
-print("Using interpolation, full name is $firstName $lastName.");  
+	String firstName = "John";
+	String lastName = "Doe";
+	print("Using +, Full Name is "+firstName + " " + lastName+".");
+	print("Using interpolation, full name is $firstName $lastName.");  
   
 }
 
@@ -1323,12 +1289,12 @@ You can replace one value with another with the replaceAll(“old”, “new”)
 ```dart
 //Example of replaceAll()
 void main() { 
-String text = "I am a good boy I like milk. Doctor says milk is good for health.";
-  
-String newText = text.replaceAll("milk", "water"); 
- 
-print("Original Text: $text");
-print("Replaced Text: $newText");  
+	String text = "I am a good boy I like milk. Doctor says milk is good for health.";
+	  
+	String newText = text.replaceAll("milk", "water"); 
+	 
+	print("Original Text: $text");
+	print("Replaced Text: $newText");  
    
 } 
 
@@ -1368,11 +1334,11 @@ In dart, toString() represents String representation of the value/object.
 ```dart
 //Example of toString()
 void main() { 
-int number = 20;     
-String result = number.toString(); 
-  
-print("Type of number is ${number.runtimeType}");  
-print("Type of result is ${result.runtimeType}");  
+	int number = 20;     
+	String result = number.toString(); 
+	  
+	print("Type of number is ${number.runtimeType}");  
+	print("Type of result is ${result.runtimeType}");  
     
 }   
 
@@ -1490,9 +1456,9 @@ If the result of the condition is true, then the body of the if-condition is exe
 
 ```dart
 if(condition){
-statements;
+	statements;
 }else{
-statements;
+	statements;
 }
 
 ```
@@ -1544,11 +1510,11 @@ When you have multiple if conditions, then you can use if-else-if. You can learn
 
 ```dart
 if(condition1){
-statements1;
+	statements1;
 }else if(condition2){
-statements2;
+	statements2;
 }else if(condition3){
-statements3;
+	statements3;
 }
 .
 .
@@ -1670,29 +1636,29 @@ This example prints the day name based on the numeric day of the week using a if
 ```dart
 void main(){
    var dayOfWeek = 5;
-if (dayOfWeek == 1) {
-        print("Day is Sunday.");
-  }
-else if (dayOfWeek == 2) {
-       print("Day is Monday.");
-     }
-else if (dayOfWeek == 3) {
-      print("Day is Tuesday.");
-     }
-else if (dayOfWeek == 4) {
-        print("Day is Wednesday.");
-     }
-else if (dayOfWeek == 5) {
-        print("Day is Thursday.");
-   }
-else if (dayOfWeek == 6) {
-        print("Day is Friday.");
-    }
-else if (dayOfWeek == 7) {
-        print("Day is Saturday.");
-}else{
-        print("Invalid Weekday.");
-     }
+	if (dayOfWeek == 1) {
+	        print("Day is Sunday.");
+	  }
+	else if (dayOfWeek == 2) {
+	       print("Day is Monday.");
+	     }
+	else if (dayOfWeek == 3) {
+	      print("Day is Tuesday.");
+	     }
+	else if (dayOfWeek == 4) {
+	        print("Day is Wednesday.");
+	     }
+	else if (dayOfWeek == 5) {
+	        print("Day is Thursday.");
+	   }
+	else if (dayOfWeek == 6) {
+	        print("Day is Friday.");
+	    }
+	else if (dayOfWeek == 7) {
+	        print("Day is Saturday.");
+	}else{
+	        print("Invalid Weekday.");
+	     }
 }
 
 ```
@@ -1739,8 +1705,6 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=01f56818a1754280968c0b6546321478)
 
-Info
-
 **Note**: The syntax of switch statements is cleaner and much easier to read and write.
 
 #### **Switch Case On Strings**
@@ -1783,7 +1747,7 @@ enum enum_name {
   constant_value1, 
   constant_value2, 
   constant_value3 
-  }
+}
 
 ```
 
@@ -1980,7 +1944,6 @@ Here, the value of the **total** is **0** initially. Then, the for loop is itera
 
 ```dart
 void main(){
-
   int total = 0;
   int n = 100; // change as per required
   
@@ -2029,9 +1992,6 @@ void main() {
 }
 
 ```
-
-
-Info
 
 **Note**: Infinite loops take your computer resources continuously, use more power, and slow your computer. So always check your loop before use.
 
@@ -2110,9 +2070,9 @@ In dart, asMap method converts the list to a map where the keys are the index an
 ```dart
 void main(){
 
-List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
-
-footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
+	List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+	
+	footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
 
 }
 
@@ -2127,12 +2087,11 @@ This will split the name into Unicode values and then find characters from the U
 
 ```dart
 void main(){
-  
-String name = "John";
-     
-for(var codePoint in name.runes){
-  print("Unicode of ${String.fromCharCode(codePoint)} is $codePoint.");
-}
+	String name = "John";
+	     
+	for(var codePoint in name.runes){
+	  print("Unicode of ${String.fromCharCode(codePoint)} is $codePoint.");
+	}
 }
 
 ```
@@ -2177,8 +2136,6 @@ void main() {
 
 
 [Run Online](https://dartpad.dev/?id=4bd92d159957b654e5f8e0703eb6a620)
-
-Info
 
 **Note**: Do not forget to increase the variable used in the condition. Otherwise, the loop will never end and becomes an infinite loop.
 
@@ -2267,8 +2224,6 @@ do{
 *   The condition is re-checked until the condition is false.
 *   When the condition is false, the loop stops.
 
-Info
-
 **Note**: In a do-while loop, the statements will be executed at least once time, even if the condition is false. It is because the statement is executed before checking the condition.
 
 #### **Example 1: To Print 1 To 10 Using Do While Loop**
@@ -2334,14 +2289,11 @@ Let’s make one condition false and see the demo below. **Hello** got printed i
 
 ```dart
 void main(){
-
   int number = 0;
-  
   do{
-  print("Hello");
-  number--;
+	  print("Hello");
+	  number--;
   }while(number >1);
-  
 }
 
 ```
@@ -2904,8 +2856,6 @@ void main(){
 *   Parameter is the name and data type you define as an input for your function.
 *   Argument is the actual value that you passed in.
 
-Info
-
 **Note**: In dart, if you don’t write the return type of function. It will automatically understand.
 
 
@@ -3159,6 +3109,7 @@ void main() {
 [Run Online](https://dartpad.dev/?id=acf8ce1d1d325f6783bbce80f7c6b14b)
 
 ### Function Parameter in Dart 
+
 #### **Parameter In Dart**
 
 The parameter is the process of passing values to the function. The values passed to the function must match the number of parameters defined. A function can have any number of parameters.
@@ -3287,8 +3238,6 @@ void main() {
 
 
 [Run Online](https://dartpad.dev/?id=b2ce48d6cd282a9d1113b59b0d71c976)
-
-Info
 
 **Note**: You can pass the value in any order in the named parameter. **?** is used to remove null safety, which we will discuss in the coming chapter.
 
@@ -3523,12 +3472,12 @@ This example shows how to generate random numbers from **0 - 9** and also **1 to
 import 'dart:math';
 void main()
 {
-Random random = new Random();
-int randomNumber = random.nextInt(10); // from 0 to 9 included
-print("Generated Random Number Between 0 to 9: $randomNumber");
-  
-int randomNumber2 = random.nextInt(10)+1; // from 1 to 10 included  
-print("Generated Random Number Between 1 to 10: $randomNumber2"); 
+	Random random = new Random();
+	int randomNumber = random.nextInt(10); // from 0 to 9 included
+	print("Generated Random Number Between 0 to 9: $randomNumber");
+	  
+	int randomNumber2 = random.nextInt(10)+1; // from 1 to 10 included  
+	print("Generated Random Number Between 1 to 10: $randomNumber2"); 
 }
 
 ```
@@ -3559,13 +3508,12 @@ This program generates random numbers between 10 to 20.
 import 'dart:math';
 void main()
 {
-
-int min = 10;
-int max = 20; 
-
-int randomnum = min + Random().nextInt((max + 1) - min);
-  
-print("Generated Random number between $min and $max is: $randomnum");  
+	int min = 10;
+	int max = 20; 
+	
+	int randomnum = min + Random().nextInt((max + 1) - min);
+	  
+	print("Generated Random number between $min and $max is: $randomnum");  
 }
 
 ```
@@ -3592,11 +3540,11 @@ This example below generate random and boolean value.
 import 'dart:math';
 void main()
 {
-double randomDouble = Random().nextDouble();
-bool randomBool = Random().nextBool();
-  
-print("Generated Random double value is: $randomDouble");  
-print("Generated Random bool value is: $randomBool");  
+	double randomDouble = Random().nextDouble();
+	bool randomBool = Random().nextBool();
+	  
+	print("Generated Random double value is: $randomDouble");  
+	print("Generated Random bool value is: $randomBool");  
 }
 
 ```
@@ -3612,8 +3560,8 @@ This example will generate a list of 10 random numbers between 1 to 100.
 import 'dart:math';
 void main()
 {
-List<int> randomList = List.generate(10, (_) => Random().nextInt(100)+1); 
-print(randomList);  
+	List<int> randomList = List.generate(10, (_) => Random().nextInt(100)+1); 
+	print(randomList);  
 }
 
 ```
@@ -3669,6 +3617,7 @@ void main()
 
 
 ## Collections in Dart
+
 ### List in Dart 
 
 If you want to store multiple values in the same variable, you can use **List**. List in dart is similar to **Arrays** in other programming languages. E.g. to store the names of multiple students, you can use a List. The List is represented by **Square Braces\[\].**
@@ -3775,8 +3724,6 @@ void main(){
 ```
 
 [Run Online](https://dartpad.dev/?id=e9ab9ed13874c12aee3f755626d6235e)
-
-Info
 
 Note: Remember that List **index** starts with **0** and length always starts with **1**.
 
@@ -4108,10 +4055,10 @@ You can use where with List to filter specific items. Here in this example, even
 
 ```dart
 void main(){
-List<int> numbers = [2,4,6,8,10,11,12,13,14];
-
-List<int> even = numbers.where((number)=> number.isEven).toList(); 
-print(even);
+	List<int> numbers = [2,4,6,8,10,11,12,13,14];
+	
+	List<int> even = numbers.where((number)=> number.isEven).toList(); 
+	print(even);
 }
 
 ```
@@ -4235,9 +4182,9 @@ You can use **addAll()** method to add multiple elements from the list to Set.
 
 ```dart
 void main(){
- Set<int> numbers = {10, 20, 30};
-  numbers.addAll([40,50]);
- print("After adding 40 and 50: $numbers");
+	 Set<int> numbers = {10, 20, 30};
+	  numbers.addAll([40,50]);
+	 print("After adding 40 and 50: $numbers");
 }    
 
 ```
@@ -4251,11 +4198,11 @@ You can print all Set items by using loops. [Click here](https://dart-tutorial.c
 
 ```dart
 void main(){
- Set<String> fruits = {"Apple", "Orange", "Mango"};
-  
- for(String fruit in fruits){
-   print(fruit);
- }
+	 Set<String> fruits = {"Apple", "Orange", "Mango"};
+	  
+	 for(String fruit in fruits){
+	   print(fruit);
+	 }
 }
 
 ```
@@ -4358,20 +4305,18 @@ Here we are creating a Map for **String** and **String**. It means keys and valu
 
 ```dart
 void main(){
-Map<String, String> countryCapital = {
-  'USA': 'Washington, D.C.',
-  'India': 'New Delhi',
-  'China': 'Beijing'
-};
-  print(countryCapital);
-}
+	Map<String, String> countryCapital = {
+	  'USA': 'Washington, D.C.',
+	  'India': 'New Delhi',
+	  'China': 'Beijing'
+	};
+	  print(countryCapital);
+	}
 
 ```
 
 
 [Run Online](https://dartpad.dev/?id=c8ff56092d2128b0a80ae75cb14bc979)
-
-Info
 
 **Note**: Here **Usa**, **India**, and **China** are keys, and it must be **unique**.
 
@@ -4381,13 +4326,13 @@ You can find the value of Map from its key. Here we are printing **Washington, D
 
 ```dart
 void main(){
-Map<String, String> countryCapital = {
-  'USA': 'Washington, D.C.',
-  'India': 'New Delhi',
-  'China': 'Beijing'
-};
-  print(countryCapital["USA"]);
-}
+	Map<String, String> countryCapital = {
+	  'USA': 'Washington, D.C.',
+	  'India': 'New Delhi',
+	  'China': 'Beijing'
+	};
+	  print(countryCapital["USA"]);
+	}
 
 ```
 
@@ -4437,14 +4382,14 @@ If you want to add an element to the existing Map. Here is the way for you:
 
 ```dart
 void main(){
-Map<String, String> countryCapital = {
-  'USA': 'Washington, D.C.',
-  'India': 'New Delhi',
-  'China': 'Beijing'
-};
-  // Adding New Item
-  countryCapital['Japan'] = 'Tokio';
-  print(countryCapital);
+	Map<String, String> countryCapital = {
+	  'USA': 'Washington, D.C.',
+	  'India': 'New Delhi',
+	  'China': 'Beijing'
+	};
+	  // Adding New Item
+	  countryCapital['Japan'] = 'Tokio';
+	  print(countryCapital);
 }
 
 ```
@@ -4458,14 +4403,14 @@ If you want to update an element of the existing Map. Here is the way for you:
 
 ```dart
 void main(){
-Map<String, String> countryCapital = {
-  'USA': 'Nothing',
-  'India': 'New Delhi',
-  'China': 'Beijing'
-};
-  // Updating Item
-  countryCapital['USA'] = 'Washington, D.C.';
-  print(countryCapital);
+	Map<String, String> countryCapital = {
+	  'USA': 'Nothing',
+	  'India': 'New Delhi',
+	  'China': 'Beijing'
+	};
+	  // Updating Item
+	  countryCapital['USA'] = 'Washington, D.C.';
+	  print(countryCapital);
 }
 
 ```
@@ -4643,9 +4588,7 @@ You can use where in list, set, map to **filter specific items**. It returns a n
 
 ```dart
 Iterable<E> where(
-bool test(
-E element
-)
+	bool test(E element)
 )
 
 ```
@@ -4777,9 +4720,6 @@ void main() {
 
 ```
 
-
-Info
-
 **Note**: If you try to get information of a file that does not exist, then it will throw an exception.
 
 #### CSV File
@@ -4886,9 +4826,6 @@ void main() {
 }
 
 ```
-
-
-Info
 
 **Note**: If you have already some content in **test.txt** file, then it will be removed and replaced with new content.
 
@@ -5033,8 +4970,6 @@ In **OOP**, an object can be anything, such as a person, a bank account, a car, 
 5.  Polymorphism
 6.  Abstraction
 
-Info
-
 Note: The main purpose of OOP is to break complex problems into smaller objects. You will learn all these OOPs features later in this dart tutorial.
 
 #### **Key Points**
@@ -5164,8 +5099,6 @@ In this example below, there is class **Bycycle** with three properties: **color
 
 [Run Online](https://dartpad.dev/?id=ac6ab46115153304cc99e2054c93cc17)
 
-Info
-
 **Note**: Once you create an object, you can access the properties and methods of the object using the dot(.) operator.
 
 #### **Key Points**
@@ -5174,6 +5107,7 @@ Info
 *   The **new** keyword can be used to create a new object, but it is unnecessary.
 
 ### Constructor in Dart 
+
 #### **Introduction**
 
 In this section, you will learn about constructor in Dart programming language and how to use constructors with the help of examples. Before learning about the constructor, you should have a basic understanding of the class and object in dart.
@@ -5488,7 +5422,6 @@ void main(){
 *   Constructor is used to initialize the values of the properties of the class.
 
 ### Default Constructor in Dart 
-#### **Default Constructor**
 
 The constructor which is automatically created by the dart compiler if you don’t create a constructor is called a default constructor. A default constructor has no parameters. A default constructor is declared using the class name followed by parentheses ().
 
@@ -5821,8 +5754,6 @@ void main() {
 
 **Constant constructor** is a constructor that creates a constant object. A constant object is an object whose value cannot be changed. A constant constructor is declared using the keyword **const**.
 
-Info
-
 **Note**: **Constant Constructor** is used to create a object whose value cannot be changed. It Improves the performance of the program.
 
 #### **Rule For Declaring Constant Constructor In Dart**
@@ -5861,8 +5792,6 @@ void main() {
 
 ```
 [Run Online](https://dartpad.dev/?id=45137d89664562d2a4dfaac1b1fc18bb)
-
-Info
 
 **Note**: Here p1 and p2 has the same hash code. This is because p1 and p2 are constant objects. The hash code of a constant object is the same. This is because the hash code of a constant object is computed at compile time. The hash code of a non-constant object is computed at run time. This is why p3 and p4 have different hash code.
 
@@ -5922,9 +5851,8 @@ void main() {
 *   Improves the performance of the program.
 
 ### Encapsulation in Dart 
-#### **Introduction**
 
-In this section, you will learn about **encapsulation in Dart** programming language with examples. Encapsulation is one of the important concepts of object-oriented programming. Before learning about dart encapsulation, you should have a basic understanding of the **[class](https://dart-tutorial.com/object-oriented-programming/class-in-dart/)** and **[object](https://dart-tutorial.com/object-oriented-programming/object-in-dart/)** in dart.
+In this section, you will learn about **encapsulation in Dart** programming language with examples. Encapsulation is one of the important concepts of object-oriented programming. Before learning about dart encapsulation, you should have a basic understanding of the class and object in dart.
 
 #### **Encapsulation In Dart**
 
@@ -6157,9 +6085,6 @@ return_type get property_name {
 }
 
 ```
-
-
-Info
 
 **Note:** Instead of writing { } after the property name, you can also write **\=>** (fat arrow) after the property name.
 
@@ -6640,39 +6565,39 @@ In this example below, there is super class named **Car** with two properties **
 
 ```dart
 class Car {
-// Properties
-String? name;
-double? price;
+	// Properties
+	String? name;
+	double? price;
 }
 
 class Tesla extends Car {
-// Method to display the values of the properties
-void display() {
-  print("Name: ${name}");
-  print("Price: ${price}");
-}
+	// Method to display the values of the properties
+	void display() {
+	  print("Name: ${name}");
+	  print("Price: ${price}");
+	}
 }
 
 class Model3 extends Tesla {
-// Properties
-String? color;
-
-// Method to display the values of the properties
-void display() {
-  super.display();
-  print("Color: ${color}");
-}
+	// Properties
+	String? color;
+	
+	// Method to display the values of the properties
+	void display() {
+	  super.display();
+	  print("Color: ${color}");
+	}
 }
 
 void main() {
-// Create an object of Model3 class
-Model3 m = new Model3();
-// setting values to the object
-m.name = "Tesla Model 3";
-m.price = 50000.00;
-m.color = "Red";
-// Display the values of the object
-m.display();
+	// Create an object of Model3 class
+	Model3 m = new Model3();
+	// setting values to the object
+	m.name = "Tesla Model 3";
+	m.price = 50000.00;
+	m.color = "Red";
+	// Display the values of the object
+	m.display();
 }
 
 ```
@@ -8709,12 +8634,12 @@ You can assign a value to nullable variables just like any other variable. Howev
 
 ```dart
 void main(){
-// Declaring a nullable variable by using ?
-String? name;
-// Assigning John to name
-name = "John";
-// Assigning null to name
-name = null;
+	// Declaring a nullable variable by using ?
+	String? name;
+	// Assigning John to name
+	name = "John";
+	// Assigning null to name
+	name = null;
 }
 
 ```
@@ -8732,22 +8657,22 @@ You can use nullable variables in many ways. Some of them are shown below:
 
 ```dart
 void main(){
-// Declaring a nullable variable by using ?
-String? name;
-// Assigning John to name
-name = "John";
-// Assigning null to name
-name = null;
-// Checking if name is null using if statement
-if(name == null){
-print("Name is null");
-}
-// Using ?? operator to assign a default value
-String name1 = name ?? "Stranger";
-print(name1);
-// Using ! operator to return null if name is null
-String name2 = name!;
-print(name2);
+	// Declaring a nullable variable by using ?
+	String? name;
+	// Assigning John to name
+	name = "John";
+	// Assigning null to name
+	name = null;
+	// Checking if name is null using if statement
+	if(name == null){
+	print("Name is null");
+	}
+	// Using ?? operator to assign a default value
+	String name1 = name ?? "Stranger";
+	print(name1);
+	// Using ! operator to return null if name is null
+	String name2 = name!;
+	print(name2);
 }
 
 ```
@@ -8932,17 +8857,17 @@ In this example, the variable **result** is declared as a **String**. In both **
 
 ```dart
 void main(){
-// result is a String
-String result;
-// result is promoted to a non-nullable type String
-if(DateTime.now().hour < 12) {
-  result = "Good Morning";
-} else {
-  result = "Good Afternoon";
-}
-// display the result
-print("Result is $result");
-print("Length of result is ${result.length}");
+	// result is a String
+	String result;
+	// result is promoted to a non-nullable type String
+	if(DateTime.now().hour < 12) {
+	  result = "Good Morning";
+	} else {
+	  result = "Good Afternoon";
+	}
+	// display the result
+	print("Result is $result");
+	print("Length of result is ${result.length}");
 }
 
 ```
@@ -13765,8 +13690,8 @@ Networking in Flutter involves making HTTP requests to web APIs to retrieve or s
 import 'package:http/http.dart' as http;
 
 void main() async {
-  var response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
-  print(response.body);
+	  var response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
+	  print(response.body);
 }
 ```
 
@@ -13963,6 +13888,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class Post {
+  int id;
+  String title;
+
+  Post({this.id, this.title});
+
+  factory Post.fromJson(Map<String, dynamic> json) {
+    return Post(
+      id: json['id'],
+      title: json['title'],
+    );
+  }
+}
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -13972,11 +13911,12 @@ class _HomePageState extends State<HomePage> {
   final String baseUrl = 'http://192.168.1.2:3000'; // Replace with your IPv4 address
   final String postsEndpoint = '/posts';
 
-  Future<List<Map<String, dynamic>>> fetchPosts() async {
+  Future<List<Post>> fetchPosts() async {
     final response = await http.get(Uri.parse('$baseUrl$postsEndpoint'));
 
     if (response.statusCode == 200) {
-      return json.decode(response.body).cast<Map<String, dynamic>>();
+      List<dynamic> data = json.decode(response.body);
+      return data.map((json) => Post.fromJson(json)).toList();
     } else {
       throw Exception('Failed to load posts');
     }
@@ -13990,7 +13930,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: FutureBuilder(
         future: fetchPosts(),
-        builder: (context, AsyncSnapshot<List<Map<String, dynamic>>> snapshot) {
+        builder: (context, AsyncSnapshot<List<Post>> snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
@@ -14003,8 +13943,8 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 final post = snapshot.data![index];
                 return ListTile(
-                  title: Text(post['title'] ?? ''),
-                  subtitle: Text('ID: ${post['id']}'),
+                  title: Text(post.title),
+                  subtitle: Text('ID: ${post.id}'),
                 );
               },
             );
@@ -14014,7 +13954,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
 ```
 
 ## State Management in Flutter
@@ -14760,6 +14699,25 @@ As soon as the **Rotate 90°** button is clicked, the `RotateEvent` is dispatche
 
 Since the BLoC handles the rotation and changing color operation, both operations can be performed on any widget. This facilitates the reusability of the code.
 
+#### Advantages of BLoC Pattern:
+-----------------------------
+- **Excellent Documentation**: BLoC benefits from a rich and well-maintained documentation base. Flutter's official documentation provides comprehensive information, tutorials, and examples that guide developers in effectively implementing BLoC in their applications.
+    
+- **Separation of Concerns**: BLoC enforces a clear separation of concerns by isolating the business logic from the UI layer. This results in code that is more organized, easier to manage, and adaptable to changes.
+    
+- **Testability**: BLoC facilitates efficient testing of application components. Business logic, being separate, can be thoroughly unit tested without the need to consider the UI. This contributes to robust and bug-free code.
+    
+- **State Management**: BLoC excels at managing the application's state. It offers a structured approach to handle various states of the application, making it easier to track and manage how the application behaves in different scenarios.
+    
+- **Community Support**: Being a widely adopted pattern, BLoC has a large and active community. Developers can seek help, share knowledge, and access numerous resources, including libraries and packages, to enhance their BLoC implementation.
+    
+#### Disadvantages of BLoC Pattern:
+--------------------------------
+- **Steep Learning Curve**: Adopting BLoC requires a learning curve, especially for developers new to the reactive programming paradigm and state management patterns. Understanding streams, sinks, and the principles of reactive programming is crucial.
+    
+- **Not Recommended for Simple Applications**: For simple applications with limited business logic, implementing BLoC might introduce unnecessary complexity. It's essential to assess the project requirements and choose an appropriate state management approach.
+    
+- **Boilerplate Code**: Implementing BLoC can involve writing boilerplate code, particularly when done manually. While tools and extensions can mitigate this, there's still a need for careful structuring and organization.
 #### Important BLoC concepts
 -----------------------
 
@@ -14822,7 +14780,7 @@ class RotatedState {
 
 ##### Cubit
 
-[Cubit](https://pub.dev/documentation/flutter_cubit/latest/) is a simpler version of the BLoC pattern. It eliminates the need to write events.
+Cubit is a simpler version of the BLoC pattern. It eliminates the need to write events.
 
 Cubit exposes direct functions, which can result in appropriate states. Writing a Cubit instead of BLoC also reduces boilerplate code, making the code easier to read.
 
@@ -14969,11 +14927,11 @@ class CartBloc extends Bloc<CartEvent, CartState> {
 
 ```
 
-Next, wrap the scaffold widget inside [BlocProvider](https://pub.dev/packages/flutter_bloc#blocprovider)`.
+Next, wrap the scaffold widget inside [BlocProvider](https://pub.dev/packages/flutter_bloc#blocprovider).
 
 `BlocProvider` is a Flutter widget that makes any BLoC available to the entire widget tree below it. In our case, any widget in between `Home` (top) and `ProductTile` (bottom) can have access to the cart, so no need to pass the cart data from the top of the widget tree to the bottom.
 
-```
+```dart
 BlocProvider(
     create: (_) => CartBloc(),
     child: Scaffold(
@@ -14986,7 +14944,7 @@ BlocProvider(
 
 Wrap the cart icon and product list inside the `BlocBuilder`. `BlocBuilder` simply rebuilds the widget inside it upon receiving the new states from the BLoC.
 
-```
+```dart
 // Cart icon
 BlocBuilder<CartBloc, CartState>(builder: (_, cartState) {
   List<int> cartItem = cartState.cartItem;
@@ -15029,7 +14987,7 @@ Note: The `BlocBuilder` for `CartBloc` is added only in two places because we on
 
 The next step is to shoot events to `CartBloc` for adding and removing items in the cart. `BlocProvider.of<CartBloc>(context)` finds the nearest instance of `CartBloc` in the widget tree and adds the events to it:
 
-```
+```dart
 IconButton(
   key: Key('icon_$itemNo'),
   icon: cart.contains(itemNo)
@@ -15049,7 +15007,7 @@ Now replace `BlocBuilder` with `BlocConsumer`. `BlocConsumer` allows us to rebui
 
 For our example, we want to refresh the list and show a snackbar whenever a product is added or removed from the cart:
 
-```
+```dart
 BlocConsumer<CartBloc, CartState>(
 listener: (context, state) { 
   Scaffold.of(context).showSnackBar(
@@ -15072,7 +15030,7 @@ builder: (_, cartState) {
 
 Optionally, if you want to reduce some boilerplate code and the sequence of the states doesn’t matter to you, try Cubit. Here is what `CartCubit` would look like:
 
-```
+```dart
 class CartCubit extends Cubit<CartState> {
   CartCubit() : super(ProductAdded(cartItem: []));
 
@@ -15095,7 +15053,7 @@ class CartCubit extends Cubit<CartState> {
 
 Note: Replace `CartBloc` with `CartCubit` throughout the code and fire the events as shown below:
 
-```
+```dart
 onPressed: () {
   !cart.contains(itemNo)
       ? BlocProvider.of<CartCubit>(context).add(itemNo)
@@ -15109,50 +15067,15 @@ The output is the same but with improved state management:
 
 ![Cart Updating](https://blog.logrocket.com/wp-content/uploads/2021/05/cart-updating.gif)
 
-Conclusion
+#### Conclusion
 ----------
-
 Having a solid BLoC architecture in place leads to a good separation of concerns. Although using the BLoC pattern requires more code than using `setState`, it makes the code more readable, scalable, and testable.
 
-In this tutorial, we covered the basics of using the BLoC pattern in Flutter and walked through a practical example to highlight the benefits of using BLoC for state management in Flutter over the `setState` approach.
+#### Resources
+- [Flutter Bloc Tutorials](https://bloclibrary.dev/getting-started/)
+- [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
+- [Flutter Bloc Comprehensive Guide](https://www.blup.in/blog/understanding-flutter-bloc-for-state-management-a-comprehensive-guide)
 
-You can find the complete source code for this example on [GitHub](https://github.com/pinkeshdarji/flutter_bloc_demo).
-
-Get set up with LogRocket's modern error tracking in minutes:
--------------------------------------------------------------
-
-1.  Visit [https://logrocket.com/signup/](https://lp.logrocket.com/blg/react-signup-general) to get an app ID
-2.  Install LogRocket via npm or script tag. `LogRocket.init()` must be called client-side, not server-side
-    
-    *   [npm](#plug-tab-1)
-    *   [Script tag](#plug-tab-2)
-    
-    ```
-$ npm i --save logrocket 
-
-// Code:
-
-import LogRocket from 'logrocket'; 
-LogRocket.init('app/id');
-                    
-```
-
-    
-    ```
-// Add to your HTML:
-
-<script src="https://cdn.lr-ingest.com/LogRocket.min.js"></script>
-<script>window.LogRocket && window.LogRocket.init('app/id');</script>
-                    
-```
-
-    
-3.  (Optional) Install plugins for deeper integrations with your stack:
-    *   Redux middleware
-    *   NgRx middleware
-    *   Vuex plugin
-
-[Get started now](https://lp.logrocket.com/blg/signup)
 
 
 ## Using Flutter Plugins
