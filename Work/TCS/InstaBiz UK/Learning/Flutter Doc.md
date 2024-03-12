@@ -114,15 +114,15 @@ Follow the below instructions to install a dart on the windows operating system.
 
 Copy and paste this command on your terminal to install Homebrew.
 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```bash
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 
 To set the homebrew path, copy and paste this command on your terminal.
 
-```
+```bash
 export PATH=/opt/homebrew/bin:$PATH
 
 ```
@@ -132,7 +132,7 @@ export PATH=/opt/homebrew/bin:$PATH
 
 To install a dart on Linux, open your terminal and **copy/paste** the below commands.
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https
 wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
@@ -143,7 +143,7 @@ echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.go
 
 Then, install the dart using the below command.
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install dart
 
@@ -152,7 +152,7 @@ sudo apt-get install dart
 
 To set the dart path, copy and paste this command on your terminal.
 
-```
+```bash
 export PATH="$PATH:/usr/lib/dart/bin"
 
 ```
@@ -193,7 +193,7 @@ Yes, you can use [DartPad](https://dartpad.dev/) to run simple dart programs fro
 
 This is a simple dart program that prints **Hello World** on screen. Most programmers write the Hello World program as their first program.
 
-```
+```dart
 void main() { 
    print("Hello World!"); 
 }
@@ -213,7 +213,7 @@ void main() {
 
 #### **Basic Dart Program For Printing Name**
 
-```
+```dart
 void main()
 {
     var name = "John";
@@ -229,7 +229,7 @@ void main()
 
 Here **$variableName** is used to join variables. This joining process in dart is called string interpolation.
 
-```
+```dart
 void main(){
   var firstName = "John";
   var lastName = "Doe";
@@ -245,7 +245,7 @@ void main(){
 
 Performing addition, subtraction, multiplication, and division in dart.
 
-```
+```dart
 void main() {
 int num1 = 10; //declaring number1
 int num2 = 3; //declaring number2
@@ -272,7 +272,7 @@ print("The div is $div");
 
 It’s nice to work on a single file, but if your project gets bigger, you need to manage configurations, packages, and assets files. So creating a dart project will help you to manage this all.
 
-```
+```dart
 dart create <project_name>
 
 ```
@@ -308,7 +308,7 @@ dart run
 
 Variables are containers used to store value in the program. There are different types of variables where you can keep different kinds of values. Here is an example of creating a variable and initializing it.
 
-```
+```dart
 // here variable name contains value John.
 var name = "John";
 
@@ -330,7 +330,7 @@ They are called data types. We will learn more about data types later in this da
 
 This is syntax for creating a variable in dart.
 
-```
+```dart
 type variableName = value;
 
 ```
@@ -340,7 +340,7 @@ type variableName = value;
 
 In this example, you will learn how to declare variables and print their values.
 
-```
+```dart
 void main() {
 // declaring variables
 String name = "John";
@@ -377,7 +377,7 @@ print("Married Status is $isMarried");
 
 Constant is the type of variable whose value never changes. In programming, changeable values are **mutable** and unchangeable values are **immutable**. Sometimes, you don’t need to change the value once declared. Like the value of PI=3.14, it never changes. To create a constant in Dart, you can use the const keyword.
 
-```
+```dart
 void main(){
 const pi = 3.14;
 pi = 4.23; // not possible  
@@ -395,7 +395,7 @@ It is a good habit to follow the naming convention. In Dart Variables, the varia
 
 #### **Naming Convention Example**
 
-```
+```dart
 // Not standard way
 var fullname = "John Doe";
 // Standard way
@@ -440,7 +440,7 @@ In Dart language, there is the type of values that can be represented and manipu
 
 When you need to store numeric value on dart, you can use either int or double. Both int and double are subtypes of **num**. You can use num to store both int or double value.
 
-```
+```dart
 void main() {
 // Declaring Variables  
 int num1 = 100; // without decimal point.
@@ -469,7 +469,7 @@ print("Sum is $sum");
 
 The `.toStringAsFixed(2)` is used to round the double value upto 2 decimal places in dart. You can round to any decimal places by entering numbers like 2, 3, 4, etc.
 
-```
+```dart
 void main() {
 // Declaring Variables
 double price = 1130.2232323233233; // valid.
@@ -485,7 +485,7 @@ print(price.toStringAsFixed(2));
 
 String helps you to store text data. You can store values like **I love dart**, **New York 2140** in String. You can use single or double quotes to store string in dart.
 
-```
+```dart
 void main() {
 // Declaring Values     
 String schoolName = "Diamond School";
@@ -504,7 +504,7 @@ print("School name is $schoolName and address is $address");
 
 If you want to create a multi-line String in dart, then you can use triple quotes with either single or double quotation marks.
 
-```
+```dart
 void main() {
 // Multi Line Using Single Quotes   
 String multiLineText = '''
@@ -538,7 +538,7 @@ print("Other multiline text is $otherMultiLineText");
 |\t               |Tab     |
 
 
-```
+```dart
 void main() {
    
 // Using \n and \t   
@@ -555,7 +555,7 @@ print("I am from \tUS.");
 
 You can also create raw string in dart. Special characters won’t work here. You must write **r** after equal sign.
 
-```
+```dart
 void main() {
 // Set price value
 num price = 10;
@@ -579,7 +579,7 @@ In dart, type conversion allows you to convert one data type to another type. Fo
 
 You can convert String to int using int.parse() method. The method takes String as an argument and converts it into an integer.
 
-```
+```dart
 void main() {
 String strvalue = "1";
 print("Type of strvalue is ${strvalue.runtimeType}");   
@@ -598,7 +598,7 @@ print("Type of intvalue is ${intvalue.runtimeType}");
 
 You can convert String to double using double.parse() method. The method takes String as an argument and converts it into a double.
 
-```
+```dart
 void main() {
 String strvalue = "1.1";
 print("Type of strvalue is ${strvalue.runtimeType}");
@@ -617,7 +617,7 @@ print("Type of doublevalue is ${doublevalue.runtimeType}");
 
 You can convert int to String using the toString() method. Here is example:
 
-```
+```dart
 void main() {
 int one = 1;
 print("Type of one is ${one.runtimeType}");
@@ -635,7 +635,7 @@ print("Type of oneInString is ${oneInString.runtimeType}");
 
 You can convert double to int using the toInt() method.
 
-```
+```dart
 void main() { 
    double num1 = 10.01;
    int num2 = num1.toInt(); // converting double to int
@@ -659,7 +659,7 @@ In Dart, boolean holds either true or false value. You can write the **bool** ke
 
 **These all are yes/no questions. Its a good idea to store them in boolean.**
 
-```
+```dart
 void main() {
 bool isMarried = true;
 print("Married Status: $isMarried");
@@ -673,7 +673,7 @@ print("Married Status: $isMarried");
 
 The list holds multiple values in a single variable. It is also called arrays. If you want to store multiple values without creating multiple variables, you can use a list.
 
-```
+```dart
 void main() {
 List<String> names = ["Raj", "John", "Max"];
 print("Value of names is $names");
@@ -703,7 +703,7 @@ Info
 
 Note: Set doesn’t print duplicate items.
 
-```
+```dart
 void main() {
 Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 print(weekday);
@@ -718,7 +718,7 @@ print(weekday);
 
 In Dart, a map is an object where you can store data in key-value pairs. Each key occurs only once, but you can use same value multiple times.
 
-```
+```dart
 void main() {
 Map<String, String> myDetails = {
    'name': 'John Doe',
@@ -738,7 +738,7 @@ print(myDetails['name']);
 
 In Dart, **var** automatically finds a data type. In simple terms, var says if you don’t want to specify a data type, I will find a data type for you.
 
-```
+```dart
 void main(){
 
 var name = "John Doe"; // String
@@ -756,7 +756,7 @@ print(age);
 
 With runes, you can find Unicode values of String. The Unicode value of **a** is **97**, so runes give 97 as output.
 
-```
+```dart
 void main() {
 
 String value = "a";
@@ -771,7 +771,7 @@ print(value.runes);
 
 You can check runtime type in dart with `.runtimeType` after the variable name.
 
-```
+```dart
 void main() { 
    var a = 10;
    print(a.runtimeType); 
@@ -790,7 +790,7 @@ You may have heard of the **statically-typed** language. It means the data type 
 
 A language is statically typed if the data type of variables is known at compile time. Its main advantage is that the compiler can quickly check the issues and detect bugs.
 
-```
+```dart
 void main() { 
    var myVariable = 50; // You can also use int instead of var
    myVariable = "Hello"; // this will give error
@@ -805,7 +805,7 @@ void main() {
 
 A language is dynamically typed if the data type of variables is known at run time.
 
-```
+```dart
 void main() { 
    dynamic myVariable = 50;
    myVariable = "Hello";
@@ -831,7 +831,7 @@ void main() {
 
 Single line comments start with `//` in dart. You can write `//` and your text.
 
-```
+```dart
 void main() {
 // This is single-line comment.
 print("Welcome to Technology Channel.");
@@ -844,7 +844,7 @@ print("Welcome to Technology Channel.");
 
 Multi-line comments start with `/*` and end with `*/` . You can write your comment inside `/*` and `*/`.
 
-```
+```dart
 void main(){  
 /*
 This is a multi-line comment.
@@ -859,7 +859,7 @@ This is a multi-line comment.
 
 Documentation comments are helpful when you are writing documentation for your code. Documentation comments start with `///` in dart.
 
-```
+```dart
 void main(){  
 /// This is documentation comment
     print("Welcome to Technology Channel.");  
@@ -909,7 +909,7 @@ Arithmetic operators are the most common types of operators. They perform operat
 
 Let’s look at how to perform arithmetic calculations in dart.
 
-```
+```dart
 void main() {
  // declaring two numbers 
  int num1=10;
@@ -956,7 +956,7 @@ Info
 
 **Note**: ++var increases the value of operands, whereas var++ returns the actual value of operands before the increment.
 
-```
+```dart
 void main() {
 // declaring two numbers 
  int num1=0;
@@ -997,7 +997,7 @@ It is used to assign some values to variables. Here, we are assigning 24 to the 
 |/=           |Divided value by a variable  |
 
 
-```
+```dart
 void main() {
   double age = 24;
   age+= 1;  // Here age+=1 means age = age + 1.
@@ -1041,7 +1041,7 @@ Relational operators are also called comparison operators. They are used to make
   * Description: Used to check operand are not equal to each other and gives result as boolean
 
 
-```
+```dart
 void main() {
   
  int num1=10;
@@ -1071,7 +1071,7 @@ It is used to compare values.
 |!            |This is ’not’. return false if the result is true and vice versa|
 
 
-```
+```dart
 void main(){
   int userid = 123;
     int userpin = 456;
@@ -1101,7 +1101,7 @@ In Dart, type test operators are useful for checking types at runtime.
 |is!            |is not       |Gives boolean value false if the object has a specific type|
 
 
-```
+```dart
 void main() {
   String value1 = "Dart Tutorial";
   int age = 10;
@@ -1124,7 +1124,7 @@ void main() {
 
 They are used for storing textual user input. If you want to keep values like somebody’s name, address, description, etc., you can take string input from the user.
 
-```
+```dart
 import 'dart:io';
 
 void main() {
@@ -1140,7 +1140,7 @@ void main() {
 
 You can take integer input to get a numeric value from the user without the decimal point. E.g. 10, 100, -800 etc.
 
-```
+```dart
 import 'dart:io';
 
 void main() {
@@ -1156,7 +1156,7 @@ void main() {
 
 You can use float input if you want to get a numeric value from the user with the decimal point. E.g. 10.5, 100.5, -800.9 etc.
 
-```
+```dart
 import 'dart:io';
 
 void main() {
@@ -1175,7 +1175,7 @@ void main() {
 
 Single line String is written in single or double quotes, whereas multi-line strings are written in triple quotes. Here is an example of it:
 
-```
+```dart
 void main() {   
    String text1 = 'This is an example of a single-line string.';   
    String text2 = "This is an example of a single line string using double quotes.";   
@@ -1199,7 +1199,7 @@ You can combine one String with another string. This is called concatenation. In
 
 #### **String Concatenation In Dart**
 
-```
+```dart
 void main() {   
 String firstName = "John";
 String lastName = "Doe";
@@ -1222,7 +1222,7 @@ print("Using interpolation, full name is $firstName $lastName.");
 
 #### **String Properties Example In Dart**
 
-```
+```dart
 void main() {
    String str = "Hi";
    print(str.codeUnits);   //Example of code units
@@ -1256,7 +1256,7 @@ Here you will see various string methods that can help your work a lot better an
 
 You can convert your text to lower case using .toLowerCase() and convert to uppercase using .toUpperCase() method.
 
-```
+```dart
 //Example of toUpperCase() and toLowerCase()
 void main() { 
    String address1 = "Florida"; // Here F is capital
@@ -1280,7 +1280,7 @@ Info
 
 **Note**: The trim() method in Dart doesn’t remove spaces in the middle.
 
-```
+```dart
 //Example of trim()
 void main() { 
   String address1 = " USA"; // Contain space at leading.
@@ -1303,7 +1303,7 @@ void main() {
 
 In Dart, you can compare two strings. It will give the result 0 when two texts are equal, 1 when the first String is greater than the second, and -1 when the first String is smaller than the second.
 
-```
+```dart
 //Example of compareTo()
 void main() { 
    String item1 = "Apple"; 
@@ -1324,7 +1324,7 @@ void main() {
 
 You can replace one value with another with the replaceAll(“old”, “new”) method in Dart. It will replace all the “old” words with “new”. Here in this example, this will replace milk with water.
 
-```
+```dart
 //Example of replaceAll()
 void main() { 
 String text = "I am a good boy I like milk. Doctor says milk is good for health.";
@@ -1345,7 +1345,7 @@ print("Replaced Text: $newText");
 
 You can use the dart split method if you want to split String by comma, space, or other text. It will help you to split String to list.
 
-```
+```dart
 //Example of split()
 void main() { 
   String allNames = "Ram, Hari, Shyam, Gopal";
@@ -1369,7 +1369,7 @@ void main() {
 
 In dart, toString() represents String representation of the value/object.
 
-```
+```dart
 //Example of toString()
 void main() { 
 int number = 20;     
@@ -1389,7 +1389,7 @@ print("Type of result is ${result.runtimeType}");
 
 You can use substring in Dart when you want to get a text from any position.
 
-```
+```dart
 //Example of substring()
 void main() { 
    String text = "I love computer"; 
@@ -1406,7 +1406,7 @@ void main() {
 
 If you want to reverse a String in Dart, you can reverse it using a different solution. One solution is here.
 
-```
+```dart
 void main() { 
   String input = "Hello"; 
   print("$input Reverse is ${input.split('').reversed.join()}"); 
@@ -1421,7 +1421,7 @@ void main() {
 
 If you want to capitalize the first letter of a String in Dart, you can use the following code.
 
-```
+```dart
 //Example of capitalize first letter of String
 void main() { 
   String text = "hello world"; 
@@ -1455,7 +1455,7 @@ The easy and most common way of controlling the flow of a program is through the
 
 #### **Syntax**
 
-```
+```dart
 if(condition) {
     Statement 1;
     Statement 2;
@@ -1471,7 +1471,7 @@ if(condition) {
 
 It prints whether the person is a voter. If the person’s age is greater and equal to 18, it will print, You are a voter.
 
-```
+```dart
 void main()
 {
     var age = 20;
@@ -1492,7 +1492,7 @@ If the result of the condition is true, then the body of the if-condition is exe
 
 #### **Syntax**
 
-```
+```dart
 if(condition){
 statements;
 }else{
@@ -1506,7 +1506,7 @@ statements;
 
 Dart program prints whether the person is a voter or not based on age.
 
-```
+```dart
 void main(){
         int age = 12;
         if(age >= 18){
@@ -1525,7 +1525,7 @@ void main(){
 
 If the married status is false, it prints you are single; otherwise, it will print you are married.
 
-```
+```dart
 void main(){
         bool isMarried = false;
         if(isMarried){
@@ -1546,7 +1546,7 @@ When you have multiple if conditions, then you can use if-else-if. You can learn
 
 #### **Syntax**
 
-```
+```dart
 if(condition1){
 statements1;
 }else if(condition2){
@@ -1568,7 +1568,7 @@ statementsN;
 
 This program prints the month name based on the numeric value of that month. You will get a different result if you change the number of month.
 
-```
+```dart
 void main() {
   int noOfMonth = 5;
 
@@ -1611,7 +1611,7 @@ void main() {
 
 Dart program, which finds the greatest number among three numbers.
 
-```
+```dart
 void main(){
         int num1 = 1200;
         int num2 = 1000;
@@ -1637,7 +1637,7 @@ void main(){
 
 A Switch case is used to execute the code block based on the condition.
 
-```
+```dart
 switch(expression) {
     case value1:
         // statements
@@ -1671,7 +1671,7 @@ Here you can see the same program using **if else if** and **switch** in dart.
 
 This example prints the day name based on the numeric day of the week using a if else if.
 
-```
+```dart
 void main(){
    var dayOfWeek = 5;
 if (dayOfWeek == 1) {
@@ -1707,7 +1707,7 @@ else if (dayOfWeek == 7) {
 
 This example prints the day name based on the numeric day of the week using a switch case.
 
-```
+```dart
 void main() {
   var dayOfWeek = 5;
   switch (dayOfWeek) {
@@ -1751,7 +1751,7 @@ Info
 
 You can also use a switch case with strings. This program prints information based on weather value.
 
-```
+```dart
 void main() {
  const weather = "cloudy";
 
@@ -1782,7 +1782,7 @@ An **[enum](https://dart-tutorial.com/object-oriented-programming/enum-in-dart/)
 
 #### Syntax
 
-```
+```dart
 enum enum_name { 
   constant_value1, 
   constant_value2, 
@@ -1795,7 +1795,7 @@ enum enum_name {
 
 Enum plays well with switch statements. Let’s see an example using enum.
 
-```
+```dart
 // define enum outside main function
 enum Weather{ sunny, snowy, cloudy, rainy}
 // main method
@@ -1829,7 +1829,7 @@ The ternary operator is like if-else statement. This is a one-liner replacement 
 
 #### **Syntax**
 
-```
+```dart
 condition ? exprIfTrue : exprIfFalse
 
 ```
@@ -1845,7 +1845,7 @@ We already learned if-else in dart. Let us see the same example using the if-els
 
 This program finds greatest number between two numbers using if else.
 
-```
+```dart
 void main() {
   int num1 = 10;
   int num2 = 15;
@@ -1867,7 +1867,7 @@ void main() {
 
 This program finds greatest number between two numbers using ternary operator.
 
-```
+```dart
 void main() {
   int num1 = 10;
   int num2 = 15;
@@ -1886,7 +1886,7 @@ void main() {
 
 If the selection value is 2 then it will set output as Apple otherwise, Banana.
 
-```
+```dart
 void main() {
   var selection = 2;
   var output = (selection == 2) ? 'Apple' : 'Banana';
@@ -1902,7 +1902,7 @@ void main() {
 
 This is a dart program to print whether the person is a voter or not using a ternary operator.
 
-```
+```dart
 void main() {
   var age = 18;
   var check = (age >= 18) ? 'You ara a voter.' : 'You are not a voter.';
@@ -1918,7 +1918,7 @@ void main() {
 
 This is the most common type of loop. You can use **for loop** to run a code block multiple times according to the condition. The syntax of for loop is:
 
-```
+```dart
 for(initialization; condition; increment/decrement){
             statements;
 }
@@ -1934,7 +1934,7 @@ for(initialization; condition; increment/decrement){
 
 This example prints 1 to 10 using for loop. Here **int i = 1;** is initialization, **i<=10** is condition and **i++** is increment/decrement.
 
-```
+```dart
 void main() {
   for (int i = 1; i <= 10; i++) {
     print(i);
@@ -1950,7 +1950,7 @@ void main() {
 
 This example prints 10 to 1 using for loop. Here **int i = 10;** is initialization, **i>=1** is condition and **`i--`** is increment/decrement.
 
-```
+```dart
 void main() {
   for (int i = 10; i >= 1; i--) {
     print(i);
@@ -1966,7 +1966,7 @@ void main() {
 
 This example prints the name 10 times using for loop. Based on the condition, the body of the loop executes 10 times.
 
-```
+```dart
 void main() {
   for (int i = 0; i < 10; i++) {
     print("John Doe");
@@ -1982,7 +1982,7 @@ void main() {
 
 Here, the value of the **total** is **0** initially. Then, the for loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the **total**, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
 
-```
+```dart
 void main(){
 
   int total = 0;
@@ -2005,7 +2005,7 @@ void main(){
 
 This program will print even numbers between 50 to 100 using for loop.
 
-```
+```dart
 void main(){
   for(int i=50; i<=100; i++){
     if(i%2 == 0){
@@ -2025,7 +2025,7 @@ If the condition never becomes false in looping, it is called an infinite loop. 
 
 This program prints 1 to infinite because the condition is **i>=1**, which is always true with i++.
 
-```
+```dart
 void main() {
   for (int i = 1; i >= 1; i++) {
     print(i);
@@ -2043,7 +2043,7 @@ Info
 
 The **for each** loop iterates over all list elements or variables. It is useful when you want to loop through **list/collection**. The syntax of for-each loop is:
 
-```
+```dart
 collection.forEach(void f(value));
 
 ```
@@ -2053,7 +2053,7 @@ collection.forEach(void f(value));
 
 This will print each name of football players.
 
-```
+```dart
 void main(){
   List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
   footballplayers.forEach( (names)=>print(names));
@@ -2068,7 +2068,7 @@ void main(){
 
 This program will print the total sum of all numbers and also the average value from the total.
 
-```
+```dart
 void main(){
   List<int> numbers = [1,2,3,4,5];
   
@@ -2093,7 +2093,7 @@ void main(){
 
 There is also another for loop, i.e., **for in loop**. It also makes looping over the list very easily.
 
-```
+```dart
 void main(){
     List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
 
@@ -2111,7 +2111,7 @@ void main(){
 
 In dart, asMap method converts the list to a map where the keys are the index and values are the element at the index.
 
-```
+```dart
 void main(){
 
 List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
@@ -2129,7 +2129,7 @@ footballplayers.asMap().forEach((index, value) => print("$value index is $index"
 
 This will split the name into Unicode values and then find characters from the Unicode value.
 
-```
+```dart
 void main(){
   
 String name = "John";
@@ -2150,7 +2150,7 @@ In **while loop**, the loop’s body will run until and unless the condition is 
 
 #### Syntax
 
-```
+```dart
 while(condition){  
        //statement(s);  
       // Increment (++) or Decrement (--) Operation;  
@@ -2168,7 +2168,7 @@ while(condition){
 
 This program prints 1 to 10 using while loop.
 
-```
+```dart
 void main() {
   int i = 1;
   while (i <= 10) {
@@ -2190,7 +2190,7 @@ Info
 
 This program prints 10 to 1 using while loop.
 
-```
+```dart
 void main() {
   int i = 10;
   while (i >= 1) {
@@ -2208,7 +2208,7 @@ void main() {
 
 Here, the value of the total is 0 initially. Then, the while loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the total, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
 
-```
+```dart
 void main(){
 
   int total = 0;
@@ -2233,7 +2233,7 @@ void main(){
 
 This program will print even numbers between 50 to 100 using while loop.
 
-```
+```dart
 void main(){
   int i = 50;
   while(i<=100){
@@ -2253,7 +2253,7 @@ void main(){
 
 Do while loop is used to run a block of code multiple times. The loop’s body will be executed first, and then the condition is tested. The syntax of do while loop is:
 
-```
+```dart
 do{
     statement1;
     statement2;
@@ -2277,7 +2277,7 @@ Info
 
 #### **Example 1: To Print 1 To 10 Using Do While Loop**
 
-```
+```dart
 void main() {
   int i = 1;
   do {
@@ -2293,7 +2293,7 @@ void main() {
 
 #### **Example 2: To Print 10 To 1 Using Do While Loop**
 
-```
+```dart
 void main() {
   int i = 10;
   do {
@@ -2311,7 +2311,7 @@ void main() {
 
 Here, the value of the **total** is 0 initially. Then, the do-while loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the total, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
 
-```
+```dart
 void main(){
 
   int total = 0;
@@ -2336,7 +2336,7 @@ void main(){
 
 Let’s make one condition false and see the demo below. **Hello** got printed if the condition is false.
 
-```
+```dart
 void main(){
 
   int number = 0;
@@ -2367,7 +2367,7 @@ The break statement is used to exit a loop. It stops the loop immediately, and t
 
 Here, the loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
 
-```
+```dart
 void main() {
   for (int i = 1; i <= 10; i++) {
     if (i == 5) {
@@ -2386,7 +2386,7 @@ void main() {
 
 Here, the loop condition is true until the value of i is more than or equal to 1. However, the break says to go outside the loop when the value of i becomes 7.
 
-```
+```dart
 void main() {
   for (int i = 10; i >= 1; i--) {
     if (i == 7) {
@@ -2405,7 +2405,7 @@ void main() {
 
 Here, this while loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
 
-```
+```dart
 void main() {
  int i =1;
  while(i<=10){
@@ -2426,7 +2426,7 @@ void main() {
 
 As we already learn in dart switch case, it is important to add **break** keyword in switch statement. This example prints the month name based on the number of the month using a switch case.
 
-```
+```dart
 void main() {
   var noOfMoneth = 5;
   switch (noOfMoneth) {
@@ -2487,7 +2487,7 @@ The continue statement skips the current iteration of a loop. It will bypass the
 
 Here, the loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
 
-```
+```dart
 void main() {
   for (int i = 1; i <= 10; i++) {
     if (i == 5) {
@@ -2506,7 +2506,7 @@ void main() {
 
 Here, the loop condition is true until the value of i is more than or equal to 1. However, the continue says to go to the next iteration of the loop when the value of i becomes 4.
 
-```
+```dart
 void main() {
   for (int i = 10; i >= 1; i--) {
     if (i == 4) {
@@ -2525,7 +2525,7 @@ void main() {
 
 Here, this while loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
 
-```
+```dart
 void main() {
   int i = 1;
   while (i <= 10) {
@@ -2544,6 +2544,7 @@ void main() {
 [Run Online](https://dartpad.dev/?id=74b1837417fe0f7f53207072e58f45d1)
 
 ## Exception Handling in Dart 
+
 ### **Exception In Dart**
 
 An exception is an error that occurs at runtime during program execution. When the exception occurs, the flow of the program is interrupted, and the program terminates abnormally. There is a high chance of crashing or terminating the program when an exception occurs. Therefore, to save your program from crashing, you need to catch the exception.
@@ -2554,7 +2555,7 @@ Info
 
 ### **Syntax**
 
-```
+```dart
 try {
 // Your Code Here
   }
@@ -2575,7 +2576,7 @@ catch(ex){
 
 In this example, you will see how to handle the exception using the try-catch block.
 
-```
+```dart
 void main() {   
    int a = 18;   
    int b = 0;   
@@ -2604,7 +2605,7 @@ The **finally** block is always executed whether the exceptions occur or not. It
 
 ### **Syntax**
 
-```
+```dart
 try {
 .....
 }
@@ -2625,7 +2626,7 @@ finally {
 
 In this example, you will see how to handle the exception using the try-catch block with the finally block.
 
-```
+```dart
 void main() {
   int a = 12;
   int b = 0;
@@ -2652,7 +2653,7 @@ The throw keyword is used to raise an exception explicitly. A raised exception s
 
 ### **Syntax**
 
-```
+```dart
 throw new Exception_name() 
 
 ```
@@ -2662,7 +2663,7 @@ throw new Exception_name()
 
 In this example, you will see how to throw an exception using the throw keyword.
 
-```
+```dart
 void main() {
   try {
     check_account(-10);
@@ -2699,7 +2700,7 @@ As you go advance, you need to create your exception; Dart enables you to create
 
 ### **Syntax**
 
-```
+```dart
 class YourExceptionClass implements Exception{
   // constructors, variables & methods
 }
@@ -2711,7 +2712,7 @@ class YourExceptionClass implements Exception{
 
 This program throws an exception when a student’s mark is negative. You will understand **implements** in the object-oriented programming section.
 
-```
+```dart
 class MarkException implements Exception {
   String errorMessage() {
     return 'Marks cannot be negative value.';
@@ -2739,7 +2740,7 @@ void checkMarks(int marks) {
 
 This program throws an exception when you find the square root of a negative number.
 
-```
+```dart
 import 'dart:math';
 
 // custom exception class
@@ -2795,7 +2796,7 @@ void main() {
 
 #### **Syntax**
 
-```
+```dart
 returntype functionName(parameter1,parameter2, ...){
   // function body
 }
@@ -2813,7 +2814,7 @@ returntype functionName(parameter1,parameter2, ...){
 
 This is a simple program that prints name using function. The name of function is **printName()**.
 
-```
+```dart
 // writing function outside main function.
 void printName(){
   print("My name is Raj Sharma. I am from function.");
@@ -2832,7 +2833,7 @@ void main(){
 
 This function finds the sum of two numbers. Here, the function accepts two parameters. i.e., **num1 and num2**, and the return type is void.
 
-```
+```dart
 void add(int num1, int num2){
   int sum = num1 + num2;
    print("The sum is $sum");
@@ -2851,7 +2852,7 @@ void main(){
 
 This function finds simple interest from principal, time and rate and display result.
 
-```
+```dart
 // function that calculate interest
 void calculateInterest(double principal, double rate, double time) {
   double interest = principal * rate * time / 100;
@@ -2884,7 +2885,7 @@ Name should start with lower-case, and every second word’s first letter will b
 
 Many programmers are often confused about parameters and arguments. Let’s have a look at this example.
 
-```
+```dart
 // Here num1 and num2 are parameters
 void add(int num1, int num2){
   int sum;
@@ -2929,7 +2930,7 @@ In this function, you do not pass any parameter and expect no return type. Here 
 
 Here **printName()** is a function which prints name on screen.
 
-```
+```dart
 void main() {
   printName();
 }
@@ -2949,7 +2950,7 @@ In this program, **printName()** is the function which has keyword **void**. It 
 
 Here **printPrimeMinisterName()** is a function which prints prime minister name on screen.
 
-```
+```dart
 void main() {
   print("Function With No Parameter and No Return Type");
   printPrimeMinisterName();
@@ -2972,7 +2973,7 @@ In this function, you do pass the parameter and expect no return type. Here is a
 
 Here **printName(String name)** is a function which welcome person.
 
-```
+```dart
 void main() {
   printName("John");
 }
@@ -2992,7 +2993,7 @@ In this program, **printName(String name)** is the function which has keyword **
 
 Here **add(int a, int b)** is a function that finds and prints the sum of two numbers.
 
-```
+```dart
 // This function add two numbers
 void add(int a, int b) {
   int sum = a + b;
@@ -3019,7 +3020,7 @@ In this function, you do not pass any parameter but expect return type. Here is 
 
 Here **primeMinisterName()** is a function which returns prime minister name. In the entire program, anyone can use this function to find the name of the prime minister.
 
-```
+```dart
 void main() {
 // Function With No Parameter & Return Type
   String name = primeMinisterName();
@@ -3040,7 +3041,7 @@ In this program, **primeMinisterName()** is the function which has **String** ke
 
 Here **voterAge()** is a function which returns minimum voter age.
 
-```
+```dart
 // Function With No Parameter & Return Type
 void main() {
   int personAge = 17;
@@ -3069,7 +3070,7 @@ In this function, you do pass the parameter and also expect return type. Here is
 
 Here **add(int a, int b)** is a function that returns its sum in integer. We can display results in our main function.
 
-```
+```dart
 // this function add two numbers
 int add(int a, int b) {
   int sum = a + b;
@@ -3095,7 +3096,7 @@ In this program, **int add(int a, int b)** is the function with **int** as the r
 
 Here **calculateInterest(double principal, double rate, double time)** is a function that returns its simple interest in double. We can display results in our main function.
 
-```
+```dart
 // function that calculate interest
 double calculateInterest(double principal, double rate, double time) {
   double interest = principal * rate * time / 100;
@@ -3121,7 +3122,7 @@ void main() {
 
 Here is the program, which includes all types of functions we studied earlier.
 
-```
+```dart
 // parameter and return type
 int add(int a, int b) {
   var total;
@@ -3166,7 +3167,7 @@ void main() {
 
 The parameter is the process of passing values to the function. The values passed to the function must match the number of parameters defined. A function can have any number of parameters.
 
-```
+```dart
 // here a and b are parameters
 void add(int a, int b) { 
 } 
@@ -3182,7 +3183,7 @@ In positional parameters, you must supply the arguments in the same order as you
 
 In the example below, the function **printInfo** takes two parameters. You must pass the person’s name and gender in the same order. If you pass values in the wrong order, you will get the **wrong result**.
 
-```
+```dart
 void printInfo(String name, String gender) {
   print("Hello $name your gender is $gender.");
 }
@@ -3205,7 +3206,7 @@ void main() {
 
 In the example below, function **printInfo** takes two positional parameters and one optional parameter. The title parameter is optional here. If the user doesn’t pass the title, it will automatically set the title value to **sir/ma’am**.
 
-```
+```dart
 void printInfo(String name, String gender, [String title = "sir/ma'am"]) {
   print("Hello $title $name your gender is $gender.");
 }
@@ -3225,7 +3226,7 @@ void main() {
 
 In the example below, function **add** takes two positional parameters and one optional parameter. The **num3** parameter is **optional** here with default value **0**.
 
-```
+```dart
 void add(int num1, int num2, [int num3=0]){
    int sum;
   sum = num1 + num2 + num3;
@@ -3251,7 +3252,7 @@ Dart allows you to use named parameters to clarify the parameter’s meaning in 
 
 In the example below, function **printInfo** takes two named parameters. You can pass value in any order. You will learn about **?** in **null safety** section.
 
-```
+```dart
 void printInfo({String? name, String? gender}) {
   print("Hello $name your gender is $gender.");
 }
@@ -3275,7 +3276,7 @@ void main() {
 
 In the example below, function **printInfo** takes two named parameters. You can see a **required** keyword, which means you must pass the person’s name and gender. If you don’t pass it, it won’t work.
 
-```
+```dart
 void printInfo({required String name, required String gender}) {
   print("Hello $name your gender is $gender.");
 }
@@ -3303,7 +3304,7 @@ Dart allows you to use optional parameters to make the parameter optional in fun
 
 In the example below, function **printInfo** takes two **positional parameters** and one **optional parameter**. First, you must pass the person’s name and gender. The title parameter is optional here. Writing **\[String? title\]** makes **title** optional.
 
-```
+```dart
 void printInfo(String name, String gender, [String? title]) {
   print("Hello $title $name your gender is $gender.");
 }
@@ -3329,7 +3330,7 @@ But not every function needs a name. If you remove the return type and the funct
 
 Here is the syntax of the anonymous function.
 
-```
+```dart
 (parameterList){
 // statements
 }
@@ -3341,7 +3342,7 @@ Here is the syntax of the anonymous function.
 
 In this example, you will learn to use an anonymous function to print all list items. This function invokes each fruit without having a function name.
 
-```
+```dart
 void main() {
   const fruits = ["Apple", "Mango", "Banana", "Orange"];
 
@@ -3359,7 +3360,7 @@ void main() {
 
 In this example, you will learn to find the cube of a number using an anonymous function.
 
-```
+```dart
 void main() {
 // Anonymous function
   var cube = (int number) {
@@ -3383,7 +3384,7 @@ Dart has a special syntax for the function body, which is only one line. The arr
 
 The syntax for the dart arrow function.
 
-```
+```dart
 returnType functionName(parameters...) => expression;
 
 ```
@@ -3395,7 +3396,7 @@ returnType functionName(parameters...) => expression;
 
 This program finds simple interest without using the arrow function.
 
-```
+```dart
 // function that calculate interest
 double calculateInterest(double principal, double rate, double time) {
   double interest = principal * rate * time / 100;
@@ -3420,7 +3421,7 @@ void main() {
 
 This program finds simple interest using the arrow function.
 
-```
+```dart
 // arrow function that calculate interest
 double calculateInterest(double principal, double rate, double time) =>
     principal * rate * time / 100;
@@ -3443,7 +3444,7 @@ void main() {
 
 This program finds the sum, difference, multiplication, and division of two numbers using the arrow function.
 
-```
+```dart
 int add(int n1, int n2) => n1 + n2;
 int sub(int n1, int n2) => n1 - n2;
 int mul(int n1, int n2) => n1 * n2;
@@ -3474,7 +3475,7 @@ If you created variables inside the method, you can use them inside the method b
 
 #### **Example 1: Method Scope**
 
-```
+```dart
 void main() {
   String text = "I am text inside main. Anyone can't access me.";
   print(text);
@@ -3493,7 +3494,7 @@ You can define a variable in the global scope to use the variable anywhere in yo
 
 #### **Example 1: Global Scope**
 
-```
+```dart
 String global = "I am Global. Anyone can access me.";
 void main() {
   print(global);
@@ -3522,7 +3523,7 @@ Math helps you to perform mathematical calculations efficiently. With dart math,
 
 This example shows how to generate random numbers from **0 - 9** and also **1 to 10**. After watching this example, you can generate a random number between your choices.
 
-```
+```dart
 import 'dart:math';
 void main()
 {
@@ -3548,7 +3549,7 @@ print("Generated Random Number Between 1 to 10: $randomNumber2");
 
 Use this formula to generate a random number between any numbers in the dart.
 
-```
+```dart
  min + Random().nextInt((max + 1) - min);
 
 ```
@@ -3558,7 +3559,7 @@ Use this formula to generate a random number between any numbers in the dart.
 
 This program generates random numbers between 10 to 20.
 
-```
+```dart
 import 'dart:math';
 void main()
 {
@@ -3580,7 +3581,7 @@ print("Generated Random number between $min and $max is: $randomnum");
 
 Here you will learn how to generate random boolean and double values in dart.
 
-```
+```dart
   Random().nextBool(); // return true or false
   Random().nextDouble(); // return 0.0 to 1.0
 
@@ -3591,7 +3592,7 @@ Here you will learn how to generate random boolean and double values in dart.
 
 This example below generate random and boolean value.
 
-```
+```dart
 import 'dart:math';
 void main()
 {
@@ -3611,7 +3612,7 @@ print("Generated Random bool value is: $randomBool");
 
 This example will generate a list of 10 random numbers between 1 to 100.
 
-```
+```dart
 import 'dart:math';
 void main()
 {
@@ -3641,7 +3642,7 @@ You can use some useful math functions to perform your daily task with dart prog
 
 This example below finds the power of a number, a minimum and maximum value between two numbers, and the square root of a number.
 
-```
+```dart
 import 'dart:math';
 void main()
 {
@@ -3680,7 +3681,7 @@ If you want to store multiple values in the same variable, you can use **List**.
 
 You can create a List by specifying the initial elements in a square bracket. Square bracket **\[\]** is used to represent a List.
 
-```
+```dart
 // Integer List
 List<int> ages = [10, 30, 23];
 
@@ -3701,7 +3702,7 @@ var mixed = [10, "John", 18.8];
 
 The fixed-length Lists are defined with the specified length. You cannot change the size at runtime. This will create List of 5 integers with the value 0.
 
-```
+```dart
 void main() {  
    var list = List<int>.filled(5,0);  
    print(list);  
@@ -3719,7 +3720,7 @@ Note: You cannot add a new item to **Fixed Length List**, but you can change the
 
 A List defined without a specified length is called Growable List. The length of the growable List can be changed in runtime.
 
-```
+```dart
 void main() {  
    var list1 = [210,21,22,33,44,55];  
    print(list1);  
@@ -3733,7 +3734,7 @@ void main() {
 
 You can access the List item by **index**. Remember that the List index always starts with **0**.
 
-```
+```dart
 void main() {
   var list = [210, 21, 22, 33, 44, 55];
 
@@ -3753,7 +3754,7 @@ void main() {
 
 You can also get the index by value.
 
-```
+```dart
 void main() {
   var list = [210, 21, 22, 33, 44, 55];
 
@@ -3769,7 +3770,7 @@ void main() {
 
 You can find the length of List by using **.length** property.
 
-```
+```dart
 void main(){  
    List<String> names = ["Raj", "John", "Rocky"];
    print(names.length);
@@ -3787,7 +3788,7 @@ Note: Remember that List **index** starts with **0** and length always starts wi
 
 You can also change the value of List. You can do it by **listName\[index\]=value;**. For more, see the example below.
 
-```
+```dart
 void main(){  
    List<String> names = ["Raj", "John", "Rocky"];
    names[1] = "Bill";
@@ -3803,7 +3804,7 @@ void main(){
 
 A mutable List means they can change after the declaration, and an immutable List means they can’t change after the declaration.
 
-```
+```dart
 List<String> names = ["Raj", "John", "Rocky"]; // Mutable List
 names[1] = "Bill"; // possible
 names[2] = "Elon"; // possible
@@ -3828,7 +3829,7 @@ names[2] = "Elon"; // not possible
 
 You can access the first and last elements in the List by:
 
-```
+```dart
 void main() {
    List<String> drinks = ["water", "juice", "milk", "coke"];
    print("First element of the List is: ${drinks.first}");
@@ -3843,7 +3844,7 @@ void main() {
 
 You can also check List contain any elements inside it or not. It will give result either in **true** or in **false**.
 
-```
+```dart
 void main() {
    List<String> drinks = ["water", "juice", "milk", "coke"];
    List<int>  ages = [];
@@ -3862,7 +3863,7 @@ void main() {
 
 You can easily reverse List by using **.reversed** properties. Here is an example below:
 
-```
+```dart
 void main() {
    List<String> drinks = ["water", "juice", "milk", "coke"];
    print("List in reverse: ${drinks.reversed}");
@@ -3874,8 +3875,6 @@ void main() {
 #### **Adding Item To List**
 
 Dart provides four methods to insert the elements into the Lists. These methods are given below.
-
-
 
 * Method: add()
   * Description: Add one element at a time and returns the modified List object.
@@ -3891,7 +3890,7 @@ Dart provides four methods to insert the elements into the Lists. These methods 
 
 In this example below, we are adding an item to evenList using **add()** method.
 
-```
+```dart
 void main() {  
     var evenList = [2,4,6,8,10];  
     print(evenList);  
@@ -3907,7 +3906,7 @@ void main() {
 
 In this example below, we are adding items to evenList using **addAll()** method.
 
-```
+```dart
 void main() {
   var evenList = [2, 4, 6, 8, 10];
   print(evenList);
@@ -3923,7 +3922,7 @@ void main() {
 
 In this example below, we are adding an item to myList using **insert()** method.
 
-```
+```dart
 void main() {
   List myList = [3, 4, 2, 5];
   print(myList);
@@ -3939,7 +3938,7 @@ void main() {
 
 In this example below, we are adding items to myList using **insertAll()** method.
 
-```
+```dart
 void main() {
   var myList = [3, 4, 2, 5];
   print(myList);
@@ -3956,7 +3955,7 @@ void main() {
 
 You can also replace the range of the List. For more, see the example below.
 
-```
+```dart
 void main() {
   var list = [10, 15, 20, 25, 30];
   print("List before updation: ${list}");
@@ -3983,7 +3982,7 @@ void main() {
 
 In this example below, we are removing item of List using **remove()** method.
 
-```
+```dart
 void main() {
   var list = [10, 20, 30, 40, 50];
   print("List before removing element : ${list}");
@@ -3999,7 +3998,7 @@ void main() {
 
 In this example below, we are removing item of List using **removeAt()** method.
 
-```
+```dart
 void main() {
   var list = [10, 11, 12, 13, 14];
   print("List before removing element : ${list}");
@@ -4015,7 +4014,7 @@ void main() {
 
 In this example below, we are removing last item of List using **removeLast()** method.
 
-```
+```dart
 void main() {
   var list = [10, 20, 30, 40, 50];
   print("List before removing element:${list}");
@@ -4031,7 +4030,7 @@ void main() {
 
 In this example below, we are removing the range of items of List using **removeRange()** method.
 
-```
+```dart
 void main() {
   var list = [10, 20, 30, 40, 50];
   print("List before removing element:${list}");
@@ -4047,7 +4046,7 @@ void main() {
 
 You can use for loop, for each loop, or any other type of loop.
 
-```
+```dart
 void main() {
   List<int> list = [10, 20, 30, 40, 50];
   list.forEach((n) => print(n));
@@ -4061,7 +4060,7 @@ void main() {
 
 This example below multiply value of List item by 2.
 
-```
+```dart
 void main() {
   List<int> list = [10, 20, 30, 40, 50];
   var douledList = list.map((n) => n * 2);
@@ -4078,7 +4077,7 @@ void main() {
 
 You can combine two or more Lists in dart by using **spread** syntax.
 
-```
+```dart
 void main() {
   List<String> names = ["Raj", "John", "Rocky"];
   List<String> names2 = ["Mike", "Subash", "Mark"];
@@ -4095,7 +4094,7 @@ void main() {
 
 You can also use conditions in List. Here **sad = false** so cart doesn’t contain **Beer** in it.
 
-```
+```dart
 void main() {
   bool sad = false;
   var cart = ['milk', 'ghee', if (sad) 'Beer'];
@@ -4111,7 +4110,7 @@ void main() {
 
 You can use where with List to filter specific items. Here in this example, even numbers are only filtered.
 
-```
+```dart
 void main(){
 List<int> numbers = [2,4,6,8,10,11,12,13,14];
 
@@ -4141,7 +4140,7 @@ Set <variable_type> variable_name = {};
 
 You can create a Set in Dart using the **Set** type annotation. 
 
-```
+```dart
 void main(){
   Set<String> fruits = {"Apple", "Orange", "Mango"};
   print(fruits);
@@ -4168,7 +4167,7 @@ void main(){
 
 This example finds the first and last element of the Set, checks whether it is empty or not, and finds its length.
 
-```
+```dart
 void main() {
   // declaring fruits as Set
   Set<String> fruits = {"Apple", "Orange", "Mango", "Banana"};
@@ -4187,7 +4186,7 @@ void main() {
 
 If you want to see whether the Set contains specific items or not, you can use the **contains** method, which returns true or false.
 
-```
+```dart
 void main(){
   Set<String> fruits = {"Apple", "Orange", "Mango"};
   print(fruits.contains("Mango"));
@@ -4210,7 +4209,7 @@ Like lists, you can add or remove items in a Set. To add items use **add()** met
 |remove()|Removes one element from Set.|
 
 
-```
+```dart
 void main(){
  Set<String> fruits = {"Apple", "Orange", "Mango"};
   
@@ -4238,7 +4237,7 @@ You can use **addAll()** method to add multiple elements from the list to Set.
 |addAll()|Insert the multiple values to the given Set.|
 
 
-```
+```dart
 void main(){
  Set<int> numbers = {10, 20, 30};
   numbers.addAll([40,50]);
@@ -4254,7 +4253,7 @@ void main(){
 
 You can print all Set items by using loops. [Click here](https://dart-tutorial.com/conditions-and-loops/loops-in-dart/) if you want to learn loop in dart.
 
-```
+```dart
 void main(){
  Set<String> fruits = {"Apple", "Orange", "Mango"};
   
@@ -4285,7 +4284,7 @@ Some other helpful Set methods in dart.
 
 In this example, you can see how to remove all items from the Set in dart.
 
-```
+```dart
 void main() {
   Set<String> fruits = {"Apple", "Orange", "Mango"};
   // to clear all items
@@ -4303,7 +4302,7 @@ void main() {
 
 In Dart, the difference method creates a new Set with the elements that are not in the other.
 
-```
+```dart
 void main() {
   Set<String> fruits1 = {"Apple", "Orange", "Mango"};
   Set<String> fruits2 = {"Apple", "Grapes", "Banana"};
@@ -4322,7 +4321,7 @@ void main() {
 
 In Dart you can find the Set value by its index number. The index number starts with 0.
 
-```
+```dart
 void main() {
   Set<String> days = {"Sunday", "Monday", "Tuesday"};
   // index starts from 0 so 2 means Tuesday
@@ -4338,7 +4337,7 @@ void main() {
 
 In Dart, the intersection method creates a new Set with the common elements in 2 Sets. Here Apple is available in both Sets.
 
-```
+```dart
 void main() {
   Set<String> fruits1 = {"Apple", "Orange", "Mango"};
   Set<String> fruits2 = {"Apple", "Grapes", "Banana"};
@@ -4360,7 +4359,7 @@ In a Map, data is stored as keys and values. In Map, each key must be unique. Th
 
 Here we are creating a Map for **String** and **String**. It means keys and values must be the type of String. You can create a Map of any kind as you like.
 
-```
+```dart
 void main(){
 Map<String, String> countryCapital = {
   'USA': 'Washington, D.C.',
@@ -4383,7 +4382,7 @@ Info
 
 You can find the value of Map from its key. Here we are printing **Washington, D.C.** by its key, i.e., **USA**.
 
-```
+```dart
 void main(){
 Map<String, String> countryCapital = {
   'USA': 'Washington, D.C.',
@@ -4414,7 +4413,7 @@ Map<String, String> countryCapital = {
 
 This example finds all keys/values of Map, the first and last element, checks whether it is empty or not, and finds its length.
 
-```
+```dart
 void main() {
  
   Map<String, double> expenses = {
@@ -4439,7 +4438,7 @@ void main() {
 
 If you want to add an element to the existing Map. Here is the way for you:
 
-```
+```dart
 void main(){
 Map<String, String> countryCapital = {
   'USA': 'Washington, D.C.',
@@ -4460,7 +4459,7 @@ Map<String, String> countryCapital = {
 
 If you want to update an element of the existing Map. Here is the way for you:
 
-```
+```dart
 void main(){
 Map<String, String> countryCapital = {
   'USA': 'Nothing',
@@ -4496,7 +4495,7 @@ Some useful Map methods in dart.
 
 Let’s convert keys and values of Map to List.
 
-```
+```dart
 void main() {
  
   Map<String, double> expenses = {
@@ -4524,7 +4523,7 @@ void main() {
 
 Let’s check whether the Map contains a specific key/value in it or not.
 
-```
+```dart
 void main() {
  
   Map<String, double> expenses = {
@@ -4552,7 +4551,7 @@ void main() {
 
 Suppose you want to remove an element of the existing Map. Here is the way for you:
 
-```
+```dart
 void main(){
 Map<String, String> countryCapital = {
   'USA': 'Nothing',
@@ -4573,7 +4572,7 @@ Map<String, String> countryCapital = {
 
 You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
 
-```
+```dart
 void main(){
 
   Map<String, dynamic> book = {
@@ -4597,7 +4596,7 @@ void main(){
 
 In this example, you will see how to use a loop to print all the keys and values in Map.
 
-```
+```dart
 void main(){
 
   Map<String, dynamic> book = {
@@ -4621,7 +4620,7 @@ void main(){
 
 In this example, you will see how to get students whose marks are greater or equal to 32 using where method.
 
-```
+```dart
 void main() {
   Map<String, double> mathMarks = {
     "ram": 30,
@@ -4645,7 +4644,7 @@ You can use where in list, set, map to **filter specific items**. It returns a n
 
 #### Syntax
 
-```
+```dart
 Iterable<E> where(
 bool test(
 E element
@@ -4659,7 +4658,7 @@ E element
 
 In this example, you will get only odd numbers from a list.
 
-```
+```dart
 void main() {
   List<int> numbers = [2, 4, 6, 8, 10, 11, 12, 13, 14];
 
@@ -4676,7 +4675,7 @@ void main() {
 
 In this example, you will get only days that start with alphabet s.
 
-```
+```dart
 void main() {
   List<String> days = [
     "Sunday",
@@ -4703,7 +4702,7 @@ void main() {
 
 In this example, you will get students whose marks are greater or equal to 32.
 
-```
+```dart
 void main() {
   Map<String, double> mathMarks = {
     "ram": 30,
@@ -4734,7 +4733,7 @@ File handling is an important part of any programming language. In this section,
 
 Assume that you have a file named `test.txt` in the same directory of your dart program.
 
-```
+```dart
 Welcome to test.txt file.
 This is a test file.
 
@@ -4743,7 +4742,7 @@ This is a test file.
 
 Now, you can read this file using **File** class and **readAsStringSync()** method.
 
-```
+```dart
 // dart program to read from file
 import 'dart:io';
 
@@ -4763,7 +4762,7 @@ void main() {
 
 In this example below, you will learn how to get file information like file location, file size, and last modified time.
 
-```
+```dart
 import 'dart:io';
 
 void main() {
@@ -4801,7 +4800,7 @@ Assume that you have a CSV file named `test.csv` in the same directory of your d
 
 Now, you can read this file using **File** class and **readAsStringSync()** method. We will use **split()** method to split the string into a list of strings.
 
-```
+```dart
 // dart program to read from csv file
 import 'dart:io';
 
@@ -4826,14 +4825,14 @@ void main() {
 
 You can read only part of file using **substring()** method. Here is an example to read only first 10 characters of file. Make sure that you have a file named **test.txt** in the same directory of your dart program.
 
-```
+```dart
 Welcome to test.txt file
 This is a test file.
 
 ```
 
 
-```
+```dart
 // dart program to read from file
 import 'dart:io';
 
@@ -4853,7 +4852,7 @@ void main() {
 
 To read a file from a specific directory, you need to provide the full path of the file. Here is an example to read file from a specific directory.
 
-```
+```dart
 // dart program to read from file
 import 'dart:io';
 
@@ -4877,7 +4876,7 @@ In this section, you will learn how to write file in dart programming language b
 
 Let’s create a file named **test.txt** in the same directory of your dart program and write some text in it.
 
-```
+```dart
 // dart program to write to file
 import 'dart:io';
 
@@ -4900,7 +4899,7 @@ Info
 
 You can use **FileMode.append** to add new content to previous content. Assume that **test.txt** file already contains some text.
 
-```
+```dart
 Welcome to test.txt file.
 
 ```
@@ -4908,7 +4907,7 @@ Welcome to test.txt file.
 
 Now, let’s add new content to it.
 
-```
+```dart
 // dart program to write to existing file
 import 'dart:io';
 
@@ -4927,7 +4926,7 @@ void main() {
 
 In the example below, we will ask user to enter **name** and **phone** of 3 students and write it to a csv file named **students.csv**.
 
-```
+```dart
 // dart program to write to csv file
 import 'dart:io';
 
@@ -4953,16 +4952,13 @@ void main() {
 
 **students.csv** file will look like this:
 
-```
+```dart
 Name,Phone
 John,1234567890
 Mark,0123456789
 Elon,0122112322
 
 ```
-
-
-Info
 
 **Note**: You can create any type of file using **writeAsStringSync()** method. For example, **.html**, **.json**, **.xml**, etc.
 
@@ -4975,7 +4971,7 @@ In this section, you will learn how to delete file in dart programming language 
 
 Assume that you have a file named **test.txt** in the same directory of your dart program. Now, let’s delete it.
 
-```
+```dart
 // dart program to delete file
 import 'dart:io';
 
@@ -4989,16 +4985,13 @@ void main() {
 
 ```
 
-
-Info
-
 **Note**: If you try to delete a file that does not exist, then it will throw an exception.
 
 #### Delete File If Exists
 
 You can use **File.existsSync()** method to check if a file exists or not. If it exists, then you can delete it.
 
-```
+```dart
 // dart program to delete file if exists
 import 'dart:io';
 
@@ -5018,6 +5011,7 @@ void main() {
 ```
 
 ## OOP in Dart
+
 ### OOP in Dart 
 
 **Object-oriented programming (OOP)** is a programming method that uses objects and their interactions to design and program applications. It is one of the most popular programming paradigms and is used in many programming languages, such as Dart, Java, C++, Python, etc.
@@ -5064,7 +5058,7 @@ You can declare a class in dart using the **class** keyword followed by class na
 
 #### **Syntax**
 
-```
+```dart
 class ClassName {
 // properties or fields
 // methods or functions
@@ -5085,7 +5079,7 @@ In the above syntax:
 
 In this example below, there is class **Animal** with three properties: **name**, **numberOfLegs**, and **lifeSpan**. The class also has a method called **display**, which prints out the values of the three properties.
 
-```
+```dart
 class Animal {
   String? name;
   int? numberOfLegs;
@@ -5131,7 +5125,7 @@ Once you have created a class, it’s time to declare the object. You can declar
 
 #### **Syntax**
 
-```
+```dart
 ClassName objectName = ClassName();
 
 ```
@@ -5141,7 +5135,7 @@ ClassName objectName = ClassName();
 
 In this example below, there is class **Bycycle** with three properties: **color**, **size**, and **currentSpeed**. The class has two methods. One is **changeGear**, which changes the gear of the bicycle, and **display** method prints out the values of the three properties. We also have an object of the class **Bycycle** called **bicycle**.
 
-```
+```dart
     class Bicycle {
       String? color;
       int? size;
@@ -5191,7 +5185,7 @@ In this section, you will learn about constructor in Dart programming language a
 
 **A constructor** is a special method used to initialize an object. It is called automatically when an object is created, and it can be used to set the initial values for the object’s properties. For example, the following code creates a **Person** class object and sets the initial values for the **name** and **age** properties.
 
-```
+```dart
 Person person = Person("John", 30);
 
 ```
@@ -5199,7 +5193,7 @@ Person person = Person("John", 30);
 
 If you don’t define a constructor for class, then you need to set the values of the properties manually. For example, the following code creates a **Person** class object and sets the values for the **name** and **age** properties.
 
-```
+```dart
 Person person = Person();
 person.name = "John";
 person.age = 30;
@@ -5213,7 +5207,7 @@ person.age = 30;
 
 #### Syntax
 
-```
+```dart
 class ClassName {
   // Constructor declaration: Same as class name
   ClassName() {
@@ -5228,7 +5222,7 @@ class ClassName {
 
 In this example below, there is a class **Student** with three properties: **name**, **age**, and **rollNumber**. The class has one constructor. The constructor is used to initialize the values of the three properties. We also created an object of the class **Student** called **student**.
 
-```
+```dart
 class Student {
   String? name;
   int? age;
@@ -5256,15 +5250,13 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=272408e52010155b508050093eda4c91)
 
-Info
-
 **Note**: The **this** keyword is used to refer to the current instance of the class. It is used to access the current class properties. In the example above, parameter names and class properties of constructor **Student** are the same. Hence to avoid confusion, we use the **this** keyword.
 
 #### **Example 2: Constructor In Dart**
 
 In this example below, there is a class **Teacher** with four properties: **name**, **age**, **subject**, and **salary**. Class has one constructor for initializing the values of the properties. Class also contain method **display()** which is used to display the values of the properties. We also created 2 objects of the class **Teacher** called **teacher1** and **teacher2**.
 
-```
+```dart
 class Teacher {
   String? name;
   int? age;
@@ -5300,15 +5292,13 @@ void main() {
 ```
 [Run Online](https://dartpad.dev/?id=feca294afc69f2a6e40c72e94bacff4f)
 
-Info
-
 **Note**: You can create many objects of a class. Each object will have its own copy of the properties.
 
 #### **Example 3: Constructor In Dart**
 
 In this example below, there is a class **Car** with two properties: **name** and **price**. The class has one constructor for initializing the values of the properties. The class also contains method **display()**, which is used to display the values of the properties. We also created an object of the class **Car** called **car**.
 
-```
+```dart
  class Car {
   String? name;
   double? price;
@@ -5340,7 +5330,7 @@ void main() {
 
 In this example below, there is a class **Staff** with four properties: **name**, **phone1**, **phone2**, and **subject** and one method **display()**. Class has one constructor for initializing the values of only **name**, **phone1** and **subject**. We also created an object of the class **Staff** called **staff**.
 
-```
+```dart
  class Staff {
   String? name;
   int? phone1;
@@ -5377,7 +5367,7 @@ void main() {
 
 In the avobe section, you have written the constructor in long form. You can also write the constructor in short form. You can directly assign the values to the properties. For example, the following code is the short form of the constructor in one line.
 
-```
+```dart
 class Person{
   String? name;
   int? age;
@@ -5408,7 +5398,7 @@ void main(){
 
 In the example below, we have created a class **Employee** with four properties: **name**, **age**, **subject**, and **salary**. Class has one constructor for initializing the all properties values. For **subject** and **salary**, we have used optional parameters. It means we can pass or not pass the values of **subject** and **salary**. The Class also contain method **display()** which is used to display the values of the properties. We also created an object of the class **Employee** called **employee**.
 
-```
+```dart
 class Employee {
   String? name;
   int? age;
@@ -5440,7 +5430,7 @@ void main(){
 
 In the example below, we have created a class **Chair** with two properties: **name** and **color**. Class has one constructor for initializing the all properties values with named parameters. The Class also contain method **display()** which is used to display the values of the properties. We also created an object of the class **Chair** called **chair**.
 
-```
+```dart
 class Chair {
 String? name;
 String? color;
@@ -5468,7 +5458,7 @@ chair.display();
 
 In the example below, we have created a class **Table** with two properties: **name** and **color**. Class has one constructor for initializing the all properties values with default values. The Class also contain method **display()** which is used to display the values of the properties. We also created an object of the class **Table** called **table**.
 
-```
+```dart
 class Table {
   String? name;
   String? color;
@@ -5509,7 +5499,7 @@ The constructor which is automatically created by the dart compiler if you don�
 
 In this example below, there is a class **Laptop** with two properties: **brand**, and **price**. Lets create constructor with no parameter and print something from the constructor. We also have an object of the class **Laptop** called **laptop**.
 
-```
+```dart
 class Laptop {
   String? brand;
   int? price;
@@ -5530,15 +5520,13 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=5e6ea41c667f47ea9114142c4059a2fa)
 
-Info
-
 **Note**: The default constructor is called automatically when you create an object of the class. It is used to initialize the instance variables of the class.
 
 #### **Example 2: Default Constructor In Dart**
 
 In this example below, there is a class **Student** with four properties: **name**, **age**, **schoolname** and **grade**. The default constructor is used to initialize the values of the school name. The reason for this is that the school name is the same for all the students. We also have an object of the class **Student** called **student**. The default constructor is called automatically when you create an object of the class.
 
-```
+```dart
 class Student {
   String? name;
   int? age;
@@ -5576,7 +5564,7 @@ Parameterized constructor is used to initialize the instance variables of the cl
 
 #### **Syntax**
 
-```
+```dart
 class ClassName {
   // Instance Variables
   int? number;
@@ -5592,7 +5580,7 @@ class ClassName {
 
 In this example below, there is a class **Student** with three properties: **name**, **age**, and **rollNumber**. The class has one constructor. The constructor is used to initialize the values of the three properties. We also have an object of the class **Student** called **student**.
 
-```
+```dart
 class Student {
   String? name;
   int? age;
@@ -5618,7 +5606,7 @@ void main(){
 
 In this example below, there is a class **Student** with three properties: **name**, **age**, and **rollNumber**. The class has one constructor. The constructor is used to initialize the values of the three properties. We also have an object of the class **Student** called **student**.
 
-```
+```dart
 class Student {
   String? name;
   int? age;
@@ -5649,7 +5637,7 @@ void main(){
 
 In this example below, there is class **Student** with two properties: **name**, and **age**. The class has parameterized constructor with default values. The constructor is used to initialize the values of the two properties. We also have an object of the class **Student** called **student**.
 
-```
+```dart
 class Student {
   String? name;
   int? age;
@@ -5687,7 +5675,7 @@ In most programming languages like java, c++, c#, etc., we can create multiple c
 
 In this example below, there is a class **Student** with three properties: **name**, **age**, and **rollNumber**. The class has two constructors. The first constructor is a default constructor. The second constructor is a named constructor. The named constructor is used to initialize the values of the three properties. We also have an object of the class **Student** called **student**.
 
-```
+```dart
 class Student {
   String? name;
   int? age;
@@ -5722,7 +5710,7 @@ void main() {
 
 In this example below, there is class **Mobile** with three properties **name**, **color**, and **price**. The class has one method **display** which prints out the values of the three properties. We also have an object of the class **Mobile** called **mobile**. There is also constructor **Mobile** which takes all the three properties as parameters. Named constructor **Mobile.namedConstructor** is used to create an object of the class **Mobile** with name, color and optional price. The default value of the price is 0. If the price is not passed, then the default value is used.
 
-```
+```dart
 class Mobile {
   String? name;
   String? color;
@@ -5755,7 +5743,7 @@ void main() {
 
 In this example below, there is a class **Animal** with two properties **name** and **age**. The class has three constructors. The first constructor is a default constructor. The second and third constructors are named constructors. The second constructor is used to initialize the values of name and age, and the third constructor is used to initialize the value of name only. We also have an object of the class **Animal** called **animal**.
 
-```
+```dart
 class Animal {
   String? name;
   int? age;
@@ -5793,7 +5781,7 @@ void main(){
 
 In this example below, there is a class **Person** with two properties **name** and **age**. The class has three constructors. The first is a parameterized constructor which takes two parameters **name** and **age**. The second and third constructors are named constructors. Second constructor fromJson is used to create an object of the class **Person** from a JSON. The third fromJsonString is used to create an object of the class **Person** from a JSON string. We also have an object of the class **Person** called **person**.
 
-```
+```dart
 import 'dart:convert';
 
 class Person {
@@ -5850,7 +5838,7 @@ Info
 
 In this example below, there is a class **Point** with two final properties: **x** and **y**. The class also has a constant constructor that initializes the two properties. The class also has a method called **display**, which prints out the values of the two properties.
 
-```
+```dart
 class Point {
   final int x;
   final int y;
@@ -5885,7 +5873,7 @@ Info
 
 In this example below, there is a class **Student** with three properties: **name**, **age**, and **rollNumber**. The class has one constant constructor. The constructor is used to initialize the values of the three properties. We also have an object of the class **Student** called **student**.
 
-```
+```dart
 class Student {
   final String? name;
   final int? age;
@@ -5911,7 +5899,7 @@ void main() {
 
 In this example below, there is a class **Car** with three properties: **name**, **model**, and **price**. The class has one constructor. The constructor is used to initialize the values of the three properties. We also have an object of the class **Car** called **car**.
 
-```
+```dart
 class Car {
   final String? name;
   final String? model;
@@ -5956,8 +5944,6 @@ Encapsulation can be achieved by:
 *   Declaring the class properties as **private** by using **underscore(\_)**.
 *   Providing public **getter** and **setter** methods to access and update the value of private property.
 
-Info
-
 **Note:** Dart doesn’t support keywords like **public**, **private**, and **protected**. Dart uses **\_** (underscore) to make a property or method private. The encapsulation happens at library level, not at class level.
 
 #### **Getter and Setter Methods**
@@ -5968,7 +5954,7 @@ Info
 
 In this example, we will create a class named **Employee**. The class will have two private properties **\_id** and **\_name**. We will also create two public methods **getId()** and **getName()** to access the private properties. We will also create two public methods **setId()** and **setName()** to update the private properties.
 
-```
+```dart
 class Employee {
   // Private properties
   int? _id;
@@ -6018,7 +6004,7 @@ void main() {
 
 In this example, we will create a class named **Employee**. The class has one private property **\_name**. We will also create a public method **getName()** to access the private property.
 
-```
+```dart
 class Employee {
   // Private property
   var _name;
@@ -6049,7 +6035,7 @@ void main() {
 
 In the main method, if you write the following code, it will compile and run without any error. Let’s see why it is happening.
 
-```
+```dart
 class Employee {
   // Private property
   var _name;
@@ -6090,11 +6076,9 @@ To see private properties in action, you must create a separate file for the cla
 
 You can control the properties’s access and implement the encapsulation in the dart by using the read-only properties. You can do that by adding the **final** keyword before the properties declaration. Hence, you can only access its value, but you cannot change it.
 
-Info
-
 **Note:** Properties declared with the **final** keyword must be initialized at the time of declaration. You can also initialize them in the constructor.
 
-```
+```dart
 class Student {
   final _schoolname = "ABC School";
 
@@ -6121,7 +6105,7 @@ void main() {
 
 You can create getter and setter methods by using the **get** and **set** keywords. In this example below, we have created a class named **Vehicle**. The class has two private properties **\_model** and **\_year**. We have also created two getter and setter methods for each property. The getter and setter methods are named **model** and **year**. The getter and setter methods are used to access and update the value of the private properties.
 
-```
+```dart
 class Vehicle {
   String _model;
   int _year;
@@ -6170,7 +6154,7 @@ void main() {
 
 #### **Syntax**
 
-```
+```dart
 return_type get property_name {
   // Getter body
 }
@@ -6186,7 +6170,7 @@ Info
 
 In this example below, there is a class named **Person**. The class has two properties **firstName** and **lastName**. There is getter **fullName** which is responsible to get full name of person.
 
-```
+```dart
 class Person {
   // Properties
   String? firstName;
@@ -6213,7 +6197,7 @@ void main() {
 
 In this example below, there is a class named **NoteBook**. The class has two private properties **\_name** and **\_prize**. There are two getters **name** and **price** to access the value of the properties.
 
-```
+```dart
 class NoteBook {
   // Private properties
   String? _name;
@@ -6242,15 +6226,13 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=d9b2a23ec157805d7c44ed6b5e382098)
 
-Info
-
 **Note:** In the above example, a getter **name** and **price** are used to access the value of the properties **\_name** and **\_prize**.
 
 #### **Example 3: Getter In Dart With Data Validation**
 
 In this example below, there is a class named **NoteBook**. The class has two private properties **\_name** and **\_prize**. There are two getters **name** and **price** to access the value of the properties. If you provide a blank name, then it will return **No Name**.
 
-```
+```dart
 class NoteBook {
   // Private properties
   String _name;
@@ -6292,7 +6274,7 @@ void main() {
 
 In this example below, there is a class named **Doctor**. The class has three private properties **\_name**, **\_age** and **\_gender**. There are three getters **name**, **age**, and **gender** to access the value of the properties. It has **map** getter to get **[Map](https://dart-tutorial.com/collections/map-in-dart/)** of the object.
 
-```
+```dart
 class Doctor {
 // Private properties
   String _name;
@@ -6330,21 +6312,17 @@ void main() {
 *   To restrict the access of data members of a class.
 
 ### Setter in Dart 
-#### **Setter In Dart**
 
 **Setter** is used to set the value of a property. It is mostly used to update a **private property’s** value. Setter provide explicit write access to an object properties.
 
 #### **Syntax**
 
-```
+```dart
 set property_name (value) {
   // Setter body
 }
 
 ```
-
-
-Info
 
 **Note:** Instead of writing { } after the property name, you can also write **\=>** (fat arrow) after the property name.
 
@@ -6352,7 +6330,7 @@ Info
 
 In this example below, there is a class named **NoteBook**. The class has two private properties **\_name** and **\_prize**. There are two setters **name** and **price** to update the value of the properties. There is also a method **display** to display the value of the properties.
 
-```
+```dart
 class NoteBook {
   // Private Properties
   String? _name;
@@ -6386,15 +6364,13 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=1b5d019550b1964430157edcabf932fe)
 
-Info
-
 **Note:** In the above example, a setter **name** and **price** are used to update the value of the properties **\_name** and **\_prize**.
 
 #### **Example 2: Setter In Dart With Data Validation**
 
 In this example, there is a class named **NoteBook**. The class has two private properties **\_name** and **\_prize**. If the value of **\_prize** is less than 0, we will throw an exception. There are also two setters **name** and **price** to update the value of the properties. The class also has a method **display()** to display the values of the properties.
 
-```
+```dart
 class NoteBook {
   // Private properties
   String? _name;
@@ -6441,7 +6417,7 @@ void main() {
 
 In this example, there is a class named **Student**. The class has two private properties **\_name** and **\_classnumber**. We will also create two setters **name** and **classnumber** to update the value of the properties. The **classnumber** setter will only accept a value between 1 and 12. The class also has a method **display()** to display the values of the properties.
 
-```
+```dart
 class Student {
   // Private properties
   String? _name;
@@ -6490,7 +6466,6 @@ void main() {
 *   It gives you better control over the data.
 
 ### Inheritance in Dart 
-#### **Introduction**
 
 In this section, you will learn inheritance in Dart programming and how to define a class that reuses the properties and methods of another class.
 
@@ -6498,15 +6473,13 @@ In this section, you will learn inheritance in Dart programming and how to defin
 
 Inheritance is a sharing of behaviour between two classes. It allows you to define a class that extends the functionality of another class. The **extend** keyword is used for inheriting from parent class.
 
-Info
-
 **Note**: Whenever you use inheritance, it always create a **is-a** relation between the parent and child class like **Student is a Person**, **Truck is a Vehicle**, **Cow is a Animal** etc.
 
 Dart supports single inheritance, which means that a class can only inherit from a single class. Dart does not support multiple inheritance which means that a class cannot inherit from multiple classes.
 
 #### **Syntax**
 
-```
+```dart
 class ParentClass {
   // Parent class code
 }
@@ -6530,7 +6503,7 @@ In this syntax, **ParentClass** is the super class and **ChildClass** is the sub
 
 In this example, we will create a class **Person** and then create a class **Student** that inherits the properties and methods of the **Person** class.
 
-```
+```dart
 class Person {
   // Properties
   String? name;
@@ -6584,7 +6557,7 @@ void main() {
 
 In this example, here is parent class **Car** and child class **Toyota**. The **Toyota** class inherits the properties and methods of the **Car** class.
 
-```
+```dart
 class Car{
   String color;
   int year;
@@ -6634,7 +6607,7 @@ void main(){
 
 In this example below, there is super class named **Car** with two properties **name** and **price**. There is sub class named **Tesla** which inherits the properties of the super class. The sub class has a method **display** to display the values of the properties.
 
-```
+```dart
 class Car {
   // Properties
   String? name;
@@ -6668,7 +6641,7 @@ void main() {
 
 In this example below, there is super class named **Car** with two properties **name** and **price**. There is sub class named **Tesla** which inherits the properties of the super class. The sub class has a method **display** to display the values of the properties. There is another sub class named **Model3** which inherits the properties of the sub class **Tesla**. The sub class has a property **color** and a method **display** to display the values of the properties.
 
-```
+```dart
 class Car {
 // Properties
 String? name;
@@ -6710,15 +6683,13 @@ m.display();
 
 [Run Online](https://dartpad.dev/?id=a171dbd36ab17e6ae3c353889fd80bd1)
 
-Info
-
 **Note:** Here super keyword is used to call the method of the parent class.
 
 #### **Example 5: Multilevel Inheritance In Dart**
 
 In this example below, there is class named **Person** with two properties **name** and **age**. There is sub class named **Doctor** with properties **listofdegrees** and **hospitalname**. There is another subclass named **Specialist** with property **specialization**. The sub class has a method **display** to display the values of the properties.
 
-```
+```dart
 class Person {
   // Properties
   String? name;
@@ -6765,14 +6736,13 @@ void main() {
 
 ```
 
-
 [Run Online](https://dartpad.dev/?id=932de854b9eba891c6a7e725c484263f)
 
 #### **Example 6: Hierarchical Inheritance In Dart**
 
 In this example below, there is class named **Shape** with two properties **diameter1** and **diameter2**. There is sub class named **Rectangle** with method **area** to calculate the area of the rectangle. There is another subclass named **Triangle** with method **area** to calculate the area of the triangle.
 
-```
+```dart
 class Shape {
   // Properties
   double? diameter1;
@@ -6839,7 +6809,7 @@ No, there is a lot more to learn about inheritance. You need to learn about **Co
 ### Inheritance Of Constructor in Dart 
 #### **Introduction**
 
-In this section, you will learn about inheritance of constructor in Dart programming language with the help of examples. Before learning about inheritance of constructor in Dart, you should have a basic understanding of the [constructor](https://dart-tutorial.com/object-oriented-programming/constructor-in-dart/) and [inheritance](https://dart-tutorial.com/object-oriented-programming/inheritance-in-dart/) in Dart.
+In this section, you will learn about inheritance of constructor in Dart programming language with the help of examples. Before learning about inheritance of constructor in Dart, you should have a basic understanding of the [constructor] and [inheritance] in Dart.
 
 #### **What Is Inheritance Of Constructor In Dart?**
 
@@ -6849,7 +6819,7 @@ Inheritance of constructor in Dart is a process of inheriting the constructor of
 
 In this example below, there is class named **Laptop** with a constructor. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor.
 
-```
+```dart
 class Laptop {
   // Constructor
   Laptop() {
@@ -6873,15 +6843,13 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=14f1157aa08e7ac7e44a155062c67206)
 
-Info
-
 **Note**: The constructor of the parent class is called first and then the constructor of the child class is called.
 
 #### **Example 2: Inheritance Of Constructor With Parameters In Dart**
 
 In this example below, there is class named **Laptop** with a constructor with parameters. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor with parameters.
 
-```
+```dart
 class Laptop {
   // Constructor
   Laptop(String name, String color) {
@@ -6911,7 +6879,7 @@ void main() {
 
 In this example below, there is class named **Person** with properties **name** and **age**. There is another class named **Student** which extends the **Person** class. The **Student** class has additional property **rollNumber**. Lets see how to create a constructor for the **Student** class.
 
-```
+```dart
 class Person {
   String name;
   int age;
@@ -6944,7 +6912,7 @@ void main() {
 
 In this example below, there is class named **Laptop** with a constructor with named parameters. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor with named parameters.
 
-```
+```dart
 class Laptop {
   // Constructor
   Laptop({String name, String color}) {
@@ -6974,7 +6942,7 @@ void main() {
 
 In this example below, there is class named **Laptop** with one default constructor and one named constructor. There is another class named **MacBook** which extends the **Laptop** class. The **MacBook** class has its own constructor with named parameters. You can call the named constructor of the parent class using the **super** keyword.
 
-```
+```dart
 class Laptop {
   // Default Constructor
   Laptop() {
@@ -7004,7 +6972,6 @@ void main() {
 [Run Online](https://dartpad.dev/?id=9c9d85ce409c3b128ba1c9c34ace7672)
 
 ### Super in Dart 
-#### **Introduction**
 
 In this section, you will learn about Super in Dart programming language with the help of examples. Before learning about Super in Dart, you should have a basic understanding of the [constructor](https://dart-tutorial.com/object-oriented-programming/constructor-in-dart/) and [inheritance](https://dart-tutorial.com/object-oriented-programming/inheritance-in-dart/) in Dart.
 
@@ -7016,7 +6983,7 @@ Super is used to refer to the parent class. It is used to call the parent class�
 
 In this example below, the **show()** method of the **MacBook** class calls the **show()** method of the parent class using the **super** keyword.
 
-```
+```dart
 class Laptop {
   // Method
     void show() {
@@ -7046,7 +7013,7 @@ void main() {
 
 In this example below, the **display()** method of the **Tesla** class calls the **noOfSeats** property of the parent class using the **super** keyword.
 
-```
+```dart
 class Car {
   int noOfSeats = 4;
 }
@@ -7074,7 +7041,7 @@ void main() {
 
 In this example below, the **Manager** class constructor calls the **Employee** class constructor using the **super** keyword.
 
-```
+```dart
 class Employee {
   // Constructor
   Employee(String name, double salary) {
@@ -7104,7 +7071,7 @@ void main() {
 
 In this example below, the **Manager** class named constructor calls the **Employee** class named constructor using the **super** keyword.
 
-```
+```dart
 class Employee {
   // Named constructor
   Employee.manager() {
@@ -7132,7 +7099,7 @@ void main() {
 
 In this example below, the **MacBookPro** class method **display** calls the **display** method of the parent class **MacBook** using the **super** keyword. The **MacBook** class method **display** calls the **display** method of the parent class **Laptop** using the **super** keyword.
 
-```
+```dart
 class Laptop {
   // Method
   void display() {
@@ -7180,8 +7147,6 @@ In this section, you will learn about polymorphism in Dart programming language 
 
 Poly means **many** and morph means **forms**. Polymorphism is the ability of an object to take on many forms. As humans, we have the ability to take on many forms. We can be a student, a teacher, a parent, a friend, and so on. Similarly, in object-oriented programming, polymorphism is the ability of an object to take on many forms.
 
-Info
-
 **Note**: In the real world, polymorphism is updating or modifying the feature, function, or implementation that already exists in the parent class.
 
 #### **Polymorphism By Method Overriding**
@@ -7190,7 +7155,7 @@ Method overriding is a technique in which you can create a method in the child c
 
 #### **Syntax**
 
-```
+```dart
 class ParentClass{
 void functionName(){
   }
@@ -7208,7 +7173,7 @@ void functionName(){
 
 In this example below, there is a class named **Animal** with a method named **eat()**. The **eat()** method is overridden in the child class named **Dog**.
 
-```
+```dart
 class Animal {
   void eat() {
     print("Animal is eating");
@@ -7239,7 +7204,7 @@ void main() {
 
 In this example below, there is a class named **Vehicle** with a method named **run()**. The **run()** method is overridden in the child class named **Bus**.
 
-```
+```dart
 class Vehicle {
   void run() {
     print("Vehicle is running");
@@ -7266,15 +7231,13 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=23815134f26eb17adfcb192e36f4688e)
 
-Info
-
 **Note**: If you don’t write **@override**, the program still runs. But, it is a good practice to write **@override**.
 
 #### **Example 3: Polymorphism By Method Overriding In Dart**
 
 In this example below, there is a class named **Car** with a method named **power()**. The **power()** method is overridden in two child classes named **Honda** and **Tesla**.
 
-```
+```dart
 class Car{
   void power(){
     print("It runs on petrol.");
@@ -7308,7 +7271,7 @@ void main(){
 
 In this example below, there is a class named **Employee** with a method named **salary()**. The **salary()** method is overridden in two child classes named **Manager** and **Developer**.
 
-```
+```dart
 class Employee{
   void salary(){
     print("Employee salary is \$1000.");
@@ -7348,7 +7311,6 @@ void main(){
 *   It allows us to write code that is more flexible and reusable.
 
 ### Static in Dart 
-#### **Introduction**
 
 In this section, you will learn about **dart static** to share the same variable or method across all instances of a class.
 
@@ -7364,7 +7326,7 @@ A static variable is a variable that is shared by all instances of a class. It i
 
 To declare a static variable in Dart, you must use the static keyword before the variable name.
 
-```
+```dart
 class ClassName {
   static dataType variableName;
 }
@@ -7376,7 +7338,7 @@ class ClassName {
 
 To initialize a static variable simply assign a value to it.
 
-```
+```dart
 class ClassName {
   static dataType variableName = value;
   // for e.g 
@@ -7391,7 +7353,7 @@ class ClassName {
 
 You need to use the **ClassName.variableName** to access a static variable in Dart.
 
-```
+```dart
 class ClassName {
   static dataType variableName = value;
   // Accessing the static variable inside same class
@@ -7412,7 +7374,7 @@ void main() {
 
 In this example below, there is a class named **Employee**. The class has a static variable **count** to count the number of employees.
 
-```
+```dart
 class Employee {
   // Static variable
   static int count = 0;
@@ -7441,15 +7403,13 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=3e805fdf420430f0508d90dace1b322d)
 
-Info
-
 **Note:** While creating the objects of the class, the static variable **count** is incremented by 1. The **totalEmployee()** method displays the value of the static variable **count**.
 
 #### **Example 2: Static Variable In Dart**
 
 In this example below, there is a class named **Student**. The class has a static variable **schoolName** to store the name of the school. If every student belongs to the same school, then it is better to use a static variable.
 
-```
+```dart
 class Student {
   int id;
   String name;
@@ -7480,7 +7440,7 @@ A static method is shared by all instances of a class. It is declared using the 
 
 #### **Syntax**
 
-```
+```dart
 class ClassName{
 static returnType methodName(){
   //statements
@@ -7494,7 +7454,7 @@ static returnType methodName(){
 
 In this example, we will create a static method **calculateInterest()** which calculates the simple interest. You can call **SimpleInterest.calculateInterest()** anytime without creating an instance of the class.
 
-```
+```dart
 class SimpleInterest {
   static double calculateInterest(double principal, double rate, double time) {
     return (principal * rate * time) / 100;
@@ -7543,8 +7503,6 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=c399202516155336cacbd27f6bd55470)
 
-Info
-
 **Note**: You don’t need to create an instance of a class to call a static method.
 
 #### **Key Points To Remember**
@@ -7558,7 +7516,7 @@ An enum is a special type that represents a fixed number of constant values. An 
 
 #### **Syntax**
 
-```
+```dart
 enum enumName {
   constantName1,
   constantName2,
@@ -7574,7 +7532,7 @@ enum enumName {
 
 In this example below, there is enum type named **days**. It contains seven constants days. The **days** enum type is used in the **main()** function.
 
-```
+```dart
 enum days {
   Sunday,
   Monday,
@@ -7621,7 +7579,7 @@ void main() {
 
 In this example, there is an enum type named **Gender**. It contains three constants **Male**, **Female**, and **Other**. The **Gender** enum type is used in the **Person** class.
 
-```
+```dart
 enum Gender { Male, Female, Other }
 
 class Person {
@@ -7658,7 +7616,7 @@ void main() {
 
 In this example, there is enum type named **Days**. It contain 7 days. The for loop iterates through all the enum values.
 
-```
+```dart
 enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday }
 
 void main() {
@@ -7689,7 +7647,7 @@ void main() {
 
 In dart, you can declare enums with members. For example, for your accounting software you can store company types like **Sole Proprietorship**, **Partnership**, **Corporation**, and **Limited Liability Company**. You can declare an enum with members as shown below.
 
-```
+```dart
 enum CompanyType {
   soleProprietorship("Sole Proprietorship"),
   partnership("Partnership"),
@@ -7722,7 +7680,7 @@ Abstract classes are classes that cannot be initialized. It is used to define th
 
 #### **Syntax**
 
-```
+```dart
 abstract class ClassName {
   //Body of abstract class
 
@@ -7739,7 +7697,7 @@ An abstract method is a method that is declared without an implementation. It is
 
 #### Syntax
 
-```
+```dart
 abstract class ClassName {
   //Body of abstract class
   method1();
@@ -7757,7 +7715,7 @@ Subclasses of an abstract class must implement all the abstract methods of the a
 
 In this example below, there is an abstract class **Vehicle** with two abstract methods **start()** and **stop()**. The subclasses **Car** and **Bike** implement the abstract methods and override them to print the message.
 
-```
+```dart
 abstract class Vehicle {
   // Abstract method
   void start();
@@ -7814,7 +7772,7 @@ void main() {
 
 In this example below, there is an abstract class **Shape** with one abstract method **area()** and two subclasses **Rectangle** and **Triangle**. The subclasses implement the **area()** method and override it to calculate the area of the rectangle and triangle, respectively.
 
-```
+```dart
 abstract class Shape {
   int dim1, dim2;
   // Constructor
@@ -7866,7 +7824,7 @@ You can’t create an object of an abstract class. However, you can define a con
 
 In this example below, there is an abstract class **Bank** with a constructor which takes two parameters **name** and **rate**. There is an abstract method **interest()**. The subclasses **SBI** and **ICICI** implement the abstract method and override it to print the interest rate.
 
-```
+```dart
 abstract class Bank {
   String name;
   double rate;
@@ -7927,7 +7885,6 @@ void main() {
 *   Abstract method only has a signature and no implementation.
 
 ### Interface in Dart 
-#### Introduction
 
  In Dart, every class is **implicit interface**. 
 
@@ -7937,7 +7894,7 @@ void main() {
 
 #### Syntax Of Interface In Dart
 
-```
+```dart
 class InterfaceName {
   // code
 }
@@ -7953,7 +7910,7 @@ class ClassName implements InterfaceName {
 
 In dart there is no keyword **interface** but you can use **class** or **abstract class** to declare an interface. All classes implicitly define an interface. Mostly **abstract class** is used to declare an interface.
 
-```
+```dart
 // creating an interface using abstract class
 abstract class Person {
   canWalk();
@@ -7967,7 +7924,7 @@ abstract class Person {
 
 You must use the **implements** keyword to implement an interface. The class that implements an interface must implement all the methods and properties of the interface.
 
-```
+```dart
 class Student implements Person {
  // implementation of canWalk()
   @override
@@ -7989,7 +7946,7 @@ class Student implements Person {
 
 In this example below, there is an interface **Laptop** with two methods **turnOn()** and **turnOff()**. The class **MacBook** implements the interface and overrides the methods to print the message.
 
-```
+```dart
 // creating an interface using concrete class
 class Laptop {
     // method
@@ -8033,7 +7990,7 @@ void main() {
 
 In this example below, there is an abstract class named **Vehicle**. The **Vehicle** class has two abstract methods **start()** and **stop()**. The **Car** class implements the **Vehicle** interface. The **Car** class has to implement the **start()** and **stop()** methods.
 
-```
+```dart
 // abstract class as interface
 abstract class Vehicle {
   void start();
@@ -8069,7 +8026,7 @@ void main() {
 
 #### Syntax For Implementing Multiple Interfaces In Dart
 
-```
+```dart
 class ClassName implements Interface1, Interface2, Interface3 {
   // code
 }
@@ -8081,7 +8038,7 @@ class ClassName implements Interface1, Interface2, Interface3 {
 
 In this example below, two abstract classes are named **Area** and **Perimeter**. The **Area** class has an abstract method **area()** and the **Perimeter** class has an abstract method **perimeter()**. The **Shape** class implements both the **Area** and **Perimeter** classes. The **Shape** class has to implement the **area()** and **perimeter()** methods.
 
-```
+```dart
 // abstract class as interface
 abstract class Area {
   void area();
@@ -8125,7 +8082,7 @@ void main() {
 
 In this example below, there is an abstract class named **Person**. The **Person** class has one property **name** and two abstract methods **run** and **walk**. The **Student** class implements the **Person** interface. The **Student** class has to implement the **run** and **walk** methods.
 
-```
+```dart
 // abstract class as interface
 abstract class Person {
     // properties
@@ -8168,7 +8125,7 @@ void main() {
 
 In this example below, there is abstract class named **CalculateTotal** and **CalculateAverage**. The **CalculateTotal** class has an abstract method **total()** and the **CalculateAverage** class has an abstract method **average()**. The **Student** class implements both the **CalculateTotal** and **CalculateAverage** classes. The **Student** class has to implement the **total()** and **average()** methods.
 
-```
+```dart
 // abstract class as interface
 abstract class CalculateTotal {
   int total();
@@ -8234,15 +8191,12 @@ void main() {
 *   It is used to achieve abstraction.
 
 ### Mixin in Dart 
-#### **Introduction**
 
 In this section, you will learn about **dart mixins** to reuse the code in multiple classes.
 
 #### **Mixin In Dart**
 
 Mixins are a way of reusing the code in multiple classes. Mixins are declared using the keyword **mixin** followed by the mixin name. Three keywords are used while working with mixins: **mixin**, **with**, and **on**. It is possible to use multiple mixins in a class.
-
-Info
 
 **Note:** The **with** keyword is used to apply the mixin to the class. It promotes DRY(Don’t Repeat Yourself) principle.
 
@@ -8255,7 +8209,7 @@ Info
 
 #### **Syntax**
 
-```
+```dart
 mixin Mixin1{
   // code
 }
@@ -8275,7 +8229,7 @@ class ClassName with Mixin1, Mixin2{
 
 In this example below, there are two mixins named **ElectricVariant** and **PetrolVariant**. The **ElectricVariant** mixin has a method **electricVariant()** and the **PetrolVariant** mixin has a method **petrolVariant()**. The **Car** class uses both the **ElectricVariant** and **PetrolVariant** mixins.
 
-```
+```dart
 mixin ElectricVariant {
   void electricVariant() {
     print('This is an electric variant');
@@ -8307,7 +8261,7 @@ void main() {
 
 In this example below, there are two mixins named **CanFly** and **CanWalk**. The **CanFly** mixin has a method **fly()** and the **CanWalk** mixin has a method **walk()**. The **Bird** class uses both the **CanFly** and **CanWalk** mixins. The **Human** class uses the **CanWalk** mixin.
 
-```
+```dart
 mixin CanFly {
   void fly() {
     print('I can fly');
@@ -8348,7 +8302,7 @@ Sometimes, you want to use a mixin only with a specific class. In this case, you
 
 #### **Syntax Of On Keyword**
 
-```
+```dart
 mixin Mixin1 on Class1{
   // code
 }
@@ -8360,7 +8314,7 @@ mixin Mixin1 on Class1{
 
 In this example below, there is abstract class named **Animal** with properties **name** and **speed**. The **Animal** class has an abstract method **run()**. The **CanRun** mixin is only used by class that extends **Animal**. The **Dog** class extends the **Animal** class and uses the **CanRun** mixin. The **Bird** class cannot use the **CanRun** mixin because it does not extend the **Animal** class.
 
-```
+```dart
 abstract class Animal {
   // properties
   String name;
@@ -8411,7 +8365,6 @@ void main() {
 *   You can’t create an object of mixin.
 
 ### Factory Constructor in Dart
-#### **Introduction**
 
 In this section, you will learn about factory constructors with examples. 
 
@@ -8423,7 +8376,7 @@ A **factory constructor** gives more flexibility to create an object. Generative
 
 #### Syntax
 
-```
+```dart
 class ClassName {
   factory ClassName() {
     // TODO: return ClassName instance
@@ -8448,11 +8401,9 @@ class ClassName {
 
 In this example below, there is a class named **Area** with final properties **length** and **breadth**, and **area**. When you pass the **length** and **breadth** to the constructor, it calculates the **area** and stores it in the **area** property.
 
-Info
-
 **Note**: An initializer list allows you to assign properties to a new instance variable before the constructor body runs, but after creation.
 
-```
+```dart
 class Area {
   final int length;
   final int breadth;
@@ -8482,7 +8433,7 @@ Here **area2** object has a negative value. This is because we are not validatin
 
 In this example below, **factory constructor** is used to validate the input. If the input is valid, it will return a new class instance. If the input is invalid, then it will throw an exception.
 
-```
+```dart
 class Area {
   final int length;
   final int breadth;
@@ -8521,7 +8472,7 @@ void main() {
 
 In this example below, there is a class named **Person** with two properties, **firstName** and **lastName**, and two constructors, a **normal constructor** and a **factory constructor**. The factory constructor creates a Person object from a [**Map**](https://dart-tutorial.com/collections/map-in-dart/).
 
-```
+```dart
 class Person {
   String firstName;
   String lastName;
@@ -8560,7 +8511,7 @@ In the main method, two objects are created, one using the **generative/normal c
 
 In this example below, there is [**enum**](https://dart-tutorial.com/object-oriented-programming/enum-in-dart/) **ShapeType** with two values: **circle** and **rectangle**. There is an [**interface**](https://dart-tutorial.com/object-oriented-programming/interface-in-dart/) **Shape** with a factory constructor that creates objects of type Shape, either Circle or Rectangle. The **main** method instantiates two objects, one of each type, and calls the **draw()** method on each.
 
-```
+```dart
 // enum ShapeType
 enum ShapeType { circle, rectangle }
 
@@ -8615,7 +8566,7 @@ void main() {
 
 In this example below, there is class **Person** with a final field **name**. It also has a private constructor and a static **\_cache** field. The class also has a **factory constructor** that checks if the **\_cache** field contains a key that matches the name parameter. If it does, it returns the Person object associated with that key. Otherwise, it creates a new **Person** object, adds it to the **\_cache**, and returns it.
 
-```
+```dart
 class Person {
   // final fields
   final String name;
@@ -8660,7 +8611,7 @@ Singletons are a common design pattern in object-oriented programming. A singlet
 
 This code creates a **Singleton** class that can only be instantiated once, and provides a factory constructor to get the instance of the class. The main method creates two objects of the Singleton class, and prints the hashcode of the objects to verify that **they are same**.
 
-```
+```dart
 // Singleton using dart factory
 class Singleton {
  // static variable
@@ -8687,8 +8638,6 @@ void main() {
 
 You can see that both objects have the same hashcode. This is because both objects are pointing to the same instance.
 
-Info
-
 **Note**: Here Singleton.\_internal() is a private constructor so that it can not be called from outside the library. The factory constructor is used to return the same instance of the class.
 
 #### **Key Points**
@@ -8701,10 +8650,7 @@ Here **It** means **factory constructor**
 *   It is used to implement singleton design patterns. \[Return the same instance every time\]
 *   It is used to initialize a final variable using logic that can’t be handled in the initializer list.
 
-
 ## Null Safety in Dart
-
-### Null Safety in Dart
 
 **Null safety** is a feature in the Dart programming language that helps developers to avoid null errors. This feature is called **Sound Null Safety** in dart. This allows developers to catch null errors at edit time.
 
@@ -8720,7 +8666,7 @@ Here **It** means **factory constructor**
 
 In the example below, the variable **age** is a **int** type. If you pass a null value to this variable, it will give an error instantly.
 
-```
+```dart
 void main() { 
    int age = null; // give error
 }
@@ -8740,7 +8686,7 @@ Programmers do have a lot of difficulties while handling null values. They forge
 
 In Dart, variables and fields are non-nullable by default, which means that they cannot have a value **null** unless you explicitly allow it.
 
-```
+```dart
 int productid = 20; // non-nullable
 int productid = null; // give error
 
@@ -8751,7 +8697,7 @@ int productid = null; // give error
 
 With dart **sound null Safety**, you cannot provide a null value by **default**. If you are 100% sure to use it, then you can use **?** operator after the type declaration.
 
-```
+```dart
 // Declaring a nullable variable by using ?
 String? name;
 
@@ -8764,7 +8710,7 @@ This declares a variable **name**, which can be null or a string.
 
 You can assign a value to nullable variables just like any other variable. However, you can also assign null to them.
 
-```
+```dart
 void main(){
 // Declaring a nullable variable by using ?
 String? name;
@@ -8787,7 +8733,7 @@ You can use nullable variables in many ways. Some of them are shown below:
 *   You can use **!** operator, which returns null if the variable is null.
 *   You can use **??** operator to assign a default value if the variable is null.
 
-```
+```dart
 void main(){
 // Declaring a nullable variable by using ?
 String? name;
@@ -8816,7 +8762,7 @@ print(name2);
 
 You can also store null in list values. In this example, the **items** is a list of nullable integers. It can contain null values as well as integers.
 
-```
+```dart
 void main() {
   // list of nullable ints
   List<int?> items = [1, 2, null, 4];
@@ -8832,7 +8778,7 @@ void main() {
 
 In this example, the function **printAddress** has a parameter **address** which is a **String** type. If you pass a **null** value to this function, it will give a edit-time error.
 
-```
+```dart
 void printAddress(String address) {
   print(address);
 }
@@ -8850,7 +8796,7 @@ void main() {
 
 If you are 100% sure, then you can use **?** for the type declaration. In this example, the function **printAddress** has a parameter **address**, which is a **String?** type. You can pass both null and string values to this function.
 
-```
+```dart
 // address is a nullable string
 void printAddress(String? address) {
   print(address);
@@ -8869,7 +8815,7 @@ void main() {
 
 In the example, the class **Person** has a parameter **name**, which is a **String** type. If you pass a null value to this class, it will give a compile-time error.
 
-```
+```dart
 class Person {
   String name;
   Person(this.name);
@@ -8888,7 +8834,7 @@ void main() {
 
 In this example, the class **Person** has a parameter **name**, which is a **String?** type. You can pass both null and string values to this class. To define a nullable property in a class, you can use the **?** operator after the type.
 
-```
+```dart
 class Person {
   String? name;
   Person(this.name);
@@ -8907,7 +8853,7 @@ void main() {
 
 In the example below, the **Profile** class has two nullable properties: **name** and **bio**. The **printProfile** method prints the name and bio of the profile. If the name or bio is **null**, it prints a default value instead.
 
-```
+```dart
 class Profile {
   String? name;
   String? bio;
@@ -8967,7 +8913,7 @@ Types Promotion in Dart works in the following ways:
 
 In this example, the variable **name** is declared as an **Object**. The **Object** class doesn’t have a **.length** property. Variable **name** gets promoted from **Object** to **String** so that you can access the **.length** property of the String class.
 
-```
+```dart
 void main(){
 Object name = "Pratik";
 // print(name.length) will not work because Dart doesn't know that name is a String
@@ -8987,7 +8933,7 @@ if(name is String) {
 
 In this example, the variable **result** is declared as a **String**. In both **if** and **else** blocks, the variable **result** is assigned a value of type **String**. Therefore, the variable **result** is automatically promoted to a non-nullable type **String**.
 
-```
+```dart
 void main(){
 // result is a String
 String result;
@@ -9011,7 +8957,7 @@ print("Length of result is ${result.length}");
 
 In Dart, you can also throw an exception if the variable is null. In this example, method **printLength**, takes a **String** type parameter. If the parameter is null, then it will throw an exception.
 
-```
+```dart
 // method to print the length of the text
 void printLength(String? text){
     if(text == null) {
@@ -9033,7 +8979,7 @@ void main() {
 
 In this example, the variable **value** contains a value of type **String** or **null**. The variable **value** is promoted to a non-nullable type **String** in the **if** block. If the variable **value** is null, then the **else** block is executed.
 
-```
+```dart
 // importing dart:math library
 import 'dart:math';
 // creating a class DataProvider
@@ -9072,7 +9018,7 @@ In dart, **late** keyword is used to declare a variable or field that will be in
 
 In this example, **name** variable is declared as a **late** variable. The **name** variable is initialized in the **main** method.
 
-```
+```dart
 // late variable
 late String name;
 
@@ -9092,15 +9038,13 @@ When you put **late** infront of a variable declearation, you tell Dart the foll
 *   You will assign value later.
 *   You will make sure the variable has a value before you use it.
 
-Info
-
 **Note**: The **late** keyword is contract between you and Dart. You are telling Dart that you will assign a value to the variable before you use it. If you don’t assign a value to the variable before you use it, Dart will throw an error.
 
 #### **Example 2: Late Keyword In Dart**
 
 In this example, there is **Person** class with a **name** field. The **name** field is declared as a late variable.
 
-```
+```dart
 class Person {
   // late variable
   late String name;
@@ -9138,7 +9082,7 @@ Note: Using **late** means dart doesn’t initialize value right away, it only i
 
 In this example, the **provideCountry** function is not called when the **value** variable is declared. The **provideCountry** function is called only when the **value** variable is used. **Lazy initialization** is used to avoid unnecessary computation.
 
-```
+```dart
 // function
 String provideCountry() {
   print("Function is called");
@@ -9164,7 +9108,7 @@ If you remove the **late** keyword from the **value** variable, the **provideCou
 
 In this example, the **heavyComputation** function is called when the **description** variable is used. If you remove the **late** keyword from the **description** variable, the **heavyComputation** function will be called when the **Person** class is instantiated.
 
-```
+```dart
 // Person class
 class Person {
   final int age;
@@ -9198,7 +9142,7 @@ void main() {
 
 In this example, the **\_getFullName** function is called when the **fullName** variable is used. The **firstName** and **lastName** variables are initialized when the **fullName** variable is used.
 
-```
+```dart
 class Person {
   // declaring late variables
   late String fullName = _getFullName();
@@ -9237,7 +9181,7 @@ If you want to assign a value to a variable only once, you can use the **late fi
 
 In this example, there is class **Student** with a **name** field. The **name** field is declared as a **late final** variable. The **name** field is initialized in the **Student** constructor. The **name** field is assigned a value only once. If you try to assign a value to the **name** field again, you will get an error.
 
-```
+```dart
 // Student class
 class Student {
   // late final variable
@@ -9267,7 +9211,7 @@ Practice these exercises to master **dart null safety**. To practice these exerc
 
 In variable name **age**, assign a **null** value to it using **?**.
 
-```
+```dart
 // Try to assign a null value to age variable using ?
 void main() {
   int age;
@@ -9284,7 +9228,7 @@ void main() {
 
 Try using **?** to make the type parameter of **List** nullable.
 
-```
+```dart
 // Try to make the type parameter of List nullable
 void main() {
   List<int> items = [1, 2, null, 4];
@@ -9300,7 +9244,7 @@ void main() {
 
 Try using null assertion operator **!** to print null if the variable is null.
 
-```
+```dart
 // Try to use null assertion operator(!) to print null if the variable is null
 void main() {
   String? name;
@@ -9318,7 +9262,7 @@ void main() {
 
 Try using null assertion operator **!** to print null if the variable is null.
 
-```
+```dart
 // Try to use null assertion operator(!) to print null if the variable is null
 void main() {
   List<int?> items = [1, 2, null, 4];
@@ -9337,7 +9281,7 @@ void main() {
 
 Try using null assertion operator **!** to print null if the variable is null.
 
-```
+```dart
 // Try to use null assertion operator(!) to print null if the variable is null
 int? returnNullButSometimesNot() {
   return -5;
@@ -9357,7 +9301,7 @@ void main() {
 
 Try using null assertion operator **!** to print the length of the String or return null if the variable is null.
 
-```
+```dart
 // Try to use null assertion operator(!) to print the length of the String or return null if the variable is null
 int findLength(String? name) {
     // add null assertion operator here
@@ -9380,7 +9324,7 @@ If you want to assign a default value to a variable if it is null, you can use n
 
 Try using null coalescing operator **??** to assign a default value to **Stranger** if it is null.
 
-```
+```dart
 // Try to use null coalescing operator(??) to assign a default value to Stranger if it is null
 void main() {
   String? name;
@@ -9398,7 +9342,7 @@ void main() {
 
 Solve the error using type promotion:
 
-```
+```dart
 // Try to solve the error using type promotion
 Object name = "Mark";
 print("The length of name is ${name.length}");
@@ -9412,7 +9356,7 @@ print("The length of name is ${name.length}");
 
 Solve the error using type promotion:
 
-```
+```dart
 // Try to solve the error using type promotion
 import 'dart:math';
 class DataProvider{
@@ -9441,7 +9385,7 @@ void main() {
 
 Try using **late** keyword to solve the error:
 
-```
+```dart
 // Try to solve the error using late keyword
 class Person{
     String _name;
@@ -9466,8 +9410,6 @@ void main() {
 
 ## Asynchronous Programming 
 
-### Asynchronous Programming 
-
 **Asynchronous Programming** is a way of writing code that allows a program to do multiple tasks at the same time. Time consuming operations like fetching data from the internet, writing to a database, reading from a file, and downloading a file can be performed without blocking the main thread of execution.
 
 #### **Synchronous Programming**
@@ -9476,7 +9418,7 @@ In Synchronous programming, the program is executed line by line, one at a time.
 
 #### **Example Of Synchronous Programming**
 
-```
+```dart
 void main() {
   print("First Operation"); 
   print("Second Big Operation"); 
@@ -9493,13 +9435,11 @@ Here in this example, you can see that it will print line by line. Let’s suppo
 
 In Asynchronous programming, program execution continues to the next line without waiting to complete other work. It simply means, **Don’t wait**. It represents the task that doesn’t need to solve before proceeding to the next one.
 
-Info
-
 **Note**: Asynchronous Programming improves the responsiveness of the program.
 
 #### **Example Of Asynchronous Programming**
 
-```
+```dart
 void main() {
   print("First Operation");   
   Future.delayed(Duration(seconds:3),()=>print('Second Big Operation'));
@@ -9539,7 +9479,7 @@ In dart, the Future represents a value or error that is not yet available. It is
 
 You can create a future in dart by using **Future** class. Here the function will return **`Future<String>`** after 5 seconds.
 
-```
+```dart
 // function that returns a future
 Future<String> getUserName() async {
   return Future.delayed(Duration(seconds: 2), () => 'Mark');
@@ -9550,7 +9490,7 @@ Future<String> getUserName() async {
 
 You can also create a future by using **`Future.value()`** method. Here the function will return **`Future<String>`** immediately.
 
-```
+```dart
 // function that returns a future
 Future<String> getUserName() {
   return Future.value('Mark');
@@ -9563,7 +9503,7 @@ Future<String> getUserName() {
 
 You can use future in dart by using **`then()`** method. Here the function will return **`Future<String>`** after 5 seconds.
 
-```
+```dart
 // function that returns a future
 Future<String> getUserName() async {
   return Future.delayed(Duration(seconds: 2), () => 'Mark');
@@ -9602,7 +9542,7 @@ It can be completed with value or completed with error. **`Future<int>`** produc
 
 In this example below, we are creating a function **middleFunction()** that returns a future. The function will return **`Future<String>`** after 5 seconds.
 
-```
+```dart
 void main() {
   print("Start");
   getData();
@@ -9640,7 +9580,7 @@ The **async** and **await** keywords both provide a declarative way to define an
 
 #### Example 1: Synchronous Function
 
-```
+```dart
 void main() {
   print("Start");
   getData();
@@ -9661,7 +9601,7 @@ Future<String> middleFunction(){
 
 #### Example 2: Asynchronous function
 
-```
+```dart
 void main() {
   print("Start");
   getData();
@@ -9688,7 +9628,7 @@ You can handle errors in the dart async function by using `try-catch`. You can w
 
 #### Example 3: Handling Errors
 
-```
+```dart
 main() {
   print("Start");
   getData();
@@ -9715,8 +9655,6 @@ Future<String> middleFunction(){
 
 In the above example, `try-catch` handles the exception that could come after the program is executed.
 
-Info
-
 Note: We cannot perform an asynchronous operation from a synchronous function.
 
 #### Important Terms
@@ -9742,7 +9680,7 @@ For example, A stream is like a pipe that emits events, you put a value on the o
 
 You can create a stream in dart by using **Stream** class. Here the function will return **`Stream<String>`** after 5 seconds.
 
-```
+```dart
 // function that returns a stream
 Stream<String> getUserName() async* {
   await Future.delayed(Duration(seconds: 1));
@@ -9762,7 +9700,7 @@ Info
 
 You can also create a stream by using **`Stream.fromIterable()`** method. Here the function will return **`Stream<String>`** immediately.
 
-```
+```dart
 // function that returns a stream
 Stream<String> getUserName() {
   return Stream.fromIterable(['Mark', 'John', 'Smith']);
@@ -9775,7 +9713,7 @@ Stream<String> getUserName() {
 
 You can use stream in dart by using **`await for`** loop.
 
-```
+```dart
 // function that returns a stream
 Stream<String> getUserName() async* {
   await Future.delayed(Duration(seconds: 1));
@@ -9798,8 +9736,6 @@ void main() async {
 
 
 #### **Future vs Stream**
-
-
 
 * Future: Future represents the value or error that is supposed to be available in the Future.
   * Stream: Stream is a way by which we receive a sequence of events.
@@ -9830,7 +9766,7 @@ This is the stream that is set up for multiple subscriptions. They hold onto the
 
 #### **Syntax**
 
-```
+```dart
 StreamController<data_type> controller = StreamController<data_type>.broadcast();
 
 ```
@@ -9840,7 +9776,7 @@ StreamController<data_type> controller = StreamController<data_type>.broadcast()
 
 You can create a stream in many ways. Let’s create a `StreamController` first.
 
-```
+```dart
 StreamController<data_type> controller = StreamController<data_type>();
 
 ```
@@ -9848,7 +9784,7 @@ StreamController<data_type> controller = StreamController<data_type>();
 
 Now we can access this controller through the `stream` property.
 
-```
+```dart
 Stream stream = controller.stream;
 
 ```
@@ -9858,7 +9794,7 @@ Stream stream = controller.stream;
 
 After getting access from the stream you subscribe to the stream by calling a `listen()` method.
 
-```
+```dart
  stream.listen((value) {
   print("Value from controller: $value");
 });
@@ -9878,7 +9814,7 @@ Value from controller: 3
 
 To manage the stream, `listen()` method is used.
 
-```
+```dart
 StreamSubscription<int> streamSubscription = stream.listen((value){
   print("Value from controller: $value");
 });
@@ -9890,7 +9826,7 @@ StreamSubscription<int> streamSubscription = stream.listen((value){
 
 You can cancel a stream by using the `cancel()` method.
 
-```
+```dart
 streamSubscription.cancel();
 
 ```
@@ -9902,7 +9838,7 @@ Four major classes in Dart’s async libraries are used to manage streams.
 
 **Stream:** It represents an asynchronous stream of data. For E.g:
 
-```
+```dart
  final controller = StreamController<String>();
 
 final subscription = controller.stream.listen((String data) {
@@ -9925,7 +9861,7 @@ There are four methods used in the stream: \*listen(): It returns a StreamSubscr
 
 #### **Syntax: listen**
 
-```
+```dart
 final subscription = myStream.listen()
 
 ```
@@ -9954,7 +9890,7 @@ final subscription = myStream.listen()
 
 #### **Example Of async**
 
-```
+```dart
 Future<int> doSomeLongTask() async {
   await Future.delayed(const Duration(seconds: 2));
   return 21;
@@ -9968,7 +9904,7 @@ Future<int> doSomeLongTask() async {
 
 #### __Example Of async_ In Dart_\*
 
-```
+```dart
 Stream<int> countForOneMinute() async* {
   for (int i = 1; i <= 5; i++) {
     await Future.delayed(const Duration(seconds: 1));
@@ -9985,7 +9921,7 @@ Stream<int> countForOneMinute() async* {
 
 #### __Example Of yield_ In Dart_\*
 
-```
+```dart
 Stream<int> str(int n) async* {
  if (n > 0) {  
    await Future.delayed(Duration(seconds: 2));
@@ -10007,7 +9943,7 @@ In the above example, you have printed only an even number from 10 to 2 using st
 
 #### **Example 1**
 
-```
+```dart
 import 'dart:async';
 
 void main() {
@@ -10028,7 +9964,7 @@ In this example, a String, integer and an error are added to the `StreamControll
 
 #### **Example 2**
 
-```
+```dart
 Stream<int> numberOfStream(int number) async* {
   for (int i = 0; i <= number; i++) {
     yield i;
@@ -10049,7 +9985,7 @@ In the above example, you must print the number from 0 to 6 using stream.
 
 #### **Example 3**
 
-```
+```dart
 Stream<int> str(int n) async* {
  for (var i = 1; i <= n; i++) {
    await Future.delayed(Duration(seconds: 1));
@@ -10068,8 +10004,6 @@ In the above example, you must print the number from 1 to 5 using stream. It wil
 
 #### __async vs async_ In Dart_\*
 
-
-
 * async: It gives a Future.
   * async*: It gives a Stream.
 * async: async keyword does some work that might take a long time.
@@ -10079,8 +10013,6 @@ In the above example, you must print the number from 1 to 5 using stream. It wil
 
 
 #### __yield vs yield_ In Dart_\*
-
-
 
 * yield: It is a keyword that returns single value to the sequence, but doesn’t stop the generator function.
   * yield*: It is used for returning recursive generator.
@@ -10101,7 +10033,7 @@ If you do not want to change the value of a variable, then you can use either fi
 
 ### Example
 
-```
+```dart
 void main() {
   final finalName = "Final John Doe";
   const constName = "Const John Doe";
@@ -10132,7 +10064,7 @@ Info
 
 Note: If you use `const` inside the class, declare it as `static const.`
 
-```
+```dart
 const total = 50+50; // Possible
 const date = DateTime.now(); // Not Possible
 
@@ -10147,11 +10079,9 @@ const date = DateTime.now(); // Not Possible
 
 If the value is calculated at runtime, you can choose final for it. For. e.g if you want to calculate date on run time, you can use `final date = DateTime.now();` but not `const date = DateTime.now();`.
 
-Info
-
 Note: Anything that is unknown at compile time should be `final` over `const.`
 
-```
+```dart
 final date = DateTime.now(); // Possible
 const date = DateTime.now(); // Not Possible
 
@@ -10179,7 +10109,7 @@ Date and time are often used in our day-to-day activities. As a programmer you n
 
 Use the following code to get the current date and time in the dart.
 
-```
+```dart
 void main() {
   print(DateTime.now());
 }
@@ -10194,7 +10124,7 @@ Here is the way to get a year, month, day, hour, minutes, and seconds in Dart. Y
 
 ### **Example**
 
-```
+```dart
 void main() {
   DateTime datetime = DateTime.now();
   print("Year is " + datetime.year.toString());
@@ -10213,7 +10143,7 @@ void main() {
 
 Use the following code to convert DateTime to String in the dart.
 
-```
+```dart
 void main() {
   String datetime = DateTime.now().toString();
   print(datetime);
@@ -10227,7 +10157,7 @@ void main() {
 
 You cannot get year, months, or day directly and cannot perform date calculation using a String if that String contains the correct DateTime value. In such a situation, you first need to convert String to DateTime.
 
-```
+```dart
 void main() {
   String myDateInString = "2022-05-01";
   DateTime myConvertedDate = DateTime.parse(myDateInString);
@@ -10251,14 +10181,11 @@ You can use DateTime methods if you want to add days, hours, or minutes to DateT
 |add(Duration)     |myBirthday.add(Duration(days: 1));     |
 |subtract(Duration)|myBirthday.subtract(Duration(days: 1));|
 
-
-Info
-
 Note: You can set a duration to `days`, `hours`, `minutes`, `seconds`, `milliseconds`, and `microseconds`. To understand it more, look at the example below.
 
 ### **Example: Add Date In Dart**
 
-```
+```dart
 void main() {
   DateTime myBirthday = DateTime.parse("1997-05-14");
   myBirthday = myBirthday.add(Duration(days: 1));
@@ -10273,7 +10200,7 @@ void main() {
 
 ### **Example: Subtract Date In Dart**
 
-```
+```dart
 void main() {
   DateTime myBirthday = DateTime.parse("1997-05-14");
   myBirthday = myBirthday.subtract(Duration(days: 1));
@@ -10291,7 +10218,7 @@ void main() {
 
 Suppose you want to find the difference between two dates in dart. There is a straightforward way.
 
-```
+```dart
 void main() {
   DateTime myBirthday = DateTime.parse("1997-05-14");
   DateTime today = DateTime.now();
@@ -10332,7 +10259,7 @@ If you want to compare two dates, then you can use comparison methods.
 |IsAtTheSameMoment(DateTime)|Returns true or false. bool|
 
 
-```
+```dart
 void main() {
   DateTime myBirthday = DateTime.parse("1997-05-14");
   DateTime today = DateTime.now();
@@ -10440,6 +10367,7 @@ Widgets can be combined to create more complex UIs, and Flutter provides a rich 
 Open `lib/main.dart` to see the sample code. A basic Flutter app consists of a `main()` function that calls `runApp()` with the root widget of the application.
 
 **Code:**
+
 ```dart
 import 'package:flutter/material.dart';
 
@@ -10686,20 +10614,23 @@ A `Container` is a box model that can contain other widgets.
 
 ```dart
 Container( 
-width: 200,
-height: 100,
-decoration: BoxDecoration( 
-color: Colors.blue, // Background color
-border: Border.all( 
-color: Colors.black, // Border color
-width: 2.0, // Border width
-), 
-borderRadius: BorderRadius.circular(10.0), // Border radius  
-boxShadow: [ BoxShadow( 
-color: Colors.grey, // Shadow color
-blurRadius: 5.0, // Blur radius 
-offset: Offset(3, 3), // Shadow offset
-), ], ), child: Center(child: Text('Styled Container')), )
+	width: 200,
+	height: 100,
+	decoration: BoxDecoration( 
+	color: Colors.blue, // Background color
+	border: Border.all( 
+	color: Colors.black, // Border color
+	width: 2.0, // Border width
+	), 
+	borderRadius: BorderRadius.circular(10.0), // Border radius  
+	boxShadow: [ BoxShadow( 
+	color: Colors.grey, // Shadow color
+	blurRadius: 5.0, // Blur radius 
+	offset: Offset(3, 3), // Shadow offset
+			),
+		],
+	 ), 
+	child: Center(child: Text('Styled Container')), )
 ```
 
  `decoration` Property:
@@ -11261,7 +11192,7 @@ flutter:
 
 *   To use a custom font in your app, specify the font family and weight when creating a `TextStyle`, like so:
 
-```
+```dart
 Text(
   'Hello, World!',
   style: TextStyle(
@@ -11875,8 +11806,6 @@ ElevatedButton(
 - Explore packages like `form_validator` or `bloc_form` for advanced validation and form management.
 
 Remember, this is a basic overview. Flutter's built-in widgets and packages offer extensive options to customize and enhance your forms.
-
-
 
 #### `Card`:
 
@@ -12748,7 +12677,7 @@ By the end of this day, you should have a good understanding of how to use pub a
 *   To import and use packages in your Dart project, you can use the `import` statement to bring in the package’s functionality into your project. For example, to use the `http` package, you would add the following line to your Dart file:
     
 
-```
+```dart
 import 'package:http/http.dart';
 ```
 
@@ -12779,7 +12708,7 @@ Persistence refers to the ability to store data locally on a device so that it c
 *   Shared preferences is suitable for storing small amounts of data locally on a device.
 *   Adding shared preferences to a Flutter app is easy
 
-```
+```dart
 dependencies:
   shared_preferences: <latest version>
 ```
@@ -12787,21 +12716,21 @@ dependencies:
 
 *   Import the package in your Dart code
 
-```
+```dart
 import 'package:shared_preferences/shared_preferences.dart';
 ```
 
 
 *   Create an instance of SharedPreferences
 
-```
+```dart
 SharedPreferences prefs = await SharedPreferences.getInstance();
 ```
 
 
 *   Using shared preferences to store and read data
 
-```
+```dart
 
 int counter = prefs.getInt('counter') ?? 0; 
 prefs.setInt('counter', counter + 1); 
@@ -12935,7 +12864,7 @@ To work with SQLite databases, import the `sqflite` and `path` packages.
 
 To add the packages as a dependency, run `flutter pub add`:
 
-```
+```dart
 $ flutter pub add sqflite path
 
 ```
@@ -12943,7 +12872,7 @@ $ flutter pub add sqflite path
 
 Make sure to import the packages in the file you’ll be working in.
 
-```
+```dart
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
@@ -12957,7 +12886,7 @@ import 'package:sqflite/sqflite.dart';
 
 Before creating the table to store information on Dogs, take a few moments to define the data that needs to be stored. For this example, define a Dog class that contains three pieces of data: A unique `id`, the `name`, and the `age` of each dog.
 
-```
+```dart
 class Dog {
   final int id;
   final String name;
@@ -13379,8 +13308,6 @@ class Dog {
 
 Networking in Flutter involves making HTTP requests to web APIs to retrieve or send data. The [http](https://pub.com/packages/http) package is a official and popular package in Dart that makes it easy to perform HTTP requests.
 
-
-
 ### Tips
 ----
 
@@ -13691,7 +13618,7 @@ Create a brand new application in your preferred IDE. First, remove all the star
 
 Add these dependencies in your `pubspec.yaml` file:
 
-```
+```dart
 get: ^4.6.1           //YAML
 get_storage: ^2.0.3  //YAML
 ```
@@ -13699,7 +13626,7 @@ get_storage: ^2.0.3  //YAML
 
 Run this command:
 
-```
+```dart
 flutter pub get  //YAML
 ```
 
@@ -13729,7 +13656,7 @@ You can always create more than one controller in your application. The GetX Con
 
 We are adding a new Dart file to create our controller class, `StoreController`, which extends `GetxController`:
 
-```
+```dart
 class StoreController extends GetxController {}
 ```
 
@@ -13738,21 +13665,21 @@ Next, we add a few variables and initialize them with default values.
 
 Normally we would add these variables like this as given below:
 
-```
+```dart
 final storeName = 'Thick Shake';
 ```
 
 
 But, when using GetX, we have to make the variables observable by adding **`obs`** at the end of value. Then when the variable changes, other parts of the application that depend on it will be notified about it. So now, our initialized value will look like this:
 
-```
+```dart
 final storeName = 'Thick Shake'.obs;
 ```
 
 
 The rest of the variables are given below:
 
-```
+```dart
 // String for changing the Store Name
 final storeName = 'Thick Shake'.obs;
 // int for increasing the Follower count
@@ -13773,7 +13700,7 @@ final reviewNameController = TextEditingController();
 
 Next, we create three methods for changing the name, increasing the follower count, and changing the store status:
 
-```
+```dart
 updateStoreName(String name) {
  storeName(name);
 }
@@ -14183,7 +14110,7 @@ That is all for different state managements provided by GetX. Furthermore, as pr
 
 Traditionally, when a user wants to go from one screen to another with a click of a button, code would look like this:
 
-```
+```dart
 Navigator.push(context, 
     MaterialPageRoute(builder: (context)=> Home()));
 ```
@@ -14403,7 +14330,7 @@ Creates paths that work on any platform.
 
 To add the packages as dependencies, run `flutter pub add`:
 
-```
+```dart
 $ flutter pub add camera path_provider path
 
 ```
@@ -14414,7 +14341,7 @@ $ flutter pub add camera path_provider path
 
 Next, get a list of available cameras using the `camera` plugin.
 
-```
+```dart
 // Ensure that plugin services are initialized so that `availableCameras()`
 // can be called before `runApp()`
 WidgetsFlutterBinding.ensureInitialized();
@@ -14438,7 +14365,7 @@ Once you have a camera, use the following steps to create and initialize a `Came
 4.  Create and initialize the controller in the `initState()` method.
 5.  Dispose of the controller in the `dispose()` method.
 
-```
+```dart
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
   const TakePictureScreen({
@@ -14495,7 +14422,7 @@ Next, use the `CameraPreview` widget from the `camera` package to display a prev
 
 Use a [`FutureBuilder`](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html) for exactly this purpose.
 
-```
+```dart
 // You must wait until the controller is initialized before displaying the
 // camera preview. Use a FutureBuilder to display a loading spinner until the
 // controller has finished initializing.
@@ -14528,7 +14455,7 @@ Taking a picture requires 2 steps:
 
 It is good practice to wrap these operations in a `try / catch` block in order to handle any errors that might occur.
 
-```
+```dart
 FloatingActionButton(
   // Provide an onPressed callback.
   onPressed: () async {
@@ -14563,7 +14490,7 @@ Image.file(File('path/to/my/picture.png'));
 #### Complete example
 ----------------
 
-```
+```dart
 import 'dart:async';
 import 'dart:io';
 
@@ -14728,7 +14655,7 @@ This recipe depends on one Flutter plugin: `video_player`. First, add this depen
 
 To add the `video_player` package as a dependency, run `flutter pub add`:
 
-```
+```dart
 $ flutter pub add video_player
 
 ```
@@ -14743,7 +14670,7 @@ Next, update your `android` and `ios` configurations to ensure that your app has
 
 Add the following permission to the `AndroidManifest.xml` file just after the `<application>` definition. The `AndroidManifest.xml` file is found at `<project root>/android/app/src/main/AndroidManifest.xml`.
 
-```
+```dart
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application ...>
 
@@ -14759,7 +14686,7 @@ Add the following permission to the `AndroidManifest.xml` file just after the `<
 
 For iOS, add the following to the `Info.plist` file found at `<project root>/ios/Runner/Info.plist`.
 
-```
+```dart
 <key>NSAppTransportSecurity</key>
 <dict>
   <key>NSAllowsArbitraryLoads</key>
@@ -14784,7 +14711,7 @@ To create and initialize the `VideoPlayerController` do the following:
 4.  Create and initialize the controller in the `initState` method
 5.  Dispose of the controller in the `dispose` method
 
-```
+```dart
 class VideoPlayerScreen extends StatefulWidget {
   const VideoPlayerScreen({super.key});
 
@@ -14838,7 +14765,7 @@ Therefore, wrap the `VideoPlayer` widget in an [`AspectRatio`](https://api.flutt
 
 Furthermore, you must display the `VideoPlayer` widget after the `_initializeVideoPlayerFuture()` completes. Use `FutureBuilder` to display a loading spinner until the controller finishes initializing. Note: initializing the controller does not begin playback.
 
-```
+```dart
 // Use a FutureBuilder to display a loading spinner while waiting for the
 // VideoPlayerController to finish initializing.
 FutureBuilder(
@@ -14871,7 +14798,7 @@ By default, the video starts in a paused state. To begin playback, call the [`pl
 
 For this example, add a `FloatingActionButton` to your app that displays a play or pause icon depending on the situation. When the user taps the button, play the video if it’s currently paused, or pause the video if it’s playing.
 
-```
+```dart
 FloatingActionButton(
   onPressed: () {
     // Wrap the play or pause in a call to `setState`. This ensures the
@@ -14897,7 +14824,7 @@ FloatingActionButton(
 #### Complete example
 ----------------
 
-```
+```dart
 import 'dart:async';
 
 import 'package:flutter/material.dart';
