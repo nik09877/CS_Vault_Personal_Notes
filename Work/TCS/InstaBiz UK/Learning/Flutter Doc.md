@@ -406,7 +406,6 @@ const pi = 3.14;
 
 
 ### Data Types in Dart
-#### **Data Types**
 
 **Data types** help you to categorize all the different types of data you use in your code. **For e.g. numbers, texts, symbols, etc**. The data type specifies what type of value will be stored by the variable. Each variable has its data type. Dart supports the following built-in data types :
 
@@ -442,22 +441,21 @@ When you need to store numeric value on dart, you can use either int or double. 
 
 ```dart
 void main() {
-// Declaring Variables  
-int num1 = 100; // without decimal point.
-double num2 = 130.2; // with decimal point.
-num num3 = 50;
-num  num4 = 50.4;  
-
-// For Sum   
-num sum = num1 + num2 + num3 + num4;
-   
-// Printing Info   
-print("Num 1 is $num1");
-print("Num 2 is $num2");  
-print("Num 3 is $num3");  
-print("Num 4 is $num4");  
-print("Sum is $sum");  
-   
+	// Declaring Variables  
+	int num1 = 100; // without decimal point.
+	double num2 = 130.2; // with decimal point.
+	num num3 = 50;
+	num  num4 = 50.4;  
+	
+	// For Sum   
+	num sum = num1 + num2 + num3 + num4;
+	   
+	// Printing Info   
+	print("Num 1 is $num1");
+	print("Num 2 is $num2");  
+	print("Num 3 is $num3");  
+	print("Num 4 is $num4");  
+	print("Sum is $sum");  
 }
 
 ```
@@ -471,9 +469,9 @@ The `.toStringAsFixed(2)` is used to round the double value upto 2 decimal place
 
 ```dart
 void main() {
-// Declaring Variables
-double price = 1130.2232323233233; // valid.
-print(price.toStringAsFixed(2));
+	// Declaring Variables
+	double price = 1130.2232323233233; // valid.
+	print(price.toStringAsFixed(2));
 }
 
 ```
@@ -487,12 +485,12 @@ String helps you to store text data. You can store values like **I love dart**, 
 
 ```dart
 void main() {
-// Declaring Values     
-String schoolName = "Diamond School";
-String address = "New York 2140";   
-
-// Printing Values
-print("School name is $schoolName and address is $address");   
+	// Declaring Values     
+	String schoolName = "Diamond School";
+	String address = "New York 2140";   
+	
+	// Printing Values
+	print("School name is $schoolName and address is $address");   
 }
 
 ```
@@ -506,23 +504,23 @@ If you want to create a multi-line String in dart, then you can use triple quote
 
 ```dart
 void main() {
-// Multi Line Using Single Quotes   
-String multiLineText = '''
-This is Multi Line Text
-with 3 single quote
-I am also writing here.
-''';
-   
-// Multi Line Using Double Quotes   
-String otherMultiLineText = """
-This is Multi Line Text
-with 3 double quote
-I am also writing here.
-""";
-   
-// Printing Information   
-print("Multiline text is $multiLineText");
-print("Other multiline text is $otherMultiLineText");
+	// Multi Line Using Single Quotes   
+	String multiLineText = '''
+	This is Multi Line Text
+	with 3 single quote
+	I am also writing here.
+	''';
+	   
+	// Multi Line Using Double Quotes   
+	String otherMultiLineText = """
+	This is Multi Line Text
+	with 3 double quote
+	I am also writing here.
+	""";
+	   
+	// Printing Information   
+	print("Multiline text is $multiLineText");
+	print("Other multiline text is $otherMultiLineText");
 }
 
 ```
@@ -540,10 +538,9 @@ print("Other multiline text is $otherMultiLineText");
 
 ```dart
 void main() {
-   
-// Using \n and \t   
-print("I am from \nUS.");
-print("I am from \tUS.");
+	// Using \n and \t   
+	print("I am from \nUS.");
+	print("I am from \tUS.");
 }
 
 ```
@@ -557,14 +554,13 @@ You can also create raw string in dart. Special characters won’t work here. Yo
 
 ```dart
 void main() {
-// Set price value
-num price = 10;
-String withoutRawString = "The value of price is \t $price"; // regular String
-String withRawString =r"The value of price is \t $price"; // raw String
-
-print("Without Raw: $withoutRawString"); // regular result
-print("With Raw: $withRawString"); // with raw result
-
+	// Set price value
+	num price = 10;
+	String withoutRawString = "The value of price is \t $price"; // regular String
+	String withRawString =r"The value of price is \t $price"; // raw String
+	
+	print("Without Raw: $withoutRawString"); // regular result
+	print("With Raw: $withRawString"); // with raw result
 }
 
 ```
@@ -581,12 +577,12 @@ You can convert String to int using int.parse() method. The method takes String 
 
 ```dart
 void main() {
-String strvalue = "1";
-print("Type of strvalue is ${strvalue.runtimeType}");   
-int intvalue = int.parse(strvalue);
-print("Value of intvalue is $intvalue");
-// this will print data type
-print("Type of intvalue is ${intvalue.runtimeType}");
+	String strvalue = "1";
+	print("Type of strvalue is ${strvalue.runtimeType}");   
+	int intvalue = int.parse(strvalue);
+	print("Value of intvalue is $intvalue");
+	// this will print data type
+	print("Type of intvalue is ${intvalue.runtimeType}");
 }
 
 ```
@@ -600,12 +596,12 @@ You can convert String to double using double.parse() method. The method takes S
 
 ```dart
 void main() {
-String strvalue = "1.1";
-print("Type of strvalue is ${strvalue.runtimeType}");
-double doublevalue = double.parse(strvalue);
-print("Value of doublevalue is $doublevalue");
-// this will print data type
-print("Type of doublevalue is ${doublevalue.runtimeType}");
+	String strvalue = "1.1";
+	print("Type of strvalue is ${strvalue.runtimeType}");
+	double doublevalue = double.parse(strvalue);
+	print("Value of doublevalue is $doublevalue");
+	// this will print data type
+	print("Type of doublevalue is ${doublevalue.runtimeType}");
 }
 
 ```
@@ -619,12 +615,12 @@ You can convert int to String using the toString() method. Here is example:
 
 ```dart
 void main() {
-int one = 1;
-print("Type of one is ${one.runtimeType}");
-String oneInString = one.toString(); 
-print("Value of oneInString is $oneInString");
-// this will print data type
-print("Type of oneInString is ${oneInString.runtimeType}");
+	int one = 1;
+	print("Type of one is ${one.runtimeType}");
+	String oneInString = one.toString(); 
+	print("Value of oneInString is $oneInString");
+	// this will print data type
+	print("Type of oneInString is ${oneInString.runtimeType}");
 }
 
 ```
@@ -661,8 +657,8 @@ In Dart, boolean holds either true or false value. You can write the **bool** ke
 
 ```dart
 void main() {
-bool isMarried = true;
-print("Married Status: $isMarried");
+	bool isMarried = true;
+	print("Married Status: $isMarried");
 }
 
 ```
@@ -675,15 +671,15 @@ The list holds multiple values in a single variable. It is also called arrays. I
 
 ```dart
 void main() {
-List<String> names = ["Raj", "John", "Max"];
-print("Value of names is $names");
-print("Value of names[0] is ${names[0]}"); // index 0
-print("Value of names[1] is ${names[1]}"); // index 1
-print("Value of names[2] is ${names[2]}"); // index 2
-
-  // Finding Length of List 
-int length = names.length;  
-print("The Length of names is $length");
+	List<String> names = ["Raj", "John", "Max"];
+	print("Value of names is $names");
+	print("Value of names[0] is ${names[0]}"); // index 0
+	print("Value of names[1] is ${names[1]}"); // index 1
+	print("Value of names[2] is ${names[2]}"); // index 2
+	
+	  // Finding Length of List 
+	int length = names.length;  
+	print("The Length of names is $length");
 }
 
 ```
@@ -705,8 +701,8 @@ Note: Set doesn’t print duplicate items.
 
 ```dart
 void main() {
-Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-print(weekday);
+	Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+	print(weekday);
 }
 
 ```
@@ -720,13 +716,13 @@ In Dart, a map is an object where you can store data in key-value pairs. Each ke
 
 ```dart
 void main() {
-Map<String, String> myDetails = {
-   'name': 'John Doe',
-   'address': 'USA',
-   'fathername': 'Soe Doe'
-};
-// displaying the output
-print(myDetails['name']);
+	Map<String, String> myDetails = {
+	   'name': 'John Doe',
+	   'address': 'USA',
+	   'fathername': 'Soe Doe'
+	};
+	// displaying the output
+	print(myDetails['name']);
 }
 
 ```
@@ -741,11 +737,11 @@ In Dart, **var** automatically finds a data type. In simple terms, var says if y
 ```dart
 void main(){
 
-var name = "John Doe"; // String
-var age = 20; // int
+	var name = "John Doe"; // String
+	var age = 20; // int
 
-print(name);
-print(age);
+	print(name);
+	print(age);
 }
 
 ```
@@ -759,8 +755,8 @@ With runes, you can find Unicode values of String. The Unicode value of **a** is
 ```dart
 void main() {
 
-String value = "a";
-print(value.runes);
+	String value = "a";
+	print(value.runes);
 }
 
 ```
@@ -4353,6 +4349,7 @@ void main() {
 [Run Online](https://dartpad.dev/?id=dd1d9fea77619307a9de26282c02e369)
 
 ### Map in Dart 
+
 In a Map, data is stored as keys and values. In Map, each key must be unique. They are similar to `HashMaps` and Dictionaries in other languages.
 
 #### **How To Create Map In Dart**
@@ -10281,7 +10278,9 @@ void main() {
 
 # Flutter Tutorial
 
-## Setting up the Environment 
+## Introduction and Setting up the Environment 
+
+Flutter is an open-source UI software development kit created by Google. It's used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase.
 
 Set up your development environment to work with Flutter and Dart. This will allow you to create and run Dart and Flutter projects on your computer.
 By the end of this day, you should be able to create and run a new dart console project.
@@ -12558,105 +12557,554 @@ void main() {
 }
 
 ```
-## Flutter Navigation
 
-Flutter provides a robust navigation system that allows developers to navigate between different screens and manage the app's overall flow. This documentation covers the basics of navigation in Flutter.
+## Flutter Navigation – How to Add Stack, Tab, and Drawer Navigators to Your Apps
 
-### Navigation Basics
+There are three types of navigation that are common to all apps – **stack**, **tab**, and **drawer** navigation. Flutter supports all three types.
 
-#### 1. Navigating to a New Screen
+### Types of Navigation
+-------------------
+There are three main types of navigation that you might use in your apps. Again, they are:
 
-In Flutter, you can use the `Navigator` class to navigate to a new screen. The most common way to do this is by using the `Navigator.push` method.
+1.  Stack Navigation
+2.  Tab Navigation
+3.  Drawer Navigation
+
+Let's understand how each one works.
+
+#### Stack Navigation
+
+It helps you navigate between pages or screens by stacking new pages on top of existing ones.
+
+When you move to a new screen, the current screen is pushed onto the navigation stack, and when you return, the top screen is popped off the stack.
+
+This navigation type is commonly used for hierarchical and linear flows within an app.
+
+#### Tab Navigation
+
+Tabs are a staple of mobile app navigation, allowing users to quickly switch between different sections or views without losing their current context.
+
+Flutter makes it easy to implement tabbed navigation with its built-in widgets, such as **TabBar** and **TabBarView**.
+
+#### Drawer Navigation
+
+The Drawer Navigation pattern, also known as the "hamburger menu" or "side menu," is a popular navigation style in mobile apps. It consists of a hidden panel that slides out from the side of the screen, revealing a menu with various navigation options.
+
+### How to Build the Stack Navigation
+-------------------------------
+
+#### Navigation and Routing - Flutter Tutorials
+
+In Flutter, the screen and pages are called a **route**. In android, it is called **Activity**, and in iOS, it is similar to **ViewController**.
+
+In an app, you may need to move from different pages. Flutter provides the routing class `MaterialPageRoute`, and two methods `Navigator.push()` and `Navigator.pop()` to handle navigations. 
+
+##### Navigation With Named Routes:
+-----------------------------
+
+To navigate between different named routes, you need to create those route classes and index them into **MaterialApp()** widget. For example, create two routes like below:
 
 ```dart
-onPressed: () {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => SecondScreen()),
-  );
-},
-
-```
-In this example, when the button is pressed, it navigates to a new screen (`SecondScreen`). The `MaterialPageRoute` is used to define the route.
-
-#### 2. Passing Data to a New Screen
-
-You can pass data to a new screen using the `Navigator.push` method and the constructor of the destination screen.
-
-```dart
-onPressed: () {
-  String message = "Hello from the first screen!";
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => SecondScreen(message: message)),
-  );
-},
-
-```
-
-In the `SecondScreen`, you can access the passed data:
-
-```dart
-class SecondScreen extends StatelessWidget {
-  final String message;
-
-  SecondScreen({required this.message});
-
-  // Rest of the widget implementation
+class HomePage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        appBar: AppBar( 
+          title: Text("Home Page"),
+        ),
+        body: Center( 
+           child: RaisedButton(
+             child: Text("Click on Me"), //click me button
+             onPressed: (){
+                Navigator.pushNamed(context, "/secondscreen");
+             }
+           )
+        ),
+     );
+  }
 }
 
+class SecondScreen extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar( 
+          title: Text("Second Page"),
+        ),
+        body: Center( 
+           child: RaisedButton(
+             child: Text("Go Back"), //go back button
+             onPressed: (){
+                Navigator.pop(context);
+             }
+           )
+        ),
+     );
+  }
+}
 ```
 
-### Navigation with Named Routes
 
-Named routes provide a way to define and navigate between screens using a route name.
-
-#### 1. Define Named Routes
-
-In the main application file, define named routes using a `Map`:
+Now index them into MaterialApp() widget. 
 
 ```dart
-void main() {
-  runApp(
-    MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomeScreen(),
-        '/second': (context) => SecondScreen(),
+MaterialApp(
+       initialRoute: '/',
+       routes: {
+         '/':(context)=>HomePage(),
+         '/secondscreen':(context)=>SecondScreen(),
+       },
+);
+```
+
+
+Put **Navigator.pushNamed()** on '**click on me**' button like below to go to "**secondscreen**" route.
+
+```dart
+RaisedButton(
+    child: Text("Click on Me"), //click me button
+    onPressed: (){
+       Navigator.pushNamed(context, "/secondscreen");
+    }
+)
+```
+
+
+Now put **Navigator.pop()** on "**Go Back**" button like below to dismiss "**secondscreen**" route and go back to the home screen.
+
+```dart
+RaisedButton(
+   child: Text("Go Back"), //go back button
+   onPressed: (){
+        Navigator.pop(context);
+   }
+)
+```
+
+##### Navigation Without Named Routes:
+--------------------------------
+
+To navigate between different pages without named routes, you need to put **Navigator.push()** method instead of **Navigator.pushNamed()** and pass **MaterialPageRoute** class on route parameter. 
+
+```dart
+RaisedButton(
+   child: Text("Click on Me"), //click me button
+   onPressed: (){
+       Navigator.push(context, MaterialPageRoute(builder: (context){
+             return SecondScreen();
+          })
+      );
+   }
+)
+```
+
+Note: If you are navigating without named routes, you are not required to mention routes list on **MaterialApp** widget. 
+
+##### Passing Data to Forwarding Page:
+--------------------------------
+
+While navigating from one page to another, you may need to pass data to navigating page. See the example below to pass data from one page to another. 
+
+**Step 1:** Create a page class with a constructor like below:
+
+```dart
+class SecondScreen extends StatelessWidget{
+
+  String word;
+  int val;
+  
+  SecondScreen({this.word, this.val});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar( 
+          title: Text("Second Page"),
+        ),
+        body: Center( 
+           child: RaisedButton(
+             child: Text("Word:$word,  Value:$val, - Go Back"), //go back button
+             // you need to put like widget.word on stateful widgets.
+             onPressed: (){
+                Navigator.pop(context);
+             }
+           )
+        ),
+     );
+  }
+}
+```
+
+
+**Step 2:** Now put the command on "**Click on Me**" button like below:
+
+```dart
+RaisedButton(
+     child: Text("Click on Me"), //click me button
+     onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+              return SecondScreen(word: "Hello", val:4);
+        })
+     );
+}
+```
+
+
+##### Passing data while going back page:
+-----------------------------------
+
+To pass data to the back page, you need to put **Navigator.push()** method on "**Click on Me**" or any back buttons like below:
+
+```dart
+RaisedButton(
+    child: Text("Click on Me"), //click me button
+    onPressed: () async {
+        var backdata =  await Navigator.push(context, MaterialPageRoute(builder: (context){
+                return SecondScreen(word: "Hello", val:4);
+        })
+     );
+    print(backdata);
+  }
+)
+```
+
+On the back button, put **Navigator.pop()** method like below:
+
+```dart
+RaisedButton(
+    child: Text("Go Back"), //go back button
+    onPressed: (){
+         Navigator.pop(context, "returntext");
+    }
+)
+```
+
+
+### How to Build the Tab Navigation
+-------------------------------
+
+Let's begin with building the tab navigator. Let's assume the tab will be on the home page (ideally that's where it would be).
+
+Create a new file named `tab.dart` in the `lib/` directory. Add the following code:
+
+```dart
+import 'package:flutter/material.dart';
+import './tabs/tab1.dart';
+import './tabs/tab2.dart';
+import './tabs/tab3.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+          appBar: AppBar(
+            title: const Text("Home"),
+            bottom: const TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.phone_android)),
+                Tab(icon: Icon(Icons.tablet_android)),
+                Tab(icon: Icon(Icons.laptop_windows)),
+              ],
+            ),
+          ),
+          body: const TabBarView(
+            children: <Widget>[
+              Tab1(),
+              Tab2(),
+              Tab3(),
+            ],
+          )),
+    );
+  }
+}
+```
+
+#### Tab Navigation in Flutter
+
+In the above code, we're creating a class named `HomePage`. In the build method, we return the `DefaultTabController` widget, which is basically a tab view. We define that we need 3 tabs in the `length` property.
+
+At the bottom of the `appBar` property we have defined icons for each tab (Phone, Tablet, and Computer icons). Below that we define the `body` property with a `TabBarView` rendering all the tabs inside it.
+
+Create a new folder named `tabs` inside the `lib/` directory and create three files named `tab1.dart`, `tab2.dart`, and `tab3.dart`.
+
+Copy the below content into the `tab1.dart` file:
+
+```dart
+import 'package:flutter/material.dart';
+
+class Tab1 extends StatelessWidget {
+  const Tab1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Text("Mobiles"),
+          Padding(
+            padding: const EdgeInsets.only(top: 16.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed("/secret");
+              },
+              child: const Text('Disclose Secret'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+```
+
+Copy the below content into the `tab2.dart` file:
+
+```dart
+import 'package:flutter/material.dart';
+
+class Tab2 extends StatelessWidget {
+  const Tab2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const <Widget>[
+          Text("Tablets"),
+        ],
+      ),
+    );
+  }
+}
+```
+
+Copy the below code into the `tab3.dart` file:
+
+```dart
+import 'package:flutter/material.dart';
+
+class Tab3 extends StatelessWidget {
+  const Tab3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const <Widget>[
+          Text("Laptops"),
+        ],
+      ),
+    );
+  }
+}
+```
+
+If you look at the code for all three files, you'll notice everything is the same except that the first tab file (`tab1.dart`) has an additional button called "Disclose Secret". Pressing that will navigate the user to the `/secret` route. It won't throw any error as this route has not been defined yet. The other two files (`tab2.dart` and `tab3.dart`) will show only the text.
+
+Add the following line at the top of the `main.dart` file:
+
+```dart
+import './tab.dart';
+```
+
+Replace `home: const MyHomePage(title: 'Home')` with `home: const HomePage()`, in the `build` method of the `MyApp` class.
+
+Save the file and run your app. You should be able to see the tab layout on your screen now.
+
+### How to Build the Drawer Navigation
+----------------------------------
+
+Our next target is to add the drawer navigation. But before that, we have to create two files:
+
+1.  `drawer.dart`: to show the Navigation Drawer
+2.  `about.dart`: an option will be provided on the Drawer Navigator to navigate here
+
+Create the `drawer.dart` file inside the `lib/` directory and not inside the `tab/` directory. The `tab/` directory is only for tabs and we don't need to touch that further as we're done with the tabs. Copy the below code into the `drawer.dart` file:
+
+```dart
+import 'package:flutter/material.dart';
+
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({super.key});
+
+  navigateTo(String route, BuildContext context) {
+    Navigator.of(context).pushReplacementNamed(route);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: <Widget>[
+          ListTile(
+            leading: const Icon(Icons.home),
+            title: const Text('Home'),
+            onTap: () {
+              navigateTo("/home", context);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.info),
+            title: const Text('About'),
+            onTap: () {
+              navigateTo("/about", context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+```
+
+In this file, we define the class named `MyDrawer`. In the `build` method we render the `Drawer` widget with `Home` and `About` options in the list. Clicking on those options will navigate us to the appropriate routes.
+
+Create an `about.dart` file in the same directory and copy the below code:
+
+```dart
+import './drawer.dart';
+import 'package:flutter/material.dart';
+
+class About extends StatelessWidget {
+  const About({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: const MyDrawer(),
+      appBar: AppBar(title: const Text("About")),
+      body: const Center(child: Text("About")),
+    );
+  }
+}
+```
+
+In this file, we create a class named `About` which returns a `Scaffold` widget containing the drawer which we defined right before this file. The `appBar` and the `body` will show the text "About".
+
+Again, you'll not be able to see these changes immediately in the app. This is because we haven't linked it into the `main.dart` file.
+
+Before we link them, we have one item in our backlog. Let's finish it and come back to linking them all together.
+
+Create a file named `secret.dart` in the `lib/` directory and copy the below code:
+
+```dart
+import 'package:flutter/material.dart';
+
+class SecretPage extends StatelessWidget {
+  const SecretPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          // backgroundColor: Colors.red,
+          title: const Text("Secret"),
+        ),
+        body: SizedBox(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Text("Nothing to show"),
+            ],
+          ),
+        ));
+  }
+}
+```
+
+In this file, we have created a class named `SecretPage` and returned just a `Text` in the `body`. Nothing fancy here. It's a super simple Flutter widget.
+
+Our backlog item is also done. This is what you've been waiting for: we're going to define our routes now.
+
+Open the `main.dart` file and add the following imports at the top of the file:
+
+```dart
+import './about.dart';
+import './secret.dart';
+```
+
+Replace the `build` method of the `MyApp` class with the below code:
+
+```dart
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      routes: <String, WidgetBuilder>{
+        "/about": (BuildContext context) => const About(),
+        "/home": (BuildContext context) => const HomePage(),
+        "/secret": (BuildContext context) => const SecretPage(),
       },
-    ),
-  );
-}
-
+      initialRoute: "/home",
+      title: 'Flutter Navigation',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HomePage(),
+    );
+  }
 ```
 
-#### 2. Navigate to Named Routes
+Update in `main.dart` file
 
-Navigate to a named route using the `Navigator.pushNamed` method:
+In the above code, you can see we're defining the MaterialApp to contain routes. They're defined as key-value pairs, mapping a route with a Widget. We have defined three routes:
+
+*   `/about` – the route for the drawer navigator
+*   `/home` – the route for the tab navigator
+*   `/secret` – the route for the stack navigator
+
+We have set the initial route to be `/home`, which has the tab navigator.
+
+Run the app and you should be able to see the output on your device.
+
+On pressing the "Disclose Secret" button you'll be taken to the Secret page which we created (ideally it does not have a secret). You should also be able to scroll through the tabs smoothly.
+
+By now, I hope you will have noticed an error here. If not, here's what it is: the back button is shown on the first screen of our app.
+
+"Why would we need to show the back button on the first screen?"
+
+That's an error and we have to resolve it. Press the back button and let's see what happens. Hopefully, you see what I saw. The back button was hidden and we see just the "Home" title in the `appBar` 
+
+But there's an another issue on the same screen. Hopefully you saw that too. If not, don't worry, I'll reveal it right here.
+
+"Can you access the drawer navigator by any means?"
+
+No. Right?
+
+But fortunately, the fix for the above two issues is the same. If we fix the second issue, the first issue will automatically be fixed.
+
+That's great. But how do we fix the second issue?
+
+You have to show the drawer navigator button (Hamburger icon) on the top left. This will eventually hide the back button.
+
+Open the `tab.dart` file and import the drawer file at the top of this file.
 
 ```dart
-onPressed: () {
-  Navigator.pushNamed(context, '/second');
-},
-
+import './drawer.dart';
 ```
 
-#### Pop and Navigate Back
-
-To navigate back to the previous screen, use the `Navigator.pop` method:
+Add the following line inside the `Scaffold` widget of the `build` method:
 
 ```dart
-onPressed: () {
-  Navigator.pop(context);
-},
-
+drawer: const MyDrawer(),
 ```
 
-This returns to the previous screen on the navigation stack.
+And that's it!
 
 ### Resources
 
-- [Flutter Navigation](https://blog.logrocket.com/understanding-flutter-navigation-routing/)
+- [Flutter Navigation](https://docs.flutter.dev/ui/navigation)
 
 ## Dependency Management 
 
@@ -13311,7 +13759,7 @@ Networking in Flutter involves making HTTP requests to web APIs to retrieve or s
 ### Tips
 ----
 
-*   Study HTTP requests and how to make them using the http package.
+#### Study HTTP requests and how to make them using the http package.
 
 ```dart
 import 'package:http/http.dart' as http;
@@ -13325,10 +13773,9 @@ void main() async {
 
 In this example, we import the http package and use the `get` method to make a GET request to the specified URL. The `await` keyword is used to wait for the response, which is then printed to the console.
 
-*   Learn how to parse JSON data in Dart.
-    
-    Many web APIs return data in JSON format. Dart provides built-in support for parsing JSON data using the `dart:convert` library.
-    
+#### Learn how to parse JSON data in Dart.
+
+Many web APIs return data in JSON format. Dart provides built-in support for parsing JSON data using the `dart:convert` library.
 
 ```dart
 import 'dart:convert';
@@ -13340,13 +13787,11 @@ void main() {
 }
 ```
 
-
 In this example, we have a JSON string representing an object with two properties, `name` and `age`. We use the `jsonDecode` function to parse the JSON data into a Map object. We can then access the properties of the object using the keys.
 
-*   Use the http package to make GET and POST requests to a web API.
-    
-    To make a POST request using the http package, we can use the `post` method.
-    
+#### Use the http package to make GET and POST requests to a web API.
+
+To make a POST request using the http package, we can use the `post` method.
 
 ```dart
 import 'package:http/http.dart' as http;
@@ -13361,10 +13806,9 @@ void main() async {
 
 In this example, we make a POST request to the specified URL and pass in a Map object as the `body` parameter.
 
-*   Parse the JSON data returned by the API into Dart objects.
-    
-    When we receive JSON data from a web API, we often want to convert it into Dart objects for easier manipulation. We can create Dart classes that mirror the structure of the JSON data and then use the `jsonDecode` function to convert the JSON data into Dart objects.
-    
+#### Parse the JSON data returned by the API into Dart objects.
+
+When we receive JSON data from a web API, we often want to convert it into Dart objects for easier manipulation. We can create Dart classes that mirror the structure of the JSON data and then use the `jsonDecode` function to convert the JSON data into Dart objects.
 
 ```dart
 import 'dart:convert';
@@ -13573,7 +14017,9 @@ class _HomePageState extends State<HomePage> {
 
 ```
 
-## GetX state management in Flutter
+## State Management in Flutter
+
+### Using GetX
 
 State management is a complex topic of discussion in Flutter. However, many state management libraries, such as [Provider](https://blog.logrocket.com/quick-guide-provider-flutter-state-management/), are available, which most developers recommend.
 
@@ -13581,7 +14027,7 @@ But…
 
 Today, we will discuss a simplified state management solution for Flutter application development that does not require context for most of its features, known as GetX.
 
-### What is GetX?
+#### What is GetX?
 -------------
 
 GetX is not only a state management library, but instead, it is a microframework combined with route management and dependency injection. GetX has three basic principles on which it is built:
@@ -13590,14 +14036,14 @@ GetX is not only a state management library, but instead, it is a microframework
 2.  Productivity: intuitive and efficient tool combined with simplicity and straightforward syntax that ultimately saves development time
 3.  Organization: decoupling business logic from view and presentation logic cannot get better than this. You do not need context to navigate between routes, nor do you need stateful widgets
 
-### The three pillars of GetX
+#### The three pillars of GetX
 -------------------------
 
 1.  State management: GetX has two state managers. One is a simple state manager used with the `GetBuilder` function, and the other is a reactive state manager used with `Getx` or `Obx`. We will be talking about it in detail below
 2.  Route management: whether navigating between screens, showing `SnackBars`, popping dialog boxes, or adding bottom sheets without the use of `context`, GetX has you covered. I will not write details on route management because it is beyond the scope of this article, but indeed a few examples to get an idea of how GetX syntax simplicity works
 3.  Dependency management: GetX has a simple yet powerful solution for dependency management using controllers. With just a single line of code, it can be accessed from the view without using an inherited widget or context. Typically, you would instantiate a class within a class, but with GetX, you are instantiating with the `Get` instance, which will be available throughout your application
 
-### Value-added features of GetX
+#### Value-added features of GetX
 ----------------------------
 
 GetX has some great features out of the box, making it even easier to develop mobile applications in Flutter without any boilerplate code:
@@ -13608,13 +14054,13 @@ GetX has some great features out of the box, making it even easier to develop mo
 4.  Themes: switching between light and dark themes is made simple with GetX
 5.  Responsive view: if you are building an application for different screen sizes, you just need to extend with `GetView`, and you can quickly develop your UI, which will be responsive for desktop, tablet, phone, and watch
 
-### Let’s get going with GetX state management
+#### Let’s get going with GetX state management
 ------------------------------------------
-#### Step 1: Create a new application
+##### Step 1: Create a new application
 
 Create a brand new application in your preferred IDE. First, remove all the starter comments by selecting the find and replace option in the **Edit** menu and type this: `\/\/.*`. This will select Flutter’s comments in the starter code, and you can just hit the delete button.
 
-#### Step 2: Add required dependencies
+##### Step 2: Add required dependencies
 
 Add these dependencies in your `pubspec.yaml` file:
 
@@ -13644,11 +14090,11 @@ All of the above will explain state management, dependency management, route man
 
 You can read along and [test the application through this link](https://getx-store.web.app/#/).
 
-#### Step 3: Update the `MaterialApp` Widget
+##### Step 3: Update the `MaterialApp` Widget
 
 After adding the dependencies, the first thing you need to do is change the `MaterialApp` widget to `GetMaterialApp` in your `main.dart` file. This gives access to all GetX properties across the application.
 
-#### Step 4: Add GetX Controller
+##### Step 4: Add GetX Controller
 
 We have already established that GetX separates the UI from the business logic. This is where GetX Controller comes into play.
 
@@ -13715,7 +14161,7 @@ void storeStatusOpen(bool isOpen) {
 ```
 
 
-#### Step 5: Dependency injection
+##### Step 5: Dependency injection
 
 In layman’s terms, we add the `controller` class we just created into our `view` class. There are three ways to instantiate.
 
@@ -13769,7 +14215,7 @@ class UpdateStoreName extends StatelessWidget {
 
 There are a lot of code and Dart files in the project. I am only writing about the three methods that I have mentioned above. The rest of the code will be available on Git. The link will be provided at the end of this article. 
 
-#### Step 6: Instantiate Controller
+##### Step 6: Instantiate Controller
 
 Since we have extended our `Home` view with `GetView` and created a binding class to `lazyPut` our controller inside it, we will now use `Get.find` to instantiate our controller inside our classes.
 
@@ -13893,7 +14339,7 @@ class StoreStatus extends StatelessWidget {
 ```
 
 
-#### Step 7: `Obx` Widget (Observer)
+##### Step 7: `Obx` Widget (Observer)
 
 Now, let us get to the part where the entered value of our store name, increased count of followers, and store status will be shown using our `storeController`.
 
@@ -14000,7 +14446,7 @@ If we had to summarize all the above, it could be done in only two steps:
 1.  Add `obs` to your variable
 2.  Wrap your widget with `Obx`
 
-#### An alternative method
+##### An alternative method
 
 Well, that is not the only way to do it. For example, if you make your variables observable, you can also wrap the widget with `GetX<StoreController>` directly instead of `Obx`. However, the functionality remains the same. This way, you do not need to instantiate the `storeController` before it can be called. Please look at the code below:
 
@@ -14026,7 +14472,7 @@ _N.B., I have changed the `storeStatus` from `Obx` to `GetX<StoreController>` an
 
 Wrapping the widgets with `Obx` or `GetX` is known as reactive state management.
 
-#### Simple state management
+##### Simple state management
 
 Let us see an example for simple state management. First, the advantage of using simple state management is that you do not need to change your `MaterialWidget` to `GetMaterialWidget`. Secondly, you can combine other state management libraries with simple state management.
 
@@ -14103,10 +14549,10 @@ newController.storeFollowerCount.toString(),
 
 That is all for different state managements provided by GetX. Furthermore, as promised, I am writing a little about route management and other features of the GetX package. Hence, a whole new article is needed to write in detail about it all.
 
-### Other GetX features
+#### Other GetX features
 -------------------
 
-#### Route management
+##### Route management
 
 Traditionally, when a user wants to go from one screen to another with a click of a button, code would look like this:
 
@@ -14163,7 +14609,7 @@ Get.offAndToNamed('/second'),
 ```
 
 
-#### Value-added features
+##### Value-added features
 
 1.  Snackbars
 ```dart
@@ -14217,7 +14663,7 @@ Get.bottomSheet(
 
 Looking at the above code, you can easily understand how simple it is to show and customize snackbars, dialogs, and bottom sheets.
 
-#### Switching from light to dark themes and vice versa
+##### Switching from light to dark themes and vice versa
 
 First, I created a `ThemeController` similar to our `StoreController`. Inside my controller, I am using the `GetStorage` function to save the switched theme:
 
@@ -14284,17 +14730,20 @@ class Home extends GetView<StoreController> {
 
 And that’s it. Now you can easily switch between light and dark themes.
 
-### Links to the source code on GitHub
+#### Links to the source code on GitHub
 
 GetX store link: [https://github.com/timelessfusionapps/getx\_store](https://github.com/timelessfusionapps/getx_store)
 
 GetX counter link: [https://github.com/timelessfusionapps/getx\_counter](https://github.com/timelessfusionapps/getx_counter)
 
-### Links to the web app
+#### Links to the web app
 
 GetX store link: [https://getx-store.web.app/#/](https://getx-store.web.app/#/)
 
 GetX counter app: [https://getx-counter.web.app/#/](https://getx-counter.web.app/#/)
+
+### Using BLOC 
+
 
 ## Using Flutter Plugins
 
