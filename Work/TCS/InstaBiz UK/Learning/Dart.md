@@ -141,3 +141,5 @@ void main() {
 - `void introduceYourself()`: A method within the `Person` class.
 
 These are some foundational concepts in Dart. More advanced topics like asynchronous programming, exception handling, and more. Dart's official documentation is an excellent resource for in-depth learning: [Dart Documentation](https://dart.dev/guides).
+
+![](Pasted_image_20240317234552.png)
