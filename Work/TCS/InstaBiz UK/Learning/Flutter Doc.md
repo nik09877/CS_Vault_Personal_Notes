@@ -10532,6 +10532,33 @@ You might wonder why `StatefulWidget` and `State` are separate objects. In F
 ### List of Widgets
 
 **Note** Remember that to view all the properties of a widget press `ctrl + space bar` in vs code after creating the widget.
+
+#### ClipRRect
+
+To make images rounded
+
+```dart
+Container(
+          width: width,
+          height: height,
+          padding: padding,
+          decoration: BoxDecoration(
+              border: border,
+              color: backgroundColor,
+              borderRadius: BorderRadius.circular(borderRadius)),
+          child: ClipRRect(
+            borderRadius: applyImageRadius
+                ? BorderRadius.circular(borderRadius)
+                : BorderRadius.zero,
+            child: Image(
+              image: isNetworkImage
+                  ? NetworkImage(imageUrl)
+                  : AssetImage(imageUrl) as ImageProvider,
+              fit: fit,
+            ),
+          )),
+```
+
 #### `Container`:
 
 A `Container` is a box model that can contain other widgets.

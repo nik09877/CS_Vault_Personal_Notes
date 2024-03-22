@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4c5925e2b4820011",
+        "id": "07c3b3a4cb5437fd",
         "type": "tabs",
         "children": [
           {
-            "id": "27c8630a2920ecd4",
+            "id": "2a723b9231aba65e",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "z_assets/Pasted_image_20240317234552.png"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -82,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "z_assets/Pasted_image_20240317234552.png"
-              }
+              "state": {}
             }
           },
           {
@@ -101,7 +97,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "z_assets/Pasted_image_20240317234552.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "z_assets/Pasted_image_20240317234552.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,12 +166,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "27c8630a2920ecd4",
+  "active": "2a723b9231aba65e",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+    "z_assets/Pasted_image_20240317234552.png",
     "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
-    "z_assets/Pasted_image_20240317234552.png",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Learning/Flutter.md",
@@ -215,7 +209,6 @@
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
     "111_Language/Java/In Depth/11.Input and Output.md",
     "111_Language/Java/In Depth/15.Date and Time API.md",
-    "111_Language/Java/In Depth/13.Networking.md",
     "z_assets/Pasted image 20231009154316.png",
     "z_assets/Pasted image 20231009154259.png",
     "z_assets/Pasted image 20231009154239.png",
