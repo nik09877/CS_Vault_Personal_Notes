@@ -10534,7 +10534,7 @@ You might wonder why `StatefulWidget` and `State` are separate objects. In F
 **Note** Remember that to view all the properties of a widget press `ctrl + space bar` in vs code after creating the widget.
 
 #### Spacer
-
+#### SliverAppBar
 #### NestedScrollView
 
 #### ClipRRect

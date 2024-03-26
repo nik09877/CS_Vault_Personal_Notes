@@ -18,8 +18,19 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "0a3b8b3cf975ee46",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -174,7 +185,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2a723b9231aba65e",
+  "active": "0a3b8b3cf975ee46",
   "lastOpenFiles": [
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "z_assets/Pasted_image_20240317234552.png",
