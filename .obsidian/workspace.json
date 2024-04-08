@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "07c3b3a4cb5437fd",
+        "id": "12307654110f6fbd",
         "type": "tabs",
         "children": [
           {
-            "id": "2a723b9231aba65e",
+            "id": "0bb4383fdb192241",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "0a3b8b3cf975ee46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -187,7 +175,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0a3b8b3cf975ee46",
+  "active": "0bb4383fdb192241",
   "lastOpenFiles": [
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "z_assets/Pasted_image_20240317234552.png",
