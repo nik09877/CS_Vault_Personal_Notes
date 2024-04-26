@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "12307654110f6fbd",
+        "id": "d2d1152c9364cd16",
         "type": "tabs",
         "children": [
           {
-            "id": "0bb4383fdb192241",
+            "id": "0089718dd866ab5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -175,9 +174,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0bb4383fdb192241",
+  "active": "0089718dd866ab5c",
   "lastOpenFiles": [
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
+    "444_System Design/HLD/To_Do_Problems.md",
+    "444_System Design/HLD/Resources/nosql.pdf",
+    "444_System Design/HLD/Resources/database_sharding.pdf",
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "z_assets/Pasted_image_20240317234552.png",
@@ -205,20 +208,15 @@
     "Work/TCS/InstaBiz UK",
     "Work/Untitled",
     "444_System Design/HLD/Notes/Prerequisites.md",
-    "444_System Design/HLD/Resources/nosql.pdf",
-    "444_System Design/HLD/Resources/Unconfirmed 668667.crdownload",
     "z_assets/Pasted_image_20231207115732.png",
     "z_assets/Pasted_image_20231207103401.png",
     "z_assets/Pasted_image_20231205120213.png",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
-    "444_System Design/HLD/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "111_Language/Java/In Depth/1.Introduction.md",
     "111_Language/Java/In Depth/14.Database Programming.md",
     "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
-    "111_Language/Java/In Depth/11.Input and Output.md",
-    "111_Language/Java/In Depth/15.Date and Time API.md",
     "z_assets/Pasted image 20231009154316.png",
     "z_assets/Pasted image 20231009154259.png",
     "z_assets/Pasted image 20231009154239.png",
