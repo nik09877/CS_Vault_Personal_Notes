@@ -407,7 +407,7 @@
 
 # Concept and Coding
 - [ ] Design Notify-Me Button Functionality
-- [ ] Null Object Pattern
+- [x] Null Object Pattern
 - [ ] Design Pizza Billing System
 - [ ] Design Parking Lot
 - [ ] Design Snake n Ladder game
