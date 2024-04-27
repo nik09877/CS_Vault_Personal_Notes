@@ -445,7 +445,7 @@
 - [ ] Design Restaurant Management System
 - [ ] Design Bowling Alley Machine
 - [ ] Design (LLD) Rate Limiter
-
+- [ ] Design Apply Coupon on Shopping Cart 
 # Prompts
 1. For each design pattern Provide me 5 different questions that can be solved using the design pattern
 2. For each design pattern Provide me 5 different problem statements that can be solved using that design pattern
