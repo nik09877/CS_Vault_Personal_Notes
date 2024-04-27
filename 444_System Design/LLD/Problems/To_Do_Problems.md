@@ -430,7 +430,7 @@
 - [ ] Design Traffic Light System
 - [ ] Design Meeting Scheduler
 - [ ] Design Online Voting System
-- [ ] Design Inventory Management System / Order Management System like Zepto 
+- [x] Design Inventory Management System / Order Management System like Zepto 
 - [ ] Design Cache Mechanism
 - [ ] Design LinkedIn
 - [ ] Design Amazon
