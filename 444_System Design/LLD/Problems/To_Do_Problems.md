@@ -408,6 +408,7 @@
 # Concept and Coding
 - [ ] Design Notify-Me Button Functionality
 - [ ] HashMap Internal Implementation
+- [x] Online Auction System
 - [x] Null Object Pattern
 - [x] Undo Redo Pattern
 - [x] MVC Design Pattern
