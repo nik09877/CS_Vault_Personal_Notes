@@ -1,12 +1,7 @@
-#TODO
-1. Angular components
-2. managing dynamic data
-3. rendering dynamic templates
-4. using conditionals and loop
-5. event handling
-6. property binding
-7. parent child comm
-8. deferrable views
+
+# DAY 1
+
+---
 
 # Components in Angular
 
@@ -249,6 +244,175 @@ Similar to JavaScript’s `for...of` loops, Angular provides the `*ngfor` bl
 <!-- ingredient-list.component.html -->
 <ul>
 	<li *ngfor="let ingredient of ingredientList">{{ ingredient.quantity }} - {{ ingredient.name }}</li>
-  
 </ul>
 ```
+
+```ts
+// ingredient-list.component.ts
+@Component({
+  standalone: true,
+  selector: 'ingredient-list',
+  templateUrl: './ingredient-list.component.html',
+})
+export class IngredientList {
+  ingredientList = [
+    {name: 'noodles', quantity: 1},
+    {name: 'miso broth', quantity: 1},
+    {name: 'egg', quantity: 2},
+  ];
+}
+```
+
+# Event Handling
+
+You can add an event handler to an element by:
+
+1. Adding an attribute with the events name inside of parentheses
+2. Specify what JavaScript statement you want to run when it fires
+
+```html
+<button (click)="save()">Save</button>
+```
+
+For example, if we wanted to create a button that would run a `transformText` function when the `click` event is fired, it would look like the following:
+
+```ts
+// text-transformer.component.ts
+@Component({
+  standalone: true,
+  selector: 'text-transformer',
+  template: `
+    <p>{{ announcement }}</p>
+    <button (click)="transformText()">Abracadabra!</button>
+  `,
+})
+export class TextTransformer {
+  announcement = 'Hello again Angular!';
+  transformText() {
+    this.announcement = this.announcement.toUpperCase();
+  }
+}
+```
+
+### $event
+
+If you need to access the [event](https://developer.mozilla.org/en-US/docs/Web/API/Event) object, Angular provides an implicit `$event` variable that you can pass to a function:
+
+```html
+<button (click)="createUser($event)">Submit</button>
+```
+
+
+# Component Interaction
+
+### Pass data from parent to child with `@input` binding
+
+`HeroChildComponent` has two **_input properties_**, typically adorned with [@Input decorations](https://devdocs.io/angular~7/guide/template-syntax#inputs-outputs).
+
+```ts
+import { Component, Input } from '@angular/core';
+
+import { Hero } from './hero';
+
+@Component({
+  selector: 'app-hero-child',
+  template: `
+    <h3>{{hero.name}} says:</h3>
+    <p>I, {{hero.name}}, am at your service, {{masterName}}.</p>
+  `
+})
+export class HeroChildComponent {
+  @Input() hero: Hero;
+  @Input('master') masterName: string;
+}
+```
+
+The second @[Input](https://devdocs.io/angular~7/api/core/input) aliases the child component property name `'masterName'` as `'master'`.
+
+The `HeroParentComponent` nests the child `HeroChildComponent` inside an *[ngFor](https://devdocs.io/angular~7/api/common/ngforof) repeater, binding its `master` string property to the child's `master` alias, and each iteration's `hero` instance to the child's `hero` property.
+
+```ts
+import { Component } from '@angular/core';
+
+import { HEROES } from './hero';
+
+@Component({
+  selector: 'app-hero-parent',
+  template: `
+    <h2>{{master}} controls {{heroes.length}} heroes</h2>
+    <app-hero-child *ngFor="let hero of heroes"
+      [hero]="hero"
+      [master]="master">
+    </app-hero-child>
+  `
+})
+export class HeroParentComponent {
+  heroes = HEROES;
+  master = 'Master';
+}
+```
+
+### Parent listens for child event
+
+The child component exposes an [EventEmitter](https://devdocs.io/angular~7/api/core/eventemitter) property with which it `emits` events when something happens. The parent binds to that event property and reacts to those events.
+
+The child's [EventEmitter](https://devdocs.io/angular~7/api/core/eventemitter) property is an **_output property_**, typically adorned with an [@Output decoration](https://devdocs.io/angular~7/guide/template-syntax#inputs-outputs) as seen in this `VoterComponent`:
+
+```ts
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-voter',
+  template: `
+    <h4>{{name}}</h4>
+    <button (click)="vote(true)"  [disabled]="didVote">Agree</button>
+    <button (click)="vote(false)" [disabled]="didVote">Disagree</button>
+  `
+})
+export class VoterComponent {
+  @Input()  name: string;
+  @Output() voted = new EventEmitter<boolean>();
+  didVote = false;
+
+  vote(agreed: boolean) {
+    this.voted.emit(agreed);
+    this.didVote = true;
+  }
+}
+```
+
+Clicking a button triggers emission of a `true` or `false`, the boolean _payload_.
+
+The parent `VoteTakerComponent` binds an event handler called `onVoted()` that responds to the child event payload `$event` and updates a counter.
+
+```ts
+import { Component }      from '@angular/core';
+
+@Component({
+  selector: 'app-vote-taker',
+  template: `
+    <h2>Should mankind colonize the Universe?</h2>
+    <h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>
+    <app-voter *ngFor="let voter of voters"
+      [name]="voter"
+      (voted)="onVoted($event)">
+    </app-voter>
+  `
+})
+export class VoteTakerComponent {
+  agreed = 0;
+  disagreed = 0;
+  voters = ['Mr. IQ', 'Ms. Universe', 'Bombasto'];
+
+  onVoted(agreed: boolean) {
+    agreed ? this.agreed++ : this.disagreed++;
+  }
+}
+```
+
+The framework passes the event argument—represented by `$event`—to the handler method, and the method processes it:
+
+
+--- 
+
+# DAY 2
