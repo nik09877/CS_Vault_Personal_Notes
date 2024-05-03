@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d2d1152c9364cd16",
+        "id": "5014e19608ee3e97",
         "type": "tabs",
         "children": [
           {
-            "id": "0089718dd866ab5c",
+            "id": "1a7bd91ab7ec93ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "mode": "source",
                 "source": true
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -85,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md"
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md"
               }
             }
           },
@@ -103,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 320.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,8 +176,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0089718dd866ab5c",
+  "active": "1a7bd91ab7ec93ff",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/Angular.md",
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Learning/~WRL0003.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRD0002.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRL0001.tmp",
@@ -194,8 +198,6 @@
     "Work/TCS/Ultimatix/Project Work.md",
     "444_System Design/HLD/To_Do_Problems.md",
     "444_System Design/HLD/Resources/nosql.pdf",
-    "444_System Design/HLD/Resources/database_sharding.pdf",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "z_assets/Pasted_image_20240317234552.png",
     "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
