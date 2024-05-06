@@ -416,3 +416,203 @@ The framework passes the event argument—represented by `$event`—to the hand
 --- 
 
 # DAY 2
+
+# Routing & Navigation
+
+The Angular [Router](https://devdocs.io/angular~7/api/router/router) enables navigation from one [view](https://devdocs.io/angular~7/guide/glossary#view) to the next as users perform application tasks.
+
+## The Basics
+
+### `<base href>`
+Most routing applications should add a `<base>` element to the `index.html` as the first child in the `<head>` tag to tell the router how to compose navigation URLs.
+
+If the `app` folder is the application root, as it is for the sample application, set the [href](https://devdocs.io/angular~7/api/router/routerlinkwithhref#href) value _exactly_ as shown below.
+
+```html
+<base href="/">
+```
+
+### Router imports
+
+The Angular Router is an optional service that presents a particular component view for a given URL.
+```ts
+import { RouterModule, Routes } from '@angular/router';
+```
+
+### Configuration
+
+A routed Angular application has one singleton instance of the _[Router](https://devdocs.io/angular~7/api/router/router)_ service. When the browser's URL changes, that router looks for a corresponding [Route](https://devdocs.io/angular~7/api/router/route) from which it can determine the component to display.
+
+A router has no routes until you configure it. The following example creates five route definitions, configures the router via the [RouterModule.forRoot()](https://devdocs.io/angular~7/api/router/routermodule#forRoot) method, and adds the result to the `AppModule`'s `imports` array.
+
+```ts
+const appRoutes: Routes = [
+  { path: 'crisis-center', component: CrisisListComponent },
+  { path: 'hero/:id',      component: HeroDetailComponent },
+  {
+    path: 'heroes',
+    component: HeroListComponent,
+    data: { title: 'Heroes List' }
+  },
+  { path: '',
+    redirectTo: '/heroes',
+    pathMatch: 'full'
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
+    // other imports here
+  ],
+  ...
+})
+export class AppModule { }
+```
+
+- The `appRoutes` array of _routes_ describes how to navigate. Pass it to the [RouterModule.forRoot()](https://devdocs.io/angular~7/api/router/routermodule#forRoot) method in the module `imports` to configure the router.
+
+- Each [Route](https://devdocs.io/angular~7/api/router/route) maps a URL `path` to a component. 
+
+- The `:id` in the second route is a token for a route parameter. In a URL such as `/hero/42`, "42" is the value of the `id` parameter. 
+
+- The `data` property in the third route is a place to store arbitrary data associated with this specific route. The data property is accessible within each activated route. Use it to store items such as page titles, breadcrumb text, and other read-only, _static_ data. You'll use the [resolve guard](https://devdocs.io/angular~7/guide/router#resolve-guard) to retrieve _dynamic_ data later in the guide.
+
+- The **empty path** in the fourth route represents the default path for the application. This default route redirects to the route for the `/heroes` URL and, therefore, will display the `HeroesListComponent`.
+
+- The `**` path in the last route is a **wildcard**. The router will select this route if the requested URL doesn't match any paths for routes defined earlier in the configuration. This is useful for displaying a "404 - Not Found" page.
+
+- **The order of the routes in the configuration matters** and this is by design. The router uses a **first-match wins** strategy when matching routes, so more specific routes should be placed above less specific routes.
+
+- If you need to see what events are happening during the navigation lifecycle, there is the **enableTracing** option as part of the router's default configuration.
+
+### Router outlet
+
+The [RouterOutlet](https://devdocs.io/angular~7/api/router/routeroutlet) is a directive from the router library that is used like a component. It acts as a placeholder that marks the spot in the template where the router should display the components for that outlet.
+
+```html
+<router-outlet></router-outlet>
+  <!-- Routed components go here -->
+```
+
+### Router links
+
+The [RouterLink](https://devdocs.io/angular~7/api/router/routerlink) directives on the anchor tags give the router control over those elements. The navigation paths are fixed, so you can assign a string to the [routerLink](https://devdocs.io/angular~7/api/router/routerlink) (a "one-time" binding).
+
+Had the navigation path been more dynamic, you could have bound to a template expression that returned an array of route link parameters (the _link parameters array_). The router resolves that array into a complete URL.
+
+```html
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+  <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+```
+
+### Router state
+
+- After the end of each successful navigation lifecycle, the router builds a tree of [ActivatedRoute](https://devdocs.io/angular~7/api/router/activatedroute) objects that make up the current state of the router.
+
+- Each [ActivatedRoute](https://devdocs.io/angular~7/api/router/activatedroute) in the [RouterState](https://devdocs.io/angular~7/api/router/routerstate) provides methods to traverse up and down the route tree to get information from parent, child and sibling routes.
+
+### Activated route
+
+The route path and parameters are available through an injected router service called the [ActivatedRoute](https://devdocs.io/angular~7/api/router/activatedroute). It has a great deal of useful information including:
+
+| Property        | Description                                                                                                                                                                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `url`           | An `Observable` of the route path(s), represented as an array of strings for each part of the route path.                                                                                                                                                                                                     |
+| `data`          | An `Observable` that contains the `data` object provided for the route. Also contains any resolved values from the [resolve guard](https://devdocs.io/angular~7/guide/router#resolve-guard).                                                                                                                  |
+| `paramMap`      | An `Observable` that contains a [map](https://devdocs.io/angular~7/api/router/parammap) of the required and [optional parameters](https://devdocs.io/angular~7/guide/router#optional-route-parameters) specific to the route. The map supports retrieving single and multiple values from the same parameter. |
+| `queryParamMap` | An `Observable` that contains a [map](https://devdocs.io/angular~7/api/router/parammap) of the [query parameters](https://devdocs.io/angular~7/guide/router#query-parameters) available to all routes. The map supports retrieving single and multiple values from the query parameter.                       |
+| `fragment`      | An `Observable` of the URL [fragment](https://devdocs.io/angular~7/guide/router#fragment) available to all routes.                                                                                                                                                                                            |
+| `outlet`        | The name of the [RouterOutlet](https://devdocs.io/angular~7/api/router/routeroutlet) used to render the route. For an unnamed outlet, the outlet name is _primary_.                                                                                                                                           |
+| `routeConfig`   | The route configuration used for the route that contains the origin path.                                                                                                                                                                                                                                     |
+| `parent`        | The route's parent [ActivatedRoute](https://devdocs.io/angular~7/api/router/activatedroute) when this route is a [child route](https://devdocs.io/angular~7/guide/router#child-routing-component).                                                                                                            |
+| `firstChild`    | Contains the first [ActivatedRoute](https://devdocs.io/angular~7/api/router/activatedroute) in the list of this route's child routes.                                                                                                                                                                         |
+| `children`      | Contains all the [child routes](https://devdocs.io/angular~7/guide/router#child-routing-component) activated under the current route.                                                                                                                                                                         |
+
+# Reactive Forms
+
+_Reactive forms_ provide a model-driven approach to handling form inputs whose values change over time
+
+## Getting started
+
+### Step 1: Registering the reactive forms module
+
+To use reactive forms, import [ReactiveFormsModule](https://devdocs.io/angular~7/api/forms/reactiveformsmodule) from the `@angular/forms` package and add it to your NgModule's `imports` array.
+
+```ts
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  imports: [
+    // other imports ...
+    ReactiveFormsModule
+  ],
+})
+export class AppModule { }
+```
+
+### Step 2: Generating and importing a new form control
+
+The [FormControl](https://devdocs.io/angular~7/api/forms/formcontrol) class is the basic building block when using reactive forms. To register a single form control, import the [FormControl](https://devdocs.io/angular~7/api/forms/formcontrol) class into your component and create a new instance of the form control to save as a class property.
+
+```ts
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'app-name-editor',
+  templateUrl: './name-editor.component.html',
+  styleUrls: ['./name-editor.component.css']
+})
+export class NameEditorComponent {
+  name = new FormControl('');
+}
+```
+
+### Step 3: Registering the control in the template
+
+After you create the control in the component class, you must associate it with a form control element in the template. Update the template with the form control using the `formControl` binding provided by [FormControlDirective](https://devdocs.io/angular~7/api/forms/formcontroldirective) included in [ReactiveFormsModule](https://devdocs.io/angular~7/api/forms/reactiveformsmodule).
+
+```html
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+```
+
+## Managing control values
+
+### Displaying a form control value
+
+You can display the value in these ways:
+
+- Through the `valueChanges` observable where you can listen for changes in the form's value in the template using `[AsyncPipe](https://devdocs.io/angular~7/api/common/asyncpipe)` or in the component class using the `subscribe()` method.
+- With the `value` property. which gives you a snapshot of the current value.
+
+```html
+<p>
+  Value: {{ name.value }}
+</p>
+```
+
+### Replacing a form control value
+
+A form control instance provides a `setValue()` method that updates the value of the form control and validates the structure of the value provided against the control's structure.
+
+```ts
+updateName() {
+  this.name.setValue('Nancy');
+}
+```
+
+## Grouping form controls
+
+A form group instance tracks the form state of a group of form control instances.
