@@ -615,4 +615,60 @@ updateName() {
 
 ## Grouping form controls
 
-A form group instance tracks the form state of a group of form control instances.
+A form group instance tracks the form state of a group of form control instances. Each control in a form group instance is tracked by name when creating the form group.
+
+### Step 1: Creating a FormGroup instance
+
+Create a property in the component class named `profileForm` and set the property to a new form group instance. To initialize the form group, provide the constructor with an object of named keys mapped to their control.
+
+For the profile form, add two form control instances with the names `firstName` and `lastName`.
+
+```ts
+import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'app-profile-editor',
+  templateUrl: './profile-editor.component.html',
+  styleUrls: ['./profile-editor.component.css']
+})
+export class ProfileEditorComponent {
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
+}
+```
+
+### Step 2: Associating the FormGroup model and view
+
+A form group tracks the status and changes for each of its controls, so if one of the controls changes, the parent control also emits a new status or value change. The model for the group is maintained from its members. After you define the model, you must update the template to reflect the model in the view.
+
+```html
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+</form>
+```
+
+### Saving form data
+
+The [FormGroup](https://devdocs.io/angular~7/api/forms/formgroup) directive listens for the `submit` event emitted by the `form` element and emits an `ngSubmit` event that you can bind to a callback function.
+
+Add an `ngSubmit` event listener to the `form` tag with the `onSubmit()` callback method.
+
+```html
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+```
+
