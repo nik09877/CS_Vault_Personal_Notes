@@ -672,3 +672,316 @@ Add an `ngSubmit` event listener to the `form` tag with the `onSubmit()` c
 <button type="submit" [disabled]="!profileForm.valid">Submit</button>
 ```
 
+
+# Template Driven Forms
+
+Template-driven forms in Angular are one of the two ways of building forms in Angular, the other being reactive forms. Template-driven forms allow you to specify the form's behaviors and validations using directives and attributes directly in the HTML template, with minimal code required in the component class. [2](https://www.scaler.com/topics/angular/template-driven-forms-in-angular/)[3](https://angular.io/guide/forms)The key points about template-driven forms in Angular are:
+
+1. The `FormsModule` needs to be imported in the application module to use template-driven forms. [3](https://angular.io/guide/forms)
+2. The `ngForm` directive is used to convert the HTML form into an Angular form, creating a top-level `FormGroup` control. [2](https://www.scaler.com/topics/angular/template-driven-forms-in-angular/)[3](https://angular.io/guide/forms)
+3. The `ngModel` directive is used to create `FormControl` instances for each form element, enabling two-way data binding. [2](https://www.scaler.com/topics/angular/template-driven-forms-in-angular/)[3](https://angular.io/guide/forms)
+4. Validations are configured directly in the template using directives and attributes, without needing to write validation logic in the component class. [2](https://www.scaler.com/topics/angular/template-driven-forms-in-angular/)[3](https://angular.io/guide/forms)
+5. Template-driven forms are simpler to set up compared to reactive forms, but they can be more challenging to unit test and add controls dynamically.
+
+```html
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+
+  <div>
+
+    <label for="name">Name:</label>
+
+    <input type="text" id="name" name="name" [(ngModel)]="name" required />
+
+    <div
+
+      *ngIf="myForm.controls.name?.invalid && (myForm.controls.name?.dirty || myForm.controls.name?.touched)"
+
+    >
+
+      Name is required.
+
+    </div>
+
+  </div>
+
+  <div>
+
+    <label for="email">Email:</label>
+
+    <input
+
+      type="email"
+
+      id="email"
+
+      name="email"
+
+      [(ngModel)]="email"
+
+      required
+
+      email
+
+    />
+
+    <div
+
+      *ngIf="myForm.controls.email?.invalid && (myForm.controls.email?.dirty || myForm.controls.email?.touched)"
+
+    >
+
+      Please enter a valid email address.
+
+    </div>
+
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+
+</form>
+```
+
+```ts
+import { Component } from '@angular/core';
+
+import { NgForm } from '@angular/forms';
+
+@Component({
+
+  selector: 'app-root',
+
+  templateUrl: './app.component.html',
+
+  styleUrls: ['./app.component.css'],
+
+})
+
+export class AppComponent {
+
+  name: string;
+
+  email: string;
+
+  onSubmit(form: NgForm) {
+
+    console.log('Form submitted:', form.value);
+
+  }
+
+}
+```
+
+# HttpClient
+
+In Angular, we can use the `HttpClient` module to make API calls. 
+
+1. **Import HttpClientModule**: First, you need to import `HttpClientModule` in your Angular module. Typically, this is done in your `AppModule` (or other feature module) file (`app.module.ts`)
+
+```ts
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    HttpClientModule
+  ],
+  // Other configurations...
+})
+export class AppModule { }
+
+```
+
+2. **Inject HttpClient**: Next, you'll need to inject `HttpClient` into your Angular service or component where you want to make API calls. For example, in your service:
+
+```ts
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  constructor(private http: HttpClient) { }
+
+  // Your API call methods will go here
+}
+
+```
+
+3. **Make API Calls**: Now, you can use the `HttpClient` instance to make API calls. You typically use methods like `get`, `post`, `put`, `delete`, etc. Here's an example of making a GET request:
+
+```ts
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  constructor(private http: HttpClient) { }
+
+  fetchData(): Observable<any> {
+    return this.http.get<any>('https://api.example.com/data');
+  }
+}
+
+```
+
+4. **Handle Responses**: You can subscribe to the observable returned by the HTTP request to handle the response. For example:
+
+```ts
+import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+  styleUrls: ['./example.component.css']
+})
+export class ExampleComponent implements OnInit {
+
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(): void {
+    this.dataService.fetchData().subscribe((data) => {
+      console.log(data); // Handle response data here
+    }, (error) => {
+      console.error('Error fetching data:', error); // Handle errors here
+    });
+  }
+}
+```
+
+# Services
+
+In Angular, services are classes that are responsible for encapsulating reusable logic and functionality that can be shared across different parts of your application. Services provide a way to keep your code modular, maintainable, and easier to test. They are typically used for tasks such as data retrieval, business logic, and communication with external APIs.
+
+Here's how you can create and use a service in Angular:
+
+1. **Creating a Service**:
+You can create a service using Angular CLI's `ng generate service` command or manually create a TypeScript class. Let's manually create a service:
+
+```bash
+ng generate service my-service
+```
+
+This will generate a service file (`my-service.service.ts`) and add it to the `app` folder in your Angular project.
+
+```ts
+// my-service.service.ts
+
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MyService {
+
+  constructor() { }
+
+  // Define methods and functionality here
+}
+
+```
+
+The `@Injectable` decorator marks the class as a service and allows it to be injected into other components or services.
+
+2. **Using the Service**:
+You can now inject the service into any component or other service where you want to use its functionality. Angular's dependency injection system will handle the instantiation and management of the service instance.
+
+```ts
+// example.component.ts
+
+import { Component, OnInit } from '@angular/core';
+import { MyService } from './my-service.service';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+  styleUrls: ['./example.component.css']
+})
+export class ExampleComponent implements OnInit {
+
+  constructor(private myService: MyService) { }
+
+  ngOnInit(): void {
+    // Use service methods here
+  }
+}
+
+```
+
+3. **Using Service Methods**:
+Within your component, you can call methods defined in the service as you would with any other class method.
+
+```ts
+// example.component.ts
+
+import { Component, OnInit } from '@angular/core';
+import { MyService } from './my-service.service';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+  styleUrls: ['./example.component.css']
+})
+export class ExampleComponent implements OnInit {
+
+  constructor(private myService: MyService) { }
+
+  ngOnInit(): void {
+    this.myService.doSomething(); // Call a method defined in the service
+  }
+}
+```
+
+```ts
+// my-service.service.ts
+
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MyService {
+
+  constructor() { }
+
+  doSomething() {
+    console.log('Doing something...');
+  }
+}
+```
+
+4. **Providing the Service**:
+
+The `providedIn: 'root'` option in the `@Injectable` decorator allows Angular to optimize the service by providing it at the root level. This makes it available throughout your application without the need to import it into specific modules.
+
+Alternatively, you can provide the service in a specific module by importing it into the module and adding it to the `providers` array:
+
+```ts
+// app.module.ts
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { MyService } from './my-service.service'; // Import the service
+
+@NgModule({
+  declarations: [
+    // Components and directives
+  ],
+  imports: [
+    BrowserModule,
+    // Other modules
+  ],
+  providers: [MyService], // Provide the service here
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+---
+# DAY 3
