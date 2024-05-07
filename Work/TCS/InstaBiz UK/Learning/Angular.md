@@ -985,3 +985,430 @@ export class AppModule { }
 
 ---
 # DAY 3
+
+# Pipes
+
+In Angular, pipes are a feature that allows you to transform data in your templates before displaying it to the user.
+
+### Built-in Pipes in Angular:
+
+1. **DatePipe**: Formats a date value according to locale rules.
+
+```html
+<p>{{ currentDate | date }}</p>
+```
+
+2. **UpperCasePipe**: Transforms text to all uppercase.
+
+```html
+<p>{{ text | uppercase }}</p>
+```
+
+3. **LowerCasePipe**: Transforms text to all lowercase.
+
+```html
+<p>{{ text | lowercase }}</p>
+```
+
+4. **CurrencyPipe**: Formats a number as currency using locale rules.
+
+```html
+<p>{{ price | currency }}</p>
+```
+
+5. **DecimalPipe**: Formats a number as decimal number according to locale rules.
+
+```html
+<p>{{ number | number:'1.2-3' }}</p>
+```
+
+6. **PercentPipe**: Formats a number as a percentage.
+
+```html
+<p>{{ percentage | percent }}</p>
+```
+
+### Creating Custom Pipes:
+
+To create a custom pipe, you need to use the `@Pipe` decorator and implement the `PipeTransform` interface.
+
+```ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'custom'
+})
+export class CustomPipe implements PipeTransform {
+
+  transform(value: any, args?: any): any {
+    // Custom transformation logic
+    return transformedValue;
+  }
+}
+
+```
+
+#### Example of Custom Pipe:
+
+Let's create a custom pipe that appends a given string to the input value.
+
+```ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'append'
+})
+export class AppendPipe implements PipeTransform {
+
+  transform(value: any, appendValue: string): any {
+    if (!value) return '';
+    return value + appendValue;
+  }
+}
+
+```
+
+```ts
+<p>{{ 'Hello' | append:' World' }}</p>
+```
+
+### Types of Pipes in Angular:
+
+1. **Pure Pipes**: Pure pipes only recalculate the output when a pure change to the input value is detected. Pure changes are either changes to primitive input values (String, Number, Boolean) or changes to object references. Pure pipes are more performant and are the default type of pipe.
+    
+2. **Impure Pipes**: Impure pipes recalculate the output on every change detection cycle, regardless of whether the input value has changed. Impure pipes should be used with caution as they can impact performance negatively.
+
+### Pure Pipe Example:
+
+```ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'multiply'
+})
+export class MultiplyPipe implements PipeTransform {
+
+  transform(value: number, multiplier: number): number {
+    return value * multiplier;
+  }
+}
+
+```
+
+In this example, we have created a pure pipe called `MultiplyPipe` that multiplies a number by a given multiplier. Since this pipe only depends on its input values (`value` and `multiplier`), it is pure.
+
+You can use this pipe in your template like this:
+
+```html
+<p>{{ 5 | multiply: 2 }}</p>
+```
+
+### Impure Pipe Example:
+
+```ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'randomNumber',
+  pure: false
+})
+export class RandomNumberPipe implements PipeTransform {
+
+  transform(): number {
+    return Math.random();
+  }
+}
+
+```
+
+In this example, we have created an impure pipe called `RandomNumberPipe` that generates a random number. Since this pipe does not depend on its input values and generates a new random number on each change detection cycle, it is impure.
+
+You can use this pipe in your template like this:
+
+```html
+<p>{{ 'Random Number: ' + ({} | randomNumber) }}</p>
+```
+
+Notice the usage of `({} | randomNumber)`. The input value is an empty object (`{}`), which doesn't change. However, since the pipe is impure, it generates a new random number on each change detection cycle.
+
+# Debouncing
+
+Debouncing is a technique used to delay or limit the number of times a function is executed in response to an event, particularly useful when dealing with user input events like typing in an input field. 
+
+It ensures that a function is only called after a certain amount of time has passed since the last event, thereby reducing the frequency of function calls and improving performance.
+
+1. **Install RxJS**:
+Make sure you have `rxjs` installed in your Angular project. If not, you can install it using npm or yarn:
+
+```bash
+npm install rxjs
+```
+
+2. **Implement Debouncing**:
+In your component, import `debounceTime` from `rxjs/operators`, and use it with an Observable to delay the execution of a function. For example, let's implement debouncing for a search input field:
+
+```ts
+import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { ApiService } from './api.service';
+
+@Component({
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
+})
+export class SearchComponent implements OnInit {
+
+  searchControl: FormControl = new FormControl();
+
+  constructor(private apiService: ApiService) { }
+
+  ngOnInit(): void {
+    this.searchControl.valueChanges
+      .pipe(
+        debounceTime(300), // Adjust the debounce time as needed
+        distinctUntilChanged(), // Ensure the value has changed
+        switchMap(value => this.apiService.search(value)) // Switch to the search API call
+      )
+      .subscribe(response => {
+        // Handle API response
+      });
+  }
+}
+
+
+```
+
+3. **HTML Template**:
+In your HTML template, bind the `searchControl` to your input field using `ngModel` or reactive forms:
+
+```html
+<input type="text" [formControl]="searchControl" placeholder="Search...">
+```
+
+With this setup, the backend API will only be called after the user has stopped typing for the specified debounce time (300 milliseconds in this example), reducing unnecessary API requests and improving performance. Adjust the debounce time as needed based on your application's requirements.
+
+# Set Css Class/Style based on expression
+
+You can set CSS classes or inline styles dynamically based on expressions in Angular using property binding or ngClass/ngStyle directives. Here's how you can do it:
+
+### Using Property Binding for CSS Classes:
+
+You can use property binding (`[class.className]`) to conditionally apply CSS classes based on expressions.
+
+```html
+<div [class.error]="isError">Error message</div>
+```
+
+In your component class, you define the `isError` property based on some condition:
+```ts
+export class MyComponent {
+  isError: boolean = true; // Or calculate based on some condition
+}
+```
+
+### Using ngClass Directive:
+
+You can also use the `ngClass` directive to conditionally apply CSS classes based on expressions.
+
+```html
+<div [ngClass]="{'error': isError, 'warning': isWarning}">Error or Warning message</div>
+```
+
+In your component class, you define properties like `isError` and `isWarning` based on your conditions.
+
+### Using Inline Styles:
+
+Similarly, you can use property binding (`[style.property]`) or the `ngStyle` directive to apply inline styles based on expressions.
+
+```html
+<div [style.color]="'red'">Red Text</div>
+```
+
+Or with ngStyle:
+
+```html
+<div [ngStyle]="{'color': isError ? 'red' : 'blue', 'font-weight': isBold ? 'bold' : 'normal'}">Dynamic Style</div>
+```
+
+In your component class, define properties like `isError` or `isBold` based on your conditions.
+
+### Example:
+
+Here's a complete example demonstrating how to apply CSS classes and inline styles dynamically:
+
+```html
+<!-- app.component.html -->
+<div [class.error]="isError" [ngStyle]="{'color': isError ? 'red' : 'black', 'font-weight': isBold ? 'bold' : 'normal'}">
+  {{ message }}
+</div>
+```
+
+```ts
+// app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  message = 'Hello, Angular!';
+  isError = true;
+  isBold = false;
+}
+```
+
+In this example, the `isError` property determines whether the `error` CSS class is applied and whether the text color is set to red. The `isBold` property determines whether the text is bold or normal. You can adjust these properties based on your specific conditions.
+
+
+4)ngSwitchCase
+5)Pagination and lazyloading using primeng
+6)Parent interacting with child via template reference
+7)component lifecycle
+
+# ngSwitchCase
+
+`ngSwitchCase` is a directive in Angular that is used to conditionally display elements based on the value of an expression. It works in conjunction with `ngSwitch` directive to define a set of possible cases and then switch between them based on the value of the expression.
+
+```html
+<div [ngSwitch]="variable">
+  <div *ngSwitchCase="'case1'">Content for Case 1</div>
+  <div *ngSwitchCase="'case2'">Content for Case 2</div>
+  <div *ngSwitchCase="'case3'">Content for Case 3</div>
+  <div *ngSwitchDefault>Default Content</div>
+</div>
+```
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-switch-example',
+  templateUrl: './switch-example.component.html',
+  styleUrls: ['./switch-example.component.css']
+})
+export class SwitchExampleComponent {
+  variable: string = 'case2'; // Set the value of the variable here
+}
+```
+
+- `ngSwitch`: This directive is applied to a parent element and takes an expression to match against.
+- `ngSwitchCase`: This directive defines a case to match against the expression provided by `ngSwitch`. It evaluates the provided value and displays the content inside if the value matches.
+- `ngSwitchDefault`: This directive is used to specify default content to be displayed if none of the cases match the expression provided by `ngSwitch`.
+
+# Pagination and lazyloading using primeng
+
+To implement pagination and lazy loading using PrimeNG, you can use the `p-table` component along with its features for pagination and lazy loading. Here's a step-by-step guide on how to do it:
+
+1. **Install PrimeNG**:
+
+```bash
+npm install primeng
+```
+
+2. **Import PrimeNG Modules**:
+
+Import the necessary PrimeNG modules in your Angular module file (e.g., `app.module.ts`):
+
+```ts
+import { TableModule } from 'primeng/table';
+```
+
+And add it to the imports array:
+
+```ts
+@NgModule({
+  declarations: [/* your components */],
+  imports: [
+    /* other imports */
+    TableModule
+  ],
+  providers: [],
+  bootstrap: [/* your root component */]
+})
+export class AppModule { }
+```
+
+3. **Create a Data Service**:
+   Create a service to fetch data from your backend API. This service will be used to load data lazily as the user navigates through pages.
+
+4. **Implement Pagination and Lazy Loading**:
+In your component HTML file (e.g., `my-component.component.html`), use the `p-table` component and configure it for pagination and lazy loading:
+
+```html
+<p-table [value]="yourData" [lazy]="true" [paginator]="true" [rows]="10" [totalRecords]="totalRecords" (onLazyLoad)="loadData($event)">
+    <ng-template pTemplate="header">
+        <!-- Table header -->
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+        <!-- Table body -->
+    </ng-template>
+</p-table>
+```
+
+- `[value]`: Bind this to your data array.
+- `[lazy]="true"`: Enable lazy loading.
+- `[paginator]="true"`: Enable pagination.
+- `[rows]="10"`: Number of rows per page.
+- `[totalRecords]`: Total number of records. You need to update this value whenever the data changes.
+- `(onLazyLoad)`: Event handler for lazy loading. Implement the `loadData` method in your component to load data lazily.
+
+**Implement Lazy Loading Method**:
+In your component TypeScript file (e.g., `my-component.component.ts`), implement the `loadData` method to fetch data lazily from your data service:
+
+```ts
+import { Component } from '@angular/core';
+import { LazyLoadEvent } from 'primeng/api';
+import { DataService } from './data.service';
+
+@Component({
+  selector: 'app-my-component',
+  templateUrl: './my-component.component.html',
+  styleUrls: ['./my-component.component.css']
+})
+export class MyComponent {
+
+  yourData: any[] = [];
+  totalRecords: number;
+
+  constructor(private dataService: DataService) { }
+
+  loadData(event: LazyLoadEvent): void {
+    // Lazy load data from the service
+    this.dataService.loadData(event.first, event.rows).subscribe(data => {
+      this.yourData = data.results;
+      this.totalRecords = data.totalRecords;
+    });
+  }
+}
+```
+
+- Inject your data service (`DataService`) into the component.
+- Implement the `loadData` method to load data lazily using the `LazyLoadEvent` parameters (e.g., `event.first`, `event.rows`).
+- Update the `yourData` array and `totalRecords` value with the fetched data and total record count.
+
+**Implement Data Service**:
+Create a data service (e.g., `data.service.ts`) to fetch data from your backend API:
+
+```ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  constructor(private http: HttpClient) { }
+
+  loadData(first: number, rows: number): Observable<any> {
+    // Adjust your API URL and parameters
+    const apiUrl = `your-api-url?start=${first}&limit=${rows}`;
+    return this.http.get<any>(apiUrl);
+  }
+}
+```
