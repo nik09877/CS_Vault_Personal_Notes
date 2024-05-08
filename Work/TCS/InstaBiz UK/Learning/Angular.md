@@ -1263,12 +1263,6 @@ export class AppComponent {
 
 In this example, the `isError` property determines whether the `error` CSS class is applied and whether the text color is set to red. The `isBold` property determines whether the text is bold or normal. You can adjust these properties based on your specific conditions.
 
-
-4)ngSwitchCase
-5)Pagination and lazyloading using primeng
-6)Parent interacting with child via template reference
-7)component lifecycle
-
 # ngSwitchCase
 
 `ngSwitchCase` is a directive in Angular that is used to conditionally display elements based on the value of an expression. It works in conjunction with `ngSwitch` directive to define a set of possible cases and then switch between them based on the value of the expression.
@@ -1412,3 +1406,157 @@ export class DataService {
   }
 }
 ```
+
+# Parent interacting with child via template reference
+
+Interacting between parent and child components in Angular can be achieved using various techniques. One common method is using template reference variables to access child component properties and methods from the parent component's template.
+
+
+1. **In the Parent Component Template**:
+First, define a template reference variable in the parent component's template to reference the child component:
+
+```html
+<!-- parent.component.html -->
+<app-child #childRef></app-child>
+```
+
+2. **In the Parent Component Class**:
+Import `ViewChild` from `@angular/core` and use it to access the child component:
+
+```ts
+import { Component, ViewChild } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
+
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+export class ParentComponent {
+  @ViewChild('childRef', { static: true }) childComponent: ChildComponent;
+
+  // Method in the parent component to interact with the child component
+  interactWithChild(): void {
+    // Call a method in the child component
+    this.childComponent.childMethod();
+
+    // Access a property in the child component
+    console.log(this.childComponent.childProperty);
+  }
+}
+
+```
+
+
+3. **In the Child Component Class**:
+Define methods and properties in the child component that you want to interact with from the parent component:
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
+})
+export class ChildComponent {
+  childProperty: string = 'Child Property';
+
+  childMethod(): void {
+    console.log('Child Method Called');
+  }
+}
+```
+
+Now, you can call methods and access properties of the child component from the parent component using the `ViewChild` reference.
+
+# Lifecycle Methods
+
+In Angular 7, as in other versions, components have a lifecycle managed by Angular. These lifecycle events provide hooks into different stages of a component's lifecycle, allowing you to perform actions at specific times, such as initialization, change detection, and destruction. Here are the main lifecycle hooks in Angular components:
+
+1. **ngOnChanges**: Called whenever one or more input properties of the component change. It's called before ngOnInit and before the first ngOnInit.
+    
+2. **ngOnInit**: Called once after the component is initialized. It's the perfect place to perform component initialization logic, such as fetching initial data.
+    
+3. **ngDoCheck**: Called during every change detection cycle, immediately after ngOnChanges and ngOnInit. It allows you to implement custom change detection logic.
+    
+4. **ngAfterContentInit**: Called once after Angular projects external content into the component's view. It's called after the component's content (e.g., projected content or child components' content) has been initialized.
+    
+5. **ngAfterContentChecked**: Called after Angular checks the content projected into the component. It's called after every check of the projected content.
+    
+6. **ngAfterViewInit**: Called once after the component's view (and its children) has been initialized. It's the perfect place to perform additional initialization logic that relies on the component's view.
+    
+7. **ngAfterViewChecked**: Called after Angular checks the component's view and its children. It's called after every check of the component's view.
+    
+8. **ngOnDestroy**: Called just before the component is destroyed. It's the perfect place to perform cleanup logic, such as unsubscribing from observables or releasing resources.
+
+```ts
+import { Component, OnInit, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
+
+@Component({
+  selector: 'app-lifecycle',
+  template: `
+    <p>{{ message }}</p>
+  `
+})
+export class LifecycleComponent implements OnInit, OnChanges, OnDestroy {
+  message: string = 'Hello, Angular!';
+  counter: number = 0;
+
+  constructor() {
+    console.log('Constructor called');
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit called');
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges called', changes);
+  }
+
+  ngDoCheck(): void {
+    console.log('ngDoCheck called');
+  }
+
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit called');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('ngAfterContentChecked called');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit called');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked called');
+  }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy called');
+  }
+
+  incrementCounter(): void {
+    this.counter++;
+  }
+}
+
+```
+
+Here's a summary of the order in which these lifecycle methods are called:
+
+```ts
+ngOnChanges
+ngOnInit
+ngDoCheck
+ngAfterContentInit
+ngAfterContentChecked
+ngAfterViewInit
+ngAfterViewChecked
+ngOnDestroy
+```
+---
+# DAY 4
