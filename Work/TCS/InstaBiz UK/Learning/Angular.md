@@ -1986,5 +1986,254 @@ export class AppComponent {
 
 In this example, we have created a form with two fields: username and email. We used both built-in validators (`required` and `email`) and a custom validator (`forbiddenNameValidator`) for the username field. We displayed validation errors in the template based on form control states.
 
+---
+
+# DAY 5
+
+Rxjs library
+Singleton services
+server side rendering
+observables in angular
+
+# Rxjs library
+
+1. **Observables**: Observables represent sequences of values that can be observed over time. They can emit multiple values asynchronously, and observers can subscribe to them to receive these values.
+
+```ts
+import { Observable } from 'rxjs';
+
+const observable = new Observable<number>((observer) => {
+  observer.next(1);
+  observer.next(2);
+  observer.next(3);
+  setTimeout(() => observer.next(4), 1000);
+});
+
+const subscription = observable.subscribe({
+  next: (value) => console.log(value),
+  error: (err) => console.error('Error:', err),
+  complete: () => console.log('Completed'),
+});
+
+// Output:
+// 1
+// 2
+// 3
+// (after 1 second) 4
+// Completed
+
+// Unsubscribe after 2 seconds
+setTimeout(() => subscription.unsubscribe(), 2000);
+```
+
+2. **Operators**: Operators allow you to manipulate and transform observables, providing a wide range of functionalities.
+
+```ts
+import { from } from 'rxjs';
+import { map, filter } from 'rxjs/operators';
+
+from([1, 2, 3, 4, 5])
+  .pipe(
+    filter((x) => x % 2 === 0), // Filter even numbers
+    map((x) => x * 10) // Multiply each value by 10
+  )
+  .subscribe((value) => console.log(value));
+
+// Output:
+// 20
+// 40
+// ```
+```
+
+3. **Subjects**: Subjects act as both an observable and an observer. They can multicast values to multiple subscribers.
+
+```ts
+import { Subject } from 'rxjs';
+
+const subject = new Subject<number>();
+
+subject.subscribe((value) => console.log('Observer 1:', value));
+subject.subscribe((value) => console.log('Observer 2:', value));
+
+subject.next(1);
+subject.next(2);
+
+// Output:
+// Observer 1: 1
+// Observer 2: 1
+// Observer 1: 2
+// Observer 2: 2
+
+```
+
+4. **Utility Functions**: RxJS includes utility functions for creating observables from various data sources (`of`, `from`, `interval`, `timer`, etc.) and for combining and manipulating observables (`merge`, `concat`, `forkJoin`, etc.).
+
+```ts
+import { of, interval } from 'rxjs';
+import { merge } from 'rxjs/operators';
+
+// Emit values from a list
+of(1, 2, 3).subscribe((value) => console.log(value));
+
+// Emit incremental values every second
+interval(1000).subscribe((value) => console.log(value));
+
+// Merge multiple observables into one
+const observable1 = of('A', 'B', 'C');
+const observable2 = interval(1000);
+merge(observable1, observable2).subscribe((value) => console.log(value));
+```
+
+**mergeMap**:
+- `mergeMap` flattens each observable emitted by the source observable into one observable, allowing concurrent requests.
+
+```ts
+import { fromEvent, interval } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
+
+const clicks = fromEvent(document, 'click');
+const result = clicks.pipe(
+  mergeMap((event) => interval(1000)) // Emit values every second for each click
+);
+result.subscribe((value) => console.log(value));
+
+```
+
+**switchMap**:
+- `switchMap` cancels the previous inner observable when a new outer value is emitted, allowing only the latest observable to be subscribed to.
+
+```ts
+import { fromEvent, interval } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+
+const clicks = fromEvent(document, 'click');
+const result = clicks.pipe(
+  switchMap((event) => interval(1000)) // Emit values every second but only for the latest click
+);
+result.subscribe((value) => console.log(value));
+```
+
+- `concatMap` processes each value emitted by the source observable sequentially and waits for the inner observable to complete before emitting the next value.
+
+```ts
+import { fromEvent, interval } from 'rxjs';
+import { concatMap } from 'rxjs/operators';
+
+const clicks = fromEvent(document, 'click');
+const result = clicks.pipe(
+  concatMap((event) => interval(1000)) // Emit values every second but in a sequential order
+);
+result.subscribe((value) => console.log(value));
+```
+
+**combineLatest**:
+- `combineLatest` combines multiple observables into one observable that emits an array of the latest values from each source observable whenever any source observable emits a new value.
+
+```ts
+import { combineLatest, interval } from 'rxjs';
+
+const observable1 = interval(1000);
+const observable2 = interval(2000);
+const result = combineLatest([observable1, observable2]);
+result.subscribe(([value1, value2]) => console.log(value1, value2));
+```
+
+**zip**:
+- `zip` combines the values of multiple observables together, emitting arrays containing one value from each source observable.
+
+```ts
+import { zip, interval } from 'rxjs';
+
+const observable1 = interval(1000);
+const observable2 = interval(2000);
+const result = zip(observable1, observable2);
+result.subscribe(([value1, value2]) => console.log(value1, value2));
+
+```
+
+**Custom Operators**: Custom operators allow you to create your own operators by composing existing operators or implementing custom logic. This can be useful for encapsulating reusable logic or implementing specific behavior.
+
+```ts
+import { Observable, OperatorFunction } from 'rxjs';
+
+function multiplyBy(factor: number): OperatorFunction<number, number> {
+  return (source: Observable<number>) =>
+    new Observable<number>((observer) => {
+      const subscription = source.subscribe({
+        next(value) {
+          observer.next(value * factor);
+        },
+        error(error) {
+          observer.error(error);
+        },
+        complete() {
+          observer.complete();
+        },
+      });
+      return () => subscription.unsubscribe();
+    });
+}
+
+const observable = of(1, 2, 3).pipe(multiplyBy(2));
+observable.subscribe((value) => console.log(value)); // Output: 2, 4, 6
+```
 
 
+# Multiple Instances of Service
+
+If you need multiple instances of the same service in Angular, you can provide the service at the component level rather than at the root level. This way, each component can have its own instance of the service. Here's how you can achieve that:
+
+**Create the Service:**
+```ts
+// example.service.ts
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'any' // This is to indicate that we won't provide it at the root level
+})
+export class ExampleService {
+  constructor() { }
+
+  // Your service methods go here
+}
+
+```
+
+**Inject the Service in Components:**
+
+In each component where you want a separate instance of the service, inject it into the constructor as usual.
+
+```ts
+// component1.component.ts
+import { Component } from '@angular/core';
+import { ExampleService } from './example.service';
+
+@Component({
+  selector: 'app-component1',
+  templateUrl: './component1.component.html',
+  styleUrls: ['./component1.component.css']
+})
+export class Component1Component {
+  constructor(private exampleService: ExampleService) { }
+}
+```
+
+```ts
+// component2.component.ts
+import { Component } from '@angular/core';
+import { ExampleService } from './example.service';
+
+@Component({
+  selector: 'app-component2',
+  templateUrl: './component2.component.html',
+  styleUrls: ['./component2.component.css']
+})
+export class Component2Component {
+  constructor(private exampleService: ExampleService) { }
+}
+```
+
+1. **Using the Service:**
+Now, each component will have its own instance of the `ExampleService`, and you can use it as needed within each component.
+  
+By providing the service with `providedIn: 'any'`, Angular creates a new instance of the service for each component that requests it. This gives you the flexibility to have multiple instances of the same service across different parts of your application.
