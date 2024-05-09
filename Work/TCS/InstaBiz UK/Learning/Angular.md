@@ -1561,3 +1561,430 @@ ngOnDestroy
 ---
 # DAY 4
 
+# Dynamic Component Loading
+
+Dynamic component loading in Angular refers to the process of loading components at runtime, rather than at compile time. This capability allows you to create more flexible and customizable applications, where components can be loaded conditionally based on user interactions, data from APIs, or other runtime conditions.
+
+### Why Dynamic Component Loading?
+
+1. **Conditional Rendering:** You can load components based on certain conditions or user actions.
+2. **Lazy Loading:** Components can be loaded on-demand, improving initial load time and overall performance.
+3. **Runtime Configuration:** Components can be configured or customized dynamically based on runtime data.
+4. **Plugin System:** Dynamic loading enables the creation of plugin systems where additional functionality can be added at runtime.
+
+### How Dynamic Component Loading Works in Angular?
+
+Angular provides several mechanisms for dynamically loading components:
+
+1. **ComponentFactoryResolver:** This service allows you to get a reference to a component factory, which can then be used to create instances of the component dynamically.
+    
+2. **ViewContainerRef:** This represents a container where one or more components can be dynamically added or removed. It is typically used in conjunction with ComponentFactoryResolver.
+    
+
+### Example of Dynamic Component Loading in Angular 7:
+
+Let's create a simple example where we have a button that, when clicked, dynamically loads one of two different components.
+
+1. **Dynamic Component 1 (Component1Component):**
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-component1',
+  template: '<p>This is Component 1</p>'
+})
+export class Component1Component {}
+```
+
+2. **Dynamic Component 2 (Component2Component):**
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-component2',
+  template: '<p>This is Component 2</p>'
+})
+export class Component2Component {}
+```
+
+3. **Parent Component (AppComponent):**
+```ts
+import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component1Component } from './component1.component';
+import { Component2Component } from './component2.component';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <button (click)="loadComponent1()">Load Component 1</button>
+    <button (click)="loadComponent2()">Load Component 2</button>
+    <div #dynamicComponentContainer></div>
+  `
+})
+export class AppComponent {
+  @ViewChild('dynamicComponentContainer', { read: ViewContainerRef }) container: ViewContainerRef;
+
+  constructor(private resolver: ComponentFactoryResolver) {}
+
+  loadComponent1() {
+    this.container.clear();
+    const factory = this.resolver.resolveComponentFactory(Component1Component);
+    this.container.createComponent(factory);
+  }
+
+  loadComponent2() {
+    this.container.clear();
+    const factory = this.resolver.resolveComponentFactory(Component2Component);
+    this.container.createComponent(factory);
+  }
+}
+```
+
+In this example:
+
+- AppComponent has two buttons: one for loading Component1 and another for loading Component2.
+- When a button is clicked, the corresponding component is dynamically loaded into the container using ComponentFactoryResolver.
+
+# Authentication Guards
+
+Authentication guards in Angular are used to control access to routes in an Angular application based on the authentication state of the user. They intercept navigation requests and either allow or deny access to certain routes based on predefined conditions. Angular provides several types of authentication guards:
+
+1. **CanActivate:** This guard determines whether a route can be activated. It is typically used to prevent unauthorized users from accessing certain routes.
+    
+2. **CanActivateChild:** Similar to CanActivate, but it specifically guards child routes of a route.
+    
+3. **CanLoad:** This guard determines whether a module can be loaded lazily. It is useful for preventing the loading of feature modules by unauthorized users.
+    
+4. **CanDeactivate:** This guard is used to prevent navigation away from a route. It can be used to prompt the user for confirmation before leaving a route with unsaved changes.
+    
+
+### Example:
+
+Let's create an example of an authentication guard using CanActivate to protect a route in an Angular application.
+
+1. **Auth Service (auth.service.ts):**
+```ts
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  isLoggedIn = false;
+
+  login() {
+    this.isLoggedIn = true;
+  }
+
+  logout() {
+    this.isLoggedIn = false;
+  }
+
+  isAuthenticated(): boolean {
+    return this.isLoggedIn;
+  }
+}
+```
+
+2. **Authentication Guard (auth.guard.ts):**
+```ts
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService, private router: Router) {}
+
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    if (this.authService.isAuthenticated()) {
+      return true;
+    } else {
+      // Redirect to the login page if the user is not authenticated
+      return this.router.parseUrl('/login');
+    }
+  }
+}
+```
+
+3. **Route Configuration (app-routing.module.ts):**
+```ts
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '' } // Redirect to home if the route does not exist
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
+
+In this example:
+
+- The `AuthGuard` implements the `CanActivate` interface and checks if the user is authenticated using the `AuthService`.
+- If the user is authenticated, the route is allowed to activate. Otherwise, the user is redirected to the login page.
+- The `AuthGuard` is then added to the canActivate property of the route that needs to be protected (`HomeComponent` in this case).
+
+This example demonstrates how to use the `CanActivate` guard to protect routes based on the authentication state of the user. Similar guards like `CanActivateChild`, `CanLoad`, and `CanDeactivate` can be implemented following similar patterns to meet different authentication requirements in an Angular application.
+
+# Using Feature Modules
+
+Feature modules in Angular are a way to organize an application into cohesive units of functionality, making it easier to manage, scale, and maintain. They group related components, directives, pipes, and services together, encapsulating them into reusable and independent units.
+
+### Benefits of Feature Modules:
+
+1. **Modularity:** Feature modules promote modularity by encapsulating related functionality into separate units. This makes it easier to understand, maintain, and reuse code.
+    
+2. **Scalability:** As an application grows, feature modules allow developers to organize and scale the application more effectively by breaking it down into smaller, manageable pieces.
+    
+3. **Reusability:** Feature modules can be reused across different parts of the application or even in different projects, promoting code reuse and reducing duplication.
+    
+4. **Lazy Loading:** Feature modules can be lazy-loaded, meaning they are only loaded when needed, which improves the initial loading time of the application and reduces the bundle size.
+    
+
+### Creating a Feature Module:
+
+Let's create a simple feature module in an Angular application.
+
+1. **Generate a Feature Module:**
+```bash
+ng generate module products
+```
+This command will generate a new module named `products` with its own folder and files.
+
+2. **Define Components, Directives, Pipes, and Services:**
+
+Within the `products` module, define components, directives, pipes, and services related to the functionality of managing products.
+
+```bash
+ng generate component products/product-list
+ng generate component products/product-details
+```
+
+This command generates components for displaying a list of products and viewing product details within the `products` module.
+
+3. **Import and Export Components, Directives, Pipes, and Services:**
+
+In the `products.module.ts` file, import and declare the components, directives, pipes, and services that belong to the `products` module. Export any symbols that should be accessible to other modules.
+
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+
+@NgModule({
+  declarations: [
+    ProductListComponent,
+    ProductDetailsComponent
+  ],
+  imports: [
+    CommonModule
+  ],
+  exports: [
+    ProductListComponent,
+    ProductDetailsComponent
+  ]
+})
+export class ProductsModule { }
+
+```
+
+4. **Import Feature Module:**
+
+In the main application module (`app.module.ts`), import the `ProductsModule` to make its components, directives, pipes, and services available to the rest of the application.
+
+```ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ProductsModule } from './products/products.module';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ProductsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+5. **Use Components, Directives, Pipes, and Services:**
+
+Now, you can use the components, directives, pipes, and services defined in the `products` module in other parts of the application.
+
+```ts
+<!-- app.component.html -->
+<h1>Product List</h1>
+<app-product-list></app-product-list>
+
+<h1>Product Details</h1>
+<app-product-details></app-product-details>
+
+```
+
+# Validators:
+
+In Angular, validators are used to validate user input in forms. Angular provides built-in validators like `required`, `minLength`, `maxLength`, etc. Additionally, you can create custom validators to suit specific validation requirements. Let's explore how to use both built-in and custom validators in Angular forms.
+
+### Using Built-in Validators:
+
+Angular provides a set of built-in validators that you can use out of the box. These validators are available as static methods in the `Validators` class.
+
+1. **Import Validators:**
+```ts
+import { Validators } from '@angular/forms';
+```
+
+2. **Using Built-in Validators:**
+
+Built-in validators are used by passing them as arguments to the `FormControl` constructor or to the `Validators.compose()` method.
+
+```ts
+import { Validators } from '@angular/forms';
+
+// Example of using required validator
+this.myForm = this.fb.group({
+  username: ['', Validators.required], // Required validator
+  email: ['', [Validators.required, Validators.email]], // Multiple validators
+});
+
+```
+
+3. **Display Validation Errors in the Template:**
+
+In the template, you can display validation errors using the `formControlName` directive along with Angular's `*ngIf` directive.
+
+```html
+<div *ngIf="myForm.get('username').errors?.required && myForm.get('username').touched">
+  Username is required.
+</div>
+<div *ngIf="myForm.get('email').errors?.required && myForm.get('email').touched">
+  Email is required.
+</div>
+<div *ngIf="myForm.get('email').errors?.email && myForm.get('email').touched">
+  Please enter a valid email.
+</div>
+
+```
+
+### Creating Custom Validators:
+
+Custom validators are functions that take a `FormControl` object as input and return a validation error object if the validation fails, or `null` if the validation succeeds.
+
+1. **Define a Custom Validator Function:**
+```ts
+import { AbstractControl, ValidatorFn } from '@angular/forms';
+
+export function forbiddenNameValidator(forbiddenName: RegExp): ValidatorFn {
+  return (control: AbstractControl): {[key: string]: any} | null => {
+    const forbidden = forbiddenName.test(control.value);
+    return forbidden ? {'forbiddenName': {value: control.value}} : null;
+  };
+}
+
+```
+
+2. **Using the Custom Validator:**
+
+```ts
+import { forbiddenNameValidator } from './forbidden-name-validator';
+
+this.myForm = this.fb.group({
+  username: ['', [Validators.required, forbiddenNameValidator(/admin/i)]],
+});
+
+```
+
+3. **Display Validation Errors for Custom Validator:**
+```html
+<div *ngIf="myForm.get('username').errors?.required && myForm.get('username').touched">
+  Username is required.
+</div>
+<div *ngIf="myForm.get('username').errors?.forbiddenName && myForm.get('username').touched">
+  Username cannot contain 'admin'.
+</div>
+
+```
+
+### Example:
+
+Let's create a simple example to demonstrate the usage of both built-in and custom validators:
+
+```ts
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { forbiddenNameValidator } from './forbidden-name-validator';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  myForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      username: ['', [Validators.required, forbiddenNameValidator(/admin/i)]],
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
+}
+
+```
+
+```html
+<form [formGroup]="myForm">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    <div *ngIf="myForm.get('username').errors?.required && myForm.get('username').touched">
+      Username is required.
+    </div>
+    <div *ngIf="myForm.get('username').errors?.forbiddenName && myForm.get('username').touched">
+      Username cannot contain 'admin'.
+    </div>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+    <div *ngIf="myForm.get('email').errors?.required && myForm.get('email').touched">
+      Email is required.
+    </div>
+    <div *ngIf="myForm.get('email').errors?.email && myForm.get('email').touched">
+      Please enter a valid email.
+    </div>
+  </div>
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
+
+```
+
+In this example, we have created a form with two fields: username and email. We used both built-in validators (`required` and `email`) and a custom validator (`forbiddenNameValidator`) for the username field. We displayed validation errors in the template based on form control states.
+
+
+
