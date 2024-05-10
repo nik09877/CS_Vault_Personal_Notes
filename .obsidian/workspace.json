@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f01771bafb152ae0",
+        "id": "df4acfd1a7fe6161",
         "type": "tabs",
         "children": [
           {
-            "id": "e943d6991c2e2bf3",
+            "id": "bece14e0ca2008d9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md"
-              }
+              "state": {}
             }
           },
           {
@@ -104,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +168,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e943d6991c2e2bf3",
+  "active": "bece14e0ca2008d9",
   "lastOpenFiles": [
     "Work/TCS/InstaBiz UK/Learning/Angular.md",
     "Work/TCS/Ultimatix/Project Work.md",

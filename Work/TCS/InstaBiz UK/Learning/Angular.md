@@ -1990,11 +1990,6 @@ In this example, we have created a form with two fields: username and email. We 
 
 # DAY 5
 
-Rxjs library
-Singleton services
-server side rendering
-observables in angular
-
 # Rxjs library
 
 1. **Observables**: Observables represent sequences of values that can be observed over time. They can emit multiple values asynchronously, and observers can subscribe to them to receive these values.
@@ -2237,3 +2232,74 @@ export class Component2Component {
 Now, each component will have its own instance of the `ExampleService`, and you can use it as needed within each component.
   
 By providing the service with `providedIn: 'any'`, Angular creates a new instance of the service for each component that requests it. This gives you the flexibility to have multiple instances of the same service across different parts of your application.
+
+# Server Side Rendering
+
+Server-side rendering (SSR) in Angular 7 can be achieved using Angular Universal. Angular Universal is a technology that allows Angular applications to run on the server side. This can improve performance, enable better SEO, and provide a more consistent user experience, especially for users with slow internet connections or devices.
+
+Here's a general overview of how to implement server-side rendering in Angular 7 with Angular Universal:
+
+1. **Install Angular Universal:**
+    
+    First, you need to install Angular Universal and the necessary dependencies. You can use Angular CLI to set up Angular Universal in your existing Angular project:
+
+```bash
+ng add @nguniversal/express-engine
+```
+
+This command will add Angular Universal support to your project and set up the necessary files and dependencies.
+    
+2. **Build the Application for SSR:**
+    
+    Next, you need to build your Angular application specifically for server-side rendering. Angular Universal requires a separate build configuration for server-side rendering. You can build the application for SSR using the following command:
+
+```bash
+npm run build:ssr
+```
+ This command will create a server-side rendered version of your Angular application.
+    
+3. **Set Up Server-Side Code:**
+    
+    Angular Universal uses Node.js for server-side rendering. You need to set up a server-side code to serve your Angular application. This typically involves creating an Express.js server.
+    
+    Here's a basic example of setting up an Express server for serving Angular Universal applications:
+
+```ts
+// server.ts
+import 'zone.js/dist/zone-node';
+import * as express from 'express';
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import { join } from 'path';
+
+const app = express();
+
+app.engine('html', ngExpressEngine({
+  bootstrap: AppServerModule
+}));
+
+app.set('view engine', 'html');
+app.set('views', join(__dirname, 'dist/browser'));
+
+app.get('*.*', express.static(join(__dirname, 'dist/browser'), {
+  maxAge: '1y'
+}));
+
+app.get('*', (req, res) => {
+  res.render('index', { req });
+});
+
+app.listen(3000, () => {
+  console.log(`Server running on http://localhost:3000`);
+});
+
+```
+
+4. **Run the Server:**
+
+Finally, you can start your server to serve the server-side rendered Angular application:
+
+```bash
+node server.js
+```
+
+This command will start the Express server, and your Angular application will be accessible at `http://localhost:3000`.
