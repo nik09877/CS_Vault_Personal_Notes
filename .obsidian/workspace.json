@@ -11,8 +11,12 @@
             "id": "bece14e0ca2008d9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -81,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md"
+              }
             }
           },
           {
@@ -98,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }

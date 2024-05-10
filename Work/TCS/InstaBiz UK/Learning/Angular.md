@@ -2303,3 +2303,200 @@ node server.js
 ```
 
 This command will start the Express server, and your Angular application will be accessible at `http://localhost:3000`.
+
+# DAY 6
+
+# User Input
+
+User actions such as clicking a link, pushing a button, and entering text raise DOM events.
+
+## Binding to user input events
+
+To bind to a DOM event, surround the DOM event name in parentheses and assign a quoted [template statement](https://devdocs.io/angular~7/guide/template-syntax#template-statements) to it.
+
+```html
+<button (click)="onClickMe()">Click me!</button>
+```
+
+```ts
+@Component({
+  selector: 'app-click-me',
+  template: `
+    <button (click)="onClickMe()">Click me!</button>
+    {{clickMessage}}`
+})
+export class ClickMeComponent {
+  clickMessage = '';
+
+  onClickMe() {
+    this.clickMessage = 'You are my hero!';
+  }
+}
+```
+
+When the user clicks the button, Angular calls the `onClickMe` method from `ClickMeComponent`.
+
+## Get user input from the $event object
+
+DOM events carry a payload of information that may be useful to the component. This section shows how to bind to the `keyup` event of an input box to get the user's input after each keystroke.
+
+The following code listens to the `keyup` event and passes the entire event payload (`$event`) to the component event handler.
+
+```ts
+template: `
+  <input (keyup)="onKey($event)">
+  <p>{{values}}</p>
+`
+```
+
+When a user presses and releases a key, the `keyup` event occurs, and Angular provides a corresponding DOM event object in the `$event` variable which this code passes as a parameter to the component's `onKey()` method.
+
+```ts
+export class KeyUpComponent_v1 {
+  values = '';
+
+  onKey(event: any) { // without type info
+    this.values += event.target.value + ' | ';
+  }
+}
+```
+
+The properties of an `$event` object vary depending on the type of DOM event. For example, a mouse event includes different information than an input box editing event.
+
+All [standard DOM event objects](https://developer.mozilla.org/en-US/docs/Web/API/Event) have a [target](https://devdocs.io/angular~7/api/router/routerlinkwithhref#target) property, a reference to the element that raised the event. In this case, [target](https://devdocs.io/angular~7/api/router/routerlinkwithhref#target) refers to the [`<input>` element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement) and `event.target.value` returns the current contents of that element.
+
+After each call, the `onKey()` method appends the contents of the input box value to the list in the component's `values` property, followed by a separator character (|). The [interpolation](https://devdocs.io/angular~7/guide/template-syntax#interpolation) displays the accumulating input box changes from the `values` property.
+
+## Get user input from a template reference variable
+These variables provide direct access to an element from within the template. To declare a template reference variable, precede an identifier with a hash (or pound) character (#).
+
+```ts
+@Component({
+  selector: 'app-loop-back',
+  template: `
+    <input #box (keyup)="0">
+    <p>{{box.value}}</p>
+  `
+})
+export class LoopbackComponent { }
+```
+
+The template reference variable named `box`, declared on the `<input>` element, refers to the `<input>` element itself. The code uses the `box` variable to get the input element's `value` and display it with interpolation between `<p>` tags.
+
+It's easier to get to the input box with the template reference variable than to go through the `$event` object. Here's a rewrite of the previous `keyup` example that uses a template reference variable to get the user's input.
+
+```ts
+@Component({
+  selector: 'app-key-up2',
+  template: `
+    <input #box (keyup)="onKey(box.value)">
+    <p>{{values}}</p>
+  `
+})
+export class KeyUpComponent_v2 {
+  values = '';
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
+}
+```
+
+## Key event filtering (with `key.enter`)
+
+The `(keyup)` event handler hears _every keystroke_. Sometimes only the _Enter_ key matters, because it signals that the user has finished typing. One way to reduce the noise would be to examine every `$event.keyCode` and take action only when the key is _Enter_.
+
+There's an easier way: bind to Angular's `keyup.enter` pseudo-event. Then Angular calls the event handler only when the user presses _Enter_.
+
+```ts
+@Component({
+  selector: 'app-key-up3',
+  template: `
+    <input #box (keyup.enter)="onEnter(box.value)">
+    <p>{{value}}</p>
+  `
+})
+export class KeyUpComponent_v3 {
+  value = '';
+  onEnter(value: string) { this.value = value; }
+}
+```
+
+## On blur
+
+In the previous example, the current state of the input box is lost if the user mouses away and clicks elsewhere on the page without first pressing _Enter_. The component's `value` property is updated only when the user presses _Enter_.
+
+To fix this issue, listen to both the _Enter_ key and the _blur_ event.
+
+```ts
+@Component({
+  selector: 'app-key-up4',
+  template: `
+    <input #box
+      (keyup.enter)="update(box.value)"
+      (blur)="update(box.value)">
+
+    <p>{{value}}</p>
+  `
+})
+export class KeyUpComponent_v4 {
+  value = '';
+  update(value: string) { this.value = value; }
+}
+```
+
+# Hierarchical Dependency Injectors
+
+The Angular dependency injection system is _hierarchical_. There is a tree of injectors that parallels an app's component tree. You can reconfigure the injectors at any level of that component tree.
+
+You can configure providers for different injectors in the injector hierarchy. An internal platform-level injector is shared by all running apps. The `AppModule` injector is the root of an app-wide injector hierarchy, and within an NgModule, directive-level injectors follow the structure of the component hierarchy.
+
+### @Injectable-level configuration
+
+The @[Injectable](https://devdocs.io/angular~7/api/core/injectable)() decorator identifies every service class. The `providedIn` metadata option for a service class configures a specific injector (typically `root`) to use the decorated class as a provider of the service. When an injectable class provides its own service to the `root` injector, the service is available anywhere the class is imported.
+
+```ts
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class HeroService {
+  constructor() { }
+}
+```
+
+### @NgModule-level injectors
+
+You can configure a provider at the module level using the `providers` metadata option for a non-root NgModule, in order to limit the scope of the provider to that module. This is the equivalent of specifying the non-root module in the @[Injectable](https://devdocs.io/angular~7/api/core/injectable)() metadata, except that the service provided via `providers` is not tree-shakable.
+
+You generally don't need to specify `AppModule` with `providedIn`, because the app's `root` injector is the `AppModule` injector. However, if you configure a app-wide provider in the @[NgModule](https://devdocs.io/angular~7/api/core/ngmodule)() metadata for `AppModule`, it overrides one configured for `root` in the @[Injectable](https://devdocs.io/angular~7/api/core/injectable)() metadata. You can do this to configure a non-default provider of a service that is shared with multiple apps.
+
+Here is an example of the case where the component router configuration includes a non-default [location strategy](https://devdocs.io/angular~7/guide/router#location-strategy) by listing its provider in the `providers` list of the `AppModule`.
+
+```ts
+providers: [
+  { provide: LocationStrategy, useClass: HashLocationStrategy }
+]
+```
+
+### @Component-level injectors
+
+Individual components within an NgModule have their own injectors. You can limit the scope of a provider to a component and its children by configuring the provider at the component level using the @[Component](https://devdocs.io/angular~7/api/core/component) metadata.
+
+The following example is a revised `HeroesComponent` that specifies `HeroService` in its `providers` array. `HeroService` can provide heroes to instances of this component, or to any child component instances.
+
+```ts
+import { Component } from '@angular/core';
+
+import { HeroService } from './hero.service';
+
+@Component({
+  selector: 'app-heroes',
+  providers: [ HeroService ],
+  template: `
+    <h2>Heroes</h2>
+    <app-hero-list></app-hero-list>
+  `
+})
+export class HeroesComponent { }
+```
