@@ -2500,3 +2500,194 @@ import { HeroService } from './hero.service';
 })
 export class HeroesComponent { }
 ```
+
+# BootStrap 4
+
+**1. Grid System:** Bootstrap's grid system allows you to create complex layouts by dividing the page into rows and columns. It is based on a 12-column layout system that scales dynamically based on screen size.
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">Column 1</div>
+    <div class="col-md-6">Column 2</div>
+  </div>
+</div>
+```
+
+**2. Navbar:** The Navbar component provides a responsive navigation bar that adapts to different screen sizes.
+
+```html
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">My Website</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+```
+
+**3. Cards:** Cards are flexible and extensible content containers in Bootstrap 4, which allow you to display various types of content, such as images, text, and links, in a consistent manner.
+
+```html
+<div class="card">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+```
+
+**4. Forms:** Bootstrap provides a set of styles and classes to create attractive and responsive forms quickly.
+
+```html
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+```
+
+**5. Buttons:** Bootstrap provides a variety of button styles and sizes to suit different needs.
+
+```html
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+```
+
+  
+**6. Jumbotron:** The Jumbotron component is a lightweight, flexible component for showcasing key content on your site. It's often used for hero headers or call-to-action sections.
+
+```html
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+```
+
+**7. Alerts:** Bootstrap provides styles for four different types of alerts: success, info, warning, and danger.
+
+```html
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  This is a info alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+```
+
+**8. Carousel:** The Carousel component allows you to showcase multiple images or content in a slideshow format.
+
+```html
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="..." alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+```
+
+**9. Modals:** Modals are dialog boxes that overlay the main content of a page. They're useful for displaying additional content or interactive forms.
+
+```html
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+**10. Dropdowns:** Bootstrap provides styles for dropdown menus, which are useful for presenting a list of options to users.
+
+```html
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+```
