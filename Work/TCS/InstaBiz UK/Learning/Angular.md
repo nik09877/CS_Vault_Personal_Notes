@@ -1,8 +1,3 @@
-
-# DAY 1
-
----
-
 # Components in Angular
 
 Components are the foundational building blocks for any Angular application. 
@@ -414,9 +409,6 @@ The framework passes the event argument—represented by `$event`—to the hand
 
 
 --- 
-
-# DAY 2
-
 # Routing & Navigation
 
 The Angular [Router](https://devdocs.io/angular~7/api/router/router) enables navigation from one [view](https://devdocs.io/angular~7/guide/glossary#view) to the next as users perform application tasks.
@@ -984,8 +976,6 @@ export class AppModule { }
 ```
 
 ---
-# DAY 3
-
 # Pipes
 
 In Angular, pipes are a feature that allows you to transform data in your templates before displaying it to the user.
@@ -1559,8 +1549,6 @@ ngAfterViewChecked
 ngOnDestroy
 ```
 ---
-# DAY 4
-
 # Dynamic Component Loading
 
 Dynamic component loading in Angular refers to the process of loading components at runtime, rather than at compile time. This capability allows you to create more flexible and customizable applications, where components can be loaded conditionally based on user interactions, data from APIs, or other runtime conditions.
@@ -1988,8 +1976,6 @@ In this example, we have created a form with two fields: username and email. We 
 
 ---
 
-# DAY 5
-
 # Rxjs library
 
 1. **Observables**: Observables represent sequences of values that can be observed over time. They can emit multiple values asynchronously, and observers can subscribe to them to receive these values.
@@ -2303,8 +2289,6 @@ node server.js
 ```
 
 This command will start the Express server, and your Angular application will be accessible at `http://localhost:3000`.
-
-# DAY 6
 
 # User Input
 
@@ -2691,3 +2675,138 @@ export class HeroesComponent { }
   </div>
 </div>
 ```
+
+---
+
+# Differences between Angular.js and Angular
+
+1. **Language and Architecture**:
+
+- AngularJS was built using JavaScript and relied heavily on controllers, scope, and two-way data binding.
+- Angular is built using TypeScript (a superset of JavaScript) and follows a more modular and component-based architecture.
+
+>AngularJS (Angular 1.x) example:
+
+```js
+// app.js
+var app = angular.module('myApp', []);
+
+app.controller('MyController', function($scope) {
+  $scope.message = 'Hello, World!';
+});
+```
+
+```html
+<!-- index.html -->
+<div ng-app="myApp" ng-controller="MyController">
+  {{ message }}
+</div>
+```
+
+> Angular (Angular 2+) example:
+
+```ts
+// app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: '<h1>{{ message }}</h1>'
+})
+export class AppComponent {
+  message = 'Hello, World!';
+}
+```
+
+2. **Dependency Injection**:
+
+- In AngularJS, dependency injection was achieved through string-based injection.
+- In Angular, dependency injection is handled using a hierarchical injector system, which is more efficient and type-safe.
+
+> AngularJS (Angular 1.x) example:
+
+```js
+app.controller('MyController', ['$scope', '$http', function($scope, $http) {
+  // ...
+}]);
+```
+
+> Angular (Angular 2+) example:
+
+```ts
+import { Component, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  // ...
+})
+export class MyComponent {
+  constructor(@Inject(HttpClient) private http: HttpClient) {
+    // ...
+  }
+}
+```
+
+3. **Rendering**:
+
+- AngularJS used a dirty-checking mechanism to detect changes and update the DOM.
+- Angular uses a more efficient change detection mechanism based on a unidirectional data flow.
+
+4. **Modules**:
+
+- In AngularJS, modules were used to organize code and dependencies.
+- In Angular, modules are used for the same purpose, but they are defined using TypeScript decorators and have a more structured approach.
+
+5. **Directives and Components**:
+
+- AngularJS relied heavily on directives for creating reusable UI components.
+- Angular introduced a more structured approach with components, which encapsulate templates, styles, and logic.
+
+> AngularJS (Angular 1.x) directive example:
+
+```js
+app.directive('myDirective', function() {
+  return {
+    restrict: 'E',
+    template: '<div>My Directive</div>'
+  };
+});
+```
+
+> Angular (Angular 2+) component example:
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-my-component',
+  template: '<div>My Component</div>'
+})
+export class MyComponent {}
+```
+
+6. **Template Syntax**:
+
+- AngularJS used a more complex template syntax with features like `ng-repeat`, `ng-if`, `ng-model`, etc.
+- Angular introduced a more straightforward and expressive template syntax, with structural directives like `*ngFor`, `*ngIf`, and property bindings like `[(ngModel)]`.
+
+> AngularJS (Angular 1.x) template example:
+
+```html
+<div ng-repeat="item in items">{{ item }}</div>
+<input ng-model="name" />
+```
+
+> Angular (Angular 2+) template example:
+
+```html
+<div *ngFor="let item of items">{{ item }}</div>
+<input [(ngModel)]="name" />
+```
+
+7. **Routing**:
+
+- In AngularJS, routing was handled by external libraries like `ngRoute` or `ui-router`.
+- Angular has a built-in routing module (`@angular/router`) that provides advanced routing capabilities out of the box.
+
+> AngularJS (Angular 1.x) routing example (with `ui-router`):

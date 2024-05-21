@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "df4acfd1a7fe6161",
+        "id": "331d26b64e2fbbfc",
         "type": "tabs",
         "children": [
           {
-            "id": "bece14e0ca2008d9",
+            "id": "f0dde961efb24a8d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf"
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -67,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -83,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf"
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md"
               }
             }
           },
@@ -101,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,11 +176,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bece14e0ca2008d9",
+  "active": "f0dde961efb24a8d",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Learning/Angular.md",
     "Work/TCS/Ultimatix/Project Work.md",
-    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Learning/~WRL0003.tmp",
