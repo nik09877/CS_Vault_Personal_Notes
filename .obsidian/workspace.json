@@ -11,11 +11,9 @@
             "id": "bece14e0ca2008d9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
-                "mode": "preview",
-                "source": true
+                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf"
               }
             }
           }
@@ -69,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -86,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md"
+                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf"
               }
             }
           },
@@ -104,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
+                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
+                "file": "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
