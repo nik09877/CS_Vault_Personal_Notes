@@ -2810,3 +2810,49 @@ export class MyComponent {}
 - Angular has a built-in routing module (`@angular/router`) that provides advanced routing capabilities out of the box.
 
 > AngularJS (Angular 1.x) routing example (with `ui-router`):
+
+```js
+app.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/home');
+
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: 'home.html'
+    });
+});
+```
+
+> Angular (Angular 2+) routing example:
+
+```ts
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home.component';
+
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
+```
+
+8. **Angular CLI**:
+
+- AngularJS did not have an official command-line interface (CLI) tool.
+- Angular introduced the Angular CLI, which simplifies project setup, development, and build processes.
+
+9. **Angular Universal**:
+
+- Angular introduced Angular Universal, which allows for server-side rendering of Angular applications, improving initial load times and SEO.
+
+10. **Backwards Compatibility**:
+
+- AngularJS versions were largely backwards-compatible, at the cost of carrying technical debt.
+- Angular introduced breaking changes with each major version, aiming for a more consistent and maintainable codebase, but requiring migration efforts between versions.
+
