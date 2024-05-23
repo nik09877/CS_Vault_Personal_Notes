@@ -2856,3 +2856,322 @@ export class AppRoutingModule {}
 - AngularJS versions were largely backwards-compatible, at the cost of carrying technical debt.
 - Angular introduced breaking changes with each major version, aiming for a more consistent and maintainable codebase, but requiring migration efforts between versions.
 
+# Different Angular Versions and Features
+
+## **Angular 2 (Released in September 2016)**:
+
+**Component-based Architecture**: Angular 2 introduced a component-based architecture, where components are the building blocks of an application.
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <h1>{{ title }}</h1>
+    <app-child [message]="message"></app-child>
+  `
+})
+export class AppComponent {
+  title = 'Hello, Angular 2!';
+  message = 'This is a message from the parent component.';
+}
+
+@Component({
+  selector: 'app-child',
+  template: `<p>{{ message }}</p>`
+})
+export class ChildComponent {
+  @Input() message: string;
+}
+```
+
+**TypeScript and Decorators**: Angular 2 was written in TypeScript and made use of decorators for metadata annotations.
+
+```ts
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class MyService {
+  // ...
+}
+```
+
+## **Angular 4 (Released in March 2017)**:
+
+Angular 4 was a minor release focused on bug fixes and performance improvements.
+
+## **Angular 5 (Released in November 2017)**:
+
+1. **Angular Universal (Server-side Rendering)**: Angular 5 introduced Angular Universal, which allows for server-side rendering of Angular applications.
+
+```ts
+// app.server.ts
+import 'zone.js/dist/zone-node';
+import 'reflect-metadata';
+import { renderModuleFactory } from '@angular/platform-server';
+import { AppServerModuleNgFactory } from './app.server.module.ngfactory';
+
+renderModuleFactory(AppServerModuleNgFactory, {
+  url: '/',
+  document: '<app-root></app-root>'
+}).then(html => {
+  console.log(html);
+});
+```
+
+2. **Progressive Web Apps (PWA) Support**: Angular 5 added support for building progressive web applications with service workers.
+
+```ts
+// app.module.ts
+import { NgModule } from '@angular/core';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
+@NgModule({
+  imports: [
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+  ]
+})
+export class AppModule {}
+```
+
+## **Angular 6 (Released in May 2018)**:
+
+1. **Angular Elements (Web Components)**: Angular 6 introduced Angular Elements, which allowed creating web components from Angular components.
+
+```ts
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-hello-world',
+  template: `<h1>Hello, {{ name }}!</h1>`,
+  encapsulation: ViewEncapsulation.Native
+})
+export class HelloWorldComponent {
+  @Input() name: string;
+}
+```
+
+2. **Angular CLI Workspaces**: The Angular CLI introduced workspaces, allowing better management of multiple projects within a single workspace.
+
+```bash
+my-workspace/
+  ├── package.json
+  ├── angular.json
+  ├── projects/
+  │   ├── project1/
+  │   └── project2/
+  └── ...
+```
+
+## **Angular 7 (Released in October 2018)**:
+
+1. **Virtual Scrolling**: Angular 7 introduced virtual scrolling, which improves performance by rendering only the visible portion of a large list.
+
+```html
+<cdk-virtual-scroll-viewport itemSize="50">
+  <div *cdkVirtualFor="let item of items">{{ item }}</div>
+</cdk-virtual-scroll-viewport>
+```
+
+2. **Drag and Drop**: Angular 7 added a built-in drag and drop module.
+
+```html
+<div cdkDrag>Drag me</div>
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <div cdkDrag *ngFor="let item of items">{{ item }}</div>
+</div>
+```
+
+## **Angular 8 (Released in May 2019)**:
+
+1. **Differential Loading**: Angular 8 introduced differential loading, which allows serving different bundles for modern and legacy browsers.
+
+```ts
+// app.module.ts
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'my-app' })
+  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+2. **Web Workers**: Angular 8 added support for Web Workers, allowing offloading of compute-intensive tasks to a separate thread.
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <button (click)="startWorker()">Start Worker</button>
+  `
+})
+export class AppComponent {
+  worker: Worker;
+
+  startWorker() {
+    if (typeof Worker !== 'undefined') {
+      this.worker = new Worker('./app.worker', { type: 'module' });
+      this.worker.onmessage = ({ data }) => {
+        console.log(`Worker result: ${data}`);
+      };
+      this.worker.postMessage('Hello, Worker!');
+    } else {
+      console.log('Web Workers are not supported in this environment.');
+    }
+  }
+}
+```
+
+## **Angular 9 (Released in February 2020)**:
+
+1. **Ivy Renderer**: Angular 9 introduced the Ivy renderer, which improved bundle sizes, performance, and type-checking.
+
+```ts
+import { Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <h1>Hello, Ivy!</h1>
+    <app-child></app-child>
+  `,
+  encapsulation: ViewEncapsulation.ShadowDom
+})
+export class AppComponent {}
+```
+
+2. **Improved Dependency Injection**: Angular 9 improved the dependency injection system, making it more efficient and type-safe.
+
+```ts
+import { Component, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  // ...
+})
+export class MyComponent {
+  constructor(@Inject(HttpClient) private http: HttpClient) {
+    // ...
+  }
+}
+```
+
+## **Angular 10 (Released in June 2020)**:
+
+Angular 10 focused on further improvements to the Ivy renderer and TypeScript support.
+
+## **Angular 11 (Released in November 2020)**:
+
+1. **Stricter TypeScript Settings**: Angular 11 introduced stricter TypeScript settings, improving type safety and null safety.
+
+```ts
+// tsconfig.json
+{
+  "compilerOptions": {
+    "strict": true,
+    "strictNullChecks": true,
+    // ...
+  }
+}
+```
+
+2. **Language Service**: Angular 11 added a language service, providing better code completion, type-checking, and refactoring support in IDEs.
+
+## **Angular 12 (Released in May 2021)**:
+
+Angular 12 continued to improve TypeScript support and introduce stricter settings.
+
+
+## **Angular 13 (Released in November 2021)**:
+
+1. **Strict Templates**: Angular 13 introduced the `strictTemplates` flag, which enforces stricter type-checking for template expressions.
+
+```ts
+// tsconfig.json
+{
+  "compilerOptions": {
+    "strict": true,
+    "strictTemplates": true,
+    // ...
+  }
+}
+```
+
+2. **Improved Ahead-of-Time (AoT) Compilation**: Angular 13 improved the performance and reliability of the AoT compilation process.
+
+## **Angular 14 (Released in June 2022)**:
+
+1. **Standalone Components**: Angular 14 introduced standalone components, allowing components to be used without an NgModule.
+
+```ts
+import { Component, standalone }
+```
+
+## Angular 15 (November 18, 2022)
+
+### New Features:
+
+- No specific features were listed for Angular 15.
+
+## Angular 16 (May 3, 2023)
+
+#### New Features:
+
+1. **Partial Hydration for Angular Universal's Server-side Rendering:**
+    - Enhanced SSR performance with partial hydration.
+2. **Experimental Jest Support:**
+    - Added support for the Jest testing framework.
+3. **Esbuild-based Build System:**
+    - Introduced an Esbuild-based build system for development servers.
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-ssr',
+  template: `<h1>Server-side Rendered Component</h1>`
+})
+export class SsrComponent {}
+
+```
+
+
+## Angular 17 (November 8, 2023)
+
+#### New Features:
+
+1. **Application Builder:**
+    - Introduced a new application builder to streamline the build process.
+2. **New Syntax for Control Flow:**
+    - Enhanced control flow with a new syntax.
+3. **Re-worked Learning and Documentation Website:**
+    - Improved resources for learning and documentation.
+
+> Code Example - New Syntax for Control Flow:
+
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-example',
+  template: `
+    <ng-container *for="let item of items">
+      <div>{{ item }}</div>
+    </ng-container>
+  `
+})
+export class ExampleComponent {
+  items = ['Item 1', 'Item 2', 'Item 3'];
+}
+
+```
