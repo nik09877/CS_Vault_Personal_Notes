@@ -423,7 +423,7 @@
 - [ ] Design Vending Machine
 - [ ] Design ATM
 - [ ] Design Chess game
-- [ ] Design File System
+- [x] Design File System
 - [ ] Design Splitwise
 - [ ] Splitwise Simplify Algorithm / Optimal Accounting Balancing
 - [ ] Design CricBuzz / CricketInfo
