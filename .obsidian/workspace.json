@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "mode": "preview",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,8 +162,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5,
-    "collapsed": true
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,6 +177,7 @@
   },
   "active": "f0dde961efb24a8d",
   "lastOpenFiles": [
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "Work/TCS/InstaBiz UK/Learning/Angular.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/Ultimatix/Project Work.md",
@@ -190,7 +190,6 @@
     "Work/TCS/InstaBiz UK/Learning/~$utter Doc.docx",
     "Work/TCS/InstaBiz UK/Learning/Flutter.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
