@@ -406,7 +406,7 @@
 
 
 # Concept and Coding
-- [ ] Design Notify-Me Button Functionality
+- [x] Design Notify-Me Button Functionality
 - [x] HashMap Internal Implementation
 - [x] Online Auction System
 - [x] Null Object Pattern
@@ -442,7 +442,7 @@
 - [ ] Design Stock Exchange System
 - [ ] Design Learning Management System
 - [ ] Design a Calendar Application
-- [ ] Design (LLD) Payment System
+- [x] Design (LLD) Payment System
 - [ ] Design (LLD) Chat based system
 - [ ] Design Food delivery app like Swiggy and Zomato
 - [ ] Design Community Discussion Platform
