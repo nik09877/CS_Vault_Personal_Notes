@@ -419,7 +419,7 @@
 - [ ] Design Car Rental System
 - [ ] Design Logging System
 - [ ] Design Tic-Tac-Toe game
-- [ ] Design BookMyShow & Concurrency handling
+- [x] Design BookMyShow & Concurrency handling
 - [ ] Design Vending Machine
 - [ ] Design ATM
 - [ ] Design Chess game
