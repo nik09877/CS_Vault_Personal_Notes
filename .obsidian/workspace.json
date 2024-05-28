@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -178,11 +177,11 @@
   },
   "active": "ac4d8805534206d4",
   "lastOpenFiles": [
-    "Work/TCS/InstaBiz UK/Learning/Angular.md",
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
-    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/Ultimatix/Project Work.md",
+    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "Work/TCS/InstaBiz UK/Learning/Angular.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Learning/~WRL0003.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRD0002.tmp",
