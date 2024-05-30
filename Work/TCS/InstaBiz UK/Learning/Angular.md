@@ -2024,6 +2024,21 @@ from([1, 2, 3, 4, 5])
 // 20
 // 40
 // ```
+
+/*`tap` is an operator provided by RxJS that allows you to perform side effects based on the emissions from the source observable without modifying those emissions. It's often used for debugging, logging, or performing other actions that don't change the emitted data.
+*/
+
+import { tap } from 'rxjs/operators';
+import { of } from 'rxjs';
+
+const source = of(1, 2, 3);
+
+source.pipe(
+  tap(value => console.log('Value:', value)),
+  tap(value => updateSomeState(value))
+).subscribe();
+
+
 ```
 
 3. **Subjects**: Subjects act as both an observable and an observer. They can multicast values to multiple subscribers.
