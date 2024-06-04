@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
-                "mode": "source",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,11 +177,11 @@
   },
   "active": "565e0b25b72a5688",
   "lastOpenFiles": [
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "z_assets/Pasted image 20240531155033.png",
     "z_assets/Pasted image 20240531155018.png",
     "z_assets/Pasted image 20240531154957.png",
     "Work/TCS/InstaBiz UK/Learning/Angular.md",
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
@@ -222,7 +222,6 @@
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "111_Language/Java/Quick Reference/10.Concurrency.md",
     "z_assets/Pasted image 20231009154316.png",
-    "z_assets/Pasted image 20231009154259.png",
     "Untitled.canvas"
   ]
 }
