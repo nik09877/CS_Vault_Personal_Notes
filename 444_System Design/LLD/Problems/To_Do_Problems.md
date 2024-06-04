@@ -928,3 +928,14 @@
 - Each book and member card will have a unique barcode. The system will be able to read barcodes from books and members’ library cards.
     
 - Design an API rate limiter.
+
+
+![[Pasted image 20240531154957.png]]
+
+
+![[Pasted image 20240531155018.png]]
+
+![[Pasted image 20240531155033.png]]
+
+
+
