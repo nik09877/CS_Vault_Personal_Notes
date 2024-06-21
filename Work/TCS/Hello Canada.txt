@@ -1,0 +1,67 @@
+n@d.com
+Test1234
+
+n@i.com
+Test@123
+
+https://imbintuat.icicibank.com/helloapp/#/login
+
+
+3 env
+UAT
+CUG
+PROD
+
+
+for admin env 
+UAT and CUG
+
+web app only
+
+Hello app is web,mobile
+
+Hello app, Hello admin
+
+
+For international
+--------------------
+
+In apply now personal details
+jpeg,pdf,png,his,hiff for ios
+
+
+while creating registration using agency link using query params, agency are there, if valid agency , auto fill details
+
+
+
+offers page 
+
+
+unique ids are there, after fund transfer activate now button will be enabled
+
+
+
+only when selecting investment account GIC details will come
+
+savings , current , investment account are there 
+
+
+KYC flow
+--------------
+
+online and offline
+
+if we click start -> online kyc
+
+3 types of services -> onsite onsite, onsite offsite, onsite
+
+diff country -> work / study permit -> upload doc -> onsite offsite
+
+Canada -> onsite onsite
+
+
+TU flow (onsite) -> TransUnion flag, if customer has TU details only Id1 dropdown will be there -> only onsite 
+
+
+after online kyc success -> trigger spStatus api -> accepted -> go to details page, declined, pending
+
