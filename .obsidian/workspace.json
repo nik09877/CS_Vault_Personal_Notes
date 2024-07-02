@@ -18,8 +18,19 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "61a71ba63b080b1f",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -175,7 +186,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "565e0b25b72a5688",
+  "active": "61a71ba63b080b1f",
   "lastOpenFiles": [
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "z_assets/Pasted image 20240531155033.png",

@@ -1,11 +1,11 @@
-n@d.com
-Test1234
+n@dd.com
+Test@1234
 
 n@i.com
 Test@123
 
 https://imbintuat.icicibank.com/helloapp/#/login
-
+https://hello.icicibank.com/helloappCUG/#/login
 
 3 env
 UAT
@@ -64,4 +64,39 @@ TU flow (onsite) -> TransUnion flag, if customer has TU details only Id1 dropdow
 
 
 after online kyc success -> trigger spStatus api -> accepted -> go to details page, declined, pending
+
+---------------------
+
+in applyNow in domestic Canada
+you can select investment account only after selecting one chequing account or savings account
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------
+
+MY PROJECT [n@c.com,Test@1234]
+
+1) USER MODEL
+----------
+title, first name, middle name, last name, email, password, security question 1, answer, security question 2 , answer, security question 3 , answer
+
+2) In signup page if Canadian citizen -> instruction page, else -> registration page
+
+3) In instructions page
+--------------------
+3.1) "Are you an existing ICICI Bank Canada customer?*", in this part If No is selected show below content in html, else show Modal
+3.2) "How did you hear about us" contains items [ICICI BankIndia, ICICI Bank Canada Website, Agent/Consultant, Advertisement, Social Media, CIIP, Friends/Relatives, Others]
+3.3) "Will this account be used by or on behalf of any other party who is not an account holder in this application?*" if yes is selected show a modal having message "Cannot open an online account on behalf of a third party, please exit the application. You may continue to open an account for yourself by clicking ‘No’", else don't show modal
+
+3.4) after all details are filled enable the next button
 
