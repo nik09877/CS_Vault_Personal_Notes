@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -177,6 +176,7 @@
   },
   "active": "2212235d3d326faa",
   "lastOpenFiles": [
+    "444_System Design/HLD/Network Protocols.md",
     "444_System Design/HLD/My Note.md",
     "Work/TCS/InstaBiz UK/Learning/Angular.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
@@ -221,7 +221,6 @@
     "z_assets/Pasted_image_20231207103401.png",
     "z_assets/Pasted_image_20231205120213.png",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
-    "111_Language/Java/Quick Reference/10.Concurrency.md",
     "z_assets/Pasted image 20231009154316.png",
     "Untitled.canvas"
   ]
