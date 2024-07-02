@@ -88,5 +88,10 @@
 - Deploying is fast
 
 #### Disadv
-- Proper decomposition of application into services, there shouldn't be too much dependency among the services becuz the latency can increase, so it should be loosely coupled
-- 
+- Proper decomposition of application into services:
+	- There shouldn't be too much dependency among the services becuz the latency can increase, so it should be loosely coupled
+- Monitoring / Debugging is tough:
+	- Let's say S3 is going into prod after making some changes to it and dependency flow is S1 -> S2 -> S3 and the response received from S3 by S2 has changed, so S2 will break and S1 will also break
+- Transaction management is difficult
+	- Lets say S1 has DB1, S2 has DB2, and through some request S1 inserts data successfully into DB1 , but insertion into S2 fails, so we need to rollback both the insertion i.e the successful one and the failed one
+
