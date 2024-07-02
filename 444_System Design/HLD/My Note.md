@@ -1,0 +1,26 @@
+# Network Protocols
+
+- Network Protocol defines a set of rules and regulations using which two systems can communicate over the network
+- There are 7 layers
+	- Application layer
+	- Presentation layer
+	- Session layer
+	- Transport layer
+	- Network layer
+	- DataLink layer
+	- Physical layer
+- Application layer protocols
+	- Client-Server protocols : Client makes a request and server gives the response back. It is a one way communication.
+		- HTTP : 
+			- Connection-oriented.
+			- we access web pages.
+		- FTP : 
+			- 2 connections are maintained.
+			- Control connection is maintained , data connection can be connected and disconnected.
+		- SMTP : 
+			- Used with IMAP, POP3. 
+			- Used for sending the E-mail, IMAP is used for accessing the mail from server. POP3 is also used for accessing mails, downloads it, not used anymore.
+			- User --> MTA (Message Transfer Agent) client --> MTA server --> user
+		- WebSockets : Bi-directional communication, not peer-to-peer becuz clients don't talk to each other, only to the servers, use it when we need messaging app
+	- Peer to Peer 
+		- WebRTC
