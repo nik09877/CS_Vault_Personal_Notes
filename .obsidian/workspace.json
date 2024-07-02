@@ -161,7 +161,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 320.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,7 +175,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2212235d3d326faa",
+  "active": "35e1b8f45c27ca4a",
   "lastOpenFiles": [
     "444_System Design/HLD/Network Protocols.md",
     "444_System Design/HLD/My Note.md",

@@ -44,6 +44,7 @@
 		- No ACK, No ordering , No connection
 		- Live streaming, Video calling
 
+
 # CAP Theorum
 
 - Defines desirable properties of distributed systems with replicated data.
