@@ -59,4 +59,34 @@
 - In CA if Partition happens the system will be down 
 - In CP if Partition happens we have to turn off a node
 - In AP consistency can not be achieved
+- Never trade off Partition tolerance in real world
 
+# Monolithic vs Microservice and it's patterns
+
+## Reference
+[Microservice patterns](https://microservices.io/patterns/index.html)
+
+## Monolithic vs Microservice
+
+### Monolithic
+- Single application has all the features and functionalities
+
+#### Disadv
+1. Overload IDE (too difficult to load it in IDE)
+2. Scaling is very hard, if 10GB app is there we need to scale the whole app i.e extra 10GB required 
+3. Tightly coupled
+4. Deploying is slow
+5. Difficult to fix bugs
+
+### Microservice
+- An application is divided into different services
+
+#### Adv
+- Scaling is easy
+- Loose Coupled
+- Easy to fix bugs
+- Deploying is fast
+
+#### Disadv
+- Proper decomposition of application into services, there shouldn't be too much dependency among the services becuz the latency can increase, so it should be loosely coupled
+- 
