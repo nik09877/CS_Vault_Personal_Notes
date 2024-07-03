@@ -95,3 +95,62 @@
 - Transaction management is difficult
 	- Lets say S1 has DB1, S2 has DB2, and through some request S1 inserts data successfully into DB1 , but insertion into S2 fails, so we need to rollback both the insertion i.e the successful one and the failed one
 
+## Different phases of Microservices (Convert a Monolithic architecture to Microservice architecture)
+
+1. Decomposition 
+	1. By business capability
+	2. By subdomain
+2. Database
+	1. Database per service
+	2. Shared database
+3. Communication
+	1. Via API
+	2. Via Events
+4. Integration : UI and microservice
+	1. API Gateways
+5. Deployment
+6. Cross Cutting
+7. Observability / Monitoring
+
+### Decomposition
+
+- How much small our service should be
+- 2 types
+	- By subdomain (DDD -> Domain Driven Design)
+	- By business capability / functionality
+
+#### Business Functionality / Capability
+
+- e.g Online Order Application
+- Functionalities
+	- Order management
+	- Product management / inventory
+	- Account management
+	- Login
+	- Payment
+	- Billing
+- Acc to these functionalities make these microservices
+- Challenges
+	- Good knowledge of business functionalities
+
+#### By Subdomain
+- A domain can have multiple microservices
+- If order management is one domain
+	- Order tracking (microservice)
+	- Order placing
+- Payment domain
+	- Forward payment (microservice)
+	- Reverse payment (microservice)
+
+#### Decomposition Patterns
+1. Strangler
+2. Saga
+3. CQRS
+
+##### Strangler Pattern
+- Used when we need to refactor a monolithic service to microservice
+- We slowly slowly strangle the monolithic service. How?
+	- We don't completely convert the monolithic to microservices at once
+	- We initially route 10% API traffic to microservice and 90% to monolithic
+	- Then after refactoring some more modules, we increase the API traffic for microservice and we keep on doing it till the API traffic of microservice is 100% and for monolithic 0%
+- 
