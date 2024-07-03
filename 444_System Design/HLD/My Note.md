@@ -101,8 +101,15 @@
 	1. By business capability
 	2. By subdomain
 2. Database
-	1. Database per service
-	2. Shared database
+	1. Database per service (mostly used)
+		1. Local transaction posssible, but as a whole transaction across all DBs is not easy, we use SAGA pattern for this
+		2. Query Join tables across multiple DBs, we use CQRS for this
+		3. Rule is, one service can't directly access other service's DB, you can use API of other service for it. Adv is if one is using MySQL, another is using MongoDB, it doesn't matter.
+		4. Scaling individual DB is cost effective and easy
+	2. Shared database (not very successful)
+		1. If one service is sending requests in millions and other services are not, we still need to scale the whole DB 
+		2. You can't delete / modify the table in a DB that easily, becuz you have to check if other services will get impacted
+		3. Adv is easy joining of tables and transaction management is also easy 
 3. Communication
 	1. Via API
 	2. Via Events
@@ -155,4 +162,17 @@
 	- Then after refactoring some more modules, we increase the API traffic for microservice and we keep on doing it till the API traffic of microservice is 100% and for monolithic 0%
 
 ##### Saga Pattern
-- 
+- Called Sequence of Local Transactions
+- Used for transaction management for distributed DBs.
+- Ex : place an order
+	- change is required in Order DB, Inventory DB, Payment DB
+	- What if DB calls for order DB, Inventory DB are successful, but for payment it is not
+- In this we create a sequence of DBS like DB1 -> DB2 -> DB3
+- Then when the transaction is successful in DB1 it publishes a success event which is listened by DB2 , then it performs it's transaction, if one DB transaction fails it publishes failure / compensation event , so other DB listening to it rollback its transaction and so on
+- **Two types :**
+	- Choreography
+		- There is a message event block (for failure and success)
+		- services publish events there and other services listen to the event and work accordingly
+		- There can be cyclic dependency (Service1 publishes event , S2 listens and works and publishes, which is listened by S1 and so on)
+	- Orchestrator
+		- 
