@@ -153,4 +153,6 @@
 	- We don't completely convert the monolithic to microservices at once
 	- We initially route 10% API traffic to microservice and 90% to monolithic
 	- Then after refactoring some more modules, we increase the API traffic for microservice and we keep on doing it till the API traffic of microservice is 100% and for monolithic 0%
+
+##### Saga Pattern
 - 
