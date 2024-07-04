@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -177,8 +178,9 @@
   },
   "active": "2212235d3d326faa",
   "lastOpenFiles": [
-    "444_System Design/HLD/CAP Theorum.md",
+    "444_System Design/HLD/Monolithic and Microservice Architecture.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/CAP Theorum.md",
     "444_System Design/HLD/Network Protocols.md",
     "Work/TCS/InstaBiz UK/Learning/Angular.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
@@ -218,7 +220,6 @@
     "Draw.io/Abstract-factory.svg",
     "Work/TCS/Misc/Biz Skill.md",
     "Work/TCS/Misc/TCS_Onbaording.md",
-    "444_System Design/HLD/Notes/Prerequisites.md",
     "z_assets/Pasted_image_20231207115732.png",
     "z_assets/Pasted_image_20231207103401.png",
     "z_assets/Pasted_image_20231205120213.png",
