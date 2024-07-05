@@ -251,3 +251,44 @@
 - User req will first check the nearest CDN, if data is not there it will ask it's nearest CDN, if the data is not even there, it will ask the original server
 - It is smart enough to handle DDOS attacks
 - The load on the original server is reduced 
+- Performance is increased
+- Cost cutting, due to reduced load on DB server 
+- Client talks with CDN
+## 7.Data Centre
+
+- One Data centre is multiple app servers + multiple Db servers
+- Client [<-----> CDN /OR/ <-----> Load Balancer] <-----depending on Geo location-----> [Data centre 1, Data Center 2 . . .]
+- If suppose Data of India is stored in India Data Centre and it goes down , so all the requests are routed towards USA Data center, but USA data centre doesn't have Indian users data so how to tackle this problem?
+	- DB replication among multiple Data centres take place
+
+## 8. Messaging Queue
+
+- RabbitMQ, Kafka
+- There is a **Producer**
+	- Pushes message in Messaging Queue / Topic
+- There are multiple **Subscribers**
+	- Subscribe to the Messaging Queue / Topic
+- This brings Async nature in our codebase
+- If fails there is a Requeue, so subscriber can pick it up from this queue
+- App server talks with the Messaging queue
+### Terminologies
+
+![Architecture](Pasted_image_20240705134712.png)
+
+#### 3 types of Routing keys
+1. Direct
+	1. Routing key == Binding key
+	2. Exchange sends the message to only one messaging queue
+2. Fan Out
+	1. Sends the message to all the queues
+	2. subscribers who require this message will work on it else ignore it
+3. Topic 
+	1. Wildcard matching of the routing key with the binding keys
+	2. So the message can go to multiple queues if their binding keys contain the routing key
+
+## 9. Database Scaling
+
+- 2 types
+	- Vertical
+		- Increase already present DBs capabilities
+	- Horizontal
