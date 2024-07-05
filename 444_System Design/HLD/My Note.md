@@ -305,7 +305,7 @@
 				- There are 10 columns
 				- we divide table column wise into multiple tables, but each table contains all the rows
 			- Drawback 
-				- one shard might get filled , so we need to do sharding of this shard, tree like structure, so use consistent hashing
+				- one shard might get filled if a lot of names start with letter (a to p) , so we need to do sharding of this shard, tree like structure, so use consistent hashing
 				- Join is difficult, so denormalize it
 
 
@@ -316,10 +316,53 @@
 - In modulo hashing we do hash(key) = key % table size, table size is fixed
 
 #### Problem with hashing
-- If the size is not fixed, then it creates problems
+- If the total size of nodes is not fixed, then it creates problems
+- after increasing the total nodes, the modulo might not give the same node index, so we need to do rebalancing of all data in all the nodes
 - Problem occurs in
 	- Load balancer for App. servers
 	- Horizontal Sharding
+
 ### Use of Consistent Hashing
+- When the number of nodes used is dynamic / keeps changing, we use consistent hashing.
+- Consistent Hashing improves upon simple hashing by reducing the reallocation of requests to servers when a new server is added or removed.
+- Let's say node N1 contains data for Id 1-10, N2 -> 11 - 20, N3 -> 21 - 30 and if we add another new node N4 or remove a node .
+- The **rebalancing of data = (1/n) % of total number of IDs**, where n = total number of nodes, which is very less
 
 ### How it works
+
+- In consistent hashing we have a circular array ranging from 0 to N-1. 
+- Each client and server have IDs. 
+- So we hash these IDs and place the client and servers on the circular array. 
+- For each client request we go clockwise and find the nearest server. 
+- And route the request to that server So the load factor (on average) in this case is **1/N.**
+
+![](Pasted_image_20240705152834.png)
+
+#### Limitations of this approach
+- Although load factor is 1/N in average case, practically we may have skewed (uneven) distribution. This might cause a few servers to be overloaded with a lot of requests while other servers are idle. 
+
+- Consider the example below
+
+![](Pasted_image_20240705153040.png)
+
+- Server 1 receives 6 client requests whereas server 3 receives only 1. 
+- This approach won't work if servers have different capacities since it distributes the load evenly.
+
+#### Solution to prevent skewed distribution
+
+- To solve this we can use the concept of virtual servers. 
+- We want to increase the number of servers but getting actual servers is expensive, so for each server, instead of 1 we can generate K server IDs. 
+- We then hash these K IDs and place them on the circular array. 
+- Everything else remains the same. This reduces the chance of load being skewed.
+
+
+# Design URL Shortener / Tiny URL
+
+## 1. Requirement Analysis
+1. How short our URL should be ?
+2. Traffic per day ? 
+	1. 10Mil URL per day -> 365 * 10Mil URL per year
+	2. should support 100 years -> 365 * 1000 Mil URLs
+3. how many characters should we use
+	1. 0 - 9 , a - z , A - Z => 62 characters
+4. 
