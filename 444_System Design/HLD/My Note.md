@@ -290,5 +290,36 @@
 
 - 2 types
 	- Vertical
-		- Increase already present DBs capabilities
+		- Increase already present DBs capabilities  (CPU, RAM)
+		- But there is always a limit
 	- Horizontal
+		- Add more nodes
+		- Sharding
+			- Horizontal
+				- We divide a table row wise into multiple tables
+				- let's say in a table you have 1000 rows
+				- divide it into mltiple tables T1 contains 1 to 500 rows, T2 contains 501 to 1000 rows
+				- let's say there is a name column and name starting with a to p go in table T1, q to z go into T2
+				- Generally better
+			- Vertical
+				- There are 10 columns
+				- we divide table column wise into multiple tables, but each table contains all the rows
+			- Drawback 
+				- one shard might get filled , so we need to do sharding of this shard, tree like structure, so use consistent hashing
+				- Join is difficult, so denormalize it
+
+
+# Consistent Hashing
+
+### Hashing
+- Hash function takes an arbitrary length input and gives a fixed length output.
+- In modulo hashing we do hash(key) = key % table size, table size is fixed
+
+#### Problem with hashing
+- If the size is not fixed, then it creates problems
+- Problem occurs in
+	- Load balancer for App. servers
+	- Horizontal Sharding
+### Use of Consistent Hashing
+
+### How it works
