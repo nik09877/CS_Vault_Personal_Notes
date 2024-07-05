@@ -359,10 +359,28 @@
 # Design URL Shortener / Tiny URL
 
 ## 1. Requirement Analysis
+
 1. How short our URL should be ?
 2. Traffic per day ? 
 	1. 10Mil URL per day -> 365 * 10Mil URL per year
 	2. should support 100 years -> 365 * 1000 Mil URLs
 3. how many characters should we use
-	1. 0 - 9 , a - z , A - Z => 62 characters
-4. 
+	1. 0 - 9 , a - z , A - Z => 62 characters, so we need around 7 characters
+4. key = Long URL , hash(key) = short URL, how to generate this hash value
+	1. Use Hash Function
+		1. MD5
+			1. 128 bit hash function => 16 bytes
+			2. 1 byte => 2 hexa digits so 16 bytes => 32 hexa digits 
+			3. It's a lot more than we need
+			4. Even if we take only first 7 characters , there will be a lot of collisions
+		2. SHA-1
+			1. 160 bit => 20 byte => 40 hexa digits
+			2. Same problem as above
+	2. Base62 Encoding
+		1. decimal -> Base 62 => divide decimal number by 62, take remainder in reverse direction
+		2. Issues
+			1. ID generator
+				1. 
+			2. Length is not fixed, may vary 
+	3. Base64 Encoding
+		1. 
