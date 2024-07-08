@@ -379,8 +379,15 @@
 	2. Base62 Encoding
 		1. decimal -> Base 62 => divide decimal number by 62, take remainder in reverse direction
 		2. Issues
-			1. ID generator
-				1. 
-			2. Length is not fixed, may vary 
-	3. Base64 Encoding
-		1. 
+			1. Unique ID generator for storing the URLS ( creating primary key for table)
+				1. Auto Increment, will fail if multiple DBs are there
+				2. Snow Flake
+					1. uses timestamp(41 bits), machine id, sequence no, 1 bit is reserved
+					2. used in Twitter
+				3. Zookeeper (By Apache)
+					1. range of Ids are assigned to each application server, if one range is filled another range is assigned to it
+			2. Length is not fixed, may vary
+				1. As length can't exceed beyond 7 because 365billion = 62 ^ 7, so use padding
+## Design
+
+![](Pasted_image_20240705172139.png)

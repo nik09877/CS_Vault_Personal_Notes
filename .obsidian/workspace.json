@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "444_System Design/HLD/My Note.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -176,8 +176,10 @@
   },
   "active": "2212235d3d326faa",
   "lastOpenFiles": [
-    "444_System Design/HLD/Consistent Hashing.md",
+    "444_System Design/HLD/Design Tiny URL.md",
     "444_System Design/HLD/My Note.md",
+    "z_assets/Pasted_image_20240705172139.png",
+    "444_System Design/HLD/Consistent Hashing.md",
     "z_assets/Pasted_image_20240705153040.png",
     "z_assets/Pasted_image_20240705152834.png",
     "444_System Design/HLD/Scale a System from 0 to 1Mil.md",
@@ -218,10 +220,8 @@
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "111_Language/Java/In Depth/7.Generic Programming.md",
-    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "z_assets/Pasted_image_20240211133118.png",
     "Draw.io/Abstract-factory.svg",
-    "z_assets/Pasted_image_20231207115732.png",
     "Untitled.canvas"
   ]
 }
