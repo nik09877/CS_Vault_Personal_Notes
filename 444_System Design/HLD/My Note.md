@@ -391,3 +391,57 @@
 ## Design
 
 ![](Pasted_image_20240705172139.png)
+
+
+# Back-of-the-envelope Estimation 
+
+- It is what drives your design decisions
+- Using this we determine if we need load balancers or caches or CDNs etc
+- For estimation use numbers multiplied by 10 i.e 430Mil, 3Bil etc
+
+## Cheat sheet 1
+
+|          | Traffic    | Storage |
+| -------- | ---------- | ------- |
+| 3 zeros  | Thousand   | KB      |
+| 6 zeros  | Million    | MB      |
+| 9 zeros  | Billion    | GB      |
+| 12 zeros | Trillion   | TB      |
+| 15 zeros | Quadrillion | PB      |
+
+- Char -> 2 bytes ASCII /  (1byte) Unicode
+- Long / Double -> 8 Bytes
+- Image -> 300KB 
+
+## Cheat Sheet 2
+
+- X Mil user * Y Mb size => XY TB Storage
+
+## Which things to estimate
+1. No. of servers
+2. RAM
+3. Storage Capacity
+4. Trade off using CAP theorum
+
+## Estimation of Facebook
+
+### 1. Traffic Estimation
+
+- Total Users : 1 Billion
+- DAU (Daily active users) : 25% => 250 Million Users
+- Requests per day
+	- one user => 5 Read + 2 Write requests
+	- 250 Mil => 250 * 7 Mil requests per day
+	- 1 day = 86400 seconds = 100000 seconds = 1 lakh
+	- Requests per second 
+		- (250 * 7 Mil) /  100000 = 18k requests per second
+
+### Storage Estimation
+
+- Every user does 2 posts 
+- Each post 250 characters
+- 10% of users are uploading 1 image
+- 1 image = 300KB
+- 1 post => 250 chars => 500 Bytes
+	- 2 posts => 1KB
+	- 250 Mil users => 250Mil * 1KB = 250GB per day  
