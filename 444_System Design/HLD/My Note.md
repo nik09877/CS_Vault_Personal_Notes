@@ -488,4 +488,4 @@
 5. Gossip protocol
 6. Merple Tree
 
-# JWT
+
