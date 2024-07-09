@@ -444,4 +444,46 @@
 - 1 image = 300KB
 - 1 post => 250 chars => 500 Bytes
 	- 2 posts => 1KB
-	- 250 Mil users => 250Mil * 1KB = 250GB per day  
+	- 250 Mil users => 250Mil * 1KB = 250GB per day
+	- similarly do for image 8TB
+- We want to store for 5 years
+	- 5 years = 2000 days
+	- 1 day => 8TB / 250GB
+	- 2000 days => 16 PB for image and 500TB 
+
+### RAM Estimation
+
+- For each user we are storing last 5 posts in cache
+- 1 post = 500Bytes 
+	- 5 posts = 2500Bytes = 3KB
+- 250 Mil Users * 3 KB = 750 GB
+- 75GB RAM= 1 server
+	- 750DB RAM = 10 server will have cache
+
+### Latency
+- 95% time = 500ms per request
+- 1 second = 2 * 500 ms => 2requests
+- 1 server = 50 threads => 100 requests per second
+- 18k requests => 18k / 100 => 180 servers
+
+### Trade off
+- I will go with AP
+- No need for consistency because the data ain't changing very fast , we need consistency in systems like banking apps, trading apps etc
+
+# Design Key Value DB (Dynamo DB)
+
+## Uses
+- Amazon uses in Add to Cart feature
+
+## Goals
+- Scalability
+- Decentralization
+- Eventual consistency
+
+## Steps
+1. Partition
+2. Replication
+3. Get and Put operation
+4. Data Versioning
+5. Gossip protocol
+6. Merple Tree
