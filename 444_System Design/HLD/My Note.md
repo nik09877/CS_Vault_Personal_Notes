@@ -470,7 +470,7 @@
 - I will go with AP
 - No need for consistency because the data ain't changing very fast , we need consistency in systems like banking apps, trading apps etc
 
-# Design Key Value DB (Dynamo DB)
+# Design Key Value DB (Dynamo DB) #pending
 
 ## Uses
 - Amazon uses in Add to Cart feature
@@ -487,3 +487,5 @@
 4. Data Versioning
 5. Gossip protocol
 6. Merple Tree
+
+# JWT
