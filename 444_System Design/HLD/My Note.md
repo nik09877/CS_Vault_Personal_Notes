@@ -489,3 +489,12 @@
 6. Merple Tree
 
 
+
+
+# SQL vs NoSQL
+
+1. Structure
+2. Nature
+3. Scalability
+4. Property
+
