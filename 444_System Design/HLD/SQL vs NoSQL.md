@@ -33,7 +33,7 @@
 
 ## NoSQL
 - Not Only SQL
-
+- low latency search capability
 ### Structure
 - Works on Unstructured data
 	- Key-Value DB
@@ -76,7 +76,14 @@
 2.  If you know in advance which columns you need to query which are not very complex => use NoSQL
 
 3. If data is relational in nature i.e too many dependencies, hierarchies => use SQL
-4. Large amount of data / which are changing => NoSQL
+4. Large amount of data / which are changing, low latency search capability => NoSQL
 
 5. Data integrity is required i.e you can't afford to lose consistency => use SQL in financial constitutions
 6. If you want high availability / performance (search, query) + some inconsistency => NoSQL
+
+- step 1
+	- complex queries?
+- step 2
+	- scaling / low latency search capability requried in huge DB ?
+- step 3
+	- highly avalability system required ?

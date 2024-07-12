@@ -581,5 +581,34 @@
 ### Functional (this should be there / first priority)
 1. 1 to 1 send / receive msgs
 2. Group message support
-3. Last seen
+3. Last seen / online / offline
+4. User Login / Authentication
 ### Non-Functional (It's good to have this / second priority)
+1. scalability
+2. Low latency
+3. Avalability
+
+## 2. Estimation
+
+- Total user 1 mil
+- DAU is 250Mil
+- 1 user 10 msgs to 4 people in 1 day
+- total msgs per day -> 250Mil * 40 msgs
+- 1 msg 100 char
+- chat history for 10 years -> 
+
+## Core Concepts
+
+- Peer-to-peer won't scale so we need something else
+
+## 3 ways
+1. Polling
+	1. Client keeps asking is there a msg for me tcp connection is established, after every response tcp connection is closed
+	2. Not scalable
+2. Long Polling / Pushing
+	1. Client asks Is there any msg for me, server waits threshold minutes and then it responds
+	2. Blocking a request thread at server side
+	3. Not Scalable
+3. Web Socket
+	1. Bi directional persistent connection
+		1. connection will remain open and only gets closed when one shuts down connection or internet breakage happens

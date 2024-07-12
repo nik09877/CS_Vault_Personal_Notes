@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
+                "file": "444_System Design/HLD/SQL vs NoSQL.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/HLD/My Note.md"
+                "file": "444_System Design/HLD/SQL vs NoSQL.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
+                "file": "444_System Design/HLD/SQL vs NoSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
+                "file": "444_System Design/HLD/SQL vs NoSQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,8 +176,8 @@
   },
   "active": "a8d95697d5eabb7e",
   "lastOpenFiles": [
-    "444_System Design/HLD/SQL vs NoSQL.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/SQL vs NoSQL.md",
     "444_System Design/HLD/Capacity Estimation.md",
     "2024-07-08.md",
     "444_System Design/HLD/Design Tiny URL.md",
