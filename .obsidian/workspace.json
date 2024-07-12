@@ -18,17 +18,8 @@
                 "source": true
               }
             }
-          },
-          {
-            "id": "5c906c0bbc3c8c79",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "444_System Design/HLD/My Note.md"
+              }
             }
           },
           {
@@ -111,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "444_System Design/HLD/My Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,6 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "444_System Design/HLD/My Note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +175,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5c906c0bbc3c8c79",
+  "active": "df552161affd1277",
   "lastOpenFiles": [
     "444_System Design/HLD/My Note.md",
     "444_System Design/HLD/Capacity Estimation.md",
