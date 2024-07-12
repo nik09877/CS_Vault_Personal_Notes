@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "caaadc1fd766ecb4",
+        "id": "bd5442b883b12e38",
         "type": "tabs",
         "children": [
           {
-            "id": "df552161affd1277",
+            "id": "a8d95697d5eabb7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -175,8 +174,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "df552161affd1277",
+  "active": "a8d95697d5eabb7e",
   "lastOpenFiles": [
+    "444_System Design/HLD/SQL vs NoSQL.md",
     "444_System Design/HLD/My Note.md",
     "444_System Design/HLD/Capacity Estimation.md",
     "2024-07-08.md",
@@ -220,7 +220,6 @@
     "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "Work/TCS/InstaBiz UK/Learning/React-Native.md",
-    "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "z_assets/Pasted_image_20240211133118.png",
     "Draw.io/Abstract-factory.svg",
     "Untitled.canvas"
