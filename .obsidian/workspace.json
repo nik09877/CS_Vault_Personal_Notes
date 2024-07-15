@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "mode": "source",
                 "source": true
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -85,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/HLD/My Note.md"
+                "file": "Work/TCS/Ultimatix/Project Work.md"
               }
             }
           },
@@ -103,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,8 +177,9 @@
   },
   "active": "a8d95697d5eabb7e",
   "lastOpenFiles": [
-    "444_System Design/HLD/SQL vs NoSQL.md",
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/SQL vs NoSQL.md",
     "444_System Design/HLD/Capacity Estimation.md",
     "2024-07-08.md",
     "444_System Design/HLD/Design Tiny URL.md",
@@ -199,7 +201,6 @@
     "z_assets/Pasted image 20240531154957.png",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Learning/~WRL0003.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRD0002.tmp",

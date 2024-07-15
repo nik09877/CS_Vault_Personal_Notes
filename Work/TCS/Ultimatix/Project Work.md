@@ -21,3 +21,14 @@ used index scan approach for pagination instead of LIMIT and OFFSET, which impro
 ### UI Problem 
 
 In Hello Canada work the backend was sending the html template for the mail section in icici which had links, so while converting to IOS app the links were not opening in a new window, so what we did was we sent header,body and links as api response to ffrontend and there used another library so that for ios the links will open in new window
+
+### Notification Feature End to End 
+
+- CREATE, UPDATE, DELETE by admin
+- For each User **Clear** a particular notification, **Clear ALL** notifications
+- Used 2 tables , notification table another one has user id , cleared notification id
+- while creating notification if we attach image , every image size is diff, so before sending to backend i added width and height to it
+- Thought of using websocket, but notifications are created rarely once in a month, so
+- notification count is fetched based on timestamp stored in localstorage, seen till timestamp is stored in localstorage, after that using query fetch notification count having timestamp greater than current seen timestamp
+
+### Dynamic Configuration Management using Netflix Archaius
