@@ -31,4 +31,6 @@ In Hello Canada work the backend was sending the html template for the mail sect
 - Thought of using websocket, but notifications are created rarely once in a month, so
 - notification count is fetched based on timestamp stored in localstorage, seen till timestamp is stored in localstorage, after that using query fetch notification count having timestamp greater than current seen timestamp
 
+### PT and ARM integration using RestTemplate
+
 ### Dynamic Configuration Management using Netflix Archaius
