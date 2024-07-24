@@ -732,10 +732,20 @@
 - One Data Center will be Primary / Live / Read & Write 
 - The others will be replicas and DR (Disaster Recovery) Data centers
 - The App servers of DR Data Centers are connected to Live DB, any req going to DR servers , will be routed towards Live DB
-- Sync up happens of DBs
+- One directional Sync up happens of DBs
 - If Master DB goes down, one of the DR DBs become master
 
 ### Disadv
 - Oracle, MySQL, Postgres do not support multi master i.e Write to Single node
 - Resources are not utilised properly
+- Latency issue if any request goes to DR Data center
+- If Live DB goes down, re routing and making another DB master takes time, during that time period failure happens
+
+## Active - Active
+
+- Nosql DBs, Cassandra support multi master architecture
+- More than one Live DBs
+- Bi directional sync up happens
+
+# Distributed Messaging Queue (Kafka, RabbitMQ)
 
