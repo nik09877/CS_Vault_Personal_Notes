@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bec62bea09bcdfbb",
+        "id": "4881612c391aa2cb",
         "type": "tabs",
         "children": [
           {
-            "id": "3034077b6e52c393",
+            "id": "1e0aaa5d1fb292c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -174,10 +174,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3034077b6e52c393",
+  "active": "1e0aaa5d1fb292c0",
   "lastOpenFiles": [
-    "444_System Design/HLD/Design Rate Limiter.md",
+    "444_System Design/HLD/Design Idempotency Handler.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/Design Rate Limiter.md",
     "444_System Design/HLD/Notes/Prerequisites.md",
     "z_assets/Pasted_image_20240724120912.png",
     "Work/TCS/Ultimatix/Project Work.md",
@@ -220,7 +221,6 @@
     "555_Projects/TaxiNow",
     "444_System Design/HLD/To_Do_Problems.md",
     "z_assets/Pasted_image_20240317234552.png",
-    "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "z_assets/Pasted_image_20240211133118.png",
     "Untitled.canvas"
   ]

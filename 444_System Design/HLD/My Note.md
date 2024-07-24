@@ -709,4 +709,33 @@
 			3. send 201 (resource created) status code
 
 ### Parallel
+- Use Mutual Exclusion, Lock, using Mutex, Semaphore at the critical section
+- Critical section is server reads the id from DB
+
+### Follow up question
+- If parallel requests go to different app servers and they have their own DB? By the time DB sync happens (sync takes minutes), 2 rows would have been created
+- Answer is use cache
+- client <-> server <-> cache <-> DB server
+- As Cache sync happens in miliseconds , put lock on cache
+
+
+# Design High Availability Architecture
+
+- It can be asked in many other forms
+	- Design Data Resilient Architecture
+	- Design Architecture to achieve 99.999% Availibility
+	- Design to avoid Single Point of Failure
+	- Active-Passive vs Active-Active Architecture
+
+## Active-Passive
+
+- One Data Center will be Primary / Live / Read & Write 
+- The others will be replicas and DR (Disaster Recovery) Data centers
+- The App servers of DR Data Centers are connected to Live DB, any req going to DR servers , will be routed towards Live DB
+- Sync up happens of DBs
+- If Master DB goes down, one of the DR DBs become master
+
+### Disadv
+- Oracle, MySQL, Postgres do not support multi master i.e Write to Single node
+- Resources are not utilised properly
 
