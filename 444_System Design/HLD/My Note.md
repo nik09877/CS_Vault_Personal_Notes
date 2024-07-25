@@ -574,7 +574,7 @@
 5. Data integrity is required i.e you can't afford to lose consistency => use SQL in financial constitutions
 6. If you want high availability / performance (search, query) + some inconsistency => NoSQL
 
-# Design Chat Application (WhatsApp, FB, Discord, Slack, Telegram)
+# Design Chat Application (WhatsApp, FB, Discord, Slack, Telegram) #pending
 
 ## 1. Requirement gathering
 
@@ -749,3 +749,43 @@
 
 # Distributed Messaging Queue (Kafka, RabbitMQ)
 
+## What is it and why do we need it ?
+
+- We have a producer which produces message , which goes into a queue and consumer consumes it
+
+### Use case
+ 1. **Asynchronous** 
+	1. Our latency gets reduced , because we don't directly communicate , we use an intermediary i.e Queue
+2. **Retry capability** 
+3. **Pace Matching**
+	1. If many publishers are there and sending messages more than the consumer can consume at a time, we should use Messaging queue
+	2. For example many cabs have gps tracking on, every 5 min they are sending their location to the server, and if server can handle only 5 at a time but 10 are coming, we use Messaging queue for pace matching
+
+## What is P2P and Pub-Sub
+
+### P2P
+- In this a message can be consumed only once via only one consumer
+- I.e if consumer1 is consuming it, it won't be available for consumer2
+
+### Pub-Sub
+- In this multiple consumers can consume the same message
+
+## How it works?
+
+### Kafka
+
+#### components
+1. Producer
+2. Consumer
+3. Consumer Group
+	1. Every consumer belongs to a consumer group
+4. Topic
+	1. A broker has many topics
+5. Partition
+	1. A topic has many partitions
+6. Offset
+	1. Index of a partition is called an offset
+7. Broker
+	1. Nothing but a Kafka server
+8. Cluster
+9. Zookeeper

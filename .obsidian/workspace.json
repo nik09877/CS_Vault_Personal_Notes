@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4881612c391aa2cb",
+        "id": "44737399dca9fc81",
         "type": "tabs",
         "children": [
           {
-            "id": "1e0aaa5d1fb292c0",
+            "id": "bca013232d8cbce3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -161,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 320.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,10 +176,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1e0aaa5d1fb292c0",
+  "active": "bca013232d8cbce3",
   "lastOpenFiles": [
-    "444_System Design/HLD/Design High Availability Architecture.md",
+    "z_assets/Pasted_image_20240705134712.png",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/Design High Availability Architecture.md",
     "444_System Design/HLD/Design Idempotency Handler.md",
     "444_System Design/HLD/Design Rate Limiter.md",
     "444_System Design/HLD/Notes/Prerequisites.md",
@@ -195,7 +198,6 @@
     "444_System Design/HLD/Scale a System from 0 to 1Mil.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
-    "z_assets/Pasted_image_20240705134712.png",
     "444_System Design/HLD/Monolithic and Microservice Architecture.md",
     "444_System Design/HLD/CAP Theorum.md",
     "444_System Design/HLD/Network Protocols.md",
@@ -217,7 +219,6 @@
     "444_System Design/LLD/Design_Patterns/Behavioral_Patterns/_about.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "555_Projects/IRCTC",
-    "555_Projects/TaxiNow/TaxiNow.md",
     "555_Projects/WorkPlanr",
     "555_Projects/TaxiNow",
     "z_assets/Pasted_image_20240317234552.png",
