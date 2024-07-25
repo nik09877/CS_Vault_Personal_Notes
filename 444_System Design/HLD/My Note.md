@@ -779,6 +779,7 @@
 2. Consumer
 3. Consumer Group
 	1. Every consumer belongs to a consumer group
+	2. Any two consumers belonging to the same consumer group can not subscribe to the same partition
 4. Topic
 	1. A broker has many topics
 5. Partition
@@ -788,4 +789,28 @@
 7. Broker
 	1. Nothing but a Kafka server
 8. Cluster
+	1. A group of Brokers is called a cluster
 9. Zookeeper
+	1. Zookeeper helps in internal communication among the brokers
+	2. i.e which broker has which partition and all that info is stored in it
+	3. Zookeeper stores consumer info like
+		1. consumer of consumer group 1 Topic A partition P0 committed offset 3
+		2. committed offset means up to which offset the messages are successfully read
+		3. we are storing this info, because If a consumer goes down another consumer picks up the messages looking at the committed offset value
+		
+
+![](Pasted_image_20240725163026.png)
+
+#### Flow of sending a message
+
+##### Message
+1. Key? : String / int Id (Not mandatory)
+2. Value : actual message
+3. Topic : Topic Name
+4. Partition? : (Not mandatory)
+
+##### How to send message to a particular partition?
+- First we check if key is there, using this key we send it to it's respective partition
+- If not we check if Partition is provided
+- If not we see the topic and assign the message to a partition using round robin format
+
