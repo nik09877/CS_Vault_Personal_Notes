@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "444_System Design/HLD/My Note.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -178,6 +178,8 @@
   },
   "active": "bca013232d8cbce3",
   "lastOpenFiles": [
+    "z_assets/Pasted image 20240725175959.png",
+    "z_assets/Pasted image 20240725174837.png",
     "z_assets/Pasted_image_20240725163026.png",
     "444_System Design/HLD/My Note.md",
     "z_assets/Pasted_image_20240705134712.png",
@@ -222,7 +224,6 @@
     "555_Projects/IRCTC",
     "555_Projects/WorkPlanr",
     "555_Projects/TaxiNow",
-    "z_assets/Pasted_image_20240317234552.png",
     "Untitled.canvas"
   ]
 }

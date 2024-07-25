@@ -773,13 +773,14 @@
 ## How it works?
 
 ### Kafka
-
+- Uses Pull based approach i.e consumer keeps polling if there is a new message
 #### components
 1. Producer
 2. Consumer
 3. Consumer Group
 	1. Every consumer belongs to a consumer group
 	2. Any two consumers belonging to the same consumer group can not subscribe to the same partition
+	3. If one consumer goes down other can pick up from the other has left, that's why it is used
 4. Topic
 	1. A broker has many topics
 5. Partition
@@ -790,6 +791,10 @@
 	1. Nothing but a Kafka server
 8. Cluster
 	1. A group of Brokers is called a cluster
+	2. A same topic can be stored in different brokers of a cluster i.e Topic1 P0 in Broker1 and Topic1 P1 in Broker2
+	3. To handle the case if a Broker goes down, all the topics have replicas in different brokers
+	4. The original ones are called **Leaders** and the replicas are called **Followers**
+	5. All the Read / Write requests go to the leader and if it goes down, then the follower will take over
 9. Zookeeper
 	1. Zookeeper helps in internal communication among the brokers
 	2. i.e which broker has which partition and all that info is stored in it
@@ -813,4 +818,43 @@
 - First we check if key is there, using this key we send it to it's respective partition
 - If not we check if Partition is provided
 - If not we see the topic and assign the message to a partition using round robin format
+
+### RabbitMQ
+- Uses Push based approach i.e queue pushes the message to the consumers
+- There is a **Producer**
+	- Pushes message in Messaging Queue / Topic
+- There are multiple **Subscribers**
+	- Subscribe to the Messaging Queue / Topic
+- This brings Async nature in our codebase
+- App server talks with the Messaging queue
+- There can be multiple **Exchanges**
+- If consumer fails to process a message, the message is requeued a no of times till the limit is reached, then it is put into a **Dead Queue**
+### Terminologies
+![Architecture](Pasted_image_20240705134712.png)
+
+#### 3 types of Routing keys / Exchange
+1. Direct
+	1. Routing key == Binding key
+	2. Exchange sends the message to only one messaging queue
+2. Fan Out
+	1. Sends the message to all the queues
+	2. subscribers who require this message will work on it else ignore it
+3. Topic 
+	1. Wildcard matching of the routing key with the binding keys
+	2. So the message can go to multiple queues if their binding keys contain the routing key
+
+## What happens when Queue size limit is reached?
+- We can use many different brokers for that 
+
+## What happens to messages when queue goes down?
+- Nothing happens because the follower takes over
+
+## What happens when consumer goes down ?
+- Another consumer from the same group takes over
+
+## What happens when consumer is not able to process a message ?
+
+- We can put retry limit for each message
+- If limit is reached the message is put in **Failure Queue / Dead Queue**
+
 
