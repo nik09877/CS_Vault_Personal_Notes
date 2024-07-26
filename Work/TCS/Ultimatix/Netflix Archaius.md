@@ -55,9 +55,9 @@ public void init() {
     - Creates a `URLConfigurationSource`, which allows Archaius to read configurations from the specified file URL.
 - **`AbstractPollingScheduler scheduler = new FixedDelayPollingScheduler(0, 5, true);`:**
     
-    - Initializes a polling scheduler that checks for configuration changes every 5 seconds. The parameters are:
+    - Initializes a polling scheduler that checks for configuration changes every 5 ms. The parameters are:
         - `0`: Initial delay before polling starts.
-        - `5`: Delay between each poll (in seconds).
+        - `5`: Delay between each poll (in ms).
         - `true`: Indicates that the scheduler should ignore any initial configuration load failures and continue polling.
 - **`DynamicConfiguration configuration = new DynamicConfiguration(source, scheduler);`:**
     
