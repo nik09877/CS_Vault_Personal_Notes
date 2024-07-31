@@ -49,11 +49,7 @@ there is armId, documentId, closure date and list of persons to send mail to 7 d
 
 #### Explanation of `@Scheduled` Annotation
 
-The `@Scheduled` annotation is used in Spring Boot to schedule tasks to be executed at specific intervals or times. It uses cron expressions to define when the scheduled task should run. Here’s a breakdown of the cron expression you provided:
-
-java
-
-Copy code
+The `@Scheduled` annotation is used in Spring Boot to schedule tasks to be executed at specific intervals or times. It uses cron expressions to define when the scheduled task should run. Here’s a breakdown of the cron expression you provided :
 
 `@Scheduled(cron = "0 0 8 * * ?")`
 
