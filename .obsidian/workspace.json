@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "feb5cc532909c02c",
+        "id": "35f63fd4b4410995",
         "type": "tabs",
         "children": [
           {
-            "id": "c7605f0aee574c15",
+            "id": "5a07759cf451259f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf"
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+                "mode": "preview",
+                "source": true
               }
             }
           }
@@ -84,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf"
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md"
               }
             }
           },
@@ -102,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,8 +162,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5,
-    "collapsed": true
+    "width": 320.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,11 +175,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c7605f0aee574c15",
+  "active": "5a07759cf451259f",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter.md",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
     "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "Work/TCS/InstaBiz UK/Learning/firebase-setup.png",
     "Work/TCS/Ultimatix/Project Work.md",
