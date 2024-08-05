@@ -1029,7 +1029,7 @@ It is used to compare values.
 |Operator Type|Description                                                     |
 |-------------|----------------------------------------------------------------|
 |&&           |This is ‘and’, return true if all conditions are true           |
-|||           |This is ‘or’. Return true if one of the conditions is true      |
+|OR            |This is ‘or’. Return true if one of the conditions is true      |
 |!            |This is ’not’. return false if the result is true and vice versa|
 
 
