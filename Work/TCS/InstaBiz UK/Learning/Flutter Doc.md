@@ -13987,9 +13987,13 @@ class _HomePageState extends State<HomePage> {
 }
 ```
 
-## State Management in Flutter
+## State Management and Dependency Injection in Flutter
 
-### Using Mobx #pending 
+### Using Mobx #pending
+
+### Using GetIt #pending
+
+### Using Provider #pending
 
 ### Using GetX
 
@@ -15810,4 +15814,5 @@ Remember to follow ethical guidelines when distributing apps, and ensure that us
 
 These steps are specific to Android. For iOS, you need to use Xcode and follow different procedures for distribution through the App Store.
 
-## Efficient Folder Structure For 
+## Efficient Folder Structure For Various Architectures #pending
+

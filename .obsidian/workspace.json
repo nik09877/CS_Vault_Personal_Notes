@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#unfinished",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
