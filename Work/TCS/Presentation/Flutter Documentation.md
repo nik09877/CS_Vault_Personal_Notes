@@ -336,32 +336,17 @@ var s4 = "It's even easier to use the other delimiter.";
 
 ##### Interpolation
 ```dart
-var s = 'Thor';
-assert('Do not tell $s that I stole his hammer.' ==
-    'Do not tell Thor that I stole ' +
-        'his hammer.');
+String s = 'Hello';
 
-assert('I was just kidding ' +
-        '${s.toUpperCase()} !!' ==
-    'I was just kidding ' +
-        'THOR !!');
-
+print('$s Everyone'); // Hello Everyone
+print('${s.toUpperCase()} Everyone'); // HELLO Everyone
 ```
 
 ##### Concatenation
 
 ```dart
-/*  Adjacent string literals */
-var s1 = 'I '
-    'love'
-    " apple pie.";
-assert(s1 ==
-    'I love '
-        'apple pie.');
-
 var s2 = '2 + 2 ' + 'equals 4.';
 assert(s2 == '2 + 2 equals 4.');
-
 ```
 
 ##### Multi-line String
@@ -1615,179 +1600,76 @@ void main()
   print("Square root is $squareroot"); 
   
 }
-
 ```
-
 [Run Online](https://dartpad.dev/?id=5f165f8153240f2ea69654d8ea283d7f)
 
 ## Exception Handling in Dart 
 
 ### **Exception In Dart**
+- An exception is an error that occurs at runtime during program execution. 
+- When the exception occurs, the flow of the program is interrupted, and the program terminates abnormally. 
 
-An exception is an error that occurs at runtime during program execution. When the exception occurs, the flow of the program is interrupted, and the program terminates abnormally. There is a high chance of crashing or terminating the program when an exception occurs. Therefore, to save your program from crashing, you need to catch the exception.
+#### Dart Built-in Exceptions
+- **IntegerDivisionByZeroException**: Thrown when a number is divided by zero.
+- **IOException**: Base class for all Input-Output related exceptions.
+- **DeferredLoadException**: Thrown when a deferred library fails to load.
+- **FormatException**: Thrown when a string or some other data does not have an expected format and cannot be parsed or processed.
+- **IsolateSpawnException**: Thrown when an isolate cannot be created.
+- **TimeoutException**: Thrown when a scheduled timeout happens while waiting for an async result.
 
-**Note**: If you are attempting a task that might result in an error, it’s a good habit to use the try-catch statement.
-
-### **Syntax**
-
+#### Simple Try-Catch
 ```dart
 try {
-// Your Code Here
-  }
-catch(ex){
-// Exception here
+   // Statement
+   
+   throw Exception('You can even throw your own exception');
 }
-
+catch(e) {
+  // Handle exception
+}
 ```
 
-
-### **Try & Catch In Dart**
-
-**Try** You can write the logical code that creates exceptions in the try block.
-
-**Catch** When you are uncertain about what kind of exception a program produces, then a catch block is used. It is written with a try block to catch the general exception.
-
-### **Example 1: Try Catch In Dart**
-
-In this example, you will see how to handle the exception using the try-catch block.
-
-```dart
-void main() {   
-   int a = 18;   
-   int b = 0;   
-   int res;    
-     
-   try {    
-      res = a ~/ b;
-      print("Result is $res");   
-   }    
-    // It returns the built-in exception related to the occurring exception  
-   catch(ex) {   
-      print(ex);   
-    }   
-}  
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=fbe990056aa6798dd04a0c4d1cd38dc3)
-
-### **Finally In Dart Try Catch**
-
-The **finally** block is always executed whether the exceptions occur or not. It is optional to include the final block, but if it is included, it should be after the try and catch block is over.
-
-**On** block is used when you know what types of exceptions are produced by the program.
-
-### **Syntax**
-
+#### Try-On
 ```dart
 try {
-.....
+   // Statement
 }
-on Exception1 {
-....
+on IntegerDivisionByZeroException {
+ // Handle exception
 }
-catch Exception2 {
-....
+on IOException catch(e) {
+  // Handle exception
+}
+```
+
+#### Try-Catch-Finally
+```dart
+try {
+   // Statement
+}
+catch(e) {
+  // Handle exception
 }
 finally {
-// code that should always execute whether an exception or not.
+  // Cleanup code
 }
-
 ```
-
-
-### **Example 2: Finally In Dart Try Catch**
-
-In this example, you will see how to handle the exception using the try-catch block with the finally block.
-
-```dart
-void main() {
-  int a = 12;
-  int b = 0;
-  int res;
-  try {
-    res = a ~/ b;
-  } on UnsupportedError {
-    print('Cannot divide by zero');
-  } catch (ex) {
-    print(ex);
-  } finally {
-    print('Finally block always executed');
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=76649da1be9329e5adb737ab6537b02e)
-
-### **Throwing An Exception**
-
-The throw keyword is used to raise an exception explicitly. A raised exception should be handled to prevent the program from exiting unexpectedly.
-
-### **Syntax**
-
-```dart
-throw new Exception_name() 
-
-```
-
-
-### **Example 3: Throwing An Exception**
-
-In this example, you will see how to throw an exception using the throw keyword.
-
-```dart
-void main() {
-  try {
-    check_account(-10);
-  } catch (e) {
-    print('The account cannot be negative');
-  }
-}
-
-void check_account(int amount) {
-  if (amount < 0) {
-    throw new FormatException(); // Raising explanation externally
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=bf9e42c2a20df5759490c0e7ee5b1d27)
-
-### **Why Is Exception Handling Needed?**
-
-Exceptions provide the means to separate the details of what to do when something out of the ordinary happens from the main logic of a program. Therefore, exceptions must be handled to prevent the application from unexpected termination. Here are some reasons why exception handling is necessary:
-
-*   To avoid abnormal termination of the program.
-*   To avoid an exception caused by logical error.
-*   To avoid the program from falling apart when an exception occurs.
-*   To reduce the vulnerability of the program.
-*   To maintain a good user experience.
-*   To try providing aid and some debugging in case of an exception.
 
 ### **How To Create Custom Exception In Dart**
 
-As you go advance, you need to create your exception; Dart enables you to create your exception.
-
-### **Syntax**
-
+#### **Syntax**
 ```dart
 class YourExceptionClass implements Exception{
   // constructors, variables & methods
 }
-
 ```
 
-
-### **Example 4: How to Create & Handle Exception**
+#### **Example : How to Create & Handle Exception**
 
 This program throws an exception when a student’s mark is negative. You will understand **implements** in the object-oriented programming section.
 
 ```dart
+
 class MarkException implements Exception {
   String errorMessage() {
     return 'Marks cannot be negative value.';
@@ -1808,54 +1690,7 @@ void checkMarks(int marks) {
 
 ```
 
-
 [Run Online](https://dartpad.dev/?id=38e624859b1671f840556ce827140079)
-
-### **Example 5: How to Create & Handle Exception**
-
-This program throws an exception when you find the square root of a negative number.
-
-```dart
-import 'dart:math';
-
-// custom exception class
-class NegativeSquareRootException implements Exception {
-  @override
-  String toString() {
-    return 'Sqauare root of negative number is not allowed here.';
-  }
-}
-
-// get square root of a positive number
-num squareRoot(int i) {
-  if (i < 0) {
-    // throw `NegativeSquareRootException` exception
-    throw NegativeSquareRootException();
-  } else {
-    return sqrt(i);
-  }
-}
-
-void main() {
-  try {
-    var result = squareRoot(-4);
-
-    print("result: $result");
-  } on NegativeSquareRootException catch (e) {
-    print("Oops, Negative Number: $e");
-  } catch (e) {
-    print(e);
-  } finally {
-    print('Job Completed!');
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=10e7acfcc31f524a1e7d45d2b768df36)
-
-
 
 ## File Handling in Dart
 
