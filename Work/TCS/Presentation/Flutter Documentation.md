@@ -1,24 +1,17 @@
-# Dart Tutorial
 
 ## Introduction and Basics
 
-### Introduction to Dart
 #### Dart
 
 - Dart is a client-optimized, object-oriented, modern programming language to build apps fast for many platforms like android, iOS, web, desktop, etc. 
-- Client optimized means optimized for crafting a beautiful user interface and high-quality experiences. 
-- Google developed Dart as a programming language.
-- A solid understanding of Dart is necessary to develop high-quality apps with flutter. 
-
+---
 #### Dart Features
-
-*   Free and open-source.
 *   Object-oriented programming language.
 *   Used to develop android, iOS, web, and desktop apps fast.
 *   Can compile to either native code or javascript.
 *   Offers modern programming features like null safety and asynchronous programming.
 *   You can even use Dart for servers and backend.
-
+*  Google developed Dart as a programming language. 
 #### Difference Between Dart & Flutter
 
 *   **Dart** is a client optimized, object-oriented programming language. It is popular nowadays because of flutter. It is difficult to build complete apps only using Dart because you have to manage many things yourself.
