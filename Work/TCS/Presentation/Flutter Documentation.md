@@ -1,78 +1,21 @@
+### Introduction and Basics
 
-## Introduction and Basics
-
-#### Dart
-
-- Dart is a client-optimized, object-oriented, modern programming language to build apps fast for many platforms like android, iOS, web, desktop, etc. 
----
 #### Dart Features
 *   Object-oriented programming language.
 *   Used to develop android, iOS, web, and desktop apps fast.
 *   Can compile to either native code or javascript.
-*   Offers modern programming features like null safety and asynchronous programming.
-*   You can even use Dart for servers and backend.
-*  Google developed Dart as a programming language. 
+*   Dart comes with a **dart2js** compiler which translates dart code to javascript code that runs on all modern browsers.
+* Dart is a platform-independent language and supports almost every operating system such as windows, mac, and Linux.
+*  Developed by Google. 
+---
+
 #### Difference Between Dart & Flutter
 
 *   **Dart** is a client optimized, object-oriented programming language. It is popular nowadays because of flutter. It is difficult to build complete apps only using Dart because you have to manage many things yourself.
     
 *   **Flutter** is a framework that uses dart programming language. With the help of flutter, you can build apps for android, iOS, web, desktop, etc. The framework contains ready-made tools to make apps faster.
     
-
-#### Which Is The Best Code Editor For Dart Programming
-
-The best code editor is VS Code if you want to run the dart program from a computer or laptop. You can download the dart extension from VS Code and start coding. You will learn more about [installing dart](https://dart-tutorial.com/introduction-and-basics/dart-install/) in the next topic. You can also use [DartPad](https://dartpad.dev/) to run simple dart programs without installing anything.
-
-#### Dart History
-
-*   Google developed Dart in 2011 as an alternative to javascript.
-*   Dart 1.0 was released on November 14, 2013.
-*   Dart 2.0 was released in August 2018.
-*   Dart 3.0 was released in May 2023.
-*   Dart gained popularity in recent days because of flutter.
-
-#### Basic Programming Terms
-
-Important words that you often hear while learning programming languages.
-
-**Statements:** A statement is a command that tells a computer to do something. In Dart, you can end most statements with a semicolon **;**.
-
-**Expressions:** An Expression is a value or something that can be calculated as a value. The expression can be numbers, text, or some other type. For E.g.
-
-```dart
-a. 52
-b. 5+5
-c. 'Hello World.'
-d. num
-
-```
-
-
-**Keywords:** Keywords are reserved words that give special meaning to the dart compiler. For E.g. **int**, **if**, **var**, **String**, **const**, etc.
-
-**Identifiers:** Identifiers are names created by the programmer to define variables, functions, classes, etc. Identifiers shouldn’t be keywords and must have a unique name. For E.g. **int age =19;**, here age is an identifier. You will learn more about identifiers later in this course.
-
-**High-Level Programming Language:** High-Level Programming Language is easy to learn, user-friendly, and uses English-like-sentence. For E.g. dart,c,java,etc.
-
-**Low-Level Programming Language:** Low-level programming language is hard to learn, non-user friendly, and deals with computer hardware components, e.g., machine and assembly language.
-
-Info
-
-Note: Low-level languages are faster than high-level but hard to understand and debug.
-
-**Compiler:** A compiler is a computer program that translates the high-level programming language into machine-level language.
-
-**Syntax:** The Syntax is a programming language’s pattern or rules that give the concept to code.
-
-#### Key Points
-
-*   Dart is a free and open-source programming language. You don’t need to pay any money to run dart programs.
-*   Dart is a platform-independent language and supports almost every operating system such as windows, mac, and Linux.
-*   Dart is an object-oriented programming language and supports all oops features such as encapsulation, inheritance, polymorphism, interface, etc.
-*   Dart comes with a **dart2js** compiler which translates dart code to javascript code that runs on all modern browsers.
-*   Dart is a programming language used by flutter, the world’s most popular framework for building apps.
-
-
+---
 ### Install Dart 
 
 #### **Dart Installation**
@@ -150,6 +93,7 @@ You can run the dart program on your browser without installing any software. Da
 
 Yes, you can use [DartPad](https://dartpad.dev/) to run simple dart programs from your phone without installing any software. For bigger projects, using DartPad is not recommended.
 
+---
 ### Basic Dart Program 
 
 This is a simple dart program that prints **Hello World** on screen. Most programmers write the Hello World program as their first program.
@@ -172,90 +116,6 @@ void main() {
 *   print(“Hello World!”); prints Hello World! on screen.
 *   Each code statement must end with a semicolon.
 
-#### **Basic Dart Program For Printing Name**
-
-```dart
-void main()
-{
-    var name = "John";
-    print(name);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=52502e861f491ed1b28a6da73b53efba)
-
-#### **Dart Program To Join One Or More Variables**
-
-Here **$variableName** is used to join variables. This joining process in dart is called string interpolation.
-
-```dart
-void main(){
-  var firstName = "John";
-  var lastName = "Doe";
-  print("Full name is $firstName $lastName");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=caa95bbad26818e23a292938ceba4d3a)
-
-#### **Dart Program For Basic Calculation**
-
-Performing addition, subtraction, multiplication, and division in dart.
-
-```dart
-void main() {
-	int num1 = 10; //declaring number1
-	int num2 = 3; //declaring number2
-	  
-	// Calculation
-	int sum = num1 + num2;
-	int diff = num1 - num2;
-	int mul = num1 * num2;
-	double div = num1 / num2; // It is double because it outputs number with decimal.
-	  
-	// displaying the output
-	print("The sum is $sum");
-	print("The diff is $diff");
-	print("The mul is $mul");
-	print("The div is $div");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=5de9dc2148637e9d9ecbd98632b457e6)
-
-#### **Create Full Dart Project**
-
-It’s nice to work on a single file, but if your project gets bigger, you need to manage configurations, packages, and assets files. So creating a dart project will help you to manage this all.
-
-```dart
-dart create <project_name>
-
-```
-
-
-This will create a simple dart project with some ready-made code.
-
-#### **Steps To Create Dart Project**
-
-*   Open folder location on command prompt/terminal.
-*   Type `dart create project_name` (For E.g. dart create first\_app)
-*   Type `cd first_app`
-*   Type `code .` to open project with visual studio code
-*   To check the main dart file go to **bin/first\_app.dart** and edit your code.
-
-#### **Run Dart Project**
-
-First, open the project location on the command/terminal and run the project with this command.
-```dart
-dart run
-```
-
 #### **Convert Dart Code To Javascript**
 
 
@@ -265,78 +125,38 @@ dart run
 
 
 ### Variables in Dart
-#### **Variables**
-
-Variables are containers used to store value in the program. There are different types of variables where you can keep different kinds of values. Here is an example of creating a variable and initializing it.
-
-```dart
-// here variable name contains value John.
-var name = "John";
-
-```
-
-
-#### **Variable Types**
-
-They are called data types. We will learn more about data types later in this dart tutorial.
-
-*   **String**: For storing text value. E.g. “John” \[Must be in quotes\]
-*   **int**: For storing integer value. E.g. 10, -10, 8555 \[Decimal is not included\]
-*   **double**: For storing floating point values. E.g. 10.0, -10.2, 85.698 \[Decimal is included\]
-*   **num**: For storing any type of number. E.g. 10, 20.2, -20 \[both int and double\]
-*   **bool**: For storing true or false. E.g. true, false \[Only stores true or false values\]
-*   **var**: For storing any value. E.g. ‘Bimal’, 12, ‘z’, true
-
-#### **Syntax**
-
-This is syntax for creating a variable in dart.
-
-```dart
-type variableName = value;
-
-```
-
-
-#### **Example 1: Using Variables In Dart**
-
-In this example, you will learn how to declare variables and print their values.
-
-```dart
-void main() {
-	// declaring variables
-	String name = "John";
-	String address = "USA";  
-	num age = 20; // used to store any types of numbers 
-	num height = 5.9;
-	bool isMarried = false;
-	   
-	// printing variables value   
-	print("Name is $name");
-	print("Address is $address");
-	print("Age is $age");
-	print("Height is $height");
-	print("Married Status is $isMarried");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=e050476fb9a1afa27732106f52d38d68)
-
-**Note**: Always use the descriptive variable name. Don’t use a variable name like a, b, c because this will make your code more complex.
 
 #### **Rules For Creating Variables In Dart**
 
-*   Variable names are case sensitive, i.e., a and A are different.
+*   Variable names are case sensitive.
 *   A variable name can consist of letters and alphabets.
 *   A variable name cannot start with a number.
 *   Keywords are not allowed to be used as a variable name.
 *   Blank spaces are not allowed in a variable name.
 *   Special characters are not allowed except for the underscore (\_) and the dollar ($) sign.
+* For naming convention use camelCase.
+
+```markdown
+
+/* Valid Identifiers */
+firstName
+first_name
+num1
+$result
+_marks
+
+/* Invalid Identifiers */
+!firstName
+Var
+first name
+first-name
+1person
+
+```
 
 #### **Dart Constant**
 
-Constant is the type of variable whose value never changes. In programming, changeable values are **mutable** and unchangeable values are **immutable**. Sometimes, you don’t need to change the value once declared. Like the value of PI=3.14, it never changes. To create a constant in Dart, you can use the const keyword.
+Constant is the type of variable whose value never changes. 
 
 ```dart
 void main(){
