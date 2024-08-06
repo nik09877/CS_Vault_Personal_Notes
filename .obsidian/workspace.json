@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "977920b0a411bb63",
+        "id": "6bcbbc14d74e6737",
         "type": "tabs",
         "children": [
           {
-            "id": "a89edd0cca92540c",
+            "id": "0d557e04358064f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS/Presentation/Flutter Documentation.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Work/TCS/Presentation/Flutter Documentation.md"
-              }
+              "state": {}
             }
           },
           {
@@ -104,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/Presentation/Flutter Documentation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/Presentation/Flutter Documentation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,8 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 411.5,
-    "collapsed": true
+    "width": 411.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,7 +168,7 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "a89edd0cca92540c",
+  "active": "0d557e04358064f3",
   "lastOpenFiles": [
     "Work/TCS/Presentation/Flutter Documentation.md",
     "Work/TCS/Presentation/demo.md",

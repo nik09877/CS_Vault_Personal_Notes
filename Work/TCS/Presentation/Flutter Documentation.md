@@ -568,13 +568,15 @@ Here, y = 5;
 These operators are used to compare values.
 
 ```dart
-/* Equality and Relational Operators
-==  Equal; see discussion below
+/*
+
+==  Equal; 
 !=  Not equal
 >   Greater than
 <   Less than
 >=  Greater than or equal to
 <=  Less than or equal to
+
 */
 ```
 
@@ -583,24 +585,18 @@ These operators are used to compare values.
 Assignment operators are used to assign values to variables.
 
 ```dart
-/* Assignment Operators
 Here, x = 10 and y = 5;
-=    x = y 
-> x = 5
-+=   x += y OR x = x + y  
-> x = 15
--=   x -= y OR x = x - y  
-> x = 5
-*=   x *= y OR x = x * y
-> x = 50
-/=   x /= y OR x = x / y
-> x = 2
-%=   x %= y OR x = x % y
-> x = 0
-*/
+
+'='    x = y // x = 5
+'+='   x += y OR x = x + y  // x = 15
+'-='   x -= y OR x = x - y  // x = 5
+'*='   x *= y OR x = x * y // x = 50
+'/='   x /= y OR x = x / y // x = 2
+'%='   x %= y OR x = x % y // x = 0
 
 // Assign value to a
 a = value;
+
 // Assign value to b if b is null;
 // otherwise, b stays the same
 b ??= value;
@@ -628,7 +624,7 @@ if (!done && (col == 0 || col == 3)) {
 Bitwise and shift operators perform operations on the binary representations of numbers.
 
 ```dart
-/* Bitwise and Shift Operators
+
 &       AND
 |       OR
 ^       XOR
@@ -636,17 +632,7 @@ Bitwise and shift operators perform operations on the binary representations of 
         (0s become 1s; 1s become 0s)
 <<      Shift left
 >>      Shift right
-*/
 
-final value = 0x22;
-final bitmask = 0x0f;
-
-assert((value & bitmask) == 0x02); // AND
-assert((value & ~bitmask) == 0x20); // AND NOT
-assert((value | bitmask) == 0x2f); // OR
-assert((value ^ bitmask) == 0x2d); // XOR
-assert((value << 4) == 0x220); // Shift left
-assert((value >> 4) == 0x02); // Shift right
 ```
 
 #### Cascade Operator
