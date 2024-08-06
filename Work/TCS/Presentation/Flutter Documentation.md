@@ -133,8 +133,8 @@ void main() {
 *   A variable name cannot start with a number.
 *   Keywords are not allowed to be used as a variable name.
 *   Blank spaces are not allowed in a variable name.
-*   Special characters are not allowed except for the underscore (\_) and the dollar ($) sign.
-* For naming convention use camelCase.
+*   Special characters are not allowed except for the **underscore (\_) and the dollar ($) sign**.
+* For naming convention use **camelCase**.
 
 ```markdown
 
@@ -170,347 +170,6 @@ void main(){
 
 [Run Online](https://dartpad.dev/?id=7fd7914f845a1c8ec59b89e00ead5916)
 
-#### **Naming Convention For Variables In Dart**
-
-It is a good habit to follow the naming convention. In Dart Variables, the variable name should start with lower-case, and every second word’s first letter will be upper-case like num1, fullName, isMarried, etc. Technically, this naming convention is called **lowerCamelCase**.
-
-#### **Naming Convention Example**
-
-```dart
-// Not standard way
-var fullname = "John Doe";
-// Standard way
-var fullName = "John Doe";
-const pi = 3.14;
-
-```
-
-
-### Data Types in Dart
-
-**Data types** help you to categorize all the different types of data you use in your code. **For e.g. numbers, texts, symbols, etc**. The data type specifies what type of value will be stored by the variable. Each variable has its data type. Dart supports the following built-in data types :
-
-1.  Numbers
-2.  Strings
-3.  Booleans
-4.  Lists
-5.  Maps
-6.  Sets
-7.  Runes
-8.  Null
-
-#### **Built-In Types**
-
-In Dart language, there is the type of values that can be represented and manipulated. The data type classification is as given below:
-
-
-|Data Type|Keyword         |Description                                           |
-|---------|----------------|------------------------------------------------------|
-|Numbers  |int, double, num|It represents numeric values                          |
-|Strings  |String          |It represents a sequence of characters                |
-|Booleans |bool            |It represents Boolean values true and false           |
-|Lists    |List            |It is an ordered group of items                       |
-|Maps     |Map             |It represents a set of values as key-value pairs      |
-|Sets     |Set             |It is an unordered list of unique values of same types|
-|Runes    |runes           |It represents Unicode values of String                |
-|Null     |null            |It represents null value                              |
-
-
-#### **Numbers**
-
-When you need to store numeric value on dart, you can use either int or double. Both int and double are subtypes of **num**. You can use num to store both int or double value.
-
-```dart
-void main() {
-	// Declaring Variables  
-	int num1 = 100; // without decimal point.
-	double num2 = 130.2; // with decimal point.
-	num num3 = 50;
-	num  num4 = 50.4;  
-	
-	// For Sum   
-	num sum = num1 + num2 + num3 + num4;
-	   
-	// Printing Info   
-	print("Num 1 is $num1");
-	print("Num 2 is $num2");  
-	print("Num 3 is $num3");  
-	print("Num 4 is $num4");  
-	print("Sum is $sum");  
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=7be7e0aa5918419c03b55d27222d4820)
-
-#### **Round Double Value To 2 Decimal Places**
-
-The `.toStringAsFixed(2)` is used to round the double value upto 2 decimal places in dart. You can round to any decimal places by entering numbers like 2, 3, 4, etc.
-
-```dart
-void main() {
-	// Declaring Variables
-	double price = 1130.2232323233233; // valid.
-	print(price.toStringAsFixed(2));
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=cf1299853b81c55dad6539147bab4bd4)
-
-#### **String**
-
-String helps you to store text data. You can store values like **I love dart**, **New York 2140** in String. You can use single or double quotes to store string in dart.
-
-```dart
-void main() {
-	// Declaring Values     
-	String schoolName = "Diamond School";
-	String address = "New York 2140";   
-	
-	// Printing Values
-	print("School name is $schoolName and address is $address");   
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=babf76424f9daaafcb0c522b39fafdfe)
-
-#### **Create A Multi-Line String In Dart**
-
-If you want to create a multi-line String in dart, then you can use triple quotes with either single or double quotation marks.
-
-```dart
-void main() {
-	// Multi Line Using Single Quotes   
-	String multiLineText = '''
-	This is Multi Line Text
-	with 3 single quote
-	I am also writing here.
-	''';
-	   
-	// Multi Line Using Double Quotes   
-	String otherMultiLineText = """
-	This is Multi Line Text
-	with 3 double quote
-	I am also writing here.
-	""";
-	   
-	// Printing Information   
-	print("Multiline text is $multiLineText");
-	print("Other multiline text is $otherMultiLineText");
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=d97095b4bf9822a4838cc6c3571cc457)
-
-#### **Special Character In String**
-
-
-|Special Character|Work    |
-|-----------------|--------|
-|\n               |New Line|
-|\t               |Tab     |
-
-
-```dart
-void main() {
-	// Using \n and \t   
-	print("I am from \nUS.");
-	print("I am from \tUS.");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=0fd1cb69933acb4686e9523ef8e839c6)
-
-#### **Create A Raw String In Dart**
-
-You can also create raw string in dart. Special characters won’t work here. You must write **r** after equal sign.
-
-```dart
-void main() {
-	// Set price value
-	num price = 10;
-	String withoutRawString = "The value of price is \t $price"; // regular String
-	String withRawString =r"The value of price is \t $price"; // raw String
-	
-	print("Without Raw: $withoutRawString"); // regular result
-	print("With Raw: $withRawString"); // with raw result
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=d2d0263d6e80d92a1e5f845e1074963b)
-
-#### **Type Conversion In Dart**
-
-In dart, type conversion allows you to convert one data type to another type. For e.g. to convert String to int, int to String or String to bool, etc.
-
-#### **Convert String To Int In Dart**
-
-You can convert String to int using int.parse() method. The method takes String as an argument and converts it into an integer.
-
-```dart
-void main() {
-	String strvalue = "1";
-	print("Type of strvalue is ${strvalue.runtimeType}");   
-	int intvalue = int.parse(strvalue);
-	print("Value of intvalue is $intvalue");
-	// this will print data type
-	print("Type of intvalue is ${intvalue.runtimeType}");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=93c9156125508d1344a8324dd337aa6a)
-
-#### **Convert String To Double In Dart**
-
-You can convert String to double using double.parse() method. The method takes String as an argument and converts it into a double.
-
-```dart
-void main() {
-	String strvalue = "1.1";
-	print("Type of strvalue is ${strvalue.runtimeType}");
-	double doublevalue = double.parse(strvalue);
-	print("Value of doublevalue is $doublevalue");
-	// this will print data type
-	print("Type of doublevalue is ${doublevalue.runtimeType}");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=35e0e9928eac53ff2f15b75ec690942a)
-
-#### **Convert Int To String In Dart**
-
-You can convert int to String using the toString() method. Here is example:
-
-```dart
-void main() {
-	int one = 1;
-	print("Type of one is ${one.runtimeType}");
-	String oneInString = one.toString(); 
-	print("Value of oneInString is $oneInString");
-	// this will print data type
-	print("Type of oneInString is ${oneInString.runtimeType}");
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=b70894081c9642a9c5626cfc5ecb14c9)
-
-#### **Convert Double To Int In Dart**
-
-You can convert double to int using the toInt() method.
-
-```dart
-void main() { 
-   double num1 = 10.01;
-   int num2 = num1.toInt(); // converting double to int
-
-  print("The value of num1 is $num1. Its type is ${num1.runtimeType}");
-  print("The value of num2 is $num2. Its type is ${num2.runtimeType}");
-}
-
-```
-[Run Online](https://dartpad.dev/?id=91723c90e7aa0c5e55b3f15866e9dbc0)
-
-#### **Booleans**
-
-In Dart, boolean holds either true or false value. You can write the **bool** keyword to define the boolean data type. You can use boolean if the answer is true or false. Consider the answer to the following questions:
-
-*   Are you married?
-*   Is the door open?
-*   Does a cat fly?
-*   Is the traffic light green?
-*   Are you older than your father?
-
-**These all are yes/no questions. Its a good idea to store them in boolean.**
-
-```dart
-void main() {
-	bool isMarried = true;
-	print("Married Status: $isMarried");
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=affed489d713e7b1a193dbc01c080425)
-
-#### **Lists**
-
-The list holds multiple values in a single variable. It is also called arrays. If you want to store multiple values without creating multiple variables, you can use a list.
-
-```dart
-void main() {
-	List<String> names = ["Raj", "John", "Max"];
-	print("Value of names is $names");
-	print("Value of names[0] is ${names[0]}"); // index 0
-	print("Value of names[1] is ${names[1]}"); // index 1
-	print("Value of names[2] is ${names[2]}"); // index 2
-	
-	  // Finding Length of List 
-	int length = names.length;  
-	print("The Length of names is $length");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=ef8ac2962eafb87626cff2d0a72631ef)
-
-Info
-
-**Note**: List index always starts with 0. Here names\[0\] is Raj, names\[1\] is John and names\[2\] is Max.
-
-#### **Sets**
-
-An unordered collection of unique items is called set in dart. You can store unique data in sets.
-
-Info
-
-Note: Set doesn’t print duplicate items.
-
-```dart
-void main() {
-	Set<String> weekday = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-	print(weekday);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=19097581fa56c7d5322da870e121a33c)
-
-#### **Maps**
-
-In Dart, a map is an object where you can store data in key-value pairs. Each key occurs only once, but you can use same value multiple times.
-
-```dart
-void main() {
-	Map<String, String> myDetails = {
-	   'name': 'John Doe',
-	   'address': 'USA',
-	   'fathername': 'Soe Doe'
-	};
-	// displaying the output
-	print(myDetails['name']);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=38f9825722404dd6f31d259ea52605d6)
-
 #### **Var Keyword In Dart**
 
 In Dart, **var** automatically finds a data type. In simple terms, var says if you don’t want to specify a data type, I will find a data type for you.
@@ -529,20 +188,312 @@ void main(){
 
 [Run Online](https://dartpad.dev/?id=ba9debaeebf20409ddf8e59b3f4daa22)
 
-#### **Runes In Dart**
+#### **Dynamically Typed Example**
 
-With runes, you can find Unicode values of String. The Unicode value of **a** is **97**, so runes give 97 as output.
+A language is dynamically typed if the data type of variables is known at run time.
 
 ```dart
-void main() {
-
-	String value = "a";
-	print(value.runes);
+void main() { 
+   dynamic myVariable = 50;
+   myVariable = "Hello";
+   print(myVariable);
 }
 
 ```
 
-[Run Online](https://dartpad.dev/?id=eb53d4079e1051f22bc2950de78ac241)
+[Run Online](https://dartpad.dev/?id=7db07c7c42b1408649cae9276817a1bf)
+
+### Data Types in Dart
+
+#### **Built-In Types**
+
+In Dart language, there is the type of values that can be represented and manipulated. The data type classification is as given below:
+
+
+|Data Type|Keyword         |Description                                           |
+|---------|----------------|------------------------------------------------------|
+|Numbers  |int, double, num|It represents numeric values                          |
+|Strings  |String          |It represents a sequence of characters                |
+|Booleans |bool            |It represents Boolean values true and false           |
+|Lists    |List            |It is an ordered group of items                       |
+|Maps     |Map             |It represents a set of values as key-value pairs      |
+|Sets     |Set             |It is an unordered list of unique values of same types|
+|Runes    |runes           |It represents Unicode values of String                |
+|Null     |null            |It represents null value                              |
+
+#### Numbers in Dart
+
+##### Integers
+
+- Subtypes of `num`: `int` and `double`
+- Integers (64 bits max)
+    - Values on Dart VM: -2^63 to 2^63 - 1
+    - Values on Compiled JS: -2^53 to 2^53 - 1
+
+```dart
+var year = 1991;
+/*  Explicit declaration */
+int age = 28;
+```
+
+##### Doubles
+
+- Doubles (64 bits precision)
+
+```dart
+var height = 6.2;
+double z = 1; // (Dart 2.1) Eqv to double z = 1.0
+```
+
+#### Lists - In Dart, Arrays are Lists
+
+```dart
+var favFruits = ['bananas', 'apples', 'oranges'];
+assert(favFruits.length == 3);
+assert(favFruits[2] == 'oranges');
+favFruits[0] = 'mango';
+assert(favFruits[0] == 'mango');
+
+var belongings = {
+  'tags': ['saturn'],
+  'url': '//path/to/saturn.jpg'
+};
+
+```
+
+#### Boolean
+
+```dart
+var didHomework = true;
+bool areYouOK = false;
+```
+
+#### Default Values
+
+Everything you can place in a variable is an Object.
+
+```dart
+int lineCount;
+assert(lineCount == null); // true
+```
+
+#### Properties of Numbers
+```dart
+double points = 45.23;
+
+points.hashCode // 295564923
+points.isFinite // true
+points.isInfinite // false
+points.isNaN // false
+points.isNegative // false
+
+// (isEven & isOdd : Only in integer types)
+int num = 4;
+num.isEven   // true
+num.isOdd  // false
+
+num.sign  // 1
+// Returns -1, 0, or 1 depending on the sign and numerical value of the number
+
+```
+
+#### Methods of Numbers
+```dart
+double numDouble = -4.4523;
+
+int num = 4;
+num.toDouble() // 4 (In Double)
+
+numDouble.toInt()  // -4 (Integer)
+numDouble.abs()  // 4.4523 (Absolute value)
+numDouble.ceil() // -4
+numDouble.compareTo(num) // -1
+numDouble.truncate() // -4
+numDouble.floor() // -5 (Next greatest integer)
+numDouble.round() // -4 (Rounded to the nearest)
+
+var numToString = numDouble.toString();
+numToString is String // true
+
+double amount = 4;
+amount.remainder(2) // 0 (Remainder of a division)
+amount.toDouble() // 4 (To Double)
+```
+
+#### Strings
+
+```dart
+var name = 'John Doe';
+/*  Explicit declaration  */
+String cousin = 'Jane Doe';
+
+var s1 = 'I wrote this using single quotes.';
+var s2 = "How about double quotes.";
+var s3 = 'It\'s easy to escape the string delimiter.';
+var s4 = "It's even easier to use the other delimiter.";
+
+```
+
+##### Interpolation
+```dart
+var s = 'Thor';
+assert('Do not tell $s that I stole his hammer.' ==
+    'Do not tell Thor that I stole ' +
+        'his hammer.');
+
+assert('I was just kidding ' +
+        '${s.toUpperCase()} !!' ==
+    'I was just kidding ' +
+        'THOR !!');
+
+```
+
+##### Concatenation
+
+```dart
+/*  Adjacent string literals */
+var s1 = 'I '
+    'love'
+    " apple pie.";
+assert(s1 ==
+    'I love '
+        'apple pie.');
+
+var s2 = '2 + 2 ' + 'equals 4.';
+assert(s2 == '2 + 2 equals 4.');
+
+```
+
+##### Multi-line String
+```dart
+var s1 = '''
+You can create
+multi-line strings like this also.
+''';
+
+var s2 = """This is also a
+multi-line string.""";
+
+```
+
+##### Raw String
+
+```dart
+var s = r'Using \n won\'t work in raw strings.';
+```
+
+##### Properties of Strings
+
+```dart
+var hello = 'Hello World';
+hello.codeUnits; // [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+
+print(hello.length); // 11
+print(hello.isEmpty); // false
+print(hello.isNotEmpty); // true
+
+```
+
+##### Methods of Strings
+
+```dart
+hello.toLowerCase(); // Convert string to lower case
+hello.toUpperCase(); // Convert string to upper case
+hello.trim(); // Remove leading and trailing whitespace
+hello.compareTo('Hello'); // Compare with another object
+hello.replaceAll('World', 'Dart'); // Replace substring that match a pattern
+hello.split(' '); // Split using delimiter to a list of substring
+hello.substring(0, 5); // substring using startIndex, inclusive, to endIndex, exclusive
+hello.toString(); // Object to string representation
+hello.codeUnitAt(0); // 16-bit UTF-16 code unit
+```
+
+#### Boolean
+
+Booleans in Dart:
+
+```dart
+var didHomework = true;
+
+/* Explicit declaration */
+bool areYouOK = false;
+
+/* Usage */
+if (didHomework) {
+  print('You pass');
+} else {
+  print('You fail');
+}
+
+```
+
+#### Runes
+
+A rune is simply an integer representing the Unicode code point.
+
+```dart
+Runes input = new Runes(' \u{1f601} '); 
+print(new String.fromCharCodes(input)); 
+// Output: 😁   
+
+String x = 'Runes'; 
+print(x.codeUnitAt(0)); // 82
+
+print(x.codeUnits); // [82, 117, 110, 101, 115]
+
+print(x.runes); // (82, 117, 110, 101, 115)
+
+x.runes.forEach((int rune) { 
+   var character = new String.fromCharCode(rune); 
+   print(character); 
+});  
+// R
+// u
+// n
+// e
+// s
+
+```
+
+#### Enumeration
+
+Enums are used for defining named constant values.
+
+```dart
+enum Status { 
+   none,
+   play,
+   pause,
+   stop
+}
+
+Status.play // Status.play
+Status.none.index // 0
+Status.pause.index // 1
+Status.values
+// [Status.none, Status.play, Status.pause, Status.stop]
+
+```
+
+##### Example
+
+```dart
+var status = Status.play;
+switch(status){
+  case Status.play:
+    print('playing ...');
+    break;
+  case Status.pause:
+    print('paused.');
+    break;
+    
+  case Status.stop:
+  case Status.none:
+  default:
+    print('stopped.');
+    break;
+}
+```
 
 #### **How To Check Runtime Type**
 
@@ -559,58 +510,15 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=b15e41105a5b65c6ca0daaf8d00bf595)
 
-#### **Optionally Typed Language**
-
-You may have heard of the **statically-typed** language. It means the data type of variables is known at compile time. Similarly, **dynamically-typed** language means data types of variables are known at run time. Dart supports dynamic and static types, so it is called optionally-typed language.
-
-#### **Statically Typed**
-
-A language is statically typed if the data type of variables is known at compile time. Its main advantage is that the compiler can quickly check the issues and detect bugs.
-
-```dart
-void main() { 
-   var myVariable = 50; // You can also use int instead of var
-   myVariable = "Hello"; // this will give error
-   print(myVariable);
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=9d93d16d1fd115524698bdd9510f84c7)
-
-#### **Dynamically Typed Example**
-
-A language is dynamically typed if the data type of variables is known at run time.
-
-```dart
-void main() { 
-   dynamic myVariable = 50;
-   myVariable = "Hello";
-   print(myVariable);
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=7db07c7c42b1408649cae9276817a1bf)
-
-**Note**: Using static type helps you to prevent writing silly mistakes in code. It’s a good habit to use static type in dart.
-
 ### Comments in Dart 
-
-**Comments** are the set of statements that are ignored by the dart compiler during program execution. They are used to explain the code so that you or other people can understand it easily.
-
-*   You can describe your code.
-*   Other people will understand your code more clearly.
-
-*   **Single-Line Comment**: For commenting on a single line of code. E.g. // This is a single-line comment.
-*   **Multi-Line Comment**: For commenting on multiple lines of code. E.g. /\* This is a multi-line comment. \*/
-*   **Documentation Comment**: For generating documentation or reference for a project/software package. E.g. /// This is a documentation comment
-
-Single line comments start with `//` in dart. You can write `//` and your text.
 
 ```dart
 void main() {
 	// This is single-line comment.
+	/*
+	This is a multi-line comment.
+	*/
+	/// This is documentation comment
 	print("Welcome to Technology Channel.");
 }
 
@@ -619,251 +527,212 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=f7b3ff31a94bb2bb0ddbbc4c57d08ab7)
 
-Multi-line comments start with `/*` and end with `*/` . You can write your comment inside `/*` and `*/`.
-
-```dart
-void main(){  
-/*
-This is a multi-line comment.
-*/
-    print("Welcome to Technology Channel.");  
-}  
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=2eb2cb81bf3019e0838e5019656f0e25)
-
-Documentation comments are helpful when you are writing documentation for your code. Documentation comments start with `///` in dart.
-
-```dart
-void main(){  
-/// This is documentation comment
-    print("Welcome to Technology Channel.");  
-}  
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=ce68f8c0b69d6ef7a0b7b7f8c0f1bd14)
-
 ### Operators in Dart 
 
-Operators are used to perform mathematical and logical operations on the variables. Each operation in dart uses a symbol called the operator to denote the type of operation it performs. Before learning operators in the dart, you must understand the following things.
+# Dart Language Operators
 
-*   **Operands** : It represents the data.
-*   **Operator** : It represents how the operands will be processed to produce a value.
-
-Info
-
-**Note**: Suppose the given expression is 2 + 3. Here 2 and 3 are operands, and `+` is the operator.
-
-#### **Types Of Operators**
-
-There are different types of operators in dart. They are as follows:
-
-*   **Arithmetic Operators**
-*   **Increment and Decrement Operators**
-*   **Assignment Operators**
-*   **Logical Operators**
-*   **Type Test Operators**
-
-#### **Arithmetic Operators**
-
-Arithmetic operators are the most common types of operators. They perform operations like addition, subtraction, multiplication, division, etc.
-
-
-|Operator Symbol|Operator Name   |Description                                         |
-|---------------|----------------|----------------------------------------------------|
-|+              |Addition        |For adding two operands                             |
-|-              |Subtraction     |For subtracting two operands                        |
-|-expr          |Unary Minus     |For reversing the sign of the expression            |
-|*              |Multiplication  |For multiplying two operands                        |
-|/              |Division        |For dividing two operands and give output in double |
-|~/             |Integer Division|For dividing two operands and give output in integer|
-|%              |Modulus         |Remainder After Integer Division                    |
-
-
-Let’s look at how to perform arithmetic calculations in dart.
+#### Arithmetic Operators
+Arithmetic operators are used to perform mathematical operations.
 
 ```dart
+/* Arithmetic Operators
+Here, y = 5;
++    Addition       (x = y + 2 => 7)
+-    Subtraction    (x = y - 2 => 3)
+*    Multiplication (x = y * 2 => 10)
+/    Division       (x = y / 2 => 2.5)
+~/    Division (integer) (x = y ~/ 2 => 2)
+%    Modulus (remainder) (x = y % 2 => 1)     
+++   Increment      (x = ++y => y = 6 | x = 6)
+                    (x = y++ => y = 6 | x = 5)
+--   Decrement      (x = --y  => y = 4, x = 4)
+                    (x = y--  => y = 4, x = 5)
+*/
+```
+
+#### Equality and Relational Operators
+
+These operators are used to compare values.
+
+```dart
+/* Equality and Relational Operators
+==  Equal; see discussion below
+!=  Not equal
+>   Greater than
+<   Less than
+>=  Greater than or equal to
+<=  Less than or equal to
+*/
+```
+
+#### Assignment Operators
+
+Assignment operators are used to assign values to variables.
+
+```dart
+/* Assignment Operators
+Here, x = 10 and y = 5;
+=    x = y 
+> x = 5
++=   x += y OR x = x + y  
+> x = 15
+-=   x -= y OR x = x - y  
+> x = 5
+*=   x *= y OR x = x * y
+> x = 50
+/=   x /= y OR x = x / y
+> x = 2
+%=   x %= y OR x = x % y
+> x = 0
+*/
+
+// Assign value to a
+a = value;
+// Assign value to b if b is null;
+// otherwise, b stays the same
+b ??= value;
+```
+
+#### Logical Operators
+
+Logical operators are used to perform logical operations.
+
+```dart
+/* Logical Operators
+!expr  Inverts the following expression 
+        (changes false to true, and vice versa)
+||     Logical OR
+&&     Logical AND
+*/
+
+if (!done && (col == 0 || col == 3)) {
+  // ...Do something...
+}
+```
+
+#### Bitwise and Shift Operators
+
+Bitwise and shift operators perform operations on the binary representations of numbers.
+
+```dart
+/* Bitwise and Shift Operators
+&       AND
+|       OR
+^       XOR
+~expr   Unary bitwise complement 
+        (0s become 1s; 1s become 0s)
+<<      Shift left
+>>      Shift right
+*/
+
+final value = 0x22;
+final bitmask = 0x0f;
+
+assert((value & bitmask) == 0x02); // AND
+assert((value & ~bitmask) == 0x20); // AND NOT
+assert((value | bitmask) == 0x2f); // OR
+assert((value ^ bitmask) == 0x2d); // XOR
+assert((value << 4) == 0x220); // Shift left
+assert((value >> 4) == 0x02); // Shift right
+```
+
+#### Cascade Operator
+
+The cascade operator (`..`) allows multiple operations to be performed on the same object.
+
+```dart
+class Employee {
+  void print_name() {
+    print('Name: John Doe');
+  }  
+
+  void print_salary() {
+    print('Salary: 50,000');
+  }
+}
+
+Employee employee = Employee();
+employee.print_name();  
+employee.print_salary();
+
+// Can be written as
+Employee()..print_name()..print_salary();
+
+/******** Output ********/
+// Name: John Doe
+// Salary: 50,000
+```
+
+#### Spread Operators
+
+Spread operators are used to insert multiple elements into collections.
+
+```dart
+// Spread Operator
+var fruits = ['apple', 'banana', 'grape'];
+var more_fruits = ['peach', 'strawberry'];
+var all_fruits = ['guava', 'coconut', ...fruits, ...more_fruits];
+print(all_fruits);
+
+/******** Output ********/
+// [guava, coconut, apple, banana, grape, peach, strawberry]
+```
+
+#### Null-aware Spread Operator
+
+The null-aware spread operator (`...?`) ensures that spread elements are only included if they are not null.
+
+```dart
+// Null-aware Spread Operator
+var random_fruits = null;
+var only_good_ones = [...fruits, ...?random_fruits];
+print(only_good_ones);
+
+/******** Output ********/
+// [apple, banana, grape]
+```
+
+#### Conditional Spread Operator
+
+The conditional spread operator (`if` in collections) allows including elements based on a condition.
+
+```dart
+// Conditional Spread Operator
+bool loves_all = false;
+var johnnys_fav = [
+  'guava', 'coconut', 
+  ...fruits,
+  if (loves_all) ...more_fruits
+];
+print(johnnys_fav);
+
+/******** Output ********/
+// [guava, coconut, apple, banana, grape]
+```
+
+### Ternary Operator in Dart 
+
+The ternary operator is like if-else statement. This is a one-liner replacement for the if-else statement. It is used to write a conditional expression, where based on the result of a boolean condition, one of the two values is selected.
+
+#### **Syntax**
+
+```dart
+//syntax
+condition ? exprIfTrue : exprIfFalse
+//
+
 void main() {
-	 // declaring two numbers 
-	 int num1=10;
-	 int num2=3;
-	 
-	 // performing arithmetic calculation
-	 int sum=num1+num2;       // addition
-	 int diff=num1-num2;      // subtraction
-	 int unaryMinus = -num1;    // unary minus  
-	 int mul=num1*num2;       // multiplication
-	 double div=num1/num2;    // division
-	 int div2 =num1~/num2;     // integer division
-	 int mod=num1%num2;       // show remainder
-	 
-	//Printing info 
-	 print("The addition is $sum.");
-	 print("The subtraction is $diff.");
-	 print("The unary minus is $unaryMinus.");
-	 print("The multiplication is $mul.");
-	 print("The division is $div.");
-	 print("The integer division is $div2.");
-	 print("The modulus is $mod."); 
+  int num1 = 10;
+  int num2 = 15;
+  int max = (num1 > num2) ? num1 : num2;
+  print("The greatest number is $max");
 }
 
 ```
 
 
-[Run Online](https://dartpad.dev/?id=cb631ee189ccf2f8d5e215f6b1834746)
+**Note**: The ternary operator takes a condition and returns one of two values, depending upon the condition’s boolean value, i.e., true or false.
 
-#### **Increment and Decrement Operators**
-
-With increment and decrement operators, you can increase and decrease values. If ++ is used at the beginning, then it is a prefix. If it is used at last, then it is postfix.
-
-
-|Operator Symbol|Operator Name |Description                                                 |
-|---------------|--------------|------------------------------------------------------------|
-|++var          |Pre Increment |Increase Value By 1. var = var + 1 Expression value is var+1|
-|--var          |Pre Decrement |Decrease Value By 1. var = var - 1 Expression value is var-1|
-|var++          |Post Increment|Increase Value By 1. var = var + 1 Expression value is var  |
-|var--          |Post Decrement|Decrease Value By 1. var = var - 1 Expression value is var  |
-
-
-Info
-
-**Note**: ++var increases the value of operands, whereas var++ returns the actual value of operands before the increment.
-
-```dart
-void main() {
-	// declaring two numbers 
-	 int num1=0;
-	 int num2=0;
-	 
-	// performing increment / decrement operator  
-	
-	// pre increment   
-	num2 = ++num1;
-	print("The value of num2 is $num2");
-	
-	// reset value to 0 
-	num1 = 0;
-	num2 = 0;
-	
-	// post increment  
-	num2 =  num1++;
-	print("The value of num2 is $num2");  
-	  
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=a22b435de274f81b7553046482ecd084)
-
-#### **Assignment Operators**
-
-It is used to assign some values to variables. Here, we are assigning 24 to the age variable.
-
-
-|Operator Type|Description                  |
-|-------------|-----------------------------|
-|=            |Assign a value to a variable |
-|+=           |Adds a value to a variable   |
-|-=           |Reduces a value to a variable|
-|*=           |Multiply value to a variable |
-|/=           |Divided value by a variable  |
-
-
-```dart
-void main() {
-  double age = 24;
-  age+= 1;  // Here age+=1 means age = age + 1.
-  print("After Addition Age is $age");
-  age-= 1;  //Here age-=1 means age = age - 1.
-  print("After Subtraction Age is $age");
-  age*= 2;  //Here age*=2 means age = age * 2.
-  print("After Multiplication Age is $age");
-  age/= 2;  //Here age/=2 means age = age / 2.
-  print("After Division Age is $age");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=80bd0e4ffe646c1456ce93f22f013ff5)
-
-#### **Relational Operators**
-
-Relational operators are also called comparison operators. They are used to make a comparison.
-
-* Operator Symbol: >
-  * Operator Name: Greater than
-  * Description: Used to check which operand is bigger and gives result as boolean
-* Operator Symbol: <
-  * Operator Name: Less than
-  * Description: Used to check which operand is smaller and gives result as boolean
-* Operator Symbol: >=
-  * Operator Name: Greater than or equal to
-  * Description: Used to check which operand is bigger or equal and gives result as boolean
-* Operator Symbol: <=
-  * Operator Name: Less than or equal to
-  * Description: Used to check which operand is smaller or equal and gives result as boolean
-* Operator Symbol: ==
-  * Operator Name: Equal to
-  * Description: Used to check operands are equal to each other and gives result as boolean
-* Operator Symbol: !=
-  * Operator Name: Not equal to
-  * Description: Used to check operand are not equal to each other and gives result as boolean
-
-
-```dart
-void main() {
-  
-	 int num1=10;
-	 int num2=5;
-	 //printing info
-	 print(num1==num2); 
-	 print(num1<num2);
-	 print(num1>num2);
-	 print(num1<=num2);
-	 print(num1>=num2);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=751428eeb99566d37edd02325f446ca8)
-
-#### **Logical Operators**
-
-It is used to compare values.
-
-
-|Operator Type|Description                                                     |
-|-------------|----------------------------------------------------------------|
-|&&           |This is ‘and’, return true if all conditions are true           |
-|OR            |This is ‘or’. Return true if one of the conditions is true      |
-|!            |This is ’not’. return false if the result is true and vice versa|
-
-
-```dart
-void main(){
-	int userid = 123;
-    int userpin = 456;
-
-    // Printing Info
-    print((userid == 123) && (userpin== 456)); // print true
-    print((userid == 1213) && (userpin== 456)); // print false.
-    print((userid == 123) || (userpin== 456)); // print true.
-    print((userid == 1213) || (userpin== 456)); // print true
-    print((userid == 123) != (userpin== 456));//print false
-
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=567ef2df99b30af3352e71dd74d92b90)
 
 #### **Type Test Operators**
 
@@ -895,319 +764,18 @@ void main() {
 
 **Note**: You won’t be able to take input from users using dartpad. You need to run a program from your computer.
 
-#### String User Input
-
-They are used for storing textual user input. If you want to keep values like somebody’s name, address, description, etc., you can take string input from the user.
-
 ```dart
 import 'dart:io';
 
 void main() {
   print("Enter name:");
   String? name  = stdin.readLineSync();
+  int? number1 = int.parse(stdin.readLineSync()!);
+  double number2 = double.parse(stdin.readLineSync()!);
   print("The entered name is ${name}");
 }
 
 ```
-
-
-#### Integer User Input
-
-You can take integer input to get a numeric value from the user without the decimal point. E.g. 10, 100, -800 etc.
-
-```dart
-import 'dart:io';
-
-void main() {
-  print("Enter number:");
-  int? number = int.parse(stdin.readLineSync()!);
-  print("The entered number is ${number}");
-}
-
-```
-
-
-#### Floating Point User Input
-
-You can use float input if you want to get a numeric value from the user with the decimal point. E.g. 10.5, 100.5, -800.9 etc.
-
-```dart
-import 'dart:io';
-
-void main() {
-  print("Enter a floating number:");
-  double number = double.parse(stdin.readLineSync()!);
-  print("The entered num is $number");
-}
-
-```
-
-
-### String in Dart 
-**String** helps you to store text based data. In String, you can represent your name, address, or complete book. It holds a series or sequence of characters – letters, numbers, and special characters. You can use single or double, or triple quotes to represent String.
-
-#### **Example: String In Dart**
-
-Single line String is written in single or double quotes, whereas multi-line strings are written in triple quotes. Here is an example of it:
-
-```dart
-void main() {   
-   String text1 = 'This is an example of a single-line string.';   
-   String text2 = "This is an example of a single line string using double quotes.";   
-   String text3 = """This is a multiline line   
-string using the triple-quotes.
-This is tutorial on dart strings.
-""";   
-   print(text1);  
-   print(text2);   
-   print(text3);   
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=c2023963b37b2664ea4b40650e1c0037)
-
-#### **String Concatenation**
-
-You can combine one String with another string. This is called concatenation. In Dart, you can use the `+` operator or use **interpolation** to concatenate the String. Interpolation makes it easy to read and understand the code.
-
-#### **String Concatenation In Dart**
-
-```dart
-void main() {   
-	String firstName = "John";
-	String lastName = "Doe";
-	print("Using +, Full Name is "+firstName + " " + lastName+".");
-	print("Using interpolation, full name is $firstName $lastName.");  
-  
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=e4abbe14213951d7526cb280eddc47c2)
-
-#### **Properties Of String**
-
-*   **codeUnits**: Returns an unmodifiable list of the UTF-16 code units of this string.
-*   **isEmpty**: Returns true if this string is empty.
-*   **isNotEmpty**: Returns false if this string is empty.
-*   **length**: Returns the length of the string including space, tab, and newline characters.
-
-#### **String Properties Example In Dart**
-
-```dart
-void main() {
-   String str = "Hi";
-   print(str.codeUnits);   //Example of code units
-   print(str.isEmpty);     //Example of isEmpty
-   print(str.isNotEmpty);  //Example of isNotEmpty
-   print("The length of the string is: ${str.length}");   //Example of Length
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=e2fdfcfe0fcfbd11df3644acc24b531a)
-
-#### Methods Of String
-
-*   **toLowerCase()**: Converts all characters in this string to lowercase.
-*   **toUpperCase()**: Converts all characters in this string to uppercase.
-*   **trim()**: Returns the string without any leading and trailing whitespace.
-*   **compareTo()**: Compares this object to another.
-*   **replaceAll()**: Replaces all substrings that match the specified pattern with a given value.
-*   **split()**: Splits the string at matches of the specified delimiter and returns a list of substrings.
-*   **toString()**: Returns a string representation of this object.
-*   **substring()**: Returns the text from any position you want.
-*   **codeUnitAt()**: Returns the 16-bit UTF-16 code unit at the given index.
-
-#### **String Methods Example In Dart**
-
-Here you will see various string methods that can help your work a lot better and faster.
-
-#### **Converting String To Uppercase and Lowercase**
-
-You can convert your text to lower case using .toLowerCase() and convert to uppercase using .toUpperCase() method.
-
-```dart
-//Example of toUpperCase() and toLowerCase()
-void main() { 
-   String address1 = "Florida"; // Here F is capital
-   String address2 = "TexAs"; // Here T and A are capital
-   print("Address 1 in uppercase: ${address1.toUpperCase()}"); 
-   print("Address 1 in lowercase: ${address1.toLowerCase()}"); 
-   print("Address 2 in uppercase: ${address2.toUpperCase()}"); 
-   print("Address 2 in lowercase: ${address2.toLowerCase()}"); 
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=13ba9115b8702616179459da7c189cbe)
-
-#### **Trim String In Dart**
-
-Trim is helpful when removing leading and trailing spaces from the text. This trim method will remove all the starting and ending spaces from the text. You can also use **trimLeft()** and **trimRight()** methods to remove space from left and right, respectively.
-
-Info
-
-**Note**: The trim() method in Dart doesn’t remove spaces in the middle.
-
-```dart
-//Example of trim()
-void main() { 
-  String address1 = " USA"; // Contain space at leading.
-  String address2 = "Japan  "; // Contain space at trailing. 
-  String address3 = "New Delhi"; // Contains space at middle.
-  
-  print("Result of address1 trim is ${address1.trim()}");
-  print("Result of address2 trim is ${address2.trim()}");
-  print("Result of address3 trim is ${address3.trim()}");
-  print("Result of address1 trimLeft is ${address1.trimLeft()}");
-  print("Result of address2 trimRight is ${address2.trimRight()}");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=9ce2e4517d297d4f22c9c055917c2617)
-
-#### **Compare String In Dart**
-
-In Dart, you can compare two strings. It will give the result 0 when two texts are equal, 1 when the first String is greater than the second, and -1 when the first String is smaller than the second.
-
-```dart
-//Example of compareTo()
-void main() { 
-   String item1 = "Apple"; 
-   String item2 = "Ant"; 
-   String item3 = "Basket"; 
-   
-   print("Comparing item 1 with item 2: ${item1.compareTo(item2)}"); 
-   print("Comparing item 1 with item 3: ${item1.compareTo(item3)}"); 
-   print("Comparing item 3 with item 2: ${item3.compareTo(item2)}"); 
-} 
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=964cfc29d289b6949283c4fc7ad846ea)
-
-#### **Replace String In Dart**
-
-You can replace one value with another with the replaceAll(“old”, “new”) method in Dart. It will replace all the “old” words with “new”. Here in this example, this will replace milk with water.
-
-```dart
-//Example of replaceAll()
-void main() { 
-	String text = "I am a good boy I like milk. Doctor says milk is good for health.";
-	  
-	String newText = text.replaceAll("milk", "water"); 
-	 
-	print("Original Text: $text");
-	print("Replaced Text: $newText");  
-   
-} 
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=47f1cae2e9a0e2f4502947f486fbe260)
-
-#### **Split String In Dart**
-
-You can use the dart split method if you want to split String by comma, space, or other text. It will help you to split String to list.
-
-```dart
-//Example of split()
-void main() { 
-  String allNames = "Ram, Hari, Shyam, Gopal";
-
-  List<String> listNames = allNames.split(",");
-  print("Value of listName is $listNames");
-
-  print("List name at 0 index ${listNames[0]}");
-  print("List name at 1 index ${listNames[1]}");
-  print("List name at 2 index ${listNames[2]}");
-  print("List name at 3 index ${listNames[3]}");
-   
-} 
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=e2084d37c1c4153c687157f0ab528731)
-
-#### **ToString In Dart**
-
-In dart, toString() represents String representation of the value/object.
-
-```dart
-//Example of toString()
-void main() { 
-	int number = 20;     
-	String result = number.toString(); 
-	  
-	print("Type of number is ${number.runtimeType}");  
-	print("Type of result is ${result.runtimeType}");  
-    
-}   
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=85c061d07c69063fb819da5042ae9f03)
-
-#### **SubString In Dart**
-
-You can use substring in Dart when you want to get a text from any position.
-
-```dart
-//Example of substring()
-void main() { 
-   String text = "I love computer"; 
-   print("Print only computer: ${text.substring(7)}"); // from index 6 to the last index 
-   print("Print only love: ${text.substring(2,6)}");// from index 2 to the 6th index 
-} 
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=e9b00023c94645700208883bf320aa39)
-
-#### **Reverse String In Dart**
-
-If you want to reverse a String in Dart, you can reverse it using a different solution. One solution is here.
-
-```dart
-void main() { 
-  String input = "Hello"; 
-  print("$input Reverse is ${input.split('').reversed.join()}"); 
-} 
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=bdc13769cc0522c03ae999a6db4330a3)
-
-#### **How To Capitalize First Letter Of String In Dart**
-
-If you want to capitalize the first letter of a String in Dart, you can use the following code.
-
-```dart
-//Example of capitalize first letter of String
-void main() { 
-  String text = "hello world"; 
-  print("Capitalized first letter of String: ${text[0].toUpperCase()}${text.substring(1)}"); 
-} 
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=f0f335372ad3bad70a651a5e8967500b)
-
 
 ## Conditions and Loops
 
@@ -1223,101 +791,6 @@ You can use following conditions to control the flow of your program.
 *   **If-Else Condition**
 *   **If-Else-If Condition**
 *   **Switch case**
-
-#### **If Condition**
-
-The easy and most common way of controlling the flow of a program is through the use of an _if statement_. If statement allow us to execute a code block when the given condition is true. Conditions evaluate boolean values.
-
-#### **Syntax**
-
-```dart
-if(condition) {
-    Statement 1;
-    Statement 2;
-       .
-       .
-    Statement n;
-}
-
-```
-
-
-#### **Example Of If Condition**
-
-It prints whether the person is a voter. If the person’s age is greater and equal to 18, it will print, You are a voter.
-
-```dart
-void main()
-{
-    var age = 20;
-    
-    if(age >= 18){
-      print("You are voter.");
-    }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=6d8cac25d23cfd6e3d344ea3d7d551f6)
-
-#### **If-Else Condition**
-
-If the result of the condition is true, then the body of the if-condition is executed. Otherwise, the body of the else-condition is executed.
-
-#### **Syntax**
-
-```dart
-if(condition){
-	statements;
-}else{
-	statements;
-}
-
-```
-
-
-#### **Example Of If-Else Condition**
-
-Dart program prints whether the person is a voter or not based on age.
-
-```dart
-void main(){
-        int age = 12;
-        if(age >= 18){
-            print("You are voter.");
-        }else{
-            print("You are not voter.");
-        }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=976ee1d061eb24ba3ce26688bec33f37)
-
-#### **Condition Based On Boolean Value**
-
-If the married status is false, it prints you are single; otherwise, it will print you are married.
-
-```dart
-void main(){
-        bool isMarried = false;
-        if(isMarried){
-            print("You are married.");
-        }else{
-            print("You are single.");
-        }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=419e922bfb5d57445ee39b0fd5abfb2c)
-
-#### **If-Else-If Condition**
-
-When you have multiple if conditions, then you can use if-else-if. You can learn more in the example below. When you have more than two conditions, you can use if, else if, else in dart.
 
 #### **Syntax**
 
@@ -1337,76 +810,6 @@ statementsN;
 }
 
 ```
-
-
-#### **Example Of If-Else-If Condition**
-
-This program prints the month name based on the numeric value of that month. You will get a different result if you change the number of month.
-
-```dart
-void main() {
-  int noOfMonth = 5;
-
-  // Check the no of month
-  if (noOfMonth == 1) {
-    print("The month is jan");
-  } else if (noOfMonth == 2) {
-    print("The month is feb");
-  } else if (noOfMonth == 3) {
-    print("The month is march");
-  } else if (noOfMonth == 4) {
-    print("The month is april");
-  } else if (noOfMonth == 5) {
-    print("The month is may");
-  } else if (noOfMonth == 6) {
-    print("The month is june");
-  } else if (noOfMonth == 7) {
-    print("The month is july");
-  } else if (noOfMonth == 8) {
-    print("The month is aug");
-  } else if (noOfMonth == 9) {
-    print("The month is sep");
-  } else if (noOfMonth == 10) {
-    print("The month is oct");
-  } else if (noOfMonth == 11) {
-    print("The month is nov");
-  } else if (noOfMonth == 12) {
-    print("The month is dec");
-  } else {
-    print("Invalid option given.");
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=6b8d479d070a1cdff239851785bf6935)
-
-#### **Find Greatest Number Among 3 Numbers**
-
-Dart program, which finds the greatest number among three numbers.
-
-```dart
-void main(){
-        int num1 = 1200;
-        int num2 = 1000;
-        int num3 = 150;
-
-        if(num1 > num2  && num1 > num3){
-            print("Num 1 is greater: i.e $num1");
-        }
-        if(num2 > num1 && num2 > num3){
-           print("Num2 is greater: i.e $num2");
-        }
-        if(num3 > num1 && num3 > num2){
-            print("Num3 is greater: i.e $num3");
-        }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=9a8d5e29dc41c4b1713b920efae95cfa)
 
 ### Switch Case in Dart 
 
@@ -1436,48 +839,6 @@ switch(expression) {
 *   The **break** keywords tell dart to exit the switch statement because the statements in the case block are finished.
 *   If there is no match, **default statements** are executed.
 
-**Note**: You can use a Switch case as an alternative to the **if-else-if** condition.
-
-#### **Replace If Else If With Switch In Dart**
-
-Here you can see the same program using **if else if** and **switch** in dart.
-
-#### **Example: Using If Else If**
-
-This example prints the day name based on the numeric day of the week using a if else if.
-
-```dart
-void main(){
-   var dayOfWeek = 5;
-	if (dayOfWeek == 1) {
-	        print("Day is Sunday.");
-	  }
-	else if (dayOfWeek == 2) {
-	       print("Day is Monday.");
-	     }
-	else if (dayOfWeek == 3) {
-	      print("Day is Tuesday.");
-	     }
-	else if (dayOfWeek == 4) {
-	        print("Day is Wednesday.");
-	     }
-	else if (dayOfWeek == 5) {
-	        print("Day is Thursday.");
-	   }
-	else if (dayOfWeek == 6) {
-	        print("Day is Friday.");
-	    }
-	else if (dayOfWeek == 7) {
-	        print("Day is Saturday.");
-	}else{
-	        print("Invalid Weekday.");
-	     }
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=ee6d90177af379b0a6fc7917130249fc)
-
 #### **Example Of Switch Statement**
 
 This example prints the day name based on the numeric day of the week using a switch case.
@@ -1495,18 +856,6 @@ void main() {
     case 3:
       print("Day is Tuesday.");
       break;
-    case 4:
-        print("Day is Wednesday.");
-      break;
-    case 5:
-        print("Day is Thursday.");
-      break;
-    case 6:
-        print("Day is Friday.");
-      break;
-    case 7:
-        print("Day is Saturday.");
-      break;
     default:
         print("Invalid Weekday.");
       break;
@@ -1518,322 +867,24 @@ void main() {
 
 [Run Online](https://dartpad.dev/?id=01f56818a1754280968c0b6546321478)
 
-**Note**: The syntax of switch statements is cleaner and much easier to read and write.
-
-#### **Switch Case On Strings**
-
-You can also use a switch case with strings. This program prints information based on weather value.
-
+### Loops in Dart 
+#### For loop
 ```dart
 void main() {
- const weather = "cloudy";
-
-  switch (weather) {
-    case "sunny":
-        print("Its a sunny day. Put sunscreen.");
-        break;
-    case "snowy":
-        print("Get your skis.");
-      break;
-    case "cloudy":
-    case "rainy": 
-      print("Please bring umbrella.");
-      break;
-    default:
-        print("Sorry I am not familiar with such weather.");
-      break;
-  }
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=ace41d17f7bc6b5f68a767cccc218000)
-
-#### **Switch Case On Enum**
-
-An **[enum](https://dart-tutorial.com/object-oriented-programming/enum-in-dart/)** or enumeration is used for defining value according to you. You can define your own type with a finite number of options. Here is the syntax for defining enum.
-
-#### Syntax
-
-```dart
-enum enum_name { 
-  constant_value1, 
-  constant_value2, 
-  constant_value3 
-}
-
-```
-
-#### **Example of Switch Using Enum In Dart**
-
-Enum plays well with switch statements. Let’s see an example using enum.
-
-```dart
-// define enum outside main function
-enum Weather{ sunny, snowy, cloudy, rainy}
-// main method
-void main() {
- const weather = Weather.cloudy;
-  
-  switch (weather) {
-    case Weather.sunny:
-        print("Its a sunny day. Put sunscreen.");
-        break;
-    case Weather.snowy:
-        print("Get your skis.");
-      break;
-    case Weather.rainy:
-    case Weather.cloudy:
-      print("Please bring umbrella.");
-      break;
-    default:
-        print("Sorry I am not familiar with such weather.");
-      break;
-  }
-}
-
-```
-
-[Run Online](https://dartpad.dev/?id=e954c4fc1f335d0c06cb66d6c4493392)
-
-### Ternary Operator in Dart 
-
-The ternary operator is like if-else statement. This is a one-liner replacement for the if-else statement. It is used to write a conditional expression, where based on the result of a boolean condition, one of the two values is selected.
-
-#### **Syntax**
-
-```dart
-condition ? exprIfTrue : exprIfFalse
-
-```
-
-
-**Note**: The ternary operator takes a condition and returns one of two values, depending upon the condition’s boolean value, i.e., true or false.
-
-#### **Ternary Operator Vs If Else**
-
-We already learned if-else in dart. Let us see the same example using the if-else and ternary operator.
-
-#### Example Using If Else
-
-This program finds greatest number between two numbers using if else.
-
-```dart
-void main() {
-  int num1 = 10;
-  int num2 = 15;
-  int max = 0;
-  if(num1> num2){
-    max = num1;
-  }else {
-    max = num2;
-  }
-  print("The greatest number is $max");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=2a5b5e4364c0b8a960a7048dcf848d5c)
-
-#### **Example 1: Using Ternary Operator**
-
-This program finds greatest number between two numbers using ternary operator.
-
-```dart
-void main() {
-  int num1 = 10;
-  int num2 = 15;
-  int max = (num1 > num2) ? num1 : num2;
-  print("The greatest number is $max");
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=d8828e24baa9ad7c4e80cdda2fc9811a)
-
-**Note**: Ternary operator makes if-else code much shorter and readable. If you have problems with ternary, you can always use if-else.
-
-#### **Example 2: Ternary Operator Dart**
-
-If the selection value is 2 then it will set output as Apple otherwise, Banana.
-
-```dart
-void main() {
-  var selection = 2;
-  var output = (selection == 2) ? 'Apple' : 'Banana';
-  print(output);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=4c3782133a8a3e3279dc14a1de2357f5)
-
-#### **Example 3 Ternary Operator Dart**
-
-This is a dart program to print whether the person is a voter or not using a ternary operator.
-
-```dart
-void main() {
-  var age = 18;
-  var check = (age >= 18) ? 'You ara a voter.' : 'You are not a voter.';
-  print(check);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=51c2bc6014a529fb0e8415e59c629fe5)
-
-### For Loop in Dart 
-
-This is the most common type of loop. You can use **for loop** to run a code block multiple times according to the condition. The syntax of for loop is:
-
-```dart
-for(initialization; condition; increment/decrement){
-            statements;
-}
-
-```
-
-
-*   Initialization is executed (one time) before the execution of the code block.
-*   Condition defines the condition for executing the code block.
-*   Increment/Decrement is executed (every time) after the code block has been executed.
-
-#### **Example 1: To Print 1 To 10 Using For Loop**
-
-This example prints 1 to 10 using for loop. Here **int i = 1;** is initialization, **i<=10** is condition and **i++** is increment/decrement.
-
-```dart
-void main() {
+  //print 1 to 10 using for loop
   for (int i = 1; i <= 10; i++) {
     print(i);
   }
 }
-
 ```
-
-
-[Run Online](https://dartpad.dev/?id=264feb7ba11737142520e4b5f23351c0)
-
-#### **Example 2: To Print 10 To 1 Using For Loop**
-
-This example prints 10 to 1 using for loop. Here **int i = 10;** is initialization, **i>=1** is condition and **`i--`** is increment/decrement.
-
-```dart
-void main() {
-  for (int i = 10; i >= 1; i--) {
-    print(i);
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=f82a4a43964c0086b4aab3e5894e4194)
-
-#### **Example 3: Print Name 10 Times Using For Loop**
-
-This example prints the name 10 times using for loop. Based on the condition, the body of the loop executes 10 times.
-
-```dart
-void main() {
-  for (int i = 0; i < 10; i++) {
-    print("John Doe");
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=ee30fb7c24a66cfd219624363ceaba44)
-
-#### **Example 4: Display Sum of n Natural Numbers Using For Loop**
-
-Here, the value of the **total** is **0** initially. Then, the for loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the **total**, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
-
-```dart
-void main(){
-  int total = 0;
-  int n = 100; // change as per required
-  
-  for(int i=1; i<=n; i++){
-    total = total + i;
-  }
-  
-  print("Total is $total");
-  
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=c2a8725e7265d0913de7df0457481fbe)
-
-#### **Example 5: Display Even Numbers Between 50 to 100 Using For Loop**
-
-This program will print even numbers between 50 to 100 using for loop.
-
-```dart
-void main(){
-  for(int i=50; i<=100; i++){
-    if(i%2 == 0){
-      print(i);
-    }
-  } 
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=045b8c1efb218cc4b6a3faf5cda9ac7c)
-
-#### **Infinite Loop In Dart**
-
-If the condition never becomes false in looping, it is called an infinite loop. It uses more resources on your computer. The task is done repeatedly until the memory runs out.
-
-This program prints 1 to infinite because the condition is **i>=1**, which is always true with i++.
-
-```dart
-void main() {
-  for (int i = 1; i >= 1; i++) {
-    print(i);
-  }
-}
-
-```
-
-**Note**: Infinite loops take your computer resources continuously, use more power, and slow your computer. So always check your loop before use.
-
 ### For Each Loop in Dart
-
-The **for each** loop iterates over all list elements or variables. It is useful when you want to loop through **list/collection**. The syntax of for-each loop is:
+It is useful when you want to loop through **list/collection**. The syntax of for-each loop is:
 
 ```dart
 collection.forEach(void f(value));
-
 ```
 
-
-#### **Example 1: Print Each Item Of List Using Foreach**
-
-This will print each name of football players.
-
-```dart
-void main(){
-  List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
-  footballplayers.forEach( (names)=>print(names));
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=3546b6f86e5fa6d692259a57bb2b31c3)
-
-#### **Example 2: Print Each Total and Average Of Lists**
+#### **Example 1: Print Each Total and Average Of Lists**
 
 This program will print the total sum of all numbers and also the average value from the total.
 
@@ -1855,7 +906,6 @@ void main(){
 
 ```
 
-
 [Run Online](https://dartpad.dev/?id=398279cbea47b32e742d90523ede34a8)
 
 #### **For In Loop In Dart**
@@ -1873,7 +923,6 @@ void main(){
 
 ```
 
-
 [Run Online](https://dartpad.dev/?id=5e76bb057666cf7c4e5c1cc3c45fa918)
 
 #### **How to Find Index Value Of List**
@@ -1886,35 +935,12 @@ void main(){
 	List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
 	
 	footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
-
 }
-
 ```
-
 
 [Run Online](https://dartpad.dev/?id=cc3495b4811d8ee0c52618ec6551614e)
 
-#### **Example 3: Print Unicode Value of Each Character of String**
-
-This will split the name into Unicode values and then find characters from the Unicode value.
-
-```dart
-void main(){
-	String name = "John";
-	     
-	for(var codePoint in name.runes){
-	  print("Unicode of ${String.fromCharCode(codePoint)} is $codePoint.");
-	}
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=72c0263e605c022d0134c4e58480f205)
-
 ### While Loop in Dart 
-
-In **while loop**, the loop’s body will run until and unless the condition is true. You must write conditions first before statements. This loop checks conditions on every iteration. If the condition is true, the code inside {} is executed, if the condition is false, then the loop stops.
 
 #### Syntax
 
@@ -1927,15 +953,6 @@ while(condition){
 ```
 
 
-*   A while loop evaluates the condition inside the parenthesis ().
-*   If the condition is true, the code inside {} is executed.
-*   The condition is re-checked until the condition is false.
-*   When the condition is false, the loop stops.
-
-#### **Example 1: To Print 1 To 10 Using While Loop**
-
-This program prints 1 to 10 using while loop.
-
 ```dart
 void main() {
   int i = 1;
@@ -1947,74 +964,7 @@ void main() {
 
 ```
 
-
 [Run Online](https://dartpad.dev/?id=4bd92d159957b654e5f8e0703eb6a620)
-
-**Note**: Do not forget to increase the variable used in the condition. Otherwise, the loop will never end and becomes an infinite loop.
-
-#### **Example 2: To Print 10 To 1 Using While Loop**
-
-This program prints 10 to 1 using while loop.
-
-```dart
-void main() {
-  int i = 10;
-  while (i >= 1) {
-    print(i);
-    i--;
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=d625da929c5550ba0f65397010922653)
-
-#### **Example 3: Display Sum of n Natural Numbers Using While Loop**
-
-Here, the value of the total is 0 initially. Then, the while loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the total, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
-
-```dart
-void main(){
-
-  int total = 0;
-  int n = 100; // change as per required
-  int i =1;
-
-  while(i<=n){
-    total = total + i;
-    i++;
-  }
-  
-  print("Total is $total");
-  
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=d7212f76e2c02a141c001b86136f92fd)
-
-#### **Example 4: Display Even Numbers Between 50 to 100 Using While Loop**
-
-This program will print even numbers between 50 to 100 using while loop.
-
-```dart
-void main(){
-  int i = 50;
-  while(i<=100){
-  if(i%2 == 0){
-      print(i);
-    }
-    i++;
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=88474097465d8039d38c35f68f886a70)
-
 ### Do While Loop in Dart 
 
 Do while loop is used to run a block of code multiple times. The loop’s body will be executed first, and then the condition is tested. The syntax of do while loop is:
@@ -2022,20 +972,12 @@ Do while loop is used to run a block of code multiple times. The loop’s body w
 ```dart
 do{
     statement1;
-    statement2;
-    .
     .
     .
     statementN;
 }while(condition);
 
 ```
-
-
-*   First, it runs statements, and finally, the condition is checked.
-*   If the condition is true, the code inside {} is executed.
-*   The condition is re-checked until the condition is false.
-*   When the condition is false, the loop stops.
 
 **Note**: In a do-while loop, the statements will be executed at least once time, even if the condition is false. It is because the statement is executed before checking the condition.
 
@@ -2052,80 +994,13 @@ void main() {
 
 ```
 
-
 [Run Online](https://dartpad.dev/?id=3ed5f1b22915886443ecc157480e6bbc)
 
-#### **Example 2: To Print 10 To 1 Using Do While Loop**
-
-```dart
-void main() {
-  int i = 10;
-  do {
-    print(i);
-    i--;
-  } while (i >= 1);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=5f8af035a8fa74c794c82bbaa589d03a)
-
-#### **Example 3: Display Sum of n Natural Numbers Using Do While Loop**
-
-Here, the value of the **total** is 0 initially. Then, the do-while loop is iterated from **i = 1 to 100**. In each iteration, **i** is added to the total, and the value of **i** is increased by 1. Result is **1+2+3+….+99+100**.
-
-```dart
-void main(){
-
-  int total = 0;
-  int n = 100; // change as per required
-  int i =1;
-  
-  do{
-  total = total + i;
-    i++;
-  }while(i<=n);
-  
-  print("Total is $total");
-  
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=491f3761c6e018e314945490efc86bfb)
-
-#### **When The Condition Is False**
-
-Let’s make one condition false and see the demo below. **Hello** got printed if the condition is false.
-
-```dart
-void main(){
-  int number = 0;
-  do{
-	  print("Hello");
-	  number--;
-  }while(number >1);
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=7c3c2a8a4e750a3f2a8169f86d5d04e4)
-
 ### Break and Continue in Dart 
-
-In this tutorial, you will learn about the **break and continue** in dart. While working on loops, we need to skip some elements or terminate the loop immediately without checking the condition. In such a situation, you can use the break and continue statement.
-
 #### **Break Statement**
-
-Sometimes you will need to break out of the loop immediately without checking the condition. You can do this using break statement.
-
 The break statement is used to exit a loop. It stops the loop immediately, and the program’s control moves outside the loop. Here is syntax of break:
 
 #### **Example 1: Break In Dart For Loop**
-
 Here, the loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
 
 ```dart
@@ -2139,113 +1014,12 @@ void main() {
 }
 
 ```
-
-
 [Run Online](https://dartpad.dev/?id=50ac9046a365fef6dde49b5db51619df)
-
-#### **Example 2: Break In Dart Negative For Loop**
-
-Here, the loop condition is true until the value of i is more than or equal to 1. However, the break says to go outside the loop when the value of i becomes 7.
-
-```dart
-void main() {
-  for (int i = 10; i >= 1; i--) {
-    if (i == 7) {
-      break;
-    }
-    print(i);
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=3018972104eb8b763dfc0963ab20f378)
-
-#### **Example 3: Break In Dart While Loop**
-
-Here, this while loop condition is true until the value of i is less than or equal to 10. However, the break says to go outside the loop when the value of i becomes 5.
-
-```dart
-void main() {
- int i =1;
- while(i<=10){
-  print(i);
-   if (i == 5) {
-      break;
-    }
-    i++;
- }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=fc56b90939f7b2f0071143cc57108b94)
-
-#### **Example 4: Break In Switch Case**
-
-As we already learn in dart switch case, it is important to add **break** keyword in switch statement. This example prints the month name based on the number of the month using a switch case.
-
-```dart
-void main() {
-  var noOfMoneth = 5;
-  switch (noOfMoneth) {
-    case 1:
-      print("Selected month is January.");
-      break;
-    case 2:
-      print("Selected month is February.");
-      break;
-    case 3:
-      print("Selected month is march.");
-      break;
-    case 4:
-      print("Selected month is April.");
-      break;
-    case 5:
-      print("Selected month is May.");
-      break;
-    case 6:
-      print("Selected month is June.");
-      break;
-    case 7:
-      print("Selected month is July.");
-      break;
-    case 8:
-      print("Selected month is August.");
-      break;
-    case 9:
-      print("Selected month is September.");
-      break;
-    case 10:
-      print("Selected month is October.");
-      break;
-    case 11:
-      print("Selected month is November.");
-      break;
-    case 12:
-      print("Selected month is December.");
-      break;
-    default:
-      print("Invalid month.");
-      break;
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=089433333e62977d5957c4b3d2882930)
 
 #### **Continue Statement**
 
 Sometimes you will need to skip an iteration for a specific condition. You can do this utilizing continue statement.
-
-The continue statement skips the current iteration of a loop. It will bypass the statement of the loop. It does not terminate the loop but rather continues with the next iteration. Here is the syntax of continue statement:
-
 #### **Example 1: Continue In Dart**
-
 Here, the loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
 
 ```dart
@@ -2260,49 +1034,8 @@ void main() {
 
 ```
 
-
 [Run Online](https://dartpad.dev/?id=c5f2878678e363a80626ba578c53bdb9)
 
-#### **Example 2: Continue In For Loop Dart**
-
-Here, the loop condition is true until the value of i is more than or equal to 1. However, the continue says to go to the next iteration of the loop when the value of i becomes 4.
-
-```dart
-void main() {
-  for (int i = 10; i >= 1; i--) {
-    if (i == 4) {
-      continue;
-    }
-    print(i);
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=822da2a7cb4e2b6fd4bae2c249c7aa52)
-
-#### **Example 3: Continue In Dart While Loop**
-
-Here, this while loop condition is true until the value of i is less than or equal to 10. However, the continue says to go to the next iteration of the loop when the value of i becomes 5.
-
-```dart
-void main() {
-  int i = 1;
-  while (i <= 10) {
-    if (i == 5) {
-      i++;
-      continue;
-    }
-    print(i);
-    i++;
-  }
-}
-
-```
-
-
-[Run Online](https://dartpad.dev/?id=74b1837417fe0f7f53207072e58f45d1)
 
 ## Exception Handling in Dart 
 
