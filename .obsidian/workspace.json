@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "90dfaa3ef72a3fa2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 225.5
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -86,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md"
+                "file": "Work/TCS/Ultimatix/Project Work.md"
               }
             }
           },
@@ -104,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,12 +188,13 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "5ddfc2ace6c1f8cb",
+  "active": "90dfaa3ef72a3fa2",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/Presentation/Flutter Documentation.md",
     "Work/TCS/Presentation/demo.md",
     "Work/TCS/Presentation/tpl-footer.md",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/Presentation",
     "Work/TCS/InstaBiz UK/Flutter Document.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
@@ -201,7 +214,6 @@
     "444_System Design/HLD/Design Rate Limiter.md",
     "444_System Design/HLD/Notes/Prerequisites.md",
     "z_assets/Pasted_image_20240724120912.png",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "444_System Design/HLD/SQL vs NoSQL.md",
     "444_System Design/HLD/Capacity Estimation.md",
     "2024-07-08.md",

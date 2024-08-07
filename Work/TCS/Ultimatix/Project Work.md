@@ -408,3 +408,6 @@ With this setup, your application will:
 - Execute this logic every day at 8:00 AM using Spring's scheduling capabilities.
 
 This solution provides a robust way to ensure timely reminders for document closures, keeping all parties informed and prepared ahead of time.
+
+
+## Worked on InstaBiz UK finger print scanner, API integration and cross currency transfer screen .
