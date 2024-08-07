@@ -12202,7 +12202,10 @@ Row(
 
 - **Purpose:** Allows its child to flex within a row or column based on a **flex factor**.
 - **Behavior:**
-    
+    - Flexible takes only the needed space, and Expanded takes all available space, respecting the `flex` factor. See [the docs of the `Expanded` widget](https://api.flutter.dev/flutter/widgets/Expanded-class.html) for more info. 
+	- Flexible and Container both take the needed space.
+	- What confused me is the behaviour is the same when a container is the child of `Flexible` or `Expanded`. This is because `Containers with no children try to be as big as possible` [source](https://api.flutter.dev/flutter/widgets/Container-class.html). So the container makes Flexible look like its forcing container to be big, but actually its the containers true desire, the flexible just lets it be, whereas Expanded forces the container to be big. 
+    - `Flexible` widget can use the `fit` property which is `FlexBox.loose` by default and you can set it to `FlexBox.tight` for similar behavior of `Expanded` widget
     - Respects its child's preferred size if possible.
     - Takes up remaining space in its parent **proportionally** to its flex factor compared to other `Flexible` widgets within the same row/column.
     - Does not force its child to fit its own size.
