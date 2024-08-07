@@ -14084,6 +14084,40 @@ class _HomePageState extends State<HomePage> {
 
 ### Using Mobx #pending
 
+#### Install Dependencies
+
+```bash
+dependencies:
+  mobx: ^2.3.3+2
+  flutter_mobx: ^2.2.1+1
+  provider: ^6.1.2
+
+dev_dependencies:
+  mobx_codegen: ^2.6.1
+  build_runner: ^2.4.9
+```
+
+```bash
+flutter pub get
+
+OR
+
+flutter pub add mobx flutter_mobx provider
+flutter pub add mobx_codegen build_runner --dev
+```
+
+#### Run the Build Runner
+You need to run the build runner to generate the `*.g.dart` files. Open your terminal, navigate to your project directory, and run the following command:
+
+```bash
+flutter pub run build_runner build
+```
+
+This will generate the necessary files. If you want the build runner to watch for changes and automatically regenerate files, use the following command instead:
+```bash
+flutter pub run build_runner watch
+```
+
 ### Using GetIt #pending
 
 ### Using Provider #pending
