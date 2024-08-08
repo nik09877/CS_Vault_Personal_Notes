@@ -10627,8 +10627,23 @@ You might wonder why `StatefulWidget` and `State` are separate objects. In F
 **Note** Remember that to view all the properties of a widget press `ctrl + space bar` in vs code after creating the widget.
 
 #### Spacer
+- `Expanded` makes its _child_ widget occupy space.
+- `Spacer` occupies space by itself.
+
+```dart
+Spacer() 
+is equivalent to
+Expanded(child: Container())
+```
+
 #### SliverAppBar
+https://www.geeksforgeeks.org/flutter-silverappbar-widget/
+
+#### CustomScrollView
+https://www.geeksforgeeks.org/flutter-custom-scroll-view/
+
 #### NestedScrollView
+https://www.geeksforgeeks.org/flutter-nested-scroll-view/
 
 #### ClipRRect
 
