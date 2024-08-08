@@ -10403,7 +10403,7 @@ As the name suggests, the UniqueKey generates a unique identifier for each widge
 
 #### 4. GlobalKey
 
-GlobalKey is a powerful key type that acts as a global identifier for a widget. It allows you to access a widget from anywhere in your app. This is particularly useful when you need to interact with widgets across different parts of your Flutter application.
+GlobalKey is a powerful key type that acts as a global identifier for a widget. It allows you to access a widget from anywhere in your app. This is particularly useful when you need to interact with widgets across different parts of your Flutter application. Used for displaying a **snackbar** outside of build method.
 
 #### Why Are Keys Important?
 
