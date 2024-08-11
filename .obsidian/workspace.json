@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "74e78bd4dd03b3ef",
+        "id": "81a7f16b0b93266e",
         "type": "tabs",
         "children": [
           {
-            "id": "c34f44b595d9b583",
+            "id": "57ae3070273fcee7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5
+    "width": 225.5,
+    "collapsed": true
   },
   "right": {
     "id": "e5ae15e22d48dd5b",
@@ -167,8 +168,13 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "c34f44b595d9b583",
+  "active": "57ae3070273fcee7",
   "lastOpenFiles": [
+    "555_Projects/WorkPlanr/WorkPlanr.md",
+    "555_Projects/TaxiNow/TaxiNow.md",
+    "555_Projects/TradeNow/trade-now.md",
+    "555_Projects/TradeNow",
+    "555_Projects/Untitled",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
@@ -204,17 +210,12 @@
     "444_System Design/HLD/Scale a System from 0 to 1Mil.md",
     "11_Obsidian_Tutorial/Markdown_Guide.md",
     "11_Obsidian_Tutorial/Obsidian Quick Guide.md",
-    "444_System Design/HLD/Monolithic and Microservice Architecture.md",
-    "444_System Design/HLD/CAP Theorum.md",
-    "444_System Design/HLD/Network Protocols.md",
     "z_assets/Pasted image 20240531155033.png",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Learning/~WRL0003.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRD0002.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRL0001.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRD0000.tmp",
-    "555_Projects/IRCTC",
-    "555_Projects/WorkPlanr",
     "Untitled.canvas"
   ]
 }
