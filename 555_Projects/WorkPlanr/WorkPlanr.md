@@ -27,3 +27,18 @@
 
 - Search and Filter: Develop advanced search and filtering functionalities to enhance user experience.
 - Responsive Design: Practice creating responsive designs that adapt seamlessly to various devices and screen sizes.
+
+
+## Steps
+
+### Auth
+
+1. Create Security Filter
+	1. Appconfig
+	2. jwtFilter
+2. Create User Model
+3. Create `CustomUserDetailService` to get rid of default spring security default password
+	1. create Auth Controller
+
+### Project API
+1. Create Project Model
