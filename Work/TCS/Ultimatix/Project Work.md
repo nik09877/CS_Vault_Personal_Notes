@@ -409,5 +409,87 @@ With this setup, your application will:
 
 This solution provides a robust way to ensure timely reminders for document closures, keeping all parties informed and prepared ahead of time.
 
+### EMAIL SENDING PART
+In the provided code, variables in the HTML template are dynamically set using the Apache Velocity template engine. Velocity allows you to define placeholders in the template, which are later replaced with actual values at runtime. Here's an explanation of how this works in your specific example:
+
+### 1. **Velocity Context and Placeholders**:
+
+- **Placeholders**: The HTML template contains placeholders (e.g., `${UNITNAME}`, `${DOMAIN}`, `${APPLICATIONNAME}`) that represent values to be filled in at runtime.
+- **VelocityContext**: The `VelocityContext` object is a key-value map where the keys are the placeholder names (without the `${}`), and the values are the corresponding dynamic content that will replace the placeholders.
+
+### 2. **Setting Values in the VelocityContext**:
+
+- The `VelocityContext` is populated with key-value pairs using the `put` method. Each key corresponds to a placeholder in the HTML template, and each value is the dynamic data that will be inserted into the template.
+
+#### Example:
+
+- **Placeholder in Template**: `${UNITNAME}`
+- **VelocityContext Mapping**: `velocityContext.put("UNITNAME", mailDTO.getIOU());`
+    - This means that wherever `${UNITNAME}` appears in the HTML template, it will be replaced by the value returned by `mailDTO.getIOU()`.
+
+### 3. **Specific Variables Explained**:
+
+- **`${STATUS}`**:
+    
+    - **Context**: Not directly shown being set in the provided code snippet. It's likely set earlier in the process.
+    - **Usage**: Used to describe the status of the review request (e.g., "Open" or "Resubmitted").
+- **`${UNITNAME}`**:
+    
+    - **Context**: `velocityContext.put("UNITNAME", mailDTO.getIOU());`
+    - **Usage**: Represents the name of the unit associated with the application.
+- **`${DOMAIN}`**:
+    
+    - **Context**: `velocityContext.put("DOMAIN", mailDTO.getDomainName());`
+    - **Usage**: Represents the domain name associated with the application.
+- **`${APPLICATIONNAME}`**:
+    
+    - **Context**: `velocityContext.put("APPLICATIONNAME", validapplicationName);`
+    - **Usage**: Represents the name of the application, which is validated using ESAPI.
+- **`${APPURL}`**:
+    
+    - **Context**: `velocityContext.put("APPURL", mailDTO.getStringJoiner());`
+    - **Usage**: Represents the URL of the application.
+- **`${USERID}`**:
+    
+    - **Context**: Set based on conditions involving `ptApplicationDTO`, `revDetails`, and `recentRevIdDetails`.
+    - **Usage**: Represents the ID of the user associated with the application.
+- **`${REVIEWERID}`**:
+    
+    - **Context**: `velocityContext.put("REVIEWERID", recentRevIdDetails.getReviewerId());`
+    - **Usage**: Represents the ID of the reviewer.
+- **`${REVIEWSTATUS}`**:
+    
+    - **Context**: `velocityContext.put("REVIEWSTATUS", recentRevIdDetails.getReviewStatus());`
+    - **Usage**: Represents the status of the review.
+- **`${USERREMARKS}`**:
+    
+    - **Context**: `velocityContext.put("USERREMARKS", recentRevIdDetails.getUserRemarks());`
+    - **Usage**: Represents remarks made by the user.
+- **`${REVIEWERREMARKS}`**:
+    
+    - **Context**: `velocityContext.put("REVIEWERREMARKS", recentRevIdDetails.getReviewerRemarks());`
+    - **Usage**: Represents remarks made by the reviewer.
+- **`${APPTYPE}`**:
+    
+    - **Context**: `velocityContext.put("APPTYPE", recentRevIdDetails.getApplicationtype());`
+    - **Usage**: Represents the type of the application.
+- **`${EXPIRYDT}`**:
+    
+    - **Context**: `velocityContext.put("EXPIRYDT", chngStrtDateFormat.format(recentRevIdDetails.getReapprovaldate()));`
+    - **Usage**: Represents the expiry date of the review.
+- **`${SSAREMARKS}`**:
+    
+    - **Context**: `velocityContext.put("SSAREMARKS", recentRevIdDetails.getSsareviewerremarks());`
+    - **Usage**: Represents the remarks from the SSA COE reviewer.
+
+### 4. **Merging the Template**:
+
+- After setting all the values in the `VelocityContext`, the `mergeTemplate` method is called to merge the template with the context. This process replaces the placeholders in the template with the corresponding values from the context.
+- The merged output (an HTML string) is stored in the `stringWriter` and then used as the email content (`dto.setNotificationDescriptionEmail(stringWriter.toString());`).
+
+### 5. **Email Sending**:
+
+- The final email content is created with all placeholders replaced by actual data.
+- This content is then sent using the `clientNotificationService.addNotification(notificationDTOs);` method, which handles the actual sending of the email.
 
 ## Worked on InstaBiz UK finger print scanner, API integration and cross currency transfer screen .
