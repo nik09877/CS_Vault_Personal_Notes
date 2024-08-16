@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fa1cce83a5493c7d",
+        "id": "3161b7edd0401a13",
         "type": "tabs",
         "children": [
           {
-            "id": "9ee711132b99cf69",
+            "id": "ee17caa229c0dbda",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+                "file": "Work/TCS/Presentation/Best State Management For Flutter.md",
                 "mode": "source",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/Work.md"
+                "file": "Work/TCS/Presentation/Best State Management For Flutter.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+                "file": "Work/TCS/Presentation/Best State Management For Flutter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+                "file": "Work/TCS/Presentation/Best State Management For Flutter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,19 +176,22 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "9ee711132b99cf69",
+  "active": "ee17caa229c0dbda",
   "lastOpenFiles": [
+    "Work/TCS/Presentation/Best State Management For Flutter.md",
+    "Work/TCS/Ultimatix/Project Work.md",
+    "Work/TCS/Ultimatix/Netflix Archaius.md",
+    "Work/TCS/Presentation/Flutter Documentation.md",
+    "Work/TCS/Presentation/demo.md",
+    "Work/TCS/InstaBiz UK/Learning/React-Native.md",
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "555_Projects/TradeNow/trade-now.md",
     "555_Projects/TaxiNow/TaxiNow.md",
     "555_Projects/TradeNow",
     "555_Projects/Untitled",
-    "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
-    "Work/TCS/Presentation/Flutter Documentation.md",
-    "Work/TCS/Presentation/demo.md",
     "Work/TCS/Presentation/tpl-footer.md",
     "Work/TCS/Presentation",
     "Work/TCS/InstaBiz UK/Flutter Document.md",
@@ -196,7 +199,6 @@
     "Work/TCS/InstaBiz UK/Learning/Flutter.md",
     "Work/TCS/InstaBiz UK/Learning/Dart.md",
     "Work/TCS/InstaBiz UK/Learning/firebase-setup.png",
-    "Work/TCS/Ultimatix/Netflix Archaius.md",
     "Work/TCS/InstaBiz UK/Learning/~$utter Doc.docx",
     "444_System Design/HLD/My Note.md",
     "z_assets/Pasted image 20240725175959.png",
@@ -217,7 +219,6 @@
     "z_assets/Pasted_image_20240705153040.png",
     "z_assets/Pasted_image_20240705152834.png",
     "444_System Design/HLD/Scale a System from 0 to 1Mil.md",
-    "11_Obsidian_Tutorial/Markdown_Guide.md",
     "z_assets/Pasted image 20240531155033.png",
     "Work/TCS/InstaBiz UK/Learning/~WRL0003.tmp",
     "Work/TCS/InstaBiz UK/Learning/~WRD0002.tmp",
