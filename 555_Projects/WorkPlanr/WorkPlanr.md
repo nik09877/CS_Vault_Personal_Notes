@@ -25,7 +25,7 @@
 
 ## Additional Features
 
-- Search and Filter: Develop advanced search and filtering functionalities to enhance user experience.
+- Search and Filter: Develop advanced search and filtering functionalities to enhance user experience using Debouncing technique.
 - Responsive Design: Practice creating responsive designs that adapt seamlessly to various devices and screen sizes.
 
 
