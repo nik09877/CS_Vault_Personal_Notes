@@ -42,3 +42,11 @@
 
 ### Project API
 1. Create Project Model
+
+- **Debouncing**: Delays the execution of the function until the user stops typing.
+- **Throttling**: Limits the execution of the function to once every X milliseconds.
+
+Choose between debouncing and throttling based on your requirements. Use `debounce` for scenarios like search inputs where you want to wait until the user stops typing, and `throttle` for scenarios like infinite scroll, where you want to limit the number of requests.
+
+
+- Used WebSocket and StompClient for Chat section
