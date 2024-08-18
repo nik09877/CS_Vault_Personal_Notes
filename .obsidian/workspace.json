@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "1cd1f8d32550ad62",
+    "id": "cb409ba175039eb0",
     "type": "split",
     "children": [
       {
-        "id": "5de62b416ca68598",
+        "id": "8038932069358719",
         "type": "tabs",
         "children": [
           {
-            "id": "c98ae0bcd9768377",
+            "id": "651a3fc308b67d69",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f3a1eb7fe43794a3",
+    "id": "54316f5295a34a8a",
     "type": "split",
     "children": [
       {
-        "id": "c1c7603b226cf580",
+        "id": "964fbd19850ac1b0",
         "type": "tabs",
         "children": [
           {
-            "id": "9a3c6f09f5090e2e",
+            "id": "599547f20328cf5f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +39,7 @@
             }
           },
           {
-            "id": "c064fabaee84ee6e",
+            "id": "a71bcaf1a9d6753b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +54,7 @@
             }
           },
           {
-            "id": "6c2bb65c8d9f16bf",
+            "id": "4cf470c62219680c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,42 +65,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225.5,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "e5ae15e22d48dd5b",
+    "id": "aad32e105ee3a166",
     "type": "split",
     "children": [
       {
-        "id": "8c9385e645abe0ee",
+        "id": "19dd1f4c73628a32",
         "type": "tabs",
         "children": [
           {
-            "id": "35e1b8f45c27ca4a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md"
-              }
-            }
-          },
-          {
-            "id": "eee9d6f920e04d8d",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "9b43a6199650de9b",
+            "id": "bb2acb24b08a091e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,19 +92,18 @@
             }
           },
           {
-            "id": "3797c12484843d25",
+            "id": "a1fc14bac3da9258",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/Collab-Code-Pro/code-collab-pro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "0f3fa6a72472f028",
+            "id": "91d5093df4d5437f",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -139,15 +114,7 @@
             }
           },
           {
-            "id": "25b3f44683321b86",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "addde1c92c4a304d",
+            "id": "29bd2cb639606c3b",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -157,73 +124,34 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "491fa500553094fe",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 411.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "9a3c6f09f5090e2e",
-  "lastOpenFiles": [
-    "555_Projects/WorkPlanr/WorkPlanr.md",
-    "Untitled.canvas",
-    "555_Projects/Collab-Code-Pro/code-collab-pro.md",
-    "Work/TCS/InstaBiz UK/Learning/Angular.md",
-    "Work/TCS/Presentation/Best State Management For Flutter.md",
-    "Work/TCS/Ultimatix/Project Work.md",
-    "Work/TCS/Ultimatix/Netflix Archaius.md",
-    "Work/TCS/Presentation/Flutter Documentation.md",
-    "Work/TCS/Presentation/demo.md",
-    "Work/TCS/InstaBiz UK/Learning/React-Native.md",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
-    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
-    "555_Projects/TradeNow/trade-now.md",
-    "555_Projects/TaxiNow/TaxiNow.md",
-    "555_Projects/TradeNow",
-    "555_Projects/Untitled",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
-    "Work/TCS/Presentation/tpl-footer.md",
-    "Work/TCS/Presentation",
-    "Work/TCS/InstaBiz UK/Flutter Document.md",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
-    "Work/TCS/InstaBiz UK/Learning/Flutter.md",
-    "Work/TCS/InstaBiz UK/Learning/Dart.md",
-    "Work/TCS/InstaBiz UK/Learning/firebase-setup.png",
-    "Work/TCS/InstaBiz UK/Learning/~$utter Doc.docx",
-    "444_System Design/HLD/My Note.md",
-    "z_assets/Pasted image 20240725175959.png",
-    "z_assets/Pasted image 20240725174837.png",
-    "z_assets/Pasted_image_20240725163026.png",
-    "z_assets/Pasted_image_20240705134712.png",
-    "444_System Design/HLD/Design High Availability Architecture.md",
-    "444_System Design/HLD/Design Idempotency Handler.md",
-    "444_System Design/HLD/Design Rate Limiter.md",
-    "444_System Design/HLD/Notes/Prerequisites.md",
-    "z_assets/Pasted_image_20240724120912.png",
-    "444_System Design/HLD/SQL vs NoSQL.md",
-    "444_System Design/HLD/Capacity Estimation.md",
-    "2024-07-08.md",
-    "z_assets/Pasted_image_20240705172139.png",
-    "z_assets/Pasted_image_20240705153040.png",
-    "z_assets/Pasted_image_20240705152834.png",
-    "z_assets/Pasted image 20240531155033.png",
-    "Work/TCS/InstaBiz UK/Learning/~WRL0003.tmp",
-    "Work/TCS/InstaBiz UK/Learning/~WRD0002.tmp",
-    "Work/TCS/InstaBiz UK/Learning/~WRL0001.tmp",
-    "Work/TCS/InstaBiz UK/Learning/~WRD0000.tmp"
-  ]
+  "active": "651a3fc308b67d69",
+  "lastOpenFiles": []
 }
