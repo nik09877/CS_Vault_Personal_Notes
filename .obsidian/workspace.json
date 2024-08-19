@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8038932069358719",
+        "id": "a7df0e97a08ebc7c",
         "type": "tabs",
         "children": [
           {
-            "id": "651a3fc308b67d69",
+            "id": "09f3008a75129f86",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "aad32e105ee3a166",
@@ -152,6 +153,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "651a3fc308b67d69",
-  "lastOpenFiles": []
+  "active": "09f3008a75129f86",
+  "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/React-Native.md"
+  ]
 }
