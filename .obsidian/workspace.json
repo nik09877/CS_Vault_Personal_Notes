@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a7df0e97a08ebc7c",
+        "id": "ec12971974dc3712",
         "type": "tabs",
         "children": [
           {
-            "id": "09f3008a75129f86",
+            "id": "ba1ee1d137513bee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "555_Projects/WorkPlanr/WorkPlanr.md",
-                "mode": "source",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "aad32e105ee3a166",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "555_Projects/WorkPlanr/WorkPlanr.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "555_Projects/WorkPlanr/WorkPlanr.md",
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,16 +138,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "555_Projects/WorkPlanr/WorkPlanr.md"
+                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,8 +161,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "09f3008a75129f86",
+  "active": "ba1ee1d137513bee",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
+    "555_Projects/WorkPlanr/WorkPlanr.md",
     "Work/TCS/InstaBiz UK/Learning/React-Native.md"
   ]
 }
