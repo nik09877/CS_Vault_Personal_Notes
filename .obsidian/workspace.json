@@ -147,7 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 394.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -161,7 +161,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba1ee1d137513bee",
+  "active": "491fa500553094fe",
   "lastOpenFiles": [
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
     "555_Projects/WorkPlanr/WorkPlanr.md",
