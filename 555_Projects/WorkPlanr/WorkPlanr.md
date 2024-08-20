@@ -22,6 +22,7 @@
 - Razorpay Integration: Gain hands-on experience in integrating payment gateways for subscription-based services.
 
   
+- Only the allowed users should be able to view the projects or comments related to the project they own or a part of, I missed this part
 
 ## Additional Features
 
@@ -30,6 +31,7 @@
 
 
 ## Steps
+
 
 ### Auth
 
