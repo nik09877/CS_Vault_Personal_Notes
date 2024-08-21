@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ec12971974dc3712",
+        "id": "89463180227ffa69",
         "type": "tabs",
         "children": [
           {
-            "id": "ba1ee1d137513bee",
+            "id": "84de2901d8942404",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
-                "mode": "preview",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +130,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -160,8 +152,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba1ee1d137513bee",
+  "active": "84de2901d8942404",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "111_Language/Java/In Depth/9.Stream API.md",
     "111_Language/Java/In Depth/8.Collections.md",
@@ -172,7 +165,6 @@
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "Work/TCS/InstaBiz UK/Learning/React-Native.md"
