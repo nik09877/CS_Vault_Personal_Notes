@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "aad32e105ee3a166",
@@ -161,8 +160,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "491fa500553094fe",
+  "active": "ba1ee1d137513bee",
   "lastOpenFiles": [
+    "111_Language/Java/In Depth/10.Concurrency.md",
+    "111_Language/Java/In Depth/9.Stream API.md",
+    "111_Language/Java/In Depth/8.Collections.md",
+    "111_Language/Java/In Depth/7.Generic Programming.md",
+    "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
+    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
+    "111_Language/Java/In Depth/4.Inheritance.md",
+    "111_Language/Java/In Depth/3.Objects and Classes.md",
+    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
+    "111_Language/Java/In Depth/1.Introduction.md",
+    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
     "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "Work/TCS/InstaBiz UK/Learning/React-Native.md"
