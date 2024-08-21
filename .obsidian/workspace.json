@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "89463180227ffa69",
+        "id": "47df157ba4216cd2",
         "type": "tabs",
         "children": [
           {
-            "id": "84de2901d8942404",
+            "id": "2d3a20bb4fd2b51d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +136,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md"
+              }
             }
           }
         ],
@@ -152,9 +160,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "84de2901d8942404",
+  "active": "2d3a20bb4fd2b51d",
   "lastOpenFiles": [
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.md",
+    "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
+    "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
+    "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
+    "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
+    "Work/TCS/Presentation/Best State Management For Flutter.md",
+    "Work/TCS/Learning/Flutter Documentation-Quick.md",
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+    "Work/TCS/Learning/Flutter Doc.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "111_Language/Java/In Depth/9.Stream API.md",
     "111_Language/Java/In Depth/8.Collections.md",
@@ -165,8 +180,8 @@
     "111_Language/Java/In Depth/3.Objects and Classes.md",
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
-    "Work/TCS/InstaBiz UK/Learning/Flutter Doc.pdf",
+    "Work/TCS/Learning/Flutter Doc.pdf",
     "555_Projects/WorkPlanr/WorkPlanr.md",
-    "Work/TCS/InstaBiz UK/Learning/React-Native.md"
+    "Work/TCS/Learning/React-Native.md"
   ]
 }
