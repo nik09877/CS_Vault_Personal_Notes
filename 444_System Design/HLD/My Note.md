@@ -914,4 +914,38 @@
 # Load Balancer and Different Algorithms
 
 - Main purpose is to properly distribute the load of requests to multiple servers
-- 
+
+## Types
+
+### Network LB ( L4 )
+- Works at Transport Layer
+- TCP Port, UDP port , IP address of src and dest
+- Much more faster
+
+#### Algorithms
+
+##### Static
+1. Round Robin
+	1. Adv
+		1. very easy
+		2. Equal load to all servers
+	2. Dis adv
+		1. 2 servers, one with high capacity and low capacity are treated equally
+2. Weighted Round Robin
+	1. Weight represents capacity of server
+	2. When req comes req goes to one server x times to one server having weight x and then y times to another server having weight y
+	3. Adv
+		1. Low capacity server gets less requests
+		2. Easy to implement as weights are static here
+	4. Dis adv
+		1. If requests have different processing time, then it's possible that the low capacity server might get high processing requests and get overburdened
+3. IP Hash
+##### Dynamic
+1. Least Connection
+2. Weighted Least Connection
+3. Least Response Time
+
+### Application LB ( L7 )
+- Works at Application layer
+- Can read your Header / Session / Data / Response 
+- Can Cache also, much more advance
