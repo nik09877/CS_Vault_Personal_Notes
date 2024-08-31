@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "47df157ba4216cd2",
+        "id": "c67dd1644907f2e5",
         "type": "tabs",
         "children": [
           {
-            "id": "2d3a20bb4fd2b51d",
+            "id": "805cc4d3f7a9a2a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
+                "file": "444_System Design/HLD/My Note.md",
                 "mode": "source",
                 "source": true
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "aad32e105ee3a166",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
+                "file": "444_System Design/HLD/My Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
+                "file": "444_System Design/HLD/My Note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md"
+                "file": "444_System Design/HLD/My Note.md"
               }
             }
           }
@@ -146,7 +147,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 394.5
+    "width": 394.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,8 +162,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2d3a20bb4fd2b51d",
+  "active": "805cc4d3f7a9a2a2",
   "lastOpenFiles": [
+    "444_System Design/HLD/Proxy and Reverse Proxy.md",
+    "444_System Design/HLD/My Note.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
