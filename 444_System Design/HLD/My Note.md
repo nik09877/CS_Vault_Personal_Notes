@@ -1056,3 +1056,22 @@
 	- Even when DB fails, write operation will still work
 	- If data is removed from the cache and DB write still not happens, then there is a chance of an issue (it is handled by keeping the TAT of cache little higher like 2 days)
 
+
+# Distributed Transactions
+
+## 2 Phase Commit
+- Transaction Coordinator manages the transactions.
+- Prepare phase
+	- After all the updates in microservices happen, it asks all of them are you ready to commit ?
+- Commit phase
+	-  If all the services say OK, then it gives order to commit else, it orders for Abort or Rollback
+
+### Issues
+1. what if Transaction coordinator fails
+2. Participant fails
+3. Prepare message / OK message / Abort / Commit message get lost due to above two issues
+
+#### Solution
+- Every System has a **log file**
+- Prepare msg lost i.e a service didn't get the msg --> abort the transaction / release lock , if after that it receives prepare msg , send back response NO
+- 
