@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "220842bf558f25d7",
+        "id": "cd907dbf099f4d18",
         "type": "tabs",
         "children": [
           {
-            "id": "b5d2371b1a738eee",
+            "id": "b0d56706bb65fab8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,10 +162,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5d2371b1a738eee",
+  "active": "b0d56706bb65fab8",
   "lastOpenFiles": [
-    "444_System Design/HLD/Load Balancer and Different Algorithms.md",
+    "444_System Design/HLD/Distributed Caching.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/Load Balancer and Different Algorithms.md",
     "444_System Design/HLD/Proxy and Reverse Proxy.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
