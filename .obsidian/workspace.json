@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c67dd1644907f2e5",
+        "id": "220842bf558f25d7",
         "type": "tabs",
         "children": [
           {
-            "id": "805cc4d3f7a9a2a2",
+            "id": "b5d2371b1a738eee",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,10 +162,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "805cc4d3f7a9a2a2",
+  "active": "b5d2371b1a738eee",
   "lastOpenFiles": [
-    "444_System Design/HLD/Proxy and Reverse Proxy.md",
+    "444_System Design/HLD/Load Balancer and Different Algorithms.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/Proxy and Reverse Proxy.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",

@@ -940,12 +940,36 @@
 	4. Dis adv
 		1. If requests have different processing time, then it's possible that the low capacity server might get high processing requests and get overburdened
 3. IP Hash
+	1. Hash the IP address and map it to some server
+	2. Adv
+		1. Good for use cases, where same client need to connect to same server
+		2. Easy to implement
+	3. Dis adv
+		1. If clients request is coming through proxy, then all clients will have the same source IP address and this will overload one server
+		2. Can't ensure equal distribution
 ##### Dynamic
 1. Least Connection
+	1. Check which server has least active connections
+	2. Adv
+		1. dynamic, so chance of overburdening of server is less
+	3. Dis adv
+		1. TCP connection can be active but might have no traffic
+		2. No difference between low and high capacity server
 2. Weighted Least Connection
+	1. Calculate the ratio of no. of active connections to its weight and server with minimum ratio gets the request
 3. Least Response Time
+	1. TTFB is Time to First Byre i.e time interval between sending a request and receiving the response from the server
+	2. Pick the server which has less (no. of active connections * Least TTFB)
+	3. If clash happens do round robin
+	4. Adv
+		1. Helps to increase the availability time of servers
+	5. Dis adv
+		1. Too much computition logic required
+		2. TCP connection can be active but have no traffic
 
 ### Application LB ( L7 )
 - Works at Application layer
 - Can read your Header / Session / Data / Response 
 - Can Cache also, much more advance
+
+
