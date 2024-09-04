@@ -164,8 +164,9 @@
   },
   "active": "b0d56706bb65fab8",
   "lastOpenFiles": [
-    "444_System Design/HLD/Distributed Caching.md",
+    "444_System Design/HLD/Distributed Transactions.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/Distributed Caching.md",
     "444_System Design/HLD/Load Balancer and Different Algorithms.md",
     "444_System Design/HLD/Proxy and Reverse Proxy.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
