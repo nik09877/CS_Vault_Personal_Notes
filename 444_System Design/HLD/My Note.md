@@ -1095,4 +1095,6 @@
 - SAGA Pattern is used in a long chain of participants and long transactions
 
 # Database Indexing
-
+- How DBMS determines in which Data Page too store the row, if we have done indexing on a column ?
+	- First it inserts the key into B+ tree, then it checks the neighbouring key, to which Data Page it is pointing to, if that Data Page is free it will insert the Row into that Data Page
+	- Else DBMS does page splitting, it splits the Data Page into two and inserts equally into both of those pages.
