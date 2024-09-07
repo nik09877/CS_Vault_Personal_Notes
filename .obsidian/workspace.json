@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cd907dbf099f4d18",
+        "id": "4cde41a0ab96879f",
         "type": "tabs",
         "children": [
           {
-            "id": "b0d56706bb65fab8",
+            "id": "cf9795b82343fa56",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,10 +162,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b0d56706bb65fab8",
+  "active": "cf9795b82343fa56",
   "lastOpenFiles": [
-    "444_System Design/HLD/Distributed Transactions.md",
+    "444_System Design/HLD/Distributed Concurrency.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/Database Indexing.md",
+    "444_System Design/HLD/Distributed Transactions.md",
     "444_System Design/HLD/Distributed Caching.md",
     "444_System Design/HLD/Load Balancer and Different Algorithms.md",
     "444_System Design/HLD/Proxy and Reverse Proxy.md",
@@ -188,7 +190,6 @@
     "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
     "111_Language/Java/In Depth/1.Introduction.md",
     "Work/TCS/Learning/Flutter Doc.pdf",
-    "555_Projects/WorkPlanr/WorkPlanr.md",
-    "Work/TCS/Learning/React-Native.md"
+    "555_Projects/WorkPlanr/WorkPlanr.md"
   ]
 }
