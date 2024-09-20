@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "cb409ba175039eb0",
+    "id": "1ff58c5bb946e2d7",
     "type": "split",
     "children": [
       {
-        "id": "4cde41a0ab96879f",
+        "id": "761a0c5c2144b5b9",
         "type": "tabs",
         "children": [
           {
-            "id": "cf9795b82343fa56",
+            "id": "417daf6196447d5b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/HLD/My Note.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "54316f5295a34a8a",
+    "id": "5cf78b81d15a1178",
     "type": "split",
     "children": [
       {
-        "id": "964fbd19850ac1b0",
+        "id": "e3e50da6dac844dc",
         "type": "tabs",
         "children": [
           {
-            "id": "599547f20328cf5f",
+            "id": "ccf23412fbc4b9bc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +39,7 @@
             }
           },
           {
-            "id": "a71bcaf1a9d6753b",
+            "id": "c2b52cf484e96bc3",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +54,7 @@
             }
           },
           {
-            "id": "4cf470c62219680c",
+            "id": "74e7a93ede23f7e9",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,24 +65,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "aad32e105ee3a166",
+    "id": "45d4cc6b70538fa6",
     "type": "split",
     "children": [
       {
-        "id": "19dd1f4c73628a32",
+        "id": "4180903c08e2af90",
         "type": "tabs",
         "children": [
           {
-            "id": "bb2acb24b08a091e",
+            "id": "4133d5b523c79bc4",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,19 +92,18 @@
             }
           },
           {
-            "id": "a1fc14bac3da9258",
+            "id": "95d3b5805d699539",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "91d5093df4d5437f",
+            "id": "45a1b60d21cef308",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,7 +114,7 @@
             }
           },
           {
-            "id": "29bd2cb639606c3b",
+            "id": "1964ebac342e154b",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -133,21 +126,18 @@
             }
           },
           {
-            "id": "491fa500553094fe",
+            "id": "f5b994d50c3be9b6",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "444_System Design/HLD/My Note.md"
-              }
+              "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 394.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -162,34 +152,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cf9795b82343fa56",
-  "lastOpenFiles": [
-    "444_System Design/HLD/Distributed Concurrency.md",
-    "444_System Design/HLD/My Note.md",
-    "444_System Design/HLD/Database Indexing.md",
-    "444_System Design/HLD/Distributed Transactions.md",
-    "444_System Design/HLD/Distributed Caching.md",
-    "444_System Design/HLD/Load Balancer and Different Algorithms.md",
-    "444_System Design/HLD/Proxy and Reverse Proxy.md",
-    "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
-    "666_WebDev/FrontEnd/React/React_Typescript_Cheat_Sheet.md",
-    "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
-    "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
-    "Work/TCS/Presentation/Best State Management For Flutter.md",
-    "Work/TCS/Learning/Flutter Documentation-Quick.md",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
-    "Work/TCS/Learning/Flutter Doc.md",
-    "111_Language/Java/In Depth/10.Concurrency.md",
-    "111_Language/Java/In Depth/9.Stream API.md",
-    "111_Language/Java/In Depth/8.Collections.md",
-    "111_Language/Java/In Depth/7.Generic Programming.md",
-    "111_Language/Java/In Depth/6.Exceptions, Assertions, Logging.md",
-    "111_Language/Java/In Depth/5.Interfaces, Lambda Expressions and Inner classes.md",
-    "111_Language/Java/In Depth/4.Inheritance.md",
-    "111_Language/Java/In Depth/3.Objects and Classes.md",
-    "111_Language/Java/In Depth/2.Fundamental Programming Structures in Java.md",
-    "111_Language/Java/In Depth/1.Introduction.md",
-    "Work/TCS/Learning/Flutter Doc.pdf",
-    "555_Projects/WorkPlanr/WorkPlanr.md"
-  ]
+  "active": "417daf6196447d5b",
+  "lastOpenFiles": []
 }
