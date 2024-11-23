@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "761a0c5c2144b5b9",
+        "id": "af941916896ac1e3",
         "type": "tabs",
         "children": [
           {
-            "id": "417daf6196447d5b",
+            "id": "91c6ac3b48eb28a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -16,10 +16,25 @@
                 "file": "Work/TCS/Ultimatix/Project Work.md",
                 "mode": "source",
                 "source": true
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Project Work"
+            }
+          },
+          {
+            "id": "3c486c303437a07f",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +54,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +71,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +81,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -93,7 +114,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Project Work"
             }
           },
           {
@@ -105,7 +128,9 @@
                 "file": "Work/TCS/Ultimatix/Project Work.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Project Work"
             }
           },
           {
@@ -116,7 +141,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -128,7 +155,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           },
           {
@@ -138,7 +167,9 @@
               "type": "outline",
               "state": {
                 "file": "Work/TCS/Ultimatix/Project Work.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Project Work"
             }
           }
         ]
@@ -160,6 +191,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "417daf6196447d5b",
-  "lastOpenFiles": []
+  "active": "3c486c303437a07f",
+  "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+    "Work/TCS/Ultimatix/Project Work.md"
+  ]
 }

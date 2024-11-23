@@ -40,7 +40,7 @@ without restarting the server or redploying it , we are updating the UI by simpl
 - It was difficult to match the versions with the spring boot version, lastly used 0.6.0 which was depricated
 - followed netflix github repo, it was difficult as well to find the specific version code
 
-## Batch schedule processing
+## Batch schedule processing (Stuck as 4 instance of same server, so 4 mails are sent)
 
 there is armId, documentId, closure date and list of persons to send mail to 7 days prior to closure date everyday till the closure date.
 
@@ -495,3 +495,5 @@ In the provided code, variables in the HTML template are dynamically set using t
 ## Worked on InstaBiz UK finger print scanner, API integration and cross currency transfer screen .
 
 ## Fault Tolerance
+## Had disagreement with co worker
+- he said create common control, but i said it is already handled in themes part, so no need, we are restricting ourselves by creating duplicate code, so we took it to the Leads, they decided my approach is correct
