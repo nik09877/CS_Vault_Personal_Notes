@@ -22,15 +22,15 @@
             }
           },
           {
-            "id": "3c486c303437a07f",
+            "id": "d49835252e333fb3",
             "type": "leaf",
             "state": {
               "type": "release-notes",
               "state": {
-                "currentVersion": "1.7.5"
+                "currentVersion": "1.7.7"
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.5"
+              "title": "Release Notes 1.7.7"
             }
           }
         ],
@@ -191,7 +191,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3c486c303437a07f",
+  "active": "d49835252e333fb3",
   "lastOpenFiles": [
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
