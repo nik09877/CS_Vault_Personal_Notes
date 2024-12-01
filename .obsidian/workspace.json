@@ -4,37 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "af941916896ac1e3",
+        "id": "4971dabcaa19c37b",
         "type": "tabs",
         "children": [
           {
-            "id": "91c6ac3b48eb28a1",
+            "id": "37d7b948106bcac8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "444_System Design/HLD/My Note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Project Work"
-            }
-          },
-          {
-            "id": "d49835252e333fb3",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.7"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
+              "title": "My Note"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -191,8 +178,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d49835252e333fb3",
+  "active": "37d7b948106bcac8",
   "lastOpenFiles": [
+    "z_assets/Pasted_image_20240705134712.png",
+    "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/Notes/Prerequisites.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/Ultimatix/Project Work.md"
