@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "52bedacea9e6d2e4",
+        "id": "c543b1d095b6a45f",
         "type": "tabs",
         "children": [
           {
-            "id": "a5d6e77b162ee524",
+            "id": "e7b1894ffb4b02c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/8.Collections.md",
-                "mode": "source",
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "8.Collections"
+              "title": "To_Do_Problems"
             }
           }
         ]
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Project Work"
+              "title": "Backlinks for To_Do_Problems"
             }
           },
           {
@@ -112,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Project Work"
+              "title": "Outgoing links from To_Do_Problems"
             }
           },
           {
@@ -153,13 +154,14 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md"
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Project Work"
+              "title": "Outline of To_Do_Problems"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -178,8 +180,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a5d6e77b162ee524",
+  "active": "e7b1894ffb4b02c1",
   "lastOpenFiles": [
+    "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "111_Language/Java/In Depth/8.Collections.md",
     "444_System Design/HLD/My Note.md",
     "z_assets/Pasted_image_20240705134712.png",
     "444_System Design/HLD/Notes/Prerequisites.md",
