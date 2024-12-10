@@ -5,28 +5,28 @@
 ## Design Patterns to Cover
 - [x] Strategy Pattern
 - [x] Observer Pattern
-- [x] Decorator Pattern
+- [x] Decorator Pattern (Apply Coupon)
 - [x] Factory Pattern
 - [x] Abstract Factory Pattern
 - [x] Chain of Responsibility Pattern
 - [x] Proxy Pattern
 - [x] Null Object Pattern
 - [x] State Pattern
-- [x] Composite Pattern
-- [x] Adapter Pattern
+- [x] Composite Pattern (File, Math Expression)
+- [x] Adapter Pattern (XML to JSON)
 - [x] Singleton Pattern
 - [x] Builder Pattern
 - [x] Prototype Pattern
-- [x] Bridge Pattern
-- [x] Façade Pattern
-- [ ] Flyweight Pattern
-- [ ] Command Pattern
-- [ ] Interpreter Pattern
-- [ ] Iterator Pattern
-- [ ] Mediator Pattern
-- [ ] Memento Pattern
-- [ ] Template Method Pattern
-- [ ] Visitor Pattern
+- [x] Bridge Pattern 
+- [x] Façade Pattern 
+- [x] Flyweight Pattern (Game, Word Processor, Text Editor)
+- [x] Command Pattern (AC, Elevator, Undo Redo)
+- [x] Interpreter Pattern (Math Expression)
+- [x] Iterator Pattern
+- [x] Mediator Pattern (Airline management, Auction, Chat System)
+- [x] Memento Pattern (Undo, Redo)
+- [x] Template Method Pattern (Payment method)
+- [x] Visitor Pattern (Hotel Management)
 
 ## Popular LLD Interview Questions to Cover
 - [x] S.O.L.I.D Principles
@@ -86,44 +86,6 @@
 
 This repository contains resources to learn Low Level Design (LLD) / Object Oriented Design (OOD) and prepare for interviews.
 
-## 📌 Fundamental Concepts
-
-[](https://github.com/ashishps1/awesome-low-level-design#-fundamental-concepts)
-
-- [Basics OOP Concepts](https://blog.algomaster.io/p/basic-oop-concepts-explained-with-code)
-- [SOLID Principles with Pictures](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
-- [SOLID Principles with Code](https://blog.algomaster.io/p/solid-principles-explained-with-code)
-- [DRY Principle](https://blog.algomaster.io/p/082450d8-0e7b-4447-a8dc-b7308e45f048)
-- [YAGNI Principle](https://blog.algomaster.io/p/8c3c7da7-885b-4a9c-a6e4-70ee02de4772)
-- [KISS Principle](https://blog.algomaster.io/p/21b57678-b351-4ed4-b390-3b6308af2f7d)
-- [Coursera - Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design)
-
-## ⚙️ Design Patterns
-
-[](https://github.com/ashishps1/awesome-low-level-design#%EF%B8%8F-design-patterns)
-
-|**Creational Patterns**|**Structural Patterns**|**Behavioral Patterns**|
-|---|---|---|
-|[Singleton](https://blog.algomaster.io/p/singleton-design-pattern)|[Adapter](https://refactoring.guru/design-patterns/adapter)|[Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility)|
-|[Factory Method](https://refactoring.guru/design-patterns/factory-method)|[Bridge](https://refactoring.guru/design-patterns/bridge)|[Command](https://refactoring.guru/design-patterns/command)|
-|[Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory)|[Composite](https://refactoring.guru/design-patterns/composite)|[Iterator](https://refactoring.guru/design-patterns/iterator)|
-|[Builder](https://refactoring.guru/design-patterns/builder)|[Decorator](https://refactoring.guru/design-patterns/decorator)|[Mediator](https://refactoring.guru/design-patterns/mediator)|
-|[Prototype](https://refactoring.guru/design-patterns/prototype)|[Facade](https://refactoring.guru/design-patterns/facade)|[Memento](https://refactoring.guru/design-patterns/memento)|
-||[Flyweight](https://refactoring.guru/design-patterns/flyweight)|[Observer](https://refactoring.guru/design-patterns/observer)|
-||[Proxy](https://refactoring.guru/design-patterns/proxy)|[State](https://refactoring.guru/design-patterns/state)|
-|||[Strategy](https://refactoring.guru/design-patterns/strategy)|
-|||[Template Method](https://refactoring.guru/design-patterns/template-method)|
-|||[Visitor](https://refactoring.guru/design-patterns/visitor)|
-
-## 🗂️ UML
-
-[](https://github.com/ashishps1/awesome-low-level-design#%EF%B8%8F-uml)
-
-- [Class Diagram](https://blog.algomaster.io/p/uml-class-diagram-explained-with-examples)
-- [Use Case Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-use-case-diagram/)
-- [Sequence Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-sequence-diagram/)
-- [Activity Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
-- [State Machine Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-state-machine-diagram/)
 
 ## ✅ [How to Answer a LLD Interview Problem](https://blog.algomaster.io/p/how-to-answer-a-lld-interview-problem)
 
@@ -131,72 +93,107 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 
 [![](https://github.com/ashishps1/awesome-low-level-design/raw/main/images/interview-template.png)](https://github.com/ashishps1/awesome-low-level-design/blob/main/images/interview-template.png)
 
+# To-Do List: Low-Level Design (LLD) and Object-Oriented Design (OOD)
+
+## 📌 Fundamental Concepts
+- [ ] [Basics OOP Concepts](https://blog.algomaster.io/p/basic-oop-concepts-explained-with-code)
+- [ ] [SOLID Principles with Pictures](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
+- [ ] [SOLID Principles with Code](https://blog.algomaster.io/p/solid-principles-explained-with-code)
+- [ ] [DRY Principle](https://blog.algomaster.io/p/082450d8-0e7b-4447-a8dc-b7308e45f048)
+- [ ] [YAGNI Principle](https://blog.algomaster.io/p/8c3c7da7-885b-4a9c-a6e4-70ee02de4772)
+- [ ] [KISS Principle](https://blog.algomaster.io/p/21b57678-b351-4ed4-b390-3b6308af2f7d)
+- [ ] [Coursera - Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design)
+
+---
+
+## ⚙️ Design Patterns
+
+### Creational Patterns
+- [ ] [Singleton](https://blog.algomaster.io/p/singleton-design-pattern)
+- [ ] [Factory Method](https://refactoring.guru/design-patterns/factory-method)
+- [ ] [Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory)
+- [ ] [Builder](https://refactoring.guru/design-patterns/builder)
+- [ ] [Prototype](https://refactoring.guru/design-patterns/prototype)
+
+### Structural Patterns
+- [ ] [Adapter](https://refactoring.guru/design-patterns/adapter)
+- [ ] [Bridge](https://refactoring.guru/design-patterns/bridge)
+- [ ] [Composite](https://refactoring.guru/design-patterns/composite)
+- [ ] [Decorator](https://refactoring.guru/design-patterns/decorator)
+- [ ] [Facade](https://refactoring.guru/design-patterns/facade)
+- [ ] [Flyweight](https://refactoring.guru/design-patterns/flyweight)
+- [ ] [Proxy](https://refactoring.guru/design-patterns/proxy)
+
+### Behavioral Patterns
+- [ ] [Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility)
+- [ ] [Command](https://refactoring.guru/design-patterns/command)
+- [ ] [Iterator](https://refactoring.guru/design-patterns/iterator)
+- [ ] [Mediator](https://refactoring.guru/design-patterns/mediator)
+- [ ] [Memento](https://refactoring.guru/design-patterns/memento)
+- [ ] [Observer](https://refactoring.guru/design-patterns/observer)
+- [ ] [State](https://refactoring.guru/design-patterns/state)
+- [ ] [Strategy](https://refactoring.guru/design-patterns/strategy)
+- [ ] [Template Method](https://refactoring.guru/design-patterns/template-method)
+- [ ] [Visitor](https://refactoring.guru/design-patterns/visitor)
+
+---
+
+## 🗂️ UML
+- [ ] [Class Diagram](https://blog.algomaster.io/p/uml-class-diagram-explained-with-examples)
+- [ ] [Use Case Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-use-case-diagram/)
+- [ ] [Sequence Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-sequence-diagram/)
+- [ ] [Activity Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
+- [ ] [State Machine Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-state-machine-diagram/)
+
+---
+
 ## 💻 Low Level Design Interview Problems
 
-[](https://github.com/ashishps1/awesome-low-level-design#-low-level-design-interview-problems)
-
 ### Easy
-
-[](https://github.com/ashishps1/awesome-low-level-design#easy)
-
-- [Design Parking Lot](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/parking-lot.md)
-- [Design a Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/vending-machine.md)
-- [Design Stack Overflow](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/stack-overflow.md)
-- [Design Logging Framework](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/logging-framework.md)
-- [Design Coffee Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/coffee-vending-machine.md)
-- [Design Traffic Signal Control System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/traffic-signal.md)
-- [Design a Task Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/task-management-system.md)
+- [ ] [Design Parking Lot](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/parking-lot.md)
+- [ ] [Design a Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/vending-machine.md)
+- [ ] [Design Stack Overflow](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/stack-overflow.md)
+- [ ] [Design Logging Framework](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/logging-framework.md)
+- [ ] [Design Coffee Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/coffee-vending-machine.md)
+- [ ] [Design Traffic Signal Control System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/traffic-signal.md)
+- [ ] [Design a Task Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/task-management-system.md)
 
 ### Medium
-
-[](https://github.com/ashishps1/awesome-low-level-design#medium)
-
-- [Design Pub Sub System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/pub-sub-system.md)
-- [Design Tic Tac Toe Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/tic-tac-toe.md)
-- [Design Car Rental System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/car-rental-system.md)
-- [Design an ATM](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/atm.md)
-- [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
-- [Design LinkedIn](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/linkedin.md)
-- [Design a Social Network like Facebook](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/social-networking-service.md)
-- [Design an Elevator System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/elevator-system.md)
-- [Design a Library Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/library-management-system.md)
-- [Design Restaurant Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/restaurant-management-system.md)
-- [Design Airline Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/airline-management-system.md)
-- [Design a Digital Wallet System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/digital-wallet-system.md)
-- [Design an Online Auction System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-auction-system.md)
-- [Design a Concert Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/concert-ticketing-system.md)
-- [Design a Cache using LRU Eviction Policy](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/lru-cache.md)
+- [ ] [Design Pub Sub System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/pub-sub-system.md)
+- [ ] [Design Tic Tac Toe Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/tic-tac-toe.md)
+- [ ] [Design Car Rental System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/car-rental-system.md)
+- [ ] [Design an ATM](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/atm.md)
+- [ ] [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
+- [ ] [Design LinkedIn](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/linkedin.md)
+- [ ] [Design a Social Network like Facebook](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/social-networking-service.md)
+- [ ] [Design an Elevator System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/elevator-system.md)
+- [ ] [Design a Library Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/library-management-system.md)
+- [ ] [Design Restaurant Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/restaurant-management-system.md)
+- [ ] [Design Airline Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/airline-management-system.md)
+- [ ] [Design a Digital Wallet System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/digital-wallet-system.md)
+- [ ] [Design an Online Auction System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-auction-system.md)
+- [ ] [Design a Concert Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/concert-ticketing-system.md)
+- [ ] [Design a Cache using LRU Eviction Policy](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/lru-cache.md)
 
 ### Hard
+- [ ] [Design Movie Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/movie-ticket-booking-system.md)
+- [ ] [Design Splitwise](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/splitwise.md)
+- [ ] [Design a Snake and Ladder game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/snake-and-ladder.md)
+- [ ] [Design Online Shopping System like Amazon](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-shopping-service.md)
+- [ ] [Design Online Stock Brokerage System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-stock-brokerage-system.md)
+- [ ] [Design CricInfo](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/cricinfo.md)
+- [ ] [Design Chess Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/chess-game.md)
+- [ ] [Design Ride-Sharing Service (like Uber)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/ride-sharing-service.md)
+- [ ] [Design Online Food Delivery Service (like Swiggy)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/food-delivery-service.md)
+- [ ] [Design Music Streaming Service (like Spotify)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/music-streaming-service.md)
+- [ ] [Design University Course Registration System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/course-registration-system.md)
 
-[](https://github.com/ashishps1/awesome-low-level-design#hard)
-
-- [Design Movie Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/movie-ticket-booking-system.md)
-- [Design Splitwise](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/splitwise.md)
-- [Design a Snake and Ladder game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/snake-and-ladder.md)
-- [Design Online Shopping System like Amazon](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-shopping-service.md)
-- [Design Online Stock Brokerage System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-stock-brokerage-system.md)
-- [Design CricInfo](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/cricinfo.md)
-- [Design Chess Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/chess-game.md)
-- [Design Ride-Sharing Service (like Uber)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/ride-sharing-service.md)
-- [Design Online Food Delivery Service (like Swiggy)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/food-delivery-service.md)
-- [Design Music Streaming Service (like Spotify)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/music-streaming-service.md)
-- [Design University Course Registration System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/course-registration-system.md)
+---
 
 ## 📚 Books
+- [ ] [Head First Design Patterns](https://amzn.to/3KcbKXu)
+- [ ] [Design Patterns: Elements of Reusable Object-Oriented Software](https://amzn.to/3KcbKXu)
 
-[](https://github.com/ashishps1/awesome-low-level-design#-books)
-
-- [Head First Design Patterns](https://amzn.to/3AmTYEN)
-- [Clean Code](https://amzn.to/4hgxN3S)
-- [Refactoring: Improving the Design of Existing Code](https://amzn.to/3YyuH3Y)
-
-## Additional resources
-
-[](https://github.com/ashishps1/awesome-low-level-design#additional-resources)
-
-- [Coursera - Design Patterns](https://www.coursera.org/learn/design-patterns)
-- [Github - Awesome Design Patterns](https://github.com/DovAmir/awesome-design-patterns)
 # AI Generated LLD Problems
 ## Booking Apps
 - [ ] Car Rental System
@@ -1091,6 +1088,7 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 ![[Pasted image 20240531155018.png]]
 
 ![[Pasted image 20240531155033.png]]
+
 
 
 
