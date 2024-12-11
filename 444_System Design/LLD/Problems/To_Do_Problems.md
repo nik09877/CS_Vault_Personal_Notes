@@ -30,22 +30,22 @@
 
 ## Popular LLD Interview Questions to Cover
 - [x] S.O.L.I.D Principles
-- [x] Design Notify-Me Button Functionality
+- [ ] Design Notify-Me Button Functionality
 - [ ] Design Pizza Billing System
 - [x] Design Parking Lot
-- [x] Design Snake n Ladder game
-- [x] Design Elevator System
-- [x] Design Car Rental System
-- [x] Design Logging System
-- [x] Design Tic-Tac-Toe game
-- [x] Design BookMyShow & Concurrency handling
+- [ ] Design Snake n Ladder game
+- [ ] Design Elevator System
+- [ ] Design Car Rental System
+- [ ] Design Logging System
+- [ ] Design Tic-Tac-Toe game
+- [ ] Design BookMyShow & Concurrency handling
 - [x] Design Vending Machine
-- [x] Design ATM
+- [ ] Design ATM
 - [ ] Design Chess game
-- [x] Design File System
-- [x] Design Splitwise
+- [ ] Design File System
+- [ ] Design Splitwise
 - [ ] Splitwise Simplify Algorithm / Optimal Accounting Balancing
-- [x] Design CricBuzz / CricketInfo
+- [ ] Design CricBuzz / CricketInfo
 - [ ] Design True Caller
 - [ ] Design Car Booking Service like Ola, Uber
 - [ ] Design Online Hotel Booking System
@@ -75,7 +75,7 @@
 - [ ] HashMap Internal Implementation
 - [ ] Online Auction System
 - [ ] Undo Redo Pattern
-- [ ] MVC Design Pattern
+- [x] MVC Design Pattern
 ---
 
 
@@ -150,11 +150,11 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 ## 💻 Low Level Design Interview Problems
 
 ### Easy
-- [ ] [Design Parking Lot](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/parking-lot.md)
-- [ ] [Design a Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/vending-machine.md)
+- [x] [Design Parking Lot](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/parking-lot.md)
+- [x] [Design a Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/vending-machine.md)
 - [ ] [Design Stack Overflow](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/stack-overflow.md)
 - [ ] [Design Logging Framework](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/logging-framework.md)
-- [ ] [Design Coffee Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/coffee-vending-machine.md)
+- [x] [Design Coffee Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/coffee-vending-machine.md)
 - [ ] [Design Traffic Signal Control System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/traffic-signal.md)
 - [ ] [Design a Task Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/task-management-system.md)
 
