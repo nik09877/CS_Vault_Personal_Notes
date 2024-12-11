@@ -2,8 +2,8 @@
 ### 📌 System Design Key Concepts
 - [x] Scalability  
 - [x] Availability  
-- [ ] CAP Theorem  
-- [ ] ACID Transactions  
+- [x] CAP Theorem  
+- [x] ACID Transactions  
 - [ ] Consistent Hashing  
 - [ ] Rate Limiting  
 - [ ] SPOF (Single Point of Failure)  
