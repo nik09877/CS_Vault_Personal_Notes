@@ -37,7 +37,7 @@
 - [ ] Design Elevator System
 - [ ] Design Car Rental System
 - [ ] Design Logging System
-- [ ] Design Tic-Tac-Toe game
+- [x] Design Tic-Tac-Toe game
 - [ ] Design BookMyShow & Concurrency handling
 - [x] Design Vending Machine
 - [ ] Design ATM
@@ -50,7 +50,7 @@
 - [ ] Design Car Booking Service like Ola, Uber
 - [ ] Design Online Hotel Booking System
 - [ ] Design Library Management System
-- [ ] Design Traffic Light System
+- [x] Design Traffic Light System
 - [ ] Design Meeting Scheduler
 - [ ] Design Online Voting System
 - [ ] Design Inventory Management System
@@ -64,7 +64,7 @@
 - [ ] Design Payment System (LLD)
 - [ ] Design Chat-based System (LLD)
 - [ ] Design Food Delivery App like Swiggy and Zomato
-- [ ] Design Community Discussion Platform
+- [x] Design Community Discussion Platform
 - [ ] Design Restaurant Management System
 - [ ] Design Apply Coupon on Shopping Cart 
 - [ ] Design Bowling Alley Machine
@@ -72,7 +72,7 @@
 - [ ] Design Tinder
 - [ ] Design Google Pay
 - [ ] Redis Internals
-- [ ] HashMap Internal Implementation
+- [x] HashMap Internal Implementation
 - [ ] Online Auction System
 - [ ] Undo Redo Pattern
 - [x] MVC Design Pattern
@@ -152,15 +152,15 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 ### Easy
 - [x] [Design Parking Lot](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/parking-lot.md)
 - [x] [Design a Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/vending-machine.md)
-- [ ] [Design Stack Overflow](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/stack-overflow.md)
-- [ ] [Design Logging Framework](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/logging-framework.md)
+- [x] [Design Stack Overflow](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/stack-overflow.md)
+- [x] [Design Logging Framework](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/logging-framework.md)
 - [x] [Design Coffee Vending Machine](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/coffee-vending-machine.md)
-- [ ] [Design Traffic Signal Control System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/traffic-signal.md)
-- [ ] [Design a Task Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/task-management-system.md)
+- [x] [Design Traffic Signal Control System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/traffic-signal.md)
+- [x] [Design a Task Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/task-management-system.md)
 
 ### Medium
-- [ ] [Design Pub Sub System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/pub-sub-system.md)
-- [ ] [Design Tic Tac Toe Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/tic-tac-toe.md)
+- [x] [Design Pub Sub System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/pub-sub-system.md)
+- [x] [Design Tic Tac Toe Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/tic-tac-toe.md)
 - [ ] [Design Car Rental System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/car-rental-system.md)
 - [ ] [Design an ATM](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/atm.md)
 - [ ] [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
