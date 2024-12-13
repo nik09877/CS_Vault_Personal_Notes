@@ -8,7 +8,7 @@
 - [x] Rate Limiting  
 - [x] SPOF (Single Point of Failure)  
 - [x] Fault Tolerance  
-- [ ] Consensus Algorithms  
+- [x] Consensus Algorithms  
 - [ ] Gossip Protocol  
 - [ ] Service Discovery  
 - [ ] API Design  
