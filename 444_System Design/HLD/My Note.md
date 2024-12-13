@@ -9,7 +9,7 @@
 - [x] SPOF (Single Point of Failure)  
 - [x] Fault Tolerance  
 - [x] Consensus Algorithms  
-- [ ] Gossip Protocol  
+- [x] Gossip Protocol  
 - [ ] Service Discovery  
 - [ ] API Design  
 - [ ] Disaster Recovery  
