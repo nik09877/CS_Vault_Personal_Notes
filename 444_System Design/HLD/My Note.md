@@ -6,8 +6,8 @@
 - [x] ACID Transactions  
 - [x] Consistent Hashing  
 - [x] Rate Limiting  
-- [ ] SPOF (Single Point of Failure)  
-- [ ] Fault Tolerance  
+- [x] SPOF (Single Point of Failure)  
+- [x] Fault Tolerance  
 - [ ] Consensus Algorithms  
 - [ ] Gossip Protocol  
 - [ ] Service Discovery  
