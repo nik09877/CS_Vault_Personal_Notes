@@ -35,7 +35,8 @@
               "title": "My Note"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,10 +195,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7b1894ffb4b02c1",
+  "active": "347d8d7bb3701476",
   "lastOpenFiles": [
-    "444_System Design/HLD/My Note.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "444_System Design/HLD/My Note.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "z_assets/Pasted_image_20240705134712.png",

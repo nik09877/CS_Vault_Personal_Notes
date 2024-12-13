@@ -4,8 +4,8 @@
 - [x] Availability  
 - [x] CAP Theorem  
 - [x] ACID Transactions  
-- [ ] Consistent Hashing  
-- [ ] Rate Limiting  
+- [x] Consistent Hashing  
+- [x] Rate Limiting  
 - [ ] SPOF (Single Point of Failure)  
 - [ ] Fault Tolerance  
 - [ ] Consensus Algorithms  
