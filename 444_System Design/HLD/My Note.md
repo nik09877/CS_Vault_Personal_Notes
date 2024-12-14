@@ -11,9 +11,9 @@
 - [x] Consensus Algorithms  
 - [x] Gossip Protocol  
 - [x] Service Discovery  
-- [ ] API Design  
-- [ ] Disaster Recovery  
-- [ ] Distributed Tracing  
+- [x] API Design  
+- [x] Disaster Recovery  
+- [x] Distributed Tracing  
 
 ---
 
