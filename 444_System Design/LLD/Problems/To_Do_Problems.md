@@ -35,12 +35,12 @@
 - [x] Design Parking Lot
 - [ ] Design Snake n Ladder game
 - [ ] Design Elevator System
-- [ ] Design Car Rental System
-- [ ] Design Logging System
+- [x] Design Car Rental System
+- [x] Design Logging System
 - [x] Design Tic-Tac-Toe game
 - [ ] Design BookMyShow & Concurrency handling
 - [x] Design Vending Machine
-- [ ] Design ATM
+- [x] Design ATM
 - [ ] Design Chess game
 - [ ] Design File System
 - [ ] Design Splitwise

@@ -18,7 +18,7 @@
 ---
 
 ### 🛠️ System Design Building Blocks
-- [ ] Content Delivery Network (CDN)  
+- [x] Content Delivery Network (CDN)  
 - [ ] Proxy vs Reverse Proxy  
 - [ ] Domain Name System (DNS)  
 - [ ] Caching  
