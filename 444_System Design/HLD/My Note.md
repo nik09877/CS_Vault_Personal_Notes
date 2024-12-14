@@ -10,7 +10,7 @@
 - [x] Fault Tolerance  
 - [x] Consensus Algorithms  
 - [x] Gossip Protocol  
-- [ ] Service Discovery  
+- [x] Service Discovery  
 - [ ] API Design  
 - [ ] Disaster Recovery  
 - [ ] Distributed Tracing  
