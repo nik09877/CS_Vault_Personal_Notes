@@ -161,8 +161,8 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 ### Medium
 - [x] [Design Pub Sub System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/pub-sub-system.md)
 - [x] [Design Tic Tac Toe Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/tic-tac-toe.md)
-- [ ] [Design Car Rental System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/car-rental-system.md)
-- [ ] [Design an ATM](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/atm.md)
+- [x] [Design Car Rental System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/car-rental-system.md)
+- [x] [Design an ATM](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/atm.md)
 - [ ] [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
 - [ ] [Design LinkedIn](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/linkedin.md)
 - [ ] [Design a Social Network like Facebook](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/social-networking-service.md)
