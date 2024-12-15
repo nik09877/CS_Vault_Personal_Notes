@@ -48,7 +48,7 @@
 - [ ] Design CricBuzz / CricketInfo
 - [ ] Design True Caller
 - [ ] Design Car Booking Service like Ola, Uber
-- [ ] Design Online Hotel Booking System
+- [x] Design Online Hotel Booking System
 - [ ] Design Library Management System
 - [x] Design Traffic Light System
 - [ ] Design Meeting Scheduler
@@ -163,7 +163,7 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 - [x] [Design Tic Tac Toe Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/tic-tac-toe.md)
 - [x] [Design Car Rental System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/car-rental-system.md)
 - [x] [Design an ATM](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/atm.md)
-- [ ] [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
+- [x] [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
 - [ ] [Design LinkedIn](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/linkedin.md)
 - [ ] [Design a Social Network like Facebook](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/social-networking-service.md)
 - [ ] [Design an Elevator System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/elevator-system.md)
