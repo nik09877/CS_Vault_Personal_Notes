@@ -21,7 +21,7 @@
 - [x] Content Delivery Network (CDN)  
 - [x] Proxy vs Reverse Proxy  
 - [x] Domain Name System (DNS)  
-- [ ] Caching  
+- [x] Caching  
 - [ ] Caching Strategies  
 - [ ] Distributed Caching  
 - [ ] Load Balancing  

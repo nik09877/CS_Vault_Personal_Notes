@@ -35,8 +35,7 @@
               "title": "My Note"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,10 +168,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/HLD/My Note.md"
+                "file": "444_System Design/LLD/Problems/To_Do_Problems.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of My Note"
+              "title": "Outline of To_Do_Problems"
             }
           }
         ],
@@ -194,10 +193,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8f59f8b9c818898",
+  "active": "e7b1894ffb4b02c1",
   "lastOpenFiles": [
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/HLD/My Note.md",
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/HLD/To_Do_Problems.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
