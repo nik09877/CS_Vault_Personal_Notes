@@ -58,7 +58,7 @@ abstract class CounterBase with Store {
 - Any time the depending-observables change, they will recompute their new value.
 - Computed-s are also smart and **cache** their previous value. 
 - Only when the computed-value is different from the cached-value, will they fire notifications. This behavior is key to ensure the connected reactions don't execute unnecessarily.
-- Computed-s run for the firs
+- 
 ```dart
 abstract class _Contact with Store {  
 	@observable  
@@ -371,4 +371,44 @@ asyncWhen(
 - **Avoid Heavy Logic in Reactions:** Keep the logic in reactions lightweight and delegate heavy operations to other functions.
 
 # Observer
+
 - Whenever the observables / computed values change, `Observer` rebuilds and renders.
+
+### Note
+- When using `MobX` in Flutter, the `Observer` widget's `builder` function only tracks observables directly **accessed in its immediate execution context**. 
+- If an observable is read inside a **nested function**, it won't be tracked, and changes to the observable won't trigger a rebuild.
+
+### Problem Example: Nested Observable Access
+
+```dart
+class CounterStore = _CounterStore with _$CounterStore;
+
+abstract class _CounterStore with Store {
+  @observable
+  int count = 0;
+
+  void increment() => count++;
+}
+
+class CounterWidget extends StatelessWidget {
+  final CounterStore store = CounterStore();
+
+  @override
+  Widget build(BuildContext context) {
+    return Observer(
+      builder: (_) {
+        // Observable is not accessed directly in the builder context
+        void printCount() {
+          print(store.count); // Observable used in a nested function
+        }
+
+        // Calling the nested function
+        printCount();
+
+        return Text('Count: ${store.count}');
+      },
+    );
+  }
+}
+
+```
