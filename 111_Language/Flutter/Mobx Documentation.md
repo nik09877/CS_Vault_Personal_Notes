@@ -199,3 +199,20 @@ class LoadingIndicator extends StatelessWidget {
 - Changes to the observables are only notified at the end of the action.
 - Actions can call other actions. For such nested actions, the change-notifications will be sent when the top-most action completes.
 - All the linked reactions (ones that depend on the observables mutated inside the action) are run only at the end of the action. 
+-  If you mutate an observable that is being observed, outside of an action, MobX will throw an `Exception`
+- `Async` actions are allowed . 
+
+```dart
+
+abstract class _Counter with Store {
+  @observable
+  int value = 0;
+
+  @action
+  void increment() {
+    value++;
+  }
+}
+```
+
+# Rea
