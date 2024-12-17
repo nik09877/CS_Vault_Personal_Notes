@@ -195,3 +195,7 @@ class LoadingIndicator extends StatelessWidget {
 
 # Actions
 
+- **Actions** are used to update the observables.
+- Changes to the observables are only notified at the end of the action.
+- Actions can call other actions. For such nested actions, the change-notifications will be sent when the top-most action completes.
+- All the linked reactions (ones that depend on the observables mutated inside the action) are run only at the end of the action. 
