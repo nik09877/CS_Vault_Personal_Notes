@@ -245,6 +245,7 @@ dispose();
 - `ReactionDisposer autorun(Function(Reaction) fn)`
 - Runs the reaction immediately and also on any change in the observables used inside `fn`.
 - **Note**: Avoid putting UI-related logic inside `autorun` since it runs immediately.
+
 #### Example: Logging Observable Changes
 ```dart
 @override
@@ -256,3 +257,82 @@ void initState() {
 }
 ```
 
+### 3. `when`
+
+- Runs the side-effect **once** when a specific condition (based on observable state) becomes true.
+- Ideal for triggering actions like navigation or showing alerts
+
+#### Example: Navigation When Condition is Met
+```dart
+@override
+void initState() {
+  super.initState();
+  when(
+    (_) => store.isLoggedIn, // Condition
+    () => Navigator.pushReplacementNamed(context, '/home'), // Side-effect
+  );
+}
+```
+
+### 4. `asyncWhen`
+
+- An asynchronous version of `when`. It waits for a condition to become true and resolves the future.
+
+#### Example: Waiting for a Condition
+
+```dart
+@override
+void initState() {
+  super.initState();
+  asyncWhen(
+    (_) => store.isDataLoaded, // Condition
+  ).then((_) {
+    Navigator.pushReplacementNamed(context, '/dashboard');
+  });
+}
+```
+
+## Key Differences Between Reaction Types
+
+| Reaction Type | Runs Immediately? | Runs Multiple Times? | Asynchronous? | Use Case                                   |
+| ------------- | ----------------- | -------------------- | ------------- | ------------------------------------------ |
+| `reaction`    | No                | Yes                  | No            | Fine-grained response to specific changes. |
+| `autorun`     | Yes               | Yes                  | No            | Monitoring all dependencies.               |
+| `when`        | No                | No (Only once)       | No            | Triggering side-effects for conditions.    |
+| `asyncWhen`   | No                | No (Only once)       | Yes           | Waiting for conditions asynchronously.     |
+
+## Common Use Cases for Reactions
+
+### 1. Snackbar Notifications
+
+
+---
+
+### 2. API Calls on State Change
+
+
+---
+
+### 3. Redirecting Based on Authentication Status
+
+
+---
+
+### 4. Debugging Observable State
+
+
+
+---
+
+### 5. Waiting for Asynchronous Conditions
+
+dart
+
+Copy code
+
+`asyncWhen(   (_) => store.hasDataLoaded, ).then((_) {   Navigator.pushReplacementNamed(context, '/data-view'); });`
+## Best Practices
+
+- **Dispose Reactions:** Always clean up reactions in widgets' `dispose` method to avoid memory leaks.
+- **Use Context Safely:** If you need to use `BuildContext` in reactions, ensure it's valid during the lifecycle of the widget.
+- **Avoid Heavy Logic in Reactions:** Keep the logic in reactions lightweight and delegate heavy operations to other functions.
