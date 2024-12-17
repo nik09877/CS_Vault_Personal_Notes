@@ -215,4 +215,41 @@ abstract class _Counter with Store {
 }
 ```
 
-# Rea
+# Reactions
+
+- Reactions allow you to perform side-effects when observable state changes. 
+- This is useful for logging, showing snackbars, API calls, or navigation.
+
+## Types
+
+### 1. `reaction`
+
+- Tracks a specific observable expression and triggers a side-effect when the expression's value changes.
+- Useful for responding to fine-grained observable changes.
+
+#### Example: Showing a Snackbar
+
+```dart
+ReactionDisposer? disposer;
+
+@override
+void initState() {
+  super.initState();
+  disposer = reaction<String>(
+    (_) => store.connectivityStatus, // Observable expression
+    (status) { // Side-effect
+      final messenger = ScaffoldMessenger.of(context);
+      messenger.showSnackBar(SnackBar(
+        content: Text(status == 'offline' ? 'You\'re offline' : 'You\'re online'),
+      ));
+    },
+  );
+}
+
+@override
+void dispose() {
+  disposer?.call(); // Cleanup the reaction
+  super.dispose();
+}
+
+```
