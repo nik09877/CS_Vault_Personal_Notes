@@ -452,3 +452,36 @@ class CounterWidget extends StatelessWidget {
 }
 
 ```
+
+### Performance optimizations
+
+- Mostly you try to make `Observer` as small as possible. But sometimes you want to exclude the widget subtree from being rebuilt and improve the performance.
+
+- For that you can use an `Observer.withBuiltChild` constructor. It takes `builder` and `child` arguments and internally uses the same technique as in AnimatedBuilder
+- By passing a pre-built subtree to the `child` parameter, you avoid rebuilding parts of the widget tree that don't depend on the observables.
+
+Here is a brief example:
+
+```dart
+//store.dart
+@observable
+Color obsColor = Colors.green;
+
+//widget.dart
+Observer.withBuiltChild(
+  builder: (context, child) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      color: obsColor.value, // this widget will be rebuilt when the color value changes
+      child: child,
+    );
+  },
+  child: ListView.builder( // this part will not be rebuilt
+    shrinkWrap: true,
+    itemCount: 1000,
+    itemBuilder: (context, index) {
+      return ListTile(title: Text('Item $index'));
+    },
+  ),
+)
+```
