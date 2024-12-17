@@ -370,6 +370,16 @@ asyncWhen(
 - **Use Context Safely:** If you need to use `BuildContext` in reactions, ensure it's valid during the lifecycle of the widget.
 - **Avoid Heavy Logic in Reactions:** Keep the logic in reactions lightweight and delegate heavy operations to other functions.
 
+## ReactionBuilder widget
+
+- If you watn to run a reaction when a Widget loads, you most likely will create a `StatefulWidget` and put your reaction in the `initState()`.
+
+- This forces you to make a wrapper widget, whose sole purpose is to run the reaction and dispose it as part of the `dispose()` method. 
+- There is a simpler way of handling this with the `ReactionBuilder`.
+
+  `ReactionBuilder({required ReactionDisposer Function(BuildContext context) builder, required Widget child})`
+
+
 # Observer
 
 - Whenever the observables / computed values change, `Observer` rebuilds and renders.
