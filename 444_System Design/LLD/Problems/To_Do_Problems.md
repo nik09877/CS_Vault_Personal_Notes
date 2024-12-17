@@ -171,7 +171,7 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 - [ ] [Design Restaurant Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/restaurant-management-system.md)
 - [ ] [Design Airline Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/airline-management-system.md)
 - [ ] [Design a Digital Wallet System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/digital-wallet-system.md)
-- [ ] [Design an Online Auction System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-auction-system.md)
+- [x] [Design an Online Auction System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-auction-system.md)
 - [ ] [Design a Concert Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/concert-ticketing-system.md)
 - [x] [Design a Cache using LRU Eviction Policy](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/lru-cache.md)
 
