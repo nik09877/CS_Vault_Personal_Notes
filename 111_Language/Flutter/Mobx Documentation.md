@@ -224,32 +224,35 @@ abstract class _Counter with Store {
 
 ### 1. `reaction`
 
-- Tracks a specific observable expression and triggers a side-effect when the expression's value changes.
-- Useful for responding to fine-grained observable changes.
+ - `ReactionDisposer reaction<T>(T Function(Reaction) fn, void Function(T) effect)`
+- Only the observables inside `fn()` are tracked and runs the `effect()` when the tracking function returns a different value. 
 
-#### Example: Showing a Snackbar
+#### Example: 
 
 ```dart
-ReactionDisposer? disposer;
+@observable
+String greeting = 'Hello World';  
+  
+final dispose = reaction((_) => greeting.value, (msg) => print(msg));  
+  
+greeting.value = 'Hello MobX'; // Cause a change  
+  
+// Done with the reaction()  
+dispose();
+```
 
+### 2. `autorun`
+- `ReactionDisposer autorun(Function(Reaction) fn)`
+- Runs the reaction immediately and also on any change in the observables used inside `fn`.
+- **Note**: Avoid putting UI-related logic inside `autorun` since it runs immediately.
+#### Example: Logging Observable Changes
+```dart
 @override
 void initState() {
   super.initState();
-  disposer = reaction<String>(
-    (_) => store.connectivityStatus, // Observable expression
-    (status) { // Side-effect
-      final messenger = ScaffoldMessenger.of(context);
-      messenger.showSnackBar(SnackBar(
-        content: Text(status == 'offline' ? 'You\'re offline' : 'You\'re online'),
-      ));
-    },
-  );
+  autorun((_) {
+    print('Current count: ${store.counter}');
+  });
 }
-
-@override
-void dispose() {
-  disposer?.call(); // Cleanup the reaction
-  super.dispose();
-}
-
 ```
+
