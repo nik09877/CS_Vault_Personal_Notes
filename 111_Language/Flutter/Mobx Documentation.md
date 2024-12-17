@@ -58,7 +58,7 @@ abstract class CounterBase with Store {
 - Any time the depending-observables change, they will recompute their new value.
 - Computed-s are also smart and **cache** their previous value. 
 - Only when the computed-value is different from the cached-value, will they fire notifications. This behavior is key to ensure the connected reactions don't execute unnecessarily.
-
+- Computed-s run for the firs
 ```dart
 abstract class _Contact with Store {  
 	@observable  
@@ -304,35 +304,71 @@ void initState() {
 ## Common Use Cases for Reactions
 
 ### 1. Snackbar Notifications
+```dart
+reaction<bool>(
+  (_) => store.isOnline,
+  (isOnline) {
+    final messenger = ScaffoldMessenger.of(context);
+    messenger.showSnackBar(SnackBar(
+      content: Text(isOnline ? 'You\'re online' : 'You\'re offline'),
+    ));
+  },
+);
 
+```
 
 ---
 
 ### 2. API Calls on State Change
+```dart
+reaction<int>(
+  (_) => store.selectedCategory,
+  (category) async {
+    await store.fetchItemsForCategory(category);
+  },
+);
 
+```
 
 ---
 
 ### 3. Redirecting Based on Authentication Status
+```dart
+when(
+  (_) => store.isAuthenticated,
+  () => Navigator.pushReplacementNamed(context, '/dashboard'),
+);
 
+```
 
 ---
 
 ### 4. Debugging Observable State
+```dart
+autorun((_) {
+  print('Current user: ${store.user.name}');
+});
 
+```
 
 
 ---
 
 ### 5. Waiting for Asynchronous Conditions
+```dart
+asyncWhen(
+  (_) => store.hasDataLoaded,
+).then((_) {
+  Navigator.pushReplacementNamed(context, '/data-view');
+});
 
-dart
+```
 
-Copy code
-
-`asyncWhen(   (_) => store.hasDataLoaded, ).then((_) {   Navigator.pushReplacementNamed(context, '/data-view'); });`
 ## Best Practices
 
 - **Dispose Reactions:** Always clean up reactions in widgets' `dispose` method to avoid memory leaks.
 - **Use Context Safely:** If you need to use `BuildContext` in reactions, ensure it's valid during the lifecycle of the widget.
 - **Avoid Heavy Logic in Reactions:** Keep the logic in reactions lightweight and delegate heavy operations to other functions.
+
+# Observer
+- Whenever the observables / computed values change, `Observer` rebuilds and renders.
