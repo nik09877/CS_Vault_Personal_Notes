@@ -380,6 +380,7 @@ asyncWhen(
 
 ### Problem Example: Nested Observable Access
 
+##### WRONG CODE
 ```dart
 class CounterStore = _CounterStore with _$CounterStore;
 
@@ -406,6 +407,45 @@ class CounterWidget extends StatelessWidget {
         printCount();
 
         return Text('Count: ${store.count}');
+      },
+    );
+  }
+}
+
+```
+
+#### Expected Behavior:
+
+- The `Observer` should rebuild when `store.count` changes.
+
+#### Actual Behavior:
+
+- The `Observer` **does not rebuild** because `store.count` is accessed **inside the nested function (`printCount`)**, and MobX cannot track it.
+
+### Solution: Access Observables Directly
+To ensure proper tracking, **dereference (read) the observable in the immediate execution context** of the `builder`.
+
+##### Correct Code
+```dart
+class CounterWidget extends StatelessWidget {
+  final CounterStore store = CounterStore();
+
+  @override
+  Widget build(BuildContext context) {
+    return Observer(
+      builder: (_) {
+        // Access the observable directly in the builder context
+        final currentCount = store.count;
+
+        // Nested function now uses a captured variable
+        void printCount() {
+          print(currentCount);
+        }
+
+        // Calling the nested function
+        printCount();
+
+        return Text('Count: $currentCount');
       },
     );
   }
