@@ -22,7 +22,7 @@
 - [x] Proxy vs Reverse Proxy  
 - [x] Domain Name System (DNS)  
 - [x] Caching  
-- [ ] Caching Strategies  
+- [x] Caching Strategies  
 - [ ] Distributed Caching  
 - [ ] Load Balancing  
 - [ ] Database Types  
