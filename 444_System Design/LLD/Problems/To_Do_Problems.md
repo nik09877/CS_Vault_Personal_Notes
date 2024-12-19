@@ -166,7 +166,7 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 - [x] [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
 - [x] [Design LinkedIn](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/linkedin.md)
 - [x] [Design a Social Network like Facebook](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/social-networking-service.md)
-- [ ] [Design an Elevator System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/elevator-system.md)
+- [x] [Design an Elevator System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/elevator-system.md)
 - [ ] [Design a Library Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/library-management-system.md)
 - [ ] [Design Restaurant Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/restaurant-management-system.md)
 - [ ] [Design Airline Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/airline-management-system.md)
