@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
-                "mode": "preview",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "To_Do_Problems"
+              "title": "Project Work"
             }
           }
         ],
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -197,13 +196,13 @@
   },
   "active": "809ab33be570bdc1",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "444_System Design/HLD/My Note.md",
     "111_Language/Flutter/Mobx Documentation.md",
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "111_Language/Flutter",
     "444_System Design/HLD/To_Do_Problems.md",
     "Work/TCS/Ultimatix/Project Work.md",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "z_assets/Pasted_image_20240705134712.png",
