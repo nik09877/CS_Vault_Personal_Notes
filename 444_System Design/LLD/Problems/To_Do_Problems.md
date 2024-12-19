@@ -73,7 +73,7 @@
 - [ ] Design Google Pay
 - [ ] Redis Internals
 - [x] HashMap Internal Implementation
-- [ ] Online Auction System
+- [x] Online Auction System
 - [ ] Undo Redo Pattern
 - [x] MVC Design Pattern
 ---
@@ -164,8 +164,8 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 - [x] [Design Car Rental System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/car-rental-system.md)
 - [x] [Design an ATM](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/atm.md)
 - [x] [Design Hotel Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/hotel-management-system.md)
-- [ ] [Design LinkedIn](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/linkedin.md)
-- [ ] [Design a Social Network like Facebook](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/social-networking-service.md)
+- [x] [Design LinkedIn](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/linkedin.md)
+- [x] [Design a Social Network like Facebook](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/social-networking-service.md)
 - [ ] [Design an Elevator System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/elevator-system.md)
 - [ ] [Design a Library Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/library-management-system.md)
 - [ ] [Design Restaurant Management System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/restaurant-management-system.md)
