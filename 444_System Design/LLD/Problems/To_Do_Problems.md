@@ -177,7 +177,7 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 
 ### Hard
 - [ ] [Design Movie Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/movie-ticket-booking-system.md)
-- [ ] [Design Splitwise](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/splitwise.md)
+- [x] [Design Splitwise](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/splitwise.md)
 - [ ] [Design a Snake and Ladder game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/snake-and-ladder.md)
 - [ ] [Design Online Shopping System like Amazon](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-shopping-service.md)
 - [ ] [Design Online Stock Brokerage System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-stock-brokerage-system.md)
