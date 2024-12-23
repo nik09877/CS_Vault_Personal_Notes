@@ -176,7 +176,7 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 - [x] [Design a Cache using LRU Eviction Policy](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/lru-cache.md)
 
 ### Hard
-- [ ] [Design Movie Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/movie-ticket-booking-system.md)
+- [x] [Design Movie Ticket Booking System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/movie-ticket-booking-system.md)
 - [x] [Design Splitwise](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/splitwise.md)
 - [ ] [Design a Snake and Ladder game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/snake-and-ladder.md)
 - [ ] [Design Online Shopping System like Amazon](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-shopping-service.md)
