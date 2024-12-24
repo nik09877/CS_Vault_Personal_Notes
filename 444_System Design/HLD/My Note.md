@@ -24,7 +24,7 @@
 - [x] Caching  
 - [x] Caching Strategies  
 - [x] Distributed Caching  
-- [ ] Load Balancing  
+- [x] Load Balancing  
 - [ ] Database Types  
 - [ ] SQL vs NoSQL  
 - [ ] Database Indexes  
