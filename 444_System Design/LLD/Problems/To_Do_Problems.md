@@ -33,12 +33,12 @@
 - [ ] Design Notify-Me Button Functionality
 - [ ] Design Pizza Billing System
 - [x] Design Parking Lot
-- [ ] Design Snake n Ladder game
-- [ ] Design Elevator System
+- [x] Design Snake n Ladder game
+- [x] Design Elevator System
 - [x] Design Car Rental System
 - [x] Design Logging System
 - [x] Design Tic-Tac-Toe game
-- [ ] Design BookMyShow & Concurrency handling
+- [x] Design BookMyShow & Concurrency handling
 - [x] Design Vending Machine
 - [x] Design ATM
 - [ ] Design Chess game
@@ -49,13 +49,13 @@
 - [ ] Design True Caller
 - [ ] Design Car Booking Service like Ola, Uber
 - [x] Design Online Hotel Booking System
-- [ ] Design Library Management System
+- [x] Design Library Management System
 - [x] Design Traffic Light System
 - [ ] Design Meeting Scheduler
 - [ ] Design Online Voting System
 - [ ] Design Inventory Management System
 - [ ] Design Cache Mechanism
-- [ ] Design LinkedIn
+- [x] Design LinkedIn
 - [ ] Design Amazon
 - [ ] Design Airline Management System
 - [ ] Design Stock Exchange System
