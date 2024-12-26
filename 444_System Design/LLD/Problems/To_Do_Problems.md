@@ -183,7 +183,7 @@ This repository contains resources to learn Low Level Design (LLD) / Object Orie
 - [ ] [Design Online Stock Brokerage System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/online-stock-brokerage-system.md)
 - [ ] [Design CricInfo](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/cricinfo.md)
 - [ ] [Design Chess Game](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/chess-game.md)
-- [ ] [Design Ride-Sharing Service (like Uber)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/ride-sharing-service.md)
+- [x] [Design Ride-Sharing Service (like Uber)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/ride-sharing-service.md)
 - [ ] [Design Online Food Delivery Service (like Swiggy)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/food-delivery-service.md)
 - [ ] [Design Music Streaming Service (like Spotify)](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/music-streaming-service.md)
 - [ ] [Design University Course Registration System](https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/course-registration-system.md)
