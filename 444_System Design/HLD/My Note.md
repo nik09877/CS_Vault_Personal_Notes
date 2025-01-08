@@ -27,7 +27,7 @@
 - [x] Load Balancing  
 - [x] Database Types  
 - [x] SQL vs NoSQL  
-- [ ] Database Indexes  
+- [x] Database Indexes  
 - [ ] Consistency Patterns  
 - [ ] Heartbeats  
 - [ ] Circuit Breaker  

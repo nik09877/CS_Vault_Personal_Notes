@@ -35,8 +35,7 @@
               "title": "To_Do_Problems"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -195,10 +194,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "75f66aac7d7b04cd",
+  "active": "d8f59f8b9c818898",
   "lastOpenFiles": [
-    "444_System Design/HLD/My Note.md",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
+    "444_System Design/HLD/My Note.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "111_Language/Flutter/Mobx Documentation.md",
