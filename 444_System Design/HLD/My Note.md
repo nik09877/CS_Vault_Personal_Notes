@@ -29,7 +29,7 @@
 - [x] SQL vs NoSQL  
 - [x] Database Indexes  
 - [x] Consistency Patterns  
-- [ ] Heartbeats  
+- [x] Heartbeats  
 - [ ] Circuit Breaker  
 - [ ] Idempotency  
 - [ ] Database Scaling  
