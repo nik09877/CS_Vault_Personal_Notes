@@ -28,7 +28,7 @@
 - [x] Database Types  
 - [x] SQL vs NoSQL  
 - [x] Database Indexes  
-- [ ] Consistency Patterns  
+- [x] Consistency Patterns  
 - [ ] Heartbeats  
 - [ ] Circuit Breaker  
 - [ ] Idempotency  
