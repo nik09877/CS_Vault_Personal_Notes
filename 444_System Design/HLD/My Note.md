@@ -30,7 +30,7 @@
 - [x] Database Indexes  
 - [x] Consistency Patterns  
 - [x] Heartbeats  
-- [ ] Circuit Breaker  
+- [x] Circuit Breaker  
 - [ ] Idempotency  
 - [ ] Database Scaling  
 - [ ] Data Replication  
