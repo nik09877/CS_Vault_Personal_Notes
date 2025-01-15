@@ -174,7 +174,7 @@
 - [ ] The Log-Structured Merge-Tree (LSM-Tree)  
 - [ ] The Chubby lock service for loosely-coupled distributed systems  
 
-# Quick Review of Problems and Solutions
+## Quick Review of Problems and Solutions
 ### **System Design Questions with Brief Answers :**
 
 1. **Design a URL shortening service like Bitly.**  
@@ -266,6 +266,7 @@
     
 30. **Design a monitoring system for server health.**  
     Use a distributed system to collect metrics, store them in a time-series database, and use alerts based on thresholds.
+---
 # Network Protocols
 
 - Network Protocol defines a set of rules and regulations using which two systems can communicate over the network
@@ -311,6 +312,8 @@
 		- it's fast
 		- No ACK, No ordering , No connection
 		- Live streaming, Video calling
+
+![API REQ](Pasted_image_20250115205506.png)
 
 
 # CAP Theorum
