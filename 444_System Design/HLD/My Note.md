@@ -31,7 +31,7 @@
 - [x] Consistency Patterns  
 - [x] Heartbeats  
 - [x] Circuit Breaker  
-- [ ] Idempotency  
+- [x] Idempotency  
 - [ ] Database Scaling  
 - [ ] Data Replication  
 - [ ] Data Redundancy  
