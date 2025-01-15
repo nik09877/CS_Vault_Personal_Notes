@@ -4,49 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c543b1d095b6a45f",
+        "id": "c79c5e13ff82326f",
         "type": "tabs",
         "children": [
           {
-            "id": "d8f59f8b9c818898",
+            "id": "b7841bc8c92e940d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "111_Language/Java/In Depth/9.Stream API.md",
+                "file": "444_System Design/HLD/My Note.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "9.Stream API"
-            }
-          },
-          {
-            "id": "cd7d061dee7d0e4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "9.Stream API Quick Reference"
-            }
-          },
-          {
-            "id": "75f66aac7d7b04cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/LLD/Problems/To_Do_Problems.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "To_Do_Problems"
+              "title": "My Note"
             }
           }
         ]
@@ -182,10 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Flutter/Mobx Documentation.md"
+                "file": "444_System Design/HLD/My Note.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Mobx Documentation"
+              "title": "Outline of My Note"
             }
           }
         ],
@@ -193,8 +165,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,14 +179,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8f59f8b9c818898",
+  "active": "b7841bc8c92e940d",
   "lastOpenFiles": [
+    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/In Depth/9.Stream API.md",
     "333_Core Theory Subjects/DBMS.md",
     "333_Core Theory Subjects/OS.md",
     "444_System Design/HLD/My Note.md",
-    "444_System Design/LLD/Problems/To_Do_Problems.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "111_Language/Flutter/Mobx Documentation.md",
