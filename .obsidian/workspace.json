@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c79c5e13ff82326f",
+        "id": "cfba253ddc861ab2",
         "type": "tabs",
         "children": [
           {
-            "id": "b7841bc8c92e940d",
+            "id": "19a61a95d7157b0a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/HLD/My Note.md",
-                "mode": "preview",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "My Note"
+              "title": "New tab"
             }
           }
         ]
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -153,11 +148,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "444_System Design/HLD/My Note.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of My Note"
+              "title": "Outline"
             }
           }
         ],
@@ -179,24 +172,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b7841bc8c92e940d",
+  "active": "19a61a95d7157b0a",
   "lastOpenFiles": [
-    "z_assets/Pasted_image_20250115205506.png",
+    "Work/TCS/Ultimatix/Project Work.md",
+    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "444_System Design/HLD/My Note.md",
+    "z_assets/Pasted_image_20250115205506.png",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/In Depth/9.Stream API.md",
     "333_Core Theory Subjects/DBMS.md",
     "333_Core Theory Subjects/OS.md",
-    "Work/TCS/Ultimatix/Project Work.md",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "111_Language/Flutter/Mobx Documentation.md",
     "111_Language/Flutter",
     "444_System Design/HLD/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
     "111_Language/Java/In Depth/8.Collections.md",
     "z_assets/Pasted_image_20240705134712.png",
-    "444_System Design/HLD/Notes/Prerequisites.md",
-    "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf"
+    "444_System Design/HLD/Notes/Prerequisites.md"
   ]
 }
