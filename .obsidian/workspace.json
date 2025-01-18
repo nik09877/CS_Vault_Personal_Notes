@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
-                "mode": "preview",
+                "file": "Work/Job Status/Job Status.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "My Note"
+              "title": "Job Status"
             }
           }
         ]
@@ -53,7 +53,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -154,10 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/HLD/My Note.md"
+                "file": "Work/Job Status/Job Status.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of My Note"
+              "title": "Outline of Job Status"
             }
           },
           {
@@ -191,8 +191,8 @@
   },
   "active": "c94b9f997ae2d230",
   "lastOpenFiles": [
-    "Work/Job Status/Job Status.md",
     "444_System Design/HLD/My Note.md",
+    "Work/Job Status/Job Status.md",
     "Work/Job Status",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
