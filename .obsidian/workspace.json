@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5ea6a34aee92dd14",
+            "id": "c94b9f997ae2d230",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Job Status/Job Status.md",
+                "file": "444_System Design/HLD/My Note.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Job Status"
+              "title": "My Note"
             }
           }
         ]
@@ -154,10 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Job Status/Job Status.md"
+                "file": "444_System Design/HLD/My Note.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Job Status"
+              "title": "Outline of My Note"
             }
           },
           {
@@ -175,8 +175,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,10 +189,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5ea6a34aee92dd14",
+  "active": "c94b9f997ae2d230",
   "lastOpenFiles": [
-    "444_System Design/HLD/My Note.md",
     "Work/Job Status/Job Status.md",
+    "444_System Design/HLD/My Note.md",
     "Work/Job Status",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
