@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Job Status/Job Status.md",
-                "mode": "preview",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Job Status"
+              "title": "Project Work"
             }
           }
         ]
@@ -73,13 +73,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -155,10 +153,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Job Status/Job Status.md"
+                "file": "Work/TCS/Ultimatix/Project Work.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Job Status"
+              "title": "Outline of Project Work"
             }
           },
           {
@@ -192,12 +190,12 @@
   },
   "active": "038fa9514e6b0d6c",
   "lastOpenFiles": [
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/Job Status/Job Status.md",
     "444_System Design/HLD/My Note.md",
     "Work/Job Status",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "z_assets/Pasted_image_20250115205506.png",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
