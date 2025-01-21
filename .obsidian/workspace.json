@@ -11,10 +11,14 @@
             "id": "f52cd79378a74fd9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Work/Job Status/Job Status.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Job Status"
             }
           }
         ]
@@ -149,9 +153,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Work/Job Status/Job Status.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Job Status"
             }
           },
           {
