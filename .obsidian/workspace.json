@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cd62f73a5b9af24c",
+        "id": "a77cbc907da01274",
         "type": "tabs",
         "children": [
           {
-            "id": "038fa9514e6b0d6c",
+            "id": "f52cd79378a74fd9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
-                "mode": "source",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Project Work"
+              "title": "New tab"
             }
           }
         ]
@@ -77,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -152,11 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of Project Work"
+              "title": "Outline"
             }
           },
           {
@@ -188,13 +183,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "038fa9514e6b0d6c",
+  "active": "f52cd79378a74fd9",
   "lastOpenFiles": [
+    "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/Job Status/Job Status.md",
     "444_System Design/HLD/My Note.md",
     "Work/Job Status",
-    "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "z_assets/Pasted_image_20250115205506.png",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
