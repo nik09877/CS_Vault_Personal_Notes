@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
+                "file": "Work/Job Status/Job Status.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "RoadMap"
+              "title": "Job Status"
             }
           }
         ]
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -154,10 +153,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "666_WebDev/BackEnd/SpringBoot/RoadMap.md"
+                "file": "Work/Job Status/Job Status.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of RoadMap"
+              "title": "Outline of Job Status"
             }
           },
           {
@@ -191,9 +190,9 @@
   },
   "active": "f52cd79378a74fd9",
   "lastOpenFiles": [
+    "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
-    "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "Work/Job Status/Job Status.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
