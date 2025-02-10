@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Job Status/Job Status.md",
-                "mode": "preview",
+                "file": "Work/Cooking/Foods.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Job Status"
-            }
-          },
-          {
-            "id": "7745796f9b7c22d0",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.4"
+              "title": "Foods"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -167,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Work/Cooking/Foods.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Foods"
             }
           },
           {
@@ -204,12 +192,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7745796f9b7c22d0",
+  "active": "f52cd79378a74fd9",
   "lastOpenFiles": [
+    "Work/Job Status/Job Status.md",
+    "Work/Cooking/Foods.md",
+    "Work/Cooking",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
-    "Work/Job Status/Job Status.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "444_System Design/HLD/My Note.md",
