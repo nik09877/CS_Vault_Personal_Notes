@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Job Status"
             }
+          },
+          {
+            "id": "7745796f9b7c22d0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -40,7 +53,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -153,10 +167,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Job Status/Job Status.md"
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Job Status"
+              "title": "Outline"
             }
           },
           {
@@ -188,7 +204,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f52cd79378a74fd9",
+  "active": "7745796f9b7c22d0",
   "lastOpenFiles": [
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
