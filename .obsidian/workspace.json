@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Cooking/Foods.md",
+                "file": "Work/Job Status/Job Status.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Foods"
+              "title": "Job Status"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -154,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Cooking/Foods.md",
+                "file": "Work/Job Status/Job Status.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Foods"
+              "title": "Outline of Job Status"
             }
           },
           {
@@ -194,8 +195,8 @@
   },
   "active": "f52cd79378a74fd9",
   "lastOpenFiles": [
-    "Work/Job Status/Job Status.md",
     "Work/Cooking/Foods.md",
+    "Work/Job Status/Job Status.md",
     "Work/Cooking",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
