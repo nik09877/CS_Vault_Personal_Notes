@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "Work/Cooking/Foods.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Project Work"
-            }
-          },
-          {
-            "id": "ba1c313ba345b913",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.7"
+              "title": "Foods"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -167,12 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Work/Cooking/Foods.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Foods"
             }
           },
           {
@@ -204,15 +193,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba1c313ba345b913",
+  "active": "f5b994d50c3be9b6",
   "lastOpenFiles": [
+    "Work/TCS/Ultimatix/Project Work.md",
     "Work/Cooking/Foods.md",
     "Work/Job Status/Job Status.md",
     "Work/Cooking",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
-    "Work/TCS/Ultimatix/Project Work.md",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "444_System Design/HLD/My Note.md",
     "Work/Job Status",
