@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Work/Cooking/Foods.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -193,7 +193,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f5b994d50c3be9b6",
+  "active": "c194cf11ffdae4cb",
   "lastOpenFiles": [
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/Cooking/Foods.md",
