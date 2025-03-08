@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "Work/Cooking/Foods.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Project Work"
+              "title": "Foods"
             }
           }
         ]
@@ -155,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "Work/Cooking/Foods.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Project Work"
+              "title": "Outline of Foods"
             }
           },
           {
@@ -196,10 +196,10 @@
   },
   "active": "07e0df18e6ded80e",
   "lastOpenFiles": [
+    "Work/TCS/Ultimatix/Project Work.md",
     "Scrum Master.md",
     "Work/Cooking/Foods.md",
     "Work/Job Status/Job Status.md",
-    "Work/TCS/Ultimatix/Project Work.md",
     "Work/Cooking",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
