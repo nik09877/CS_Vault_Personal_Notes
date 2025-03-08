@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scrum Master.md",
-                "mode": "preview",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Scrum Master"
+              "title": "Project Work"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -154,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scrum Master.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Scrum Master"
+              "title": "Outline of Project Work"
             }
           },
           {
@@ -194,8 +195,8 @@
   },
   "active": "07e0df18e6ded80e",
   "lastOpenFiles": [
-    "Work/Cooking/Foods.md",
     "Scrum Master.md",
+    "Work/Cooking/Foods.md",
     "Work/Job Status/Job Status.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/Cooking",
