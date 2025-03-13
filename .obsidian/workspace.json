@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Foods"
             }
+          },
+          {
+            "id": "f5bfdb7be3f7decf",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -155,13 +168,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Cooking/Foods.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Foods"
+              "title": "Outline"
             }
           },
           {
@@ -193,7 +205,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "07e0df18e6ded80e",
+  "active": "f5bfdb7be3f7decf",
   "lastOpenFiles": [
     "Work/TCS/Ultimatix/Project Work.md",
     "Scrum Master.md",
