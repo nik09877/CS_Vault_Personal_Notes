@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Cooking/Foods.md",
+                "file": "Work/Interview/Interview Prep.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Foods"
+              "title": "Interview Prep"
             }
           }
         ]
@@ -155,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Cooking/Foods.md",
+                "file": "Work/Interview/Interview Prep.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Foods"
+              "title": "Outline of Interview Prep"
             }
           },
           {
@@ -196,14 +196,17 @@
   "active": "07e0df18e6ded80e",
   "lastOpenFiles": [
     "Work/TCS/Ultimatix/Project Work.md",
-    "Scrum Master.md",
+    "Work/Interview/Interview Prep.md",
+    "Work/Interview",
+    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
+    "Work/TCS/Ultimatix/Netflix Archaius.md",
     "Work/Cooking/Foods.md",
+    "Scrum Master.md",
     "Work/Job Status/Job Status.md",
     "Work/Cooking",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
-    "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "444_System Design/HLD/My Note.md",
     "Work/Job Status",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
