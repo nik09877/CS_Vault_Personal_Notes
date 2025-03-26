@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Interview/Interview Prep.md",
-                "mode": "preview",
+                "file": "Work/Interview/Amazon.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Interview Prep"
+              "title": "Amazon"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "Work/Interview/Interview Prep.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Project Work"
+              "title": "Interview Prep"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -170,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TCS/Ultimatix/Project Work.md",
+                "file": "Work/Interview/Amazon.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Project Work"
+              "title": "Outline of Amazon"
             }
           },
           {
@@ -208,9 +206,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ac467b5d9140af6e",
+  "active": "07e0df18e6ded80e",
   "lastOpenFiles": [
     "Work/Interview/Interview Prep.md",
+    "Work/Interview/Amazon.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/Interview",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
