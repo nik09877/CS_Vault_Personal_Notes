@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Work/Interview/Interview Prep.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -35,7 +35,8 @@
               "title": "Project Work"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Interview/Interview Prep.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Interview Prep"
+              "title": "Outline of Project Work"
             }
           },
           {
@@ -207,10 +208,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "07e0df18e6ded80e",
+  "active": "ac467b5d9140af6e",
   "lastOpenFiles": [
-    "Work/TCS/Ultimatix/Project Work.md",
     "Work/Interview/Interview Prep.md",
+    "Work/TCS/Ultimatix/Project Work.md",
     "Work/Interview",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/Ultimatix/Netflix Archaius.md",
