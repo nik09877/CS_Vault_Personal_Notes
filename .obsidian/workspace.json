@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Interview/Amazon.md",
+                "file": "444_System Design/HLD/My Note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Amazon"
+              "title": "My Note"
             }
           },
           {
@@ -34,8 +34,23 @@
               "icon": "lucide-file",
               "title": "Interview Prep"
             }
+          },
+          {
+            "id": "ae42a2508e9750a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Interview/Amazon.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Amazon"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -92,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -206,9 +222,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "07e0df18e6ded80e",
+  "active": "ae42a2508e9750a6",
   "lastOpenFiles": [
     "Work/Interview/Interview Prep.md",
+    "444_System Design/HLD/My Note.md",
     "Work/Interview/Amazon.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/Interview",
@@ -221,7 +238,6 @@
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
-    "444_System Design/HLD/My Note.md",
     "Work/Job Status",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
     "z_assets/Pasted_image_20250115205506.png",
