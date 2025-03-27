@@ -49,8 +49,7 @@
               "title": "Amazon"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Interview/Amazon.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Amazon"
+              "title": "Outline of Project Work"
             }
           },
           {
@@ -222,11 +221,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "641c4b0f68900ff0",
+  "active": "29d28af95e564916",
   "lastOpenFiles": [
-    "Work/TCS/Ultimatix/Project Work.md",
-    "Work/Interview/Interview Prep.md",
     "Work/Interview/Amazon.md",
+    "Work/Interview/Interview Prep.md",
+    "Work/TCS/Ultimatix/Project Work.md",
     "444_System Design/HLD/My Note.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "555_Projects/Crwn-Clothing/crwn-use-case-diagram.drawio.png",
