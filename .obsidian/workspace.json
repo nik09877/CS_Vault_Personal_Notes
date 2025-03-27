@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "a8b8d4a4473c66bf",
+        "id": "a2a621d1e0ab258a",
         "type": "tabs",
         "children": [
           {
-            "id": "07e0df18e6ded80e",
+            "id": "554b5922c9bcf68b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/HLD/My Note.md",
-                "mode": "source",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "My Note"
-            }
-          },
-          {
-            "id": "ac467b5d9140af6e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/Interview/Interview Prep.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Interview Prep"
-            }
-          },
-          {
-            "id": "ae42a2508e9750a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/Interview/Amazon.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Amazon"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,13 +151,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Interview/Interview Prep.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Interview Prep"
+              "title": "Outline"
             }
           },
           {
@@ -222,12 +188,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ac467b5d9140af6e",
+  "active": "554b5922c9bcf68b",
   "lastOpenFiles": [
-    "Work/Interview/Amazon.md",
     "Work/Interview/Interview Prep.md",
-    "444_System Design/HLD/My Note.md",
     "Work/TCS/Ultimatix/Project Work.md",
+    "Work/Interview/Amazon.md",
+    "444_System Design/HLD/My Note.md",
     "Work/Interview",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/Ultimatix/Netflix Archaius.md",
