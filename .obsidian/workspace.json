@@ -11,13 +11,32 @@
             "id": "554b5922c9bcf68b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "555_Projects/WorkPlanr/WorkPlanr.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "WorkPlanr"
+            }
+          },
+          {
+            "id": "a5372d82da5876e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "444_System Design/HLD/My Note.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "My Note"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -151,12 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "444_System Design/HLD/My Note.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of My Note"
             }
           },
           {
@@ -188,8 +207,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "554b5922c9bcf68b",
+  "active": "a5372d82da5876e4",
   "lastOpenFiles": [
+    "555_Projects/WorkPlanr/WorkPlanr.md",
+    "555_Projects/Crwn-Clothing/crwn-use-case-diagram.drawio.png",
+    "555_Projects/Crwn-Clothing/crwn-clothing-class-diagram.drawio.png",
+    "555_Projects/Crwn-Clothing/crwn-clothing.md",
+    "555_Projects/Collab-Code-Pro/code-collab-pro.md",
     "Work/Interview/Interview Prep.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "Work/Interview/Amazon.md",
