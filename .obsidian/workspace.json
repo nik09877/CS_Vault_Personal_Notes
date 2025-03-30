@@ -49,8 +49,7 @@
               "title": "Amazon"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Interview/Interview Prep.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Interview Prep"
+              "title": "Outline of Project Work"
             }
           },
           {
@@ -222,10 +221,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d4ac19be2157fffa",
+  "active": "29d28af95e564916",
   "lastOpenFiles": [
-    "Work/Interview/Amazon.md",
     "Work/Interview/Interview Prep.md",
+    "Work/Interview/Amazon.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "444_System Design/HLD/My Note.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
