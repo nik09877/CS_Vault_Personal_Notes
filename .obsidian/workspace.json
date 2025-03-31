@@ -22,20 +22,6 @@
             }
           },
           {
-            "id": "3e98db5f6b94ea81",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "444_System Design/HLD/My Note.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "My Note"
-            }
-          },
-          {
             "id": "d4ac19be2157fffa",
             "type": "leaf",
             "state": {
@@ -198,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "444_System Design/HLD/My Note.md",
+                "file": "Work/Interview/Interview Prep.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of My Note"
+              "title": "Outline of Interview Prep"
             }
           },
           {
@@ -236,12 +222,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3e98db5f6b94ea81",
+  "active": "d4ac19be2157fffa",
   "lastOpenFiles": [
     "Work/TCS/Ultimatix/Project Work.md",
+    "444_System Design/HLD/My Note.md",
     "Work/Interview/Amazon.md",
     "Work/Interview/Interview Prep.md",
-    "444_System Design/HLD/My Note.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "555_Projects/Crwn-Clothing/crwn-use-case-diagram.drawio.png",
     "555_Projects/Crwn-Clothing/crwn-clothing-class-diagram.drawio.png",
