@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Cooking/Foods.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Foods"
-            }
-          },
-          {
-            "id": "d4ac19be2157fffa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/Interview/Interview Prep.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Interview Prep"
+              "title": "Project Work"
             }
           },
           {
@@ -106,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -183,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Cooking/Foods.md",
+                "file": "Work/TCS/Ultimatix/Project Work.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Foods"
+              "title": "Outline of Project Work"
             }
           },
           {
@@ -223,9 +208,11 @@
   },
   "active": "29d28af95e564916",
   "lastOpenFiles": [
-    "Work/TCS/Ultimatix/Project Work.md",
+    "Work/Cooking/Foods.md",
+    "Work/Job Status/Job Status.md",
     "Work/Interview/Amazon.md",
     "Work/Interview/Interview Prep.md",
+    "Work/TCS/Ultimatix/Project Work.md",
     "444_System Design/HLD/My Note.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "555_Projects/Crwn-Clothing/crwn-use-case-diagram.drawio.png",
@@ -235,9 +222,7 @@
     "Work/Interview",
     "Work/TCS/InstaBiz UK/Project_Work/Work.md",
     "Work/TCS/Ultimatix/Netflix Archaius.md",
-    "Work/Cooking/Foods.md",
     "Scrum Master.md",
-    "Work/Job Status/Job Status.md",
     "Work/Cooking",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
