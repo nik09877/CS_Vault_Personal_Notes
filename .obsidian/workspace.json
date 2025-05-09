@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "RoadMap"
             }
+          },
+          {
+            "id": "b12ef1b8fd3c7236",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -154,13 +167,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of RoadMap"
+              "title": "Outline"
             }
           },
           {
@@ -192,7 +204,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "29d28af95e564916",
+  "active": "b12ef1b8fd3c7236",
   "lastOpenFiles": [
     "Work/TCS/Ultimatix/Project Work.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
