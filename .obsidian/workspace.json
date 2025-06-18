@@ -175,12 +175,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,17 +195,17 @@
   },
   "active": "803ee6f73bbb2acb",
   "lastOpenFiles": [
-    "z_assets/Pasted image 20250618163226.png",
-    "z_assets/Pasted image 20250618163142.png",
-    "z_assets/Pasted image 20250618163041.png",
-    "z_assets/Pasted image 20250618162532.png",
-    "z_assets/Pasted image 20250618160601.png",
-    "z_assets/Pasted image 20250618160543.png",
-    "z_assets/Pasted image 20250618160502.png",
-    "z_assets/Pasted image 20250618160428.png",
-    "z_assets/Pasted image 20250618160256.png",
-    "z_assets/Pasted image 20250618160226.png",
-    "z_assets/Pasted image 20250618160213.png",
+    "z_assets/Pasted image 20250618204027.png",
+    "z_assets/Pasted image 20250618203912.png",
+    "z_assets/Pasted image 20250618203341.png",
+    "z_assets/Pasted image 20250618202546.png",
+    "z_assets/Pasted image 20250618202441.png",
+    "z_assets/Pasted image 20250618202209.png",
+    "z_assets/Pasted image 20250618202111.png",
+    "z_assets/Pasted image 20250618201249.png",
+    "z_assets/Pasted image 20250618201023.png",
+    "z_assets/Pasted image 20250618200917.png",
+    "z_assets/Pasted image 20250618200626.png",
     "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "Work/Cooking/Foods.md",

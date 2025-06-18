@@ -288,3 +288,57 @@
 
 ![[Pasted image 20250618163226.png]]
 
+![[Pasted image 20250618194919.png]]
+
+![[Pasted image 20250618194942.png]]
+
+![[Pasted image 20250618195138.png]]
+
+![[Pasted image 20250618195223.png]]
+
+![[Pasted image 20250618195539.png]]
+
+![[Pasted image 20250618195645.png]]
+
+![[Pasted image 20250618195713.png]]
+
+# Thread Synchronization
+
+![[Pasted image 20250618195846.png]]
+
+![[Pasted image 20250618195906.png]]
+
+![[Pasted image 20250618200208.png]]
+
+![[Pasted image 20250618200551.png]]
+
+![[Pasted image 20250618200626.png]]
+
+![[Pasted image 20250618200917.png]]
+
+![[Pasted image 20250618201023.png]]
+
+![[Pasted image 20250618201249.png]]
+
+![[Pasted image 20250618202111.png]]
+
+![[Pasted image 20250618202209.png]]
+
+![[Pasted image 20250618202441.png]]
+
+![[Pasted image 20250618202546.png]]
+
+![[Pasted image 20250618203341.png]]
+
+- How to avoid bugs like not using `volatile` keyword in Double Checking lock in singleton pattern ?
+
+
+	1. **Non-volatile Singletons** with double-checked locking.
+	    
+	2. **Multiple threads accessing a shared variable** without `volatile`/`final`.
+	    
+	3. **Lazy initialization** without proper synchronization.
+
+![[Pasted image 20250618203912.png]]
+
+![[Pasted image 20250618204027.png]]
