@@ -4,21 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "cb63ec21671b66d9",
+        "id": "be3200ad969f5bdb",
         "type": "tabs",
         "children": [
           {
-            "id": "62ef3d39e3986826",
+            "id": "b575207fdebb3e96",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Cooking/Foods.md",
-                "mode": "preview",
+                "file": "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Foods"
+              "title": "Concurrency & Multithreading"
+            }
+          },
+          {
+            "id": "2c7e3ea74806bb7b",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "z_assets/Pasted_image_20250618101132.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted_image_20250618101132"
             }
           }
         ]
@@ -78,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -154,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Cooking/Foods.md",
+                "file": "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Foods"
+              "title": "Outline of Concurrency & Multithreading"
             }
           },
           {
@@ -174,11 +187,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,19 +206,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "62ef3d39e3986826",
+  "active": "b575207fdebb3e96",
   "lastOpenFiles": [
+    "z_assets/Pasted image 20250618104543.png",
+    "z_assets/Pasted image 20250618104432.png",
+    "z_assets/Pasted image 20250618104059.png",
+    "z_assets/Pasted image 20250618103943.png",
+    "z_assets/Pasted image 20250618103659.png",
+    "z_assets/Pasted image 20250618103622.png",
+    "z_assets/Pasted image 20250618103602.png",
+    "z_assets/Pasted image 20250618103356.png",
+    "z_assets/Pasted image 20250618103135.png",
+    "z_assets/Pasted image 20250618103026.png",
+    "z_assets/Pasted image 20250618102629.png",
+    "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
+    "111_Language/Java/In Depth/10.Concurrency.md",
+    "Work/Cooking/Foods.md",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "Work/TCS/Ultimatix/Project Work.md",
     "666_WebDev/BackEnd/SpringBoot/Spring-In-Action.md",
     "Work/Interview/Amazon.md",
-    "Work/Cooking/Foods.md",
     "Work/Job Status/Job Status.md",
     "Work/Interview/Interview Prep.md",
     "444_System Design/HLD/My Note.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
-    "555_Projects/Crwn-Clothing/crwn-use-case-diagram.drawio.png",
-    "555_Projects/Crwn-Clothing/crwn-clothing-class-diagram.drawio.png",
     "555_Projects/Crwn-Clothing/crwn-clothing.md",
     "555_Projects/Collab-Code-Pro/code-collab-pro.md",
     "Work/Interview",
@@ -215,7 +240,6 @@
     "666_WebDev/BackEnd/SpringBoot/Spring-annotation-cheat-sheet.md",
     "Work/Job Status",
     "Work/TCS/InstaBiz UK/Project_Work/InstaBIZ_UK_App_Walkthrough[1].pdf",
-    "z_assets/Pasted_image_20250115205506.png",
     "444_System Design/LLD/Problems/To_Do_Problems.md",
     "111_Language/Java/Quick Reference/9.Stream API Quick Reference.md",
     "111_Language/Java/In Depth/9.Stream API.md",
@@ -224,9 +248,6 @@
     "111_Language/Flutter/Mobx Documentation.md",
     "111_Language/Flutter",
     "444_System Design/HLD/To_Do_Problems.md",
-    "444_System Design/LLD/Problems/Design_Pattern_Problems.md",
-    "111_Language/Java/In Depth/8.Collections.md",
-    "z_assets/Pasted_image_20240705134712.png",
-    "444_System Design/HLD/Notes/Prerequisites.md"
+    "444_System Design/LLD/Problems/Design_Pattern_Problems.md"
   ]
 }
