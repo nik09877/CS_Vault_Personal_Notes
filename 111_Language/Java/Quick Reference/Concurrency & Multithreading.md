@@ -202,3 +202,83 @@
 
 ![[Pasted image 20250618134038.png]]
 
+![[Pasted image 20250618152542.png]]
+
+![[Pasted image 20250618152624.png]]
+
+![[Pasted image 20250618152800.png]]
+
+![[Pasted image 20250618152925.png]]
+
+![[Pasted image 20250618153522.png]]
+
+![[Pasted image 20250618153643.png]]
+
+![[Pasted image 20250618153738.png]]
+
+![[Pasted image 20250618153804.png]]
+
+![[Pasted image 20250618153816.png]]
+
+![[Pasted image 20250618154250.png]]
+
+![[Pasted image 20250618154305.png]]
+
+# Thread Executors in Java
+
+![[Pasted image 20250618154701.png]]
+
+![[Pasted image 20250618154746.png]]
+
+![[Pasted image 20250618154818.png]]
+
+![[Pasted image 20250618154835.png]]
+
+![[Pasted image 20250618154917.png]]
+
+![[Pasted image 20250618155031.png]]
+
+![[Pasted image 20250618155057.png]]
+
+![[Pasted image 20250618155127.png]]
+
+![[Pasted image 20250618155139.png]]
+
+![[Pasted image 20250618155242.png]]
+
+![[Pasted image 20250618155356.png]]
+
+![[Pasted image 20250618155542.png]]
+
+![[Pasted image 20250618155630.png]]
+
+![[Pasted image 20250618155724.png]]
+
+![[Pasted image 20250618155826.png]]
+
+![[Pasted image 20250618155849.png]]
+
+![[Pasted image 20250618155944.png]]
+
+![[Pasted image 20250618160027.png]]
+
+![[Pasted image 20250618160107.png]]
+
+![[Pasted image 20250618160150.png]]
+
+![[Pasted image 20250618160213.png]]
+
+![[Pasted image 20250618160226.png]]
+
+![[Pasted image 20250618160256.png]]
+
+![[Pasted image 20250618160428.png]]
+
+![[Pasted image 20250618160502.png]]
+
+![[Pasted image 20250618160543.png]]
+
+![[Pasted image 20250618160601.png]]
+
+![[Pasted image 20250618162532.png]]
+
