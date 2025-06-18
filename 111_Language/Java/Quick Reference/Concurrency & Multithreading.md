@@ -150,3 +150,46 @@
 
 ![[Pasted image 20250618114617.png]]
 
+![[Pasted image 20250618114842.png]]
+
+![[Pasted image 20250618114857.png]]
+
+![[Pasted image 20250618115118.png]]
+
+![[Pasted image 20250618115328.png]]
+
+![[Pasted image 20250618115444.png]]
+
+![[Pasted image 20250618115528.png]]
+
+![[Pasted image 20250618115612.png]]
+
+![[Pasted image 20250618120024.png]]
+
+![[Pasted image 20250618120121.png]]
+
+![[Pasted image 20250618120140.png]]
+
+![[Pasted image 20250618120240.png]]
+
+![[Pasted image 20250618120304.png]]
+
+- `Execute()` accepts only `Runnable`, but `submit()` accepts `Runnable` and `Callable` and returns a `Future<T>`
+
+![[Pasted image 20250618120630.png]]
+
+![[Pasted image 20250618120648.png]]
+
+![[Pasted image 20250618120747.png]]
+
+![[Pasted image 20250618123418.png]]
+
+![[Pasted image 20250618123908.png]]
+
+![[Pasted image 20250618124140.png]]
+
+![[Pasted image 20250618124449.png]]
+
+![[Pasted image 20250618124504.png]]
+
+![[Pasted image 20250618124621.png]]
