@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "Concurrency & Multithreading"
             }
-          },
-          {
-            "id": "2c7e3ea74806bb7b",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "z_assets/Pasted_image_20250618101132.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted_image_20250618101132"
-            }
           }
         ]
       }
@@ -208,17 +196,17 @@
   },
   "active": "b575207fdebb3e96",
   "lastOpenFiles": [
-    "z_assets/Pasted image 20250618104543.png",
-    "z_assets/Pasted image 20250618104432.png",
-    "z_assets/Pasted image 20250618104059.png",
-    "z_assets/Pasted image 20250618103943.png",
-    "z_assets/Pasted image 20250618103659.png",
-    "z_assets/Pasted image 20250618103622.png",
-    "z_assets/Pasted image 20250618103602.png",
-    "z_assets/Pasted image 20250618103356.png",
-    "z_assets/Pasted image 20250618103135.png",
-    "z_assets/Pasted image 20250618103026.png",
-    "z_assets/Pasted image 20250618102629.png",
+    "z_assets/Pasted image 20250618114617.png",
+    "z_assets/Pasted image 20250618114555.png",
+    "z_assets/Pasted image 20250618114526.png",
+    "z_assets/Pasted image 20250618114440.png",
+    "z_assets/Pasted image 20250618114429.png",
+    "z_assets/Pasted image 20250618114315.png",
+    "z_assets/Pasted image 20250618114255.png",
+    "z_assets/Pasted image 20250618114211.png",
+    "z_assets/Pasted image 20250618114156.png",
+    "z_assets/Pasted image 20250618114106.png",
+    "z_assets/Pasted image 20250618114028.png",
     "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "Work/Cooking/Foods.md",
