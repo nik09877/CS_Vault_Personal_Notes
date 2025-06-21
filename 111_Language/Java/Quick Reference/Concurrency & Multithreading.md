@@ -351,6 +351,8 @@
 
 ![[Pasted image 20250621092108.png]]
 
+# Thread Communication
+
 ![[Pasted image 20250621092324.png]]
 
 ![[Pasted image 20250621092355.png]]
@@ -395,9 +397,68 @@
 
 ![[Pasted image 20250621093822.png]]
 
+# Locks and Types of Locks
+
 ![[Pasted image 20250621094238.png]]
 
 ![[Pasted image 20250621094345.png]]
 
+![[Pasted image 20250621123340.png]]
 
+![[Pasted image 20250621123404.png]]
+
+![[Pasted image 20250621123511.png]]
+
+![[Pasted image 20250621123758.png]]
+
+![[Pasted image 20250621123845.png]]
+
+![[Pasted image 20250621123859.png]]
+
+![[Pasted image 20250621124058.png]]
+
+![[Pasted image 20250621124126.png]]
+
+![[Pasted image 20250621124149.png]]
+
+![[Pasted image 20250621124344.png]]
+
+![[Pasted image 20250621124447.png]]
+
+![[Pasted image 20250621124514.png]]
+
+![[Pasted image 20250621124540.png]]
+
+![[Pasted image 20250621124724.png]]
+
+![[Pasted image 20250621124834.png]]
+
+![[Pasted image 20250621124907.png]]
+
+![[Pasted image 20250621124956.png]]
+
+![[Pasted image 20250621125047.png]]
+
+![[Pasted image 20250621125153.png]]
+
+![[Pasted image 20250621125241.png]]
+
+
+# Semaphores
+
+![[Pasted image 20250621125650.png]]
+
+![[Pasted image 20250621125751.png]]
+
+![[Pasted image 20250621130523.png]]
+
+![[Pasted image 20250621130626.png]]
+
+![[Pasted image 20250621130645.png]]
+
+![[Pasted image 20250621130752.png]]
+
+![[Pasted image 20250621130808.png]]
+
+![[Pasted image 20250621130913.png]]
 
