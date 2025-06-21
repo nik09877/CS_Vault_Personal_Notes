@@ -342,3 +342,62 @@
 ![[Pasted image 20250618203912.png]]
 
 ![[Pasted image 20250618204027.png]]
+
+![[Pasted image 20250621091701.png]]
+
+![[Pasted image 20250621091926.png]]
+
+![[Pasted image 20250621092054.png]]
+
+![[Pasted image 20250621092108.png]]
+
+![[Pasted image 20250621092324.png]]
+
+![[Pasted image 20250621092355.png]]
+
+![[Pasted image 20250621092423.png]]
+
+![[Pasted image 20250621092437.png]]
+
+![[Pasted image 20250621092529.png]]
+
+![[Pasted image 20250621092551.png]]
+
+![[Pasted image 20250621092607.png]]
+
+![[Pasted image 20250621092833.png]]
+
+![[Pasted image 20250621092931.png]]
+
+![[Pasted image 20250621092854.png]]
+
+![[Pasted image 20250621093000.png]]
+
+![[Pasted image 20250621093159.png]]
+
+![[Pasted image 20250621093250.png]]
+
+![[Pasted image 20250621093314.png]]
+
+![[Pasted image 20250621093346.png]]
+
+![[Pasted image 20250621093441.png]]
+
+![[Pasted image 20250621093456.png]]
+
+![[Pasted image 20250621093519.png]]
+
+![[Pasted image 20250621093618.png]]
+
+![[Pasted image 20250621093721.png]]
+
+![[Pasted image 20250621093740.png]]
+
+![[Pasted image 20250621093822.png]]
+
+![[Pasted image 20250621094238.png]]
+
+![[Pasted image 20250621094345.png]]
+
+
+
