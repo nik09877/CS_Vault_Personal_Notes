@@ -538,3 +538,27 @@
 
 ![[Pasted image 20250622205624.png]]
 
+![[Pasted image 20250629182627.png]]
+
+![[Pasted image 20250629182707.png]]
+
+![[Pasted image 20250629182755.png]]
+
+![[Pasted image 20250629182847.png]]
+
+![[Pasted image 20250629182857.png]]
+
+![[Pasted image 20250629182931.png]]
+
+![[Pasted image 20250629182945.png]]
+
+![[Pasted image 20250629183253.png]]
+
+![[Pasted image 20250629183353.png]]
+
+![[Pasted image 20250629183431.png]]
+
+![[Pasted image 20250629183521.png]]
+
+![[Pasted image 20250629183802.png]]
+
