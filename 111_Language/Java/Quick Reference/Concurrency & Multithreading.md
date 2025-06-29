@@ -562,3 +562,77 @@
 
 ![[Pasted image 20250629183802.png]]
 
+![[Pasted image 20250629190922.png]]
+
+![[Pasted image 20250629191126.png]]
+
+![[Pasted image 20250629191202.png]]
+
+![[Pasted image 20250629191225.png]]
+
+![[Pasted image 20250629191403.png]]
+
+![[Pasted image 20250629191413.png]]
+
+![[Pasted image 20250629191428.png]]
+
+![[Pasted image 20250629191504.png]]
+
+![[Pasted image 20250629191552.png]]
+
+![[Pasted image 20250629191613.png]]
+
+![[Pasted image 20250629191741.png]]
+
+![[Pasted image 20250629191754.png]]
+
+![[Pasted image 20250629191813.png]]
+
+![[Pasted image 20250629191852.png]]
+
+![[Pasted image 20250629191903.png]]
+
+![[Pasted image 20250629191935.png]]
+
+![[Pasted image 20250629192015.png]]
+
+![[Pasted image 20250629192229.png]]
+
+![[Pasted image 20250629192247.png]]
+
+![[Pasted image 20250629192309.png]]
+
+![[Pasted image 20250629192334.png]]
+
+![[Pasted image 20250629193020.png]]
+
+![[Pasted image 20250629193058.png]]
+
+![[Pasted image 20250629193243.png]]
+
+![[Pasted image 20250629193311.png]]
+
+![[Pasted image 20250629193322.png]]
+
+![[Pasted image 20250629193331.png]]
+
+![[Pasted image 20250629193353.png]]
+
+![[Pasted image 20250629193406.png]]
+
+![[Pasted image 20250629193435.png]]
+
+![[Pasted image 20250629193452.png]]
+
+![[Pasted image 20250629193508.png]]
+
+![[Pasted image 20250629193549.png]]
+
+![[Pasted image 20250629193635.png]]
+
+![[Pasted image 20250629193710.png]]
+
+![[Pasted image 20250629193741.png]]
+
+# Future vs CompletableFuture
+
