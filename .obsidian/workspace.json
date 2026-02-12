@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "68902ab62eb094f8",
+        "id": "1a023c4204af224b",
         "type": "tabs",
         "children": [
           {
-            "id": "803ee6f73bbb2acb",
+            "id": "3c640407dab7574b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
-                "mode": "source",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Concurrency & Multithreading"
+              "title": "New tab"
             }
           }
         ]
@@ -78,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "45d4cc6b70538fa6",
@@ -155,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Concurrency & Multithreading"
+              "title": "Outline"
             }
           },
           {
@@ -193,8 +187,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "803ee6f73bbb2acb",
+  "active": "3c640407dab7574b",
   "lastOpenFiles": [
+    "444_System Design/HLD/Notes/Prerequisites.md",
+    "444_System Design/HLD/My Note.md",
+    "444_System Design/HLD/To_Do_Problems.md",
+    "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
     "z_assets/Pasted image 20250629193741.png",
     "z_assets/Pasted image 20250629193710.png",
     "z_assets/Pasted image 20250629193635.png",
@@ -205,9 +203,7 @@
     "z_assets/Pasted image 20250629193406.png",
     "z_assets/Pasted image 20250629193353.png",
     "z_assets/Pasted image 20250629193331.png",
-    "z_assets/Pasted image 20250629193322.png",
     "Work/Cooking/Foods.md",
-    "111_Language/Java/Quick Reference/Concurrency & Multithreading.md",
     "111_Language/Java/In Depth/10.Concurrency.md",
     "666_WebDev/BackEnd/SpringBoot/RoadMap.md",
     "Work/TCS/Ultimatix/Project Work.md",
@@ -215,7 +211,6 @@
     "Work/Interview/Amazon.md",
     "Work/Job Status/Job Status.md",
     "Work/Interview/Interview Prep.md",
-    "444_System Design/HLD/My Note.md",
     "555_Projects/WorkPlanr/WorkPlanr.md",
     "555_Projects/Crwn-Clothing/crwn-clothing.md",
     "555_Projects/Collab-Code-Pro/code-collab-pro.md",
@@ -234,7 +229,6 @@
     "333_Core Theory Subjects/OS.md",
     "111_Language/Flutter/Mobx Documentation.md",
     "111_Language/Flutter",
-    "444_System Design/HLD/To_Do_Problems.md",
     "444_System Design/LLD/Problems/Design_Pattern_Problems.md"
   ]
 }

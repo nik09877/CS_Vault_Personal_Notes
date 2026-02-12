@@ -1,4 +1,5 @@
 # Basics
+
 ## Monoliths vs Micro services
 - In Monolith architecture the clients connect to machines which then communicate with databases. It is not mandatory for there to be only one huge machine which is running the entire system. It can horizontally scale.
 - Microservice is a single business unit. All data, functions related to a business unit are put into one service. These microservices talk to their own dedicated databases. The clients are connected to a gateway which communicates with the microservices.
@@ -112,6 +113,7 @@
 - Content Delivery Networks are a bunch of servers spread across the globe to serve information. These networks are available on rent to deliver static content quickly to nearby users.
 
 - Some examples of CDNs are Amazon CloudFront and the Akamai CDN. They are (relatively) cheap to rent and have high availability. They also provide pluggable algorithms to invalidate and fetch data.
+
 
 # API Design
 ## API Design Goals
